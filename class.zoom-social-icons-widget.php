@@ -21,10 +21,10 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			)
 		);
 
-		$this->defaults = array(
+		$this->defaults = apply_filters( 'zoom-social-icons-widget-defaults', array(
 			'title'            => esc_html__( 'Social Icons', 'zoom-social-icons-widget' ),
 			'show-icon-labels' => false
-		);
+		) );
 
 		$this->plugin_file = dirname( __FILE__ ) . '/social-icons-widget-by-wpzoom.php';
 
