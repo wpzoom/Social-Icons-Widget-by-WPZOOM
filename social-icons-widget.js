@@ -3,15 +3,18 @@
         $(document).on('click', '.zoom-social-icons__add-button button', function (event) {
             event.preventDefault();
 
-            var tmpl = $('#tmpl-zoom-social-icons-field').html();
+            var $tmpl = $($.trim($('#tmpl-zoom-social-icons-field').html()));
 
-            $(this).parents('.widget-content').find('.zoom-social-icons__list').append(tmpl);
-        });
+            var url_field_id = $(this).parents('.widget-content').find('.zoom-social-icons__list').data('url-field-id');
+            var url_field_name = $(this).parents('.widget-content').find('.zoom-social-icons__list').data('url-field-name');
 
-        $(document).on('change', '.zoom-social-icons__field input', function () {
-            if ($(this).val() === '') {
-                $(this).parents('.zoom-social-icons__field').remove();
-            }
+            var label_field_id = $(this).parents('.widget-content').find('.zoom-social-icons__list').data('label-field-id');
+            var label_field_name = $(this).parents('.widget-content').find('.zoom-social-icons__list').data('label-field-name');
+
+            $tmpl.find('.zoom-social-icons__field-url').attr('id', url_field_id).attr('name', url_field_name + '[]');
+            $tmpl.find('.zoom-social-icons__field-label').attr('id', label_field_id).attr('name', label_field_name + '[]');
+
+            $(this).parents('.widget-content').find('.zoom-social-icons__list').append($tmpl);
         });
 
         $(document).on('change', '.zoom-social-icons-show-icon-labels', function () {
@@ -20,6 +23,10 @@
             } else {
                 $(this).parents('.widget-content').find('.zoom-social-icons__list').addClass('zoom-social-icons__list--no-labels');
             }
+        });
+
+        $(document).on('click', '.zoom-social-icons__field-trash', function () {
+            $(this).parents('.zoom-social-icons__field').remove();
         });
 
         // Event handler for widget open button
@@ -32,7 +39,6 @@
         // Event handler for widget added
         $(document).on('widget-added', function (event, $widget) {
             if ($widget.is('[id*=zoom-social-icons-widget]')) {
-                console.log('add');
                 event.preventDefault();
                 $widget.find('.zoom-social-icons__list').sortable();
             }
@@ -40,7 +46,6 @@
 
         // Event handler for widget updated
         $(document).on('widget-updated', function (event, $widget) {
-            console.log('update');
             if ($widget.is('[id*=zoom-social-icons-widget]')) {
                 event.preventDefault();
                 $widget.find('.zoom-social-icons__list').sortable();

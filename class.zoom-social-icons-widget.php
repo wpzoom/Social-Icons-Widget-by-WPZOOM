@@ -23,7 +23,8 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 		$this->defaults = apply_filters( 'zoom-social-icons-widget-defaults', array(
 			'title'            => esc_html__( 'Social Icons', 'zoom-social-icons-widget' ),
-			'show-icon-labels' => false
+			'show-icon-labels' => false,
+			'fields'           => array()
 		) );
 
 		$this->plugin_file = dirname( __FILE__ ) . '/social-icons-widget-by-wpzoom.php';
@@ -33,22 +34,27 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	}
 
 	public function admin_scripts() {
-		global $wp_scripts;
-
 		wp_enqueue_script( 'zoom-social-icons-widget', plugin_dir_url( $this->plugin_file ) . 'social-icons-widget.js', array( 'jquery', 'jquery-ui-sortable' ), '20150203' );
+		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'css/socicon.css', array(), '20150204' );
 
-		// get registered script object for jquery-ui
-		$ui = $wp_scripts->query('jquery-ui-core');
-
-		// tell WordPress to load the Smoothness theme from Google CDN
-		$protocol = is_ssl() ? 'https' : 'http';
-		$url = "$protocol://ajax.googleapis.com/ajax/libs/jqueryui/{$ui->ver}/themes/smoothness/jquery-ui.min.css";
-		wp_enqueue_style('jquery-ui-smoothness', $url, false, null);
 
 		?>
 		<style>
 			.zoom-social-icons__list--no-labels .zoom-social-icons__field-label { display: none; }
-			.zoom-social-icons__field + .zoom-social-icons__field { border-top: 1px solid #ccc; }
+			.zoom-social-icons__field { padding: 6px 0; display: block; margin: 0; }
+			.zoom-social-icons__field + .zoom-social-icons__field { border-top: 1px solid #efefef; }
+
+			.zoom-social-icons__cw { float: left; width: 100%; }
+			.zoom-social-icons__inputs { margin-left: 30px; margin-right: 30px; }
+			.zoom-social-icons__field-url + .zoom-social-icons__field-label { margin-top: 2px; }
+
+			.zoom-social-icons__field-handle, .zoom-social-icons__field-trash { float: left; width: 30px; margin-top: 18px; }
+			.zoom-social-icons__field-handle { margin-left: -100%; }
+			.zoom-social-icons__field-handle:hover { cursor: move; }
+			.zoom-social-icons__field-trash { margin-left: -30px; text-decoration: none; display: block; text-align: right; }
+
+			.zoom-social-icons__list--no-labels .zoom-social-icons__field-handle, .zoom-social-icons__list--no-labels .zoom-social-icons__field-trash { margin-top: 2px; }
+
 			.zoom-social-icons__add-button { margin-bottom: 10px; }
 		</style>
 		<?php
@@ -58,11 +64,17 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		?>
 		<script type="text/html" id="tmpl-zoom-social-icons-field">
 			<li class="zoom-social-icons__field">
-				<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
-				<input class="zoom-social-icons__field-url" type="text" placeholder="http://profile-url/..." value="">
-				<span class="zoom-social-icons__field-icon">i</span>
+				<div class="zoom-social-icons__cw">
+					<div class="zoom-social-icons__inputs">
+						<input class="widefat zoom-social-icons__field-url" type="text" placeholder="URL" value="">
+						<input class="widefat zoom-social-icons__field-label" type="text" placeholder="Label" value="">
+					</div>
+				</div>
 
-				<input class="widefat zoom-social-icons__field-label" type="text" placeholder="Follow me..." value="">
+				<span class="zoom-social-icons__field-handle dashicons dashicons-sort"></span>
+				<a class="zoom-social-icons__field-trash" href="#"><span class="dashicons dashicons-trash"></span></a>
+
+				<br style="clear:both">
 			</li>
 		</script>
 		<?php
@@ -103,6 +115,22 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 		$instance['show-icon-labels'] = (bool) $new_instance['show-icon-labels'];
 
+		$field_count = count( $new_instance['url-fields'] );
+
+		$instance['fields'] = array();
+
+		for ( $i = 0; $i < $field_count; $i ++ ) {
+			$url   = esc_url( $new_instance['url-fields'][ $i ] );
+			$label = esc_html( $new_instance['label-fields'][ $i ] );
+
+			if ( $url ) {
+				$instance['fields'][] = array(
+					'url'   => $url,
+					'label' => $label
+				);
+			}
+		}
+
 		return $instance;
 	}
 
@@ -131,12 +159,49 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 		<p style="margin-bottom: 0;"><?php _e( 'Icons:', 'zoom-social-icons-widget' ); ?></p>
 
-		<ul class="zoom-social-icons__list <?php echo ($instance['show-icon-labels'] ? '' : 'zoom-social-icons__list--no-labels'); ?>">
+		<ul class="zoom-social-icons__list <?php echo ($instance['show-icon-labels'] ? '' : 'zoom-social-icons__list--no-labels'); ?>"
+		    data-url-field-id="<?php echo $this->get_field_id( 'url-fields' ); ?>"
+		    data-url-field-name="<?php echo $this->get_field_name( 'url-fields' ) ?>"
+		    data-label-field-id="<?php echo $this->get_field_id( 'label-fields' ); ?>"
+		    data-label-field-name="<?php echo $this->get_field_name( 'label-fields' ) ?>">
+
+			<?php foreach ( $instance['fields'] as $field ) : ?>
+
+				<li class="zoom-social-icons__field">
+					<div class="zoom-social-icons__cw">
+						<div class="zoom-social-icons__inputs">
+
+							<?php
+							printf('<input class="widefat zoom-social-icons__field-url" id="%1$s" name="%2$s[]" type="text" placeholder="%3$s" value="%4$s">',
+								$this->get_field_id('url-fields'),
+								$this->get_field_name('url-fields'),
+								__('URL', 'zoom-social-icons-widget'),
+								esc_attr( $field['url'] )
+							);
+
+							printf('<input class="widefat zoom-social-icons__field-label" id="%1$s" name="%2$s[]" type="text" placeholder="%3$s" value="%4$s">',
+								$this->get_field_id('label-fields'),
+								$this->get_field_name('label-fields'),
+								__('Label', 'zoom-social-icons-widget'),
+								esc_attr( $field['label'] )
+							);
+							?>
+
+						</div>
+					</div>
+
+					<span class="zoom-social-icons__field-handle dashicons dashicons-sort"></span>
+					<a class="zoom-social-icons__field-trash" href="#"><span class="dashicons dashicons-trash"></span></a>
+
+					<br style="clear:both">
+				</li>
+
+			<?php endforeach; ?>
 
 		</ul>
 
 		<div class="zoom-social-icons__add-button">
-			<button class="button">Add more</button>
+			<button class="button"><?php _e( 'Add more', 'zoom-social-icons-widget' ); ?></button>
 		</div>
 
 		<?php
