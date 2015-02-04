@@ -11,6 +11,17 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	 */
 	protected $plugin_file;
 
+	protected $icons = array(
+		'twitter', 'facebook', 'google', 'pinterest', 'foursquare', 'yahoo', 'skype', 'yelp', 'feedburner',
+		'linkedin', 'viadeo', 'xing', 'myspace', 'soundcloud', 'spotify', 'grooveshark', 'lastfm', 'youtube', 'vimeo',
+		'dailymotion', 'vine', 'flickr', '500px', 'instagram', 'wordpress', 'tumblr', 'blogger', 'technorati', 'reddit',
+		'dribbble', 'stumbleupon', 'digg', 'envato', 'behance', 'delicious', 'deviantart', 'forrst', 'play', 'zerply',
+		'wikipedia', 'apple', 'flattr', 'github', 'chimein', 'friendfeed', 'newsvine', 'identica', 'bebo', 'zynga',
+		'steam', 'xbox', 'windows', 'outlook', 'coderwall', 'tripadvisor', 'appnet', 'goodreads', 'tripit', 'lanyrd',
+		'slideshare', 'buffer', 'rss', 'vkontakte', 'disqus', 'houzz', 'mail', 'patreon', 'paypal', 'playstation',
+		'smugmug', 'swarm', 'triplej', 'yammer', 'stackoverflow', 'drupal', 'odnoklassniki', 'android', 'meetup', 'persona'
+	);
+
 	public function __construct() {
 		parent::__construct(
 			'zoom-social-icons-widget',
@@ -45,17 +56,24 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			.zoom-social-icons__field + .zoom-social-icons__field { border-top: 1px solid #efefef; }
 
 			.zoom-social-icons__cw { float: left; width: 100%; }
-			.zoom-social-icons__inputs { margin-left: 30px; margin-right: 30px; }
+			.zoom-social-icons__inputs { margin-left: 40px; margin-right: 30px; }
 			.zoom-social-icons__field-url + .zoom-social-icons__field-label { margin-top: 2px; }
 
-			.zoom-social-icons__field-handle, .zoom-social-icons__field-trash { float: left; width: 30px; margin-top: 18px; }
-			.zoom-social-icons__field-handle { margin-left: -100%; }
+			.zoom-social-icons__field-handle, .zoom-social-icons__field-trash { float: left; width: 30px; margin-top: 12px; }
+			.zoom-social-icons__field-handle { width: 40px; margin-left: -100%; }
 			.zoom-social-icons__field-handle:hover { cursor: move; }
 			.zoom-social-icons__field-trash { margin-left: -30px; text-decoration: none; display: block; text-align: right; }
 
-			.zoom-social-icons__list--no-labels .zoom-social-icons__field-handle, .zoom-social-icons__list--no-labels .zoom-social-icons__field-trash { margin-top: 2px; }
+			.zoom-social-icons__list--no-labels .zoom-social-icons__field-handle, .zoom-social-icons__list--no-labels .zoom-social-icons__field-trash { margin-top: -4px; }
 
 			.zoom-social-icons__add-button { margin-bottom: 10px; }
+
+
+			.socicon.socicon {
+				color: white;
+				padding: 6px;
+				border-radius: 20px;
+			}
 		</style>
 		<?php
 	}
@@ -161,9 +179,9 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 		<ul class="zoom-social-icons__list <?php echo ($instance['show-icon-labels'] ? '' : 'zoom-social-icons__list--no-labels'); ?>"
 		    data-url-field-id="<?php echo $this->get_field_id( 'url-fields' ); ?>"
-		    data-url-field-name="<?php echo $this->get_field_name( 'url-fields' ) ?>"
+		    data-url-field-name="<?php echo $this->get_field_name( 'url-fields' ); ?>"
 		    data-label-field-id="<?php echo $this->get_field_id( 'label-fields' ); ?>"
-		    data-label-field-name="<?php echo $this->get_field_name( 'label-fields' ) ?>">
+		    data-label-field-name="<?php echo $this->get_field_name( 'label-fields' ); ?>">
 
 			<?php foreach ( $instance['fields'] as $field ) : ?>
 
@@ -190,7 +208,17 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 						</div>
 					</div>
 
-					<span class="zoom-social-icons__field-handle dashicons dashicons-sort"></span>
+					<?php
+					$icon = '';
+					foreach ( $this->icons as $icon_id ) {
+						if (strstr($field['url'], $icon_id)) {
+							$icon = $icon_id;
+							break;
+						}
+					}
+					?>
+
+					<span class="zoom-social-icons__field-handle socicon socicon-<?php echo esc_attr( apply_filters( 'zoom-social-icons-widget-icon', $icon, $field['url'] ) ); ?>"></span>
 					<a class="zoom-social-icons__field-trash" href="#"><span class="dashicons dashicons-trash"></span></a>
 
 					<br style="clear:both">
