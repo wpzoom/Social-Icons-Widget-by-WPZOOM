@@ -13,7 +13,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 	public function __construct() {
 		parent::__construct(
-			'zoom_social_icons_widget',
+			'zoom-social-icons-widget',
 			esc_html__( 'Social Icons by WPZOOM', 'zoom-social-icons-widget' ),
 			array(
 				'classname'   => 'zoom-social-icons-widget',
@@ -33,7 +33,17 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	}
 
 	public function admin_scripts() {
-		wp_enqueue_script( 'zoom-social-icons-widget', plugin_dir_url( $this->plugin_file ) . 'social-icons-widget.js', array( 'jquery' ), '20150203' );
+		global $wp_scripts;
+
+		wp_enqueue_script( 'zoom-social-icons-widget', plugin_dir_url( $this->plugin_file ) . 'social-icons-widget.js', array( 'jquery', 'jquery-ui-sortable' ), '20150203' );
+
+		// get registered script object for jquery-ui
+		$ui = $wp_scripts->query('jquery-ui-core');
+
+		// tell WordPress to load the Smoothness theme from Google CDN
+		$protocol = is_ssl() ? 'https' : 'http';
+		$url = "$protocol://ajax.googleapis.com/ajax/libs/jqueryui/{$ui->ver}/themes/smoothness/jquery-ui.min.css";
+		wp_enqueue_style('jquery-ui-smoothness', $url, false, null);
 
 		?>
 		<style>
@@ -47,14 +57,13 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	public function admin_js_templates() {
 		?>
 		<script type="text/html" id="tmpl-zoom-social-icons-field">
-			<div class="zoom-social-icons__field">
-				<p>
-					<input class="zoom-social-icons__field-url" type="text" placeholder="http://profile-url/..." value="">
-					<span class="zoom-social-icons__field-icon">i</span>
+			<li class="zoom-social-icons__field">
+				<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+				<input class="zoom-social-icons__field-url" type="text" placeholder="http://profile-url/..." value="">
+				<span class="zoom-social-icons__field-icon">i</span>
 
-					<input class="widefat zoom-social-icons__field-label" placeholder="Follow me..." value="">
-				</p>
-			</div>
+				<input class="widefat zoom-social-icons__field-label" type="text" placeholder="Follow me..." value="">
+			</li>
 		</script>
 		<?php
 	}
@@ -122,9 +131,9 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 		<p style="margin-bottom: 0;"><?php _e( 'Icons:', 'zoom-social-icons-widget' ); ?></p>
 
-		<div class="zoom-social-icons__list <?php echo ($instance['show-icon-labels'] ? '' : 'zoom-social-icons__list--no-labels'); ?>">
+		<ul class="zoom-social-icons__list <?php echo ($instance['show-icon-labels'] ? '' : 'zoom-social-icons__list--no-labels'); ?>">
 
-		</div>
+		</ul>
 
 		<div class="zoom-social-icons__add-button">
 			<button class="button">Add more</button>
