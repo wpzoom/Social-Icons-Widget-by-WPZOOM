@@ -62,9 +62,13 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			.zoom-social-icons__field-handle, .zoom-social-icons__field-trash { float: left; width: 30px; margin-top: 12px; }
 			.zoom-social-icons__field-handle { width: 40px; margin-left: -100%; }
 			.zoom-social-icons__field-handle:hover { cursor: move; }
-			.zoom-social-icons__field-trash { margin-left: -30px; text-decoration: none; display: block; text-align: right; }
+			.zoom-social-icons__field-trash { margin-top: 18px; margin-left: -30px; text-decoration: none; display: block; text-align: right; }
 
-			.zoom-social-icons__list--no-labels .zoom-social-icons__field-handle, .zoom-social-icons__list--no-labels .zoom-social-icons__field-trash { margin-top: -4px; }
+			.zoom-social-icons__list--no-labels .zoom-social-icons__field-handle { margin-top: -4px; }
+			.zoom-social-icons__list--no-labels .zoom-social-icons__field-trash { margin-top: 2px; }
+
+			.zoom-social-icons__field-handle.dashicons { margin-top: 18px; padding-left: 4px; }
+			.zoom-social-icons__list--no-labels .zoom-social-icons__field-handle.dashicons { margin-top: 3px; }
 
 			.zoom-social-icons__add-button { margin-bottom: 10px; }
 

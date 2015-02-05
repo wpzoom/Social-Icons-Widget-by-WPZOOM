@@ -104,14 +104,19 @@
             var url = $(this).val();
             var $this = $(this);
 
+            var found = false;
+
             $(icons).each(function(ix, icon) {
                 if (url.indexOf(icon) !== -1) {
-                    $this.parents('.zoom-social-icons__field').find('.zoom-social-icons__field-handle').attr('class', 'zoom-social-icons__field-handle').addClass('socicon').addClass('socicon-' + icon);
-                    return false;
-                } else {
-                    $this.parents('.zoom-social-icons__field').find('.zoom-social-icons__field-handle').attr('class', 'zoom-social-icons__field-handle');
+                    $this.parents('.zoom-social-icons__field').find('.zoom-social-icons__field-handle').attr('class', 'zoom-social-icons__field-handle socicon socicon-' + icon);
+                    found = true;
+                    return;
                 }
             });
+
+            if (!found) {
+                $this.parents('.zoom-social-icons__field').find('.zoom-social-icons__field-handle').attr('class', 'zoom-social-icons__field-handle dashicons dashicons-sort');
+            }
         });
 
         $(document).on('change', '.zoom-social-icons-show-icon-labels', function () {
