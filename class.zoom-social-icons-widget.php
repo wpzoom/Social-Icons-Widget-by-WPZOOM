@@ -72,8 +72,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 			.zoom-social-icons__add-button { margin-bottom: 10px; }
 
-
-			.socicon.socicon {
+			.zoom-social-icons__field-handle.socicon {
 				color: white;
 				padding: 6px;
 				border-radius: 20px;
@@ -84,21 +83,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 	public function admin_js_templates() {
 		?>
-		<script type="text/html" id="tmpl-zoom-social-icons-field">
-			<li class="zoom-social-icons__field">
-				<div class="zoom-social-icons__cw">
-					<div class="zoom-social-icons__inputs">
-						<input class="widefat zoom-social-icons__field-url" type="text" placeholder="URL" value="">
-						<input class="widefat zoom-social-icons__field-label" type="text" placeholder="Label" value="">
-					</div>
-				</div>
-
-				<span class="zoom-social-icons__field-handle dashicons dashicons-sort"></span>
-				<a class="zoom-social-icons__field-trash" href="#"><span class="dashicons dashicons-trash"></span></a>
-
-				<br style="clear:both">
-			</li>
-		</script>
+		<script type="text/html" id="tmpl-zoom-social-icons-field"><?php $this->list_field_template(); ?></script>
 		<?php
 	}
 
@@ -187,48 +172,18 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		    data-label-field-id="<?php echo $this->get_field_id( 'label-fields' ); ?>"
 		    data-label-field-name="<?php echo $this->get_field_name( 'label-fields' ); ?>">
 
-			<?php foreach ( $instance['fields'] as $field ) : ?>
-
-				<li class="zoom-social-icons__field">
-					<div class="zoom-social-icons__cw">
-						<div class="zoom-social-icons__inputs">
-
-							<?php
-							printf('<input class="widefat zoom-social-icons__field-url" id="%1$s" name="%2$s[]" type="text" placeholder="%3$s" value="%4$s">',
-								$this->get_field_id('url-fields'),
-								$this->get_field_name('url-fields'),
-								__('URL', 'zoom-social-icons-widget'),
-								esc_attr( $field['url'] )
-							);
-
-							printf('<input class="widefat zoom-social-icons__field-label" id="%1$s" name="%2$s[]" type="text" placeholder="%3$s" value="%4$s">',
-								$this->get_field_id('label-fields'),
-								$this->get_field_name('label-fields'),
-								__('Label', 'zoom-social-icons-widget'),
-								esc_attr( $field['label'] )
-							);
-							?>
-
-						</div>
-					</div>
-
-					<?php
-					$icon = '';
-					foreach ( $this->icons as $icon_id ) {
-						if (strstr($field['url'], $icon_id)) {
-							$icon = $icon_id;
-							break;
-						}
-					}
-					?>
-
-					<span class="zoom-social-icons__field-handle socicon socicon-<?php echo esc_attr( apply_filters( 'zoom-social-icons-widget-icon', $icon, $field['url'] ) ); ?>"></span>
-					<a class="zoom-social-icons__field-trash" href="#"><span class="dashicons dashicons-trash"></span></a>
-
-					<br style="clear:both">
-				</li>
-
-			<?php endforeach; ?>
+			<?php
+			foreach ( $instance['fields'] as $field ) {
+				$this->list_field_template( array(
+					'url-field-id'     => $this->get_field_id( 'url-fields' ),
+					'url-field-name'   => $this->get_field_name( 'url-fields' ),
+					'url-value'        => $field['url'],
+					'label-field-id'   => $this->get_field_id( 'label-fields' ),
+					'label-field-name' => $this->get_field_name( 'label-fields' ),
+					'label-value'      => $field['label'],
+				) );
+			}
+			?>
 
 		</ul>
 
@@ -237,5 +192,71 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		</div>
 
 		<?php
+	}
+
+	protected function list_field_template( $args = array() ) {
+		$defaults = array(
+			'url-field-id'     => '',
+			'url-field-name'   => '',
+			'url-value'        => '',
+			'label-field-id'   => '',
+			'label-field-name' => '',
+			'label-value'      => '',
+		);
+
+		$args = wp_parse_args( $args, $defaults );
+
+		$icon_class = 'dashicons dashicons-sort';
+		if ( ( $icon = $this->get_icon( $args['url-value'] ) ) ) {
+			$icon_class = 'socicon socicon-' . $icon;
+		}
+
+		?>
+
+		<li class="zoom-social-icons__field">
+			<div class="zoom-social-icons__cw">
+				<div class="zoom-social-icons__inputs">
+
+					<?php
+					printf('<input class="widefat zoom-social-icons__field-url" id="%1$s" name="%2$s[]" type="text" placeholder="%3$s" value="%4$s">',
+						$args['url-field-id'],
+						$args['url-field-name'],
+						__('URL', 'zoom-social-icons-widget'),
+						esc_attr( $args['url-value'] )
+					);
+
+					printf('<input class="widefat zoom-social-icons__field-label" id="%1$s" name="%2$s[]" type="text" placeholder="%3$s" value="%4$s">',
+						$args['label-field-id'],
+						$args['label-field-name'],
+						__( 'Label', 'zoom-social-icons-widget' ),
+						esc_attr( $args['label-value'] )
+					);
+					?>
+
+				</div>
+			</div>
+
+			<span class="zoom-social-icons__field-handle <?php echo $icon_class; ?>"></span>
+			<a class="zoom-social-icons__field-trash" href="#"><span class="dashicons dashicons-trash"></span></a>
+
+			<br style="clear:both">
+		</li>
+
+		<?php
+	}
+
+	protected function get_icon( $url ) {
+		$icon = '';
+
+		if ( $url ) {
+			foreach ( $this->icons as $icon_id ) {
+				if ( strstr( $url, $icon_id ) ) {
+					$icon = $icon_id;
+					break;
+				}
+			}
+		}
+
+		return apply_filters( 'zoom-social-icons-widget-icon', $icon, $url );
 	}
 }
