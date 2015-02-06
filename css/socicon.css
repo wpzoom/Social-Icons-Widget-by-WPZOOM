@@ -186,3 +186,23 @@
 .socicon-meetup:before { content: "]"; }
 .socicon-persona { color: #e6753d; background-color: #e6753d; }
 .socicon-persona:before { content: ")"; }
+
+
+.zoom-social-icons-list li {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+}
+
+.zoom-social-icons-list .socicon {
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
