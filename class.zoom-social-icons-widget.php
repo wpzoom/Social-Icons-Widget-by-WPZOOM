@@ -35,6 +35,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		$this->defaults = apply_filters( 'zoom-social-icons-widget-defaults', array(
 			'title'            => esc_html__( 'Social Icons', 'zoom-social-icons-widget' ),
 			'show-icon-labels' => false,
+			'open-new-tab'     => true,
 			'fields'           => array()
 		) );
 
@@ -89,7 +90,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				<?php $class_list = 'socicon socicon-' . $this->get_icon( $field['url'] ); ?>
 
 				<li class="zoom-social_icons-list__item">
-					<a href="<?php echo esc_url( $field['url'] ); ?>">
+					<a href="<?php echo esc_url( $field['url'] ); ?>" <?php echo ( $instance['open-new-tab'] ? 'target="_blank"' : '' ); ?>>
 						<span class="<?php echo esc_attr( $class_list ); ?>"></span>
 
 						<?php if ( $instance['show-icon-labels'] ) : ?>
@@ -163,6 +164,12 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			<input class="checkbox zoom-social-icons-show-icon-labels" type="checkbox" <?php checked( $instance['show-icon-labels'] ); ?> id="<?php echo $this->get_field_id( 'show-icon-labels' ); ?>" name="<?php echo $this->get_field_name( 'show-icon-labels' ); ?>" />
 			<label for="<?php echo $this->get_field_id( 'show-icon-labels' ); ?>"><?php _e(' Show icon labels? ', 'zoom-social-icons-widget'); ?></label>
 		</p>
+
+		<p>
+			<input class="checkbox" type="checkbox" <?php checked( $instance['open-new-tab'] ); ?> id="<?php echo $this->get_field_id( 'open-new-tab' ); ?>" name="<?php echo $this->get_field_name( 'open-new-tab' ); ?>" />
+			<label for="<?php echo $this->get_field_id( 'open-new-tab' ); ?>"><?php _e(' Open links in new tab? ', 'zoom-social-icons-widget'); ?></label>
+		</p>
+
 
 		<p style="margin-bottom: 0;"><?php _e( 'Icons:', 'zoom-social-icons-widget' ); ?></p>
 
