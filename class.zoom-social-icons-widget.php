@@ -42,49 +42,26 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ) );
 		add_action( 'admin_print_footer_scripts', array( $this, 'admin_js_templates' ) );
+
+		add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ) );
 	}
 
 	public function admin_scripts() {
 		wp_enqueue_script( 'zoom-social-icons-widget', plugin_dir_url( $this->plugin_file ) . 'social-icons-widget.js', array( 'jquery', 'jquery-ui-sortable' ), '20150203' );
 		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'css/socicon.css', array(), '20150204' );
-
-
-		?>
-		<style>
-			.zoom-social-icons__list--no-labels .zoom-social-icons__field-label { display: none; }
-			.zoom-social-icons__field { padding: 6px 0; display: block; margin: 0; }
-			.zoom-social-icons__field + .zoom-social-icons__field { border-top: 1px solid #efefef; }
-
-			.zoom-social-icons__cw { float: left; width: 100%; }
-			.zoom-social-icons__inputs { margin-left: 40px; margin-right: 30px; }
-			.zoom-social-icons__field-url + .zoom-social-icons__field-label { margin-top: 2px; }
-
-			.zoom-social-icons__field-handle, .zoom-social-icons__field-trash { float: left; width: 30px; margin-top: 12px; }
-			.zoom-social-icons__field-handle { width: 40px; margin-left: -100%; }
-			.zoom-social-icons__field-handle:hover { cursor: move; }
-			.zoom-social-icons__field-trash { margin-top: 18px; margin-left: -30px; text-decoration: none; display: block; text-align: right; }
-
-			.zoom-social-icons__list--no-labels .zoom-social-icons__field-handle { margin-top: -4px; }
-			.zoom-social-icons__list--no-labels .zoom-social-icons__field-trash { margin-top: 2px; }
-
-			.zoom-social-icons__field-handle.dashicons { margin-top: 18px; padding-left: 4px; }
-			.zoom-social-icons__list--no-labels .zoom-social-icons__field-handle.dashicons { margin-top: 3px; }
-
-			.zoom-social-icons__add-button { margin-bottom: 10px; }
-
-			.zoom-social-icons__field-handle.socicon {
-				color: white;
-				padding: 6px;
-				border-radius: 20px;
-			}
-		</style>
-		<?php
+		wp_enqueue_style( 'social-icons-widget-admin', plugin_dir_url( $this->plugin_file ) . 'css/social-icons-widget-admin.css', array( 'socicon' ), '20150206' );
 	}
 
 	public function admin_js_templates() {
 		?>
+
 		<script type="text/html" id="tmpl-zoom-social-icons-field"><?php $this->list_field_template(); ?></script>
+
 		<?php
+	}
+
+	public function scripts() {
+		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'css/socicon.css', array(), '20150204' );
 	}
 
 	/**
