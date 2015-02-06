@@ -7,10 +7,13 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	protected $defaults;
 
 	/**
-	 * @var string
+	 * @var string Path to plugin file.
 	 */
 	protected $plugin_file;
 
+	/**
+	 * @var array List of supported icons.
+	 */
 	protected $icons = array(
 		'twitter', 'facebook', 'google', 'pinterest', 'foursquare', 'yahoo', 'skype', 'yelp', 'feedburner',
 		'linkedin', 'viadeo', 'xing', 'myspace', 'soundcloud', 'spotify', 'grooveshark', 'lastfm', 'youtube', 'vimeo',
@@ -22,6 +25,9 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		'smugmug', 'swarm', 'triplej', 'yammer', 'stackoverflow', 'drupal', 'odnoklassniki', 'android', 'meetup', 'persona'
 	);
 
+	/**
+	 * Widget constructor.
+	 */
 	public function __construct() {
 		parent::__construct(
 			'zoom-social-icons-widget',
@@ -47,12 +53,18 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ) );
 	}
 
+	/**
+	 * Script & styles for back-end widget form.
+	 */
 	public function admin_scripts() {
 		wp_enqueue_script( 'zoom-social-icons-widget', plugin_dir_url( $this->plugin_file ) . 'social-icons-widget.js', array( 'jquery', 'jquery-ui-sortable' ), '20150203' );
 		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'css/socicon.css', array(), '20150204' );
 		wp_enqueue_style( 'social-icons-widget-admin', plugin_dir_url( $this->plugin_file ) . 'css/social-icons-widget-admin.css', array( 'socicon' ), '20150206' );
 	}
 
+	/**
+	 * JavaScript templates for back-end widget form.
+	 */
 	public function admin_js_templates() {
 		?>
 
@@ -61,6 +73,9 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		<?php
 	}
 
+	/**
+	 * Scripts & styles for front-end display of widget.
+	 */
 	public function scripts() {
 		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'css/socicon.css', array(), '20150204' );
 	}
@@ -201,6 +216,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		<?php
 	}
 
+	/**
+	 * Generates template for field item, used for widget options in wp-admin directly and by javascript.
+	 *
+	 * @param array $args Template arguments
+	 */
 	protected function list_field_template( $args = array() ) {
 		$defaults = array(
 			'url-field-id'     => '',
@@ -252,6 +272,13 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		<?php
 	}
 
+	/**
+	 * Returns an icon identifier for given website url.
+	 *
+	 * @param $url string Profile URL
+	 *
+	 * @return string icon id that matches given url
+	 */
 	protected function get_icon( $url ) {
 		$icon = '';
 
