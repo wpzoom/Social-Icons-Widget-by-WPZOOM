@@ -58,7 +58,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	 */
 	public function admin_scripts() {
 		wp_enqueue_script( 'zoom-social-icons-widget', plugin_dir_url( $this->plugin_file ) . 'social-icons-widget.js', array( 'jquery', 'jquery-ui-sortable' ), '20150203' );
-		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'css/socicon.css', array(), '20150204' );
+		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'css/socicon-a.css', array(), '20150204' );
 		wp_enqueue_style( 'social-icons-widget-admin', plugin_dir_url( $this->plugin_file ) . 'css/social-icons-widget-admin.css', array( 'socicon' ), '20150206' );
 	}
 
@@ -77,7 +77,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	 * Scripts & styles for front-end display of widget.
 	 */
 	public function scripts() {
-		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'css/socicon.css', array(), '20150204' );
+		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'css/socicon-a.css', array(), '20150204' );
 	}
 
 	/**
