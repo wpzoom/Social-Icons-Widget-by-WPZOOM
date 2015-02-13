@@ -187,8 +187,9 @@
 .socicon-persona { background-color: #e6753d; color: #e6753d; }
 .socicon-persona:before { content: ")"; }
 
-.zoom-social-icons-list--no-labels .zoom-social_icons-list__item { display: inline-block; }
-.zoom-social_icons-list__item { margin: 4px; }
+.zoom-social_icons-list__item { margin: 0 0 10px; }
+.zoom-social_icons-list__label { margin-left: 4px; }
+.zoom-social-icons-list--no-labels .zoom-social_icons-list__item { display: inline-block; margin: 4px; }
 .zoom-social-icons-list .socicon { padding: 6px; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
 
 .socicon--with-canvas { color: #ffffff; }
