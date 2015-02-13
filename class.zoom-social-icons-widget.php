@@ -103,14 +103,18 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		<ul class="zoom-social-icons-list <?php echo ( $instance['show-icon-labels'] ? '' : 'zoom-social-icons-list--no-labels' ); ?>">
 
 			<?php foreach ( $instance['fields'] as $field ) : ?>
-				<?php $class_list = 'socicon socicon-' . $this->get_icon( $field['url'] ); ?>
+				<?php
+				$class_list = array( 'socicon' );
+				$class_list[] = 'socicon-' . $this->get_icon( $field['url'] );
+				$class_list[] = 'socicon--' . $instance['icon-style'];
+				?>
 
 				<li class="zoom-social_icons-list__item">
 					<a href="<?php echo esc_url( $field['url'] ); ?>" <?php echo ( $instance['open-new-tab'] ? 'target="_blank"' : '' ); ?>>
-						<span class="<?php echo esc_attr( $class_list ); ?>"></span>
+						<span class="<?php echo esc_attr( implode( ' ', $class_list ) ); ?>"></span>
 
 						<?php if ( $instance['show-icon-labels'] ) : ?>
-							<span><?php echo esc_html( $field['label'] ); ?></span>
+							<span class="zoom-social_icons-list__label"><?php echo esc_html( $field['label'] ); ?></span>
 						<?php endif; ?>
 					</a>
 				</li>

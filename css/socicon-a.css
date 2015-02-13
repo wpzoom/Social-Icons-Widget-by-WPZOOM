@@ -28,6 +28,8 @@
     width: 1em;
 }
 
+.socicon:before { position: relative; top: 1px; }
+
 .socicon-twitter { background-color: #4da7de; }
 .socicon-twitter:before { content: "a"; }
 .socicon-facebook { background-color: #3e5b98; }
@@ -186,3 +188,9 @@
 .socicon-meetup:before { content: "]"; }
 .socicon-persona { background-color: #e6753d; }
 .socicon-persona:before { content: ")"; }
+
+.zoom-social-icons-list--no-labels .zoom-social_icons-list__item { display: inline-block; }
+.zoom-social_icons-list__item { margin: 4px; }
+.zoom-social-icons-list .socicon { color: #ffffff; padding: 6px; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+.zoom-social-icons-list .socicon--rounded { -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
+.zoom-social-icons-list .socicon--round { -moz-border-radius: 100px; -webkit-border-radius: 100px; border-radius: 100px; }
