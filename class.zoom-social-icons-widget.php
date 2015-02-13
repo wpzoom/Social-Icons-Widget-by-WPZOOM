@@ -254,7 +254,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 		<p>
 			<small>
-				<?php echo wp_kses_post( __( 'Note that icons above is not hwo they will look on front-end. This is just for reference.', 'zoom-social-icons-widget' ) ); ?>
+				<?php echo wp_kses_post( __( 'Note that icons above is not how they will look on front-end. This is just for reference.', 'zoom-social-icons-widget' ) ); ?>
 			</small>
 		</p>
 
