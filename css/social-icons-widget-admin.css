@@ -14,7 +14,7 @@
 .zoom-social-icons__list--no-labels .zoom-social-icons__field-handle { margin-top: -4px; }
 .zoom-social-icons__list--no-labels .zoom-social-icons__field-trash { margin-top: 2px; }
 
-.zoom-social-icons__field-handle.dashicons { margin-top: 18px; padding-left: 4px; }
+.zoom-social-icons__field-handle.dashicons { width: 30px; margin-top: 18px; }
 .zoom-social-icons__list--no-labels .zoom-social-icons__field-handle.dashicons { margin-top: 3px; }
 
 .zoom-social-icons__add-button { margin-bottom: 10px; }
