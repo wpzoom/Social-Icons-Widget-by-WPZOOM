@@ -42,6 +42,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			'title'            => esc_html__( 'Social Icons', 'zoom-social-icons-widget' ),
 			'show-icon-labels' => false,
 			'open-new-tab'     => true,
+			'icon-style'       => 'rounded',
 			'fields'           => array()
 		) );
 
@@ -138,6 +139,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 		$instance['show-icon-labels'] = (bool) $new_instance['show-icon-labels'];
 
+		$instance['icon-style'] = $this->defaults['icon-style'];
+		if ( in_array( $new_instance['icon-style'], array( 'rounded', 'round', 'square' ) ) ) {
+			$instance['icon-style'] = $new_instance['icon-style'];
+		}
+
 		$field_count = count( $new_instance['url-fields'] );
 
 		$instance['fields'] = array();
@@ -185,6 +191,14 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			<label for="<?php echo $this->get_field_id( 'open-new-tab' ); ?>"><?php _e(' Open links in new tab? ', 'zoom-social-icons-widget'); ?></label>
 		</p>
 
+		<p>
+			<label for="<?php echo $this->get_field_id( 'icon-style' ); ?>"><?php _e( 'Icon Style:', 'zoom-social-icons-widget' ); ?></label>
+			<select name="<?php echo $this->get_field_name( 'icon-style' ); ?>" id="<?php echo $this->get_field_id( 'icon-style' ); ?>" class="widefat">
+				<option value="rounded"<?php selected( $instance['icon-style'], 'rounded' ); ?>><?php esc_html_e( 'Rounded Corners', 'zoom-social-icons-widget' ); ?></option>
+				<option value="round"<?php selected( $instance['icon-style'], 'round' ); ?>><?php esc_html_e( 'Round', 'zoom-social-icons-widget' ); ?></option>
+				<option value="square"<?php selected( $instance['icon-style'], 'square' ); ?>><?php esc_html_e( 'Square', 'zoom-social-icons-widget' ); ?></option>
+			</select>
+		</p>
 
 		<p style="margin-bottom: 0;"><?php _e( 'Icons:', 'zoom-social-icons-widget' ); ?></p>
 
