@@ -39,11 +39,12 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		);
 
 		$this->defaults = apply_filters( 'zoom-social-icons-widget-defaults', array(
-			'title'            => esc_html__( 'Social Icons', 'zoom-social-icons-widget' ),
-			'show-icon-labels' => false,
-			'open-new-tab'     => true,
-			'icon-style'       => 'rounded',
-			'fields'           => array()
+			'title'             => esc_html__( 'Social Icons', 'zoom-social-icons-widget' ),
+			'show-icon-labels'  => false,
+			'open-new-tab'      => true,
+			'icon-style'        => 'with-canvas',
+			'icon-canvas-style' => 'rounded',
+			'fields'            => array()
 		) );
 
 		$this->plugin_file = dirname( __FILE__ ) . '/social-icons-widget-by-wpzoom.php';
@@ -59,7 +60,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	 */
 	public function admin_scripts() {
 		wp_enqueue_script( 'zoom-social-icons-widget', plugin_dir_url( $this->plugin_file ) . 'social-icons-widget.js', array( 'jquery', 'jquery-ui-sortable' ), '20150203' );
-		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'css/socicon-a.css', array(), '20150204' );
+		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'css/socicon.css', array(), '20150204' );
 		wp_enqueue_style( 'social-icons-widget-admin', plugin_dir_url( $this->plugin_file ) . 'css/social-icons-widget-admin.css', array( 'socicon' ), '20150206' );
 	}
 
@@ -78,7 +79,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	 * Scripts & styles for front-end display of widget.
 	 */
 	public function scripts() {
-		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'css/socicon-a.css', array(), '20150204' );
+		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'css/socicon.css', array(), '20150204' );
 	}
 
 	/**
@@ -107,6 +108,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				$class_list = array( 'socicon' );
 				$class_list[] = 'socicon-' . $this->get_icon( $field['url'] );
 				$class_list[] = 'socicon--' . $instance['icon-style'];
+				$class_list[] = 'socicon--' . $instance['icon-canvas-style'];
 				?>
 
 				<li class="zoom-social_icons-list__item">
@@ -144,8 +146,13 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		$instance['show-icon-labels'] = (bool) $new_instance['show-icon-labels'];
 
 		$instance['icon-style'] = $this->defaults['icon-style'];
-		if ( in_array( $new_instance['icon-style'], array( 'rounded', 'round', 'square' ) ) ) {
+		if ( in_array( $new_instance['icon-style'], array( 'with-canvas', 'without-canvas' ) ) ) {
 			$instance['icon-style'] = $new_instance['icon-style'];
+		}
+
+		$instance['icon-canvas-style'] = $this->defaults['icon-canvas-style'];
+		if ( in_array( $new_instance['icon-canvas-style'], array( 'rounded', 'round', 'square' ) ) ) {
+			$instance['icon-canvas-style'] = $new_instance['icon-canvas-style'];
 		}
 
 		$field_count = count( $new_instance['url-fields'] );
@@ -198,10 +205,24 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_id( 'icon-style' ); ?>"><?php _e( 'Icon Style:', 'zoom-social-icons-widget' ); ?></label>
 			<select name="<?php echo $this->get_field_name( 'icon-style' ); ?>" id="<?php echo $this->get_field_id( 'icon-style' ); ?>" class="widefat">
-				<option value="rounded"<?php selected( $instance['icon-style'], 'rounded' ); ?>><?php esc_html_e( 'Rounded Corners', 'zoom-social-icons-widget' ); ?></option>
-				<option value="round"<?php selected( $instance['icon-style'], 'round' ); ?>><?php esc_html_e( 'Round', 'zoom-social-icons-widget' ); ?></option>
-				<option value="square"<?php selected( $instance['icon-style'], 'square' ); ?>><?php esc_html_e( 'Square', 'zoom-social-icons-widget' ); ?></option>
+				<option value="with-canvas"<?php selected( $instance['icon-style'], 'with-canvas' ); ?>><?php esc_html_e( 'Color Background / White Icon', 'zoom-social-icons-widget' ); ?></option>
+				<option value="without-canvas"<?php selected( $instance['icon-style'], 'without-canvas' ); ?>><?php esc_html_e( 'Color Icon / No Background', 'zoom-social-icons-widget' ); ?></option>
 			</select>
+		</p>
+
+		<p>
+			<label for="<?php echo $this->get_field_id( 'icon-canvas-style' ); ?>"><?php _e( 'Icon Background Style:', 'zoom-social-icons-widget' ); ?></label>
+			<select name="<?php echo $this->get_field_name( 'icon-canvas-style' ); ?>" id="<?php echo $this->get_field_id( 'icon-canvas-style' ); ?>" class="widefat">
+				<option value="rounded"<?php selected( $instance['icon-canvas-style'], 'rounded' ); ?>><?php esc_html_e( 'Rounded Corners', 'zoom-social-icons-widget' ); ?></option>
+				<option value="round"<?php selected( $instance['icon-canvas-style'], 'round' ); ?>><?php esc_html_e( 'Round', 'zoom-social-icons-widget' ); ?></option>
+				<option value="square"<?php selected( $instance['icon-canvas-style'], 'square' ); ?>><?php esc_html_e( 'Square', 'zoom-social-icons-widget' ); ?></option>
+			</select>
+		</p>
+
+		<p>
+			<small>
+				<?php echo wp_kses_post( __( 'Icon Background Style has no effect on <i>Color Icon / No Background</i> icon style.', 'zoom-social-icons-widget' ) ); ?>
+			</small>
 		</p>
 
 		<p style="margin-bottom: 0;"><?php _e( 'Icons:', 'zoom-social-icons-widget' ); ?></p>
@@ -230,6 +251,12 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		<div class="zoom-social-icons__add-button">
 			<button class="button"><?php _e( 'Add more', 'zoom-social-icons-widget' ); ?></button>
 		</div>
+
+		<p>
+			<small>
+				<?php echo wp_kses_post( __( 'Note that icons above is not hwo they will look on front-end. This is just for reference.', 'zoom-social-icons-widget' ) ); ?>
+			</small>
+		</p>
 
 		<?php
 	}
