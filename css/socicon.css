@@ -28,9 +28,9 @@
     width: 1em;
 }
 
-.socicon-twitter { background-color: #4da7de; color: #4da7de; }
+.socicon-twitter { background-color: #55acee; color: #55acee; }
 .socicon-twitter:before { content: "a"; }
-.socicon-facebook { background-color: #3e5b98; color: #3e5b98; }
+.socicon-facebook { background-color: #3b5998; color: #3b5998; }
 .socicon-facebook:before { content: "b"; }
 .socicon-google { background-color: #d93e2d; color: #d93e2d; }
 .socicon-google:before { content: "c"; }
@@ -74,7 +74,7 @@
 .socicon-flickr:before { content: "v"; }
 .socicon-500px { background-color: #58a9de; color: #58a9de; }
 .socicon-500px:before { content: "w"; }
-.socicon-instagram { background-color: #9c7c6e; color: #9c7c6e; }
+.socicon-instagram { background-color: #3f729b; color: #3f729b; }
 .socicon-instagram:before { content: "x"; }
 .socicon-wordpress { background-color: #464646; color: #464646; }
 .socicon-wordpress:before { content: "y"; }
