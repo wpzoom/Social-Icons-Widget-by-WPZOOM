@@ -198,7 +198,7 @@
 .zoom-social-icons-list--without-canvas .socicon { background: none; }
 /* .widget because we need higher css specificity */
 .widget .zoom-social-icons-list--without-canvas { margin-left: -8px; margin-top: -4px; }
-.widget .zoom-social-icons-list--no-labels.zoom-social-icons-list--without-canvas { margin-left: -14px; margin-top: -4px; }
+.widget .zoom-social-icons-list--no-labels.zoom-social-icons-list--without-canvas { margin-left: -14px; margin-top: -8px; }
 
 .zoom-social-icons-list--rounded .socicon { -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
 .zoom-social-icons-list--round .socicon { -moz-border-radius: 100px; -webkit-border-radius: 100px; border-radius: 100px; }
