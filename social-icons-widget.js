@@ -129,21 +129,23 @@
 
         $(document).on('click', '.zoom-social-icons__field-trash', function (event) {
             event.preventDefault();
+            var $widget = $(this).parents('.widget[id*=zoom-social-icons-widget]');
             $(this).parents('.zoom-social-icons__field').remove();
+            triggerFakeChange($widget);
         });
 
         // Event handler for widget open button
         $(document).on('click', 'div.widget[id*=zoom-social-icons-widget] .widget-title, div.widget[id*=zoom-social-icons-widget] .widget-action', function () {
             if ($(this).parents('#available-widgets').length) return;
 
-            $(this).parents('.widget[id*=zoom-social-icons-widget]').find('.zoom-social-icons__list').sortable();
+            initWidget($(this).parents('.widget[id*=zoom-social-icons-widget]'));
         });
 
         // Event handler for widget added
         $(document).on('widget-added', function (event, $widget) {
             if ($widget.is('[id*=zoom-social-icons-widget]')) {
                 event.preventDefault();
-                $widget.find('.zoom-social-icons__list').sortable();
+                initWidget($widget);
             }
         });
 
@@ -151,8 +153,20 @@
         $(document).on('widget-updated', function (event, $widget) {
             if ($widget.is('[id*=zoom-social-icons-widget]')) {
                 event.preventDefault();
-                $widget.find('.zoom-social-icons__list').sortable();
+                initWidget($widget);
             }
         });
+
+        function initWidget($widget) {
+            $widget.find('.zoom-social-icons__list').sortable({
+                update: function() {
+                    triggerFakeChange($widget);
+                }
+            });
+        }
+
+        function triggerFakeChange($widget) {
+            $widget.find('.zoom-social-icons-show-icon-labels').trigger('change');
+        }
     });
 })(jQuery);
