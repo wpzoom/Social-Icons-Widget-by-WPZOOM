@@ -106,7 +106,7 @@
 
             var found = false;
 
-            $(icons).each(function(ix, icon) {
+            $(icons).each(function (ix, icon) {
                 if (url.indexOf(icon) !== -1) {
                     $this.parents('.zoom-social-icons__field').find('.zoom-social-icons__field-handle').attr('class', 'zoom-social-icons__field-handle socicon socicon-' + icon);
                     found = true;
@@ -159,7 +159,7 @@
 
         function initWidget($widget) {
             $widget.find('.zoom-social-icons__list').sortable({
-                update: function() {
+                update: function () {
                     triggerFakeChange($widget);
                 }
             });
