@@ -99,21 +99,22 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
 		}
 
+		$class_list = array();
+		$class_list[] = 'zoom-social-icons-list--' . $instance['icon-style'];
+		$class_list[] = 'zoom-social-icons-list--' . $instance['icon-canvas-style'];
+
+		if ( ! $instance['show-icon-labels'] ) {
+			$class_list[] = 'zoom-social-icons-list--no-labels';
+		}
 		?>
 
-		<ul class="zoom-social-icons-list <?php echo ( $instance['show-icon-labels'] ? '' : 'zoom-social-icons-list--no-labels' ); ?>">
+		<ul class="zoom-social-icons-list <?php echo esc_attr( implode(' ', $class_list) ); ?>">
 
 			<?php foreach ( $instance['fields'] as $field ) : ?>
-				<?php
-				$class_list = array( 'socicon' );
-				$class_list[] = 'socicon-' . $this->get_icon( $field['url'] );
-				$class_list[] = 'socicon--' . $instance['icon-style'];
-				$class_list[] = 'socicon--' . $instance['icon-canvas-style'];
-				?>
 
 				<li class="zoom-social_icons-list__item">
 					<a href="<?php echo esc_url( $field['url'] ); ?>" <?php echo ( $instance['open-new-tab'] ? 'target="_blank"' : '' ); ?>>
-						<span class="<?php echo esc_attr( implode( ' ', $class_list ) ); ?>"></span>
+						<span class="socicon socicon-<?php echo esc_attr( $this->get_icon( $field['url'] ) ); ?>"></span>
 
 						<?php if ( $instance['show-icon-labels'] ) : ?>
 							<span class="zoom-social_icons-list__label"><?php echo esc_html( $field['label'] ); ?></span>
@@ -144,6 +145,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		$instance['title'] = sanitize_text_field( $new_instance['title'] );
 
 		$instance['show-icon-labels'] = (bool) $new_instance['show-icon-labels'];
+		$instance['open-new-tab']     = (bool) $new_instance['open-new-tab'];
 
 		$instance['icon-style'] = $this->defaults['icon-style'];
 		if ( in_array( $new_instance['icon-style'], array( 'with-canvas', 'without-canvas' ) ) ) {
