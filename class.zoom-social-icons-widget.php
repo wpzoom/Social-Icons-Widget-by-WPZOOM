@@ -44,7 +44,16 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			'open-new-tab'      => true,
 			'icon-style'        => 'with-canvas',
 			'icon-canvas-style' => 'rounded',
-			'fields'            => array()
+			'fields'            => array(
+				array(
+					'url' => 'https://facebook.com/',
+					'label' => __( 'Friend me on Facebook', 'zoom-social-icons-widget' )
+				),
+				array(
+					'url' => 'https://twitter.com/',
+					'label' => __( 'Follow Me', 'zoom-social-icons-widget' )
+				)
+			)
 		) );
 
 		$this->plugin_file = dirname( __FILE__ ) . '/social-icons-widget-by-wpzoom.php';
