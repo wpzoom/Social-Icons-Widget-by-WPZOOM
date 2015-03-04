@@ -1,18 +1,22 @@
 === Social Icons Widget by WPZOOM ===
 Contributors: wpzoom, nvartolomei
 Donate link: http://wpzoom.com/
-Tags: social icons, social networks, widget, facebook, instagram, twitter, dribbble
+Tags: social icons, social networks, social media, social profiles, widget, twitter, facebook, google, pinterest, foursquare, yahoo, skype, yelp, feedburner, linkedin, viadeo, xing, myspace, soundcloud, spotify, grooveshark, lastfm, youtube, vimeo, dailymotion, vine, flickr, 500px, instagram, wordpress, tumblr, blogger, technorati, reddit, dribbble, stumbleupon, digg, envato, behance, delicious, deviantart, forrst, play, zerply, wikipedia, apple, flattr, github, chimein, friendfeed, newsvine, identica, bebo, zynga, steam, xbox, windows, outlook, coderwall, tripadvisor, appnet, goodreads, tripit, lanyrd, slideshare, buffer, rss, vkontakte, disqus, houzz, mail, patreon, paypal, playstation, smugmug, swarm, triplej, yammer, stackoverflow, drupal, odnoklassniki, android, meetup, persona
 Requires at least: 3.4
 Tested up to: 4.1.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Social Icons Widget
+Social Icons Widget to displays links to social sharing websites.
 
 == Description ==
 
-Social Icons Widget
+= Icons =
+
+Icons are provided by [socicon](http://www.socicon.com) icon font.
+
+Twitter, Facebook, Google+, Pinterest, Foursquare, Yahoo, Skype, Yelp, Feedburner, LinkedIn, Myspace, SoundCloud, Spotify, Grooveshark, Last.fm, YouTube, Vimeo, Vine, Flickr, 500px, Instagram, Tumblr, Blogger, Reddit, Dribbble, Envato, Behance,DeviantArt, GitHub,RSS, Disqus, Stackoverflow, and many others.
 
 = Get Involved =
 
