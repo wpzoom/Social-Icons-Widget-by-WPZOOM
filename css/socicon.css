@@ -187,6 +187,8 @@
 .socicon-persona { background-color: #e6753d; color: #e6753d; }
 .socicon-persona:before { content: ")"; }
 
+.zoom-social-icons-list { list-style-type: none; }
+
 .zoom-social_icons-list__item { margin: 0 0 10px; }
 .zoom-social_icons-list__label { margin-left: 4px; }
 .zoom-social-icons-list--no-labels .zoom-social_icons-list__item { display: inline-block; margin: 4px; }
