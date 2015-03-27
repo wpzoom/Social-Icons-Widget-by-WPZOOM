@@ -136,7 +136,7 @@
 .socicon-outlook:before { content: "1"; }
 .socicon-coderwall { background-color: #3E8DCC; color: #3E8DCC; }
 .socicon-coderwall:before { content: "2"; }
-.socicon-tripadvisor { background-color: #000000; color: #000000; }
+.socicon-tripadvisor { background-color: #589442; color: #589442; }
 .socicon-tripadvisor:before { content: "3"; }
 .socicon-appnet { background-color: #494949; color: #494949; }
 .socicon-appnet:before { content: "4"; }
@@ -192,7 +192,8 @@
 .zoom-social_icons-list__item { margin: 0 0 10px; }
 .zoom-social_icons-list__label { margin-left: 4px; }
 .zoom-social-icons-list--no-labels .zoom-social_icons-list__item { display: inline-block; margin: 4px; }
-.zoom-social-icons-list .socicon { padding: 8px; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+.zoom-social-icons-list .socicon { padding: 8px; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; -moz-transition: opacity .2s; -webkit-transition: opacity .2s; transition: opacity .2s; }
+.zoom-social_icons-list__item a:hover .socicon { opacity: 0.8; }
 
 .zoom-social-icons-list--with-canvas .socicon { color: #ffffff; }
 .zoom-social-icons-list--with-canvas .socicon:before { position: relative; top: 1px; }
