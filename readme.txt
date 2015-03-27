@@ -29,6 +29,7 @@ Looking to contribute code to this plugin? Go ahead and [fork the repository ove
 = 1.0.1 =
 * Fix TripAdvisor brand color
 * Add subtle hover effect for icons
+* Add description field for cool call to action headlines
 
 = 1.0 =
 * Initial release.
