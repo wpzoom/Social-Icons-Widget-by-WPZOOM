@@ -40,6 +40,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 		$this->defaults = apply_filters( 'zoom-social-icons-widget-defaults', array(
 			'title'             => esc_html__( 'Social Icons', 'zoom-social-icons-widget' ),
+			'description'       => '',
 			'show-icon-labels'  => false,
 			'open-new-tab'      => true,
 			'icon-style'        => 'with-canvas',
@@ -117,6 +118,12 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		}
 		?>
 
+		<?php if ( ! empty( $instance['description'] ) ) : ?>
+
+			<p><?php echo $instance['description']; ?></p>
+
+		<?php endif; ?>
+
 		<ul class="zoom-social-icons-list <?php echo esc_attr( implode(' ', $class_list) ); ?>">
 
 			<?php foreach ( $instance['fields'] as $field ) : ?>
@@ -152,6 +159,8 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	 */
 	public function update( $new_instance, $old_instance ) {
 		$instance['title'] = sanitize_text_field( $new_instance['title'] );
+
+		$instance['description'] = balanceTags( wp_kses( $new_instance['description'], wp_kses_allowed_html() ), true );
 
 		$instance['show-icon-labels'] = (bool) $new_instance['show-icon-labels'];
 		$instance['open-new-tab']     = (bool) $new_instance['open-new-tab'];
@@ -201,6 +210,12 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'zoom-social-icons-widget' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>"/>
+		</p>
+
+		<p>
+			<label for="<?php echo $this->get_field_id( 'description' ); ?>"><?php esc_html_e( 'Description:', 'zoom-social-icons-widget' ); ?></label>
+			<textarea class="widefat" id="<?php echo $this->get_field_id( 'description' ); ?>" name="<?php echo $this->get_field_name( 'description' ); ?>" cols="20" rows="3"><?php echo esc_attr( $instance['description'] ); ?></textarea>
+			<small><?php _e( 'Short description to be displayed right above the icons. Basic HTML allowed.', 'zoom-social-icons-widget' ); ?></small>
 		</p>
 
 		<p>
