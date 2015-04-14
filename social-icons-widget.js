@@ -106,13 +106,21 @@
 
             var found = false;
 
-            $(icons).each(function (ix, icon) {
-                if (url.indexOf(icon) !== -1) {
-                    $this.parents('.zoom-social-icons__field').find('.zoom-social-icons__field-handle').attr('class', 'zoom-social-icons__field-handle socicon socicon-' + icon);
-                    found = true;
-                    return;
-                }
-            });
+            if (url.indexOf('feedburner.com') !== -1) {
+                $this.parents('.zoom-social-icons__field').find('.zoom-social-icons__field-handle').attr('class', 'zoom-social-icons__field-handle socicon socicon-rss');
+                found = true;
+            } else if (url.indexOf('feedburner.google.com') !== -1) {
+                $this.parents('.zoom-social-icons__field').find('.zoom-social-icons__field-handle').attr('class', 'zoom-social-icons__field-handle socicon socicon-mail');
+                found = true;
+            } else {
+                $(icons).each(function (ix, icon) {
+                    if (url.indexOf(icon) !== -1) {
+                        $this.parents('.zoom-social-icons__field').find('.zoom-social-icons__field-handle').attr('class', 'zoom-social-icons__field-handle socicon socicon-' + icon);
+                        found = true;
+                        return;
+                    }
+                });
+            }
 
             if (!found) {
                 $this.parents('.zoom-social-icons__field').find('.zoom-social-icons__field-handle').attr('class', 'zoom-social-icons__field-handle dashicons dashicons-sort');

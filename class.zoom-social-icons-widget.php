@@ -354,10 +354,20 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		$icon = '';
 
 		if ( $url ) {
-			foreach ( $this->icons as $icon_id ) {
-				if ( strstr( $url, $icon_id ) ) {
-					$icon = $icon_id;
-					break;
+			if ( strstr( $url, 'feedburner.google.com' ) ) {
+				$icon = 'mail';
+			}
+
+			if ( strstr( $url, 'feedburner.com') ) {
+				$icon = 'rss';
+			}
+
+			if ( ! $icon ) {
+				foreach ( $this->icons as $icon_id ) {
+					if ( strstr( $url, $icon_id ) ) {
+						$icon = $icon_id;
+						break;
+					}
 				}
 			}
 		}
