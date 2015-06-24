@@ -112,6 +112,9 @@
             } else if (url.indexOf('feedburner.google.com') !== -1) {
                 $this.parents('.zoom-social-icons__field').find('.zoom-social-icons__field-handle').attr('class', 'zoom-social-icons__field-handle socicon socicon-mail');
                 found = true;
+            } else if (url.indexOf('last.fm') !== -1) {
+                $this.parents('.zoom-social-icons__field').find('.zoom-social-icons__field-handle').attr('class', 'zoom-social-icons__field-handle socicon socicon-lastfm');
+                found = true;
             } else {
                 $(icons).each(function (ix, icon) {
                     if (url.indexOf(icon) !== -1) {

@@ -362,6 +362,10 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				$icon = 'rss';
 			}
 
+			if ( strstr( $url, 'last.fm') ) {
+				$icon = 'lastfm';
+			}
+
 			if ( ! $icon ) {
 				foreach ( $this->icons as $icon_id ) {
 					if ( strstr( $url, $icon_id ) ) {
