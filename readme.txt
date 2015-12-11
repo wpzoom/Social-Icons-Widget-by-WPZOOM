@@ -1,16 +1,36 @@
 === Social Icons Widget by WPZOOM ===
-Contributors: WPZOOM, nvartolomei
-Donate link: http://wpzoom.com/
-Tags: social icons, social networks, social media, social profiles, widget, twitter, facebook, google, pinterest, foursquare, yahoo, skype, yelp, feedburner, linkedin, viadeo, xing, myspace, soundcloud, spotify, grooveshark, lastfm, youtube, vimeo, dailymotion, vine, flickr, 500px, instagram, wordpress, tumblr, blogger, technorati, reddit, dribbble, stumbleupon, digg, envato, behance, delicious, deviantart, forrst, play, zerply, wikipedia, apple, flattr, github, chimein, friendfeed, newsvine, identica, bebo, zynga, steam, xbox, windows, outlook, coderwall, tripadvisor, appnet, goodreads, tripit, lanyrd, slideshare, buffer, rss, vkontakte, disqus, houzz, mail, patreon, paypal, playstation, smugmug, swarm, triplej, yammer, stackoverflow, drupal, odnoklassniki, android, meetup, persona
-Requires at least: 3.4
-Tested up to: 4.2
+Contributors: WPZOOM, nvartolomei, ciorici
+Donate link: http://www.wpzoom.com/
+Tags: social icons, social networks, social media, social profiles, widget, twitter, facebook, google, pinterest, foursquare, yahoo, skype, yelp, feedburner, linkedin, viadeo, xing, myspace, soundcloud, spotify, grooveshark, lastfm, youtube, vimeo, dailymotion, vine, flickr, 500px, instagram, wordpress, tumblr, blogger, technorati, reddit, dribbble, stumbleupon, digg, envato, behance, delicious, deviantart, forrst, play, zerply, wikipedia, apple, flattr, github, chimein, friendfeed, newsvine, identica, bebo, zynga, steam, xbox, windows, outlook, coderwall, tripadvisor, appnet, goodreads, tripit, lanyrd, slideshare, buffer, rss, vkontakte, disqus, houzz, mail, patreon, paypal, playstation, smugmug, swarm, triplej, yammer, stackoverflow, drupal, odnoklassniki, android, meetup, persona, airbnb, baidu, ebay, medium, periscope
+Requires at least: 4.1
+Tested up to: 4.4
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Social Icons Widget to displays links to social sharing websites.
+Social Icons Widget to displays links to social sharing websites. Supports more than 80 sites and you can easily add and sort icons by Drag & Drop.
 
 == Description ==
+
+Sortable widget that supports more than 80+ social networks
+
+= Where I can view a Demo? =
+
+You can view the widget live in all our themes at [WPZOOM](http://www.wpzoom.com/themes/).
+
+= View Demo & Examples =
+* [Monte Theme](http://demo.wpzoom.com/?theme=monte) - header bar and footer
+* [Tempo Theme](http://demo.wpzoom.com/?theme=tempo) - header (under logo) and footer
+* [Foodica Theme](http://demo.wpzoom.com/?theme=foodica) - header bar and sidebar
+* [Inspiro Theme](http://demo.wpzoom.com/?theme=inspiro) - sidebar panel and footer
+
+= Features: =
+
+* 80+ Sites/Social Networks supported
+* Drag & Drop Icons
+* 2 Styles: Icon Shape and Icon with Background
+* 3 Background Styles: Rounded Corners, Round, Square
+* Retina Ready Icons
 
 = Icons =
 
@@ -22,9 +42,30 @@ Twitter, Facebook, Google+, Pinterest, Foursquare, Yahoo, Skype, Yelp, Feedburne
 
 Looking to contribute code to this plugin? Go ahead and [fork the repository over at GitHub](https://github.com/wpzoom/social-icons-widget/).
 
+== Installation ==
+
+Simply search for the plugin via the Plugins -> Add New dialog and click install, or download and extract the plugin, and copy the plugin folder into your wp-content/plugins directory and activate.
+
 == Frequently Asked Questions ==
 
+= Where do I find more details about this plugin? =
+
+On our [websiste](http://www.wpzoom.com/plugins/social-widget/).
+
+== Screenshots ==
+
+1. Rounded Corners Style
+2. Square Style
+3. Rounded Icons Style
+4. No Background Style
+5. With Icon label
+6. Widget Settings
+
 == Changelog ==
+
+= 1.0.3 =
+* Updated Google+ icon
+* Added new icons: Airbnb, Baidu, eBay, Medium, Periscope
 
 = 1.0.2 =
 * Display proper icons for FeedBurner services
