@@ -31,6 +31,7 @@ You can view the widget live in all our themes at [WPZOOM](http://www.wpzoom.com
 * 2 Styles: Icon Shape and Icon with Background
 * 3 Background Styles: Rounded Corners, Round, Square
 * Retina Ready Icons
+* Supports email addresses (email@example.com)
 
 = Icons =
 
@@ -50,7 +51,7 @@ Simply search for the plugin via the Plugins -> Add New dialog and click install
 
 = Where do I find more details about this plugin? =
 
-On our [websiste](http://www.wpzoom.com/plugins/social-widget/).
+On our [website](http://www.wpzoom.com/plugins/social-widget/).
 
 == Screenshots ==
 
