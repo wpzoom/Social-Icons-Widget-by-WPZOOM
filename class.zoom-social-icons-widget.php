@@ -203,7 +203,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			<?php foreach ( $instance['fields'] as $field ) : ?>
 
 				<li class="zoom-social_icons-list__item">
-					<a href="<?php echo esc_url( $field['url'] ); ?>" <?php echo ( $instance['open-new-tab'] ? 'target="_blank"' : '' ); ?>>
+					<a class="zoom-social_icons-link" href="<?php echo esc_url( $field['url'] ); ?>" <?php echo ( $instance['open-new-tab'] ? 'target="_blank"' : '' ); ?>>
 						<span class="socicon socicon-<?php echo esc_attr( $this->get_icon( $field['url'] ) ); ?>"></span>
 
 						<?php if ( $instance['show-icon-labels'] ) : ?>
