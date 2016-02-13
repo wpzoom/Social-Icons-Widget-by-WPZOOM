@@ -5,7 +5,7 @@
  * Description: Social Icons Widget
  * Author: WPZOOM
  * Author URI: http://wpzoom.com/
- * Version: 1.0.3
+ * Version: 1.0.4
  * License: GPLv2 or later
  */
 

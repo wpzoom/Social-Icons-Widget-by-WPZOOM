@@ -1,11 +1,9 @@
 @font-face {
     font-family: 'socicon';
-    src: url('../font/socicon-webfont.eot');
-    src: url('../font/socicon-webfont.eot?#iefix') format('embedded-opentype'),
-    url('../font/socicon-webfont.woff') format('woff'),
-    url('../font/socicon-webfont.woff2') format('woff2'),
-    url('../font/socicon-webfont.ttf') format('truetype'),
-    url('../font/socicon-webfont.svg#sociconregular') format('svg');
+    src:
+        url('../font/socicon.ttf') format('truetype'),
+        url('../font/socicon.woff') format('woff'),
+        url('../font/socicon.svg?#socicon') format('svg');
     font-weight: normal;
     font-style: normal;
     text-transform: initial;
@@ -22,6 +20,7 @@
     font-weight: normal;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     font-size: 1.2em;
 }
 .socicon:empty {
@@ -74,6 +73,8 @@
 .socicon-facebook:before { content: "\e041" }
 .socicon-feedburner { background-color: #FFCC00; color: #FFCC00; }
 .socicon-feedburner:before { content: "\e048" }
+.socicon-feedly { background-color: #34B151; color: #34B151; }
+.socicon-feedly:before { content: "\e074" }
 .socicon-flattr { background-color: #F67C1A; color: #F67C1A; }
 .socicon-flattr:before { content: "\e02f" }
 .socicon-flickr { background-color: #ff0084; color: #ff0084; }
@@ -102,6 +103,8 @@
 .socicon-lastfm:before { content: "\e050" }
 .socicon-linkedin { background-color: #3371b7; color: #3371b7; }
 .socicon-linkedin:before { content: "\e049" }
+.socicon-lookbook { background-color: #000000; color: #000000; }
+.socicon-lookbook:before { content: "\e073" }
 .socicon-mail { background-color: #000000; color: #000000; }
 .socicon-mail:before { content: "\e01f" }
 .socicon-medium { background-color: #01AB6C; color: #01AB6C }

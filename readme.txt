@@ -1,9 +1,9 @@
 === Social Icons Widget by WPZOOM ===
 Contributors: WPZOOM, nvartolomei, ciorici
 Donate link: http://www.wpzoom.com/
-Tags: social icons, social networks, social media, social profiles, widget, twitter, facebook, google, pinterest, foursquare, yahoo, skype, yelp, feedburner, linkedin, viadeo, xing, myspace, soundcloud, spotify, grooveshark, lastfm, youtube, vimeo, dailymotion, vine, flickr, 500px, instagram, wordpress, tumblr, blogger, technorati, reddit, dribbble, stumbleupon, digg, envato, behance, delicious, deviantart, forrst, play, zerply, wikipedia, apple, flattr, github, chimein, friendfeed, newsvine, identica, bebo, zynga, steam, xbox, windows, outlook, coderwall, tripadvisor, appnet, goodreads, tripit, lanyrd, slideshare, buffer, rss, vkontakte, disqus, houzz, mail, patreon, paypal, playstation, smugmug, swarm, triplej, yammer, stackoverflow, drupal, odnoklassniki, android, meetup, persona, airbnb, baidu, ebay, medium, periscope
+Tags: social icons, social networks, social media, social profiles, widget, twitter, facebook, google, pinterest, foursquare, yahoo, skype, yelp, feedburner, linkedin, viadeo, xing, myspace, soundcloud, spotify, grooveshark, lastfm, youtube, vimeo, dailymotion, vine, flickr, 500px, instagram, wordpress, tumblr, blogger, technorati, reddit, dribbble, stumbleupon, digg, envato, behance, delicious, deviantart, forrst, play, zerply, wikipedia, apple, flattr, github, chimein, friendfeed, newsvine, identica, bebo, zynga, steam, xbox, windows, outlook, coderwall, tripadvisor, appnet, goodreads, tripit, lanyrd, slideshare, buffer, rss, vkontakte, disqus, houzz, mail, patreon, paypal, playstation, smugmug, swarm, triplej, yammer, stackoverflow, drupal, odnoklassniki, android, meetup, persona, airbnb, baidu, ebay, medium, periscope, lookbook, feedly
 Requires at least: 4.1
-Tested up to: 4.4
+Tested up to: 4.4.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -63,6 +63,9 @@ On our [website](http://www.wpzoom.com/plugins/social-widget/).
 6. Widget Settings
 
 == Changelog ==
+
+= 1.0.4 =
+* Added new icons: LOOKBOOK, feedly
 
 = 1.0.3 =
 * Updated Google+ icon
