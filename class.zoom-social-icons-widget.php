@@ -24,6 +24,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
        'bebo',
        'behance',
        'blogger',
+       'bloglovin',
        'buffer',
        'coderwall',
        'dailymotion',
@@ -72,6 +73,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
        'skype',
        'slideshare',
        'smugmug',
+       'snapchat',
        'soundcloud',
        'spotify',
        'stackoverflow',
@@ -79,6 +81,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
        'stumbleupon',
        'swarm',
        'technorati',
+       'telegram',
        'tripadvisor',
        'tripit',
        'triplej',
@@ -110,7 +113,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			esc_html__( 'Social Icons by WPZOOM', 'zoom-social-icons-widget' ),
 			array(
 				'classname'   => 'zoom-social-icons-widget',
-				'description' => __( 'Social Icons Widget.', 'zoom-social-icons-widget' ),
+				'description' => __( 'Sortable widget that supports more than 80+ social networks', 'zoom-social-icons-widget' ),
 			)
 		);
 
@@ -296,12 +299,12 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 		<p>
 			<input class="checkbox zoom-social-icons-show-icon-labels" type="checkbox" <?php checked( $instance['show-icon-labels'] ); ?> id="<?php echo $this->get_field_id( 'show-icon-labels' ); ?>" name="<?php echo $this->get_field_name( 'show-icon-labels' ); ?>" />
-			<label for="<?php echo $this->get_field_id( 'show-icon-labels' ); ?>"><?php _e(' Show icon labels? ', 'zoom-social-icons-widget'); ?></label>
+			<label for="<?php echo $this->get_field_id( 'show-icon-labels' ); ?>"><?php _e('Show icon labels? ', 'zoom-social-icons-widget'); ?></label>
 		</p>
 
 		<p>
 			<input class="checkbox" type="checkbox" <?php checked( $instance['open-new-tab'] ); ?> id="<?php echo $this->get_field_id( 'open-new-tab' ); ?>" name="<?php echo $this->get_field_name( 'open-new-tab' ); ?>" />
-			<label for="<?php echo $this->get_field_id( 'open-new-tab' ); ?>"><?php _e(' Open links in new tab? ', 'zoom-social-icons-widget'); ?></label>
+			<label for="<?php echo $this->get_field_id( 'open-new-tab' ); ?>"><?php _e('Open links in new tab? ', 'zoom-social-icons-widget'); ?></label>
 		</p>
 
 		<p>
@@ -355,6 +358,12 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		</div>
 
 		<p>
+            <small>
+                <?php echo wp_kses_post( __( 'To add an icon with an email address, use the <strong><em>mailto:mail@example.com</em></strong> format.', 'zoom-social-icons-widget' ) ); ?>
+            </small>
+        </p>
+
+        <p>
 			<small>
 				<?php echo wp_kses_post( __( 'Note that icons above is not how they will look on front-end. This is just for reference.', 'zoom-social-icons-widget' ) ); ?>
 			</small>

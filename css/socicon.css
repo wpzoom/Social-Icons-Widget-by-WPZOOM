@@ -47,6 +47,8 @@
 .socicon-behance:before { content: "\e027" }
 .socicon-blogger { background-color: #ec661c; color: #ec661c; }
 .socicon-blogger:before { content: "\e020" }
+.socicon-bloglovin { background-color: #000000; color: #000000; }
+.socicon-bloglovin:before { content: "\e075" }
 .socicon-buffer { background-color: #000000; color: #000000; }
 .socicon-buffer:before { content: "\e018" }
 .socicon-coderwall { background-color: #3E8DCC; color: #3E8DCC; }
@@ -143,6 +145,8 @@
 .socicon-slideshare:before { content: "\e017" }
 .socicon-smugmug { background-color: #ACFD32; color: #ACFD32; }
 .socicon-smugmug:before { content: "\e05e" }
+.socicon-snapchat { background-color: #000000; color: #000000; }
+.socicon-snapchat:before { content: "\e03f" }
 .socicon-soundcloud { background-color: #fe3801; color: #fe3801; }
 .socicon-soundcloud:before { content: "\e04d" }
 .socicon-spotify { background-color: #7bb342; color: #7bb342; }
@@ -157,6 +161,8 @@
 .socicon-swarm:before { content: "\e003" }
 .socicon-technorati { background-color: #5cb030; color: #5cb030; }
 .socicon-technorati:before { content: "\e021" }
+.socicon-telegram { background-color: #0088cc; color: #0088cc; }
+.socicon-telegram:before { content: "\e06e" }
 .socicon-tripadvisor { background-color: #589442; color: #589442; }
 .socicon-tripadvisor:before { content: "\e012" }
 .socicon-tripit { background-color: #1982C3; color: #1982C3; }

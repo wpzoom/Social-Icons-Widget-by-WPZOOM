@@ -1,0 +1,143 @@
+# Loco Gettext template
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Social Icons Widget by WPZOOM\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Tue Mar 01 2016 12:11:51 GMT+0200 (EET)\n"
+"POT-Revision-Date: Tue Mar 01 2016 12:30:05 GMT+0200 (EET)\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: ../class.zoom-social-icons-widget.php:113
+msgid "Social Icons by WPZOOM"
+msgstr ""
+
+#: ../class.zoom-social-icons-widget.php:116
+msgid "Sortable widget that supports more than 80+ social networks"
+msgstr ""
+
+#: ../class.zoom-social-icons-widget.php:121
+msgid "Social Icons"
+msgstr ""
+
+#: ../class.zoom-social-icons-widget.php:130
+msgid "Friend me on Facebook"
+msgstr ""
+
+#: ../class.zoom-social-icons-widget.php:134
+msgid "Follow Me"
+msgstr ""
+
+#: ../class.zoom-social-icons-widget.php:290
+msgid "Title:"
+msgstr ""
+
+#: ../class.zoom-social-icons-widget.php:295
+msgid "Description:"
+msgstr ""
+
+#: ../class.zoom-social-icons-widget.php:297
+msgid "Short description to be displayed right above the icons. Basic HTML allowed."
+msgstr ""
+
+#: ../class.zoom-social-icons-widget.php:302
+msgid "Show icon labels? "
+msgstr ""
+
+#: ../class.zoom-social-icons-widget.php:307
+msgid "Open links in new tab? "
+msgstr ""
+
+#: ../class.zoom-social-icons-widget.php:311
+msgid "Icon Style:"
+msgstr ""
+
+#: ../class.zoom-social-icons-widget.php:313
+msgid "Color Background / White Icon"
+msgstr ""
+
+#: ../class.zoom-social-icons-widget.php:314
+msgid "Color Icon / No Background"
+msgstr ""
+
+#: ../class.zoom-social-icons-widget.php:319
+msgid "Icon Background Style:"
+msgstr ""
+
+#: ../class.zoom-social-icons-widget.php:321
+msgid "Rounded Corners"
+msgstr ""
+
+#: ../class.zoom-social-icons-widget.php:322
+msgid "Round"
+msgstr ""
+
+#: ../class.zoom-social-icons-widget.php:323
+msgid "Square"
+msgstr ""
+
+#: ../class.zoom-social-icons-widget.php:329
+msgid ""
+"Icon Background Style has no effect on <i>Color Icon / No Background</i> "
+"icon style."
+msgstr ""
+
+#: ../class.zoom-social-icons-widget.php:333
+msgid "Icons:"
+msgstr ""
+
+#: ../class.zoom-social-icons-widget.php:357
+msgid "Add more"
+msgstr ""
+
+#: ../class.zoom-social-icons-widget.php:362
+msgid ""
+"To add an icon with an email address, use the <strong><em>mailto:"
+"mail@example.com</em></strong> format."
+msgstr ""
+
+#: ../class.zoom-social-icons-widget.php:368
+msgid ""
+"Note that icons above is not how they will look on front-end. This is just "
+"for reference."
+msgstr ""
+
+#: ../class.zoom-social-icons-widget.php:407
+msgid "URL"
+msgstr ""
+
+#: ../class.zoom-social-icons-widget.php:414
+msgid "Label"
+msgstr ""
+
+#. Name of the plugin
+msgid "Social Icons Widget by WPZOOM"
+msgstr ""
+
+#. URI of the plugin
+msgid "http://www.wpzoom.com"
+msgstr ""
+
+#. Description of the plugin
+msgid "Social Icons Widget"
+msgstr ""
+
+#. Author of the plugin
+msgid "WPZOOM"
+msgstr ""
