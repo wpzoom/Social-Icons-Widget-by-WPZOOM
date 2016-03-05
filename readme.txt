@@ -37,7 +37,7 @@ You can view the widget live in all our themes at [WPZOOM](http://www.wpzoom.com
 
 Icons are provided by [socicon](http://www.socicon.com) icon font.
 
-Twitter, Facebook, Google+, Instagram, Pinterest, Snapchat, Skype, Yelp, Feedburner, LinkedIn, Snapchat, Bloglovin', Lookbook, Feedly, Periscope, SoundCloud, Spotify, Last.fm, YouTube, Vimeo, Vine, Flickr, 500px, Tumblr, Blogger, Reddit, Dribbble, Envato, Behance, DeviantArt, GitHub, RSS, Disqus, Stackoverflow, and many others.
+Twitter, Facebook, Google+, Instagram, Pinterest, Snapchat, Skype, Yelp, Feedburner, LinkedIn, Bloglovin', Lookbook, Feedly, Periscope, SoundCloud, Spotify, Last.fm, YouTube, Vimeo, Vine, Flickr, 500px, Tumblr, Blogger, Reddit, Dribbble, Envato, Behance, DeviantArt, GitHub, RSS, Disqus, Stackoverflow, and many others.
 
 = Get Involved =
 
