@@ -5,7 +5,7 @@
  * Description: Social Icons Widget
  * Author: WPZOOM
  * Author URI: http://www.wpzoom.com/
- * Version: 1.0.4
+ * Version: 1.0.5
  * License: GPLv2 or later
  * Text Domain: zoom-social-icons-widget
  * Domain Path: /languages

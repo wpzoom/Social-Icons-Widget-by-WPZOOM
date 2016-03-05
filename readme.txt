@@ -1,7 +1,7 @@
 === Social Icons Widget by WPZOOM ===
 Contributors: WPZOOM, nvartolomei, ciorici
 Donate link: http://www.wpzoom.com/
-Tags: social icons, social networks, social media, social profiles, widget, twitter, facebook, google, pinterest, foursquare, yahoo, skype, yelp, feedburner, linkedin, viadeo, xing, myspace, soundcloud, spotify, grooveshark, lastfm, youtube, vimeo, dailymotion, vine, flickr, 500px, instagram, wordpress, tumblr, blogger, technorati, reddit, dribbble, stumbleupon, digg, envato, behance, delicious, deviantart, forrst, play, zerply, wikipedia, apple, flattr, github, chimein, friendfeed, newsvine, identica, bebo, zynga, steam, xbox, windows, outlook, coderwall, tripadvisor, appnet, goodreads, tripit, lanyrd, slideshare, buffer, rss, vkontakte, disqus, houzz, mail, patreon, paypal, playstation, smugmug, swarm, triplej, yammer, stackoverflow, drupal, odnoklassniki, android, meetup, persona, airbnb, baidu, ebay, medium, periscope, lookbook, feedly
+Tags: social icons, social networks, social media, social profiles, widget, twitter, facebook, google, pinterest, foursquare, yahoo, skype, yelp, feedburner, linkedin, viadeo, xing, myspace, soundcloud, spotify, grooveshark, lastfm, youtube, vimeo, dailymotion, vine, flickr, 500px, instagram, wordpress, tumblr, blogger, technorati, reddit, dribbble, stumbleupon, digg, envato, behance, delicious, deviantart, forrst, play, zerply, wikipedia, apple, flattr, github, chimein, friendfeed, newsvine, identica, bebo, zynga, steam, xbox, windows, outlook, coderwall, tripadvisor, appnet, goodreads, tripit, lanyrd, slideshare, buffer, rss, vkontakte, disqus, houzz, mail, patreon, paypal, playstation, smugmug, swarm, triplej, yammer, stackoverflow, drupal, odnoklassniki, android, meetup, persona, airbnb, baidu, ebay, medium, periscope, lookbook, feedly, snapchat, telegram, bloglovin
 Requires at least: 4.1
 Tested up to: 4.4.2
 Stable tag: trunk
@@ -31,13 +31,13 @@ You can view the widget live in all our themes at [WPZOOM](http://www.wpzoom.com
 * 2 Styles: Icon Shape and Icon with Background
 * 3 Background Styles: Rounded Corners, Round, Square
 * Retina Ready Icons
-* Supports email addresses (email@example.com)
+* Supports email addresses (mailto:email@example.com)
 
 = Icons =
 
 Icons are provided by [socicon](http://www.socicon.com) icon font.
 
-Twitter, Facebook, Google+, Pinterest, Foursquare, Yahoo, Skype, Yelp, Feedburner, LinkedIn, Myspace, SoundCloud, Spotify, Grooveshark, Last.fm, YouTube, Vimeo, Vine, Flickr, 500px, Instagram, Tumblr, Blogger, Reddit, Dribbble, Envato, Behance,DeviantArt, GitHub,RSS, Disqus, Stackoverflow, and many others.
+Twitter, Facebook, Google+, Instagram, Pinterest, Snapchat, Skype, Yelp, Feedburner, LinkedIn, Snapchat, Bloglovin', Lookbook, Feedly, Periscope, SoundCloud, Spotify, Last.fm, YouTube, Vimeo, Vine, Flickr, 500px, Tumblr, Blogger, Reddit, Dribbble, Envato, Behance, DeviantArt, GitHub, RSS, Disqus, Stackoverflow, and many others.
 
 = Get Involved =
 
@@ -63,6 +63,11 @@ On our [website](http://www.wpzoom.com/plugins/social-widget/).
 6. Widget Settings
 
 == Changelog ==
+
+= 1.0.5 =
+* Added new icons: Snapchat, Telegram, Bloglovin'
+* The plugin is now localized and can be easily translated
+* Added Romanian translations.
 
 = 1.0.4 =
 * Added new icons: LOOKBOOK, feedly
