@@ -184,5 +184,14 @@
         function triggerFakeChange($widget) {
             $widget.find('.zoom-social-icons-show-icon-labels').trigger('change');
         }
+
+        $(document).on('panelsopen', function(e) {
+           var dialog = $(e.target);
+
+           if( !dialog.has('.zoom-social-icons__list') ) return;
+
+           dialog.addClass('widget-content');
+           initWidget(dialog);
+       });
     });
 })(jQuery);

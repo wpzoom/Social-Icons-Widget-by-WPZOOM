@@ -142,6 +142,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		add_action( 'admin_print_footer_scripts', array( $this, 'admin_js_templates' ) );
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ) );
+
+        add_action('siteorigin_panel_enqueue_admin_scripts', array($this, 'admin_scripts'));
+        add_action('siteorigin_panel_enqueue_admin_scripts', array( $this, 'admin_js_templates'));
+
+
 	}
 
 	/**
@@ -298,6 +303,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		</p>
 
 		<p>
+            <input type="hidden" name="<?php echo $this->get_field_name( 'show-icon-labels' ); ?>" value="0"/>
 			<input class="checkbox zoom-social-icons-show-icon-labels" type="checkbox" <?php checked( $instance['show-icon-labels'] ); ?> id="<?php echo $this->get_field_id( 'show-icon-labels' ); ?>" name="<?php echo $this->get_field_name( 'show-icon-labels' ); ?>" />
 			<label for="<?php echo $this->get_field_id( 'show-icon-labels' ); ?>"><?php _e('Show icon labels? ', 'zoom-social-icons-widget'); ?></label>
 		</p>

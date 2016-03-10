@@ -64,6 +64,9 @@ On our [website](http://www.wpzoom.com/plugins/social-widget/).
 
 == Changelog ==
 
+= 1.0.6 =
+* The widget is now fully compatible with the Page Builder by SiteOrigin plugin
+
 = 1.0.5 =
 * Added new icons: Snapchat, Telegram, Bloglovin'
 * The plugin is now localized and can be easily translated
