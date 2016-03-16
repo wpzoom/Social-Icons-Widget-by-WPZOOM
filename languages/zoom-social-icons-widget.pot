@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Social Icons Widget by WPZOOM\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Tue Mar 01 2016 12:11:51 GMT+0200 (EET)\n"
-"POT-Revision-Date: Tue Mar 01 2016 12:30:05 GMT+0200 (EET)\n"
+"POT-Revision-Date: Wed Mar 16 2016 11:40:12 GMT+0200 (EET)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -24,105 +24,105 @@ msgstr ""
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: ../class.zoom-social-icons-widget.php:113
+#: ../class.zoom-social-icons-widget.php:112
 msgid "Social Icons by WPZOOM"
 msgstr ""
 
-#: ../class.zoom-social-icons-widget.php:116
+#: ../class.zoom-social-icons-widget.php:115
 msgid "Sortable widget that supports more than 80+ social networks"
 msgstr ""
 
-#: ../class.zoom-social-icons-widget.php:121
+#: ../class.zoom-social-icons-widget.php:120
 msgid "Social Icons"
 msgstr ""
 
-#: ../class.zoom-social-icons-widget.php:130
+#: ../class.zoom-social-icons-widget.php:129
 msgid "Friend me on Facebook"
 msgstr ""
 
-#: ../class.zoom-social-icons-widget.php:134
+#: ../class.zoom-social-icons-widget.php:133
 msgid "Follow Me"
 msgstr ""
 
-#: ../class.zoom-social-icons-widget.php:290
+#: ../class.zoom-social-icons-widget.php:294
 msgid "Title:"
 msgstr ""
 
-#: ../class.zoom-social-icons-widget.php:295
+#: ../class.zoom-social-icons-widget.php:299
 msgid "Description:"
 msgstr ""
 
-#: ../class.zoom-social-icons-widget.php:297
+#: ../class.zoom-social-icons-widget.php:301
 msgid "Short description to be displayed right above the icons. Basic HTML allowed."
 msgstr ""
 
-#: ../class.zoom-social-icons-widget.php:302
+#: ../class.zoom-social-icons-widget.php:307
 msgid "Show icon labels? "
 msgstr ""
 
-#: ../class.zoom-social-icons-widget.php:307
+#: ../class.zoom-social-icons-widget.php:312
 msgid "Open links in new tab? "
 msgstr ""
 
-#: ../class.zoom-social-icons-widget.php:311
+#: ../class.zoom-social-icons-widget.php:316
 msgid "Icon Style:"
 msgstr ""
 
-#: ../class.zoom-social-icons-widget.php:313
+#: ../class.zoom-social-icons-widget.php:318
 msgid "Color Background / White Icon"
 msgstr ""
 
-#: ../class.zoom-social-icons-widget.php:314
+#: ../class.zoom-social-icons-widget.php:319
 msgid "Color Icon / No Background"
 msgstr ""
 
-#: ../class.zoom-social-icons-widget.php:319
+#: ../class.zoom-social-icons-widget.php:324
 msgid "Icon Background Style:"
 msgstr ""
 
-#: ../class.zoom-social-icons-widget.php:321
+#: ../class.zoom-social-icons-widget.php:326
 msgid "Rounded Corners"
 msgstr ""
 
-#: ../class.zoom-social-icons-widget.php:322
+#: ../class.zoom-social-icons-widget.php:327
 msgid "Round"
 msgstr ""
 
-#: ../class.zoom-social-icons-widget.php:323
+#: ../class.zoom-social-icons-widget.php:328
 msgid "Square"
 msgstr ""
 
-#: ../class.zoom-social-icons-widget.php:329
+#: ../class.zoom-social-icons-widget.php:334
 msgid ""
 "Icon Background Style has no effect on <i>Color Icon / No Background</i> "
 "icon style."
 msgstr ""
 
-#: ../class.zoom-social-icons-widget.php:333
+#: ../class.zoom-social-icons-widget.php:338
 msgid "Icons:"
 msgstr ""
 
-#: ../class.zoom-social-icons-widget.php:357
+#: ../class.zoom-social-icons-widget.php:362
 msgid "Add more"
 msgstr ""
 
-#: ../class.zoom-social-icons-widget.php:362
+#: ../class.zoom-social-icons-widget.php:367
 msgid ""
 "To add an icon with an email address, use the <strong><em>mailto:"
 "mail@example.com</em></strong> format."
 msgstr ""
 
-#: ../class.zoom-social-icons-widget.php:368
+#: ../class.zoom-social-icons-widget.php:373
 msgid ""
 "Note that icons above is not how they will look on front-end. This is just "
 "for reference."
 msgstr ""
 
-#: ../class.zoom-social-icons-widget.php:407
+#: ../class.zoom-social-icons-widget.php:412
 msgid "URL"
 msgstr ""
 
-#: ../class.zoom-social-icons-widget.php:414
+#: ../class.zoom-social-icons-widget.php:419
 msgid "Label"
 msgstr ""
 

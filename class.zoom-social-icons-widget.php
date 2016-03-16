@@ -67,7 +67,6 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
        'persona',
        'pinterest',
        'play',
-       'playstation',
        'reddit',
        'rss',
        'skype',
@@ -441,28 +440,43 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	 *
 	 * @return string icon id that matches given url
 	 */
-	protected function get_icon( $url ) {
-		$icon = '';
 
-		if ( $url ) {
-			if ( strstr( $url, 'feedburner.google.com' ) ) {
-				$icon = 'mail';
-			}
+    protected function get_icon($url)
+    {
+        $icon = '';
 
-			if ( strstr( $url, 'feedburner.com') ) {
-				$icon = 'rss';
-			}
+        $parsed_url = $this->extract_domain($url);
 
-			if ( ! $icon ) {
-				foreach ( $this->icons as $icon_id ) {
-					if ( strstr( $url, $icon_id ) ) {
-						$icon = $icon_id;
-						break;
-					}
-				}
-			}
-		}
+        if ($url) {
+            if (strstr($url, 'feedburner.google.com')
+                or strstr($url, 'mailto:')
+            ) {
+                $icon = 'mail';
+            }
 
-		return apply_filters( 'zoom-social-icons-widget-icon', $icon, $url );
-	}
+            if (strstr($url, 'feedburner.com')) {
+                $icon = 'rss';
+            }
+
+            if (!$icon) {
+                foreach ($this->icons as $icon_id) {
+                    if (strstr($parsed_url, $icon_id)) {
+                        $icon = $icon_id;
+                        break;
+                    }
+                }
+            }
+        }
+
+        return apply_filters('zoom-social-icons-widget-icon', $icon, $url);
+    }
+
+    public function extract_domain($url)
+    {
+        $parsed_url = parse_url(trim($url));
+        $path = empty($parsed_url['path']) ? array($url) : explode('/', $parsed_url['path'], 2);
+        return empty($parsed_url['host']) ? array_shift($path) : $parsed_url['host'];
+    }
+
+
 }

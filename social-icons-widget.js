@@ -52,7 +52,6 @@
         'persona',
         'pinterest',
         'play',
-        'playstation',
         'reddit',
         'rss',
         'skype',
@@ -109,7 +108,8 @@
         });
 
         $(document).on('keyup', '.zoom-social-icons__field-url', function () {
-            var url = $(this).val();
+            var url = extractDomain($(this).val());
+
             var $this = $(this);
 
             var found = false;
@@ -183,6 +183,18 @@
 
         function triggerFakeChange($widget) {
             $widget.find('.zoom-social-icons-show-icon-labels').trigger('change');
+        }
+
+
+        function extractDomain(url) {
+            var domain;
+            //find & remove protocol (http, ftp, etc.) and get domain
+            domain = (url.indexOf("://") > -1) ? url.split('/')[2] : url.split('/')[0];
+
+            //find & remove port number
+            domain = domain.split(':')[0];
+
+            return domain;
         }
 
         $(document).on('panelsopen', function(e) {
