@@ -905,7 +905,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
             $icon_class = 'socicon socicon-' . $icon;
         }
 
-        if (!empty($args['icon-value'] && !empty($args['icon-kit-value']))) {
+        if (!empty($args['icon-value']) && !empty($args['icon-kit-value'])) {
             $icon_class = $args['icon-kit-value'] . ' ' . $args['icon-kit-value'] . '-' . $args['icon-value'];
         }
 

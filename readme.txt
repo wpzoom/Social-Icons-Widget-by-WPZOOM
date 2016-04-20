@@ -72,6 +72,11 @@ On our [website](http://www.wpzoom.com/plugins/social-widget/).
 
 == Changelog ==
 
+= 2.0 =
+* Major Upate
+* Added Color Picker to change the color of each icon individually
+* Added 3 Icon Sets which allows you to choose a custom icon for any links you want.
+
 = 1.0.7 =
 * Fixed a bug with links containing the word "play" now showing the right icon.
 
