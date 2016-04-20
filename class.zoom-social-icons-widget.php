@@ -1,445 +1,983 @@
 <?php
 
-class Zoom_Social_Icons_Widget extends WP_Widget {
-	/**
-	 * @var array Default widget options.
-	 */
-	protected $defaults;
+class Zoom_Social_Icons_Widget extends WP_Widget
+{
+    /**
+     * @var array Default widget options.
+     */
+    protected $defaults;
 
-	/**
-	 * @var string Path to plugin file.
-	 */
-	protected $plugin_file;
+    /**
+     * @var string Path to plugin file.
+     */
+    protected $plugin_file;
 
-	/**
-	 * @var array List of supported icons.
-	 */
-	protected $icons = array(
-	   '500px',
-       'airbnb',
-       'android',
-       'apple',
-       'appnet',
-       'baidu',
-       'bebo',
-       'behance',
-       'blogger',
-       'bloglovin',
-       'buffer',
-       'coderwall',
-       'dailymotion',
-       'delicious',
-       'deviantart',
-       'digg',
-       'disqus',
-       'dribbble',
-       'drupal',
-       'ebay',
-       'envato',
-       'facebook',
-       'feedburner',
-       'feedly',
-       'flattr',
-       'flickr',
-       'foursquare',
-       'friendfeed',
-       'github',
-       'goodreads',
-       'google',
-       'grooveshark',
-       'houzz',
-       'identica',
-       'instagram',
-       'lanyrd',
-       'lastfm',
-       'linkedin',
-       'lookbook',
-       'mail',
-       'medium',
-       'meetup',
-       'myspace',
-       'newsvine',
-       'odnoklassniki',
-       'outlook',
-       'patreon',
-       'paypal',
-       'periscope',
-       'persona',
-       'pinterest',
-       'play',
-       'reddit',
-       'rss',
-       'skype',
-       'slideshare',
-       'smugmug',
-       'snapchat',
-       'soundcloud',
-       'spotify',
-       'stackoverflow',
-       'steam',
-       'stumbleupon',
-       'swarm',
-       'technorati',
-       'telegram',
-       'tripadvisor',
-       'tripit',
-       'triplej',
-       'tumblr',
-       'twitter',
-       'viadeo',
-       'vimeo',
-       'vine',
-       'vkontakte',
-       'wikipedia',
-       'windows',
-       'wordpress',
-       'xbox',
-       'xing',
-       'yahoo',
-       'yammer',
-       'yelp',
-       'youtube',
-       'zerply',
-       'zynga'
-	);
+    /**
+     * @var array List of supported icons.
+     */
+    protected $icons = array(
+        '500px',
+        'airbnb',
+        'android',
+        'apple',
+        'appnet',
+        'baidu',
+        'bebo',
+        'behance',
+        'blogger',
+        'bloglovin',
+        'buffer',
+        'coderwall',
+        'dailymotion',
+        'delicious',
+        'deviantart',
+        'digg',
+        'disqus',
+        'dribbble',
+        'drupal',
+        'ebay',
+        'envato',
+        'facebook',
+        'feedburner',
+        'feedly',
+        'flattr',
+        'flickr',
+        'foursquare',
+        'friendfeed',
+        'github',
+        'goodreads',
+        'google',
+        'grooveshark',
+        'houzz',
+        'identica',
+        'instagram',
+        'lanyrd',
+        'lastfm',
+        'linkedin',
+        'lookbook',
+        'mail',
+        'medium',
+        'meetup',
+        'myspace',
+        'newsvine',
+        'odnoklassniki',
+        'outlook',
+        'patreon',
+        'paypal',
+        'periscope',
+        'persona',
+        'pinterest',
+        'play',
+        'reddit',
+        'rss',
+        'skype',
+        'slideshare',
+        'smugmug',
+        'snapchat',
+        'soundcloud',
+        'spotify',
+        'stackoverflow',
+        'steam',
+        'stumbleupon',
+        'swarm',
+        'technorati',
+        'telegram',
+        'tripadvisor',
+        'tripit',
+        'triplej',
+        'tumblr',
+        'twitter',
+        'viadeo',
+        'vimeo',
+        'vine',
+        'vkontakte',
+        'wikipedia',
+        'windows',
+        'wordpress',
+        'xbox',
+        'xing',
+        'yahoo',
+        'yammer',
+        'yelp',
+        'youtube',
+        'zerply',
+        'zynga'
+    );
 
-	/**
-	 * Widget constructor.
-	 */
-	public function __construct() {
-		parent::__construct(
-			'zoom-social-icons-widget',
-			esc_html__( 'Social Icons by WPZOOM', 'zoom-social-icons-widget' ),
-			array(
-				'classname'   => 'zoom-social-icons-widget',
-				'description' => __( 'Sortable widget that supports more than 80+ social networks', 'zoom-social-icons-widget' ),
-			)
-		);
+    protected $genericicons = array(
+        'standard',
+        'aside',
+        'image',
+        'gallery',
+        'video',
+        'status',
+        'quote',
+        'link',
+        'chat',
+        'audio',
+        'github',
+        'dribbble',
+        'twitter',
+        'facebook',
+        'facebook-alt',
+        'wordpress',
+        'googleplus',
+        'googleplus-alt',
+        'linkedin',
+        'linkedin-alt',
+        'pinterest',
+        'pinterest-alt',
+        'flickr',
+        'vimeo',
+        'youtube',
+        'tumblr',
+        'instagram',
+        'codepen',
+        'polldaddy',
+        'path',
+        'skype',
+        'digg',
+        'reddit',
+        'stumbleupon',
+        'pocket',
+        'dropbox',
+        'foursquare',
+        'comment',
+        'category',
+        'tag',
+        'time',
+        'user',
+        'day',
+        'week',
+        'month',
+        'pinned',
+        'search',
+        'unzoom',
+        'zoom',
+        'show',
+        'hide',
+        'close',
+        'close-alt',
+        'trash',
+        'star',
+        'home',
+        'mail',
+        'edit',
+        'reply',
+        'feed',
+        'warning',
+        'share',
+        'attachment',
+        'location',
+        'checkmark',
+        'menu',
+        'refresh',
+        'minimize',
+        'maximize',
+        '404',
+        'spam',
+        'summary',
+        'cloud',
+        'key',
+        'dot',
+        'next',
+        'previous',
+        'expand',
+        'collapse',
+        'dropdown',
+        'dropdown-left',
+        'top',
+        'draggable',
+        'phone',
+        'send-to-phone',
+        'plugin',
+        'cloud-download',
+        'cloud-upload',
+        'external',
+        'document',
+        'book',
+        'cog',
+        'unapprove',
+        'cart',
+        'pause',
+        'stop',
+        'skip-back',
+        'skip-ahead',
+        'play',
+        'tablet',
+        'send-to-tablet',
+        'info',
+        'notice',
+        'help',
+        'fastforward',
+        'rewind',
+        'portfolio',
+        'heart',
+        'code',
+        'subscribe',
+        'unsubscribe',
+        'subscribed',
+        'reply-alt',
+        'reply-single',
+        'flag',
+        'print',
+        'lock',
+        'bold',
+        'italic',
+        'picture',
+        'fullscreen',
+        'website',
+        'ellipsis',
+        'uparrow',
+        'rightarrow',
+        'downarrow',
+        'leftarrow',
+        'xpost',
+        'hierarchy',
+        'paintbrush',
+        'sitemap',
+        'activity',
+        'anchor',
+        'bug',
+        'download',
+        'handset',
+        'microphone',
+        'minus',
+        'move',
+        'plus',
+        'rating-empty',
+        'rating-full',
+        'rating-half',
+        'shuffle',
+        'spotify',
+        'twitch',
+        'videocamera',
+    );
 
-		$this->defaults = apply_filters( 'zoom-social-icons-widget-defaults', array(
-			'title'             => esc_html__( 'Social Icons', 'zoom-social-icons-widget' ),
-			'description'       => '',
-			'show-icon-labels'  => false,
-			'open-new-tab'      => true,
-			'icon-style'        => 'with-canvas',
-			'icon-canvas-style' => 'rounded',
-			'fields'            => array(
-				array(
-					'url' => 'https://facebook.com/',
-					'label' => __( 'Friend me on Facebook', 'zoom-social-icons-widget' )
-				),
-				array(
-					'url' => 'https://twitter.com/',
-					'label' => __( 'Follow Me', 'zoom-social-icons-widget' )
-				)
-			)
-		) );
+    protected $dashicons = array(
+        'menu',
+        'dashboard',
+        'admin-site',
+        'admin-media',
+        'admin-page',
+        'admin-comments',
+        'admin-appearance',
+        'admin-plugins',
+        'admin-users',
+        'admin-tools',
+        'admin-settings',
+        'admin-network',
+        'admin-generic',
+        'admin-home',
+        'admin-collapse',
+        'admin-links',
+        'admin-post',
+        'format-standard',
+        'format-image',
+        'format-gallery',
+        'format-audio',
+        'format-video',
+        'format-links',
+        'format-chat',
+        'format-status',
+        'format-aside',
+        'format-quote',
+        'welcome-write-blog',
+        'welcome-edit-page',
+        'welcome-add-page',
+        'welcome-view-site',
+        'welcome-widgets-menus',
+        'welcome-comments',
+        'welcome-learn-more',
+        'image-crop',
+        'image-rotate-left',
+        'image-rotate-right',
+        'image-flip-vertical',
+        'image-flip-horizontal',
+        'undo',
+        'redo',
+        'editor-bold',
+        'editor-italic',
+        'editor-ul',
+        'editor-ol',
+        'editor-quote',
+        'editor-alignleft',
+        'editor-aligncenter',
+        'editor-alignright',
+        'editor-insertmore',
+        'editor-spellcheck',
+        'editor-distractionfree',
+        'editor-expand',
+        'editor-contract',
+        'editor-kitchensink',
+        'editor-underline',
+        'editor-justify',
+        'editor-textcolor',
+        'editor-paste-word',
+        'editor-paste-text',
+        'editor-removeformatting',
+        'editor-video',
+        'editor-customchar',
+        'editor-outdent',
+        'editor-indent',
+        'editor-help',
+        'editor-strikethrough',
+        'editor-unlink',
+        'editor-rtl',
+        'editor-break',
+        'editor-code',
+        'editor-paragraph',
+        'align-left',
+        'align-right',
+        'align-center',
+        'align-none',
+        'lock',
+        'calendar',
+        'visibility',
+        'post-status',
+        'edit',
+        'post-trash',
+        'trash',
+        'external',
+        'arrow-up',
+        'arrow-down',
+        'arrow-left',
+        'arrow-right',
+        'arrow-up-alt',
+        'arrow-down-alt',
+        'arrow-left-alt',
+        'arrow-right-alt',
+        'arrow-up-alt2',
+        'arrow-down-alt2',
+        'arrow-left-alt2',
+        'arrow-right-alt2',
+        'leftright',
+        'sort',
+        'randomize',
+        'list-view',
+        'exerpt-view',
+        'hammer',
+        'art',
+        'migrate',
+        'performance',
+        'universal-access',
+        'universal-access-alt',
+        'tickets',
+        'nametag',
+        'clipboard',
+        'heart',
+        'megaphone',
+        'schedule',
+        'wordpress',
+        'wordpress-alt',
+        'pressthis',
+        'update',
+        'screenoptions',
+        'info',
+        'cart',
+        'feedback',
+        'cloud',
+        'translation',
+        'tag',
+        'category',
+        'archive',
+        'tagcloud',
+        'text',
+        'media-archive',
+        'media-audio',
+        'media-code',
+        'media-default',
+        'media-document',
+        'media-interactive',
+        'media-spreadsheet',
+        'media-text',
+        'media-video',
+        'playlist-audio',
+        'playlist-video',
+        'yes',
+        'no',
+        'no-alt',
+        'plus',
+        'plus-alt',
+        'minus',
+        'dismiss',
+        'marker',
+        'star-filled',
+        'star-half',
+        'star-empty',
+        'flag',
+        'share',
+        'share1',
+        'share-alt',
+        'share-alt2',
+        'twitter',
+        'rss',
+        'email',
+        'email-alt',
+        'facebook',
+        'facebook-alt',
+        'networking',
+        'googleplus',
+        'location',
+        'location-alt',
+        'camera',
+        'images-alt',
+        'images-alt2',
+        'video-alt',
+        'video-alt2',
+        'video-alt3',
+        'vault',
+        'shield',
+        'shield-alt',
+        'sos',
+        'search',
+        'slides',
+        'analytics',
+        'chart-pie',
+        'chart-bar',
+        'chart-line',
+        'chart-area',
+        'groups',
+        'businessman',
+        'id',
+        'id-alt',
+        'products',
+        'awards',
+        'forms',
+        'testimonial',
+        'portfolio',
+        'book',
+        'book-alt',
+        'download',
+        'upload',
+        'backup',
+        'clock',
+        'lightbulb',
+        'microphone',
+        'desktop',
+        'tablet',
+        'smartphone',
+        'smiley'
+    );
 
-		$this->plugin_file = dirname( __FILE__ ) . '/social-icons-widget-by-wpzoom.php';
 
-		add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ) );
-		add_action( 'admin_print_footer_scripts', array( $this, 'admin_js_templates' ) );
+    /**
+     * Widget constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct(
+            'zoom-social-icons-widget',
+            esc_html__('Social Icons by WPZOOM', 'zoom-social-icons-widget'),
+            array(
+                'classname' => 'zoom-social-icons-widget',
+                'description' => __('Sortable widget that supports more than 80+ social networks', 'zoom-social-icons-widget'),
+            )
+        );
 
-		add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ) );
+        $this->defaults = apply_filters('zoom-social-icons-widget-defaults', array(
+            'title' => esc_html__('Follow us', 'zoom-social-icons-widget'),
+            'description' => '',
+            'show-icon-labels' => false,
+            'open-new-tab' => true,
+            'icon-style' => 'with-canvas',
+            'icon-canvas-style' => 'rounded',
+            'fields' => array(
+                array(
+                    'url' => 'https://facebook.com/wpzoom',
+                    'label' => __('Friend me on Facebook', 'zoom-social-icons-widget'),
+                    'icon' => 'facebook',
+                    'icon-kit' => 'socicon',
+                    'color-picker' => '#3b5998'
+
+                ),
+                array(
+                    'url' => 'https://twitter.com/wpzoom',
+                    'label' => __('Follow Me', 'zoom-social-icons-widget'),
+                    'icon' => 'twitter',
+                    'icon-kit' => 'socicon',
+                    'color-picker' => '#55ACEC'
+                ),
+                array(
+                    'url' => 'https://instagram.com/wpzoom',
+                    'label' => __('Instagram', 'zoom-social-icons-widget'),
+                    'icon' => 'instagram',
+                    'icon-kit' => 'socicon',
+                    'color-picker' => '#3f729b'
+                )
+            )
+        ));
+
+        $this->plugin_file = dirname(__FILE__) . '/social-icons-widget-by-wpzoom.php';
+
+        add_action('admin_enqueue_scripts', array($this, 'admin_scripts'));
+        add_action('admin_print_footer_scripts', array($this, 'admin_js_templates'));
+
+        add_action('wp_enqueue_scripts', array($this, 'scripts'));
 
         add_action('siteorigin_panel_enqueue_admin_scripts', array($this, 'admin_scripts'));
-        add_action('siteorigin_panel_enqueue_admin_scripts', array( $this, 'admin_js_templates'));
+        add_action('siteorigin_panel_enqueue_admin_scripts', array($this, 'admin_js_templates'));
 
+    }
 
-	}
+    /**
+     * Script & styles for back-end widget form.
+     */
+    public function admin_scripts()
+    {
+        wp_enqueue_script('zoom-social-icons-widget', plugin_dir_url($this->plugin_file) . 'social-icons-widget.js', array('jquery', 'jquery-ui-sortable', 'underscore', 'wp-color-picker'), '20160404');
+        wp_enqueue_style('socicon', plugin_dir_url($this->plugin_file) . 'css/socicon.css', array(), '20160404');
+        wp_enqueue_style('social-icons-widget-admin', plugin_dir_url($this->plugin_file) . 'css/social-icons-widget-admin.css', array('socicon'), '20160404');
+        wp_enqueue_style('genericons', plugin_dir_url($this->plugin_file) . 'css/genericons.css', array(), '20160404');
+        wp_enqueue_style('dashicons');
+        wp_enqueue_style('wp-color-picker');
+        wp_enqueue_media();
+    }
 
-	/**
-	 * Script & styles for back-end widget form.
-	 */
-	public function admin_scripts() {
-		wp_enqueue_script( 'zoom-social-icons-widget', plugin_dir_url( $this->plugin_file ) . 'social-icons-widget.js', array( 'jquery', 'jquery-ui-sortable' ), '20150203' );
-		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'css/socicon.css', array(), '20150204' );
-		wp_enqueue_style( 'social-icons-widget-admin', plugin_dir_url( $this->plugin_file ) . 'css/social-icons-widget-admin.css', array( 'socicon' ), '20150206' );
-	}
+    /**
+     * JavaScript templates for back-end widget form.
+     */
+    public function admin_js_templates()
+    {
+        ?>
 
-	/**
-	 * JavaScript templates for back-end widget form.
-	 */
-	public function admin_js_templates() {
-		?>
+        <script type="text/html" id="tmpl-zoom-social-icons-field"><?php $this->list_field_template(); ?></script>
+        <script type="text/html" id="tmpl-zoom-social-modal"><?php $this->get_modal_template(); ?></script>
 
-		<script type="text/html" id="tmpl-zoom-social-icons-field"><?php $this->list_field_template(); ?></script>
+        <?php
+    }
 
-		<?php
-	}
+    /**
+     * Generate modal template.
+     */
+    public function get_modal_template()
+    {
+        ?>
+        <div class="zoom-social-modal-title"><h3><?php _e('Select Icon', 'zoom-social-icons-widget') ?></h3></div>
+        <div class="zoom-social-modal-content">
+            <form class="zoom-social-modal-form">
+                <div class="form-group">
+                    <div class="wrap-label">
+                        <label><?php _e('Choose icon background color', 'zoom-social-icons-widget') ?></label>
 
-	/**
-	 * Scripts & styles for front-end display of widget.
-	 */
-	public function scripts() {
-		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'css/socicon.css', array(), '20150204' );
-	}
+                    </div>
+                    <div class="wrap-input">
+                        <input type="text" class="zoom-social-icons__field-color-picker"
+                               name="zoom-social-icons__field-color-picker" value="#5A5A59">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="wrap-label">
+                        <label><?php _e('Select Icon Kit', 'zoom-social-icons-widget') ?></label>
+                    </div>
+                    <div class="wrap-input">
+                        <select class="zoom-social-icons__field-icon-kit" name="zoom-social-icons__field-icon-kit">
+                            <option value="socicon"><?php _e('Socicons', 'zoom-social-icons-widget') ?></option>
+                            <option value="dashicons"><?php _e('Dashicons', 'zoom-social-icons-widget') ?></option>
+                            <option value="genericon"><?php _e('Genericons', 'zoom-social-icons-widget') ?></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="icon-kit socicon-wrapper">
+                    <?php foreach ($this->icons as $icon): ?>
+                        <span class="zoom-social-icons__single-element socicon socicon-<?php echo $icon ?>"
+                              data-value="<?php echo $icon ?>"></span>
+                    <?php endforeach; ?>
+                </div>
+                <div class="icon-kit dashicons-wrapper">
+                    <?php foreach ($this->dashicons as $icon): ?>
+                        <span class="zoom-social-icons__single-element dashicons dashicons-<?php echo $icon ?>"
+                              data-value="<?php echo $icon ?>"></span>
+                    <?php endforeach; ?>
+                </div>
+                <div class="icon-kit genericon-wrapper">
+                    <?php foreach ($this->genericicons as $icon): ?>
+                        <span class="zoom-social-icons__single-element genericon genericon-<?php echo $icon ?>"
+                              data-value="<?php echo $icon ?>"></span>
+                    <?php endforeach; ?>
+                </div>
+                <input type="hidden" name="zoom-social-icons__field-icon" class="zoom-social-icons__field-icon"/>
+            </form>
+        </div>
+        <div class="zoom-social-modal-toolbar">
+            <button class="button-primary save-action-button"><?php _e('Save', 'zoom-social-icons-widget') ?></button>
+        </div>
 
-	/**
-	 * Front-end display of widget.
-	 *
-	 * @see WP_Widget::widget()
-	 *
-	 * @param array $args Widget arguments.
-	 * @param array $instance Saved values from database.
-	 */
-	public function widget( $args, $instance ) {
-		$instance = wp_parse_args( (array) $instance, $this->defaults );
+        <?php
+    }
 
-		echo $args['before_widget'];
+    /**
+     * Scripts & styles for front-end display of widget.
+     */
+    public function scripts()
+    {
+        wp_enqueue_style('socicon', plugin_dir_url($this->plugin_file) . 'css/socicon.css', array(), '20160404');
+        wp_enqueue_style('genericons', plugin_dir_url($this->plugin_file) . 'css/genericons.css', array(), '20160404');
+        wp_enqueue_style('dashicons');
+    }
 
-		if ( $instance['title'] ) {
-			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
-		}
+    /**
+     * Front-end display of widget.
+     *
+     * @see WP_Widget::widget()
+     *
+     * @param array $args Widget arguments.
+     * @param array $instance Saved values from database.
+     */
+    public function widget($args, $instance)
+    {
+        $instance = wp_parse_args((array)$instance, $this->defaults);
 
-		$class_list = array();
-		$class_list[] = 'zoom-social-icons-list--' . $instance['icon-style'];
-		$class_list[] = 'zoom-social-icons-list--' . $instance['icon-canvas-style'];
+        echo $args['before_widget'];
 
-		if ( ! $instance['show-icon-labels'] ) {
-			$class_list[] = 'zoom-social-icons-list--no-labels';
-		}
-		?>
+        if ($instance['title']) {
+            echo $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'];
+        }
 
-		<?php if ( ! empty( $instance['description'] ) ) : ?>
+        $class_list = array();
+        $class_list[] = 'zoom-social-icons-list--' . $instance['icon-style'];
+        $class_list[] = 'zoom-social-icons-list--' . $instance['icon-canvas-style'];
 
-			<p><?php echo $instance['description']; ?></p>
+        if (!$instance['show-icon-labels']) {
+            $class_list[] = 'zoom-social-icons-list--no-labels';
+        }
+        ?>
 
-		<?php endif; ?>
+        <?php if (!empty($instance['description'])) : ?>
 
-		<ul class="zoom-social-icons-list <?php echo esc_attr( implode(' ', $class_list) ); ?>">
+        <p><?php echo $instance['description']; ?></p>
 
-			<?php foreach ( $instance['fields'] as $field ) : ?>
+    <?php endif; ?>
 
-				<li class="zoom-social_icons-list__item">
-					<a class="zoom-social_icons-list__link" href="<?php echo esc_url( $field['url'] ); ?>" <?php echo ( $instance['open-new-tab'] ? 'target="_blank"' : '' ); ?>>
-						<span class="socicon socicon-<?php echo esc_attr( $this->get_icon( $field['url'] ) ); ?>"></span>
+        <ul class="zoom-social-icons-list <?php echo esc_attr(implode(' ', $class_list)); ?>">
 
-						<?php if ( $instance['show-icon-labels'] ) : ?>
-							<span class="zoom-social_icons-list__label"><?php echo esc_html( $field['label'] ); ?></span>
-						<?php endif; ?>
-					</a>
-				</li>
+            <?php foreach ($instance['fields'] as $field) : ?>
 
-			<?php endforeach; ?>
+                <li class="zoom-social_icons-list__item">
+                    <a class="zoom-social_icons-list__link"
+                       href="<?php echo esc_url($field['url']); ?>" <?php echo($instance['open-new-tab'] ? 'target="_blank"' : ''); ?>>
+                        <?php if (!empty($field['icon']) && !empty($field['icon-kit']) && !empty($field['color-picker'])) {
+                            $class = $field['icon-kit'] . ' ' . $field['icon-kit'] . '-' . $field['icon'];
+                            $style = ($instance['icon-style'] === 'with-canvas') ? 'background-color:' . $field['color-picker'] : 'color:' . $field['color-picker'];
+                        } else {
+                            $style = '';
+                            $class = 'socicon socicon-' . esc_attr($this->get_icon($field['url']));
+                        } ?>
+                        <span class="<?php echo $class ?>"
+                              style="<?php echo $style ?>"></span>
 
-		</ul>
+                        <?php if ($instance['show-icon-labels']) : ?>
+                            <span class="zoom-social_icons-list__label"><?php echo esc_html($field['label']); ?></span>
+                        <?php endif; ?>
+                    </a>
+                </li>
 
-		<?php
+            <?php endforeach; ?>
 
-		echo $args['after_widget'];
-	}
+        </ul>
 
-	/**
-	 * Sanitize widget form values as they are saved.
-	 *
-	 * @see WP_Widget::update()
-	 *
-	 * @param array $new_instance Values just sent to be saved.
-	 * @param array $old_instance Previously saved values from database.
-	 *
-	 * @return array Updated safe values to be saved.
-	 */
-	public function update( $new_instance, $old_instance ) {
-		$instance['title'] = sanitize_text_field( $new_instance['title'] );
+        <?php
 
-		$instance['description'] = balanceTags( wp_kses( $new_instance['description'], wp_kses_allowed_html() ), true );
+        echo $args['after_widget'];
+    }
 
-		$instance['show-icon-labels'] = (bool) $new_instance['show-icon-labels'];
-		$instance['open-new-tab']     = (bool) $new_instance['open-new-tab'];
+    /**
+     * Sanitize widget form values as they are saved.
+     *
+     * @see WP_Widget::update()
+     *
+     * @param array $new_instance Values just sent to be saved.
+     * @param array $old_instance Previously saved values from database.
+     *
+     * @return array Updated safe values to be saved.
+     */
+    public function update($new_instance, $old_instance)
+    {
+        $instance['title'] = sanitize_text_field($new_instance['title']);
 
-		$instance['icon-style'] = $this->defaults['icon-style'];
-		if ( in_array( $new_instance['icon-style'], array( 'with-canvas', 'without-canvas' ) ) ) {
-			$instance['icon-style'] = $new_instance['icon-style'];
-		}
+        $instance['description'] = balanceTags(wp_kses($new_instance['description'], wp_kses_allowed_html()), true);
 
-		$instance['icon-canvas-style'] = $this->defaults['icon-canvas-style'];
-		if ( in_array( $new_instance['icon-canvas-style'], array( 'rounded', 'round', 'square' ) ) ) {
-			$instance['icon-canvas-style'] = $new_instance['icon-canvas-style'];
-		}
+        $instance['show-icon-labels'] = (bool)$new_instance['show-icon-labels'];
+        $instance['open-new-tab'] = (bool)$new_instance['open-new-tab'];
 
-		$field_count = count( $new_instance['url-fields'] );
+        $instance['icon-style'] = $this->defaults['icon-style'];
+        if (in_array($new_instance['icon-style'], array('with-canvas', 'without-canvas'))) {
+            $instance['icon-style'] = $new_instance['icon-style'];
+        }
 
-		$instance['fields'] = array();
+        $instance['icon-canvas-style'] = $this->defaults['icon-canvas-style'];
+        if (in_array($new_instance['icon-canvas-style'], array('rounded', 'round', 'square'))) {
+            $instance['icon-canvas-style'] = $new_instance['icon-canvas-style'];
+        }
 
-		for ( $i = 0; $i < $field_count; $i ++ ) {
-			$url   = esc_url( $new_instance['url-fields'][ $i ] );
-			$label = esc_html( $new_instance['label-fields'][ $i ] );
+        $field_count = count($new_instance['url-fields']);
 
-			if ( $url ) {
-				$instance['fields'][] = array(
-					'url'   => $url,
-					'label' => $label
-				);
-			}
-		}
+        $instance['fields'] = array();
 
-		return $instance;
-	}
+        for ($i = 0; $i < $field_count; $i++) {
+            $url = esc_url($new_instance['url-fields'][$i]);
+            $label = esc_html($new_instance['label-fields'][$i]);
 
-	/**
-	 * Back-end widget form.
-	 *
-	 * @see WP_Widget::form()
-	 *
-	 * @param array $instance Previously saved values from database.
-	 *
-	 * @return string|void
-	 */
-	public function form( $instance ) {
-		$instance = wp_parse_args( (array) $instance, $this->defaults );
-		?>
+            if ($url) {
+                $instance['fields'][] = array(
+                    'url' => $url,
+                    'label' => $label,
+                    'icon' => $new_instance['icon-fields'][$i],
+                    'icon-kit' => $new_instance['icon-kit-fields'][$i],
+                    'color-picker' => $new_instance['color-picker-fields'][$i]
+                );
+            }
+        }
 
-		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'zoom-social-icons-widget' ); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>"/>
-		</p>
+        return $instance;
+    }
 
-		<p>
-			<label for="<?php echo $this->get_field_id( 'description' ); ?>"><?php esc_html_e( 'Description:', 'zoom-social-icons-widget' ); ?></label>
-			<textarea class="widefat" id="<?php echo $this->get_field_id( 'description' ); ?>" name="<?php echo $this->get_field_name( 'description' ); ?>" cols="20" rows="3"><?php echo esc_attr( $instance['description'] ); ?></textarea>
-			<small><?php _e( 'Short description to be displayed right above the icons. Basic HTML allowed.', 'zoom-social-icons-widget' ); ?></small>
-		</p>
+    /**
+     * Back-end widget form.
+     *
+     * @see WP_Widget::form()
+     *
+     * @param array $instance Previously saved values from database.
+     *
+     * @return string|void
+     */
+    public function form($instance)
+    {
+        $instance = wp_parse_args((array)$instance, $this->defaults);
+        ?>
 
-		<p>
-            <input type="hidden" name="<?php echo $this->get_field_name( 'show-icon-labels' ); ?>" value="0"/>
-			<input class="checkbox zoom-social-icons-show-icon-labels" type="checkbox" <?php checked( $instance['show-icon-labels'] ); ?> id="<?php echo $this->get_field_id( 'show-icon-labels' ); ?>" name="<?php echo $this->get_field_name( 'show-icon-labels' ); ?>" />
-			<label for="<?php echo $this->get_field_id( 'show-icon-labels' ); ?>"><?php _e('Show icon labels? ', 'zoom-social-icons-widget'); ?></label>
-		</p>
+        <p>
+            <label
+                for="<?php echo $this->get_field_id('title'); ?>"><?php esc_html_e('Title:', 'zoom-social-icons-widget'); ?></label>
+            <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>"
+                   name="<?php echo $this->get_field_name('title'); ?>" type="text"
+                   value="<?php echo esc_attr($instance['title']); ?>"/>
+        </p>
 
-		<p>
-			<input class="checkbox" type="checkbox" <?php checked( $instance['open-new-tab'] ); ?> id="<?php echo $this->get_field_id( 'open-new-tab' ); ?>" name="<?php echo $this->get_field_name( 'open-new-tab' ); ?>" />
-			<label for="<?php echo $this->get_field_id( 'open-new-tab' ); ?>"><?php _e('Open links in new tab? ', 'zoom-social-icons-widget'); ?></label>
-		</p>
+        <p>
+            <label
+                for="<?php echo $this->get_field_id('description'); ?>"><?php esc_html_e('Description:', 'zoom-social-icons-widget'); ?></label>
+            <textarea class="widefat" id="<?php echo $this->get_field_id('description'); ?>"
+                      name="<?php echo $this->get_field_name('description'); ?>" cols="20"
+                      rows="3"><?php echo esc_attr($instance['description']); ?></textarea>
+            <small><?php _e('Short description to be displayed right above the icons. Basic HTML allowed.', 'zoom-social-icons-widget'); ?></small>
+        </p>
 
-		<p>
-			<label for="<?php echo $this->get_field_id( 'icon-style' ); ?>"><?php _e( 'Icon Style:', 'zoom-social-icons-widget' ); ?></label>
-			<select name="<?php echo $this->get_field_name( 'icon-style' ); ?>" id="<?php echo $this->get_field_id( 'icon-style' ); ?>" class="widefat">
-				<option value="with-canvas"<?php selected( $instance['icon-style'], 'with-canvas' ); ?>><?php esc_html_e( 'Color Background / White Icon', 'zoom-social-icons-widget' ); ?></option>
-				<option value="without-canvas"<?php selected( $instance['icon-style'], 'without-canvas' ); ?>><?php esc_html_e( 'Color Icon / No Background', 'zoom-social-icons-widget' ); ?></option>
-			</select>
-		</p>
+        <p>
+            <input type="hidden" name="<?php echo $this->get_field_name('show-icon-labels'); ?>" value="0"/>
+            <input class="checkbox zoom-social-icons-show-icon-labels"
+                   type="checkbox" <?php checked($instance['show-icon-labels']); ?>
+                   id="<?php echo $this->get_field_id('show-icon-labels'); ?>"
+                   name="<?php echo $this->get_field_name('show-icon-labels'); ?>"/>
+            <label
+                for="<?php echo $this->get_field_id('show-icon-labels'); ?>"><?php _e('Show icon labels? ', 'zoom-social-icons-widget'); ?></label>
+        </p>
 
-		<p>
-			<label for="<?php echo $this->get_field_id( 'icon-canvas-style' ); ?>"><?php _e( 'Icon Background Style:', 'zoom-social-icons-widget' ); ?></label>
-			<select name="<?php echo $this->get_field_name( 'icon-canvas-style' ); ?>" id="<?php echo $this->get_field_id( 'icon-canvas-style' ); ?>" class="widefat">
-				<option value="rounded"<?php selected( $instance['icon-canvas-style'], 'rounded' ); ?>><?php esc_html_e( 'Rounded Corners', 'zoom-social-icons-widget' ); ?></option>
-				<option value="round"<?php selected( $instance['icon-canvas-style'], 'round' ); ?>><?php esc_html_e( 'Round', 'zoom-social-icons-widget' ); ?></option>
-				<option value="square"<?php selected( $instance['icon-canvas-style'], 'square' ); ?>><?php esc_html_e( 'Square', 'zoom-social-icons-widget' ); ?></option>
-			</select>
-		</p>
+        <p>
+            <input class="checkbox" type="checkbox" <?php checked($instance['open-new-tab']); ?>
+                   id="<?php echo $this->get_field_id('open-new-tab'); ?>"
+                   name="<?php echo $this->get_field_name('open-new-tab'); ?>"/>
+            <label
+                for="<?php echo $this->get_field_id('open-new-tab'); ?>"><?php _e('Open links in new tab? ', 'zoom-social-icons-widget'); ?></label>
+        </p>
 
-		<p>
-			<small>
-				<?php echo wp_kses_post( __( 'Icon Background Style has no effect on <i>Color Icon / No Background</i> icon style.', 'zoom-social-icons-widget' ) ); ?>
-			</small>
-		</p>
+        <p>
+            <label
+                for="<?php echo $this->get_field_id('icon-style'); ?>"><?php _e('Icon Style:', 'zoom-social-icons-widget'); ?></label>
+            <select name="<?php echo $this->get_field_name('icon-style'); ?>"
+                    id="<?php echo $this->get_field_id('icon-style'); ?>" class="widefat">
+                <option
+                    value="with-canvas"<?php selected($instance['icon-style'], 'with-canvas'); ?>><?php esc_html_e('Color Background / White Icon', 'zoom-social-icons-widget'); ?></option>
+                <option
+                    value="without-canvas"<?php selected($instance['icon-style'], 'without-canvas'); ?>><?php esc_html_e('Color Icon / No Background', 'zoom-social-icons-widget'); ?></option>
+            </select>
+        </p>
 
-		<p style="margin-bottom: 0;"><?php _e( 'Icons:', 'zoom-social-icons-widget' ); ?></p>
+        <p>
+            <label
+                for="<?php echo $this->get_field_id('icon-canvas-style'); ?>"><?php _e('Icon Background Style:', 'zoom-social-icons-widget'); ?></label>
+            <select name="<?php echo $this->get_field_name('icon-canvas-style'); ?>"
+                    id="<?php echo $this->get_field_id('icon-canvas-style'); ?>" class="widefat">
+                <option
+                    value="rounded"<?php selected($instance['icon-canvas-style'], 'rounded'); ?>><?php esc_html_e('Rounded Corners', 'zoom-social-icons-widget'); ?></option>
+                <option
+                    value="round"<?php selected($instance['icon-canvas-style'], 'round'); ?>><?php esc_html_e('Round', 'zoom-social-icons-widget'); ?></option>
+                <option
+                    value="square"<?php selected($instance['icon-canvas-style'], 'square'); ?>><?php esc_html_e('Square', 'zoom-social-icons-widget'); ?></option>
+            </select>
+        </p>
 
-		<ul class="zoom-social-icons__list <?php echo ($instance['show-icon-labels'] ? '' : 'zoom-social-icons__list--no-labels'); ?>"
-		    data-url-field-id="<?php echo $this->get_field_id( 'url-fields' ); ?>"
-		    data-url-field-name="<?php echo $this->get_field_name( 'url-fields' ); ?>"
-		    data-label-field-id="<?php echo $this->get_field_id( 'label-fields' ); ?>"
-		    data-label-field-name="<?php echo $this->get_field_name( 'label-fields' ); ?>">
-
-			<?php
-			foreach ( $instance['fields'] as $field ) {
-				$this->list_field_template( array(
-					'url-field-id'     => $this->get_field_id( 'url-fields' ),
-					'url-field-name'   => $this->get_field_name( 'url-fields' ),
-					'url-value'        => $field['url'],
-					'label-field-id'   => $this->get_field_id( 'label-fields' ),
-					'label-field-name' => $this->get_field_name( 'label-fields' ),
-					'label-value'      => $field['label'],
-				) );
-			}
-			?>
-
-		</ul>
-
-		<div class="zoom-social-icons__add-button">
-			<button class="button"><?php _e( 'Add more', 'zoom-social-icons-widget' ); ?></button>
-		</div>
-
-		<p>
+        <p>
             <small>
-                <?php echo wp_kses_post( __( 'To add an icon with an email address, use the <strong><em>mailto:mail@example.com</em></strong> format.', 'zoom-social-icons-widget' ) ); ?>
+                <?php echo wp_kses_post(__('Icon Background Style has no effect on <i>Color Icon / No Background</i> icon style.', 'zoom-social-icons-widget')); ?>
+            </small>
+        </p>
+
+        <p style="margin-bottom: 0;"><?php _e('Icons:', 'zoom-social-icons-widget'); ?></p>
+
+        <ul class="zoom-social-icons__list <?php echo($instance['show-icon-labels'] ? '' : 'zoom-social-icons__list--no-labels'); ?>"
+            data-url-field-id="<?php echo $this->get_field_id('url-fields'); ?>"
+            data-url-field-name="<?php echo $this->get_field_name('url-fields'); ?>"
+            data-label-field-id="<?php echo $this->get_field_id('label-fields'); ?>"
+            data-label-field-name="<?php echo $this->get_field_name('label-fields'); ?>"
+            data-icon-field-id="<?php echo $this->get_field_id('icon-fields'); ?>"
+            data-icon-field-name="<?php echo $this->get_field_name('icon-fields'); ?>"
+            data-icon-kit-field-id="<?php echo $this->get_field_id('icon-kit-fields'); ?>"
+            data-icon-kit-field-name="<?php echo $this->get_field_name('icon-kit-fields'); ?>"
+            data-color-picker-field-id="<?php echo $this->get_field_id('color-picker-fields'); ?>"
+            data-color-picker-field-name="<?php echo $this->get_field_name('color-picker-fields'); ?>"
+        >
+
+            <?php
+            foreach ($instance['fields'] as $field) {
+                $this->list_field_template(array(
+                    'url-field-id' => $this->get_field_id('url-fields'),
+                    'url-field-name' => $this->get_field_name('url-fields'),
+                    'url-value' => $field['url'],
+                    'label-field-id' => $this->get_field_id('label-fields'),
+                    'label-field-name' => $this->get_field_name('label-fields'),
+                    'label-value' => $field['label'],
+                    'color-picker-field-id' => $this->get_field_id('color-picker-fields'),
+                    'color-picker-field-name' => $this->get_field_name('color-picker-fields'),
+                    'color-picker-value' => isset($field['color-picker']) ? $field['color-picker'] : '',
+                    'icon-field-id' => $this->get_field_id('icon-fields'),
+                    'icon-field-name' => $this->get_field_name('icon-fields'),
+                    'icon-value' => isset($field['icon']) ? $field['icon'] : '',
+                    'icon-kit-field-id' => $this->get_field_id('icon-kit-fields'),
+                    'icon-kit-field-name' => $this->get_field_name('icon-kit-fields'),
+                    'icon-kit-value' => isset($field['icon-kit']) ? $field['icon-kit'] : '',
+                ));
+            }
+            ?>
+
+        </ul>
+
+        <div class="zoom-social-icons__add-button">
+            <button class="button"><?php _e('Add more', 'zoom-social-icons-widget'); ?></button>
+        </div>
+
+        <p>
+            <small>
+                <?php echo wp_kses_post(__('To add an icon with an email address, use the <strong><em>mailto:mail@example.com</em></strong> format.', 'zoom-social-icons-widget')); ?>
             </small>
         </p>
 
         <p>
-			<small>
-				<?php echo wp_kses_post( __( 'Note that icons above is not how they will look on front-end. This is just for reference.', 'zoom-social-icons-widget' ) ); ?>
-			</small>
-		</p>
+            <small>
+                <?php echo wp_kses_post(__('Note that icons above is not how they will look on front-end. This is just for reference.', 'zoom-social-icons-widget')); ?>
+            </small>
+        </p>
 
-		<?php
-	}
+        <?php
+    }
 
-	/**
-	 * Generates template for field item, used for widget options in wp-admin directly and by javascript.
-	 *
-	 * @param array $args Template arguments
-	 */
-	protected function list_field_template( $args = array() ) {
-		$defaults = array(
-			'url-field-id'     => '',
-			'url-field-name'   => '',
-			'url-value'        => '',
-			'label-field-id'   => '',
-			'label-field-name' => '',
-			'label-value'      => '',
-		);
+    /**
+     * Generates template for field item, used for widget options in wp-admin directly and by javascript.
+     *
+     * @param array $args Template arguments
+     */
+    protected function list_field_template($args = array())
+    {
+        $defaults = array(
+            'url-field-id' => '',
+            'url-field-name' => '',
+            'url-value' => '',
+            'label-field-id' => '',
+            'label-field-name' => '',
+            'label-value' => '',
+            'color-picker-field-id' => '',
+            'color-picker-field-name' => '',
+            'color-picker-value' => '#5A5A59',
+            'icon-field-id' => '',
+            'icon-field-name' => '',
+            'icon-value' => 'plus',
+            'icon-kit-field-id' => '',
+            'icon-kit-field-name' => '',
+            'icon-kit-value' => 'dashicons'
+        );
 
-		$args = wp_parse_args( $args, $defaults );
+        $args = wp_parse_args($args, $defaults);
 
-		$icon_class = 'dashicons dashicons-sort';
-		if ( ( $icon = $this->get_icon( $args['url-value'] ) ) ) {
-			$icon_class = 'socicon socicon-' . $icon;
-		}
+        $icon_class = 'dashicons dashicons-sort';
+        $background_color = '';
 
-		?>
+        if (($icon = $this->get_icon($args['url-value']))) {
+            $icon_class = 'socicon socicon-' . $icon;
+        }
 
-		<li class="zoom-social-icons__field">
-			<div class="zoom-social-icons__cw">
-				<div class="zoom-social-icons__inputs">
+        if (!empty($args['icon-value'] && !empty($args['icon-kit-value']))) {
+            $icon_class = $args['icon-kit-value'] . ' ' . $args['icon-kit-value'] . '-' . $args['icon-value'];
+        }
 
-					<?php
-					printf('<input class="widefat zoom-social-icons__field-url" id="%1$s" name="%2$s[]" type="text" placeholder="%3$s" value="%4$s">',
-						$args['url-field-id'],
-						$args['url-field-name'],
-						__('URL', 'zoom-social-icons-widget'),
-						esc_attr( $args['url-value'] )
-					);
+        if (!empty($args['color-picker-value'])) {
+            $background_color = 'background-color :' . esc_attr($args['color-picker-value']) . ';';
+        }
+        if (!empty($args['icon-value']) && $args['icon-value'] == 'plus') {
+            $background_color .= ' line-height:22px;';
+        }
 
-					printf('<input class="widefat zoom-social-icons__field-label" id="%1$s" name="%2$s[]" type="text" placeholder="%3$s" value="%4$s">',
-						$args['label-field-id'],
-						$args['label-field-name'],
-						__( 'Label', 'zoom-social-icons-widget' ),
-						esc_attr( $args['label-value'] )
-					);
-					?>
+        ?>
 
-				</div>
-			</div>
+        <li class="zoom-social-icons__field">
+            <span class="dashicons dashicons-sort zoom-social-icons__field-handle"></span>
+            <span class="zoom-social-icons__field-icon-handler <?php echo $icon_class; ?>"
+                  style="<?php echo $background_color; ?>"></span>
+            <div class="zoom-social-icons__cw">
+                <div class="zoom-social-icons__inputs">
 
-			<span class="zoom-social-icons__field-handle <?php echo $icon_class; ?>"></span>
-			<a class="zoom-social-icons__field-trash" href="#"><span class="dashicons dashicons-trash"></span></a>
+                    <?php
+                    printf('<input class="widefat zoom-social-icons__field-url" id="%1$s" name="%2$s[]" type="text" placeholder="%3$s" value="%4$s">',
+                        $args['url-field-id'],
+                        $args['url-field-name'],
+                        __('Start typing the URL...', 'zoom-social-icons-widget'),
+                        esc_attr($args['url-value'])
+                    );
 
-			<br style="clear:both">
-		</li>
+                    printf('<input class="widefat zoom-social-icons__field-label" id="%1$s" name="%2$s[]" type="text" placeholder="%3$s" value="%4$s">',
+                        $args['label-field-id'],
+                        $args['label-field-name'],
+                        __('Label', 'zoom-social-icons-widget'),
+                        esc_attr($args['label-value'])
+                    );
 
-		<?php
-	}
+                    printf('<input type="hidden" class="zoom-social-icons__field-color-picker" id="%1$s" name="%2$s[]" value="%3$s">',
+                        $args['color-picker-field-id'],
+                        $args['color-picker-field-name'],
+                        esc_attr($args['color-picker-value'])
+                    );
 
-	/**
-	 * Returns an icon identifier for given website url.
-	 *
-	 * @param $url string Profile URL
-	 *
-	 * @return string icon id that matches given url
-	 */
+                    printf('<input type="hidden" class="zoom-social-icons__field-icon" id="%1$s" name="%2$s[]" value="%3$s">',
+                        $args['icon-field-id'],
+                        $args['icon-field-name'],
+                        esc_attr($args['icon-value'])
+                    );
+
+                    printf('<input type="hidden"  class="zoom-social-icons__field-icon-kit" id="%1$s" name="%2$s[]" value="%3$s">',
+                        $args['icon-kit-field-id'],
+                        $args['icon-kit-field-name'],
+                        esc_attr($args['icon-kit-value'])
+                    );
+                    ?>
+
+                </div>
+            </div>
+
+
+            <a class="zoom-social-icons__field-trash" href="#"><span class="dashicons dashicons-trash"></span></a>
+
+            <br style="clear:both">
+        </li>
+
+        <?php
+    }
+
+    /**
+     * Returns an icon identifier for given website url.
+     *
+     * @param $url string Profile URL
+     *
+     * @return string icon id that matches given url
+     */
 
     protected function get_icon($url)
     {
