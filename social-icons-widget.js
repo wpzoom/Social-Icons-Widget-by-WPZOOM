@@ -6,6 +6,7 @@
         'apple',
         'appnet',
         'baidu',
+        'bandcamp',
         'bebo',
         'behance',
         'blogger',

@@ -81,6 +81,15 @@
     content: "\e061"
 }
 
+.socicon-bandcamp {
+    background-color: #619aa9;
+    color: #619aa9;
+}
+
+.socicon-bandcamp:before {
+    content: "\e06a"
+}
+
 .socicon-bebo {
     background-color: #EF1011;
     color: #EF1011;

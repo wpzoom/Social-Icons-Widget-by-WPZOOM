@@ -22,6 +22,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
         'apple',
         'appnet',
         'baidu',
+        'bandcamp',
         'bebo',
         'behance',
         'blogger',
