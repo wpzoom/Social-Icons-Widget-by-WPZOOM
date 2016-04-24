@@ -8,9 +8,13 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Social Icons Widget to displays links to social sharing websites. Supports more than 80 sites and includes 400 icons. Sort icons by Drag & Drop and change their color easily.
+Social Icons Widget to displays links to social sharing websites. Supports more than 80 sites and includes 400 icons.
 
 == Description ==
+
+> Did you find this plugin helpful? Please consider [leaving a 5-star review](http://wordpress.org/support/view/plugin-reviews/social-icons-widget-by-wpzoom).
+
+**[View Demo](http://demo.wpzoom.com/social-icons/)**
 
 = What's new in 2.0 =
 
@@ -71,6 +75,10 @@ On our [website](http://www.wpzoom.com/plugins/social-widget/).
 6. Widget Settings
 
 == Changelog ==
+
+= 2.0.1 =
+
+* Added new icon: Bandcamp
 
 = 2.0 =
 * Major Upate
