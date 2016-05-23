@@ -206,6 +206,7 @@
                         e.preventDefault();
                         $(modal.target).data('dynamic-icon', true);
                         $form.trigger('submit');
+                        triggerFakeChange($(modal.target).parents('.widget[id*=zoom-social-icons-widget]'));
                     });
 
                     $form.on('submit', function (e) {

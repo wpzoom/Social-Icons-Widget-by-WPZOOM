@@ -526,7 +526,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
      */
     public function admin_scripts()
     {
-        wp_enqueue_script('zoom-social-icons-widget', plugin_dir_url($this->plugin_file) . 'social-icons-widget.js', array('jquery', 'jquery-ui-sortable', 'underscore', 'wp-color-picker'), '20160404');
+        wp_enqueue_script('zoom-social-icons-widget', plugin_dir_url($this->plugin_file) . 'social-icons-widget.js', array('jquery', 'jquery-ui-sortable', 'underscore', 'wp-color-picker'), '20160523');
         wp_enqueue_style('socicon', plugin_dir_url($this->plugin_file) . 'css/socicon.css', array(), '20160404');
         wp_enqueue_style('social-icons-widget-admin', plugin_dir_url($this->plugin_file) . 'css/social-icons-widget-admin.css', array('socicon'), '20160404');
         wp_enqueue_style('genericons', plugin_dir_url($this->plugin_file) . 'css/genericons.css', array(), '20160404');
