@@ -38,7 +38,7 @@
 .zoom-social-icons__list--no-labels .zoom-social-icons__field-trash { margin-top: 2px; }
 .zoom-social-icons__add-button { margin-bottom: 10px; }
 
-.zoom-social-icons__field-icon-handler.socicon, .zoom-social-icons__field-icon-handler.genericon, .zoom-social-icons__field-icon-handler.dashicons   {
+.zoom-social-icons__field-icon-handler.socicon, .zoom-social-icons__field-icon-handler.genericon, .zoom-social-icons__field-icon-handler.dashicons, .zoom-social-icons__field-icon-handler.fa {
     color: white;
     padding: 4px;
     border-radius: 50%;
@@ -51,7 +51,7 @@
     margin-top: 0px;
 }
 
-.zoom-social-icons__single-element.socicon, .zoom-social-icons__single-element.dashicons, .zoom-social-icons__single-element.genericon {
+.zoom-social-icons__single-element.socicon, .zoom-social-icons__single-element.dashicons, .zoom-social-icons__single-element.genericon, .zoom-social-icons__single-element.fa {
     color: white;
     padding: 10px;
     margin-bottom: 10px ;
@@ -130,7 +130,8 @@
     width:30%;
 }
 
-.zoom-social-modal-wrapper .dashicons:hover,.zoom-social-modal-wrapper .dashicons.selected,.zoom-social-modal-wrapper .socicon:hover,.zoom-social-modal-wrapper .socicon.selected,.zoom-social-modal-wrapper .genericon.selected,.zoom-social-modal-wrapper .genericon:hover{
+.zoom-social-modal-wrapper .dashicons:hover,.zoom-social-modal-wrapper .dashicons.selected,.zoom-social-modal-wrapper .socicon:hover,.zoom-social-modal-wrapper .socicon.selected,.zoom-social-modal-wrapper .genericon.selected,.zoom-social-modal-wrapper .genericon:hover,
+.zoom-social-modal-wrapper .fa.selected,.zoom-social-modal-wrapper .fa:hover{
     background-color: #0073AA;
     border-radius: 50%;
     padding: 9px;
@@ -143,4 +144,8 @@
 .form-group:after { clear: both; }
 .zoom-social-icons__field-color-picker, .zoom-social-icons__kit-selector{
     min-width: 200px;
+}
+.fa-wrapper .zoom-social-icons__single-element{
+    width: 1em;
+    text-align: center;
 }

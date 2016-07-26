@@ -1,4 +1,4 @@
-(function ($) {
+(function ($, _, social_icons) {
     var icons = [
         '500px',
         'airbnb',
@@ -115,7 +115,51 @@
                     var $iconKit = $container.find('.zoom-social-icons__field-icon-kit');
                     var $icon = $container.find('.zoom-social-icons__field-icon');
                     var $colorPicker = $container.find('.zoom-social-icons__field-color-picker');
+                    var $searchContent = $container.find('.zoom-social-modal-search-content');
+                    var $searchInput = $container.find('.search-action-input');
 
+                    $searchInput.on('input', function (e) {
+                        e.preventDefault();
+                        var $inputVal = $(this).val();
+
+                        if ($searchContent.data('show') === 'hidden') {
+                            $searchContent.toggle();
+                            $form.toggle();
+                            $searchContent.data('show', 'visible');
+                        }
+
+                        var socialIcons = _.map(social_icons, function (iconPack) {
+                            var icons = _.filter(iconPack['icons'], function (icon) {
+                                return (icon.indexOf($inputVal) !== -1);
+                            });
+                            return _.extend({}, iconPack, {icons: icons});
+                        });
+
+                        $searchContent.html(wp.template('zoom-social-modal-search')(socialIcons));
+
+                        $searchContent.find('.zoom-social-icons__single-element').on('mouseenter mouseleave', function(e){
+                            e.preventDefault();
+                            $searchContent.find('.zoom-social-icons__single-element').removeAttr('style');
+
+                            $(this).css({
+                                'backgroundColor': Color($colorPicker.val()).toString(),
+                                'color': Color().getReadableContrastingColor(Color($colorPicker.val()), 50).toString()
+                            });
+                        });
+                    });
+
+                    $searchContent.on('click', '.zoom-social-icons__single-element', function(e){
+                        e.preventDefault();
+
+                        $searchContent.data('show', 'hidden');
+                        $searchInput.val('');
+                        $iconKit.val($(this).data('type')).trigger('change');
+                        var $active = $form.find('.icon-kit .'+$(this).data('type')+'-'+$(this).data('value'));
+                        $active.trigger('click');
+                        $form.find('.icon-kit.'+$(this).data('type')+'-wrapper').prepend($active);
+                        $searchContent.toggle();
+                        $form.toggle();
+                    });
 
                     _.each(targetData, function (el) {
                         $form.find('.' + el.name).val(el.value);
@@ -126,14 +170,12 @@
                         'color': Color().getReadableContrastingColor(Color($colorPicker.val()), 50).toString()
                     });
 
-
                     $colorPicker.css({
                         'backgroundColor': Color($colorPicker.val()).toString(),
                         'color': Color().getReadableContrastingColor(Color($colorPicker.val()), 50).toString()
                     });
                     $container.find('.icon-kit').hide();
                     $container.find('.' + $iconKit.val() + '-wrapper').show();
-
 
                     $colorPicker.one('click', function (e) {
                         e.preventDefault();
@@ -168,7 +210,6 @@
                             });
                         }
                     });
-
 
                     $iconKit.on('change', function () {
                         $container.find('.icon-kit').hide();
@@ -466,4 +507,4 @@
             initWidget(dialog);
         });
     });
-})(jQuery);
+})(jQuery, _, zoom_social_icons);

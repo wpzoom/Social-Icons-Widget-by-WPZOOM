@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Social Icons Widget by WPZOOM\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Tue Mar 01 2016 12:11:51 GMT+0200 (EET)\n"
-"PO-Revision-Date: Sun Apr 24 2016 12:19:32 GMT+0300 (EEST)\n"
+"PO-Revision-Date: Wed Apr 20 2016 20:54:35 GMT+0300 (EEST)\n"
 "Last-Translator: Pavel Ciorici <cioricip@gmail.com>\n"
 "Language-Team: \n"
 "Language: Romanian\n"
@@ -23,116 +23,113 @@ msgstr ""
 "X-Generator: Loco - https://localise.biz/\n"
 "X-Loco-Target-Locale: ro_RO"
 
-#: ../class.zoom-social-icons-widget.php:576
-msgid "Socicons"
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:577
-msgid "Dashicons"
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:578
-msgid "Genericons"
-msgstr ""
-
-#. Description of the plugin
-msgid ""
-"Social Icons Widget to displays links to social sharing websites. Supports "
-"more than 80 sites and includes 400 icons. Sort icons by Drag & Drop and "
-"change their color easily."
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:472
-msgid "Social Icons by WPZOOM"
-msgstr "Iconite Social Media by WPZOOM"
-
-#: ../class.zoom-social-icons-widget.php:475
-msgid "Sortable widget that supports more than 80+ social networks"
-msgstr "Widget usor sortabil care suporta peste 80 de site-uri social media"
-
-#: ../class.zoom-social-icons-widget.php:480
+#: ../class.zoom-social-icons-widget.php:479
 msgid "Follow us"
 msgstr "Urmareste-ne"
 
-#: ../class.zoom-social-icons-widget.php:489
-msgid "Friend me on Facebook"
-msgstr "Adauga-ma pe Facebook"
-
-#: ../class.zoom-social-icons-widget.php:497
-msgid "Follow Me"
-msgstr "Urmareste-ma"
-
-#: ../class.zoom-social-icons-widget.php:504
+#: ../class.zoom-social-icons-widget.php:503
 msgid "Instagram"
 msgstr "Instagram"
 
-#: ../class.zoom-social-icons-widget.php:557
+#: ../class.zoom-social-icons-widget.php:556
 msgid "Select Icon"
 msgstr "Alege o iconita"
 
-#: ../class.zoom-social-icons-widget.php:562
+#: ../class.zoom-social-icons-widget.php:561
 msgid "Choose icon background color"
 msgstr "Alege culoarea iconitei"
 
-#: ../class.zoom-social-icons-widget.php:572
+#: ../class.zoom-social-icons-widget.php:571
 msgid "Select Icon Kit"
 msgstr "Alege setul de iconite"
 
-#: ../class.zoom-social-icons-widget.php:604
+#: ../class.zoom-social-icons-widget.php:575
+msgid "Socicons"
+msgstr ""
+
+#: ../class.zoom-social-icons-widget.php:576
+msgid "Dashicons"
+msgstr ""
+
+#: ../class.zoom-social-icons-widget.php:577
+msgid "Genericons"
+msgstr ""
+
+#: ../class.zoom-social-icons-widget.php:603
 msgid "Save"
 msgstr "Salveaza"
 
-#: ../class.zoom-social-icons-widget.php:752
+#: ../class.zoom-social-icons-widget.php:932
+msgid "Start typing the URL..."
+msgstr "Introdu URL"
+
+#: ../class.zoom-social-icons-widget.php:471
+msgid "Social Icons by WPZOOM"
+msgstr "Iconite Social Media by WPZOOM"
+
+#: ../class.zoom-social-icons-widget.php:474
+msgid "Sortable widget that supports more than 80+ social networks"
+msgstr "Widget usor sortabil care suporta peste 80 de site-uri social media"
+
+#: ../class.zoom-social-icons-widget.php:488
+msgid "Friend me on Facebook"
+msgstr "Adauga-ma pe Facebook"
+
+#: ../class.zoom-social-icons-widget.php:496
+msgid "Follow Me"
+msgstr "Urmareste-ma"
+
+#: ../class.zoom-social-icons-widget.php:751
 msgid "Title:"
 msgstr "Titlu:"
 
-#: ../class.zoom-social-icons-widget.php:760
+#: ../class.zoom-social-icons-widget.php:759
 msgid "Description:"
 msgstr "Descriere:"
 
-#: ../class.zoom-social-icons-widget.php:764
+#: ../class.zoom-social-icons-widget.php:763
 msgid "Short description to be displayed right above the icons. Basic HTML allowed."
 msgstr ""
 "O scurta descriere care apare deasupra tutoror iconitelor. Unele taguri HTML "
 "sunt permise."
 
-#: ../class.zoom-social-icons-widget.php:774
+#: ../class.zoom-social-icons-widget.php:773
 msgid "Show icon labels? "
 msgstr "Arata titlul fiecarei iconite?"
 
-#: ../class.zoom-social-icons-widget.php:782
+#: ../class.zoom-social-icons-widget.php:781
 msgid "Open links in new tab? "
 msgstr "Deschide linkurile in tab nou?"
 
-#: ../class.zoom-social-icons-widget.php:787
+#: ../class.zoom-social-icons-widget.php:786
 msgid "Icon Style:"
 msgstr "Stilul Iconitelor:"
 
-#: ../class.zoom-social-icons-widget.php:791
+#: ../class.zoom-social-icons-widget.php:790
 msgid "Color Background / White Icon"
 msgstr "Fundal colorat / Iconita alba"
 
-#: ../class.zoom-social-icons-widget.php:793
+#: ../class.zoom-social-icons-widget.php:792
 msgid "Color Icon / No Background"
 msgstr "Iconita Colorata / Fara Fundal"
 
-#: ../class.zoom-social-icons-widget.php:799
+#: ../class.zoom-social-icons-widget.php:798
 msgid "Icon Background Style:"
 msgstr "Stilul Fundalului:"
 
-#: ../class.zoom-social-icons-widget.php:803
+#: ../class.zoom-social-icons-widget.php:802
 msgid "Rounded Corners"
 msgstr "Colturi Rotunjite"
 
-#: ../class.zoom-social-icons-widget.php:805
+#: ../class.zoom-social-icons-widget.php:804
 msgid "Round"
 msgstr "Rotund"
 
-#: ../class.zoom-social-icons-widget.php:807
+#: ../class.zoom-social-icons-widget.php:806
 msgid "Square"
 msgstr "Patrat"
 
-#: ../class.zoom-social-icons-widget.php:813
+#: ../class.zoom-social-icons-widget.php:812
 msgid ""
 "Icon Background Style has no effect on <i>Color Icon / No Background</i> "
 "icon style."
@@ -140,15 +137,15 @@ msgstr ""
 "Stilul Fundalului nu are niciun efect daca e selectat stilul <i>Iconita "
 "Colorata / Fara Fundal</i>."
 
-#: ../class.zoom-social-icons-widget.php:817
+#: ../class.zoom-social-icons-widget.php:816
 msgid "Icons:"
 msgstr "Iconite:"
 
-#: ../class.zoom-social-icons-widget.php:857
+#: ../class.zoom-social-icons-widget.php:856
 msgid "Add more"
 msgstr "Adauga"
 
-#: ../class.zoom-social-icons-widget.php:862
+#: ../class.zoom-social-icons-widget.php:861
 msgid ""
 "To add an icon with an email address, use the <strong><em>mailto:"
 "mail@example.com</em></strong> format."
@@ -156,17 +153,13 @@ msgstr ""
 "Pentru adaugarea unei iconite cu o adresa de email, folositi formatul "
 "<strong><em>mailto:mail@example.com</em></strong>."
 
-#: ../class.zoom-social-icons-widget.php:868
+#: ../class.zoom-social-icons-widget.php:867
 msgid ""
 "Note that icons above is not how they will look on front-end. This is just "
 "for reference."
 msgstr "Remarca: iconitile pot aparea diferit pe site, fata de cum sunt afisate aici."
 
-#: ../class.zoom-social-icons-widget.php:933
-msgid "Start typing the URL..."
-msgstr "Introdu URL"
-
-#: ../class.zoom-social-icons-widget.php:940
+#: ../class.zoom-social-icons-widget.php:939
 msgid "Label"
 msgstr "Titlu"
 
@@ -176,6 +169,9 @@ msgstr "Social Icons Widget by WPZOOM"
 #. URI of the plugin
 msgid "http://www.wpzoom.com"
 msgstr "http://www.wpzoom.com"
+
+msgid "Social Icons Widget"
+msgstr "Social Icons Widget"
 
 msgid "WPZOOM"
 msgstr "WPZOOM"

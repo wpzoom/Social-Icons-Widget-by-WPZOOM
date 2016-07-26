@@ -225,6 +225,20 @@
     content: "\e026"
 }
 
+.socicon-eyeem {
+    background-color: #000000;
+    color: #000000;
+}
+
+.zoom-social-icons-list .socicon.socicon-eyeem {
+    font-size: 1.8em;
+    padding: 4px;
+}
+
+.socicon-eyeem:before {
+    content: "\e901"
+}
+
 .socicon-facebook {
     background-color: #3b5998;
     color: #3b5998;
@@ -343,8 +357,8 @@
 }
 
 .socicon-instagram {
-    background-color: #3f729b;
-    color: #3f729b;
+    background-color: #E1306C;
+    color: #E1306C;
 }
 
 .socicon-instagram:before {
@@ -827,7 +841,11 @@
     margin: 4px;
 }
 
-.zoom-social-icons-list .socicon, .zoom-social-icons-list .dashicons, .zoom-social-icons-list .genericon {
+.zoom-social-icons-list .socicon,
+.zoom-social-icons-list .dashicons,
+.zoom-social-icons-list .genericon,
+.zoom-social-icons-list .fa
+{
     padding: 8px;
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
@@ -843,15 +861,27 @@
     font-size: 1.2em;
 }
 
-.zoom-social_icons-list__item a:hover .socicon, .zoom-social_icons-list__item a:hover .dashicons, .zoom-social_icons-list__item a:hover .genericon {
+.zoom-social_icons-list__item a:hover .socicon,
+.zoom-social_icons-list__item a:hover .dashicons,
+.zoom-social_icons-list__item a:hover .genericon,
+.zoom-social_icons-list__item a:hover .fa
+{
     opacity: 0.8;
 }
 
-.zoom-social-icons-list--with-canvas .socicon, .zoom-social-icons-list--with-canvas .dashicons, .zoom-social-icons-list--with-canvas .genericon {
+.zoom-social-icons-list--with-canvas .socicon,
+.zoom-social-icons-list--with-canvas .dashicons,
+.zoom-social-icons-list--with-canvas .genericon,
+.zoom-social-icons-list--with-canvas .fa
+{
     color: #ffffff;
 }
 
-.zoom-social-icons-list--without-canvas .socicon, .zoom-social-icons-list--without-canvas .dashicons, .zoom-social-icons-list--without-canvas .genericon {
+.zoom-social-icons-list--without-canvas .socicon,
+.zoom-social-icons-list--without-canvas .dashicons,
+.zoom-social-icons-list--without-canvas .genericon,
+.zoom-social-icons-list--without-canvas .fa
+{
     background: none;
 }
 
@@ -866,13 +896,21 @@
     margin-top: -8px;
 }
 
-.zoom-social-icons-list--rounded .socicon, .zoom-social-icons-list--rounded .genericon, .zoom-social-icons-list--rounded .dashicons {
+.zoom-social-icons-list--rounded .socicon,
+.zoom-social-icons-list--rounded .genericon,
+.zoom-social-icons-list--rounded .dashicons,
+.zoom-social-icons-list--rounded .fa
+{
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
 }
 
-.zoom-social-icons-list--round .socicon, .zoom-social-icons-list--round .genericon, .zoom-social-icons-list--round .dashicons {
+.zoom-social-icons-list--round .socicon,
+.zoom-social-icons-list--round .genericon,
+.zoom-social-icons-list--round .dashicons,
+.zoom-social-icons-list--round .fa
+{
     -moz-border-radius: 100px;
     -webkit-border-radius: 100px;
     border-radius: 100px;
