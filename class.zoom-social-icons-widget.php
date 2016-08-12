@@ -13,6 +13,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget
     protected $plugin_file;
 
     /**
+      * @var array protocols that are allowed in esc_url validation function.
+      */
+    protected $protocols = array('skype', 'http', 'https', 'mailto', 'news', 'irc', 'feed', 'tel', 'fax', 'mms', 'xmpp');
+
+    /**
      * @var array List of supported icons.
      */
     protected $icons = array(
@@ -1347,7 +1352,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
 
                 <li class="zoom-social_icons-list__item">
                     <a class="zoom-social_icons-list__link"
-                       href="<?php echo esc_url($field['url']); ?>" <?php echo($instance['open-new-tab'] ? 'target="_blank"' : ''); ?>>
+                       href="<?php echo esc_url($field['url'], $this->protocols); ?>" <?php echo($instance['open-new-tab'] ? 'target="_blank"' : ''); ?>>
                         <?php if (!empty($field['icon']) && !empty($field['icon-kit']) && !empty($field['color-picker'])) {
                             $class = $field['icon-kit'] . ' ' . $field['icon-kit'] . '-' . $field['icon'];
                             $style = ($instance['icon-style'] === 'with-canvas') ? 'background-color:' . $field['color-picker'] : 'color:' . $field['color-picker'];
@@ -1407,7 +1412,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
         $instance['fields'] = array();
 
         for ($i = 0; $i < $field_count; $i++) {
-            $url = esc_url($new_instance['url-fields'][$i]);
+            $url = esc_url($new_instance['url-fields'][$i], $this->protocols);
             $label = esc_html($new_instance['label-fields'][$i]);
 
             if ($url) {
