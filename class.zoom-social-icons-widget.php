@@ -1126,6 +1126,8 @@ class Zoom_Social_Icons_Widget extends WP_Widget
             'open-new-tab' => true,
             'icon-style' => 'with-canvas',
             'icon-canvas-style' => 'rounded',
+            'icon-padding-size' => 8,
+            'icon-font-size' => 18,
             'fields' => array(
                 array(
                     'url' => 'https://facebook.com/wpzoom',
@@ -1348,7 +1350,8 @@ class Zoom_Social_Icons_Widget extends WP_Widget
 
         <ul class="zoom-social-icons-list <?php echo esc_attr(implode(' ', $class_list)); ?>">
 
-            <?php foreach ($instance['fields'] as $field) : ?>
+            <?php
+             foreach ($instance['fields'] as $field) : ?>
 
                 <li class="zoom-social_icons-list__item">
                     <a class="zoom-social_icons-list__link"
@@ -1360,6 +1363,12 @@ class Zoom_Social_Icons_Widget extends WP_Widget
                             $style = '';
                             $class = 'socicon socicon-' . esc_attr($this->get_icon($field['url']));
                         } ?>
+                        <?php if (!empty($instance['icon-font-size'])) {
+                            $style.='; font-size: '.$instance['icon-font-size'].'px';
+                        } ?>
+                        <?php if(!empty($instance['icon-padding-size'])){
+                            $style.='; padding:'.$instance['icon-padding-size'].'px';
+                        }?>
                         <span class="<?php echo $class ?>"
                               style="<?php echo $style ?>"></span>
 
@@ -1396,6 +1405,9 @@ class Zoom_Social_Icons_Widget extends WP_Widget
 
         $instance['show-icon-labels'] = (bool)$new_instance['show-icon-labels'];
         $instance['open-new-tab'] = (bool)$new_instance['open-new-tab'];
+
+        $instance['icon-padding-size'] = (int) $new_instance['icon-padding-size'];
+        $instance['icon-font-size'] = (int) $new_instance['icon-font-size'];
 
         $instance['icon-style'] = $this->defaults['icon-style'];
         if (in_array($new_instance['icon-style'], array('with-canvas', 'without-canvas'))) {
@@ -1508,6 +1520,26 @@ class Zoom_Social_Icons_Widget extends WP_Widget
             <small>
                 <?php echo wp_kses_post(__('Icon Background Style has no effect on <i>Color Icon / No Background</i> icon style.', 'zoom-social-icons-widget')); ?>
             </small>
+        </p>
+
+        <p>
+            <label for="<?php echo $this->get_field_id('icon-padding-size')?>"><?php  _e('Padding Size in Pixels:', 'zoom-social-icons-widget')?>
+            <input type="number" min="5" max="200"
+            id="<?php echo $this->get_field_id('icon-padding-size')?>"
+            name="<?php echo $this->get_field_name('icon-padding-size')?>"
+            value="<?php echo esc_attr($instance['icon-padding-size']); ?>"
+            class="widefat"/>
+            </label>
+        </p>
+
+         <p>
+            <label for="<?php echo $this->get_field_id('icon-font-size')?>"><?php  _e('Font Size in Pixels:', 'zoom-social-icons-widget')?>
+            <input type="number" min="5" max="200"
+            id="<?php echo $this->get_field_id('icon-font-size')?>"
+            name="<?php echo $this->get_field_name('icon-font-size')?>"
+            value="<?php echo esc_attr($instance['icon-font-size']); ?>"
+            class="widefat"/>
+            </label>
         </p>
 
         <p style="margin-bottom: 0;"><?php _e('Icons:', 'zoom-social-icons-widget'); ?></p>
