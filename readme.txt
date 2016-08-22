@@ -1,9 +1,9 @@
 === Social Icons Widget by WPZOOM ===
 Contributors: WPZOOM, nvartolomei, ciorici
 Donate link: http://www.wpzoom.com/
-Tags: social icons, social networks, social media, social profiles, widget, twitter, facebook, google, pinterest, foursquare, yahoo, skype, yelp, feedburner, linkedin, viadeo, xing, myspace, soundcloud, spotify, grooveshark, lastfm, youtube, vimeo, dailymotion, vine, flickr, 500px, instagram, wordpress, tumblr, blogger, technorati, reddit, dribbble, stumbleupon, digg, envato, behance, delicious, deviantart, forrst, play, zerply, wikipedia, apple, flattr, github, chimein, friendfeed, newsvine, identica, bebo, zynga, steam, xbox, windows, outlook, coderwall, tripadvisor, appnet, goodreads, tripit, lanyrd, slideshare, buffer, rss, vkontakte, disqus, houzz, mail, patreon, paypal, smugmug, swarm, triplej, yammer, stackoverflow, drupal, odnoklassniki, android, meetup, persona, airbnb, baidu, ebay, medium, periscope, lookbook, feedly, snapchat, telegram, bloglovin
+Tags: social icons, social networks, social media, social profiles, widget, twitter, facebook, google, pinterest, foursquare, yahoo, skype, yelp, feedburner, linkedin, viadeo, xing, myspace, soundcloud, spotify, grooveshark, lastfm, youtube, vimeo, dailymotion, vine, flickr, 500px, instagram, wordpress, tumblr, blogger, technorati, reddit, dribbble, stumbleupon, digg, envato, behance, delicious, deviantart, forrst, play, zerply, wikipedia, apple, flattr, github, chimein, friendfeed, newsvine, identica, bebo, zynga, steam, xbox, windows, outlook, coderwall, tripadvisor, appnet, goodreads, tripit, lanyrd, slideshare, buffer, rss, vkontakte, disqus, houzz, mail, patreon, paypal, smugmug, swarm, triplej, yammer, stackoverflow, drupal, odnoklassniki, android, meetup, persona, airbnb, baidu, ebay, medium, periscope, lookbook, feedly, snapchat, telegram, bloglovin, fontawesome
 Requires at least: 4.3
-Tested up to: 4.5.3
+Tested up to: 4.6
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -15,6 +15,17 @@ Social Icons Widget to displays links to social sharing websites. Supports more 
 > Did you find this plugin helpful? Please consider [leaving a 5-star review](http://wordpress.org/support/view/plugin-reviews/social-icons-widget-by-wpzoom).
 
 **[View Demo](http://demo.wpzoom.com/social-icons/)**
+
+= What's new in 2.2.0 =
+
+* Added Padding and Size options for icons
+* Added support for Skype links (skype:username)
+
+= What's new in 2.1.0 =
+
+* Search Icons by keywords
+* FontAwesome Icon Set Integration
+* Updated Instagram Icon
 
 = What's new in 2.0 =
 
@@ -39,6 +50,8 @@ You can view the widget live in all our themes at [WPZOOM](http://www.wpzoom.com
 * 80+ Sites/Social Networks supported
 * Drag & Drop Icons
 * Color Picker
+* Search by keywords
+* Adjust icon size & padding
 * Supports Custom Icons
 * 2 Styles: Icon Shape and Icon with Background
 * 3 Background Styles: Rounded Corners, Round, Square
@@ -57,7 +70,9 @@ Looking to contribute code to this plugin? Go ahead and [fork the repository ove
 
 == Installation ==
 
-Simply search for the plugin via the Plugins -> Add New dialog and click install, or download and extract the plugin, and copy the plugin folder into your wp-content/plugins directory and activate.
+Simply search for the plugin via the **Plugins -> Add New** dialog and click install, or download and extract the plugin, and copy the plugin folder into your wp-content/plugins directory and activate.
+
+After that go to the **Widgets** page and the widget **Social Icons by WPZOOM** to a widget area like Sidebar.
 
 == Frequently Asked Questions ==
 

@@ -1523,7 +1523,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
         </p>
 
         <p>
-            <label for="<?php echo $this->get_field_id('icon-padding-size')?>"><?php  _e('Padding Size in Pixels:', 'zoom-social-icons-widget')?>
+            <label for="<?php echo $this->get_field_id('icon-padding-size')?>"><?php  _e('Icon Padding (pixels):', 'zoom-social-icons-widget')?>
             <input type="number" min="5" max="200"
             id="<?php echo $this->get_field_id('icon-padding-size')?>"
             name="<?php echo $this->get_field_name('icon-padding-size')?>"
@@ -1533,7 +1533,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
         </p>
 
          <p>
-            <label for="<?php echo $this->get_field_id('icon-font-size')?>"><?php  _e('Font Size in Pixels:', 'zoom-social-icons-widget')?>
+            <label for="<?php echo $this->get_field_id('icon-font-size')?>"><?php  _e('Icon Size (pixels):', 'zoom-social-icons-widget')?>
             <input type="number" min="5" max="200"
             id="<?php echo $this->get_field_id('icon-font-size')?>"
             name="<?php echo $this->get_field_name('icon-font-size')?>"
