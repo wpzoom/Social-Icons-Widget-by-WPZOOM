@@ -72,7 +72,7 @@ Looking to contribute code to this plugin? Go ahead and [fork the repository ove
 
 Simply search for the plugin via the **Plugins -> Add New** dialog and click install, or download and extract the plugin, and copy the plugin folder into your wp-content/plugins directory and activate.
 
-After that go to the **Widgets** page and the widget **Social Icons by WPZOOM** to a widget area like Sidebar.
+After that go to the **Widgets** page and add the widget **Social Icons by WPZOOM** to a widget area like Sidebar.
 
 == Frequently Asked Questions ==
 
@@ -90,6 +90,11 @@ On our [website](http://www.wpzoom.com/plugins/social-widget/).
 6. Widget Settings
 
 == Changelog ==
+
+= 2.2.0 =
+
+* Added Padding and Size options for icons
+* Added support for Skype links (skype:username)
 
 = 2.1.0 =
 * New Feature: search icons by keywords
