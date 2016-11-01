@@ -74,6 +74,7 @@
         'tumblr',
         'twitter',
         'viadeo',
+        'viber',
         'vimeo',
         'vine',
         'vkontakte',

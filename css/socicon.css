@@ -698,6 +698,17 @@
     content: "\e04a"
 }
 
+
+.socicon-viber {
+    background-color: #7b519d;
+    color: #7b519d;
+}
+
+.socicon-viber:before {
+    content: "\e071"
+}
+
+
 .socicon-vimeo {
     background-color: #51b5e7;
     color: #51b5e7;

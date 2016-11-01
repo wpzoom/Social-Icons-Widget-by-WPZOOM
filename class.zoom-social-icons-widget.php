@@ -15,7 +15,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
     /**
       * @var array protocols that are allowed in esc_url validation function.
       */
-    protected $protocols = array('skype', 'http', 'https', 'mailto', 'news', 'irc', 'feed', 'tel', 'fax', 'mms', 'xmpp');
+    protected $protocols = array('skype', 'viber', 'http', 'https', 'mailto', 'news', 'irc', 'feed', 'tel', 'fax', 'mms', 'xmpp');
 
     /**
      * @var array List of supported icons.
@@ -95,6 +95,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
         'tumblr',
         'twitter',
         'viadeo',
+        'viber',
         'vimeo',
         'vine',
         'vkontakte',

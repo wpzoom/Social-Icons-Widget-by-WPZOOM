@@ -92,7 +92,6 @@ On our [website](http://www.wpzoom.com/plugins/social-widget/).
 == Changelog ==
 
 = 2.2.0 =
-
 * Added Padding and Size options for icons
 * Added support for Skype links (skype:username)
 

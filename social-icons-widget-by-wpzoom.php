@@ -5,7 +5,7 @@
  * Description: Social Icons Widget to displays links to social sharing websites. Supports more than 80 sites and includes 400 icons. Sort icons by Drag & Drop and change their color easily.
  * Author: WPZOOM
  * Author URI: http://www.wpzoom.com/
- * Version: 2.2.0
+ * Version: 2.2.1
  * License: GPLv2 or later
  * Text Domain: zoom-social-icons-widget
  * Domain Path: /languages
