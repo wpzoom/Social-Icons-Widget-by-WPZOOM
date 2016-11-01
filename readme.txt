@@ -3,7 +3,7 @@ Contributors: WPZOOM, nvartolomei, ciorici
 Donate link: http://www.wpzoom.com/
 Tags: social icons, social networks, social media, social profiles, widget, twitter, facebook, google, pinterest, foursquare, yahoo, skype, yelp, feedburner, linkedin, viadeo, xing, myspace, soundcloud, spotify, grooveshark, lastfm, youtube, vimeo, dailymotion, vine, flickr, 500px, instagram, wordpress, tumblr, blogger, technorati, reddit, dribbble, stumbleupon, digg, envato, behance, delicious, deviantart, forrst, play, zerply, wikipedia, apple, flattr, github, chimein, friendfeed, newsvine, identica, bebo, zynga, steam, xbox, windows, outlook, coderwall, tripadvisor, appnet, goodreads, tripit, lanyrd, slideshare, buffer, rss, vkontakte, disqus, houzz, mail, patreon, paypal, smugmug, swarm, triplej, yammer, stackoverflow, drupal, odnoklassniki, android, meetup, persona, airbnb, baidu, ebay, medium, periscope, lookbook, feedly, snapchat, telegram, bloglovin, fontawesome
 Requires at least: 4.3
-Tested up to: 4.6
+Tested up to: 4.6.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -90,6 +90,9 @@ On our [website](http://www.wpzoom.com/plugins/social-widget/).
 6. Widget Settings
 
 == Changelog ==
+
+= 2.2.1 =
+* Added Viber support (Example: viber://add?number=12345)
 
 = 2.2.0 =
 * Added Padding and Size options for icons
