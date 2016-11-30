@@ -34,6 +34,7 @@
         'goodreads',
         'google',
         'grooveshark',
+        'hellocoton',
         'houzz',
         'identica',
         'instagram',

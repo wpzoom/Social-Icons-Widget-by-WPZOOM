@@ -91,6 +91,10 @@ On our [website](http://www.wpzoom.com/plugins/social-widget/).
 
 == Changelog ==
 
+= 2.2.2 =
+* FontAwesome updated to latest version
+* New icons: Hellocoton, Quora, Etsy, Bandcamp, Meetup, Linode, IMDB, Telegram
+
 = 2.2.1 =
 * Added Viber support (Example: viber://add?number=12345)
 

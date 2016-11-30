@@ -1,12 +1,15 @@
 @font-face {
     font-family: 'socicon';
-    src: url('../font/socicon.ttf') format('truetype'),
-    url('../font/socicon.woff') format('woff'),
-    url('../font/socicon.svg?#socicon') format('svg');
+    src:  url('../fonts/socicon.eot');
+    src:  url('../font/socicon.eot') format('embedded-opentype'),
+      url('../font/socicon.ttf') format('truetype'),
+      url('../font/socicon.woff') format('woff'),
+      url('../font/socicon.svg') format('svg');
     font-weight: normal;
     font-style: normal;
     text-transform: initial;
 }
+
 
 /* inline icon
    ========================================================================== */
@@ -336,6 +339,15 @@
 
 .socicon-grooveshark:before {
     content: "\e04f"
+}
+
+.socicon-hellocoton {
+    background-color: #D50066;
+    color: #D50066;
+}
+
+.socicon-hellocoton:before {
+    content: "\e900"
 }
 
 .socicon-houzz {
