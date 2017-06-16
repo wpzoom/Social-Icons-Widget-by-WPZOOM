@@ -91,6 +91,12 @@ On our [website](http://www.wpzoom.com/plugins/social-widget/).
 
 == Changelog ==
 
+= 3.0.0-beta =
+* Added global color picker for all icons
+* New color picker to change hover color
+* Icons are now grouped in categories
+
+
 = 2.2.2 =
 * FontAwesome updated to latest version
 * New icons: Hellocoton, Quora, Etsy, Bandcamp, Meetup, Linode, IMDB, Telegram
