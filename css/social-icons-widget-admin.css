@@ -12,6 +12,15 @@
 .zoom-social-icons__field-url + .zoom-social-icons__field-label { margin-top: 2px; }
 
 .zoom-social-icons__field-icon-handler, .zoom-social-icons__field-trash { float: left; width: 30px; margin-top: 12px; }
+.zoom-social-icons__field .zoom-social-icons__field-icon-handler.rounded, .zoom-social-icons__single-element.rounded{
+border-radius: 3px;
+}
+.zoom-social-icons__field .zoom-social-icons__field-icon-handler.round, .zoom-social-icons__single-element.round{
+border-radius: 50%;
+}
+.zoom-social-icons__field .zoom-social-icons__field-icon-handler.square, .zoom-social-icons__single-element.square{
+border-radius: 0;
+}
 .zoom-social-icons__field-icon-handler {
     width: 40px;
     float: left;
@@ -64,6 +73,10 @@
     max-height: 525px;
     margin: auto;
 }
+.zoom-social-modal-content .modal-icons-wrapper {
+    overflow-y: scroll;
+    height: 195px;
+}
 .zoom-social-modal-content {
     position: absolute;
     top:50px;
@@ -77,7 +90,7 @@
     border-bottom: 1px solid #ddd;
     background-color: #fff;
     padding:16px;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 .zoom-social-modal-title{
     top: 0;
@@ -132,20 +145,42 @@
 
 .zoom-social-modal-wrapper .dashicons:hover,.zoom-social-modal-wrapper .dashicons.selected,.zoom-social-modal-wrapper .socicon:hover,.zoom-social-modal-wrapper .socicon.selected,.zoom-social-modal-wrapper .genericon.selected,.zoom-social-modal-wrapper .genericon:hover,
 .zoom-social-modal-wrapper .fa.selected,.zoom-social-modal-wrapper .fa:hover{
-    background-color: #0073AA;
-    border-radius: 50%;
+    /*background-color: #0073AA;*/
+    /*border-radius: 50%;*/
     padding: 9px;
     border-width:1px;
     border-style: solid;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
 }
 
 .form-group:before,
 .form-group:after { content: " "; display: table; }
 .form-group:after { clear: both; }
-.zoom-social-icons__field-color-picker, .zoom-social-icons__kit-selector{
+.zoom-social-icons__kit-selector{
     min-width: 200px;
 }
 .fa-wrapper .zoom-social-icons__single-element{
     width: 1em;
     text-align: center;
+}
+.zoom-social-modal-save-btn {
+    float: right;
+}
+
+.modal-mask {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    display: table;
+    transition: opacity .3s ease;
+}
+
+.zoom-social-icons__single-element{
+    cursor: pointer;
 }

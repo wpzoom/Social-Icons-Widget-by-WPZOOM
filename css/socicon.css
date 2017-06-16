@@ -10,7 +10,6 @@
     text-transform: initial;
 }
 
-
 /* inline icon
    ========================================================================== */
 .socicon {
@@ -862,6 +861,7 @@
 .zoom-social-icons-list--no-labels .zoom-social_icons-list__item {
     display: inline-block;
     margin: 4px;
+    border: none;
 }
 
 .zoom-social-icons-list .socicon,
@@ -882,14 +882,6 @@
     height: 1em;
     line-height: 1em;
     font-size: 1.2em;
-}
-
-.zoom-social_icons-list__item a:hover .socicon,
-.zoom-social_icons-list__item a:hover .dashicons,
-.zoom-social_icons-list__item a:hover .genericon,
-.zoom-social_icons-list__item a:hover .fa
-{
-    opacity: 0.8;
 }
 
 .zoom-social-icons-list--with-canvas .socicon,
@@ -927,6 +919,21 @@
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.zoom-social_icons-list__link {
+    text-align: center;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+}
+
+.zoom-social_icons-list__link:hover {
+    opacity: .9;
+    border: none;
+    text-decoration: none;
+    box-shadow: none !important;
 }
 
 .zoom-social-icons-list--round .socicon,
@@ -937,4 +944,9 @@
     -moz-border-radius: 100px;
     -webkit-border-radius: 100px;
     border-radius: 100px;
+}
+
+.zoom-social-icons-list {
+    margin: 0;
+    padding: 0;
 }
