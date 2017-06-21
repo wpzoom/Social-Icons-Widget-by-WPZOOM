@@ -184,3 +184,14 @@ border-radius: 0;
 .zoom-social-icons__single-element{
     cursor: pointer;
 }
+
+.zoom-pointer-class.wp-pointer {
+    margin-right: 20px;
+}
+.zoom-pointer-class.wp-pointer .wp-pointer-arrow {
+    display: none;
+}
+
+.zoom-pointer-class.wp-pointer .wp-pointer-content h3:before {
+    content: "\f529";
+}
