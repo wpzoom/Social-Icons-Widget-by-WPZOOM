@@ -9274,7 +9274,14 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	public function form( $instance ) {
 		$defaults = $this->get_defaults();
 
-		$instance = $this->normalize_data_array( wp_parse_args( $instance, $defaults ) );
+		if ( isset( $instance['show-icon-labels'] ) or isset( $instance['open-new-tab'] ) ) {
+			$instance['show-icon-labels'] = ! empty( $instance['show-icon-labels'] ) ? "true" : "false";
+			$instance['open-new-tab']     = ! empty( $instance['open-new-tab'] ) ? "true" : "false";
+		}
+
+		$instance = $this->normalize_data_array( $instance );
+		$instance = wp_parse_args( $instance, $defaults );
+
 		$this->inject_values( $instance );
 
 		$instance['fields'] = $this->inject_fields_with_data( $instance['fields'] );
