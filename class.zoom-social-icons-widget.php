@@ -9226,8 +9226,8 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 		$instance['title']                     = sanitize_text_field( $new_instance['title'] );
 		$instance['description']               = balanceTags( wp_kses( $new_instance['description'], wp_kses_allowed_html() ), true );
-		$instance['show_icon_labels']          = ! empty( $new_instance['show_icon_labels'] ) ? 'true' : 'false';
-		$instance['open_new_tab']              = ! empty( $new_instance['open_new_tab'] ) ? 'true' : 'false';
+		$instance['show_icon_labels']          = (! empty( $new_instance['show_icon_labels'] ) && $new_instance['show_icon_labels'] === 'true' ) ? 'true' : 'false';
+		$instance['open_new_tab']              = (! empty( $new_instance['open_new_tab']) && $new_instance['open_new_tab'] === 'true')  ? 'true' : 'false';
 		$instance['icon_padding_size']         = (int) $new_instance['icon_padding_size'];
 		$instance['icon_font_size']            = (int) $new_instance['icon_font_size'];
 		$instance['global_color_picker']       = $new_instance['global_color_picker'];
@@ -9325,7 +9325,6 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				       :true-value="'true'"
 				       :false-value="'false'"
 				       :value="show_icon_labels"
-				       value="<?php ! empty( $instance['show_icons_labels'] ) ? 'true' : 'false' ?>"
 				       id="<?php echo $this->get_field_id( 'show_icon_labels' ); ?>"
 				       name="<?php echo $this->get_field_name( 'show_icon_labels' ); ?>"/>
 				<label
@@ -9338,7 +9337,6 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				       :true-value="'true'"
 				       :false-value="'false'"
 				       :value="open_new_tab"
-				       value="<?php ! empty( $instance['open_new_tab'] ) ? 'true' : 'false' ?>"
 				       id="<?php echo $this->get_field_id( 'open_new_tab' ); ?>"
 				       name="<?php echo $this->get_field_name( 'open_new_tab' ); ?>"/>
 				<label
@@ -9436,7 +9434,14 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			<p style="margin-bottom: 0;"><?php _e( 'Icons:', 'zoom-social-icons-widget' ); ?></p>
 
 			<div class="must-remove">
+				<input type='hidden' value="<?php echo $defaults['open_new_tab'] ?>"
+				       id="<?php echo $this->get_field_id( 'open_new_tab' ); ?>"
+				       name="<?php echo $this->get_field_name( 'open_new_tab' ); ?>"/>
+				<input type='hidden' value="<?php echo $defaults['show_icon_labels'] ?>"
+				       id="<?php echo $this->get_field_id( 'show_icon_labels' ); ?>"
+				       name="<?php echo $this->get_field_name( 'show_icon_labels' ); ?>"/>
 				<?php
+
 				foreach ( $instance['fields'] as $field ) {
 					printf( '<input  type="hidden" id="%1$s" name="%2$s"  value="%3$s">',
 						$field['url_field_id'],
@@ -9828,6 +9833,10 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 		if ( is_bool( $instance['show_icon_labels'] ) ) {
 			$instance['show_icon_labels'] = $instance['show_icon_labels'] === true ? 'true' : 'false';
+		}
+
+		if ( is_bool( $instance['open_new_tab'] ) ) {
+			$instance['open_new_tab'] = $instance['open_new_tab'] === true ? 'true' : 'false';
 		}
 
 		if ( $instance['show_icon_labels'] === 'false' ) {
