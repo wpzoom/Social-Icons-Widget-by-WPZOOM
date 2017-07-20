@@ -9062,24 +9062,24 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	 */
 	public function admin_scripts() {
 
-		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'css/socicon.css', array(), '20170209' );
-		wp_enqueue_style( 'social-icons-widget-admin', plugin_dir_url( $this->plugin_file ) . 'css/social-icons-widget-admin.css', array( 'socicon' ), '20170209' );
-		wp_enqueue_style( 'genericons', plugin_dir_url( $this->plugin_file ) . 'css/genericons.css', array(), '20170209' );
-		wp_enqueue_style( 'fontawesome', plugin_dir_url( $this->plugin_file ) . 'css/font-awesome.min.css', array(), '20170209' );
+		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'assets/css/socicon.css', array(), '20170209' );
+		wp_enqueue_style( 'social-icons-widget-admin', plugin_dir_url( $this->plugin_file ) . 'assets/css/social-icons-widget-admin.css', array( 'socicon' ), '20170209' );
+		wp_enqueue_style( 'genericons', plugin_dir_url( $this->plugin_file ) . 'assets/css/genericons.css', array(), '20170209' );
+		wp_enqueue_style( 'fontawesome', plugin_dir_url( $this->plugin_file ) . 'assets/css/font-awesome.min.css', array(), '20170209' );
 		wp_enqueue_style( 'dashicons' );
 		wp_enqueue_style( 'wp-color-picker' );
 		wp_enqueue_media();
 
 		wp_enqueue_script(
 			'zoom-social-icons-widget-vue-js',
-			plugin_dir_url( $this->plugin_file ) . 'js/vue.js',
+			plugin_dir_url( $this->plugin_file ) . 'assets/js/vue.js',
 			array(),
 			'20170209',
 			true
 		);
 		wp_enqueue_script(
 			'zoom-social-icons-widget-sortable-js',
-			plugin_dir_url( $this->plugin_file ) . 'js/sortable.min.js',
+			plugin_dir_url( $this->plugin_file ) . 'assets/js/sortable.min.js',
 			array(),
 			'20170209',
 			true
@@ -9087,7 +9087,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 		wp_enqueue_script(
 			'zoom-social-icons-widget-vue-sortable-js',
-			plugin_dir_url( $this->plugin_file ) . 'js/vue-sortable.js',
+			plugin_dir_url( $this->plugin_file ) . 'assets/js/vue-sortable.js',
 			array(),
 			'20170209',
 			true
@@ -9095,7 +9095,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 		wp_enqueue_script(
 			'zoom-social-icons-widget-uri-js',
-			plugin_dir_url( $this->plugin_file ) . 'js/URI.min.js',
+			plugin_dir_url( $this->plugin_file ) . 'assets/js/URI.min.js',
 			array(),
 			'20170209',
 			true
@@ -9103,7 +9103,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 		wp_enqueue_script(
 			'zoom-social-icons-widget-scroll-to',
-			plugin_dir_url( $this->plugin_file ) . 'js/jquery.scrollTo.min.js',
+			plugin_dir_url( $this->plugin_file ) . 'assets/js/jquery.scrollTo.min.js',
 			array( 'jquery' ),
 			'20170209',
 			true
@@ -9111,7 +9111,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 		wp_enqueue_script(
 			'zoom-social-icons-widget',
-			plugin_dir_url( $this->plugin_file ) . 'js/social-icons-widget-backend.js',
+			plugin_dir_url( $this->plugin_file ) . 'assets/js/social-icons-widget-backend.js',
 			array( 'jquery', 'underscore', 'wp-util', 'wp-color-picker' ),
 			'20170209',
 			true
@@ -9905,14 +9905,14 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	 * Scripts & styles for front-end display of widget.
 	 */
 	public function scripts() {
-		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'css/socicon.css', array(), '20170209' );
-		wp_enqueue_style( 'genericons', plugin_dir_url( $this->plugin_file ) . 'css/genericons.css', array(), '20170209' );
-		wp_enqueue_style( 'fontawesome', plugin_dir_url( $this->plugin_file ) . 'css/font-awesome.min.css', array(), '20170209' );
+		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'assets/css/socicon.css', array(), '20170209' );
+		wp_enqueue_style( 'genericons', plugin_dir_url( $this->plugin_file ) . 'assets/css/genericons.css', array(), '20170209' );
+		wp_enqueue_style( 'fontawesome', plugin_dir_url( $this->plugin_file ) . 'assets/css/font-awesome.min.css', array(), '20170209' );
 		wp_enqueue_style( 'dashicons' );
 
 		wp_enqueue_script(
 			'zoom-social-icons-widget-frontend',
-			plugin_dir_url( $this->plugin_file ) . 'js/social-icons-widget-frontend.js',
+			plugin_dir_url( $this->plugin_file ) . 'assets/js/social-icons-widget-frontend.js',
 			array( 'jquery' ),
 			'20170209',
 			true

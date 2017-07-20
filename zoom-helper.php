@@ -47,7 +47,7 @@ if ( ! function_exists( 'zoom_pointer_load' ) ):
 		wp_enqueue_style( 'wp-pointer' );
 
 		// Add pointers script to queue. Add custom script.
-		wp_enqueue_script( 'zoom-social-pointer', plugins_url( 'js/zoom-social-pointer.js', dirname( __FILE__ ) . '/social-icons-widget-by-wpzoom.php' ), array( 'wp-pointer' ) );
+		wp_enqueue_script( 'zoom-social-pointer', plugins_url( 'assets/js/zoom-social-pointer.js', dirname( __FILE__ ) . '/social-icons-widget-by-wpzoom.php' ), array( 'wp-pointer' ) );
 
 		// Add pointer options to script.
 		wp_localize_script( 'zoom-social-pointer', 'zoom_social_pointer', $valid_pointers );
