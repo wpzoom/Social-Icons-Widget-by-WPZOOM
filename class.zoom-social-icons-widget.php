@@ -9588,14 +9588,14 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	 */
 	public function get_defaults() {
 		return apply_filters( 'zoom_social_icons_get_defaults', array(
-				'title'                     => '',
+				'title'                     => esc_html__('Follow us', 'zoom-social-icons-widget'),
 				'description'               => '',
 				'show_icon_labels'          => 'false',
-				'open_new_tab'              => 'false',
+				'open_new_tab'              => 'true',
 				'icon_style'                => 'with-canvas',
 				'icon_canvas_style'         => 'rounded',
-				'icon_padding_size'         => 0,
-				'icon_font_size'            => 16,
+				'icon_padding_size'         => 8,
+				'icon_font_size'            => 18,
 				'global_color_picker'       => '#1e73be',
 				'global_color_picker_hover' => '#1e73be',
 				'fields'                    => array(
