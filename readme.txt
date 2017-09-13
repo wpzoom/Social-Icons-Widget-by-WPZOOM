@@ -16,6 +16,17 @@ Social Icons Widget to displays links to social sharing websites. Supports more 
 
 **[View Demo](http://demo.wpzoom.com/social-icons/)**
 
+**Social Icons Widget** helps you to add quickly icons with links to your profiles from different social networks. The plugin includes 4 icon sets, which gives you the possibility to use the widget for more than just linking to your social networks. You can use generic icons to add links to anything you want.
+
+
+[youtube https://www.youtube.com/watch?v=mFClpAjzCpc]
+
+= What's new in 3.0.0 =
+
+* Added Global Color Picker to change the color of all icons
+* Added a new color picker to change hover color on all icons
+* Icons are now grouped in categories
+
 = What's new in 2.2.0 =
 
 * Added Padding and Size options for icons
@@ -33,7 +44,6 @@ Social Icons Widget to displays links to social sharing websites. Supports more 
 * Color picker for each icon
 * 3 Icon Sets from which you can choose more than 400 icons
 
-Sortable widget that supports more than 80+ social networks
 
 = Where I can view a Demo? =
 
@@ -48,15 +58,20 @@ You can view the widget live in all our themes at [WPZOOM](http://www.wpzoom.com
 = Features: =
 
 * 80+ Sites/Social Networks supported
+* 400+ Custom Icons
+* 4 Icons Sets
+* FontAwesome Integration
 * Drag & Drop Icons
 * Color Picker
 * Search by keywords
 * Adjust icon size & padding
-* Supports Custom Icons
 * 2 Styles: Icon Shape and Icon with Background
 * 3 Background Styles: Rounded Corners, Round, Square
 * Retina Ready Icons
 * Supports email addresses (mailto:email@example.com)
+* Supports Telephone numbers (tel:12345)
+* Supports Skype (skype:username?call)
+* Supports Viber (viber://add?number=123456)
 
 = Icons =
 
@@ -80,6 +95,12 @@ After that go to the **Widgets** page and add the widget **Social Icons by WPZOO
 
 On our [website](http://www.wpzoom.com/plugins/social-widget/).
 
+= Can I insert the Widget as a Shortcode in a Page? =
+
+Yes, using the [Widget Shortcode](https://wordpress.org/plugins/widget-shortcode/) plugin you can generate a shortcode for each Social Icons widget and insert the shortcode in posts or pages where you need it.
+You can also create a hidden widget area using a plugin like Custom Sidebars if you don’t want to add the widget in a sidebar to be visible.
+
+
 == Screenshots ==
 
 1. Rounded Corners Style
@@ -91,11 +112,13 @@ On our [website](http://www.wpzoom.com/plugins/social-widget/).
 
 == Changelog ==
 
-= 3.0.0-beta =
+= 3.0.1 =
+* Fixed a bug with default values
+
+= 3.0.0 =
 * Added global color picker for all icons
 * New color picker to change hover color
 * Icons are now grouped in categories
-
 
 = 2.2.2 =
 * FontAwesome updated to latest version
@@ -151,3 +174,8 @@ On our [website](http://www.wpzoom.com/plugins/social-widget/).
 
 = 1.0 =
 * Initial release.
+
+== Upgrade Notice ==
+
+= 3.0.0 =
+Major update. Make sure to check if all your icons work fine.

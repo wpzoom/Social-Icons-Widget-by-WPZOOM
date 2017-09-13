@@ -353,10 +353,11 @@
 
         $('.form-instance').each(function (index, instance) {
             var $instance = $(instance);
-            var selector = ($instance.closest('.widget').attr('id') == undefined) ? $instance.attr('id')  : $instance.closest('.widget').attr('id');
+            var selector = ($instance.closest('.widget').attr('id') == undefined) ? $instance.attr('id') : $instance.closest('.widget').attr('id');
             var instanceData = $instance.data('instance');
+            var validSelector = (typeof selector === 'string' || selector instanceof String) && selector.indexOf('__i__') === -1;
 
-            if ($instance.attr('data-instance') && !$instance.closest('.widget').hasClass('ui-draggable')) {
+            if (validSelector && $instance.attr('data-instance') && !$instance.closest('.widget').hasClass('ui-draggable')) {
                 VueInstance('#' + selector, instanceData);
             }
         });

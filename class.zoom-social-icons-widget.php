@@ -8928,14 +8928,25 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 		$this->plugin_file = dirname( __FILE__ ) . '/social-icons-widget-by-wpzoom.php';
 
-		add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ) );
-		add_action( 'admin_print_footer_scripts', array( $this, 'admin_js_templates' ) );
-
+		add_action('current_screen', array($this, 'check_current_screen'));
 		add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ) );
 
+		//Hooks to enqueue javascript file in SiteOrigin builder.
 		add_action( 'siteorigin_panel_enqueue_admin_scripts', array( $this, 'admin_scripts' ) );
 		add_action( 'siteorigin_panel_enqueue_admin_scripts', array( $this, 'admin_js_templates' ) );
 
+	}
+
+	/**
+	 * Enqueue admin javascript only on widgets and customizer pages.
+	 */
+	public function check_current_screen() {
+		$current_screen = get_current_screen();
+
+		if ( ! empty( $current_screen->id ) && ( $current_screen->id === 'widgets' || $current_screen->id === 'customize' ) ) {
+			add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ) );
+			add_action( 'admin_print_footer_scripts', array( $this, 'admin_js_templates' ) );
+		}
 	}
 
 	/**
@@ -9113,7 +9124,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			'zoom-social-icons-widget',
 			plugin_dir_url( $this->plugin_file ) . 'assets/js/social-icons-widget-backend.js',
 			array( 'jquery', 'underscore', 'wp-util', 'wp-color-picker' ),
-			'20170209',
+			'20170913',
 			true
 		);
 
@@ -9600,7 +9611,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'global_color_picker_hover' => '#1e73be',
 				'fields'                    => array(
 					array(
-						'url'                => 'https://facebook.com',
+						'url'                => 'https://facebook.com/wpzoom',
 						'label'              => 'Facebook',
 						'icon'               => 'facebook',
 						'icon_kit'           => 'socicon',
@@ -9608,7 +9619,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 						'color_picker_hover' => '#3b5998'
 					),
 					array(
-						'url'                => 'https://twitter.com',
+						'url'                => 'https://twitter.com/wpzoom',
 						'label'              => 'Twitter',
 						'icon'               => 'twitter',
 						'icon_kit'           => 'socicon',
@@ -9616,7 +9627,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 						'color_picker_hover' => '#55acee'
 					),
 					array(
-						'url'                => 'https://instagram.com',
+						'url'                => 'https://instagram.com/wpzoom',
 						'label'              => 'Instagram',
 						'icon'               => 'instagram',
 						'icon_kit'           => 'socicon',
