@@ -232,11 +232,6 @@
     color: #000000;
 }
 
-.zoom-social-icons-list .socicon.socicon-eyeem {
-    font-size: 1.8em;
-    padding: 4px;
-}
-
 .socicon-eyeem:before {
     content: "\e901"
 }
@@ -439,6 +434,15 @@
     content: "\e03c"
 }
 
+.socicon-messenger {
+    background-color: #0084ff;
+    color: #0084ff;
+}
+
+.socicon-messenger:before {
+    content: "\e906"
+}
+
 .socicon-myspace {
     background-color: #323232;
     color: #323232;
@@ -464,6 +468,15 @@
 
 .socicon-odnoklassniki:before {
     content: "\e00d"
+}
+
+.socicon-overwatch {
+    background-color: #9E9E9E;
+    color: #9E9E9E;
+}
+
+.socicon-overwatch:before {
+    content: "\e076"
 }
 
 .socicon-outlook {
@@ -527,6 +540,15 @@
 
 .socicon-play:before {
     content: "\e02b"
+}
+
+.socicon-playstation {
+    background-color: #000000;
+    color: #000000;
+}
+
+.socicon-playstation:before {
+    content: "\e03d"
 }
 
 .socicon-reddit {

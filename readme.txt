@@ -112,6 +112,9 @@ You can also create a hidden widget area using a plugin like Custom Sidebars if 
 
 == Changelog ==
 
+= 3.0.3 =
+* New icons: Facebook Messenger, PlayStation Store, Overwatch.
+
 = 3.0.2 =
 * Fixed bug [#4](https://github.com/wpzoom/social-icons-widget/issues/4)
 

@@ -240,6 +240,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'social-media' ),
 				'color'    => '#e2373c'
 			),
+            array(
+                'icon'     => 'messenger',
+                'category' => array( 'social-media', 'communication' ),
+                'color'    => '#0084ff'
+            ),
 			array(
 				'icon'     => 'myspace',
 				'category' => array( 'social-media' ),
@@ -260,6 +265,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'communication', 'web-tools' ),
 				'color'    => '#0072C6'
 			),
+            array(
+                'icon'     => 'overwatch',
+                'category' => array( 'social-media', 'video', 'games' ),
+                'color'    => '#9E9E9E'
+            ),
 			array(
 				'icon'     => 'patreon',
 				'category' => array( 'payment', 'web-tools' ),
@@ -290,6 +300,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'ecommerce' ),
 				'color'    => '#000000'
 			),
+            array(
+                'icon'     => 'playstation',
+                'category' => array( 'games', 'video' ),
+                'color'    => '#000000'
+            ),
 			array(
 				'icon'     => 'reddit',
 				'category' => array( 'news', 'social-media' ),
