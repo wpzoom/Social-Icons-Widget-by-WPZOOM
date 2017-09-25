@@ -641,6 +641,15 @@
     content: "\e037"
 }
 
+.socicon-strava {
+    background-color: #FC4C02;
+    color: #FC4C02;
+}
+
+.socicon-strava:before {
+    content: "\e081"
+}
+
 .socicon-stumbleupon {
     background-color: #e64011;
     color: #e64011;

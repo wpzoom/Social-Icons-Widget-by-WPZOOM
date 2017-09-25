@@ -112,6 +112,9 @@ You can also create a hidden widget area using a plugin like Custom Sidebars if 
 
 == Changelog ==
 
+= 3.0.4 =
+* New icon: Strava
+
 = 3.0.3 =
 * New icons: Facebook Messenger, PlayStation Store, Overwatch.
 

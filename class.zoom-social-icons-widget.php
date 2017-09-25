@@ -355,6 +355,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'games' ),
 				'color'    => '#8F8D8A'
 			),
+            array(
+                'icon'     => 'strava',
+                'category' => array( 'fitness', 'sport'),
+                'color'    => '#FC4C02'
+            ),
 			array(
 				'icon'     => 'stumbleupon',
 				'category' => array( 'search-engines' ),
