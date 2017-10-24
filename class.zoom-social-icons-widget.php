@@ -29,6 +29,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'software' ),
 				'color'    => '#8ec047'
 			),
+            array(
+                'icon'     => 'angieslist',
+                'category' => array( 'business' ),
+                'color'    => '#299F37'
+            ),
 
 			array(
 				'icon'     => 'apple',
@@ -40,6 +45,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'software' ),
 				'color'    => '#494949'
 			),
+            array(
+                'icon'     => 'appstore',
+                'category' => array( 'software' ),
+                'color'    => '#007AFF'
+            ),
 			array(
 				'icon'     => 'baidu',
 				'category' => array( 'search-engines' ),
@@ -75,11 +85,21 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'blogging', 'social-media' ),
 				'color'    => '#000000'
 			),
+            array(
+                'icon'     => 'codered',
+                'category' => array( 'learning', 'programming' ),
+                'color'    => '#FF033B'
+            ),
 			array(
 				'icon'     => 'coderwall',
 				'category' => array( 'learning', 'programming' ),
 				'color'    => '#3E8DCC'
 			),
+            array(
+                'icon'     => 'crunchbase',
+                'category' => array( 'business' ),
+                'color'    => '#0288d1'
+            ),
 			array(
 				'icon'     => 'dailymotion',
 				'category' => array( 'video' ),
@@ -95,6 +115,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'design' ),
 				'color'    => '#c5d200'
 			),
+            array(
+                'icon'     => 'deezer',
+                'category' => array( 'music' ),
+                'color'    => '#32323d'
+            ),
 			array(
 				'icon'     => 'digg',
 				'category' => array( 'news' ),
@@ -255,6 +280,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'news' ),
 				'color'    => '#075B2F'
 			),
+            array(
+                'icon'     => 'nextdoor',
+                'category' => array( 'business' ),
+                'color'    => '#01B247'
+            ),
 			array(
 				'icon'     => 'odnoklassniki',
 				'category' => array( 'social-media' ),
@@ -380,6 +410,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'communication', 'software' ),
 				'color'    => '#0088cc'
 			),
+            array(
+                'icon'     => 'tidal',
+                'category' => array( 'music' ),
+                'color'    => '#01FFFF'
+            ),
 			array(
 				'icon'     => 'tripadvisor',
 				'category' => array( 'travel' ),
@@ -405,6 +440,16 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'social-media' ),
 				'color'    => '#55acee'
 			),
+            array(
+                'icon'     => 'unsplash',
+                'category' => array( 'photography'),
+                'color'    => '#000'
+            ),
+            array(
+                'icon'     => 'udemy',
+                'category' => array( 'learning'),
+                'color'    => '#17aa1c'
+            ),
 			array(
 				'icon'     => 'viadeo',
 				'category' => array( 'social-media' ),

@@ -56,6 +56,15 @@
     content: "\e03e"
 }
 
+.socicon-angieslist {
+    background-color: #299F37;
+    color: #299F37;
+}
+
+.socicon-angieslist:before {
+    content: "\e916"
+}
+
 .socicon-apple {
     background-color: #B9BFC1;
     color: #B9BFC1;
@@ -72,6 +81,15 @@
 
 .socicon-appnet:before {
     content: "\e013"
+}
+
+.socicon-appstore {
+    background-color: #007AFF;
+    color: #007AFF;
+}
+
+.socicon-appstore:before {
+    content: "\e91f"
 }
 
 .socicon-baidu {
@@ -146,6 +164,24 @@
     content: "\e011"
 }
 
+.socicon-codered {
+    background-color: #FF033B;
+    color: #FF033B;
+}
+
+.socicon-codered:before {
+    content: "\e940"
+}
+
+.socicon-crunchbase {
+    background-color: #0288d1;
+    color: #0288d1;
+}
+
+.socicon-crunchbase:before {
+    content: "\e93b"
+}
+
 .socicon-dailymotion {
     background-color: #004e72;
     color: #004e72;
@@ -171,6 +207,15 @@
 
 .socicon-deviantart:before {
     content: "\e029"
+}
+
+.socicon-deezer {
+    background-color: #32323d;
+    color: #32323d;
+}
+
+.socicon-deezer:before {
+    content: "\e06c"
 }
 
 .socicon-digg {
@@ -461,6 +506,15 @@
     content: "\e033"
 }
 
+.socicon-nextdoor {
+    background-color: #01B247;
+    color: #01B247;
+}
+
+.socicon-nextdoor:before {
+    content: "\e942"
+}
+
 .socicon-odnoklassniki {
     background-color: #f48420;
     color: #f48420;
@@ -686,6 +740,18 @@
     content: "\e06e"
 }
 
+.socicon-tidal {
+    background-color: #01FFFF;
+    color: #01FFFF;
+}
+
+.socicon-tidal:before {
+    content: "\e910"
+}
+
+.socicon-tripadvisor:before {
+    content: "\e012"
+}
 .socicon-tripadvisor {
     background-color: #589442;
     color: #589442;
@@ -731,6 +797,24 @@
     content: "\e040"
 }
 
+.socicon-unsplash {
+    background-color: #000;
+    color: #000;
+}
+
+.socicon-unsplash:before {
+    content: "\e914"
+}
+
+.socicon-udemy {
+    background-color: #17aa1c;
+    color: #17aa1c;
+}
+
+.socicon-udemy:before {
+    content: "\e93f"
+}
+
 .socicon-viadeo {
     background-color: #e4a000;
     color: #e4a000;
@@ -740,7 +824,6 @@
     content: "\e04a"
 }
 
-
 .socicon-viber {
     background-color: #7b519d;
     color: #7b519d;
@@ -749,7 +832,6 @@
 .socicon-viber:before {
     content: "\e071"
 }
-
 
 .socicon-vimeo {
     background-color: #51b5e7;
