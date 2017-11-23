@@ -9304,6 +9304,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		$instance['description']               = balanceTags( wp_kses( $new_instance['description'], wp_kses_allowed_html() ), true );
 		$instance['show_icon_labels']          = (! empty( $new_instance['show_icon_labels'] ) && $new_instance['show_icon_labels'] === 'true' ) ? 'true' : 'false';
 		$instance['open_new_tab']              = (! empty( $new_instance['open_new_tab']) && $new_instance['open_new_tab'] === 'true')  ? 'true' : 'false';
+		$instance['no_follow']              = (! empty( $new_instance['no_follow']) && $new_instance['no_follow'] === 'true')  ? 'true' : 'false';
 		$instance['icon_padding_size']         = (int) $new_instance['icon_padding_size'];
 		$instance['icon_font_size']            = (int) $new_instance['icon_font_size'];
 		$instance['global_color_picker']       = $new_instance['global_color_picker'];
@@ -9350,9 +9351,13 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	public function form( $instance ) {
 		$defaults = $this->get_defaults();
 
-		if ( isset( $instance['show-icon-labels'] ) or isset( $instance['open-new-tab'] ) ) {
+		if ( isset( $instance['show-icon-labels'] ) or
+		     isset( $instance['open-new-tab'] ) or
+		     isset( $instance['no-follow'] )
+		) {
 			$instance['show-icon-labels'] = ! empty( $instance['show-icon-labels'] ) ? "true" : "false";
 			$instance['open-new-tab']     = ! empty( $instance['open-new-tab'] ) ? "true" : "false";
+			$instance['no-follow']        = ! empty( $instance['no-follow'] ) ? "true" : "false";
 		}
 
 		$instance = $this->normalize_data_array( $instance );
@@ -9417,6 +9422,18 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				       name="<?php echo $this->get_field_name( 'open_new_tab' ); ?>"/>
 				<label
 					for="<?php echo $this->get_field_id( 'open_new_tab' ); ?>"><?php _e( 'Open links in new tab? ', 'zoom-social-icons-widget' ); ?></label>
+			</p>
+
+			<p>
+				<input class="checkbox" type="checkbox"
+				       v-model="no_follow"
+				       :true-value="'true'"
+				       :false-value="'false'"
+				       :value="no_follow"
+				       id="<?php echo $this->get_field_id( 'no_follow' ); ?>"
+				       name="<?php echo $this->get_field_name( 'no_follow' ); ?>"/>
+				<label
+					for="<?php echo $this->get_field_id( 'no_follow' ); ?>"><?php _e( 'Add rel="nofollow"', 'zoom-social-icons-widget' ); ?></label>
 			</p>
 
 			<p>
@@ -9513,6 +9530,9 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				<input type='hidden' value="<?php echo $defaults['open_new_tab'] ?>"
 				       id="<?php echo $this->get_field_id( 'open_new_tab' ); ?>"
 				       name="<?php echo $this->get_field_name( 'open_new_tab' ); ?>"/>
+				<input type='hidden' value="<?php echo $defaults['no_follow'] ?>"
+				       id="<?php echo $this->get_field_id( 'no_follow' ); ?>"
+				       name="<?php echo $this->get_field_name( 'no_follow' ); ?>"/>
 				<input type='hidden' value="<?php echo $defaults['show_icon_labels'] ?>"
 				       id="<?php echo $this->get_field_id( 'show_icon_labels' ); ?>"
 				       name="<?php echo $this->get_field_name( 'show_icon_labels' ); ?>"/>
@@ -9668,6 +9688,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'description'               => '',
 				'show_icon_labels'          => 'false',
 				'open_new_tab'              => 'true',
+				'no_follow'              => 'false',
 				'icon_style'                => 'with-canvas',
 				'icon_canvas_style'         => 'rounded',
 				'icon_padding_size'         => 8,
@@ -9915,6 +9936,10 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			$instance['open_new_tab'] = $instance['open_new_tab'] === true ? 'true' : 'false';
 		}
 
+		if ( is_bool( $instance['no_follow'] ) ) {
+			$instance['no_follow'] = $instance['no_follow'] === true ? 'true' : 'false';
+		}
+
 		if ( $instance['show_icon_labels'] === 'false' ) {
 			$class_list[] = 'zoom-social-icons-list--no-labels';
 		}
@@ -9938,6 +9963,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 					<a class="zoom-social_icons-list__link"
 					   href="<?php echo esc_url( $field['url'], $this->protocols ); ?>"
 						<?php echo( $instance['open_new_tab'] === 'true' ? 'target="_blank"' : '' ); ?>
+						<?php echo( $instance['no_follow'] === 'true' ? 'rel="nofollow"' : '' ); ?>
 					>
 						<?php if ( ! empty( $field['icon'] ) && ! empty( $field['icon_kit'] ) && ! empty( $field['color_picker'] ) ) {
 							$class = $field['icon_kit'] . ' ' . $field['icon_kit'] . '-' . $field['icon'];
