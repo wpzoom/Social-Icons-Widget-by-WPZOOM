@@ -1,7 +1,7 @@
 === Social Icons Widget by WPZOOM ===
 Contributors: WPZOOM, nvartolomei, ciorici
 Donate link: http://www.wpzoom.com/
-Tags: social icons, social networks, social media, social profiles, widget, twitter, facebook, google, pinterest, foursquare, yahoo, skype, yelp, feedburner, linkedin, viadeo, xing, myspace, soundcloud, spotify, grooveshark, lastfm, youtube, vimeo, dailymotion, vine, flickr, 500px, instagram, wordpress, tumblr, blogger, technorati, reddit, dribbble, stumbleupon, digg, envato, behance, delicious, deviantart, forrst, play, zerply, wikipedia, apple, flattr, github, chimein, friendfeed, newsvine, identica, bebo, zynga, steam, xbox, windows, outlook, coderwall, tripadvisor, appnet, goodreads, tripit, lanyrd, slideshare, buffer, rss, vkontakte, disqus, houzz, mail, patreon, paypal, smugmug, swarm, triplej, yammer, stackoverflow, drupal, odnoklassniki, android, meetup, persona, airbnb, baidu, ebay, medium, periscope, lookbook, feedly, snapchat, telegram, bloglovin, fontawesome, tidal, deezer, unsplash
+Tags: social icons, social networks, social media, social profiles, widget, twitter, facebook, google, pinterest, foursquare, yahoo, skype, yelp, feedburner, linkedin, viadeo, xing, myspace, soundcloud, spotify, grooveshark, lastfm, youtube, vimeo, dailymotion, vine, flickr, 500px, instagram, wordpress, tumblr, blogger, technorati, reddit, dribbble, stumbleupon, digg, envato, behance, delicious, deviantart, forrst, play, zerply, wikipedia, apple, flattr, github, chimein, friendfeed, newsvine, identica, bebo, zynga, steam, xbox, windows, outlook, coderwall, tripadvisor, appnet, goodreads, tripit, lanyrd, slideshare, buffer, rss, vkontakte, disqus, houzz, mail, patreon, paypal, smugmug, swarm, triplej, yammer, stackoverflow, drupal, odnoklassniki, android, meetup, persona, airbnb, baidu, ebay, medium, periscope, lookbook, feedly, snapchat, telegram, bloglovin, fontawesome, tidal, deezer, unsplash, whatsapp
 Requires at least: 4.3
 Tested up to: 4.8
 Stable tag: trunk
@@ -72,6 +72,7 @@ You can view the widget live in all our themes at [WPZOOM](http://www.wpzoom.com
 * Supports Telephone numbers (tel:12345)
 * Supports Skype (skype:username?call)
 * Supports Viber (viber://add?number=123456)
+* Supports WhatsApp (https://api.whatsapp.com/send?phone=15551234567)
 
 = Icons =
 
@@ -111,6 +112,10 @@ You can also create a hidden widget area using a plugin like Custom Sidebars if 
 6. Widget Settings
 
 == Changelog ==
+
+= 3.0.6 =
+* New option: Add rel="nofollow" to links
+* New icons: WhatsApp, ResearchGate
 
 = 3.0.5 =
 * New icons: Tidal, Deezer, Unsplash, Codered, Udemy, CrunchBase, Angie's List, App Store, Nextdoor

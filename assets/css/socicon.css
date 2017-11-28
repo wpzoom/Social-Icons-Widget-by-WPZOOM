@@ -614,6 +614,15 @@
     content: "\e022"
 }
 
+.socicon-researchgate {
+    background-color: #00CCBB;
+    color: #00CCBB;
+}
+
+.socicon-researchgate:before {
+    content: "\e078"
+}
+
 .socicon-rss {
     background-color: #f26109;
     color: #f26109;
@@ -858,6 +867,15 @@
 
 .socicon-vkontakte:before {
     content: "\e01a"
+}
+
+.socicon-whatsapp {
+    background-color: #20B038;
+    color: #20B038;
+}
+
+.socicon-whatsapp:before {
+    content: "\e01b"
 }
 
 .socicon-wikipedia {

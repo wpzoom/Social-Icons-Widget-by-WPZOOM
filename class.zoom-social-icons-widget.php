@@ -340,6 +340,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'news', 'social-media' ),
 				'color'    => '#e74a1e'
 			),
+            array(
+                'icon'     => 'researchgate',
+                'category' => array( 'education' ),
+                'color'    => '#00CCBB'
+            ),
 			array(
 				'icon'     => 'rss',
 				'category' => array( 'news', 'communication', 'web-tools' ),
@@ -475,6 +480,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'social-media' ),
 				'color'    => '#5a7fa6'
 			),
+            array(
+                'icon'     => 'whatsapp',
+                'category' => array( 'communication' ),
+                'color'    => '#20B038'
+            ),
 			array(
 				'icon'     => 'wikipedia',
 				'category' => array( 'learning' ),
@@ -9433,7 +9443,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				       id="<?php echo $this->get_field_id( 'no_follow' ); ?>"
 				       name="<?php echo $this->get_field_name( 'no_follow' ); ?>"/>
 				<label
-					for="<?php echo $this->get_field_id( 'no_follow' ); ?>"><?php _e( 'Add rel="nofollow"', 'zoom-social-icons-widget' ); ?></label>
+					for="<?php echo $this->get_field_id( 'no_follow' ); ?>"><?php _e( 'Add <code>rel="nofollow"</code> to links', 'zoom-social-icons-widget' ); ?></label>
 			</p>
 
 			<p>
