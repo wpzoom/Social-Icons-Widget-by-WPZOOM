@@ -9040,7 +9040,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		?>
 		<div class="modal-mask">
 			<div class="media-modal wp-core-ui zoom-social-modal-wrapper">
-				<button type="button" class="button-link media-modal-close" @click="$emit('close')"><span
+				<button type="button" class="media-modal-close" @click="$emit('close')"><span
 						class="media-modal-icon"><span class="screen-reader-text">Close media panel</span></span>
 				</button>
 				<div class="media-modal-content">
@@ -9489,7 +9489,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			<p>
 				<label
 					for="<?php echo $this->get_field_id( 'icon_padding_size' ) ?>"><?php _e( 'Icon Padding (pixels):', 'zoom-social-icons-widget' ) ?>
-					<input type="number" min="5" max="200"
+					<input type="number" min="0" max="200"
 					       id="<?php echo $this->get_field_id( 'icon_padding_size' ) ?>"
 					       name="<?php echo $this->get_field_name( 'icon_padding_size' ) ?>"
 					       v-model="icon_padding_size"
@@ -9500,7 +9500,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			<p>
 				<label
 					for="<?php echo $this->get_field_id( 'icon_font_size' ) ?>"><?php _e( 'Icon Size (pixels):', 'zoom-social-icons-widget' ) ?>
-					<input type="number" min="5" max="200"
+					<input type="number" min="0" max="200"
 					       id="<?php echo $this->get_field_id( 'icon_font_size' ) ?>"
 					       name="<?php echo $this->get_field_name( 'icon_font_size' ) ?>"
 					       v-model="icon_font_size"
@@ -9780,6 +9780,10 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				$color                       = empty( $field['color_picker'] ) ? $socicons[ $parsed_icon ] : $this->rgb2hex( $field['color_picker'] );
 				$field['color_picker']       = $color;
 				$field['color_picker_hover'] = $color;
+			}
+
+			if ( empty( $field['color_picker_hover'] ) ) {
+				$field['color_picker_hover'] = $field['color_picker'];
 			}
 		}
 	}
