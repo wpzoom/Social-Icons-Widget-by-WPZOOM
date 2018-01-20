@@ -9537,6 +9537,12 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			<p style="margin-bottom: 0;"><?php _e( 'Icons:', 'zoom-social-icons-widget' ); ?></p>
 
 			<div class="must-remove">
+				<input type="hidden" value="<?php echo $defaults['title'] ?>"
+				       id="<?php echo $this->get_field_id( 'title' ); ?>"
+				       name="<?php echo $this->get_field_name( 'title' ); ?>"/>
+				<input type="hidden" value="<?php echo $defaults['description'] ?>"
+				       id="<?php echo $this->get_field_id( 'description' ); ?>"
+				       name="<?php echo $this->get_field_name( 'description' ); ?>"/>
 				<input type='hidden' value="<?php echo $defaults['open_new_tab'] ?>"
 				       id="<?php echo $this->get_field_id( 'open_new_tab' ); ?>"
 				       name="<?php echo $this->get_field_name( 'open_new_tab' ); ?>"/>
