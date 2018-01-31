@@ -227,6 +227,24 @@
     content: "\e025"
 }
 
+.socicon-discord {
+    background-color: #7289da;
+    color: #7289da;
+}
+
+.socicon-discord:before {
+    content: "\e903";
+}
+
+.socicon-discord2 {
+    background-color: #7289da;
+    color: #7289da;
+}
+
+.socicon-discord2:before {
+    content: "\e079";
+}
+
 .socicon-disqus {
     background-color: #2e9fff;
     color: #2e9fff;
@@ -315,6 +333,24 @@
 
 .socicon-flattr:before {
     content: "\e02f"
+}
+
+.socicon-flipboard {
+    background-color: #E12828;
+    color: #E12828;
+}
+
+.socicon-flipboard:before {
+    content: "\e904";
+}
+
+.socicon-flipboard2 {
+    background-color: #E12828;
+    color: #E12828;
+}
+
+.socicon-flipboard2:before {
+    content: "\e905";
 }
 
 .socicon-flickr {

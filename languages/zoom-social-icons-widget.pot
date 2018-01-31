@@ -1,10 +1,9 @@
-# Loco Gettext template
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Social Icons Widget by WPZOOM\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Tue Mar 01 2016 12:11:51 GMT+0200 (EET)\n"
+"POT-Creation-Date: 2018-01-31 11:22+0000\n"
 "POT-Revision-Date: Wed Apr 20 2016 20:52:15 GMT+0300 (EEST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
@@ -24,150 +23,20 @@ msgstr ""
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: ../class.zoom-social-icons-widget.php:471
-msgid "Social Icons by WPZOOM"
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:474
-msgid "Sortable widget that supports more than 80+ social networks"
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:479
-msgid "Follow us"
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:488
-msgid "Friend me on Facebook"
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:496
-msgid "Follow Me"
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:503
-msgid "Instagram"
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:556
-msgid "Select Icon"
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:561
-msgid "Choose icon background color"
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:571
-msgid "Select Icon Kit"
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:575
-msgid "Socicons"
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:576
-msgid "Dashicons"
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:577
-msgid "Genericons"
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:603
-msgid "Save"
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:751
-msgid "Title:"
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:759
-msgid "Description:"
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:763
-msgid "Short description to be displayed right above the icons. Basic HTML allowed."
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:773
-msgid "Show icon labels? "
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:781
-msgid "Open links in new tab? "
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:786
-msgid "Icon Style:"
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:790
-msgid "Color Background / White Icon"
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:792
-msgid "Color Icon / No Background"
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:798
-msgid "Icon Background Style:"
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:802
-msgid "Rounded Corners"
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:804
-msgid "Round"
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:806
-msgid "Square"
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:812
-msgid ""
-"Icon Background Style has no effect on <i>Color Icon / No Background</i> "
-"icon style."
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:816
-msgid "Icons:"
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:856
-msgid "Add more"
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:861
-msgid ""
-"To add an icon with an email address, use the <strong><em>mailto:"
-"mail@example.com</em></strong> format."
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:867
-msgid ""
-"Note that icons above is not how they will look on front-end. This is just "
-"for reference."
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:932
-msgid "Start typing the URL..."
-msgstr ""
-
-#: ../class.zoom-social-icons-widget.php:939
-msgid "Label"
-msgstr ""
-
 #. Name of the plugin
 msgid "Social Icons Widget by WPZOOM"
 msgstr ""
 
-#. URI of the plugin
-msgid "http://www.wpzoom.com"
+#. Description of the plugin
+msgid ""
+"Social Icons Widget to displays links to social sharing websites. Supports "
+"more than 80 sites and includes 400 icons. Sort icons by Drag & Drop and "
+"change their color easily."
 msgstr ""
 
-#. Description of the plugin
-msgid "Social Icons Widget"
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "http://www.wpzoom.com/"
 msgstr ""
 
 #. Author of the plugin

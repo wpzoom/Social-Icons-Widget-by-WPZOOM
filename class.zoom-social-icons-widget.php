@@ -34,7 +34,6 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
                 'category' => array( 'business' ),
                 'color'    => '#299F37'
             ),
-
 			array(
 				'icon'     => 'apple',
 				'category' => array( 'software' ),
@@ -125,6 +124,16 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'news' ),
 				'color'    => '#1d1d1b'
 			),
+            array(
+                'icon'     => 'discord',
+                'category' => array( 'chat' ),
+                'color'    => '#7289da'
+            ),
+            array(
+                'icon'     => 'discord2',
+                'category' => array( 'chat' ),
+                'color'    => '#7289da'
+            ),
 			array(
 				'icon'     => 'disqus',
 				'category' => array( 'communication', 'web-tools' ),
@@ -175,6 +184,16 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'web-tools', 'payment' ),
 				'color'    => '#F67C1A'
 			),
+            array(
+                'icon'     => 'flipboard',
+                'category' => array( 'news', 'reader' ),
+                'color'    => '#E12828'
+            ),
+            array(
+                'icon'     => 'flipboard2',
+                'category' => array( 'news', 'reader' ),
+                'color'    => '#E12828'
+            ),
 			array(
 				'icon'     => 'flickr',
 				'category' => array( 'web-tools', 'photography' ),
