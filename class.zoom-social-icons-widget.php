@@ -154,6 +154,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'ecommerce' ),
 				'color'    => '#E53238'
 			),
+            array(
+                'icon'     => 'ello',
+                'category' => array( 'design' ),
+                'color'    => '#000'
+            ),
 			array(
 				'icon'     => 'envato',
 				'category' => array( 'ecommerce' ),
@@ -259,6 +264,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'audio' ),
 				'color'    => '#d41316'
 			),
+            array(
+                'icon'     => 'line',
+                'category' => array( 'communication' ),
+                'color'    => '#00BA27'
+            ),
 			array(
 				'icon'     => 'linkedin',
 				'category' => array( 'programming', 'social-media' ),
