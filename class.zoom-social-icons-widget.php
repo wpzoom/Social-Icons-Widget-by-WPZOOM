@@ -10018,14 +10018,18 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 						<?php if ( ! empty( $instance['icon_padding_size'] ) ) {
 							$style .= '; padding:' . $instance['icon_padding_size'] . 'px';
 						} ?>
+
+                        <?php if ( $instance['show_icon_labels'] === 'false' ) : ?>
+                            <span
+                                class="screen-reader-text"><?php echo esc_html( $field['icon'] ); ?></span>
+                        <?php endif; ?>
+
 						<span class="zoom-social_icons-list-span <?php echo $class ?>"
 							<?php echo $hover_style ?>
 							  style="<?php echo $style ?>"
 						></span>
 
 						<?php
-
-
 						if ( $instance['show_icon_labels'] === 'true' ) : ?>
 							<span
 								class="zoom-social_icons-list__label"><?php echo esc_html( $field['label'] ); ?></span>
