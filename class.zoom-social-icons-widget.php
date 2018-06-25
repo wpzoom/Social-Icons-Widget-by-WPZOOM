@@ -9167,10 +9167,10 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	 */
 	public function admin_scripts() {
 
-		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'assets/css/socicon.css', array(), '20170209' );
-		wp_enqueue_style( 'social-icons-widget-admin', plugin_dir_url( $this->plugin_file ) . 'assets/css/social-icons-widget-admin.css', array( 'socicon' ), '20170209' );
-		wp_enqueue_style( 'genericons', plugin_dir_url( $this->plugin_file ) . 'assets/css/genericons.css', array(), '20170209' );
-		wp_enqueue_style( 'fontawesome', plugin_dir_url( $this->plugin_file ) . 'assets/css/font-awesome.min.css', array(), '20170209' );
+		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'assets/css/socicon.css', array(), '20180625' );
+		wp_enqueue_style( 'social-icons-widget-admin', plugin_dir_url( $this->plugin_file ) . 'assets/css/social-icons-widget-admin.css', array( 'socicon' ), '20180625' );
+		wp_enqueue_style( 'genericons', plugin_dir_url( $this->plugin_file ) . 'assets/css/genericons.css', array(), '20180625' );
+		wp_enqueue_style( 'fontawesome', plugin_dir_url( $this->plugin_file ) . 'assets/css/font-awesome.min.css', array(), '20180625' );
 		wp_enqueue_style( 'dashicons' );
 		wp_enqueue_style( 'wp-color-picker' );
 		wp_enqueue_media();
@@ -10050,9 +10050,9 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	 * Scripts & styles for front-end display of widget.
 	 */
 	public function scripts() {
-		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'assets/css/socicon.css', array(), '20170209' );
-		wp_enqueue_style( 'genericons', plugin_dir_url( $this->plugin_file ) . 'assets/css/genericons.css', array(), '20170209' );
-		wp_enqueue_style( 'fontawesome', plugin_dir_url( $this->plugin_file ) . 'assets/css/font-awesome.min.css', array(), '20170209' );
+		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'assets/css/socicon.css', array(), '20180625' );
+		wp_enqueue_style( 'genericons', plugin_dir_url( $this->plugin_file ) . 'assets/css/genericons.css', array(), '20180625' );
+		wp_enqueue_style( 'fontawesome', plugin_dir_url( $this->plugin_file ) . 'assets/css/font-awesome.min.css', array(), '20180625' );
 		wp_enqueue_style( 'dashicons' );
 
 		wp_enqueue_script(

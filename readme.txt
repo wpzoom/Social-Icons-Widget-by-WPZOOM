@@ -113,6 +113,9 @@ You can also create a hidden widget area using a plugin like Custom Sidebars if 
 
 == Changelog ==
 
+= 3.0.9 =
+* Fixed: minor caching issue happening after update to 3.0.8
+
 = 3.0.8 =
 * New icons: Ello, Line
 * Fixed: links with no labels were missing the anchor text, so we changed the widget to show by default the name of the icon when no label was provided
