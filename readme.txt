@@ -3,18 +3,18 @@ Contributors: WPZOOM, nvartolomei, ciorici
 Donate link: https://www.wpzoom.com/
 Tags: social icons, social networks, social media, social profiles, widget, twitter, facebook, google, pinterest, foursquare, yahoo, skype, yelp, feedburner, linkedin, viadeo, xing, myspace, soundcloud, spotify, grooveshark, lastfm, youtube, vimeo, dailymotion, vine, flickr, 500px, instagram, wordpress, tumblr, blogger, technorati, reddit, dribbble, stumbleupon, digg, envato, behance, delicious, deviantart, forrst, play, zerply, wikipedia, apple, flattr, github, chimein, friendfeed, newsvine, identica, bebo, zynga, steam, xbox, windows, outlook, coderwall, tripadvisor, appnet, goodreads, tripit, lanyrd, slideshare, buffer, rss, vkontakte, disqus, houzz, mail, patreon, paypal, smugmug, swarm, triplej, yammer, stackoverflow, drupal, odnoklassniki, android, meetup, persona, airbnb, baidu, ebay, medium, periscope, lookbook, feedly, snapchat, telegram, bloglovin, fontawesome, tidal, deezer, unsplash, whatsapp, flipboard, discord
 Requires at least: 4.3
-Tested up to: 4.9
+Tested up to: 5.0
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Social Icons Widget to displays links to social sharing websites. Supports more than 80 sites and includes 400 icons.
+Social Icons Widget to displays links to social sharing websites. Supports more than 100 sites and includes 400 icons.
 
 == Description ==
 
 > Did you find this plugin helpful? Please consider [leaving a 5-star review](http://wordpress.org/support/view/plugin-reviews/social-icons-widget-by-wpzoom).
 
-**[View Demo](http://demo.wpzoom.com/social-icons/)**
+**[View Demo](https://demo.wpzoom.com/social-icons/)**
 
 **Social Icons Widget** helps you to add quickly icons with links to your profiles from different social networks. The plugin includes 4 icon sets, which gives you the possibility to use the widget for more than just linking to your social networks. You can use generic icons to add links to anything you want.
 
@@ -47,13 +47,13 @@ Social Icons Widget to displays links to social sharing websites. Supports more 
 
 = Where I can view a Demo? =
 
-You can view the widget live in all our themes at [WPZOOM](http://www.wpzoom.com/themes/).
+You can view the widget live in all our themes at [WPZOOM](https://www.wpzoom.com/themes/).
 
 = View Demo & Examples =
-* [Monte Theme](http://demo.wpzoom.com/?theme=monte) - header bar and footer
-* [Tempo Theme](http://demo.wpzoom.com/?theme=tempo) - header (under logo) and footer
-* [Foodica Theme](http://demo.wpzoom.com/?theme=foodica) - header bar and sidebar
-* [Inspiro Theme](http://demo.wpzoom.com/?theme=inspiro) - sidebar panel and footer
+* [Monte Theme](https://demo.wpzoom.com/?theme=monte) - header bar and footer
+* [Tempo Theme](https://demo.wpzoom.com/?theme=tempo) - header (under logo) and footer
+* [Foodica Theme](https://demo.wpzoom.com/?theme=foodica) - header bar and sidebar
+* [Inspiro Theme](https://demo.wpzoom.com/?theme=inspiro) - sidebar panel and footer
 
 = Features: =
 
@@ -112,6 +112,17 @@ You can also create a hidden widget area using a plugin like Custom Sidebars if 
 6. Widget Settings
 
 == Changelog ==
+
+
+= 3.0.12 =
+* New icons: Mastodon
+* Bug fix with EyeEm icon
+
+= 3.0.11 =
+* New icons: Beatport, iTunes
+
+= 3.0.10 =
+* New icons: Slack, Songkick, ReverbNation
 
 = 3.0.9 =
 * Fixed: minor caching issue happening after update to 3.0.8

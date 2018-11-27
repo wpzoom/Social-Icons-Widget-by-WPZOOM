@@ -59,6 +59,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'music' ),
 				'color'    => '#619aa9'
 			),
+            array(
+                'icon'     => 'beatport',
+                'category' => array( 'music' ),
+                'color'    => '#94d500'
+            ),
 			array(
 				'icon'     => 'bebo',
 				'category' => array( 'software', 'communication' ),
@@ -254,6 +259,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'photography', 'social-media' ),
 				'color'    => '#E1306C'
 			),
+            array(
+                'icon'     => 'itunes',
+                'category' => array( 'music' ),
+                'color'    => '#ff5e51'
+            ),
 			array(
 				'icon'     => 'lanyrd',
 				'category' => array( 'learning' ),
@@ -284,6 +294,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'web-tools', 'communication' ),
 				'color'    => '#000000'
 			),
+            array(
+                'icon'     => 'mastodon',
+                'category' => array( 'social-media' ),
+                'color'    => '#2B8BD0'
+            ),
 			array(
 				'icon'     => 'medium',
 				'category' => array( 'blogging' ),
@@ -374,6 +389,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
                 'category' => array( 'education' ),
                 'color'    => '#00CCBB'
             ),
+            array(
+                'icon'     => 'reverbnation',
+                'category' => array( 'music', 'audio' ),
+                'color'    => '#000'
+            ),
 			array(
 				'icon'     => 'rss',
 				'category' => array( 'news', 'communication', 'web-tools' ),
@@ -384,6 +404,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'software', 'communication', 'video' ),
 				'color'    => '#28abe3'
 			),
+            array(
+                'icon'     => 'slack',
+                'category' => array( 'communication' ),
+                'color'    => '#4B6BC6'
+            ),
 			array(
 				'icon'     => 'slideshare',
 				'category' => array( 'web-tools' ),
@@ -399,6 +424,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'communication', 'social-media' ),
 				'color'    => '#000000'
 			),
+            array(
+                'icon'     => 'songkick',
+                'category' => array( 'audio' ),
+                'color'    => '#F80046'
+            ),
 			array(
 				'icon'     => 'soundcloud',
 				'category' => array( 'audio' ),
@@ -9177,7 +9207,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	 */
 	public function admin_scripts() {
 
-		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'assets/css/socicon.css', array(), '20180625' );
+		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'assets/css/socicon.css', array(), '20181115' );
 		wp_enqueue_style( 'social-icons-widget-admin', plugin_dir_url( $this->plugin_file ) . 'assets/css/social-icons-widget-admin.css', array( 'socicon' ), '20180625' );
 		wp_enqueue_style( 'genericons', plugin_dir_url( $this->plugin_file ) . 'assets/css/genericons.css', array(), '20180625' );
 		wp_enqueue_style( 'fontawesome', plugin_dir_url( $this->plugin_file ) . 'assets/css/font-awesome.min.css', array(), '20180625' );
@@ -10060,7 +10090,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	 * Scripts & styles for front-end display of widget.
 	 */
 	public function scripts() {
-		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'assets/css/socicon.css', array(), '20180625' );
+		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'assets/css/socicon.css', array(), '20181009' );
 		wp_enqueue_style( 'genericons', plugin_dir_url( $this->plugin_file ) . 'assets/css/genericons.css', array(), '20180625' );
 		wp_enqueue_style( 'fontawesome', plugin_dir_url( $this->plugin_file ) . 'assets/css/font-awesome.min.css', array(), '20180625' );
 		wp_enqueue_style( 'dashicons' );

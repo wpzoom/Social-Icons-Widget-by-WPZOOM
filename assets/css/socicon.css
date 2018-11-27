@@ -110,6 +110,15 @@
     content: "\e06a"
 }
 
+.socicon-beatport {
+    background-color: #94d500;
+    color: #94d500;
+}
+
+.socicon-beatport:before {
+    content: "\e955"
+}
+
 .socicon-bebo {
     background-color: #EF1011;
     color: #EF1011;
@@ -305,7 +314,7 @@
 }
 
 .socicon-eyeem:before {
-    content: "\e901"
+    content: "\e902"
 }
 
 .socicon-facebook {
@@ -461,6 +470,15 @@
     content: "\e057"
 }
 
+.socicon-itunes {
+    background-color: #ff5e51;
+    color: #ff5e51;
+}
+
+.socicon-itunes:before {
+    content: "\e0ae"
+}
+
 .socicon-lanyrd {
     background-color: #3c80c9;
     color: #3c80c9;
@@ -513,6 +531,15 @@
 
 .socicon-mail:before {
     content: "\e01f"
+}
+
+.socicon-mastodon {
+    background-color: #2B8BD0;
+    color: #2B8BD0;
+}
+
+.socicon-mastodon:before {
+    content: "\e913"
 }
 
 .socicon-medium {
@@ -677,6 +704,15 @@
     content: "\e078"
 }
 
+.socicon-reverbnation {
+    background-color: #000;
+    color: #000;
+}
+
+.socicon-reverbnation:before {
+    content: "\e07b"
+}
+
 .socicon-rss {
     background-color: #f26109;
     color: #f26109;
@@ -693,6 +729,15 @@
 
 .socicon-skype:before {
     content: "\e046"
+}
+
+.socicon-slack {
+    background-color: #4B6BC6;
+    color: #4B6BC6;
+}
+
+.socicon-slack:before {
+    content: "\e918"
 }
 
 .socicon-slideshare {
@@ -720,6 +765,15 @@
 
 .socicon-snapchat:before {
     content: "\e03f"
+}
+
+.socicon-songkick {
+    background-color: #F80046;
+    color: #F80046;
+}
+
+.socicon-songkick:before {
+    content: "\e07a"
 }
 
 .socicon-soundcloud {
