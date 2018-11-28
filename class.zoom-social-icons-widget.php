@@ -10030,13 +10030,15 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		}
 
 		$class_list   = array();
+		$desc_class ='';
 		$class_list[] = 'zoom-social-icons-list--' . $instance['icon_style'];
 		$class_list[] = 'zoom-social-icons-list--' . $instance['icon_canvas_style'];
 
 		if ( ! empty( $instance['icon_alignment'] ) &&
 		     in_array( $instance['icon_alignment'], array( 'left', 'center', 'right' ) )
 		) {
-			$class_list[] = 'zoom-social-icons-list--align-' . $instance['icon_alignment'];
+			$class_list[] = $desc_class = 'zoom-social-icons-list--align-' . $instance['icon_alignment'];
+			$desc_class = "class='".$desc_class."'";
 		}
 
 
@@ -10059,7 +10061,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 		<?php if ( ! empty( $instance['description'] ) ) : ?>
 
-			<p><?php echo $instance['description']; ?></p>
+			<p <?php echo $desc_class; ?>><?php echo $instance['description']; ?></p>
 
 		<?php endif; ?>
 
