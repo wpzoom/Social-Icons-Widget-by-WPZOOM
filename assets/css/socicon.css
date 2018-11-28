@@ -1190,6 +1190,18 @@
     padding: 0;
 }
 
+.zoom-social-icons-widget .zoom-social-icons-list.zoom-social-icons-list--align-left {
+    text-align: left;
+}
+
+.zoom-social-icons-widget .zoom-social-icons-list.zoom-social-icons-list--align-right {
+    text-align: right;
+}
+
+.zoom-social-icons-widget .zoom-social-icons-list.zoom-social-icons-list--align-center {
+    text-align: center;
+}
+
 
 /*
 Text meant only for screen readers.

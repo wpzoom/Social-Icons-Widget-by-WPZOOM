@@ -9383,6 +9383,10 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			$instance['icon_style'] = $new_instance['icon_style'];
 		}
 
+		if ( in_array( $new_instance['icon_alignment'], array( 'left', 'center', 'right' ) ) ) {
+			$instance['icon_alignment'] = $new_instance['icon_alignment'];
+		}
+
 		if ( in_array( $new_instance['icon_canvas_style'], array( 'rounded', 'round', 'square' ) ) ) {
 			$instance['icon_canvas_style'] = $new_instance['icon_canvas_style'];
 		}
@@ -9507,6 +9511,23 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 			<p>
 				<label
+					for="<?php echo $this->get_field_id( 'icon_alignment' ); ?>"><?php _e( 'Icons Alignment:', 'zoom-social-icons-widget' ); ?>
+				</label>
+				<select name="<?php echo $this->get_field_name( 'icon_alignment' ); ?>"
+				        id="<?php echo $this->get_field_id( 'icon_alignment' ); ?>"
+				        v-model="icon_alignment"
+				        class="widefat">
+					<option
+						value="left"><?php esc_html_e( 'Align Left', 'zoom-social-icons-widget' ); ?></option>
+					<option
+						value="center"><?php esc_html_e( 'Align Center', 'zoom-social-icons-widget' ); ?></option>
+					<option
+						value="right"><?php esc_html_e( 'Align Right', 'zoom-social-icons-widget' ); ?></option>
+				</select>
+			</p>
+
+			<p>
+				<label
 					for="<?php echo $this->get_field_id( 'icon_style' ); ?>"><?php _e( 'Icon Style:', 'zoom-social-icons-widget' ); ?>
 				</label>
 				<select name="<?php echo $this->get_field_name( 'icon_style' ); ?>"
@@ -9605,6 +9626,9 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				<input type='hidden' value="<?php echo $defaults['open_new_tab'] ?>"
 				       id="<?php echo $this->get_field_id( 'open_new_tab' ); ?>"
 				       name="<?php echo $this->get_field_name( 'open_new_tab' ); ?>"/>
+				<input type='hidden' value="<?php echo $defaults['icon_alignment'] ?>"
+				       id="<?php echo $this->get_field_id( 'icon_alignment' ); ?>"
+				       name="<?php echo $this->get_field_name( 'icon_alignment' ); ?>"/>
 				<input type='hidden' value="<?php echo $defaults['no_follow'] ?>"
 				       id="<?php echo $this->get_field_id( 'no_follow' ); ?>"
 				       name="<?php echo $this->get_field_name( 'no_follow' ); ?>"/>
@@ -9765,6 +9789,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'open_new_tab'              => 'true',
 				'no_follow'              => 'false',
 				'icon_style'                => 'with-canvas',
+				'icon_alignment'            => 'left',
 				'icon_canvas_style'         => 'rounded',
 				'icon_padding_size'         => 8,
 				'icon_font_size'            => 18,
@@ -10000,12 +10025,20 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		echo $args['before_widget'];
 
 		if ( $instance['title'] ) {
+
 			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
 		}
 
 		$class_list   = array();
 		$class_list[] = 'zoom-social-icons-list--' . $instance['icon_style'];
 		$class_list[] = 'zoom-social-icons-list--' . $instance['icon_canvas_style'];
+
+		if ( ! empty( $instance['icon_alignment'] ) &&
+		     in_array( $instance['icon_alignment'], array( 'left', 'center', 'right' ) )
+		) {
+			$class_list[] = 'zoom-social-icons-list--align-' . $instance['icon_alignment'];
+		}
+
 
 		if ( is_bool( $instance['show_icon_labels'] ) ) {
 			$instance['show_icon_labels'] = $instance['show_icon_labels'] === true ? 'true' : 'false';
