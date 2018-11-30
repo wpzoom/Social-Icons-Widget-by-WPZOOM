@@ -9383,7 +9383,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			$instance['icon_style'] = $new_instance['icon_style'];
 		}
 
-		if ( in_array( $new_instance['icon_alignment'], array( 'left', 'center', 'right' ) ) ) {
+		if ( in_array( $new_instance['icon_alignment'], array( 'left', 'center', 'right', 'none' ) ) ) {
 			$instance['icon_alignment'] = $new_instance['icon_alignment'];
 		}
 
@@ -9517,6 +9517,8 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				        id="<?php echo $this->get_field_id( 'icon_alignment' ); ?>"
 				        v-model="icon_alignment"
 				        class="widefat">
+					<option
+						value="none"><?php esc_html_e( 'None', 'zoom-social-icons-widget' ); ?></option>
 					<option
 						value="left"><?php esc_html_e( 'Align Left', 'zoom-social-icons-widget' ); ?></option>
 					<option
@@ -9789,7 +9791,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'open_new_tab'              => 'true',
 				'no_follow'              => 'false',
 				'icon_style'                => 'with-canvas',
-				'icon_alignment'            => 'left',
+				'icon_alignment'            => 'none',
 				'icon_canvas_style'         => 'rounded',
 				'icon_padding_size'         => 8,
 				'icon_font_size'            => 18,
