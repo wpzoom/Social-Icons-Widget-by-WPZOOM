@@ -244,6 +244,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
                 'category' => array( 'news' ),
                 'color'    => '#D50066'
             ),
+            array(
+                'icon'     => 'homeadvisor',
+                'category' => array( 'business' ),
+                'color'    => '#EF8B1D'
+            ),
 			array(
 				'icon'     => 'houzz',
 				'category' => array( 'design' ),
@@ -319,6 +324,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'social-media' ),
 				'color'    => '#323232'
 			),
+            array(
+                'icon'     => 'mywed',
+                'category' => array( 'community' ),
+                'color'    => '#000'
+            ),
 			array(
 				'icon'     => 'newsvine',
 				'category' => array( 'news' ),
@@ -450,6 +460,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'color'    => '#8F8D8A'
 			),
             array(
+                'icon'     => 'stitcher',
+                'category' => array( 'audio' ),
+                'color'    => '#00BDE8'
+            ),
+            array(
                 'icon'     => 'strava',
                 'category' => array( 'fitness', 'sport'),
                 'color'    => '#FC4C02'
@@ -499,6 +514,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'blogging' ),
 				'color'    => '#45556c'
 			),
+            array(
+                'icon'     => 'tunein',
+                'category' => array( 'audio' ),
+                'color'    => '#36b4a7'
+            ),
 			array(
 				'icon'     => 'twitter',
 				'category' => array( 'social-media' ),
@@ -3498,6 +3518,281 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'icon'     => 'videocamera',
 			),
 		),
+        'academicons' => array(
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'academia',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'acclaim',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'acm',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'acmdl',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'ads',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'arxiv',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'biorxiv',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'ceur',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'coursera',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'cv',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'dataverse',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'dblp',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'depsy',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'doi',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'dryad',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'figshare',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'google-scholar',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'ideas-repec',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'ieee',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'impactstory',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'inspire',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'lattes',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'mathoverflow',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'mendeley',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'open-access',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'orcid',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'osf',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'overleaf',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'philpapers',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'piazza',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'publons',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'pubmed',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'publons',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'pubmed',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'researcherid',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'scirate',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'semantic-scholar',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'springer',
+            ),
+            array(
+                'category' =>
+                    array(
+                        '',
+                    ),
+                'icon'     => 'zotero',
+            ),
+        ),
 		'fa'        => array(
 
 			array(
@@ -9149,6 +9444,8 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 												value="dashicons"><?php _e( 'Dashicons', 'zoom-social-icons-widget' ) ?></option>
 											<option
 												value="genericon"><?php _e( 'Genericons', 'zoom-social-icons-widget' ) ?></option>
+                                            <option
+                                                value="academicons"><?php _e( 'Academicons', 'zoom-social-icons-widget' ) ?></option>
 											<option
 												value="fa"><?php _e( 'Font Awesome', 'zoom-social-icons-widget' ) ?></option>
 										</select>
@@ -9207,9 +9504,10 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	 */
 	public function admin_scripts() {
 
-		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'assets/css/socicon.css', array(), '20181115' );
-		wp_enqueue_style( 'social-icons-widget-admin', plugin_dir_url( $this->plugin_file ) . 'assets/css/social-icons-widget-admin.css', array( 'socicon' ), '20180625' );
+		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'assets/css/socicon.css', array(), '20190406' );
+		wp_enqueue_style( 'social-icons-widget-admin', plugin_dir_url( $this->plugin_file ) . 'assets/css/social-icons-widget-admin.css', array( 'socicon' ), '20190406' );
 		wp_enqueue_style( 'genericons', plugin_dir_url( $this->plugin_file ) . 'assets/css/genericons.css', array(), '20180625' );
+        wp_enqueue_style( 'academicons', plugin_dir_url( $this->plugin_file ) . 'assets/css/academicons.min.css', array(), '20190406' );
 		wp_enqueue_style( 'fontawesome', plugin_dir_url( $this->plugin_file ) . 'assets/css/font-awesome.min.css', array(), '20180625' );
 		wp_enqueue_style( 'dashicons' );
 		wp_enqueue_style( 'wp-color-picker' );
@@ -9258,7 +9556,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			'zoom-social-icons-widget',
 			plugin_dir_url( $this->plugin_file ) . 'assets/js/social-icons-widget-backend.js',
 			array( 'jquery', 'underscore', 'wp-util', 'wp-color-picker' ),
-			'20170913',
+			'20190405',
 			true
 		);
 
@@ -9334,6 +9632,10 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 					array(
 						'all',
 					),
+                'academicons' =>
+                    array(
+                        'all',
+                    ),
 				'fa'        =>
 					array(
 						'accessibility',
@@ -9373,7 +9675,9 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		$instance['description']               = balanceTags( wp_kses( $new_instance['description'], wp_kses_allowed_html() ), true );
 		$instance['show_icon_labels']          = (! empty( $new_instance['show_icon_labels'] ) && $new_instance['show_icon_labels'] === 'true' ) ? 'true' : 'false';
 		$instance['open_new_tab']              = (! empty( $new_instance['open_new_tab']) && $new_instance['open_new_tab'] === 'true')  ? 'true' : 'false';
-		$instance['no_follow']              = (! empty( $new_instance['no_follow']) && $new_instance['no_follow'] === 'true')  ? 'true' : 'false';
+		$instance['no_follow']                 = (! empty( $new_instance['no_follow']) && $new_instance['no_follow'] === 'true')  ? 'true' : 'false';
+        $instance['no_opener']                 = (! empty( $new_instance['no_opener']) && $new_instance['no_opener'] === 'true')  ? 'true' : 'false';
+        $instance['no_referrer']               = (! empty( $new_instance['no_referrer']) && $new_instance['no_referrer'] === 'true')  ? 'true' : 'false';
 		$instance['icon_padding_size']         = (int) $new_instance['icon_padding_size'];
 		$instance['icon_font_size']            = (int) $new_instance['icon_font_size'];
 		$instance['global_color_picker']       = $new_instance['global_color_picker'];
@@ -9456,21 +9760,17 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		?>
 		<div class="form-instance" <?php echo $instance_attr ?> id="<?php echo $this->id ?>">
 			<p>
-
-				<label
-					for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'zoom-social-icons-widget' ); ?></label>
-				<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" v-model="title"
-				       name="<?php echo $this->get_field_name( 'title' ); ?>" type="text"/>
+				<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'zoom-social-icons-widget' ); ?></label>
+				<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" v-model="title" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text"/>
 			</p>
 
 			<p>
-				<label
-					for="<?php echo $this->get_field_id( 'description' ); ?>"><?php esc_html_e( 'Description:', 'zoom-social-icons-widget' ); ?></label>
-            <textarea class="widefat" id="<?php echo $this->get_field_id( 'description' ); ?>"
-                      name="<?php echo $this->get_field_name( 'description' ); ?>" cols="20" v-model="description"
-                      rows="3"></textarea>
-				<small><?php _e( 'Short description to be displayed right above the icons. Basic HTML allowed.', 'zoom-social-icons-widget' ); ?></small>
-			</p>
+				<label for="<?php echo $this->get_field_id( 'description' ); ?>"><?php esc_html_e( 'Text above icons:', 'zoom-social-icons-widget' ); ?></label>
+                <textarea class="widefat" id="<?php echo $this->get_field_id( 'description' ); ?>" name="<?php echo $this->get_field_name( 'description' ); ?>" cols="20" v-model="description" rows="3"></textarea>
+ 			</p>
+
+            <p class="description"><?php _e( 'You can add here a text above the icons. Basic HTML allowed.', 'zoom-social-icons-widget' ); ?></p>
+
 
 			<p>
 				<input class="checkbox zoom-social-icons-show-icon-labels"
@@ -9493,8 +9793,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				       :value="open_new_tab"
 				       id="<?php echo $this->get_field_id( 'open_new_tab' ); ?>"
 				       name="<?php echo $this->get_field_name( 'open_new_tab' ); ?>"/>
-				<label
-					for="<?php echo $this->get_field_id( 'open_new_tab' ); ?>"><?php _e( 'Open links in new tab? ', 'zoom-social-icons-widget' ); ?></label>
+				<label for="<?php echo $this->get_field_id( 'open_new_tab' ); ?>"><?php _e( 'Open links in new tab? ', 'zoom-social-icons-widget' ); ?></label>
 			</p>
 
 			<p>
@@ -9508,6 +9807,33 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				<label
 					for="<?php echo $this->get_field_id( 'no_follow' ); ?>"><?php _e( 'Add <code>rel="nofollow"</code> to links', 'zoom-social-icons-widget' ); ?></label>
 			</p>
+
+            <p>
+                <input class="checkbox" type="checkbox"
+                       v-model="no_referrer"
+                       :true-value="'true'"
+                       :false-value="'false'"
+                       :value="no_referrer"
+                       id="<?php echo $this->get_field_id( 'no_referrer' ); ?>"
+                       name="<?php echo $this->get_field_name( 'no_referrer' ); ?>"/>
+                <label
+                    for="<?php echo $this->get_field_id( 'no_referrer' ); ?>"><?php _e( 'Add <code>rel="noreferrer"</code> to links', 'zoom-social-icons-widget' ); ?></label>
+            </p>
+
+            <p>
+                <input class="checkbox" type="checkbox"
+                       v-model="no_opener"
+                       :true-value="'true'"
+                       :false-value="'false'"
+                       :value="no_opener"
+                       id="<?php echo $this->get_field_id( 'no_opener' ); ?>"
+                       name="<?php echo $this->get_field_name( 'no_opener' ); ?>"/>
+                <label
+                    for="<?php echo $this->get_field_id( 'no_opener' ); ?>"><?php _e( 'Add <code>rel="noopener"</code> to links', 'zoom-social-icons-widget' ); ?></label>
+            </p>
+
+            <p class="description"><?php _e( 'Recommended if links or icons open in a new tab', 'zoom-social-icons-widget' ); ?></p>
+
 
 			<p>
 				<label
@@ -9562,10 +9888,8 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				</select>
 			</p>
 
-			<p>
-				<small>
-					<?php echo wp_kses_post( __( 'Icon Background Style has no effect on <i>Color Icon / No Background</i> icon style.', 'zoom-social-icons-widget' ) ); ?>
-				</small>
+			<p class="description">
+					<?php echo wp_kses_post( __( 'This option has no effect if <i>Color Icon / No Background</i> icon style is selected.', 'zoom-social-icons-widget' ) ); ?>
 			</p>
 
 			<p>
@@ -9634,6 +9958,13 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				<input type='hidden' value="<?php echo $defaults['no_follow'] ?>"
 				       id="<?php echo $this->get_field_id( 'no_follow' ); ?>"
 				       name="<?php echo $this->get_field_name( 'no_follow' ); ?>"/>
+                <input type='hidden' value="<?php echo $defaults['no_opener'] ?>"
+                       id="<?php echo $this->get_field_id( 'no_opener' ); ?>"
+                       name="<?php echo $this->get_field_name( 'no_opener' ); ?>"/>
+                <input type='hidden' value="<?php echo $defaults['no_referrer'] ?>"
+                        id="<?php echo $this->get_field_id( 'no_referrer' ); ?>"
+                        name="<?php echo $this->get_field_name( 'no_referrer' ); ?>"/>
+
 				<input type='hidden' value="<?php echo $defaults['show_icon_labels'] ?>"
 				       id="<?php echo $this->get_field_id( 'show_icon_labels' ); ?>"
 				       name="<?php echo $this->get_field_name( 'show_icon_labels' ); ?>"/>
@@ -9763,16 +10094,12 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				   class="button"><?php _e( 'Add more', 'zoom-social-icons-widget' ); ?></a>
 			</div>
 
-			<p>
-				<small>
-					<?php echo wp_kses_post( __( 'To add an icon with an email address, use the <strong><em>mailto:mail@example.com</em></strong> format.', 'zoom-social-icons-widget' ) ); ?>
-				</small>
+			<p class="description">
+				<?php echo wp_kses_post( __( 'To add an icon with an email address, use the <strong><em>mailto:mail@example.com</em></strong> format.', 'zoom-social-icons-widget' ) ); ?>
 			</p>
 
-			<p>
-				<small>
-					<?php echo wp_kses_post( __( 'Note that icons above is not how they will look on front-end. This is just for reference.', 'zoom-social-icons-widget' ) ); ?>
-				</small>
+            <p class="description">
+				<?php echo wp_kses_post( __( 'Note that icons above is not how they will look on front-end. This is just for reference.', 'zoom-social-icons-widget' ) ); ?>
 			</p>
 		</div>
 		<?php
@@ -9789,7 +10116,9 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'description'               => '',
 				'show_icon_labels'          => 'false',
 				'open_new_tab'              => 'true',
-				'no_follow'              => 'false',
+				'no_follow'                 => 'false',
+                'no_opener'                 => 'false',
+                'no_referrer'               => 'false',
 				'icon_style'                => 'with-canvas',
 				'icon_alignment'            => 'none',
 				'icon_canvas_style'         => 'rounded',
@@ -9799,7 +10128,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'global_color_picker_hover' => '#1e73be',
 				'fields'                    => array(
 					array(
-						'url'                => 'https://facebook.com/wpzoom',
+						'url'                => 'https://facebook.com/',
 						'label'              => 'Facebook',
 						'icon'               => 'facebook',
 						'icon_kit'           => 'socicon',
@@ -9807,7 +10136,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 						'color_picker_hover' => '#3b5998'
 					),
 					array(
-						'url'                => 'https://twitter.com/wpzoom',
+						'url'                => 'https://twitter.com/',
 						'label'              => 'Twitter',
 						'icon'               => 'twitter',
 						'icon_kit'           => 'socicon',
@@ -9815,12 +10144,12 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 						'color_picker_hover' => '#55acee'
 					),
 					array(
-						'url'                => 'https://instagram.com/wpzoom',
+						'url'                => 'https://instagram.com/',
 						'label'              => 'Instagram',
 						'icon'               => 'instagram',
 						'icon_kit'           => 'socicon',
-						'color_picker'       => '#E1306C',
-						'color_picker_hover' => '#E1306C'
+						'color_picker'       => '#e4405f',
+						'color_picker_hover' => '#e4405f'
 					),
 				)
 			)
@@ -10056,6 +10385,14 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			$instance['no_follow'] = $instance['no_follow'] === true ? 'true' : 'false';
 		}
 
+        if ( is_bool( $instance['no_opener'] ) ) {
+            $instance['no_opener'] = $instance['no_opener'] === true ? 'true' : 'false';
+        }
+
+        if ( is_bool( $instance['no_referrer'] ) ) {
+            $instance['no_referrer'] = $instance['no_referrer'] === true ? 'true' : 'false';
+        }
+
 		if ( $instance['show_icon_labels'] === 'false' ) {
 			$class_list[] = 'zoom-social-icons-list--no-labels';
 		}
@@ -10076,11 +10413,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				$rule        = ( $instance['icon_style'] === 'with-canvas' ) ? 'background-color' : 'color';
 				$hover_style = empty( $field['color_picker_hover'] ) ? '' : 'data-hover-rule="' . $rule . '" data-hover-color="' . $field['color_picker_hover'] . '"'; ?>
 				<li class="zoom-social_icons-list__item">
-					<a class="zoom-social_icons-list__link"
-					   href="<?php echo esc_url( $field['url'], $this->protocols ); ?>"
-						<?php echo( $instance['open_new_tab'] === 'true' ? 'target="_blank"' : '' ); ?>
-						<?php echo( $instance['no_follow'] === 'true' ? 'rel="nofollow"' : '' ); ?>
-					>
+					<a class="zoom-social_icons-list__link" href="<?php echo esc_url( $field['url'], $this->protocols ); ?>" <?php echo( $instance['open_new_tab'] === 'true' ? 'target="_blank"' : '' ); ?> <?php echo( $instance['no_follow'] === 'true' ? 'rel="nofollow"' : '' ); ?> <?php echo( $instance['no_opener'] === 'true' ? 'rel="noopener"' : '' ); ?> <?php echo( $instance['no_referrer'] === 'true' ? 'rel="noreferrer"' : '' ); ?>>
 						<?php if ( ! empty( $field['icon'] ) && ! empty( $field['icon_kit'] ) && ! empty( $field['color_picker'] ) ) {
 							$class = $field['icon_kit'] . ' ' . $field['icon_kit'] . '-' . $field['icon'];
 							$style = $rule . ' : ' . $field['color_picker'];
@@ -10097,19 +10430,14 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 						} ?>
 
                         <?php if ( $instance['show_icon_labels'] === 'false' ) : ?>
-                            <span
-                                class="screen-reader-text"><?php echo esc_html( $field['icon'] ); ?></span>
+                            <span class="screen-reader-text"><?php echo esc_html( $field['icon'] ); ?></span>
                         <?php endif; ?>
 
-						<span class="zoom-social_icons-list-span <?php echo $class ?>"
-							<?php echo $hover_style ?>
-							  style="<?php echo $style ?>"
-						></span>
+						<span class="zoom-social_icons-list-span <?php echo $class ?>" <?php echo $hover_style ?> style="<?php echo $style ?>"></span>
 
 						<?php
 						if ( $instance['show_icon_labels'] === 'true' ) : ?>
-							<span
-								class="zoom-social_icons-list__label"><?php echo esc_html( $field['label'] ); ?></span>
+							<span class="zoom-social_icons-list__label"><?php echo esc_html( $field['label'] ); ?></span>
 						<?php endif; ?>
 					</a>
 				</li>
@@ -10129,6 +10457,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	public function scripts() {
 		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'assets/css/socicon.css', array(), '20181009' );
 		wp_enqueue_style( 'genericons', plugin_dir_url( $this->plugin_file ) . 'assets/css/genericons.css', array(), '20180625' );
+        wp_enqueue_style( 'academicons', plugin_dir_url( $this->plugin_file ) . 'assets/css/academicons.min.css', array(), '20190406' );
 		wp_enqueue_style( 'fontawesome', plugin_dir_url( $this->plugin_file ) . 'assets/css/font-awesome.min.css', array(), '20180625' );
 		wp_enqueue_style( 'dashicons' );
 

@@ -148,6 +148,7 @@
                     var $collector = {
                         'fa': 'Font Awesome',
                         'genericon': 'Genericons',
+                        'academicons': 'Academicons',
                         'dashicons': 'Dashicons',
                         'socicon': 'Socicons'
                     };

@@ -1,9 +1,9 @@
 === Social Icons Widget by WPZOOM ===
 Contributors: WPZOOM, nvartolomei, ciorici
 Donate link: https://www.wpzoom.com/
-Tags: social icons, social networks, social media, social profiles, widget, twitter, facebook, google, pinterest, foursquare, yahoo, skype, yelp, feedburner, linkedin, viadeo, xing, myspace, soundcloud, spotify, grooveshark, lastfm, youtube, vimeo, dailymotion, vine, flickr, 500px, instagram, wordpress, tumblr, blogger, technorati, reddit, dribbble, stumbleupon, digg, envato, behance, delicious, deviantart, forrst, play, zerply, wikipedia, apple, flattr, github, chimein, friendfeed, newsvine, identica, bebo, zynga, steam, xbox, windows, outlook, coderwall, tripadvisor, appnet, goodreads, tripit, lanyrd, slideshare, buffer, rss, vkontakte, disqus, houzz, mail, patreon, paypal, smugmug, swarm, triplej, yammer, stackoverflow, drupal, odnoklassniki, android, meetup, persona, airbnb, baidu, ebay, medium, periscope, lookbook, feedly, snapchat, telegram, bloglovin, fontawesome, tidal, deezer, unsplash, whatsapp, flipboard, discord
+Tags: social icons, social networks, social media, social profiles, widget, twitter, facebook, google, pinterest, foursquare, yahoo, skype, yelp, feedburner, linkedin, viadeo, xing, myspace, soundcloud, spotify, grooveshark, lastfm, youtube, vimeo, dailymotion, vine, flickr, 500px, instagram, wordpress, tumblr, blogger, technorati, reddit, dribbble, stumbleupon, digg, envato, behance, delicious, deviantart, forrst, play, zerply, wikipedia, apple, flattr, github, chimein, friendfeed, newsvine, identica, bebo, zynga, steam, xbox, windows, outlook, coderwall, tripadvisor, appnet, goodreads, tripit, lanyrd, slideshare, buffer, rss, vkontakte, disqus, houzz, mail, patreon, paypal, smugmug, swarm, triplej, yammer, stackoverflow, drupal, odnoklassniki, android, meetup, persona, airbnb, baidu, ebay, medium, periscope, lookbook, feedly, snapchat, telegram, bloglovin, fontawesome, tidal, deezer, unsplash, whatsapp, flipboard, discord, academia, academicons
 Requires at least: 4.3
-Tested up to: 5.0
+Tested up to: 5.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -17,6 +17,10 @@ Social Icons Widget to displays links to social sharing websites. Supports more 
 **[View Demo](https://demo.wpzoom.com/social-icons/)**
 
 **Social Icons Widget** helps you to add quickly icons with links to your profiles from different social networks. The plugin includes 4 icon sets, which gives you the possibility to use the widget for more than just linking to your social networks. You can use generic icons to add links to anything you want.
+
+> With the help of WPZOOM’s excellent Social Icons Widget plugin, you can link to all your social network profiles in no time, letting your visitors easily get in touch with you on all social media channels.
+> ⭐️⭐️⭐️⭐️⭐️
+> Read [WPKlik's](https://wpklik.com/wordpress-plugins/wordpress-social-icons-widget/) review of this plugin: [A Complete Guide to Social Icons Widget](https://wpklik.com/wordpress-plugins/wordpress-social-icons-widget/)
 
 
 [youtube https://www.youtube.com/watch?v=mFClpAjzCpc]
@@ -59,8 +63,9 @@ You can view the widget live in all our themes at [WPZOOM](https://www.wpzoom.co
 
 * 80+ Sites/Social Networks supported
 * 400+ Custom Icons
-* 4 Icons Sets
+* 5 Icons Sets
 * FontAwesome Integration
+* Academicons Integration: 38 academia icons for academics
 * Drag & Drop Icons
 * Color Picker
 * Search by keywords
@@ -79,6 +84,13 @@ You can view the widget live in all our themes at [WPZOOM](https://www.wpzoom.co
 Icons are provided by [socicon](http://www.socicon.com) icon font.
 
 Twitter, Facebook, Google+, Instagram, Pinterest, Snapchat, Skype, Yelp, Feedburner, LinkedIn, Bloglovin', Lookbook, Feedly, Periscope, SoundCloud, Spotify, Last.fm, YouTube, Vimeo, Vine, Flickr, 500px, Tumblr, Blogger, Reddit, Dribbble, Envato, Behance, DeviantArt, GitHub, RSS, Disqus, Stackoverflow, and many others.
+
+= Credits =
+
+Social Icons are provided by [socicon](http://www.socicon.com) icon font.
+
+[Academicons](https://jpswalsh.github.io/academicons/) are provided by James Walsh.
+
 
 = Get Involved =
 
@@ -113,6 +125,17 @@ You can also create a hidden widget area using a plugin like Custom Sidebars if 
 
 == Changelog ==
 
+= 3.2.0 =
+* New icon set: [Academicons](https://jpswalsh.github.io/academicons/). Includes icons like Academia.edu, Google Scholar, Coursera, ResearchGate, and many more.
+
+= 3.1.0 =
+* New icons: HomeAdvisor, TuneIn (old), Stitcher, MyWed
+* Updated icons: Unsplash
+* New option: Add rel="noopener" to links
+* New option: Add rel="noreferrer" to links
+
+= 3.0.13 =
+* New option: Icon Alignment (Left/Center/Right)
 
 = 3.0.12 =
 * New icons: Mastodon
