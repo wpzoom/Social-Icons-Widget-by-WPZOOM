@@ -363,6 +363,20 @@
             }
         });
 
+        // hook for init js in Beaver builder.
+        $('body').on('fl-builder.preview-init', function (e, previewObj) {
+
+            var data = $(previewObj.elements.settings).find('.form-instance').data('instance');
+
+            if (data) {
+                $(previewObj.elements.settings).find('.form-instance').each(function (index, el) {
+                    var selector = 'wpz-form-class-' + index;
+                    $(this).addClass(selector);
+                    VueInstance('.' + selector, data);
+                });
+            }
+        });
+
         $(document).on('widget-added', function (e, instance) {
             e.preventDefault();
 

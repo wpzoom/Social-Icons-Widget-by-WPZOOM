@@ -194,3 +194,57 @@ border-radius: 0;
 .zoom-pointer-class.wp-pointer .wp-pointer-content h3:before {
     content: "\f529";
 }
+
+/* Fixes for Beaver builder */
+.fl-lightbox .socicon {
+    font-family: socicon;
+}
+
+.fl-lightbox .genericon {
+    font-family: 'Genericons';
+}
+
+.fl-lightbox .academicons {
+    font-family: 'Academicons';
+}
+
+.fl-lightbox .media-modal-content .icon-kit span {
+    line-height: 1;
+}
+
+.fl-lightbox .zoom-social-icons__list .zoom-social-icons__field-trash span {
+    font-size: 20px;
+}
+
+.fl-lightbox .form-instance .wp-color-result-text {
+    background: #f7f7f7;
+    border-radius: 0 2px 2px 0;
+    border-left: 1px solid #ccc;
+    color: #555;
+    display: block;
+    line-height: 22px;
+    padding: 0 6px;
+    text-align: center;
+}
+
+.fl-lightbox .button {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 26px;
+    height: 28px;
+    margin: 0;
+    padding: 0 10px 1px;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    -webkit-appearance: none;
+    border-radius: 3px;
+    white-space: nowrap;
+    box-sizing: border-box;
+    color: #555;
+    border-color: #ccc;
+    background: #f7f7f7;
+    box-shadow: 0 1px 0 #ccc;
+    vertical-align: top;
+}

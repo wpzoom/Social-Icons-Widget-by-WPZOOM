@@ -9364,6 +9364,121 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		add_action( 'siteorigin_panel_enqueue_admin_scripts', array( $this, 'admin_scripts' ) );
 		add_action( 'siteorigin_panel_enqueue_admin_scripts', array( $this, 'admin_js_templates' ) );
 
+		// Hooks to enqueue javascript for beaver builder.
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts_for_beaver' ) );
+		add_action( 'wp_footer', array( $this, 'admin_js_templates_for_beaver' ) );
+
+
+	}
+
+	function admin_js_templates_for_beaver() {
+		if ( ( class_exists( 'FLBuilderModel' ) && FLBuilderModel::is_builder_active() ) ) {
+			$this->admin_js_templates();
+		}
+	}
+
+	function enqueue_scripts_for_beaver() {
+
+		if ( ! ( class_exists( 'FLBuilderModel' ) && FLBuilderModel::is_builder_active() ) ) {
+			return;
+		}
+
+		wp_enqueue_style( 'social-icons-widget-admin', plugin_dir_url( $this->plugin_file ) . 'assets/css/social-icons-widget-admin.css', array( 'socicon' ), '20190406' );
+		wp_enqueue_style( 'wp-color-picker' );
+
+		wp_enqueue_script(
+			'iris',
+			admin_url( 'js/iris.min.js' ),
+			array(
+				'jquery-ui-draggable',
+				'jquery-ui-slider',
+				'jquery-touch-punch'
+			),
+			false,
+			1
+		);
+
+		wp_enqueue_script(
+			'wp-color-picker',
+			admin_url( 'js/color-picker.min.js' ),
+			array( 'iris' ),
+			false,
+			1
+		);
+
+		$colorpicker_l10n = array(
+			'clear'         => __( 'Clear' ),
+			'defaultString' => __( 'Default' ),
+			'pick'          => __( 'Select Color' ),
+			'current'       => __( 'Current Color' ),
+		);
+		wp_localize_script(
+			'wp-color-picker',
+			'wpColorPickerL10n',
+			$colorpicker_l10n
+		);
+
+
+		wp_enqueue_media();
+
+		wp_enqueue_script(
+			'zoom-social-icons-widget-vue-js',
+			plugin_dir_url( $this->plugin_file ) . 'assets/js/vue.js',
+			array(),
+			'20170209',
+			true
+		);
+
+		wp_enqueue_script(
+			'zoom-social-icons-widget-sortable-js',
+			plugin_dir_url( $this->plugin_file ) . 'assets/js/sortable.min.js',
+			array(),
+			'20170209',
+			true
+		);
+
+		wp_enqueue_script(
+			'zoom-social-icons-widget-vue-sortable-js',
+			plugin_dir_url( $this->plugin_file ) . 'assets/js/vue-sortable.js',
+			array( 'zoom-social-icons-widget-sortable-js' ),
+			'20170209',
+			true
+		);
+
+		wp_enqueue_script(
+			'zoom-social-icons-widget-uri-js',
+			plugin_dir_url( $this->plugin_file ) . 'assets/js/URI.min.js',
+			array(),
+			'20170209',
+			true
+		);
+
+		wp_enqueue_script(
+			'zoom-social-icons-widget-scroll-to',
+			plugin_dir_url( $this->plugin_file ) . 'assets/js/jquery.scrollTo.min.js',
+			array( 'jquery' ),
+			'20170209',
+			true
+		);
+
+		wp_enqueue_script(
+			'zoom-social-icons-widget',
+			plugin_dir_url( $this->plugin_file ) . 'assets/js/social-icons-widget-backend.js',
+			array(
+				'jquery',
+				'underscore',
+				'wp-util',
+				'wp-color-picker'
+			),
+			'20190405',
+			true
+		);
+
+		wp_localize_script( 'zoom-social-icons-widget', 'zoom_social_widget_data', array(
+			'icons'      => $this->get_icons_pack(),
+			'categories' => $this->get_icon_categories()
+		) );
+
 	}
 
 	/**

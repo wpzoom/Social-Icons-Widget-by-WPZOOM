@@ -1,9 +1,8 @@
 ;(function () {
 
   var vSortable = {};
-  var Sortable = typeof require === 'function'
-      ? require('sortablejs')
-      : window.Sortable;
+
+  var Sortable = window.Sortable;
 
   if (!Sortable) {
     throw new Error('[vue-sortable] cannot locate Sortable.js.')
