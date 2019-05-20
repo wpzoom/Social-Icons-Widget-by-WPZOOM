@@ -227,7 +227,8 @@
                         };
 
                         var domains = {
-                            'feedburner.google.com': 'rss'
+                            'feedburner.google.com': 'rss',
+                            'ok.ru':'odnoklassniki'
                         };
 
                         var domain = uri.domain() !== undefined ? uri.domain().split('.').shift() : uri.scheme();
