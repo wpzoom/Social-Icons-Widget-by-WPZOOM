@@ -623,6 +623,15 @@
     content: "\e00d"
 }
 
+.socicon-ok {
+    background-color: #f48420;
+    color: #f48420;
+}
+
+.socicon-ok:before {
+    content: "\e00d"
+}
+
 .socicon-overwatch {
     background-color: #9E9E9E;
     color: #9E9E9E;
@@ -881,6 +890,15 @@
 }
 
 .socicon-telegram:before {
+    content: "\e06e"
+}
+
+.socicon-tg {
+    background-color: #0088cc;
+    color: #0088cc;
+}
+
+.socicon-tg:before {
     content: "\e06e"
 }
 

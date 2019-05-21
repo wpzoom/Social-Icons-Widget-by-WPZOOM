@@ -262,7 +262,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			array(
 				'icon'     => 'instagram',
 				'category' => array( 'photography', 'social-media' ),
-				'color'    => '#E1306C'
+				'color'    => '#e4405f'
 			),
             array(
                 'icon'     => 'itunes',
@@ -344,6 +344,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'social-media' ),
 				'color'    => '#f48420'
 			),
+            array(
+                'icon'     => 'ok',
+                'category' => array( 'social-media' ),
+                'color'    => '#f48420'
+            ),
 			array(
 				'icon'     => 'outlook',
 				'category' => array( 'communication', 'web-tools' ),
@@ -489,6 +494,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'communication', 'software' ),
 				'color'    => '#0088cc'
 			),
+            array(
+                'icon'     => 'tg',
+                'category' => array( 'communication', 'software' ),
+                'color'    => '#0088cc'
+            ),
             array(
                 'icon'     => 'tidal',
                 'category' => array( 'music' ),
@@ -9326,6 +9336,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	 */
 	protected $protocols = array(
 		'skype',
+        'tg',
 		'viber',
 		'http',
 		'https',
@@ -9441,7 +9452,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			'zoom-social-icons-widget-vue-sortable-js',
 			plugin_dir_url( $this->plugin_file ) . 'assets/js/vue-sortable.js',
 			array( 'zoom-social-icons-widget-sortable-js' ),
-			'20170209',
+			'20190521',
 			true
 		);
 
@@ -9470,7 +9481,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'wp-util',
 				'wp-color-picker'
 			),
-			'20190405',
+			'20190521',
 			true
 		);
 
@@ -9620,7 +9631,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	public function admin_scripts() {
 
 		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'assets/css/socicon.css', array(), '20190406' );
-		wp_enqueue_style( 'social-icons-widget-admin', plugin_dir_url( $this->plugin_file ) . 'assets/css/social-icons-widget-admin.css', array( 'socicon' ), '20190406' );
+		wp_enqueue_style( 'social-icons-widget-admin', plugin_dir_url( $this->plugin_file ) . 'assets/css/social-icons-widget-admin.css', array( 'socicon' ), '20190521' );
 		wp_enqueue_style( 'genericons', plugin_dir_url( $this->plugin_file ) . 'assets/css/genericons.css', array(), '20180625' );
         wp_enqueue_style( 'academicons', plugin_dir_url( $this->plugin_file ) . 'assets/css/academicons.min.css', array(), '20190406' );
 		wp_enqueue_style( 'fontawesome', plugin_dir_url( $this->plugin_file ) . 'assets/css/font-awesome.min.css', array(), '20180625' );

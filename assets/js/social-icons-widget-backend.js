@@ -219,6 +219,7 @@
                             'mailto': 'mail',
                             'viber': 'viber',
                             'skype': 'skype',
+                            'tg': 'tg',
                             'tel': 'mobile',
                             'sms': 'comments',
                             'fax': 'fax',
@@ -228,7 +229,8 @@
 
                         var domains = {
                             'feedburner.google.com': 'rss',
-                            'ok.ru':'odnoklassniki'
+                            'ok.ru':'odnoklassniki',
+                            't.me':'telegram'
                         };
 
                         var domain = uri.domain() !== undefined ? uri.domain().split('.').shift() : uri.scheme();
