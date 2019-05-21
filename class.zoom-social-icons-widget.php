@@ -10526,9 +10526,13 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 				<?php
 				$rule        = ( $instance['icon_style'] === 'with-canvas' ) ? 'background-color' : 'color';
-				$hover_style = empty( $field['color_picker_hover'] ) ? '' : 'data-hover-rule="' . $rule . '" data-hover-color="' . $field['color_picker_hover'] . '"'; ?>
+				$hover_style = empty( $field['color_picker_hover'] ) ? '' : 'data-hover-rule="' . $rule . '" data-hover-color="' . $field['color_picker_hover'] . '"';
+				$rel_tag = ! empty( $instance['no_follow'] ) ? 'nofollow' : '';
+				$rel_tag.= ! empty( $instance['no_opener'] ) ? ' noopener' : '';
+				$rel_tag.= ! empty( $instance['no_referrer'] ) ? ' noreferrer' : '';
+				?>
 				<li class="zoom-social_icons-list__item">
-					<a class="zoom-social_icons-list__link" href="<?php echo esc_url( $field['url'], $this->protocols ); ?>" <?php echo( $instance['open_new_tab'] === 'true' ? 'target="_blank"' : '' ); ?> <?php echo( $instance['no_follow'] === 'true' ? 'rel="nofollow"' : '' ); ?> <?php echo( $instance['no_opener'] === 'true' ? 'rel="noopener"' : '' ); ?> <?php echo( $instance['no_referrer'] === 'true' ? 'rel="noreferrer"' : '' ); ?>>
+					<a class="zoom-social_icons-list__link" href="<?php echo esc_url( $field['url'], $this->protocols ); ?>" <?php echo( $instance['open_new_tab'] === 'true' ? 'target="_blank"' : '' ); ?> <?php echo( strlen($rel_tag) > 0 ? 'rel="'.$rel_tag.'"' : '' ); ?>>
 						<?php if ( ! empty( $field['icon'] ) && ! empty( $field['icon_kit'] ) && ! empty( $field['color_picker'] ) ) {
 							$class = $field['icon_kit'] . ' ' . $field['icon_kit'] . '-' . $field['icon'];
 							$style = $rule . ' : ' . $field['color_picker'];
