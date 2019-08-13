@@ -65,6 +65,15 @@
     content: "\e916"
 }
 
+.socicon-aparat {
+    background-color: #EA225D;
+    color: #EA225D;
+}
+
+.socicon-aparat:before {
+    content: "\e90e"
+}
+
 .socicon-apple {
     background-color: #B9BFC1;
     color: #B9BFC1;
@@ -749,6 +758,15 @@
     content: "\e00b"
 }
 
+.socicon-shutterstock {
+    background-color: #FC2321;
+    color: #FC2321;
+}
+
+.socicon-shutterstock:before {
+    content: "\e90d"
+}
+
 .socicon-skype {
     background-color: #28abe3;
     color: #28abe3;
@@ -909,6 +927,24 @@
 
 .socicon-tidal:before {
     content: "\e910"
+}
+
+.socicon-tiktok {
+    background-color: #69C9D0;
+    color: #69C9D0;
+}
+
+.socicon-tiktok:before {
+    content: "\e90c"
+}
+
+.socicon-tiktok2 {
+    background-color: #010101;
+    color: #010101;
+}
+
+.socicon-tiktok2:before {
+    content: "\e96b"
 }
 
 .socicon-tripadvisor:before {
@@ -1128,6 +1164,15 @@
 
 .socicon-zerply:before {
     content: "\e02c"
+}
+
+.socicon-zillow {
+    background-color: #1277e1;
+    color: #1277e1;
+}
+
+.socicon-zillow:before {
+    content: "\e938"
 }
 
 .socicon-zynga {

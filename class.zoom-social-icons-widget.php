@@ -34,6 +34,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
                 'category' => array( 'business' ),
                 'color'    => '#299F37'
             ),
+            array(
+                'icon'     => 'aparat',
+                'category' => array( 'video' ),
+                'color'    => '#EA225D'
+            ),
 			array(
 				'icon'     => 'apple',
 				'category' => array( 'software' ),
@@ -414,6 +419,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'news', 'communication', 'web-tools' ),
 				'color'    => '#f26109'
 			),
+            array(
+                'icon'     => 'shutterstock',
+                'category' => array( 'image' ),
+                'color'    => '#FC2321'
+            ),
 			array(
 				'icon'     => 'skype',
 				'category' => array( 'software', 'communication', 'video' ),
@@ -503,6 +513,16 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
                 'icon'     => 'tidal',
                 'category' => array( 'music' ),
                 'color'    => '#01FFFF'
+            ),
+            array(
+                'icon'     => 'tiktok',
+                'category' => array( 'social-media' ),
+                'color'    => '#69C9D0'
+            ),
+            array(
+                'icon'     => 'tiktok2',
+                'category' => array( 'social-media' ),
+                'color'    => '#010101'
             ),
 			array(
 				'icon'     => 'tripadvisor',
@@ -624,6 +644,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'video', 'games' ),
 				'color'    => '#9DBC7A'
 			),
+            array(
+                'icon'     => 'zillow',
+                'category' => array( 'real-estate' ),
+                'color'    => '#1277e1'
+            ),
 			array(
 				'icon'     => 'zynga',
 				'category' => array( 'games' ),
@@ -9630,7 +9655,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	 */
 	public function admin_scripts() {
 
-		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'assets/css/socicon.css', array(), '20190406' );
+		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'assets/css/socicon.css', array(), '20190813' );
 		wp_enqueue_style( 'social-icons-widget-admin', plugin_dir_url( $this->plugin_file ) . 'assets/css/social-icons-widget-admin.css', array( 'socicon' ), '20190521' );
 		wp_enqueue_style( 'genericons', plugin_dir_url( $this->plugin_file ) . 'assets/css/genericons.css', array(), '20180625' );
         wp_enqueue_style( 'academicons', plugin_dir_url( $this->plugin_file ) . 'assets/css/academicons.min.css', array(), '20190406' );
@@ -10585,7 +10610,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	 * Scripts & styles for front-end display of widget.
 	 */
 	public function scripts() {
-		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'assets/css/socicon.css', array(), '20181009' );
+		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'assets/css/socicon.css', array(), '20190813' );
 		wp_enqueue_style( 'genericons', plugin_dir_url( $this->plugin_file ) . 'assets/css/genericons.css', array(), '20180625' );
         wp_enqueue_style( 'academicons', plugin_dir_url( $this->plugin_file ) . 'assets/css/academicons.min.css', array(), '20190406' );
 		wp_enqueue_style( 'fontawesome', plugin_dir_url( $this->plugin_file ) . 'assets/css/font-awesome.min.css', array(), '20180625' );
