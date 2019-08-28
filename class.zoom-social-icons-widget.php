@@ -9861,7 +9861,9 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 					'icon'               => $new_instance['icon_fields'][ $i ],
 					'icon_kit'           => $new_instance['icon_kit_fields'][ $i ],
 					'color_picker'       => $new_instance['color_picker_fields'][ $i ],
-					'color_picker_hover' => $new_instance['color_picker_hover_fields'][ $i ]
+					'color_picker_hover' => $new_instance['color_picker_hover_fields'][ $i ],
+					'aria_label'         => ! empty( $new_instance['aria_label_fields'][ $i ] ) ? $new_instance['aria_label_fields'][ $i ] : '',
+					'is_rel_me'          => ( ! empty( $new_instance['is_rel_me_fields'][ $i ] ) && $new_instance['is_rel_me_fields'][ $i ] === 'true' ) ? 'true' : 'false'
 				);
 			}
 		}
@@ -9898,6 +9900,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		$instance_attr = '';
 		$default_field = $this->inject_fields_with_data( $this->get_default_field() );
 		$default_field = array_pop( $default_field );
+
 		if ( ! empty( $instance ) ) {
 			$encoded = array(
 				'id'            => $this->id,
@@ -10232,8 +10235,39 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 						<a v-show='fields.length > 1' class="zoom-social-icons__field-trash" href="#"
 						   @click.prevent="clickOnDeleteIconHandler(key)"><span
 								class="dashicons dashicons-trash"></span></a>
-
+						<span :class="toggleExtraOptionsClass(key)" @click.prevent='toggleExtraOptions(key, field)'></span>
 						<br style="clear:both">
+						<div class="extra-options" v-show="field.show_extra_options == true">
+							<p>
+								<label :for="field.aria_label_field_id">
+									<?php _e( 'Aria label', 'zoom-social-icons-widget' ); ?>
+									<input class="widefat"
+									       :id="field.aria_label_field_id"
+									       :name="field.aria_label_field_name" v-model="field.aria_label" type="text"
+									       :value="field.aria_label_field_name"
+									       placeholder="<?php _e( 'Label', 'zoom-social-icons-widget' ) ?>">
+								</label>
+							</p>
+
+							<p>
+								<input type="hidden"
+								       :true-value="'true'"
+								       :false-value="'false'"
+								       :value="field.is_rel_me"
+								       v-model="field.is_rel_me"
+								       :name="field.is_rel_me_field_name"/>
+								<input class="checkbox" type="checkbox"
+								       v-model="field.is_rel_me"
+								       :true-value="'true'"
+								       :false-value="'false'"
+								       :id="field.is_rel_me_field_id"
+								       :value="field.is_rel_me"/>
+								<label
+									:for="field.is_rel_me_field_id"><?php _e( "Is rel='me' ? ", 'zoom-social-icons-widget' ); ?></label>
+							</p>
+
+
+						</div>
 					</li>
 
 				</template>
@@ -10263,13 +10297,13 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	 */
 	public function get_defaults() {
 		return apply_filters( 'zoom_social_icons_get_defaults', array(
-				'title'                     => esc_html__('Follow us', 'zoom-social-icons-widget'),
+				'title'                     => esc_html__( 'Follow us', 'zoom-social-icons-widget' ),
 				'description'               => '',
 				'show_icon_labels'          => 'false',
 				'open_new_tab'              => 'true',
 				'no_follow'                 => 'false',
-                'no_opener'                 => 'false',
-                'no_referrer'               => 'false',
+				'no_opener'                 => 'false',
+				'no_referrer'               => 'false',
 				'icon_style'                => 'with-canvas',
 				'icon_alignment'            => 'none',
 				'icon_canvas_style'         => 'rounded',
@@ -10284,7 +10318,9 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 						'icon'               => 'facebook',
 						'icon_kit'           => 'socicon',
 						'color_picker'       => '#3b5998',
-						'color_picker_hover' => '#3b5998'
+						'color_picker_hover' => '#3b5998',
+						'aria_label'         => '',
+						'is_rel_me'          => 'false'
 					),
 					array(
 						'url'                => 'https://twitter.com/',
@@ -10292,7 +10328,10 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 						'icon'               => 'twitter',
 						'icon_kit'           => 'socicon',
 						'color_picker'       => '#55acee',
-						'color_picker_hover' => '#55acee'
+						'color_picker_hover' => '#55acee',
+						'aria_label'         => '',
+						'is_rel_me'          => 'false'
+
 					),
 					array(
 						'url'                => 'https://instagram.com/',
@@ -10300,7 +10339,9 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 						'icon'               => 'instagram',
 						'icon_kit'           => 'socicon',
 						'color_picker'       => '#e4405f',
-						'color_picker_hover' => '#e4405f'
+						'color_picker_hover' => '#e4405f',
+						'aria_label'         => '',
+						'is_rel_me'          => 'false'
 					),
 				)
 			)
@@ -10450,6 +10491,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 		$will_be_merged = array(
 			'show_modal'                    => false,
+			'show_extra_options'            => false,
 			'url_field_id'                  => $this->get_field_id( 'url_fields' ),
 			'url_field_name'                => $this->get_field_name( 'url_fields' ) . '[]',
 			'label_field_id'                => $this->get_field_id( 'label_fields' ),
@@ -10462,10 +10504,14 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			'icon_field_name'               => $this->get_field_name( 'icon_fields' ) . '[]',
 			'icon_kit_field_id'             => $this->get_field_id( 'icon_kit_fields' ),
 			'icon_kit_field_name'           => $this->get_field_name( 'icon_kit_fields' ) . '[]',
-		);
+			'aria_label_field_id'           => $this->get_field_id( 'aria_label_fields' ),
+			'aria_label_field_name'         => $this->get_field_name( 'aria_label_fields' ) . '[]',
+			'is_rel_me_field_id'            => $this->get_field_id( 'is_rel_me_fields' ),
+			'is_rel_me_field_name'          => $this->get_field_name( 'is_rel_me_fields' ) . '[]'
+
+	);
 
 		foreach ( $fields as $field ) {
-
 			$merged_fields[] = array_merge( $field, $will_be_merged );
 		}
 
@@ -10485,7 +10531,9 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'icon'               => 'wordpress',
 				'icon_kit'           => 'socicon',
 				'color_picker'       => '#1e73be',
-				'color_picker_hover' => '#1e73be'
+				'color_picker_hover' => '#1e73be',
+				'is_rel_me'          => 'false',
+				'aria_label'         => ''
 			)
 		);
 	}
@@ -10566,9 +10614,15 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				$rel_tag = 'true' == $instance['no_follow'] ? 'nofollow' : '';
 				$rel_tag .= 'true' == $instance['no_opener'] ? ' noopener' : '';
 				$rel_tag .= 'true' == $instance['no_referrer'] ? ' noreferrer' : '';
-				?>
+				$aria_image_role='';
+				if ( ! empty( $field['aria_label'] ) ) {
+					$aria_image_role = "role='img' aria-label='" . $field['aria_label'] . "'";
+				}
+				if ( ! empty( $field['is_rel_me'] ) && $field['is_rel_me'] == 'true' ) {
+					$rel_tag .= " me";
+				} ?>
 				<li class="zoom-social_icons-list__item">
-					<a class="zoom-social_icons-list__link" href="<?php echo esc_url( $field['url'], $this->protocols ); ?>" <?php echo( $instance['open_new_tab'] === 'true' ? 'target="_blank"' : '' ); ?> <?php echo( strlen($rel_tag) > 0 ? 'rel="'.$rel_tag.'"' : '' ); ?>>
+					<a class="zoom-social_icons-list__link" href="<?php echo esc_url( $field['url'], $this->protocols ); ?>" <?php echo( $instance['open_new_tab'] === 'true' ? 'target="_blank"' : '' ); ?> <?php echo( strlen($rel_tag) > 0 ? 'rel="'.$rel_tag.'"' : '' ); ?> <?php echo $aria_image_role;?>>
 						<?php if ( ! empty( $field['icon'] ) && ! empty( $field['icon_kit'] ) && ! empty( $field['color_picker'] ) ) {
 							$class = $field['icon_kit'] . ' ' . $field['icon_kit'] . '-' . $field['icon'];
 							$style = $rule . ' : ' . $field['color_picker'];

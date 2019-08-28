@@ -249,7 +249,20 @@
                     },
                 },
                 methods: {
+                    toggleExtraOptionsClass: function (key, $event) {
+                        var showExtraOptions = this.fields[key].show_extra_options;
+                        var classObject = {
+                            'toggle-extra-options': true,
+                            'dashicons': true,
+                            'dashicons-arrow-down': !showExtraOptions,
+                            'dashicons-arrow-up': showExtraOptions
+                        };
+                        return classObject;
+                    },
 
+                    toggleExtraOptions: function(key, $event){
+                        this.fields[key].show_extra_options = ! this.fields[key].show_extra_options;
+                    },
                     onUpdate: function () {
                         $(this.$el).find('input:first').trigger('change');
 
