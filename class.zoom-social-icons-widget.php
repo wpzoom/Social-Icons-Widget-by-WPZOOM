@@ -9866,6 +9866,13 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 					'is_rel_me'          => ( ! empty( $new_instance['is_rel_me_fields'][ $i ] ) && $new_instance['is_rel_me_fields'][ $i ] === 'true' ) ? 'true' : 'false'
 				);
 			}
+
+            /**
+             * Register strings for translation.
+             */
+            if (function_exists('icl_register_string')) {
+                icl_register_string('zoom-social-icons-widget', 'url-' . $i, $url);
+            }
 		}
 
 		return $instance;
@@ -10128,7 +10135,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 					printf( '<input  type="hidden" id="%1$s" name="%2$s"  value="%3$s">',
 						$field['url_field_id'],
 						$field['url_field_name'],
-						esc_attr( $field['url'] )
+                        esc_attr($field['url'])
 					);
 
 					printf( '<input type="hidden" id="%1$s" name="%2$s" value="%3$s">',
@@ -10606,7 +10613,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		<ul class="zoom-social-icons-list <?php echo esc_attr( implode( ' ', $class_list ) ); ?>">
 
 			<?php
-			foreach ( $instance['fields'] as $field ) : ?>
+			foreach ( $instance['fields'] as $key => $field ) : ?>
 
 				<?php
 				$rule        = ( $instance['icon_style'] === 'with-canvas' ) ? 'background-color' : 'color';
@@ -10615,6 +10622,12 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				$rel_tag .= 'true' == $instance['no_opener'] ? ' noopener' : '';
 				$rel_tag .= 'true' == $instance['no_referrer'] ? ' noreferrer' : '';
 				$aria_image_role='';
+				$url = esc_url( $field['url'], $this->protocols );
+
+                if (function_exists('icl_t')) {
+                    $url = icl_t('zoom-social-icons-widget', 'url-' . $key, $field['url']);
+                }
+
 				if ( ! empty( $field['aria_label'] ) ) {
 					$aria_image_role = "role='img' aria-label='" . $field['aria_label'] . "'";
 				}
@@ -10622,7 +10635,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 					$rel_tag .= " me";
 				} ?>
 				<li class="zoom-social_icons-list__item">
-					<a class="zoom-social_icons-list__link" href="<?php echo esc_url( $field['url'], $this->protocols ); ?>" <?php echo( $instance['open_new_tab'] === 'true' ? 'target="_blank"' : '' ); ?> <?php echo( strlen($rel_tag) > 0 ? 'rel="'.$rel_tag.'"' : '' ); ?> <?php echo $aria_image_role;?>>
+					<a class="zoom-social_icons-list__link" href="<?php echo $url; ?>" <?php echo( $instance['open_new_tab'] === 'true' ? 'target="_blank"' : '' ); ?> <?php echo( strlen($rel_tag) > 0 ? 'rel="'.$rel_tag.'"' : '' ); ?> <?php echo $aria_image_role;?>>
 						<?php if ( ! empty( $field['icon'] ) && ! empty( $field['icon_kit'] ) && ! empty( $field['color_picker'] ) ) {
 							$class = $field['icon_kit'] . ' ' . $field['icon_kit'] . '-' . $field['icon'];
 							$style = $rule . ' : ' . $field['color_picker'];
