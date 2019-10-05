@@ -56,6 +56,11 @@ border-radius: 0;
     padding: 10px 25px;
 }
 
+.zoom-social-icons__field .extra-options input[type=text] {
+    margin-top: 5px;
+}
+
+
 .zoom-social-icons__field-icon-handler.socicon, .zoom-social-icons__field-icon-handler.genericon, .zoom-social-icons__field-icon-handler.academicons, .zoom-social-icons__field-icon-handler.dashicons, .zoom-social-icons__field-icon-handler.fa {
     color: white;
     padding: 4px;

@@ -9863,7 +9863,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 					'color_picker'       => $new_instance['color_picker_fields'][ $i ],
 					'color_picker_hover' => $new_instance['color_picker_hover_fields'][ $i ],
 					'aria_label'         => ! empty( $new_instance['aria_label_fields'][ $i ] ) ? $new_instance['aria_label_fields'][ $i ] : '',
-					'is_rel_me'          => ( ! empty( $new_instance['is_rel_me_fields'][ $i ] ) && $new_instance['is_rel_me_fields'][ $i ] === 'true' ) ? 'true' : 'false'
+					// 'is_rel_me'          => ( ! empty( $new_instance['is_rel_me_fields'][ $i ] ) && $new_instance['is_rel_me_fields'][ $i ] === 'true' ) ? 'true' : 'false'
 				);
 			}
 
@@ -10247,7 +10247,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 						<div class="extra-options" v-show="field.show_extra_options == true">
 							<p>
 								<label :for="field.aria_label_field_id">
-									<?php _e( 'Aria label', 'zoom-social-icons-widget' ); ?>
+									<?php _e( '<code>"aria-label"</code> description', 'zoom-social-icons-widget' ); ?>
 									<input class="widefat"
 									       :id="field.aria_label_field_id"
 									       :name="field.aria_label_field_name" v-model="field.aria_label" type="text"
@@ -10256,7 +10256,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 								</label>
 							</p>
 
-							<p>
+                            <p class="description">
+                                <?php echo wp_kses_post( __( 'This is used to provide a description of this icon to screen reader users (for accessibility purposes).', 'zoom-social-icons-widget' ) ); ?>
+                            </p>
+
+							<?php /* <p>
 								<input type="hidden"
 								       :true-value="'true'"
 								       :false-value="'false'"
@@ -10270,9 +10274,9 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 								       :id="field.is_rel_me_field_id"
 								       :value="field.is_rel_me"/>
 								<label
-									:for="field.is_rel_me_field_id"><?php _e( "Is rel='me' ? ", 'zoom-social-icons-widget' ); ?></label>
+									:for="field.is_rel_me_field_id"><?php _e( 'Add <code>rel="me"</code>?', 'zoom-social-icons-widget' ); ?></label>
 							</p>
-
+                            */ ?>
 
 						</div>
 					</li>
@@ -10327,7 +10331,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 						'color_picker'       => '#3b5998',
 						'color_picker_hover' => '#3b5998',
 						'aria_label'         => '',
-						'is_rel_me'          => 'false'
+						// 'is_rel_me'          => 'false'
 					),
 					array(
 						'url'                => 'https://twitter.com/',
@@ -10337,7 +10341,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 						'color_picker'       => '#55acee',
 						'color_picker_hover' => '#55acee',
 						'aria_label'         => '',
-						'is_rel_me'          => 'false'
+						// 'is_rel_me'          => 'false'
 
 					),
 					array(
@@ -10348,7 +10352,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 						'color_picker'       => '#e4405f',
 						'color_picker_hover' => '#e4405f',
 						'aria_label'         => '',
-						'is_rel_me'          => 'false'
+						// 'is_rel_me'          => 'false'
 					),
 				)
 			)
@@ -10513,8 +10517,8 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			'icon_kit_field_name'           => $this->get_field_name( 'icon_kit_fields' ) . '[]',
 			'aria_label_field_id'           => $this->get_field_id( 'aria_label_fields' ),
 			'aria_label_field_name'         => $this->get_field_name( 'aria_label_fields' ) . '[]',
-			'is_rel_me_field_id'            => $this->get_field_id( 'is_rel_me_fields' ),
-			'is_rel_me_field_name'          => $this->get_field_name( 'is_rel_me_fields' ) . '[]'
+			// 'is_rel_me_field_id'            => $this->get_field_id( 'is_rel_me_fields' ),
+			// 'is_rel_me_field_name'          => $this->get_field_name( 'is_rel_me_fields' ) . '[]'
 
 	);
 
@@ -10539,7 +10543,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'icon_kit'           => 'socicon',
 				'color_picker'       => '#1e73be',
 				'color_picker_hover' => '#1e73be',
-				'is_rel_me'          => 'false',
+				// 'is_rel_me'          => 'false',
 				'aria_label'         => ''
 			)
 		);
@@ -10631,11 +10635,12 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				if ( ! empty( $field['aria_label'] ) ) {
 					$aria_image_role = "role='img' aria-label='" . $field['aria_label'] . "'";
 				}
-				if ( ! empty( $field['is_rel_me'] ) && $field['is_rel_me'] == 'true' ) {
-					$rel_tag .= " me";
-				} ?>
+				// if ( ! empty( $field['is_rel_me'] ) && $field['is_rel_me'] == 'true' ) {
+				// 	$rel_tag .= " me";
+				// }
+                ?>
 				<li class="zoom-social_icons-list__item">
-					<a class="zoom-social_icons-list__link" href="<?php echo $url; ?>" <?php echo( $instance['open_new_tab'] === 'true' ? 'target="_blank"' : '' ); ?> <?php echo( strlen($rel_tag) > 0 ? 'rel="'.$rel_tag.'"' : '' ); ?> <?php echo $aria_image_role;?>>
+					<a class="zoom-social_icons-list__link" href="<?php echo $url; ?>" <?php echo( $instance['open_new_tab'] === 'true' ? 'target="_blank"' : '' ); ?> <?php echo( strlen($rel_tag) > 0 ? 'rel="'.$rel_tag.'"' : '' ); ?>>
 						<?php if ( ! empty( $field['icon'] ) && ! empty( $field['icon_kit'] ) && ! empty( $field['color_picker'] ) ) {
 							$class = $field['icon_kit'] . ' ' . $field['icon_kit'] . '-' . $field['icon'];
 							$style = $rule . ' : ' . $field['color_picker'];
@@ -10655,7 +10660,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
                             <span class="screen-reader-text"><?php echo esc_html( $field['icon'] ); ?></span>
                         <?php endif; ?>
 
-						<span class="zoom-social_icons-list-span <?php echo $class ?>" <?php echo $hover_style ?> style="<?php echo $style ?>"></span>
+						<span class="zoom-social_icons-list-span <?php echo $class ?>" <?php echo $hover_style ?> style="<?php echo $style ?>" <?php echo $aria_image_role;?>></span>
 
 						<?php
 						if ( $instance['show_icon_labels'] === 'true' ) : ?>
