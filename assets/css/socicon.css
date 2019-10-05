@@ -1139,6 +1139,24 @@
     content: "\e005"
 }
 
+.socicon-yandex {
+    background-color: #ff0000;
+    color: #ff0000;
+}
+
+.socicon-yandex:before {
+    content: "\e068"
+}
+
+.socicon-zen-yandex {
+    background-color: #000;
+    color: #000;
+}
+
+.socicon-zen-yandex:before {
+    content: "\e911"
+}
+
 .socicon-yelp {
     background-color: #c83218;
     color: #c83218;

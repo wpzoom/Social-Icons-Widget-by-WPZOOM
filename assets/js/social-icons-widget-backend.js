@@ -230,7 +230,9 @@
                         var domains = {
                             'feedburner.google.com': 'rss',
                             'ok.ru':'odnoklassniki',
-                            't.me':'telegram'
+                            't.me':'telegram',
+                            'zen.yandex.com':'zen-yandex',
+                            'zen.yandex.ru':'zen-yandex'
                         };
 
                         var domain = uri.domain() !== undefined ? uri.domain().split('.').shift() : uri.scheme();
