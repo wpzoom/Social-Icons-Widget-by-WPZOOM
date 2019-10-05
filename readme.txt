@@ -125,6 +125,9 @@ You can also create a hidden widget area using a plugin like Custom Sidebars if 
 
 == Changelog ==
 
+= 3.3.2 =
+* New icons: Yandex Zen, Yandex.
+
 = 3.3.1 =
 * New icons: Zillow, TikTok, Shutterstock, Aparat
 
