@@ -335,6 +335,15 @@
     content: "\e041"
 }
 
+.socicon-facebook2 {
+    background-color: #0D7BED;
+    color: #0D7BED;
+}
+
+.socicon-facebook2:before {
+    content: "\e91a"
+}
+
 .socicon-feedburner {
     background-color: #FFCC00;
     color: #FFCC00;
@@ -525,8 +534,8 @@
 }
 
 .socicon-linkedin {
-    background-color: #3371b7;
-    color: #3371b7;
+    background-color: #0077B5;
+    color: #0077B5;
 }
 
 .socicon-linkedin:before {
@@ -920,6 +929,15 @@
     content: "\e06e"
 }
 
+.socicon-thefork {
+    background-color: #589548;
+    color: #589548;
+}
+
+.socicon-thefork:before {
+    content: "\e912"
+}
+
 .socicon-tidal {
     background-color: #01FFFF;
     color: #01FFFF;
@@ -996,8 +1014,8 @@
 }
 
 .socicon-twitter {
-    background-color: #55acee;
-    color: #55acee;
+    background-color: #1da1f2;
+    color: #1da1f2;
 }
 
 .socicon-twitter:before {
@@ -1167,8 +1185,8 @@
 }
 
 .socicon-youtube {
-    background-color: #e02a20;
-    color: #e02a20;
+    background-color: #ff0000;
+    color: #ff0000;
 }
 
 .socicon-youtube:before {
@@ -1191,6 +1209,15 @@
 
 .socicon-zillow:before {
     content: "\e938"
+}
+
+.socicon-zomato {
+    background-color: #cb202d;
+    color: #cb202d;
+}
+
+.socicon-zomato:before {
+    content: "\e072"
 }
 
 .socicon-zynga {

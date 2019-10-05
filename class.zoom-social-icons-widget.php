@@ -184,6 +184,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'category' => array( 'social-media' ),
 				'color'    => '#3b5998'
 			),
+            array(
+                'icon'     => 'facebook2',
+                'category' => array( 'social-media' ),
+                'color'    => '#0D7BED'
+            ),
 			array(
 				'icon'     => 'feedburner',
 				'category' => array( 'web-tools', 'news' ),
@@ -292,7 +297,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			array(
 				'icon'     => 'linkedin',
 				'category' => array( 'programming', 'social-media' ),
-				'color'    => '#3371b7'
+				'color'    => '#0077B5'
 			),
 			array(
 				'icon'     => 'lookbook',
@@ -510,6 +515,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
                 'color'    => '#0088cc'
             ),
             array(
+                'icon'     => 'thefork',
+                'category' => array( 'restaurant' ),
+                'color'    => '#589548'
+            ),
+            array(
                 'icon'     => 'tidal',
                 'category' => array( 'music' ),
                 'color'    => '#01FFFF'
@@ -552,7 +562,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			array(
 				'icon'     => 'twitter',
 				'category' => array( 'social-media' ),
-				'color'    => '#55acee'
+				'color'    => '#1da1f2'
 			),
             array(
                 'icon'     => 'unsplash',
@@ -658,6 +668,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
                 'icon'     => 'zillow',
                 'category' => array( 'real-estate' ),
                 'color'    => '#1277e1'
+            ),
+            array(
+                'icon'     => 'zomato',
+                'category' => array( 'restaurant' ),
+                'color'    => '#cb202d'
             ),
 			array(
 				'icon'     => 'zynga',
@@ -9429,7 +9444,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			return;
 		}
 
-		wp_enqueue_style( 'social-icons-widget-admin', plugin_dir_url( $this->plugin_file ) . 'assets/css/social-icons-widget-admin.css', array( 'socicon' ), '20190406' );
+		wp_enqueue_style( 'social-icons-widget-admin', plugin_dir_url( $this->plugin_file ) . 'assets/css/social-icons-widget-admin.css', array( 'socicon' ), '20191005' );
 		wp_enqueue_style( 'wp-color-picker' );
 
 		wp_enqueue_script(
@@ -9516,7 +9531,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'wp-util',
 				'wp-color-picker'
 			),
-			'20190813',
+			'20191005',
 			true
 		);
 
@@ -9665,8 +9680,8 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	 */
 	public function admin_scripts() {
 
-		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'assets/css/socicon.css', array(), '201908132' );
-		wp_enqueue_style( 'social-icons-widget-admin', plugin_dir_url( $this->plugin_file ) . 'assets/css/social-icons-widget-admin.css', array( 'socicon' ), '20190521' );
+		wp_enqueue_style( 'socicon', plugin_dir_url( $this->plugin_file ) . 'assets/css/socicon.css', array(), '20191005' );
+		wp_enqueue_style( 'social-icons-widget-admin', plugin_dir_url( $this->plugin_file ) . 'assets/css/social-icons-widget-admin.css', array( 'socicon' ), '20191005' );
 		wp_enqueue_style( 'genericons', plugin_dir_url( $this->plugin_file ) . 'assets/css/genericons.css', array(), '20180625' );
         wp_enqueue_style( 'academicons', plugin_dir_url( $this->plugin_file ) . 'assets/css/academicons.min.css', array(), '20190406' );
 		wp_enqueue_style( 'fontawesome', plugin_dir_url( $this->plugin_file ) . 'assets/css/font-awesome.min.css', array(), '20180625' );
@@ -9852,7 +9867,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			$instance['icon_alignment'] = $new_instance['icon_alignment'];
 		}
 
-		if ( in_array( $new_instance['icon_canvas_style'], array( 'rounded', 'round', 'square' ) ) ) {
+		if ( in_array( $new_instance['icon_canvas_style'], array( 'round', 'rounded', 'square' ) ) ) {
 			$instance['icon_canvas_style'] = $new_instance['icon_canvas_style'];
 		}
 
@@ -10050,10 +10065,10 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 					id="<?php echo $this->get_field_id( 'icon_canvas_style' ); ?>"
 					v-model="icon_canvas_style"
 					class="widefat zoom-social-icons-change-icon-canvas-style">
-					<option
-						value="rounded"><?php esc_html_e( 'Rounded Corners', 'zoom-social-icons-widget' ); ?></option>
-					<option
+ 					<option
 						value="round"><?php esc_html_e( 'Round', 'zoom-social-icons-widget' ); ?></option>
+                    <option
+                        value="rounded"><?php esc_html_e( 'Rounded Corners', 'zoom-social-icons-widget' ); ?></option>
 					<option
 						value="square"><?php esc_html_e( 'Square', 'zoom-social-icons-widget' ); ?></option>
 				</select>
@@ -10261,8 +10276,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 									<input class="widefat"
 									       :id="field.aria_label_field_id"
 									       :name="field.aria_label_field_name" v-model="field.aria_label" type="text"
-									       :value="field.aria_label_field_name"
-									       placeholder="<?php _e( 'Label', 'zoom-social-icons-widget' ) ?>">
+									       :value="field.aria_label_field_name">
 								</label>
 							</p>
 
@@ -10327,7 +10341,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'no_referrer'               => 'false',
 				'icon_style'                => 'with-canvas',
 				'icon_alignment'            => 'none',
-				'icon_canvas_style'         => 'rounded',
+				'icon_canvas_style'         => 'round',
 				'icon_padding_size'         => 8,
 				'icon_font_size'            => 18,
 				'global_color_picker'       => '#1e73be',
@@ -10348,8 +10362,8 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 						'label'              => 'Twitter',
 						'icon'               => 'twitter',
 						'icon_kit'           => 'socicon',
-						'color_picker'       => '#55acee',
-						'color_picker_hover' => '#55acee',
+						'color_picker'       => '#1da1f2',
+						'color_picker_hover' => '#1da1f2',
 						'aria_label'         => '',
 						// 'is_rel_me'          => 'false'
 
