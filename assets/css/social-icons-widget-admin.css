@@ -8,7 +8,7 @@
     margin-left: -70px;
     z-index: 1;
 }
-.zoom-social-icons__inputs { margin-left: 80px; margin-right: 30px; }
+.zoom-social-icons__inputs { margin-left: 80px; margin-right: 40px; }
 .zoom-social-icons__field-url + .zoom-social-icons__field-label { margin-top: 2px; }
 
 .zoom-social-icons__field-icon-handler, .zoom-social-icons__field-trash { float: left; width: 30px; margin-top: 12px; }
@@ -43,9 +43,23 @@ border-radius: 0;
 .zoom-social-icons__field-icon-handler:hover{
     opacity: 0.8;
 }
-.zoom-social-icons__field-trash { margin-top: 18px; margin-left: -30px; text-decoration: none; display: block; text-align: right; }
+.zoom-social-icons__field-trash { margin-top: 18px; margin-left: -40px; text-decoration: none; display: block; text-align: right; }
 .zoom-social-icons__list--no-labels .zoom-social-icons__field-trash { margin-top: 2px; }
 .zoom-social-icons__add-button { margin-bottom: 10px; }
+.zoom-social-icons__field .toggle-extra-options{
+    cursor: pointer;
+    margin-left: -6px;
+    margin-top: 2px;
+}
+
+.zoom-social-icons__field .extra-options{
+    padding: 10px 25px;
+}
+
+.zoom-social-icons__field .extra-options input[type=text] {
+    margin-top: 5px;
+}
+
 
 .zoom-social-icons__field-icon-handler.socicon, .zoom-social-icons__field-icon-handler.genericon, .zoom-social-icons__field-icon-handler.academicons, .zoom-social-icons__field-icon-handler.dashicons, .zoom-social-icons__field-icon-handler.fa {
     color: white;
