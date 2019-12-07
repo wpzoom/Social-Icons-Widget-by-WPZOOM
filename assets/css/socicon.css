@@ -524,6 +524,15 @@
     content: "\e050"
 }
 
+.socicon-letterboxd {
+    background-color: #2c3440;
+    color: #2c3440;
+}
+
+.socicon-letterboxd:before {
+    content: "\e96d"
+}
+
 .socicon-line {
     background-color: #00BA27;
     color: #00BA27;
@@ -594,6 +603,15 @@
 
 .socicon-messenger:before {
     content: "\e906"
+}
+
+.socicon-mixer {
+    background-color: #1FBAED;
+    color: #1FBAED;
+}
+
+.socicon-mixer:before {
+    content: "\e91b"
 }
 
 .socicon-myspace {
