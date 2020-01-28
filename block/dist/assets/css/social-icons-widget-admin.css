@@ -1,0 +1,264 @@
+.zoom-social-icons__list--no-labels .zoom-social-icons__field-label { display: none; }
+.zoom-social-icons__field { padding: 6px 0; display: block; margin: 0; position: relative; }
+.zoom-social-icons__field + .zoom-social-icons__field { border-top: 1px solid #efefef; }
+
+.zoom-social-icons__cw {
+    float: left;
+    width: 100%;
+    margin-left: -70px;
+    z-index: 1;
+}
+.zoom-social-icons__inputs { margin-left: 80px; margin-right: 40px; }
+.zoom-social-icons__field-url + .zoom-social-icons__field-label { margin-top: 2px; }
+
+.zoom-social-icons__field-icon-handler, .zoom-social-icons__field-trash { float: left; width: 30px; margin-top: 12px; }
+.zoom-social-icons__field .zoom-social-icons__field-icon-handler.rounded, .zoom-social-icons__single-element.rounded{
+border-radius: 3px;
+}
+.zoom-social-icons__field .zoom-social-icons__field-icon-handler.round, .zoom-social-icons__single-element.round{
+border-radius: 50%;
+}
+.zoom-social-icons__field .zoom-social-icons__field-icon-handler.square, .zoom-social-icons__single-element.square{
+border-radius: 0;
+}
+.zoom-social-icons__field-icon-handler {
+    width: 40px;
+    float: left;
+    z-index: 5;
+    cursor: pointer;
+    position: relative;
+}
+.zoom-social-icons__field-handle {
+    padding: 4px;
+    font-size: 15px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    float: left;
+    z-index: 5;
+    cursor: move;
+    position: relative;
+}
+.zoom-social-icons__field-icon-handler:hover{
+    opacity: 0.8;
+}
+.zoom-social-icons__field-trash { margin-top: 18px; margin-left: -40px; text-decoration: none; display: block; text-align: right; }
+.zoom-social-icons__list--no-labels .zoom-social-icons__field-trash { margin-top: 2px; }
+.zoom-social-icons__add-button { margin-bottom: 10px; }
+.zoom-social-icons__field .toggle-extra-options{
+    cursor: pointer;
+    margin-left: -6px;
+    margin-top: 2px;
+}
+
+.zoom-social-icons__field .extra-options{
+    padding: 10px 25px;
+}
+
+.zoom-social-icons__field .extra-options input[type=text] {
+    margin-top: 5px;
+}
+
+
+.zoom-social-icons__field-icon-handler.socicon, .zoom-social-icons__field-icon-handler.genericon, .zoom-social-icons__field-icon-handler.academicons, .zoom-social-icons__field-icon-handler.dashicons, .zoom-social-icons__field-icon-handler.fa {
+    color: white;
+    padding: 4px;
+    border-radius: 50%;
+    font-size: 15px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    top:0;
+    margin-top: 0px;
+}
+
+.zoom-social-icons__single-element.socicon, .zoom-social-icons__single-element.dashicons, .zoom-social-icons__single-element.genericon, .zoom-social-icons__single-element.academicons, .zoom-social-icons__single-element.fa {
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px ;
+    margin-right: 10px;
+    background: #5A5A59;
+    font-size: 20px;
+}
+.zoom-social-modal-wrapper {
+    max-width: 720px;
+    max-height: 525px;
+    margin: auto;
+}
+.zoom-social-modal-content .modal-icons-wrapper {
+    overflow-y: scroll;
+    height: 195px;
+}
+.zoom-social-modal-content {
+    position: absolute;
+    top:50px;
+    bottom: 61px;
+    right:0;
+    left: 0;
+    width: auto;
+    height: auto;
+    margin: 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    padding:16px;
+    overflow-y: hidden;
+}
+.zoom-social-modal-title{
+    top: 0;
+    height: 50px;
+    position: absolute;
+    border-bottom: 1px solid #dfdfdf;
+    -webkit-box-shadow: 0 4px 4px -4px rgba(0,0,0,.1);
+    box-shadow: 0 4px 4px -4px rgba(0,0,0,.1);
+    width: 100%;
+}
+.zoom-social-modal-toolbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom:0;
+    z-index: 100;
+    height: 30px;
+    padding: 16px;
+    border: 0 solid #dfdfdf;
+    overflow: hidden;
+}
+.zoom-social-modal-toolbar button{
+    float: right;
+}
+.zoom-social-modal-title h3{
+    padding: 0 16px;
+    font-size: 22px;
+    line-height: 50px;
+    margin: 0;
+}
+.zoom-social-modal-wrapper .form-group{
+    margin-bottom: 15px;
+}
+.zoom-social-modal-wrapper .form-group label{
+    font-weight: 600;
+    font-size: 15px;
+    margin-right: 30px;
+}
+.zoom-social-modal-wrapper .form-group .wrap-input, .zoom-social-modal-wrapper .form-group .wrap-label{
+    float: left;
+    height: 50px;
+}
+.zoom-social-modal-wrapper .iris-picker{
+    z-index: 99;
+}
+.zoom-social-modal-wrapper .form-group .wrap-input {
+    min-width: 30%;
+}
+.zoom-social-modal-wrapper .form-group .wrap-label {
+    width:30%;
+}
+
+.zoom-social-modal-wrapper .dashicons:hover,.zoom-social-modal-wrapper .dashicons.selected,.zoom-social-modal-wrapper .socicon:hover,.zoom-social-modal-wrapper .socicon.selected,.zoom-social-modal-wrapper .genericon.selected,.zoom-social-modal-wrapper .genericon:hover, .zoom-social-modal-wrapper .academicons.selected,.zoom-social-modal-wrapper .academicons:hover, .zoom-social-modal-wrapper .fa.selected,.zoom-social-modal-wrapper .fa:hover{
+    /*background-color: #0073AA;*/
+    /*border-radius: 50%;*/
+    padding: 9px;
+    border-width:1px;
+    border-style: solid;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+}
+
+.form-group:before,
+.form-group:after { content: " "; display: table; }
+.form-group:after { clear: both; }
+.zoom-social-icons__kit-selector{
+    min-width: 200px;
+}
+.fa-wrapper .zoom-social-icons__single-element{
+    width: 1em;
+    text-align: center;
+}
+.zoom-social-modal-save-btn {
+    float: right;
+}
+
+.modal-mask {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    display: table;
+    transition: opacity .3s ease;
+}
+
+.zoom-social-icons__single-element{
+    cursor: pointer;
+}
+
+.zoom-pointer-class.wp-pointer {
+    margin-right: 20px;
+}
+.zoom-pointer-class.wp-pointer .wp-pointer-arrow {
+    display: none;
+}
+
+.zoom-pointer-class.wp-pointer .wp-pointer-content h3:before {
+    content: "\f529";
+}
+
+/* Fixes for Beaver builder */
+.fl-lightbox .socicon {
+    font-family: socicon;
+}
+
+.fl-lightbox .genericon {
+    font-family: 'Genericons';
+}
+
+.fl-lightbox .academicons {
+    font-family: 'Academicons';
+}
+
+.fl-lightbox .media-modal-content .icon-kit span {
+    line-height: 1;
+}
+
+.fl-lightbox .zoom-social-icons__list .zoom-social-icons__field-trash span {
+    font-size: 20px;
+}
+
+.fl-lightbox .form-instance .wp-color-result-text {
+    background: #f7f7f7;
+    border-radius: 0 2px 2px 0;
+    border-left: 1px solid #ccc;
+    color: #555;
+    display: block;
+    line-height: 22px;
+    padding: 0 6px;
+    text-align: center;
+}
+
+.fl-lightbox .button {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 26px;
+    height: 28px;
+    margin: 0;
+    padding: 0 10px 1px;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    -webkit-appearance: none;
+    border-radius: 3px;
+    white-space: nowrap;
+    box-sizing: border-box;
+    color: #555;
+    border-color: #ccc;
+    background: #f7f7f7;
+    box-shadow: 0 1px 0 #ccc;
+    vertical-align: top;
+}

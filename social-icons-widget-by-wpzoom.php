@@ -12,8 +12,10 @@
  */
 
 require_once plugin_dir_path( __FILE__ ) . 'class.zoom-social-icons-widget.php';
+require_once plugin_dir_path( __FILE__ ) . 'class.zoom-social-icons-settings.php';
 require_once plugin_dir_path( __FILE__ ) . 'zoom-helper.php';
 
+require_once plugin_dir_path( __FILE__ ) . 'block/src/init.php';
 
 /**
 * Load textdomain
