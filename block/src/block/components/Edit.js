@@ -573,12 +573,12 @@ class Edit extends Component {
                                 <div className={classnames("popover-controls")}>
                                     <Button
                                         icon={'editor-break'}
-                                        label={__('Apply', 'wpzoom-social-icons-block')}
+                                        label={__('Apply', 'zoom-social-icons-widget')}
                                         onClick={(e) => popoverEditSettingsHandler(e, key)}
-                                        className={['is-link']}>{__('Edit Details', 'wpzoom-social-icons-block')}</Button>
+                                        className={['is-link']}>{__('Edit Details', 'zoom-social-icons-widget')}</Button>
                                     {(attributes.selectedIcons.length > 1) && <Button
                                         onClick={(e) => popoverDeleteIconHandler(e, key)}
-                                        className={['is-button', 'button-link-delete', 'is-small']}>{__('Delete Icon', 'wpzoom-social-icons-block')}</Button>}
+                                        className={['is-button', 'button-link-delete', 'is-small']}>{__('Delete Icon', 'zoom-social-icons-widget')}</Button>}
 
                                 </div>
                             </div>

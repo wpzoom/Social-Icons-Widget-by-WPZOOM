@@ -10572,7 +10572,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		return array(
 			array(
 				'url'                => '',
-				'label'              => __( 'Default Label', 'zoom-social-icon-widget' ),
+				'label'              => __( 'Default Label', 'zoom-social-icons-widget' ),
 				'icon'               => 'wordpress',
 				'icon_kit'           => 'socicon',
 				'color_picker'       => '#1e73be',

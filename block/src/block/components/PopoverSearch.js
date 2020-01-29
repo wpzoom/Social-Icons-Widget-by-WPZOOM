@@ -32,7 +32,7 @@ class PopoverSearch extends Component {
                 />
                 <IconButton
                     icon={'editor-break'}
-                    label={__('Apply', 'wpzoom-social-icons-block')}
+                    label={__('Apply', 'zoom-social-icons-widget')}
                     onClick={(e) => this.props.save(e, this.state.searchValue)}
                     className={['is-button', 'button-small', 'is-default', 'url-button']}>
                 </IconButton>

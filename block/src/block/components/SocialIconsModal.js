@@ -122,12 +122,12 @@ class SocialIconsModal extends Component {
         return (
             <Modal
                 className={classnames('wpzoom-social-icons-modal')}
-                title={__('Select Icon', 'wpzoom-social-icons-block')}
+                title={__('Select Icon', 'zoom-social-icons-widget')}
                 shouldCloseOnClickOutside={false}
                 onRequestClose={() => this.props.onClose(this.state)}>
                 <div className={"modal-content"}>
                     <div className={"option-item"}>
-                        <div className="label">{__('URL', 'wpzoom-social-icons-block')}</div>
+                        <div className="label">{__('URL', 'zoom-social-icons-widget')}</div>
                         <div className="option-wrapper">
                             <TextControl
                                 value={this.state.modalUrl}
@@ -138,7 +138,7 @@ class SocialIconsModal extends Component {
                     {
                         this.props.showIconsLabel ?
                             <div className="option-item">
-                                <div className="label">{__('Label', 'wpzoom-social-icons-block')}</div>
+                                <div className="label">{__('Label', 'zoom-social-icons-widget')}</div>
                                 <div className="option-wrapper">
                                     <TextControl
                                         value={this.state.modalLabel}
@@ -148,7 +148,7 @@ class SocialIconsModal extends Component {
                             </div> : null
                     }
                     <div className="option-item">
-                        <div className="label">{__('Pick icon color', 'wpzoom-social-icons-block')}</div>
+                        <div className="label">{__('Pick icon color', 'zoom-social-icons-widget')}</div>
                         <div className="option-wrapper">
                             <ModalColorPicker
                                 save={this.saveColorPickerHandler}
@@ -156,7 +156,7 @@ class SocialIconsModal extends Component {
                         </div>
                     </div>
                     <div className="option-item">
-                        <div className="label">{__('Pick hover color', 'wpzoom-social-icons-block')}</div>
+                        <div className="label">{__('Pick hover color', 'zoom-social-icons-widget')}</div>
                         <div className="option-wrapper">
                             <ModalColorPicker
                                 save={this.saveHoverColorPickerHandler}
@@ -164,7 +164,7 @@ class SocialIconsModal extends Component {
                         </div>
                     </div>
                     <div className="option-item">
-                        <div className="label">{__('Select Icon Kit', 'wpzoom-social-icons-block')}</div>
+                        <div className="label">{__('Select Icon Kit', 'zoom-social-icons-widget')}</div>
                         <div className="option-wrapper">
                             <SelectControl
                                 value={this.state.modalIconKit}
@@ -172,13 +172,13 @@ class SocialIconsModal extends Component {
                                     this.setState({modalIconKit: currentIconKit})
                                 }}
                                 options={[
-                                    {value: 'socicon', label: __('Socicons', 'wpzoom-social-icons-block')},
-                                    {value: 'dashicons', label: __('Dashicons', 'wpzoom-social-icons-block')},
-                                    {value: 'genericon', label: __('Genericons', 'wpzoom-social-icons-block')},
-                                    {value: 'academicons', label: __('Academicons', 'wpzoom-social-icons-block')},
-                                    {value: 'fab', label: __('Font Awesome Brands', 'wpzoom-social-icons-block')},
-                                    {value: 'far', label: __('Font Awesome Regular', 'wpzoom-social-icons-block')},
-                                    {value: 'fas', label: __('Font Awesome Solid', 'wpzoom-social-icons-block')},
+                                    {value: 'socicon', label: __('Socicons', 'zoom-social-icons-widget')},
+                                    {value: 'dashicons', label: __('Dashicons', 'zoom-social-icons-widget')},
+                                    {value: 'genericon', label: __('Genericons', 'zoom-social-icons-widget')},
+                                    {value: 'academicons', label: __('Academicons', 'zoom-social-icons-widget')},
+                                    {value: 'fab', label: __('Font Awesome Brands', 'zoom-social-icons-widget')},
+                                    {value: 'far', label: __('Font Awesome Regular', 'zoom-social-icons-widget')},
+                                    {value: 'fas', label: __('Font Awesome Solid', 'zoom-social-icons-widget')},
                                 ]}
                             />
                         </div>
@@ -190,7 +190,7 @@ class SocialIconsModal extends Component {
                 <div className="modal-controls">
                     <div className="modal-search">
                         <TextControl
-                            placeholder={__('Type to search icon', 'wpzoom-social-icons-block')}
+                            placeholder={__('Type to search icon', 'zoom-social-icons-widget')}
                             value={this.state.modalSearch}
                             onChange={this.searchTextControlHandler}
                         />
@@ -198,11 +198,11 @@ class SocialIconsModal extends Component {
                     <div className="modal-buttons">
                         {this.props.showDeleteBtn &&
                         <Button className={'button-link-delete is-button'} onClick={() => this.props.delete()}>
-                            {__('Delete Icon', 'wpzoom-social-icons-block')}
+                            {__('Delete Icon', 'zoom-social-icons-widget')}
                         </Button>
                         }
                         <Button isPrimary onClick={() => this.props.save(this.state)}>
-                            {__('Save', 'wpzoom-social-icons-block')}
+                            {__('Save', 'zoom-social-icons-widget')}
                         </Button>
                     </div>
 
