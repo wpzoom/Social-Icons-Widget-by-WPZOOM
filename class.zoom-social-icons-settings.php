@@ -12,6 +12,12 @@ class WPZOOM_Social_Icons_Settings
      */
     private $options;
 
+    public static $option_name = 'wpzoom-social-icons-widget-settings';
+    public static $option_defaults = [
+        'disable-widget' => false,
+        'disable-block' => false,
+    ];
+
     /**
      * Start up
      */
@@ -42,7 +48,7 @@ class WPZOOM_Social_Icons_Settings
     public function create_admin_page()
     {
         // Set class property
-        $this->options = get_option('wpzoom-social-icons-widget-settings');
+        $this->options = self::get_settings();
         ?>
         <div class="wrap">
             <h1><?php _e('Social Icons Widget Settings', 'zoom-social-icons-widget') ?></h1>
@@ -65,8 +71,11 @@ class WPZOOM_Social_Icons_Settings
     {
         register_setting(
             'wpzoom-social-icons-widget-settings-group', // Option group
-            'wpzoom-social-icons-widget-settings', // Option name
-            array($this, 'sanitize') // Sanitize
+            self::$option_name, // Option name
+            [
+                'sanitize_callback' => [$this, 'sanitize'],
+                'default' => self::$option_defaults
+            ]
         );
 
         add_settings_section(
@@ -124,6 +133,11 @@ class WPZOOM_Social_Icons_Settings
                value="1"
             <?php checked($this->options['disable-widget'], 1) ?>/>
         <?php
+    }
+
+    static public function get_settings()
+    {
+        return get_option(self::$option_name, self::$option_defaults);
     }
 
     /**
