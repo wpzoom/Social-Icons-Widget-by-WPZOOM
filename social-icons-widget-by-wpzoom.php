@@ -11,6 +11,14 @@
  * Domain Path: /languages
  */
 
+if ( !defined( 'WPZOOM_SOCIAL_ICONS_PLUGIN_URL' ) ) {
+    define( 'WPZOOM_SOCIAL_ICONS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+}
+
+if ( !defined( 'WPZOOM_SOCIAL_ICONS_PLUGIN_PATH' ) ) {
+    define( 'WPZOOM_SOCIAL_ICONS_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
+}
+
 require_once plugin_dir_path(__FILE__) . 'class.zoom-social-icons-settings.php';
 require_once plugin_dir_path(__FILE__) . 'zoom-helper.php';
 
