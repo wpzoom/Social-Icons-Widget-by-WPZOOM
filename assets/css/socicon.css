@@ -101,6 +101,15 @@
     content: "\e91f"
 }
 
+.socicon-artstation {
+    background-color: #13aff0;
+    color: #13aff0;
+}
+
+.socicon-artstation:before {
+    content: "\e959"
+}
+
 .socicon-baidu {
     background-color: #2319DC;
     color: #2319DC;
@@ -443,6 +452,23 @@
     content: "\e042"
 }
 
+.socicon-google-calendar {
+    background-color: #3D81F6;
+    color: #3D81F6;
+}
+
+.socicon-google-calendar:before {
+    content: "\e926"
+}
+
+.socicon-google-maps {
+    background-color: #4285F4;
+    color: #4285F4;
+}
+
+.socicon-google-maps:before {
+    content: "\e937"
+}
 .socicon-grooveshark {
     background-color: #000000;
     color: #000000;
@@ -504,6 +530,15 @@
 
 .socicon-itunes:before {
     content: "\e0ae"
+}
+
+.socicon-issuu {
+    background-color: #F26F61;
+    color: #F26F61;
+}
+
+.socicon-issuu:before {
+    content: "\e06b"
 }
 
 .socicon-lanyrd {

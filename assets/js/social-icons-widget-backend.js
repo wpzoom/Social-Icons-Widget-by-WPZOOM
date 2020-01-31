@@ -231,6 +231,7 @@
                             'feedburner.google.com': 'rss',
                             'ok.ru':'odnoklassniki',
                             't.me':'telegram',
+                            'wa.me':'whatsapp',
                             'zen.yandex.com':'zen-yandex',
                             'zen.yandex.ru':'zen-yandex'
                         };
