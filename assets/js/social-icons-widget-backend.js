@@ -150,7 +150,11 @@
                         'genericon': 'Genericons',
                         'academicons': 'Academicons',
                         'dashicons': 'Dashicons',
-                        'socicon': 'Socicons'
+                        'socicon': 'Socicons',
+                        'fab' : 'Font Awesome Brands',
+                        'far' : 'Font Awesome Regular',
+                        'fas' : 'Font Awesome Solid',
+
                     };
 
                     return $collector[value];

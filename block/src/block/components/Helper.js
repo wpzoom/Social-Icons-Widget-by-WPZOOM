@@ -1,7 +1,7 @@
-import icons from '../icons';
 import URI from 'urijs';
 import {find} from 'lodash';
 
+const {icons} = wpzSocialIconsBlock;
 const TokenList = wp.tokenList;
 
 class Helper {

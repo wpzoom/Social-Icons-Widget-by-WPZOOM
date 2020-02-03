@@ -1,6 +1,5 @@
 import ModalColorPicker from './ModalColorPicker';
 import SocialIcon from './SocialIcon';
-import icons from '../icons';
 import Helper from './Helper';
 import React from "react";
 import classnames from 'classnames';
@@ -8,6 +7,7 @@ import classnames from 'classnames';
 const {__} = wp.i18n;
 const {Component} = wp.element;
 const {Button, Modal, TextControl, SelectControl} = wp.components;
+const {icons} = wpzSocialIconsBlock;
 
 class SocialIconsModal extends Component {
 

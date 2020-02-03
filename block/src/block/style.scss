@@ -12,8 +12,8 @@
   flex-flow: row wrap;
   justify-content: var(--wpz-social-icons-alignment);
 
-  .social-icon-link {
-    text-decoration: none;
+  a.social-icon-link {
+    text-decoration: none !important;
   }
 
   .social-icon.socicon, .social-icon.dashicons, .social-icon.genericon, .social-icon.academicons, .social-icon.fas, .social-icon.fab, .social-icon.far {
