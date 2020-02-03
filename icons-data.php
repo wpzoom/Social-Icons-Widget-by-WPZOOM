@@ -58,6 +58,13 @@ return array(
 			'color'    => '#007AFF',
 		),
 		array(
+			'icon'     => 'artstation',
+			'category' => array(
+				'software'
+			),
+			'color'    => '#13aff0'
+		),
+		array(
 			'icon'     => 'baidu',
 			'category' => array(
 				'search-engines',
@@ -337,6 +344,20 @@ return array(
 			'color'    => '#d93e2d',
 		),
 		array(
+			'icon'     => 'google-calendar',
+			'category' => array(
+				'calendar'
+			),
+			'color'    => '#3D81F6'
+		),
+		array(
+			'icon'     => 'google-maps',
+			'category' => array(
+				'maps'
+			),
+			'color'    => '#4285F4'
+		),
+		array(
 			'icon'     => 'grooveshark',
 			'category' => array(
 				'music',
@@ -379,6 +400,13 @@ return array(
 				'social-media',
 			),
 			'color'    => '#e4405f',
+		),
+		array(
+			'icon'     => 'issuu',
+			'category' => array(
+				'reading'
+			),
+			'color'    => '#F26F61'
 		),
 		array(
 			'icon'     => 'itunes',
@@ -8547,1824 +8575,1824 @@ return array(
 	),
 	'fab'         => array(
 		array(
-			'icon'       => 'zhihu',
+			'icon'     => 'zhihu',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'youtube-square',
+			'icon'     => 'youtube-square',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'youtube',
+			'icon'     => 'youtube',
 			'category' => array(
 				'audio-video',
 			),
 		),
 		array(
-			'icon'       => 'yoast',
+			'icon'     => 'yoast',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'yelp',
+			'icon'     => 'yelp',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'yarn',
+			'icon'     => 'yarn',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'yandex-international',
+			'icon'     => 'yandex-international',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'yandex',
+			'icon'     => 'yandex',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'yammer',
+			'icon'     => 'yammer',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'yahoo',
+			'icon'     => 'yahoo',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'y-combinator',
+			'icon'     => 'y-combinator',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'xing-square',
+			'icon'     => 'xing-square',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'xing',
+			'icon'     => 'xing',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'xbox',
+			'icon'     => 'xbox',
 			'category' => array(
 				'games',
 			),
 		),
 		array(
-			'icon'       => 'wpressr',
+			'icon'     => 'wpressr',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'wpforms',
+			'icon'     => 'wpforms',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'wpexplorer',
+			'icon'     => 'wpexplorer',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'wpbeginner',
+			'icon'     => 'wpbeginner',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'wordpress-simple',
+			'icon'     => 'wordpress-simple',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'wordpress',
+			'icon'     => 'wordpress',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'wolf-pack-battalion',
+			'icon'     => 'wolf-pack-battalion',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'wizards-of-the-coast',
+			'icon'     => 'wizards-of-the-coast',
 			'category' => array(
 				'gaming-tabletop',
 			),
 		),
 		array(
-			'icon'       => 'wix',
+			'icon'     => 'wix',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'windows',
+			'icon'     => 'windows',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'wikipedia-w',
+			'icon'     => 'wikipedia-w',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'whmcs',
+			'icon'     => 'whmcs',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'whatsapp-square',
+			'icon'     => 'whatsapp-square',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'whatsapp',
+			'icon'     => 'whatsapp',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'weixin',
+			'icon'     => 'weixin',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'weibo',
+			'icon'     => 'weibo',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'weebly',
+			'icon'     => 'weebly',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'waze',
+			'icon'     => 'waze',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'vuejs',
+			'icon'     => 'vuejs',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'vnv',
+			'icon'     => 'vnv',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'vk',
+			'icon'     => 'vk',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'vine',
+			'icon'     => 'vine',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'vimeo-v',
+			'icon'     => 'vimeo-v',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'vimeo-square',
+			'icon'     => 'vimeo-square',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'vimeo',
+			'icon'     => 'vimeo',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'viber',
+			'icon'     => 'viber',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'viadeo-square',
+			'icon'     => 'viadeo-square',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'viadeo',
+			'icon'     => 'viadeo',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'viacoin',
+			'icon'     => 'viacoin',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'vaadin',
+			'icon'     => 'vaadin',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'ussunnah',
+			'icon'     => 'ussunnah',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'usps',
+			'icon'     => 'usps',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'usb',
+			'icon'     => 'usb',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'ups',
+			'icon'     => 'ups',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'untappd',
+			'icon'     => 'untappd',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'uniregistry',
+			'icon'     => 'uniregistry',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'umbraco',
+			'icon'     => 'umbraco',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'uikit',
+			'icon'     => 'uikit',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'ubuntu',
+			'icon'     => 'ubuntu',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'uber',
+			'icon'     => 'uber',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'typo3',
+			'icon'     => 'typo3',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'twitter-square',
+			'icon'     => 'twitter-square',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'twitter',
+			'icon'     => 'twitter',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'twitch',
+			'icon'     => 'twitch',
 			'category' => array(
 				'games',
 			),
 		),
 		array(
-			'icon'       => 'tumblr-square',
+			'icon'     => 'tumblr-square',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'tumblr',
+			'icon'     => 'tumblr',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'tripadvisor',
+			'icon'     => 'tripadvisor',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'trello',
+			'icon'     => 'trello',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'trade-federation',
+			'icon'     => 'trade-federation',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'think-peaks',
+			'icon'     => 'think-peaks',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'themeisle',
+			'icon'     => 'themeisle',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'themeco',
+			'icon'     => 'themeco',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'the-red-yeti',
+			'icon'     => 'the-red-yeti',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'tencent-weibo',
+			'icon'     => 'tencent-weibo',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'telegram-plane',
+			'icon'     => 'telegram-plane',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'telegram',
+			'icon'     => 'telegram',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'teamspeak',
+			'icon'     => 'teamspeak',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'symfony',
+			'icon'     => 'symfony',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'swift',
+			'icon'     => 'swift',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'suse',
+			'icon'     => 'suse',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'supple',
+			'icon'     => 'supple',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'superpowers',
+			'icon'     => 'superpowers',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'stumbleupon-circle',
+			'icon'     => 'stumbleupon-circle',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'stumbleupon',
+			'icon'     => 'stumbleupon',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'studiovinari',
+			'icon'     => 'studiovinari',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'stripe-s',
+			'icon'     => 'stripe-s',
 			'category' => array(
 				'payments-shopping',
 			),
 		),
 		array(
-			'icon'       => 'stripe',
+			'icon'     => 'stripe',
 			'category' => array(
 				'payments-shopping',
 			),
 		),
 		array(
-			'icon'       => 'strava',
+			'icon'     => 'strava',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'sticker-mule',
+			'icon'     => 'sticker-mule',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'steam-symbol',
+			'icon'     => 'steam-symbol',
 			'category' => array(
 				'games',
 			),
 		),
 		array(
-			'icon'       => 'steam-square',
+			'icon'     => 'steam-square',
 			'category' => array(
 				'games',
 			),
 		),
 		array(
-			'icon'       => 'steam',
+			'icon'     => 'steam',
 			'category' => array(
 				'games',
 			),
 		),
 		array(
-			'icon'       => 'staylinked',
+			'icon'     => 'staylinked',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'stackpath',
+			'icon'     => 'stackpath',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'stack-overflow',
+			'icon'     => 'stack-overflow',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'stack-exchange',
+			'icon'     => 'stack-exchange',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'squarespace',
+			'icon'     => 'squarespace',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'spotify',
+			'icon'     => 'spotify',
 			'category' => array(
 				'music',
 			),
 		),
 		array(
-			'icon'       => 'speaker-deck',
+			'icon'     => 'speaker-deck',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'speakap',
+			'icon'     => 'speakap',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'sourcetree',
+			'icon'     => 'sourcetree',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'soundcloud',
+			'icon'     => 'soundcloud',
 			'category' => array(
 				'music',
 			),
 		),
 		array(
-			'icon'       => 'snapchat-square',
+			'icon'     => 'snapchat-square',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'snapchat-ghost',
+			'icon'     => 'snapchat-ghost',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'snapchat',
+			'icon'     => 'snapchat',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'slideshare',
+			'icon'     => 'slideshare',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'slack-hash',
+			'icon'     => 'slack-hash',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'slack',
+			'icon'     => 'slack',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'skype',
+			'icon'     => 'skype',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'skyatlas',
+			'icon'     => 'skyatlas',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'sketch',
+			'icon'     => 'sketch',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'sith',
+			'icon'     => 'sith',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'sistrix',
+			'icon'     => 'sistrix',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'simplybuilt',
+			'icon'     => 'simplybuilt',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'shopware',
+			'icon'     => 'shopware',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'shirtsinbulk',
+			'icon'     => 'shirtsinbulk',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'servicestack',
+			'icon'     => 'servicestack',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'sellsy',
+			'icon'     => 'sellsy',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'sellcast',
+			'icon'     => 'sellcast',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'searchengin',
+			'icon'     => 'searchengin',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'scribd',
+			'icon'     => 'scribd',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'schlix',
+			'icon'     => 'schlix',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'sass',
+			'icon'     => 'sass',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'salesforce',
+			'icon'     => 'salesforce',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'safari',
+			'icon'     => 'safari',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'rockrms',
+			'icon'     => 'rockrms',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'rocketchat',
+			'icon'     => 'rocketchat',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'rev',
+			'icon'     => 'rev',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'resolving',
+			'icon'     => 'resolving',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'researchgate',
+			'icon'     => 'researchgate',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'replyd',
+			'icon'     => 'replyd',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'renren',
+			'icon'     => 'renren',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'redhat',
+			'icon'     => 'redhat',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'reddit-square',
+			'icon'     => 'reddit-square',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'reddit-alien',
+			'icon'     => 'reddit-alien',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'reddit',
+			'icon'     => 'reddit',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'red-river',
+			'icon'     => 'red-river',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'rebel',
+			'icon'     => 'rebel',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'readme',
+			'icon'     => 'readme',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'reacteurope',
+			'icon'     => 'reacteurope',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'react',
+			'icon'     => 'react',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'ravelry',
+			'icon'     => 'ravelry',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'raspberry-pi',
+			'icon'     => 'raspberry-pi',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'r-project',
+			'icon'     => 'r-project',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'quora',
+			'icon'     => 'quora',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'quinscape',
+			'icon'     => 'quinscape',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'qq',
+			'icon'     => 'qq',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'python',
+			'icon'     => 'python',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'pushed',
+			'icon'     => 'pushed',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'product-hunt',
+			'icon'     => 'product-hunt',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'playstation',
+			'icon'     => 'playstation',
 			'category' => array(
 				'games',
 			),
 		),
 		array(
-			'icon'       => 'pinterest-square',
+			'icon'     => 'pinterest-square',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'pinterest-p',
+			'icon'     => 'pinterest-p',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'pinterest',
+			'icon'     => 'pinterest',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'pied-piper-pp',
+			'icon'     => 'pied-piper-pp',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'pied-piper-hat',
+			'icon'     => 'pied-piper-hat',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'pied-piper-alt',
+			'icon'     => 'pied-piper-alt',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'pied-piper',
+			'icon'     => 'pied-piper',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'php',
+			'icon'     => 'php',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'phoenix-squadron',
+			'icon'     => 'phoenix-squadron',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'phoenix-framework',
+			'icon'     => 'phoenix-framework',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'phabricator',
+			'icon'     => 'phabricator',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'periscope',
+			'icon'     => 'periscope',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'penny-arcade',
+			'icon'     => 'penny-arcade',
 			'category' => array(
 				'gaming-tabletop',
 			),
 		),
 		array(
-			'icon'       => 'paypal',
+			'icon'     => 'paypal',
 			'category' => array(
 				'payments-shopping',
 			),
 		),
 		array(
-			'icon'       => 'patreon',
+			'icon'     => 'patreon',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'palfed',
+			'icon'     => 'palfed',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'pagelines',
+			'icon'     => 'pagelines',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'page4',
+			'icon'     => 'page4',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'osi',
+			'icon'     => 'osi',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'orcid',
+			'icon'     => 'orcid',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'optin-monster',
+			'icon'     => 'optin-monster',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'opera',
+			'icon'     => 'opera',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'openid',
+			'icon'     => 'openid',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'opencart',
+			'icon'     => 'opencart',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'old-republic',
+			'icon'     => 'old-republic',
 			'category' => array(
 				'science-fiction',
 			),
 		),
 		array(
-			'icon'       => 'odnoklassniki-square',
+			'icon'     => 'odnoklassniki-square',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'odnoklassniki',
+			'icon'     => 'odnoklassniki',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'nutritionix',
+			'icon'     => 'nutritionix',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'ns8',
+			'icon'     => 'ns8',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'npm',
+			'icon'     => 'npm',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'node-js',
+			'icon'     => 'node-js',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'node',
+			'icon'     => 'node',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'nimblr',
+			'icon'     => 'nimblr',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'neos',
+			'icon'     => 'neos',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'napster',
+			'icon'     => 'napster',
 			'category' => array(
 				'music',
 			),
 		),
 		array(
-			'icon'       => 'monero',
+			'icon'     => 'monero',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'modx',
+			'icon'     => 'modx',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'mizuni',
+			'icon'     => 'mizuni',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'mixcloud',
+			'icon'     => 'mixcloud',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'mix',
+			'icon'     => 'mix',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'microsoft',
+			'icon'     => 'microsoft',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'mendeley',
+			'icon'     => 'mendeley',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'megaport',
+			'icon'     => 'megaport',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'meetup',
+			'icon'     => 'meetup',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'medrt',
+			'icon'     => 'medrt',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'medium-m',
+			'icon'     => 'medium-m',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'medium',
+			'icon'     => 'medium',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'medapps',
+			'icon'     => 'medapps',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'mdb',
+			'icon'     => 'mdb',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'maxcdn',
+			'icon'     => 'maxcdn',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'mastodon',
+			'icon'     => 'mastodon',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'markdown',
+			'icon'     => 'markdown',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'mandalorian',
+			'icon'     => 'mandalorian',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'mailchimp',
+			'icon'     => 'mailchimp',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'magento',
+			'icon'     => 'magento',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'lyft',
+			'icon'     => 'lyft',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'linux',
+			'icon'     => 'linux',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'linode',
+			'icon'     => 'linode',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'linkedin-in',
+			'icon'     => 'linkedin-in',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'linkedin',
+			'icon'     => 'linkedin',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'line',
+			'icon'     => 'line',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'less',
+			'icon'     => 'less',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'leanpub',
+			'icon'     => 'leanpub',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'lastfm-square',
+			'icon'     => 'lastfm-square',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'lastfm',
+			'icon'     => 'lastfm',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'laravel',
+			'icon'     => 'laravel',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'korvue',
+			'icon'     => 'korvue',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'kickstarter-k',
+			'icon'     => 'kickstarter-k',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'kickstarter',
+			'icon'     => 'kickstarter',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'keycdn',
+			'icon'     => 'keycdn',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'keybase',
+			'icon'     => 'keybase',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'kaggle',
+			'icon'     => 'kaggle',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'jsfiddle',
+			'icon'     => 'jsfiddle',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'js-square',
+			'icon'     => 'js-square',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'js',
+			'icon'     => 'js',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'joomla',
+			'icon'     => 'joomla',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'joget',
+			'icon'     => 'joget',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'jira',
+			'icon'     => 'jira',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'jenkins',
+			'icon'     => 'jenkins',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'jedi-order',
+			'icon'     => 'jedi-order',
 			'category' => array(
 				'science-fiction',
 			),
 		),
 		array(
-			'icon'       => 'java',
+			'icon'     => 'java',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'itunes-note',
+			'icon'     => 'itunes-note',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'itunes',
+			'icon'     => 'itunes',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'itch-io',
+			'icon'     => 'itch-io',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'ioxhost',
+			'icon'     => 'ioxhost',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'invision',
+			'icon'     => 'invision',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'internet-explorer',
+			'icon'     => 'internet-explorer',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'intercom',
+			'icon'     => 'intercom',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'instagram',
+			'icon'     => 'instagram',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'imdb',
+			'icon'     => 'imdb',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'hubspot',
+			'icon'     => 'hubspot',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'html5',
+			'icon'     => 'html5',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'houzz',
+			'icon'     => 'houzz',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'hotjar',
+			'icon'     => 'hotjar',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'hornbill',
+			'icon'     => 'hornbill',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'hooli',
+			'icon'     => 'hooli',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'hire-a-helper',
+			'icon'     => 'hire-a-helper',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'hips',
+			'icon'     => 'hips',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'hackerrank',
+			'icon'     => 'hackerrank',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'hacker-news-square',
+			'icon'     => 'hacker-news-square',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'hacker-news',
+			'icon'     => 'hacker-news',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'gulp',
+			'icon'     => 'gulp',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'grunt',
+			'icon'     => 'grunt',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'gripfire',
+			'icon'     => 'gripfire',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'grav',
+			'icon'     => 'grav',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'gratipay',
+			'icon'     => 'gratipay',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'google-wallet',
+			'icon'     => 'google-wallet',
 			'category' => array(
 				'payments-shopping',
 			),
 		),
 		array(
-			'icon'       => 'google-plus-square',
+			'icon'     => 'google-plus-square',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'google-plus-g',
+			'icon'     => 'google-plus-g',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'google-plus',
+			'icon'     => 'google-plus',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'google-play',
+			'icon'     => 'google-play',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'google-drive',
+			'icon'     => 'google-drive',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'google',
+			'icon'     => 'google',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'goodreads-g',
+			'icon'     => 'goodreads-g',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'goodreads',
+			'icon'     => 'goodreads',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'gofore',
+			'icon'     => 'gofore',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'glide-g',
+			'icon'     => 'glide-g',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'glide',
+			'icon'     => 'glide',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'gitter',
+			'icon'     => 'gitter',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'gitlab',
+			'icon'     => 'gitlab',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'gitkraken',
+			'icon'     => 'gitkraken',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'github-square',
+			'icon'     => 'github-square',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'github-alt',
+			'icon'     => 'github-alt',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'github',
+			'icon'     => 'github',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'git-square',
+			'icon'     => 'git-square',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'git-alt',
+			'icon'     => 'git-alt',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'git',
+			'icon'     => 'git',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'gg-circle',
+			'icon'     => 'gg-circle',
 			'category' => array(
 				'currency',
 			),
 		),
 		array(
-			'icon'       => 'gg',
+			'icon'     => 'gg',
 			'category' => array(
 				'currency',
 			),
 		),
 		array(
-			'icon'       => 'get-pocket',
+			'icon'     => 'get-pocket',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'galactic-senate',
+			'icon'     => 'galactic-senate',
 			'category' => array(
 				'science-fiction',
 			),
 		),
 		array(
-			'icon'       => 'galactic-republic',
+			'icon'     => 'galactic-republic',
 			'category' => array(
 				'science-fiction',
 			),
 		),
 		array(
-			'icon'       => 'fulcrum',
+			'icon'     => 'fulcrum',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'freebsd',
+			'icon'     => 'freebsd',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'free-code-camp',
+			'icon'     => 'free-code-camp',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'foursquare',
+			'icon'     => 'foursquare',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'forumbee',
+			'icon'     => 'forumbee',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'fort-awesome-alt',
+			'icon'     => 'fort-awesome-alt',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'fort-awesome',
+			'icon'     => 'fort-awesome',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'fonticons-fi',
+			'icon'     => 'fonticons-fi',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'fonticons',
+			'icon'     => 'fonticons',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'font-awesome-flag',
+			'icon'     => 'font-awesome-flag',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'font-awesome-alt',
+			'icon'     => 'font-awesome-alt',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'font-awesome',
+			'icon'     => 'font-awesome',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'fly',
+			'icon'     => 'fly',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'flipboard',
+			'icon'     => 'flipboard',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'flickr',
+			'icon'     => 'flickr',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'firstdraft',
+			'icon'     => 'firstdraft',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'first-order-alt',
+			'icon'     => 'first-order-alt',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'first-order',
+			'icon'     => 'first-order',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'firefox',
+			'icon'     => 'firefox',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'figma',
+			'icon'     => 'figma',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'fedora',
+			'icon'     => 'fedora',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'fedex',
+			'icon'     => 'fedex',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'fantasy-flight-games',
+			'icon'     => 'fantasy-flight-games',
 			'category' => array(
 				'gaming-tabletop',
 			),
 		),
 		array(
-			'icon'       => 'facebook-square',
+			'icon'     => 'facebook-square',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'facebook-messenger',
+			'icon'     => 'facebook-messenger',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'facebook-f',
+			'icon'     => 'facebook-f',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'facebook',
+			'icon'     => 'facebook',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'expeditedssl',
+			'icon'     => 'expeditedssl',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'evernote',
+			'icon'     => 'evernote',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'etsy',
+			'icon'     => 'etsy',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'ethereum',
+			'icon'     => 'ethereum',
 			'category' => array(
 				'currency',
 				'payments-shopping',
 			),
 		),
 		array(
-			'icon'       => 'erlang',
+			'icon'     => 'erlang',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'envira',
+			'icon'     => 'envira',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'empire',
+			'icon'     => 'empire',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'ember',
+			'icon'     => 'ember',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'ello',
+			'icon'     => 'ello',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'elementor',
+			'icon'     => 'elementor',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'edge',
+			'icon'     => 'edge',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'ebay',
+			'icon'     => 'ebay',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'earlybirds',
+			'icon'     => 'earlybirds',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'dyalog',
+			'icon'     => 'dyalog',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'drupal',
+			'icon'     => 'drupal',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'dropbox',
+			'icon'     => 'dropbox',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'dribbble-square',
+			'icon'     => 'dribbble-square',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'dribbble',
+			'icon'     => 'dribbble',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'draft2digital',
+			'icon'     => 'draft2digital',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'docker',
+			'icon'     => 'docker',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'dochub',
+			'icon'     => 'dochub',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'discourse',
+			'icon'     => 'discourse',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'discord',
+			'icon'     => 'discord',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'digital-ocean',
+			'icon'     => 'digital-ocean',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'digg',
+			'icon'     => 'digg',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'diaspora',
+			'icon'     => 'diaspora',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'dhl',
+			'icon'     => 'dhl',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'deviantart',
+			'icon'     => 'deviantart',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'dev',
+			'icon'     => 'dev',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'deskpro',
+			'icon'     => 'deskpro',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'deploydog',
+			'icon'     => 'deploydog',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'delicious',
+			'icon'     => 'delicious',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'dashcube',
+			'icon'     => 'dashcube',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'd-and-d-beyond',
+			'icon'     => 'd-and-d-beyond',
 			'category' => array(
 				'gaming-tabletop',
 			),
 		),
 		array(
-			'icon'       => 'd-and-d',
+			'icon'     => 'd-and-d',
 			'category' => array(
 				'gaming-tabletop',
 			),
 		),
 		array(
-			'icon'       => 'cuttlefish',
+			'icon'     => 'cuttlefish',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'css3-alt',
+			'icon'     => 'css3-alt',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'css3',
+			'icon'     => 'css3',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'critical-role',
+			'icon'     => 'critical-role',
 			'category' => array(
 				'gaming-tabletop',
 			),
 		),
 		array(
-			'icon'       => 'creative-commons-zero',
+			'icon'     => 'creative-commons-zero',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'creative-commons-share',
+			'icon'     => 'creative-commons-share',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'creative-commons-sampling-plus',
+			'icon'     => 'creative-commons-sampling-plus',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'creative-commons-sampling',
+			'icon'     => 'creative-commons-sampling',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'creative-commons-sa',
+			'icon'     => 'creative-commons-sa',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'creative-commons-remix',
+			'icon'     => 'creative-commons-remix',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'creative-commons-pd-alt',
+			'icon'     => 'creative-commons-pd-alt',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'creative-commons-pd',
+			'icon'     => 'creative-commons-pd',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'creative-commons-nd',
+			'icon'     => 'creative-commons-nd',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'creative-commons-nc-jp',
+			'icon'     => 'creative-commons-nc-jp',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'creative-commons-nc-eu',
+			'icon'     => 'creative-commons-nc-eu',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'creative-commons-nc',
+			'icon'     => 'creative-commons-nc',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'creative-commons-by',
+			'icon'     => 'creative-commons-by',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'creative-commons',
+			'icon'     => 'creative-commons',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'cpanel',
+			'icon'     => 'cpanel',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'cotton-bureau',
+			'icon'     => 'cotton-bureau',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'contao',
+			'icon'     => 'contao',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'connectdevelop',
+			'icon'     => 'connectdevelop',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'confluence',
+			'icon'     => 'confluence',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'codiepie',
+			'icon'     => 'codiepie',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'codepen',
+			'icon'     => 'codepen',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'cloudversify',
+			'icon'     => 'cloudversify',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'cloudsmith',
+			'icon'     => 'cloudsmith',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'cloudscale',
+			'icon'     => 'cloudscale',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'chromecast',
+			'icon'     => 'chromecast',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'chrome',
+			'icon'     => 'chrome',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'centos',
+			'icon'     => 'centos',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'centercode',
+			'icon'     => 'centercode',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'cc-visa',
+			'icon'     => 'cc-visa',
 			'category' => array(
 				'payments-shopping',
 			),
 		),
 		array(
-			'icon'       => 'cc-stripe',
+			'icon'     => 'cc-stripe',
 			'category' => array(
 				'payments-shopping',
 			),
 		),
 		array(
-			'icon'       => 'cc-paypal',
+			'icon'     => 'cc-paypal',
 			'category' => array(
 				'payments-shopping',
 			),
 		),
 		array(
-			'icon'       => 'cc-mastercard',
+			'icon'     => 'cc-mastercard',
 			'category' => array(
 				'payments-shopping',
 			),
 		),
 		array(
-			'icon'       => 'cc-jcb',
+			'icon'     => 'cc-jcb',
 			'category' => array(
 				'payments-shopping',
 			),
 		),
 		array(
-			'icon'       => 'cc-discover',
+			'icon'     => 'cc-discover',
 			'category' => array(
 				'payments-shopping',
 			),
 		),
 		array(
-			'icon'       => 'cc-diners-club',
+			'icon'     => 'cc-diners-club',
 			'category' => array(
 				'payments-shopping',
 			),
 		),
 		array(
-			'icon'       => 'cc-apple-pay',
+			'icon'     => 'cc-apple-pay',
 			'category' => array(
 				'payments-shopping',
 			),
 		),
 		array(
-			'icon'       => 'cc-amex',
+			'icon'     => 'cc-amex',
 			'category' => array(
 				'payments-shopping',
 			),
 		),
 		array(
-			'icon'       => 'cc-amazon-pay',
+			'icon'     => 'cc-amazon-pay',
 			'category' => array(
 				'payments-shopping',
 			),
 		),
 		array(
-			'icon'       => 'canadian-maple-leaf',
+			'icon'     => 'canadian-maple-leaf',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'buysellads',
+			'icon'     => 'buysellads',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'buy-n-large',
+			'icon'     => 'buy-n-large',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'buromobelexperte',
+			'icon'     => 'buromobelexperte',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'buffer',
+			'icon'     => 'buffer',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'btc',
+			'icon'     => 'btc',
 			'category' => array(
 				'currency',
 				'payments-shopping',
 			),
 		),
 		array(
-			'icon'       => 'bootstrap',
+			'icon'     => 'bootstrap',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'bluetooth-b',
+			'icon'     => 'bluetooth-b',
 			'category' => array(
 				'communication',
 			),
 		),
 		array(
-			'icon'       => 'bluetooth',
+			'icon'     => 'bluetooth',
 			'category' => array(
 				'communication',
 			),
 		),
 		array(
-			'icon'       => 'blogger-b',
+			'icon'     => 'blogger-b',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'blogger',
+			'icon'     => 'blogger',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'blackberry',
+			'icon'     => 'blackberry',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'black-tie',
+			'icon'     => 'black-tie',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'bity',
+			'icon'     => 'bity',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'bitcoin',
+			'icon'     => 'bitcoin',
 			'category' => array(
 				'currency',
 				'payments-shopping',
 			),
 		),
 		array(
-			'icon'       => 'bitbucket',
+			'icon'     => 'bitbucket',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'bimobject',
+			'icon'     => 'bimobject',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'behance-square',
+			'icon'     => 'behance-square',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'behance',
+			'icon'     => 'behance',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'battle-net',
+			'icon'     => 'battle-net',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'bandcamp',
+			'icon'     => 'bandcamp',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'aws',
+			'icon'     => 'aws',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'aviato',
+			'icon'     => 'aviato',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'avianex',
+			'icon'     => 'avianex',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'autoprefixer',
+			'icon'     => 'autoprefixer',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'audible',
+			'icon'     => 'audible',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'atlassian',
+			'icon'     => 'atlassian',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'asymmetrik',
+			'icon'     => 'asymmetrik',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'artstation',
+			'icon'     => 'artstation',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'apple-pay',
+			'icon'     => 'apple-pay',
 			'category' => array(
 				'payments-shopping',
 			),
 		),
 		array(
-			'icon'       => 'apple',
+			'icon'     => 'apple',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'apper',
+			'icon'     => 'apper',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'app-store-ios',
+			'icon'     => 'app-store-ios',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'app-store',
+			'icon'     => 'app-store',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'angular',
+			'icon'     => 'angular',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'angrycreative',
+			'icon'     => 'angrycreative',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'angellist',
+			'icon'     => 'angellist',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'android',
+			'icon'     => 'android',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'amilia',
+			'icon'     => 'amilia',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'amazon-pay',
+			'icon'     => 'amazon-pay',
 			'category' => array(
 				'payments-shopping',
 			),
 		),
 		array(
-			'icon'       => 'amazon',
+			'icon'     => 'amazon',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'alipay',
+			'icon'     => 'alipay',
 			'category' => array(
 				'payments-shopping',
 			),
 		),
 		array(
-			'icon'       => 'algolia',
+			'icon'     => 'algolia',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'airbnb',
+			'icon'     => 'airbnb',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'affiliatetheme',
+			'icon'     => 'affiliatetheme',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'adversal',
+			'icon'     => 'adversal',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'adobe',
+			'icon'     => 'adobe',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'adn',
+			'icon'     => 'adn',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'acquisitions-incorporated',
+			'icon'     => 'acquisitions-incorporated',
 			'category' => array(
 				'gaming-tabletop',
 			),
 		),
 		array(
-			'icon'       => 'accusoft',
+			'icon'     => 'accusoft',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'accessible-icon',
+			'icon'     => 'accessible-icon',
 			'category' => array(
 				'users-people',
 				'vehicles',
@@ -10373,37 +10401,37 @@ return array(
 			),
 		),
 		array(
-			'icon'       => '500px',
+			'icon'     => '500px',
 			'category' => array(),
 		),
 	),
 	'far'         => array(
 		array(
-			'icon'       => 'window-restore',
+			'icon'     => 'window-restore',
 			'category' => array(
 				'code',
 			),
 		),
 		array(
-			'icon'       => 'window-minimize',
+			'icon'     => 'window-minimize',
 			'category' => array(
 				'code',
 			),
 		),
 		array(
-			'icon'       => 'window-maximize',
+			'icon'     => 'window-maximize',
 			'category' => array(
 				'code',
 			),
 		),
 		array(
-			'icon'       => 'window-close',
+			'icon'     => 'window-close',
 			'category' => array(
 				'code',
 			),
 		),
 		array(
-			'icon'       => 'user-circle',
+			'icon'     => 'user-circle',
 			'category' => array(
 				'social',
 				'users-people',
@@ -10411,7 +10439,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'user',
+			'icon'     => 'user',
 			'category' => array(
 				'social',
 				'users-people',
@@ -10420,7 +10448,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'trash-alt',
+			'icon'     => 'trash-alt',
 			'category' => array(
 				'interfaces',
 				'editors',
@@ -10428,19 +10456,19 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'tired',
+			'icon'     => 'tired',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'times-circle',
+			'icon'     => 'times-circle',
 			'category' => array(
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'thumbs-up',
+			'icon'     => 'thumbs-up',
 			'category' => array(
 				'social',
 				'status',
@@ -10450,7 +10478,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'thumbs-down',
+			'icon'     => 'thumbs-down',
 			'category' => array(
 				'social',
 				'status',
@@ -10460,13 +10488,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'surprise',
+			'icon'     => 'surprise',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'sun',
+			'icon'     => 'sun',
 			'category' => array(
 				'energy',
 				'summer',
@@ -10476,13 +10504,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'stop-circle',
+			'icon'     => 'stop-circle',
 			'category' => array(
 				'audio-video',
 			),
 		),
 		array(
-			'icon'       => 'sticky-note',
+			'icon'     => 'sticky-note',
 			'category' => array(
 				'files',
 				'writing',
@@ -10491,7 +10519,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'star-half',
+			'icon'     => 'star-half',
 			'category' => array(
 				'status',
 				'interfaces',
@@ -10499,7 +10527,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'star',
+			'icon'     => 'star',
 			'category' => array(
 				'social',
 				'status',
@@ -10511,13 +10539,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'square',
+			'icon'     => 'square',
 			'category' => array(
 				'shapes',
 			),
 		),
 		array(
-			'icon'       => 'snowflake',
+			'icon'     => 'snowflake',
 			'category' => array(
 				'spinners',
 				'weather',
@@ -10526,19 +10554,19 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'smile-wink',
+			'icon'     => 'smile-wink',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'smile-beam',
+			'icon'     => 'smile-beam',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'smile',
+			'icon'     => 'smile',
 			'category' => array(
 				'users-people',
 				'chat',
@@ -10547,7 +10575,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'share-square',
+			'icon'     => 'share-square',
 			'category' => array(
 				'social',
 				'arrows',
@@ -10555,7 +10583,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'save',
+			'icon'     => 'save',
 			'category' => array(
 				'files',
 				'computers',
@@ -10566,25 +10594,25 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'sad-tear',
+			'icon'     => 'sad-tear',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'sad-cry',
+			'icon'     => 'sad-cry',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'registered',
+			'icon'     => 'registered',
 			'category' => array(
 				'business',
 			),
 		),
 		array(
-			'icon'       => 'question-circle',
+			'icon'     => 'question-circle',
 			'category' => array(
 				'status',
 				'interfaces',
@@ -10592,7 +10620,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'plus-square',
+			'icon'     => 'plus-square',
 			'category' => array(
 				'status',
 				'interfaces',
@@ -10601,19 +10629,19 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'play-circle',
+			'icon'     => 'play-circle',
 			'category' => array(
 				'audio-video',
 			),
 		),
 		array(
-			'icon'       => 'pause-circle',
+			'icon'     => 'pause-circle',
 			'category' => array(
 				'audio-video',
 			),
 		),
 		array(
-			'icon'       => 'paper-plane',
+			'icon'     => 'paper-plane',
 			'category' => array(
 				'vehicles',
 				'writing',
@@ -10623,19 +10651,19 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'object-ungroup',
+			'icon'     => 'object-ungroup',
 			'category' => array(
 				'design',
 			),
 		),
 		array(
-			'icon'       => 'object-group',
+			'icon'     => 'object-group',
 			'category' => array(
 				'design',
 			),
 		),
 		array(
-			'icon'       => 'newspaper',
+			'icon'     => 'newspaper',
 			'category' => array(
 				'writing',
 				'objects',
@@ -10643,7 +10671,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'moon',
+			'icon'     => 'moon',
 			'category' => array(
 				'science-fiction',
 				'weather',
@@ -10651,7 +10679,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'money-bill-alt',
+			'icon'     => 'money-bill-alt',
 			'category' => array(
 				'finance',
 				'currency',
@@ -10660,26 +10688,26 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'minus-square',
+			'icon'     => 'minus-square',
 			'category' => array(
 				'status',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'meh-rolling-eyes',
+			'icon'     => 'meh-rolling-eyes',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'meh-blank',
+			'icon'     => 'meh-blank',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'meh',
+			'icon'     => 'meh',
 			'category' => array(
 				'users-people',
 				'chat',
@@ -10688,7 +10716,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'map',
+			'icon'     => 'map',
 			'category' => array(
 				'travel',
 				'camping',
@@ -10697,13 +10725,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'list-alt',
+			'icon'     => 'list-alt',
 			'category' => array(
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'lightbulb',
+			'icon'     => 'lightbulb',
 			'category' => array(
 				'energy',
 				'status',
@@ -10713,7 +10741,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'life-ring',
+			'icon'     => 'life-ring',
 			'category' => array(
 				'spinners',
 				'objects',
@@ -10721,7 +10749,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'lemon',
+			'icon'     => 'lemon',
 			'category' => array(
 				'summer',
 				'fruit-vegetable',
@@ -10731,49 +10759,49 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'laugh-wink',
+			'icon'     => 'laugh-wink',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'laugh-squint',
+			'icon'     => 'laugh-squint',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'laugh-beam',
+			'icon'     => 'laugh-beam',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'laugh',
+			'icon'     => 'laugh',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'kiss-wink-heart',
+			'icon'     => 'kiss-wink-heart',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'kiss-beam',
+			'icon'     => 'kiss-beam',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'kiss',
+			'icon'     => 'kiss',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'keyboard',
+			'icon'     => 'keyboard',
 			'category' => array(
 				'computers',
 				'writing',
@@ -10782,7 +10810,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'images',
+			'icon'     => 'images',
 			'category' => array(
 				'social',
 				'images',
@@ -10791,7 +10819,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'image',
+			'icon'     => 'image',
 			'category' => array(
 				'social',
 				'images',
@@ -10800,7 +10828,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'id-card',
+			'icon'     => 'id-card',
 			'category' => array(
 				'users-people',
 				'images',
@@ -10808,7 +10836,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'id-badge',
+			'icon'     => 'id-badge',
 			'category' => array(
 				'users-people',
 				'images',
@@ -10816,14 +10844,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'hourglass',
+			'icon'     => 'hourglass',
 			'category' => array(
 				'date-time',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'hospital',
+			'icon'     => 'hospital',
 			'category' => array(
 				'buildings',
 				'medical',
@@ -10833,7 +10861,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'heart',
+			'icon'     => 'heart',
 			'category' => array(
 				'social',
 				'medical',
@@ -10849,14 +10877,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'hdd',
+			'icon'     => 'hdd',
 			'category' => array(
 				'computers',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'handshake',
+			'icon'     => 'handshake',
 			'category' => array(
 				'charity',
 				'political',
@@ -10865,182 +10893,182 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'hand-spock',
+			'icon'     => 'hand-spock',
 			'category' => array(
 				'hands',
 			),
 		),
 		array(
-			'icon'       => 'hand-scissors',
+			'icon'     => 'hand-scissors',
 			'category' => array(
 				'hands',
 			),
 		),
 		array(
-			'icon'       => 'hand-rock',
+			'icon'     => 'hand-rock',
 			'category' => array(
 				'hands',
 			),
 		),
 		array(
-			'icon'       => 'hand-pointer',
+			'icon'     => 'hand-pointer',
 			'category' => array(
 				'arrows',
 				'hands',
 			),
 		),
 		array(
-			'icon'       => 'hand-point-up',
+			'icon'     => 'hand-point-up',
 			'category' => array(
 				'arrows',
 				'hands',
 			),
 		),
 		array(
-			'icon'       => 'hand-point-right',
+			'icon'     => 'hand-point-right',
 			'category' => array(
 				'arrows',
 				'hands',
 			),
 		),
 		array(
-			'icon'       => 'hand-point-left',
+			'icon'     => 'hand-point-left',
 			'category' => array(
 				'arrows',
 				'hands',
 			),
 		),
 		array(
-			'icon'       => 'hand-point-down',
+			'icon'     => 'hand-point-down',
 			'category' => array(
 				'arrows',
 				'hands',
 			),
 		),
 		array(
-			'icon'       => 'hand-peace',
+			'icon'     => 'hand-peace',
 			'category' => array(
 				'hands',
 			),
 		),
 		array(
-			'icon'       => 'hand-paper',
+			'icon'     => 'hand-paper',
 			'category' => array(
 				'hands',
 			),
 		),
 		array(
-			'icon'       => 'hand-lizard',
+			'icon'     => 'hand-lizard',
 			'category' => array(
 				'hands',
 			),
 		),
 		array(
-			'icon'       => 'grin-wink',
+			'icon'     => 'grin-wink',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'grin-tongue-wink',
+			'icon'     => 'grin-tongue-wink',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'grin-tongue-squint',
+			'icon'     => 'grin-tongue-squint',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'grin-tongue',
+			'icon'     => 'grin-tongue',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'grin-tears',
+			'icon'     => 'grin-tears',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'grin-stars',
+			'icon'     => 'grin-stars',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'grin-squint-tears',
+			'icon'     => 'grin-squint-tears',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'grin-squint',
+			'icon'     => 'grin-squint',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'grin-hearts',
+			'icon'     => 'grin-hearts',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'grin-beam-sweat',
+			'icon'     => 'grin-beam-sweat',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'grin-beam',
+			'icon'     => 'grin-beam',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'grin-alt',
+			'icon'     => 'grin-alt',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'grin',
+			'icon'     => 'grin',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'grimace',
+			'icon'     => 'grimace',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'gem',
+			'icon'     => 'gem',
 			'category' => array(
 				'payments-shopping',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'futbol',
+			'icon'     => 'futbol',
 			'category' => array(
 				'sports',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'frown-open',
+			'icon'     => 'frown-open',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'frown',
+			'icon'     => 'frown',
 			'category' => array(
 				'users-people',
 				'chat',
@@ -11049,7 +11077,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'folder-open',
+			'icon'     => 'folder-open',
 			'category' => array(
 				'files',
 				'status',
@@ -11060,7 +11088,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'folder',
+			'icon'     => 'folder',
 			'category' => array(
 				'files',
 				'status',
@@ -11072,13 +11100,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'flushed',
+			'icon'     => 'flushed',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'flag',
+			'icon'     => 'flag',
 			'category' => array(
 				'interfaces',
 				'objects',
@@ -11086,52 +11114,52 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'file-word',
+			'icon'     => 'file-word',
 			'category' => array(
 				'files',
 			),
 		),
 		array(
-			'icon'       => 'file-video',
+			'icon'     => 'file-video',
 			'category' => array(
 				'files',
 				'audio-video',
 			),
 		),
 		array(
-			'icon'       => 'file-powerpoint',
+			'icon'     => 'file-powerpoint',
 			'category' => array(
 				'files',
 			),
 		),
 		array(
-			'icon'       => 'file-pdf',
+			'icon'     => 'file-pdf',
 			'category' => array(
 				'files',
 			),
 		),
 		array(
-			'icon'       => 'file-image',
+			'icon'     => 'file-image',
 			'category' => array(
 				'files',
 				'images',
 			),
 		),
 		array(
-			'icon'       => 'file-excel',
+			'icon'     => 'file-excel',
 			'category' => array(
 				'files',
 			),
 		),
 		array(
-			'icon'       => 'file-code',
+			'icon'     => 'file-code',
 			'category' => array(
 				'files',
 				'code',
 			),
 		),
 		array(
-			'icon'       => 'file-audio',
+			'icon'     => 'file-audio',
 			'category' => array(
 				'files',
 				'audio-video',
@@ -11139,13 +11167,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'file-archive',
+			'icon'     => 'file-archive',
 			'category' => array(
 				'files',
 			),
 		),
 		array(
-			'icon'       => 'file-alt',
+			'icon'     => 'file-alt',
 			'category' => array(
 				'files',
 				'status',
@@ -11158,7 +11186,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'file',
+			'icon'     => 'file',
 			'category' => array(
 				'files',
 				'status',
@@ -11172,7 +11200,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'eye-slash',
+			'icon'     => 'eye-slash',
 			'category' => array(
 				'images',
 				'status',
@@ -11183,7 +11211,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'eye',
+			'icon'     => 'eye',
 			'category' => array(
 				'images',
 				'status',
@@ -11195,7 +11223,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'envelope-open',
+			'icon'     => 'envelope-open',
 			'category' => array(
 				'writing',
 				'interfaces',
@@ -11205,7 +11233,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'envelope',
+			'icon'     => 'envelope',
 			'category' => array(
 				'social',
 				'writing',
@@ -11216,7 +11244,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'edit',
+			'icon'     => 'edit',
 			'category' => array(
 				'design',
 				'writing',
@@ -11226,33 +11254,33 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'dot-circle',
+			'icon'     => 'dot-circle',
 			'category' => array(
 				'interfaces',
 				'toggle',
 			),
 		),
 		array(
-			'icon'       => 'dizzy',
+			'icon'     => 'dizzy',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'credit-card',
+			'icon'     => 'credit-card',
 			'category' => array(
 				'finance',
 				'payments-shopping',
 			),
 		),
 		array(
-			'icon'       => 'copyright',
+			'icon'     => 'copyright',
 			'category' => array(
 				'business',
 			),
 		),
 		array(
-			'icon'       => 'copy',
+			'icon'     => 'copy',
 			'category' => array(
 				'files',
 				'design',
@@ -11263,7 +11291,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'compass',
+			'icon'     => 'compass',
 			'category' => array(
 				'status',
 				'spinners',
@@ -11274,20 +11302,20 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'comments',
+			'icon'     => 'comments',
 			'category' => array(
 				'chat',
 				'communication',
 			),
 		),
 		array(
-			'icon'       => 'comment-dots',
+			'icon'     => 'comment-dots',
 			'category' => array(
 				'chat',
 			),
 		),
 		array(
-			'icon'       => 'comment-alt',
+			'icon'     => 'comment-alt',
 			'category' => array(
 				'social',
 				'chat',
@@ -11296,7 +11324,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'comment',
+			'icon'     => 'comment',
 			'category' => array(
 				'social',
 				'chat',
@@ -11306,14 +11334,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'closed-captioning',
+			'icon'     => 'closed-captioning',
 			'category' => array(
 				'audio-video',
 				'accessibility',
 			),
 		),
 		array(
-			'icon'       => 'clone',
+			'icon'     => 'clone',
 			'category' => array(
 				'files',
 				'images',
@@ -11323,13 +11351,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'clock',
+			'icon'     => 'clock',
 			'category' => array(
 				'date-time',
 			),
 		),
 		array(
-			'icon'       => 'clipboard',
+			'icon'     => 'clipboard',
 			'category' => array(
 				'interfaces',
 				'editors',
@@ -11338,7 +11366,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'circle',
+			'icon'     => 'circle',
 			'category' => array(
 				'audio-video',
 				'shapes',
@@ -11347,50 +11375,50 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'check-square',
+			'icon'     => 'check-square',
 			'category' => array(
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'check-circle',
+			'icon'     => 'check-circle',
 			'category' => array(
 				'interfaces',
 				'toggle',
 			),
 		),
 		array(
-			'icon'       => 'chart-bar',
+			'icon'     => 'chart-bar',
 			'category' => array(
 				'business',
 			),
 		),
 		array(
-			'icon'       => 'caret-square-up',
+			'icon'     => 'caret-square-up',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'caret-square-right',
+			'icon'     => 'caret-square-right',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'caret-square-left',
+			'icon'     => 'caret-square-left',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'caret-square-down',
+			'icon'     => 'caret-square-down',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'calendar-times',
+			'icon'     => 'calendar-times',
 			'category' => array(
 				'status',
 				'interfaces',
@@ -11398,7 +11426,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'calendar-plus',
+			'icon'     => 'calendar-plus',
 			'category' => array(
 				'status',
 				'interfaces',
@@ -11406,7 +11434,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'calendar-minus',
+			'icon'     => 'calendar-minus',
 			'category' => array(
 				'status',
 				'interfaces',
@@ -11414,7 +11442,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'calendar-check',
+			'icon'     => 'calendar-check',
 			'category' => array(
 				'status',
 				'interfaces',
@@ -11422,7 +11450,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'calendar-alt',
+			'icon'     => 'calendar-alt',
 			'category' => array(
 				'status',
 				'interfaces',
@@ -11432,7 +11460,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'calendar',
+			'icon'     => 'calendar',
 			'category' => array(
 				'status',
 				'shapes',
@@ -11443,7 +11471,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'building',
+			'icon'     => 'building',
 			'category' => array(
 				'buildings',
 				'business',
@@ -11452,7 +11480,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'bookmark',
+			'icon'     => 'bookmark',
 			'category' => array(
 				'shapes',
 				'writing',
@@ -11462,7 +11490,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'bell-slash',
+			'icon'     => 'bell-slash',
 			'category' => array(
 				'alert',
 				'education',
@@ -11474,7 +11502,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'bell',
+			'icon'     => 'bell',
 			'category' => array(
 				'alert',
 				'social',
@@ -11489,37 +11517,37 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'arrow-alt-circle-up',
+			'icon'     => 'arrow-alt-circle-up',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'arrow-alt-circle-right',
+			'icon'     => 'arrow-alt-circle-right',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'arrow-alt-circle-left',
+			'icon'     => 'arrow-alt-circle-left',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'arrow-alt-circle-down',
+			'icon'     => 'arrow-alt-circle-down',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'angry',
+			'icon'     => 'angry',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'address-card',
+			'icon'     => 'address-card',
 			'category' => array(
 				'users-people',
 				'communication',
@@ -11527,7 +11555,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'address-book',
+			'icon'     => 'address-book',
 			'category' => array(
 				'users-people',
 				'communication',
@@ -11537,26 +11565,26 @@ return array(
 	),
 	'fas'         => array(
 		array(
-			'icon'       => 'yin-yang',
+			'icon'     => 'yin-yang',
 			'category' => array(
 				'religion',
 				'spinners',
 			),
 		),
 		array(
-			'icon'       => 'yen-sign',
+			'icon'     => 'yen-sign',
 			'category' => array(
 				'currency',
 			),
 		),
 		array(
-			'icon'       => 'x-ray',
+			'icon'     => 'x-ray',
 			'category' => array(
 				'medical',
 			),
 		),
 		array(
-			'icon'       => 'wrench',
+			'icon'     => 'wrench',
 			'category' => array(
 				'construction',
 				'interfaces',
@@ -11566,20 +11594,20 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'won-sign',
+			'icon'     => 'won-sign',
 			'category' => array(
 				'currency',
 			),
 		),
 		array(
-			'icon'       => 'wine-glass-alt',
+			'icon'     => 'wine-glass-alt',
 			'category' => array(
 				'beverage',
 				'travel',
 			),
 		),
 		array(
-			'icon'       => 'wine-glass',
+			'icon'     => 'wine-glass',
 			'category' => array(
 				'beverage',
 				'travel',
@@ -11589,38 +11617,38 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'wine-bottle',
+			'icon'     => 'wine-bottle',
 			'category' => array(
 				'beverage',
 				'autumn',
 			),
 		),
 		array(
-			'icon'       => 'window-restore',
+			'icon'     => 'window-restore',
 			'category' => array(
 				'code',
 			),
 		),
 		array(
-			'icon'       => 'window-minimize',
+			'icon'     => 'window-minimize',
 			'category' => array(
 				'code',
 			),
 		),
 		array(
-			'icon'       => 'window-maximize',
+			'icon'     => 'window-maximize',
 			'category' => array(
 				'code',
 			),
 		),
 		array(
-			'icon'       => 'window-close',
+			'icon'     => 'window-close',
 			'category' => array(
 				'code',
 			),
 		),
 		array(
-			'icon'       => 'wind',
+			'icon'     => 'wind',
 			'category' => array(
 				'energy',
 				'maritime',
@@ -11629,7 +11657,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'wifi',
+			'icon'     => 'wifi',
 			'category' => array(
 				'status',
 				'interfaces',
@@ -11640,7 +11668,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'wheelchair',
+			'icon'     => 'wheelchair',
 			'category' => array(
 				'users-people',
 				'vehicles',
@@ -11652,24 +11680,24 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'weight-hanging',
+			'icon'     => 'weight-hanging',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'weight',
+			'icon'     => 'weight',
 			'category' => array(
 				'medical',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'wave-square',
+			'icon'     => 'wave-square',
 			'category' => array(
 				'mathematics',
 			),
 		),
 		array(
-			'icon'       => 'water',
+			'icon'     => 'water',
 			'category' => array(
 				'energy',
 				'summer',
@@ -11678,14 +11706,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'warehouse',
+			'icon'     => 'warehouse',
 			'category' => array(
 				'logistics',
 				'buildings',
 			),
 		),
 		array(
-			'icon'       => 'wallet',
+			'icon'     => 'wallet',
 			'category' => array(
 				'finance',
 				'business',
@@ -11693,24 +11721,24 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'walking',
+			'icon'     => 'walking',
 			'category' => array(
 				'users-people',
 				'fitness',
 			),
 		),
 		array(
-			'icon'       => 'vr-cardboard',
+			'icon'     => 'vr-cardboard',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'vote-yea',
+			'icon'     => 'vote-yea',
 			'category' => array(
 				'political',
 			),
 		),
 		array(
-			'icon'       => 'volume-up',
+			'icon'     => 'volume-up',
 			'category' => array(
 				'status',
 				'audio-video',
@@ -11719,7 +11747,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'volume-off',
+			'icon'     => 'volume-off',
 			'category' => array(
 				'status',
 				'audio-video',
@@ -11728,7 +11756,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'volume-mute',
+			'icon'     => 'volume-mute',
 			'category' => array(
 				'status',
 				'audio-video',
@@ -11737,7 +11765,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'volume-down',
+			'icon'     => 'volume-down',
 			'category' => array(
 				'status',
 				'audio-video',
@@ -11746,34 +11774,34 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'volleyball-ball',
+			'icon'     => 'volleyball-ball',
 			'category' => array(
 				'summer',
 				'sports',
 			),
 		),
 		array(
-			'icon'       => 'voicemail',
+			'icon'     => 'voicemail',
 			'category' => array(
 				'communication',
 			),
 		),
 		array(
-			'icon'       => 'vihara',
+			'icon'     => 'vihara',
 			'category' => array(
 				'buildings',
 				'religion',
 			),
 		),
 		array(
-			'icon'       => 'video-slash',
+			'icon'     => 'video-slash',
 			'category' => array(
 				'chat',
 				'status',
 			),
 		),
 		array(
-			'icon'       => 'video',
+			'icon'     => 'video',
 			'category' => array(
 				'social',
 				'chat',
@@ -11782,7 +11810,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'vials',
+			'icon'     => 'vials',
 			'category' => array(
 				'medical',
 				'science',
@@ -11790,7 +11818,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'vial',
+			'icon'     => 'vial',
 			'category' => array(
 				'medical',
 				'science',
@@ -11798,31 +11826,31 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'venus-mars',
+			'icon'     => 'venus-mars',
 			'category' => array(
 				'gender',
 			),
 		),
 		array(
-			'icon'       => 'venus-double',
+			'icon'     => 'venus-double',
 			'category' => array(
 				'gender',
 			),
 		),
 		array(
-			'icon'       => 'venus',
+			'icon'     => 'venus',
 			'category' => array(
 				'gender',
 			),
 		),
 		array(
-			'icon'       => 'vector-square',
+			'icon'     => 'vector-square',
 			'category' => array(
 				'design',
 			),
 		),
 		array(
-			'icon'       => 'utensils',
+			'icon'     => 'utensils',
 			'category' => array(
 				'hotel',
 				'objects',
@@ -11830,60 +11858,60 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'utensil-spoon',
+			'icon'     => 'utensil-spoon',
 			'category' => array(
 				'objects',
 				'maps',
 			),
 		),
 		array(
-			'icon'       => 'users-cog',
+			'icon'     => 'users-cog',
 			'category' => array(
 				'users-people',
 			),
 		),
 		array(
-			'icon'       => 'users',
+			'icon'     => 'users',
 			'category' => array(
 				'social',
 				'users-people',
 			),
 		),
 		array(
-			'icon'       => 'user-times',
+			'icon'     => 'user-times',
 			'category' => array(
 				'users-people',
 			),
 		),
 		array(
-			'icon'       => 'user-tie',
+			'icon'     => 'user-tie',
 			'category' => array(
 				'users-people',
 				'clothing',
 			),
 		),
 		array(
-			'icon'       => 'user-tag',
+			'icon'     => 'user-tag',
 			'category' => array(
 				'users-people',
 			),
 		),
 		array(
-			'icon'       => 'user-slash',
+			'icon'     => 'user-slash',
 			'category' => array(
 				'users-people',
 				'status',
 			),
 		),
 		array(
-			'icon'       => 'user-shield',
+			'icon'     => 'user-shield',
 			'category' => array(
 				'users-people',
 				'security',
 			),
 		),
 		array(
-			'icon'       => 'user-secret',
+			'icon'     => 'user-secret',
 			'category' => array(
 				'users-people',
 				'security',
@@ -11891,33 +11919,33 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'user-plus',
+			'icon'     => 'user-plus',
 			'category' => array(
 				'social',
 				'users-people',
 			),
 		),
 		array(
-			'icon'       => 'user-nurse',
+			'icon'     => 'user-nurse',
 			'category' => array(
 				'users-people',
 				'medical',
 			),
 		),
 		array(
-			'icon'       => 'user-ninja',
+			'icon'     => 'user-ninja',
 			'category' => array(
 				'users-people',
 			),
 		),
 		array(
-			'icon'       => 'user-minus',
+			'icon'     => 'user-minus',
 			'category' => array(
 				'users-people',
 			),
 		),
 		array(
-			'icon'       => 'user-md',
+			'icon'     => 'user-md',
 			'category' => array(
 				'users-people',
 				'medical',
@@ -11925,52 +11953,52 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'user-lock',
+			'icon'     => 'user-lock',
 			'category' => array(
 				'users-people',
 				'security',
 			),
 		),
 		array(
-			'icon'       => 'user-injured',
+			'icon'     => 'user-injured',
 			'category' => array(
 				'users-people',
 			),
 		),
 		array(
-			'icon'       => 'user-graduate',
+			'icon'     => 'user-graduate',
 			'category' => array(
 				'users-people',
 				'education',
 			),
 		),
 		array(
-			'icon'       => 'user-friends',
+			'icon'     => 'user-friends',
 			'category' => array(
 				'social',
 				'users-people',
 			),
 		),
 		array(
-			'icon'       => 'user-edit',
+			'icon'     => 'user-edit',
 			'category' => array(
 				'users-people',
 			),
 		),
 		array(
-			'icon'       => 'user-cog',
+			'icon'     => 'user-cog',
 			'category' => array(
 				'users-people',
 			),
 		),
 		array(
-			'icon'       => 'user-clock',
+			'icon'     => 'user-clock',
 			'category' => array(
 				'users-people',
 			),
 		),
 		array(
-			'icon'       => 'user-circle',
+			'icon'     => 'user-circle',
 			'category' => array(
 				'social',
 				'users-people',
@@ -11978,27 +12006,27 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'user-check',
+			'icon'     => 'user-check',
 			'category' => array(
 				'users-people',
 			),
 		),
 		array(
-			'icon'       => 'user-astronaut',
+			'icon'     => 'user-astronaut',
 			'category' => array(
 				'science-fiction',
 				'users-people',
 			),
 		),
 		array(
-			'icon'       => 'user-alt-slash',
+			'icon'     => 'user-alt-slash',
 			'category' => array(
 				'users-people',
 				'status',
 			),
 		),
 		array(
-			'icon'       => 'user-alt',
+			'icon'     => 'user-alt',
 			'category' => array(
 				'users-people',
 				'status',
@@ -12006,7 +12034,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'user',
+			'icon'     => 'user',
 			'category' => array(
 				'social',
 				'users-people',
@@ -12015,7 +12043,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'upload',
+			'icon'     => 'upload',
 			'category' => array(
 				'computers',
 				'arrows',
@@ -12023,7 +12051,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'unlock-alt',
+			'icon'     => 'unlock-alt',
 			'category' => array(
 				'status',
 				'security',
@@ -12031,7 +12059,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'unlock',
+			'icon'     => 'unlock',
 			'category' => array(
 				'status',
 				'security',
@@ -12039,13 +12067,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'unlink',
+			'icon'     => 'unlink',
 			'category' => array(
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'university',
+			'icon'     => 'university',
 			'category' => array(
 				'buildings',
 				'objects',
@@ -12053,13 +12081,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'universal-access',
+			'icon'     => 'universal-access',
 			'category' => array(
 				'accessibility',
 			),
 		),
 		array(
-			'icon'       => 'undo-alt',
+			'icon'     => 'undo-alt',
 			'category' => array(
 				'arrows',
 				'audio-video',
@@ -12068,7 +12096,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'undo',
+			'icon'     => 'undo',
 			'category' => array(
 				'arrows',
 				'audio-video',
@@ -12077,13 +12105,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'underline',
+			'icon'     => 'underline',
 			'category' => array(
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'umbrella-beach',
+			'icon'     => 'umbrella-beach',
 			'category' => array(
 				'summer',
 				'travel',
@@ -12091,7 +12119,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'umbrella',
+			'icon'     => 'umbrella',
 			'category' => array(
 				'weather',
 				'spring',
@@ -12100,7 +12128,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'tv',
+			'icon'     => 'tv',
 			'category' => array(
 				'travel',
 				'computers',
@@ -12111,7 +12139,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'tty',
+			'icon'     => 'tty',
 			'category' => array(
 				'communication',
 				'accessibility',
@@ -12119,14 +12147,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'tshirt',
+			'icon'     => 'tshirt',
 			'category' => array(
 				'clothing',
 				'shopping',
 			),
 		),
 		array(
-			'icon'       => 'truck-pickup',
+			'icon'     => 'truck-pickup',
 			'category' => array(
 				'construction',
 				'vehicles',
@@ -12134,26 +12162,26 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'truck-moving',
+			'icon'     => 'truck-moving',
 			'category' => array(
 				'moving',
 			),
 		),
 		array(
-			'icon'       => 'truck-monster',
+			'icon'     => 'truck-monster',
 			'category' => array(
 				'vehicles',
 				'automotive',
 			),
 		),
 		array(
-			'icon'       => 'truck-loading',
+			'icon'     => 'truck-loading',
 			'category' => array(
 				'moving',
 			),
 		),
 		array(
-			'icon'       => 'truck',
+			'icon'     => 'truck',
 			'category' => array(
 				'logistics',
 				'vehicles',
@@ -12164,7 +12192,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'trophy',
+			'icon'     => 'trophy',
 			'category' => array(
 				'interfaces',
 				'payments-shopping',
@@ -12173,7 +12201,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'tree',
+			'icon'     => 'tree',
 			'category' => array(
 				'camping',
 				'autumn',
@@ -12182,29 +12210,21 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'trash-restore-alt',
+			'icon'     => 'trash-restore-alt',
 			'category' => array(
 				'interfaces',
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'trash-restore',
+			'icon'     => 'trash-restore',
 			'category' => array(
 				'interfaces',
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'trash-alt',
-			'category' => array(
-				'interfaces',
-				'editors',
-				'objects',
-			),
-		),
-		array(
-			'icon'       => 'trash',
+			'icon'     => 'trash-alt',
 			'category' => array(
 				'interfaces',
 				'editors',
@@ -12212,19 +12232,27 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'transgender-alt',
+			'icon'     => 'trash',
+			'category' => array(
+				'interfaces',
+				'editors',
+				'objects',
+			),
+		),
+		array(
+			'icon'     => 'transgender-alt',
 			'category' => array(
 				'gender',
 			),
 		),
 		array(
-			'icon'       => 'transgender',
+			'icon'     => 'transgender',
 			'category' => array(
 				'gender',
 			),
 		),
 		array(
-			'icon'       => 'tram',
+			'icon'     => 'tram',
 			'category' => array(
 				'travel',
 				'vehicles',
@@ -12234,7 +12262,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'train',
+			'icon'     => 'train',
 			'category' => array(
 				'vehicles',
 				'objects',
@@ -12242,45 +12270,45 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'traffic-light',
+			'icon'     => 'traffic-light',
 			'category' => array(
 				'maps',
 			),
 		),
 		array(
-			'icon'       => 'trademark',
+			'icon'     => 'trademark',
 			'category' => array(
 				'business',
 			),
 		),
 		array(
-			'icon'       => 'tractor',
+			'icon'     => 'tractor',
 			'category' => array(
 				'vehicles',
 				'autumn',
 			),
 		),
 		array(
-			'icon'       => 'torii-gate',
+			'icon'     => 'torii-gate',
 			'category' => array(
 				'buildings',
 				'religion',
 			),
 		),
 		array(
-			'icon'       => 'torah',
+			'icon'     => 'torah',
 			'category' => array(
 				'religion',
 			),
 		),
 		array(
-			'icon'       => 'tooth',
+			'icon'     => 'tooth',
 			'category' => array(
 				'medical',
 			),
 		),
 		array(
-			'icon'       => 'tools',
+			'icon'     => 'tools',
 			'category' => array(
 				'construction',
 				'interfaces',
@@ -12289,14 +12317,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'toolbox',
+			'icon'     => 'toolbox',
 			'category' => array(
 				'construction',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'toilet-paper',
+			'icon'     => 'toilet-paper',
 			'category' => array(
 				'halloween',
 				'camping',
@@ -12304,13 +12332,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'toilet',
+			'icon'     => 'toilet',
 			'category' => array(
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'toggle-on',
+			'icon'     => 'toggle-on',
 			'category' => array(
 				'status',
 				'interfaces',
@@ -12318,7 +12346,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'toggle-off',
+			'icon'     => 'toggle-off',
 			'category' => array(
 				'status',
 				'interfaces',
@@ -12326,20 +12354,20 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'tired',
+			'icon'     => 'tired',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'tint-slash',
+			'icon'     => 'tint-slash',
 			'category' => array(
 				'status',
 				'design',
 			),
 		),
 		array(
-			'icon'       => 'tint',
+			'icon'     => 'tint',
 			'category' => array(
 				'images',
 				'status',
@@ -12348,27 +12376,27 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'times-circle',
+			'icon'     => 'times-circle',
 			'category' => array(
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'times',
+			'icon'     => 'times',
 			'category' => array(
 				'mathematics',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'ticket-alt',
+			'icon'     => 'ticket-alt',
 			'category' => array(
 				'objects',
 				'maps',
 			),
 		),
 		array(
-			'icon'       => 'thumbtack',
+			'icon'     => 'thumbtack',
 			'category' => array(
 				'social',
 				'writing',
@@ -12378,7 +12406,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'thumbs-up',
+			'icon'     => 'thumbs-up',
 			'category' => array(
 				'social',
 				'status',
@@ -12388,7 +12416,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'thumbs-down',
+			'icon'     => 'thumbs-down',
 			'category' => array(
 				'social',
 				'status',
@@ -12398,120 +12426,120 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'thermometer-three-quarters',
+			'icon'     => 'thermometer-three-quarters',
 			'category' => array(
 				'status',
 			),
 		),
 		array(
-			'icon'       => 'thermometer-quarter',
+			'icon'     => 'thermometer-quarter',
 			'category' => array(
 				'status',
 			),
 		),
 		array(
-			'icon'       => 'thermometer-half',
+			'icon'     => 'thermometer-half',
 			'category' => array(
 				'status',
 			),
 		),
 		array(
-			'icon'       => 'thermometer-full',
+			'icon'     => 'thermometer-full',
 			'category' => array(
 				'status',
 			),
 		),
 		array(
-			'icon'       => 'thermometer-empty',
+			'icon'     => 'thermometer-empty',
 			'category' => array(
 				'status',
 			),
 		),
 		array(
-			'icon'       => 'thermometer',
+			'icon'     => 'thermometer',
 			'category' => array(
 				'medical',
 				'pharmacy',
 			),
 		),
 		array(
-			'icon'       => 'theater-masks',
+			'icon'     => 'theater-masks',
 			'category' => array(
 				'education',
 			),
 		),
 		array(
-			'icon'       => 'th-list',
+			'icon'     => 'th-list',
 			'category' => array(
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'th-large',
+			'icon'     => 'th-large',
 			'category' => array(
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'th',
+			'icon'     => 'th',
 			'category' => array(
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'text-width',
-			'category' => array(
-				'arrows',
-				'editors',
-			),
-		),
-		array(
-			'icon'       => 'text-height',
+			'icon'     => 'text-width',
 			'category' => array(
 				'arrows',
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'terminal',
+			'icon'     => 'text-height',
+			'category' => array(
+				'arrows',
+				'editors',
+			),
+		),
+		array(
+			'icon'     => 'terminal',
 			'category' => array(
 				'code',
 			),
 		),
 		array(
-			'icon'       => 'tenge',
+			'icon'     => 'tenge',
 			'category' => array(
 				'currency',
 			),
 		),
 		array(
-			'icon'       => 'temperature-low',
+			'icon'     => 'temperature-low',
 			'category' => array(
 				'science',
 				'weather',
 			),
 		),
 		array(
-			'icon'       => 'temperature-high',
+			'icon'     => 'temperature-high',
 			'category' => array(
 				'science',
 				'weather',
 			),
 		),
 		array(
-			'icon'       => 'teeth-open',
+			'icon'     => 'teeth-open',
 			'category' => array(
 				'medical',
 			),
 		),
 		array(
-			'icon'       => 'teeth',
+			'icon'     => 'teeth',
 			'category' => array(
 				'medical',
 			),
 		),
 		array(
-			'icon'       => 'taxi',
+			'icon'     => 'taxi',
 			'category' => array(
 				'travel',
 				'vehicles',
@@ -12521,20 +12549,20 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'tasks',
+			'icon'     => 'tasks',
 			'category' => array(
 				'editors',
 				'business',
 			),
 		),
 		array(
-			'icon'       => 'tape',
+			'icon'     => 'tape',
 			'category' => array(
 				'moving',
 			),
 		),
 		array(
-			'icon'       => 'tags',
+			'icon'     => 'tags',
 			'category' => array(
 				'payments-shopping',
 				'business',
@@ -12543,7 +12571,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'tag',
+			'icon'     => 'tag',
 			'category' => array(
 				'payments-shopping',
 				'business',
@@ -12552,14 +12580,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'tachometer-alt',
+			'icon'     => 'tachometer-alt',
 			'category' => array(
 				'automotive',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'tablets',
+			'icon'     => 'tablets',
 			'category' => array(
 				'medical',
 				'science',
@@ -12567,34 +12595,34 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'tablet-alt',
+			'icon'     => 'tablet-alt',
 			'category' => array(
 				'computers',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'tablet',
+			'icon'     => 'tablet',
 			'category' => array(
 				'computers',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'table-tennis',
+			'icon'     => 'table-tennis',
 			'category' => array(
 				'sports',
 			),
 		),
 		array(
-			'icon'       => 'table',
+			'icon'     => 'table',
 			'category' => array(
 				'editors',
 				'business',
 			),
 		),
 		array(
-			'icon'       => 'syringe',
+			'icon'     => 'syringe',
 			'category' => array(
 				'medical',
 				'science',
@@ -12602,7 +12630,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'sync-alt',
+			'icon'     => 'sync-alt',
 			'category' => array(
 				'arrows',
 				'audio-video',
@@ -12612,7 +12640,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'sync',
+			'icon'     => 'sync',
 			'category' => array(
 				'arrows',
 				'audio-video',
@@ -12622,14 +12650,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'synagogue',
+			'icon'     => 'synagogue',
 			'category' => array(
 				'buildings',
 				'religion',
 			),
 		),
 		array(
-			'icon'       => 'swimming-pool',
+			'icon'     => 'swimming-pool',
 			'category' => array(
 				'summer',
 				'travel',
@@ -12637,7 +12665,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'swimmer',
+			'icon'     => 'swimmer',
 			'category' => array(
 				'users-people',
 				'summer',
@@ -12649,26 +12677,26 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'swatchbook',
+			'icon'     => 'swatchbook',
 			'category' => array(
 				'design',
 			),
 		),
 		array(
-			'icon'       => 'surprise',
+			'icon'     => 'surprise',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'superscript',
+			'icon'     => 'superscript',
 			'category' => array(
 				'mathematics',
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'sun',
+			'icon'     => 'sun',
 			'category' => array(
 				'energy',
 				'summer',
@@ -12678,14 +12706,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'suitcase-rolling',
+			'icon'     => 'suitcase-rolling',
 			'category' => array(
 				'travel',
 				'hotel',
 			),
 		),
 		array(
-			'icon'       => 'suitcase',
+			'icon'     => 'suitcase',
 			'category' => array(
 				'travel',
 				'moving',
@@ -12695,7 +12723,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'subway',
+			'icon'     => 'subway',
 			'category' => array(
 				'vehicles',
 				'objects',
@@ -12703,14 +12731,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'subscript',
+			'icon'     => 'subscript',
 			'category' => array(
 				'mathematics',
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'stroopwafel',
+			'icon'     => 'stroopwafel',
 			'category' => array(
 				'spinners',
 				'objects',
@@ -12718,20 +12746,20 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'strikethrough',
+			'icon'     => 'strikethrough',
 			'category' => array(
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'street-view',
+			'icon'     => 'street-view',
 			'category' => array(
 				'users-people',
 				'maps',
 			),
 		),
 		array(
-			'icon'       => 'stream',
+			'icon'     => 'stream',
 			'category' => array(
 				'computers',
 				'status',
@@ -12740,40 +12768,40 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'store-alt',
+			'icon'     => 'store-alt',
 			'category' => array(
 				'buildings',
 				'shopping',
 			),
 		),
 		array(
-			'icon'       => 'store',
+			'icon'     => 'store',
 			'category' => array(
 				'buildings',
 				'shopping',
 			),
 		),
 		array(
-			'icon'       => 'stopwatch',
+			'icon'     => 'stopwatch',
 			'category' => array(
 				'date-time',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'stop-circle',
+			'icon'     => 'stop-circle',
 			'category' => array(
 				'audio-video',
 			),
 		),
 		array(
-			'icon'       => 'stop',
+			'icon'     => 'stop',
 			'category' => array(
 				'audio-video',
 			),
 		),
 		array(
-			'icon'       => 'sticky-note',
+			'icon'     => 'sticky-note',
 			'category' => array(
 				'files',
 				'writing',
@@ -12782,45 +12810,45 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'stethoscope',
+			'icon'     => 'stethoscope',
 			'category' => array(
 				'medical',
 				'health',
 			),
 		),
 		array(
-			'icon'       => 'step-forward',
+			'icon'     => 'step-forward',
 			'category' => array(
 				'audio-video',
 			),
 		),
 		array(
-			'icon'       => 'step-backward',
+			'icon'     => 'step-backward',
 			'category' => array(
 				'audio-video',
 			),
 		),
 		array(
-			'icon'       => 'star-of-life',
+			'icon'     => 'star-of-life',
 			'category' => array(
 				'medical',
 			),
 		),
 		array(
-			'icon'       => 'star-of-david',
+			'icon'     => 'star-of-david',
 			'category' => array(
 				'religion',
 			),
 		),
 		array(
-			'icon'       => 'star-half-alt',
+			'icon'     => 'star-half-alt',
 			'category' => array(
 				'status',
 				'toggle',
 			),
 		),
 		array(
-			'icon'       => 'star-half',
+			'icon'     => 'star-half',
 			'category' => array(
 				'status',
 				'interfaces',
@@ -12828,13 +12856,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'star-and-crescent',
+			'icon'     => 'star-and-crescent',
 			'category' => array(
 				'religion',
 			),
 		),
 		array(
-			'icon'       => 'star',
+			'icon'     => 'star',
 			'category' => array(
 				'social',
 				'status',
@@ -12846,63 +12874,63 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'stamp',
+			'icon'     => 'stamp',
 			'category' => array(
 				'finance',
 				'design',
 			),
 		),
 		array(
-			'icon'       => 'square-root-alt',
+			'icon'     => 'square-root-alt',
 			'category' => array(
 				'mathematics',
 			),
 		),
 		array(
-			'icon'       => 'square-full',
+			'icon'     => 'square-full',
 			'category' => array(
 				'chess',
 			),
 		),
 		array(
-			'icon'       => 'square',
+			'icon'     => 'square',
 			'category' => array(
 				'shapes',
 			),
 		),
 		array(
-			'icon'       => 'spray-can',
+			'icon'     => 'spray-can',
 			'category' => array(
 				'design',
 			),
 		),
 		array(
-			'icon'       => 'splotch',
+			'icon'     => 'splotch',
 			'category' => array(
 				'design',
 			),
 		),
 		array(
-			'icon'       => 'spinner',
+			'icon'     => 'spinner',
 			'category' => array(
 				'spinners',
 			),
 		),
 		array(
-			'icon'       => 'spider',
+			'icon'     => 'spider',
 			'category' => array(
 				'animals',
 				'halloween',
 			),
 		),
 		array(
-			'icon'       => 'spell-check',
+			'icon'     => 'spell-check',
 			'category' => array(
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'space-shuttle',
+			'icon'     => 'space-shuttle',
 			'category' => array(
 				'science-fiction',
 				'vehicles',
@@ -12910,7 +12938,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'spa',
+			'icon'     => 'spa',
 			'category' => array(
 				'travel',
 				'fitness',
@@ -12918,125 +12946,125 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'sort-up',
+			'icon'     => 'sort-up',
 			'category' => array(
 				'arrows',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'sort-numeric-up-alt',
+			'icon'     => 'sort-numeric-up-alt',
 			'category' => array(
 				'arrows',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'sort-numeric-up',
+			'icon'     => 'sort-numeric-up',
 			'category' => array(
 				'arrows',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'sort-numeric-down-alt',
+			'icon'     => 'sort-numeric-down-alt',
 			'category' => array(
 				'arrows',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'sort-numeric-down',
+			'icon'     => 'sort-numeric-down',
 			'category' => array(
 				'arrows',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'sort-down',
+			'icon'     => 'sort-down',
 			'category' => array(
 				'arrows',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'sort-amount-up-alt',
+			'icon'     => 'sort-amount-up-alt',
 			'category' => array(
 				'arrows',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'sort-amount-up',
+			'icon'     => 'sort-amount-up',
 			'category' => array(
 				'arrows',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'sort-amount-down-alt',
+			'icon'     => 'sort-amount-down-alt',
 			'category' => array(
 				'arrows',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'sort-amount-down',
+			'icon'     => 'sort-amount-down',
 			'category' => array(
 				'arrows',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'sort-alpha-up-alt',
+			'icon'     => 'sort-alpha-up-alt',
 			'category' => array(
 				'arrows',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'sort-alpha-up',
+			'icon'     => 'sort-alpha-up',
 			'category' => array(
 				'arrows',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'sort-alpha-down-alt',
+			'icon'     => 'sort-alpha-down-alt',
 			'category' => array(
 				'arrows',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'sort-alpha-down',
+			'icon'     => 'sort-alpha-down',
 			'category' => array(
 				'arrows',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'sort',
+			'icon'     => 'sort',
 			'category' => array(
 				'arrows',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'solar-panel',
+			'icon'     => 'solar-panel',
 			'category' => array(
 				'energy',
 			),
 		),
 		array(
-			'icon'       => 'socks',
+			'icon'     => 'socks',
 			'category' => array(
 				'clothing',
 				'business',
 			),
 		),
 		array(
-			'icon'       => 'snowplow',
+			'icon'     => 'snowplow',
 			'category' => array(
 				'vehicles',
 				'winter',
@@ -13045,14 +13073,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'snowman',
+			'icon'     => 'snowman',
 			'category' => array(
 				'childhood',
 				'holiday',
 			),
 		),
 		array(
-			'icon'       => 'snowflake',
+			'icon'     => 'snowflake',
 			'category' => array(
 				'spinners',
 				'weather',
@@ -13061,7 +13089,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'snowboarding',
+			'icon'     => 'snowboarding',
 			'category' => array(
 				'users-people',
 				'sports',
@@ -13070,13 +13098,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'sms',
+			'icon'     => 'sms',
 			'category' => array(
 				'chat',
 			),
 		),
 		array(
-			'icon'       => 'smoking-ban',
+			'icon'     => 'smoking-ban',
 			'category' => array(
 				'medical',
 				'status',
@@ -13084,32 +13112,32 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'smoking',
+			'icon'     => 'smoking',
 			'category' => array(
 				'medical',
 				'hotel',
 			),
 		),
 		array(
-			'icon'       => 'smog',
+			'icon'     => 'smog',
 			'category' => array(
 				'weather',
 			),
 		),
 		array(
-			'icon'       => 'smile-wink',
+			'icon'     => 'smile-wink',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'smile-beam',
+			'icon'     => 'smile-beam',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'smile',
+			'icon'     => 'smile',
 			'category' => array(
 				'users-people',
 				'chat',
@@ -13118,7 +13146,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'sliders-h',
+			'icon'     => 'sliders-h',
 			'category' => array(
 				'images',
 				'music',
@@ -13126,7 +13154,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'sleigh',
+			'icon'     => 'sleigh',
 			'category' => array(
 				'vehicles',
 				'holiday',
@@ -13134,13 +13162,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'slash',
+			'icon'     => 'slash',
 			'category' => array(
 				'spinners',
 			),
 		),
 		array(
-			'icon'       => 'skull-crossbones',
+			'icon'     => 'skull-crossbones',
 			'category' => array(
 				'alert',
 				'science',
@@ -13152,11 +13180,11 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'skull',
+			'icon'     => 'skull',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'skiing-nordic',
+			'icon'     => 'skiing-nordic',
 			'category' => array(
 				'users-people',
 				'sports',
@@ -13165,7 +13193,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'skiing',
+			'icon'     => 'skiing',
 			'category' => array(
 				'users-people',
 				'sports',
@@ -13174,7 +13202,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'skating',
+			'icon'     => 'skating',
 			'category' => array(
 				'users-people',
 				'sports',
@@ -13183,7 +13211,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'sitemap',
+			'icon'     => 'sitemap',
 			'category' => array(
 				'interfaces',
 				'business',
@@ -13191,25 +13219,25 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'sim-card',
+			'icon'     => 'sim-card',
 			'category' => array(
 				'computers',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'signature',
+			'icon'     => 'signature',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'signal',
+			'icon'     => 'signal',
 			'category' => array(
 				'status',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'sign-out-alt',
+			'icon'     => 'sign-out-alt',
 			'category' => array(
 				'status',
 				'arrows',
@@ -13217,13 +13245,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'sign-language',
+			'icon'     => 'sign-language',
 			'category' => array(
 				'accessibility',
 			),
 		),
 		array(
-			'icon'       => 'sign-in-alt',
+			'icon'     => 'sign-in-alt',
 			'category' => array(
 				'status',
 				'arrows',
@@ -13231,13 +13259,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'sign',
+			'icon'     => 'sign',
 			'category' => array(
 				'moving',
 			),
 		),
 		array(
-			'icon'       => 'shuttle-van',
+			'icon'     => 'shuttle-van',
 			'category' => array(
 				'travel',
 				'vehicles',
@@ -13246,7 +13274,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'shower',
+			'icon'     => 'shower',
 			'category' => array(
 				'hotel',
 				'objects',
@@ -13255,7 +13283,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'shopping-cart',
+			'icon'     => 'shopping-cart',
 			'category' => array(
 				'vehicles',
 				'status',
@@ -13266,7 +13294,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'shopping-basket',
+			'icon'     => 'shopping-basket',
 			'category' => array(
 				'payments-shopping',
 				'shopping',
@@ -13275,7 +13303,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'shopping-bag',
+			'icon'     => 'shopping-bag',
 			'category' => array(
 				'payments-shopping',
 				'shopping',
@@ -13284,7 +13312,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'shoe-prints',
+			'icon'     => 'shoe-prints',
 			'category' => array(
 				'clothing',
 				'fitness',
@@ -13292,14 +13320,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'shipping-fast',
+			'icon'     => 'shipping-fast',
 			'category' => array(
 				'logistics',
 				'shopping',
 			),
 		),
 		array(
-			'icon'       => 'ship',
+			'icon'     => 'ship',
 			'category' => array(
 				'vehicles',
 				'maritime',
@@ -13307,7 +13335,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'shield-alt',
+			'icon'     => 'shield-alt',
 			'category' => array(
 				'status',
 				'interfaces',
@@ -13317,13 +13345,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'shekel-sign',
+			'icon'     => 'shekel-sign',
 			'category' => array(
 				'currency',
 			),
 		),
 		array(
-			'icon'       => 'share-square',
+			'icon'     => 'share-square',
 			'category' => array(
 				'social',
 				'arrows',
@@ -13331,20 +13359,20 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'share-alt-square',
+			'icon'     => 'share-alt-square',
 			'category' => array(
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'share-alt',
+			'icon'     => 'share-alt',
 			'category' => array(
 				'social',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'share',
+			'icon'     => 'share',
 			'category' => array(
 				'social',
 				'arrows',
@@ -13353,7 +13381,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'shapes',
+			'icon'     => 'shapes',
 			'category' => array(
 				'education',
 				'childhood',
@@ -13361,13 +13389,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'server',
+			'icon'     => 'server',
 			'category' => array(
 				'computers',
 			),
 		),
 		array(
-			'icon'       => 'seedling',
+			'icon'     => 'seedling',
 			'category' => array(
 				'energy',
 				'charity',
@@ -13378,33 +13406,33 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'search-plus',
+			'icon'     => 'search-plus',
 			'category' => array(
 				'interfaces',
 				'maps',
 			),
 		),
 		array(
-			'icon'       => 'search-minus',
+			'icon'     => 'search-minus',
 			'category' => array(
 				'interfaces',
 				'maps',
 			),
 		),
 		array(
-			'icon'       => 'search-location',
+			'icon'     => 'search-location',
 			'category' => array(
 				'marketing',
 			),
 		),
 		array(
-			'icon'       => 'search-dollar',
+			'icon'     => 'search-dollar',
 			'category' => array(
 				'marketing',
 			),
 		),
 		array(
-			'icon'       => 'search',
+			'icon'     => 'search',
 			'category' => array(
 				'interfaces',
 				'objects',
@@ -13412,21 +13440,21 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'sd-card',
+			'icon'     => 'sd-card',
 			'category' => array(
 				'computers',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'scroll',
+			'icon'     => 'scroll',
 			'category' => array(
 				'gaming-tabletop',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'screwdriver',
+			'icon'     => 'screwdriver',
 			'category' => array(
 				'construction',
 				'interfaces',
@@ -13435,7 +13463,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'school',
+			'icon'     => 'school',
 			'category' => array(
 				'buildings',
 				'education',
@@ -13444,7 +13472,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'save',
+			'icon'     => 'save',
 			'category' => array(
 				'files',
 				'computers',
@@ -13455,7 +13483,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'satellite-dish',
+			'icon'     => 'satellite-dish',
 			'category' => array(
 				'science-fiction',
 				'computers',
@@ -13463,7 +13491,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'satellite',
+			'icon'     => 'satellite',
 			'category' => array(
 				'science-fiction',
 				'computers',
@@ -13471,25 +13499,25 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'sad-tear',
+			'icon'     => 'sad-tear',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'sad-cry',
+			'icon'     => 'sad-cry',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'rupee-sign',
+			'icon'     => 'rupee-sign',
 			'category' => array(
 				'currency',
 			),
 		),
 		array(
-			'icon'       => 'running',
+			'icon'     => 'running',
 			'category' => array(
 				'users-people',
 				'sports',
@@ -13497,7 +13525,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'ruler-vertical',
+			'icon'     => 'ruler-vertical',
 			'category' => array(
 				'construction',
 				'design',
@@ -13505,7 +13533,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'ruler-horizontal',
+			'icon'     => 'ruler-horizontal',
 			'category' => array(
 				'construction',
 				'design',
@@ -13513,7 +13541,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'ruler-combined',
+			'icon'     => 'ruler-combined',
 			'category' => array(
 				'construction',
 				'design',
@@ -13521,19 +13549,19 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'ruler',
+			'icon'     => 'ruler',
 			'category' => array(
 				'construction',
 			),
 		),
 		array(
-			'icon'       => 'ruble-sign',
+			'icon'     => 'ruble-sign',
 			'category' => array(
 				'currency',
 			),
 		),
 		array(
-			'icon'       => 'rss-square',
+			'icon'     => 'rss-square',
 			'category' => array(
 				'audio-video',
 				'interfaces',
@@ -13541,7 +13569,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'rss',
+			'icon'     => 'rss',
 			'category' => array(
 				'audio-video',
 				'interfaces',
@@ -13549,7 +13577,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'route',
+			'icon'     => 'route',
 			'category' => array(
 				'camping',
 				'moving',
@@ -13557,7 +13585,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'rocket',
+			'icon'     => 'rocket',
 			'category' => array(
 				'science-fiction',
 				'vehicles',
@@ -13566,21 +13594,21 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'robot',
+			'icon'     => 'robot',
 			'category' => array(
 				'science-fiction',
 				'childhood',
 			),
 		),
 		array(
-			'icon'       => 'road',
+			'icon'     => 'road',
 			'category' => array(
 				'objects',
 				'maps',
 			),
 		),
 		array(
-			'icon'       => 'ring',
+			'icon'     => 'ring',
 			'category' => array(
 				'spinners',
 				'gaming-tabletop',
@@ -13588,33 +13616,33 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'ribbon',
+			'icon'     => 'ribbon',
 			'category' => array(
 				'charity',
 			),
 		),
 		array(
-			'icon'       => 'retweet',
+			'icon'     => 'retweet',
 			'category' => array(
 				'social',
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'restroom',
+			'icon'     => 'restroom',
 			'category' => array(
 				'users-people',
 				'maps',
 			),
 		),
 		array(
-			'icon'       => 'republican',
+			'icon'     => 'republican',
 			'category' => array(
 				'political',
 			),
 		),
 		array(
-			'icon'       => 'reply-all',
+			'icon'     => 'reply-all',
 			'category' => array(
 				'arrows',
 				'interfaces',
@@ -13622,7 +13650,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'reply',
+			'icon'     => 'reply',
 			'category' => array(
 				'arrows',
 				'interfaces',
@@ -13630,19 +13658,19 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'remove-format',
+			'icon'     => 'remove-format',
 			'category' => array(
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'registered',
+			'icon'     => 'registered',
 			'category' => array(
 				'business',
 			),
 		),
 		array(
-			'icon'       => 'redo-alt',
+			'icon'     => 'redo-alt',
 			'category' => array(
 				'arrows',
 				'audio-video',
@@ -13651,7 +13679,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'redo',
+			'icon'     => 'redo',
 			'category' => array(
 				'arrows',
 				'audio-video',
@@ -13660,20 +13688,20 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'recycle',
+			'icon'     => 'recycle',
 			'category' => array(
 				'arrows',
 				'maps',
 			),
 		),
 		array(
-			'icon'       => 'record-vinyl',
+			'icon'     => 'record-vinyl',
 			'category' => array(
 				'music',
 			),
 		),
 		array(
-			'icon'       => 'receipt',
+			'icon'     => 'receipt',
 			'category' => array(
 				'finance',
 				'pharmacy',
@@ -13682,21 +13710,21 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'random',
+			'icon'     => 'random',
 			'category' => array(
 				'arrows',
 				'audio-video',
 			),
 		),
 		array(
-			'icon'       => 'rainbow',
+			'icon'     => 'rainbow',
 			'category' => array(
 				'weather',
 				'spring',
 			),
 		),
 		array(
-			'icon'       => 'radiation-alt',
+			'icon'     => 'radiation-alt',
 			'category' => array(
 				'alert',
 				'energy',
@@ -13705,7 +13733,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'radiation',
+			'icon'     => 'radiation',
 			'category' => array(
 				'alert',
 				'energy',
@@ -13714,13 +13742,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'quran',
+			'icon'     => 'quran',
 			'category' => array(
 				'religion',
 			),
 		),
 		array(
-			'icon'       => 'quote-right',
+			'icon'     => 'quote-right',
 			'category' => array(
 				'chat',
 				'writing',
@@ -13729,7 +13757,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'quote-left',
+			'icon'     => 'quote-left',
 			'category' => array(
 				'chat',
 				'writing',
@@ -13738,13 +13766,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'quidditch',
+			'icon'     => 'quidditch',
 			'category' => array(
 				'sports',
 			),
 		),
 		array(
-			'icon'       => 'question-circle',
+			'icon'     => 'question-circle',
 			'category' => array(
 				'status',
 				'interfaces',
@@ -13752,41 +13780,41 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'question',
+			'icon'     => 'question',
 			'category' => array(
 				'status',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'qrcode',
+			'icon'     => 'qrcode',
 			'category' => array(
 				'interfaces',
 				'code',
 			),
 		),
 		array(
-			'icon'       => 'puzzle-piece',
+			'icon'     => 'puzzle-piece',
 			'category' => array(
 				'games',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'project-diagram',
+			'icon'     => 'project-diagram',
 			'category' => array(
 				'business',
 				'code',
 			),
 		),
 		array(
-			'icon'       => 'procedures',
+			'icon'     => 'procedures',
 			'category' => array(
 				'medical',
 			),
 		),
 		array(
-			'icon'       => 'print',
+			'icon'     => 'print',
 			'category' => array(
 				'computers',
 				'status',
@@ -13797,14 +13825,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'prescription-bottle-alt',
+			'icon'     => 'prescription-bottle-alt',
 			'category' => array(
 				'medical',
 				'pharmacy',
 			),
 		),
 		array(
-			'icon'       => 'prescription-bottle',
+			'icon'     => 'prescription-bottle',
 			'category' => array(
 				'medical',
 				'science',
@@ -13812,7 +13840,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'prescription',
+			'icon'     => 'prescription',
 			'category' => array(
 				'medical',
 				'pharmacy',
@@ -13820,21 +13848,21 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'praying-hands',
+			'icon'     => 'praying-hands',
 			'category' => array(
 				'religion',
 				'hands',
 			),
 		),
 		array(
-			'icon'       => 'pray',
+			'icon'     => 'pray',
 			'category' => array(
 				'users-people',
 				'religion',
 			),
 		),
 		array(
-			'icon'       => 'power-off',
+			'icon'     => 'power-off',
 			'category' => array(
 				'energy',
 				'users-people',
@@ -13842,33 +13870,33 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'pound-sign',
+			'icon'     => 'pound-sign',
 			'category' => array(
 				'currency',
 			),
 		),
 		array(
-			'icon'       => 'portrait',
+			'icon'     => 'portrait',
 			'category' => array(
 				'users-people',
 				'images',
 			),
 		),
 		array(
-			'icon'       => 'poop',
+			'icon'     => 'poop',
 			'category' => array(
 				'energy',
 				'medical',
 			),
 		),
 		array(
-			'icon'       => 'poo-storm',
+			'icon'     => 'poo-storm',
 			'category' => array(
 				'weather',
 			),
 		),
 		array(
-			'icon'       => 'poo',
+			'icon'     => 'poo',
 			'category' => array(
 				'users-people',
 				'chat',
@@ -13876,27 +13904,27 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'poll-h',
+			'icon'     => 'poll-h',
 			'category' => array(
 				'social',
 				'marketing',
 			),
 		),
 		array(
-			'icon'       => 'poll',
+			'icon'     => 'poll',
 			'category' => array(
 				'social',
 				'marketing',
 			),
 		),
 		array(
-			'icon'       => 'podcast',
+			'icon'     => 'podcast',
 			'category' => array(
 				'audio-video',
 			),
 		),
 		array(
-			'icon'       => 'plus-square',
+			'icon'     => 'plus-square',
 			'category' => array(
 				'status',
 				'interfaces',
@@ -13905,14 +13933,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'plus-circle',
+			'icon'     => 'plus-circle',
 			'category' => array(
 				'status',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'plus',
+			'icon'     => 'plus',
 			'category' => array(
 				'mathematics',
 				'medical',
@@ -13922,7 +13950,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'plug',
+			'icon'     => 'plug',
 			'category' => array(
 				'energy',
 				'computers',
@@ -13931,13 +13959,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'play-circle',
+			'icon'     => 'play-circle',
 			'category' => array(
 				'audio-video',
 			),
 		),
 		array(
-			'icon'       => 'play',
+			'icon'     => 'play',
 			'category' => array(
 				'arrows',
 				'audio-video',
@@ -13946,19 +13974,19 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'plane-departure',
+			'icon'     => 'plane-departure',
 			'category' => array(
 				'travel',
 			),
 		),
 		array(
-			'icon'       => 'plane-arrival',
+			'icon'     => 'plane-arrival',
 			'category' => array(
 				'travel',
 			),
 		),
 		array(
-			'icon'       => 'plane',
+			'icon'     => 'plane',
 			'category' => array(
 				'travel',
 				'vehicles',
@@ -13967,20 +13995,20 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'place-of-worship',
+			'icon'     => 'place-of-worship',
 			'category' => array(
 				'buildings',
 				'religion',
 			),
 		),
 		array(
-			'icon'       => 'pizza-slice',
+			'icon'     => 'pizza-slice',
 			'category' => array(
 				'food',
 			),
 		),
 		array(
-			'icon'       => 'pills',
+			'icon'     => 'pills',
 			'category' => array(
 				'medical',
 				'science',
@@ -13988,7 +14016,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'piggy-bank',
+			'icon'     => 'piggy-bank',
 			'category' => array(
 				'finance',
 				'charity',
@@ -13996,7 +14024,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'photo-video',
+			'icon'     => 'photo-video',
 			'category' => array(
 				'social',
 				'files',
@@ -14005,7 +14033,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'phone-volume',
+			'icon'     => 'phone-volume',
 			'category' => array(
 				'audio-video',
 				'communication',
@@ -14015,7 +14043,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'phone-square-alt',
+			'icon'     => 'phone-square-alt',
 			'category' => array(
 				'communication',
 				'business',
@@ -14023,7 +14051,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'phone-square',
+			'icon'     => 'phone-square',
 			'category' => array(
 				'communication',
 				'business',
@@ -14031,7 +14059,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'phone-slash',
+			'icon'     => 'phone-slash',
 			'category' => array(
 				'chat',
 				'status',
@@ -14040,18 +14068,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'phone-alt',
-			'category' => array(
-				'chat',
-				'status',
-				'communication',
-				'business',
-				'objects',
-				'maps',
-			),
-		),
-		array(
-			'icon'       => 'phone',
+			'icon'     => 'phone-alt',
 			'category' => array(
 				'chat',
 				'status',
@@ -14062,7 +14079,18 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'person-booth',
+			'icon'     => 'phone',
+			'category' => array(
+				'chat',
+				'status',
+				'communication',
+				'business',
+				'objects',
+				'maps',
+			),
+		),
+		array(
+			'icon'     => 'person-booth',
 			'category' => array(
 				'users-people',
 				'political',
@@ -14070,41 +14098,41 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'percentage',
+			'icon'     => 'percentage',
 			'category' => array(
 				'finance',
 				'mathematics',
 			),
 		),
 		array(
-			'icon'       => 'percent',
+			'icon'     => 'percent',
 			'category' => array(
 				'business',
 			),
 		),
 		array(
-			'icon'       => 'pepper-hot',
+			'icon'     => 'pepper-hot',
 			'category' => array(
 				'fruit-vegetable',
 				'food',
 			),
 		),
 		array(
-			'icon'       => 'people-carry',
+			'icon'     => 'people-carry',
 			'category' => array(
 				'users-people',
 				'moving',
 			),
 		),
 		array(
-			'icon'       => 'pencil-ruler',
+			'icon'     => 'pencil-ruler',
 			'category' => array(
 				'construction',
 				'design',
 			),
 		),
 		array(
-			'icon'       => 'pencil-alt',
+			'icon'     => 'pencil-alt',
 			'category' => array(
 				'construction',
 				'design',
@@ -14116,14 +14144,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'pen-square',
+			'icon'     => 'pen-square',
 			'category' => array(
 				'writing',
 				'business',
 			),
 		),
 		array(
-			'icon'       => 'pen-nib',
+			'icon'     => 'pen-nib',
 			'category' => array(
 				'design',
 				'editors',
@@ -14132,7 +14160,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'pen-fancy',
+			'icon'     => 'pen-fancy',
 			'category' => array(
 				'design',
 				'interfaces',
@@ -14142,18 +14170,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'pen-alt',
-			'category' => array(
-				'design',
-				'writing',
-				'interfaces',
-				'editors',
-				'business',
-				'objects',
-			),
-		),
-		array(
-			'icon'       => 'pen',
+			'icon'     => 'pen-alt',
 			'category' => array(
 				'design',
 				'writing',
@@ -14164,13 +14181,24 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'peace',
+			'icon'     => 'pen',
+			'category' => array(
+				'design',
+				'writing',
+				'interfaces',
+				'editors',
+				'business',
+				'objects',
+			),
+		),
+		array(
+			'icon'     => 'peace',
 			'category' => array(
 				'religion',
 			),
 		),
 		array(
-			'icon'       => 'paw',
+			'icon'     => 'paw',
 			'category' => array(
 				'animals',
 				'objects',
@@ -14178,19 +14206,19 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'pause-circle',
+			'icon'     => 'pause-circle',
 			'category' => array(
 				'audio-video',
 			),
 		),
 		array(
-			'icon'       => 'pause',
+			'icon'     => 'pause',
 			'category' => array(
 				'audio-video',
 			),
 		),
 		array(
-			'icon'       => 'paste',
+			'icon'     => 'paste',
 			'category' => array(
 				'files',
 				'design',
@@ -14201,40 +14229,40 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'pastafarianism',
+			'icon'     => 'pastafarianism',
 			'category' => array(
 				'religion',
 			),
 		),
 		array(
-			'icon'       => 'passport',
+			'icon'     => 'passport',
 			'category' => array(
 				'travel',
 				'security',
 			),
 		),
 		array(
-			'icon'       => 'parking',
+			'icon'     => 'parking',
 			'category' => array(
 				'status',
 				'maps',
 			),
 		),
 		array(
-			'icon'       => 'paragraph',
+			'icon'     => 'paragraph',
 			'category' => array(
 				'writing',
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'parachute-box',
+			'icon'     => 'parachute-box',
 			'category' => array(
 				'charity',
 			),
 		),
 		array(
-			'icon'       => 'paperclip',
+			'icon'     => 'paperclip',
 			'category' => array(
 				'writing',
 				'editors',
@@ -14243,7 +14271,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'paper-plane',
+			'icon'     => 'paper-plane',
 			'category' => array(
 				'vehicles',
 				'writing',
@@ -14253,89 +14281,89 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'pallet',
+			'icon'     => 'pallet',
 			'category' => array(
 				'logistics',
 			),
 		),
 		array(
-			'icon'       => 'palette',
+			'icon'     => 'palette',
 			'category' => array(
 				'design',
 				'spinners',
 			),
 		),
 		array(
-			'icon'       => 'paint-roller',
+			'icon'     => 'paint-roller',
 			'category' => array(
 				'construction',
 				'design',
 			),
 		),
 		array(
-			'icon'       => 'paint-brush',
+			'icon'     => 'paint-brush',
 			'category' => array(
 				'design',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'pager',
+			'icon'     => 'pager',
 			'category' => array(
 				'medical',
 			),
 		),
 		array(
-			'icon'       => 'outdent',
+			'icon'     => 'outdent',
 			'category' => array(
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'otter',
+			'icon'     => 'otter',
 			'category' => array(
 				'animals',
 			),
 		),
 		array(
-			'icon'       => 'om',
+			'icon'     => 'om',
 			'category' => array(
 				'religion',
 			),
 		),
 		array(
-			'icon'       => 'oil-can',
+			'icon'     => 'oil-can',
 			'category' => array(
 				'automotive',
 			),
 		),
 		array(
-			'icon'       => 'object-ungroup',
+			'icon'     => 'object-ungroup',
 			'category' => array(
 				'design',
 			),
 		),
 		array(
-			'icon'       => 'object-group',
+			'icon'     => 'object-group',
 			'category' => array(
 				'design',
 			),
 		),
 		array(
-			'icon'       => 'notes-medical',
+			'icon'     => 'notes-medical',
 			'category' => array(
 				'medical',
 				'pharmacy',
 			),
 		),
 		array(
-			'icon'       => 'not-equal',
+			'icon'     => 'not-equal',
 			'category' => array(
 				'mathematics',
 			),
 		),
 		array(
-			'icon'       => 'newspaper',
+			'icon'     => 'newspaper',
 			'category' => array(
 				'writing',
 				'objects',
@@ -14343,17 +14371,17 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'neuter',
+			'icon'     => 'neuter',
 			'category' => array(
 				'gender',
 			),
 		),
 		array(
-			'icon'       => 'network-wired',
+			'icon'     => 'network-wired',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'music',
+			'icon'     => 'music',
 			'category' => array(
 				'education',
 				'audio-video',
@@ -14362,7 +14390,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'mug-hot',
+			'icon'     => 'mug-hot',
 			'category' => array(
 				'beverage',
 				'holiday',
@@ -14370,26 +14398,26 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'mouse-pointer',
+			'icon'     => 'mouse-pointer',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'mouse',
+			'icon'     => 'mouse',
 			'category' => array(
 				'computers',
 			),
 		),
 		array(
-			'icon'       => 'mountain',
+			'icon'     => 'mountain',
 			'category' => array(
 				'camping',
 				'autumn',
 			),
 		),
 		array(
-			'icon'       => 'motorcycle',
+			'icon'     => 'motorcycle',
 			'category' => array(
 				'vehicles',
 				'automotive',
@@ -14398,14 +14426,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'mosque',
+			'icon'     => 'mosque',
 			'category' => array(
 				'buildings',
 				'religion',
 			),
 		),
 		array(
-			'icon'       => 'mortar-pestle',
+			'icon'     => 'mortar-pestle',
 			'category' => array(
 				'medical',
 				'science',
@@ -14413,7 +14441,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'moon',
+			'icon'     => 'moon',
 			'category' => array(
 				'science-fiction',
 				'weather',
@@ -14421,14 +14449,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'monument',
+			'icon'     => 'monument',
 			'category' => array(
 				'buildings',
 				'travel',
 			),
 		),
 		array(
-			'icon'       => 'money-check-alt',
+			'icon'     => 'money-check-alt',
 			'category' => array(
 				'finance',
 				'currency',
@@ -14437,7 +14465,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'money-check',
+			'icon'     => 'money-check',
 			'category' => array(
 				'finance',
 				'currency',
@@ -14446,30 +14474,21 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'money-bill-wave-alt',
+			'icon'     => 'money-bill-wave-alt',
 			'category' => array(
 				'finance',
 				'currency',
 			),
 		),
 		array(
-			'icon'       => 'money-bill-wave',
+			'icon'     => 'money-bill-wave',
 			'category' => array(
 				'finance',
 				'currency',
 			),
 		),
 		array(
-			'icon'       => 'money-bill-alt',
-			'category' => array(
-				'finance',
-				'currency',
-				'objects',
-				'maps',
-			),
-		),
-		array(
-			'icon'       => 'money-bill',
+			'icon'     => 'money-bill-alt',
 			'category' => array(
 				'finance',
 				'currency',
@@ -14478,7 +14497,16 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'mobile-alt',
+			'icon'     => 'money-bill',
+			'category' => array(
+				'finance',
+				'currency',
+				'objects',
+				'maps',
+			),
+		),
+		array(
+			'icon'     => 'mobile-alt',
 			'category' => array(
 				'computers',
 				'communication',
@@ -14486,7 +14514,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'mobile',
+			'icon'     => 'mobile',
 			'category' => array(
 				'computers',
 				'communication',
@@ -14494,7 +14522,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'mitten',
+			'icon'     => 'mitten',
 			'category' => array(
 				'clothing',
 				'childhood',
@@ -14503,21 +14531,21 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'minus-square',
+			'icon'     => 'minus-square',
 			'category' => array(
 				'status',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'minus-circle',
+			'icon'     => 'minus-circle',
 			'category' => array(
 				'status',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'minus',
+			'icon'     => 'minus',
 			'category' => array(
 				'mathematics',
 				'status',
@@ -14525,7 +14553,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'microscope',
+			'icon'     => 'microscope',
 			'category' => array(
 				'medical',
 				'education',
@@ -14533,7 +14561,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'microphone-slash',
+			'icon'     => 'microphone-slash',
 			'category' => array(
 				'status',
 				'audio-video',
@@ -14544,7 +14572,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'microphone-alt-slash',
+			'icon'     => 'microphone-alt-slash',
 			'category' => array(
 				'status',
 				'audio-video',
@@ -14553,7 +14581,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'microphone-alt',
+			'icon'     => 'microphone-alt',
 			'category' => array(
 				'status',
 				'audio-video',
@@ -14564,7 +14592,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'microphone',
+			'icon'     => 'microphone',
 			'category' => array(
 				'status',
 				'audio-video',
@@ -14576,7 +14604,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'microchip',
+			'icon'     => 'microchip',
 			'category' => array(
 				'computers',
 				'objects',
@@ -14584,45 +14612,45 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'meteor',
+			'icon'     => 'meteor',
 			'category' => array(
 				'science-fiction',
 				'weather',
 			),
 		),
 		array(
-			'icon'       => 'mercury',
+			'icon'     => 'mercury',
 			'category' => array(
 				'gender',
 			),
 		),
 		array(
-			'icon'       => 'menorah',
+			'icon'     => 'menorah',
 			'category' => array(
 				'religion',
 			),
 		),
 		array(
-			'icon'       => 'memory',
+			'icon'     => 'memory',
 			'category' => array(
 				'computers',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'meh-rolling-eyes',
+			'icon'     => 'meh-rolling-eyes',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'meh-blank',
+			'icon'     => 'meh-blank',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'meh',
+			'icon'     => 'meh',
 			'category' => array(
 				'users-people',
 				'chat',
@@ -14631,7 +14659,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'medkit',
+			'icon'     => 'medkit',
 			'category' => array(
 				'health',
 				'objects',
@@ -14639,51 +14667,51 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'medal',
+			'icon'     => 'medal',
 			'category' => array(
 				'interfaces',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'mask',
+			'icon'     => 'mask',
 			'category' => array(
 				'halloween',
 				'security',
 			),
 		),
 		array(
-			'icon'       => 'mars-stroke-v',
+			'icon'     => 'mars-stroke-v',
 			'category' => array(
 				'gender',
 			),
 		),
 		array(
-			'icon'       => 'mars-stroke-h',
+			'icon'     => 'mars-stroke-h',
 			'category' => array(
 				'gender',
 			),
 		),
 		array(
-			'icon'       => 'mars-stroke',
+			'icon'     => 'mars-stroke',
 			'category' => array(
 				'gender',
 			),
 		),
 		array(
-			'icon'       => 'mars-double',
+			'icon'     => 'mars-double',
 			'category' => array(
 				'gender',
 			),
 		),
 		array(
-			'icon'       => 'mars',
+			'icon'     => 'mars',
 			'category' => array(
 				'gender',
 			),
 		),
 		array(
-			'icon'       => 'marker',
+			'icon'     => 'marker',
 			'category' => array(
 				'design',
 				'interfaces',
@@ -14693,7 +14721,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'map-signs',
+			'icon'     => 'map-signs',
 			'category' => array(
 				'camping',
 				'objects',
@@ -14701,14 +14729,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'map-pin',
+			'icon'     => 'map-pin',
 			'category' => array(
 				'objects',
 				'maps',
 			),
 		),
 		array(
-			'icon'       => 'map-marker-alt',
+			'icon'     => 'map-marker-alt',
 			'category' => array(
 				'social',
 				'status',
@@ -14717,7 +14745,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'map-marker',
+			'icon'     => 'map-marker',
 			'category' => array(
 				'social',
 				'status',
@@ -14727,21 +14755,21 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'map-marked-alt',
+			'icon'     => 'map-marked-alt',
 			'category' => array(
 				'travel',
 				'camping',
 			),
 		),
 		array(
-			'icon'       => 'map-marked',
+			'icon'     => 'map-marked',
 			'category' => array(
 				'travel',
 				'camping',
 			),
 		),
 		array(
-			'icon'       => 'map',
+			'icon'     => 'map',
 			'category' => array(
 				'travel',
 				'camping',
@@ -14750,20 +14778,20 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'male',
+			'icon'     => 'male',
 			'category' => array(
 				'users-people',
 				'maps',
 			),
 		),
 		array(
-			'icon'       => 'mail-bulk',
+			'icon'     => 'mail-bulk',
 			'category' => array(
 				'marketing',
 			),
 		),
 		array(
-			'icon'       => 'magnet',
+			'icon'     => 'magnet',
 			'category' => array(
 				'science',
 				'objects',
@@ -14771,7 +14799,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'magic',
+			'icon'     => 'magic',
 			'category' => array(
 				'design',
 				'interfaces',
@@ -14779,45 +14807,45 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'luggage-cart',
+			'icon'     => 'luggage-cart',
 			'category' => array(
 				'travel',
 				'hotel',
 			),
 		),
 		array(
-			'icon'       => 'low-vision',
+			'icon'     => 'low-vision',
 			'category' => array(
 				'accessibility',
 				'maps',
 			),
 		),
 		array(
-			'icon'       => 'long-arrow-alt-up',
+			'icon'     => 'long-arrow-alt-up',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'long-arrow-alt-right',
+			'icon'     => 'long-arrow-alt-right',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'long-arrow-alt-left',
+			'icon'     => 'long-arrow-alt-left',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'long-arrow-alt-down',
+			'icon'     => 'long-arrow-alt-down',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'lock-open',
+			'icon'     => 'lock-open',
 			'category' => array(
 				'status',
 				'security',
@@ -14825,7 +14853,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'lock',
+			'icon'     => 'lock',
 			'category' => array(
 				'status',
 				'security',
@@ -14833,50 +14861,50 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'location-arrow',
+			'icon'     => 'location-arrow',
 			'category' => array(
 				'arrows',
 				'maps',
 			),
 		),
 		array(
-			'icon'       => 'list-ul',
+			'icon'     => 'list-ul',
 			'category' => array(
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'list-ol',
+			'icon'     => 'list-ol',
 			'category' => array(
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'list-alt',
+			'icon'     => 'list-alt',
 			'category' => array(
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'list',
+			'icon'     => 'list',
 			'category' => array(
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'lira-sign',
+			'icon'     => 'lira-sign',
 			'category' => array(
 				'currency',
 			),
 		),
 		array(
-			'icon'       => 'link',
+			'icon'     => 'link',
 			'category' => array(
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'lightbulb',
+			'icon'     => 'lightbulb',
 			'category' => array(
 				'energy',
 				'status',
@@ -14886,7 +14914,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'life-ring',
+			'icon'     => 'life-ring',
 			'category' => array(
 				'spinners',
 				'objects',
@@ -14894,31 +14922,31 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'level-up-alt',
+			'icon'     => 'level-up-alt',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'level-down-alt',
+			'icon'     => 'level-down-alt',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'less-than-equal',
+			'icon'     => 'less-than-equal',
 			'category' => array(
 				'mathematics',
 			),
 		),
 		array(
-			'icon'       => 'less-than',
+			'icon'     => 'less-than',
 			'category' => array(
 				'mathematics',
 			),
 		),
 		array(
-			'icon'       => 'lemon',
+			'icon'     => 'lemon',
 			'category' => array(
 				'summer',
 				'fruit-vegetable',
@@ -14928,7 +14956,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'leaf',
+			'icon'     => 'leaf',
 			'category' => array(
 				'energy',
 				'charity',
@@ -14938,66 +14966,66 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'layer-group',
+			'icon'     => 'layer-group',
 			'category' => array(
 				'design',
 				'maps',
 			),
 		),
 		array(
-			'icon'       => 'laugh-wink',
+			'icon'     => 'laugh-wink',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'laugh-squint',
+			'icon'     => 'laugh-squint',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'laugh-beam',
+			'icon'     => 'laugh-beam',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'laugh',
+			'icon'     => 'laugh',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'laptop-medical',
+			'icon'     => 'laptop-medical',
 			'category' => array(
 				'medical',
 				'pharmacy',
 			),
 		),
 		array(
-			'icon'       => 'laptop-code',
+			'icon'     => 'laptop-code',
 			'category' => array(
 				'education',
 				'code',
 			),
 		),
 		array(
-			'icon'       => 'laptop',
+			'icon'     => 'laptop',
 			'category' => array(
 				'computers',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'language',
+			'icon'     => 'language',
 			'category' => array(
 				'interfaces',
 				'communication',
 			),
 		),
 		array(
-			'icon'       => 'landmark',
+			'icon'     => 'landmark',
 			'category' => array(
 				'finance',
 				'buildings',
@@ -15006,37 +15034,37 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'kiwi-bird',
+			'icon'     => 'kiwi-bird',
 			'category' => array(
 				'animals',
 			),
 		),
 		array(
-			'icon'       => 'kiss-wink-heart',
+			'icon'     => 'kiss-wink-heart',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'kiss-beam',
+			'icon'     => 'kiss-beam',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'kiss',
+			'icon'     => 'kiss',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'khanda',
+			'icon'     => 'khanda',
 			'category' => array(
 				'religion',
 			),
 		),
 		array(
-			'icon'       => 'keyboard',
+			'icon'     => 'keyboard',
 			'category' => array(
 				'computers',
 				'writing',
@@ -15045,7 +15073,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'key',
+			'icon'     => 'key',
 			'category' => array(
 				'payments-shopping',
 				'hotel',
@@ -15055,41 +15083,41 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'kaaba',
+			'icon'     => 'kaaba',
 			'category' => array(
 				'buildings',
 				'religion',
 			),
 		),
 		array(
-			'icon'       => 'journal-whills',
+			'icon'     => 'journal-whills',
 			'category' => array(
 				'science-fiction',
 				'religion',
 			),
 		),
 		array(
-			'icon'       => 'joint',
+			'icon'     => 'joint',
 			'category' => array(
 				'medical',
 				'pharmacy',
 			),
 		),
 		array(
-			'icon'       => 'jedi',
+			'icon'     => 'jedi',
 			'category' => array(
 				'science-fiction',
 				'religion',
 			),
 		),
 		array(
-			'icon'       => 'italic',
+			'icon'     => 'italic',
 			'category' => array(
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'info-circle',
+			'icon'     => 'info-circle',
 			'category' => array(
 				'status',
 				'interfaces',
@@ -15097,7 +15125,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'info',
+			'icon'     => 'info',
 			'category' => array(
 				'status',
 				'interfaces',
@@ -15105,14 +15133,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'infinity',
+			'icon'     => 'infinity',
 			'category' => array(
 				'mathematics',
 				'hotel',
 			),
 		),
 		array(
-			'icon'       => 'industry',
+			'icon'     => 'industry',
 			'category' => array(
 				'energy',
 				'buildings',
@@ -15122,19 +15150,19 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'indent',
+			'icon'     => 'indent',
 			'category' => array(
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'inbox',
+			'icon'     => 'inbox',
 			'category' => array(
 				'communication',
 			),
 		),
 		array(
-			'icon'       => 'images',
+			'icon'     => 'images',
 			'category' => array(
 				'social',
 				'images',
@@ -15143,7 +15171,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'image',
+			'icon'     => 'image',
 			'category' => array(
 				'social',
 				'images',
@@ -15152,7 +15180,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'igloo',
+			'icon'     => 'igloo',
 			'category' => array(
 				'buildings',
 				'winter',
@@ -15160,7 +15188,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'id-card-alt',
+			'icon'     => 'id-card-alt',
 			'category' => array(
 				'users-people',
 				'medical',
@@ -15168,7 +15196,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'id-card',
+			'icon'     => 'id-card',
 			'category' => array(
 				'users-people',
 				'images',
@@ -15176,7 +15204,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'id-badge',
+			'icon'     => 'id-badge',
 			'category' => array(
 				'users-people',
 				'images',
@@ -15184,7 +15212,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'icons',
+			'icon'     => 'icons',
 			'category' => array(
 				'social',
 				'chat',
@@ -15193,13 +15221,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'icicles',
+			'icon'     => 'icicles',
 			'category' => array(
 				'winter',
 			),
 		),
 		array(
-			'icon'       => 'ice-cream',
+			'icon'     => 'ice-cream',
 			'category' => array(
 				'summer',
 				'childhood',
@@ -15207,51 +15235,51 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'i-cursor',
+			'icon'     => 'i-cursor',
 			'category' => array(
 				'interfaces',
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'hryvnia',
+			'icon'     => 'hryvnia',
 			'category' => array(
 				'currency',
 			),
 		),
 		array(
-			'icon'       => 'house-damage',
+			'icon'     => 'house-damage',
 			'category' => array(
 				'buildings',
 			),
 		),
 		array(
-			'icon'       => 'hourglass-start',
+			'icon'     => 'hourglass-start',
 			'category' => array(
 				'date-time',
 			),
 		),
 		array(
-			'icon'       => 'hourglass-half',
+			'icon'     => 'hourglass-half',
 			'category' => array(
 				'date-time',
 			),
 		),
 		array(
-			'icon'       => 'hourglass-end',
+			'icon'     => 'hourglass-end',
 			'category' => array(
 				'date-time',
 			),
 		),
 		array(
-			'icon'       => 'hourglass',
+			'icon'     => 'hourglass',
 			'category' => array(
 				'date-time',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'hotel',
+			'icon'     => 'hotel',
 			'category' => array(
 				'buildings',
 				'travel',
@@ -15259,34 +15287,34 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'hotdog',
+			'icon'     => 'hotdog',
 			'category' => array(
 				'summer',
 				'food',
 			),
 		),
 		array(
-			'icon'       => 'hot-tub',
+			'icon'     => 'hot-tub',
 			'category' => array(
 				'travel',
 				'hotel',
 			),
 		),
 		array(
-			'icon'       => 'hospital-symbol',
+			'icon'     => 'hospital-symbol',
 			'category' => array(
 				'medical',
 			),
 		),
 		array(
-			'icon'       => 'hospital-alt',
+			'icon'     => 'hospital-alt',
 			'category' => array(
 				'buildings',
 				'medical',
 			),
 		),
 		array(
-			'icon'       => 'hospital',
+			'icon'     => 'hospital',
 			'category' => array(
 				'buildings',
 				'medical',
@@ -15296,20 +15324,20 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'horse-head',
+			'icon'     => 'horse-head',
 			'category' => array(
 				'animals',
 			),
 		),
 		array(
-			'icon'       => 'horse',
+			'icon'     => 'horse',
 			'category' => array(
 				'animals',
 				'vehicles',
 			),
 		),
 		array(
-			'icon'       => 'home',
+			'icon'     => 'home',
 			'category' => array(
 				'buildings',
 				'interfaces',
@@ -15318,20 +15346,20 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'holly-berry',
+			'icon'     => 'holly-berry',
 			'category' => array(
 				'holiday',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'hockey-puck',
+			'icon'     => 'hockey-puck',
 			'category' => array(
 				'sports',
 			),
 		),
 		array(
-			'icon'       => 'history',
+			'icon'     => 'history',
 			'category' => array(
 				'arrows',
 				'interfaces',
@@ -15339,13 +15367,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'hippo',
+			'icon'     => 'hippo',
 			'category' => array(
 				'animals',
 			),
 		),
 		array(
-			'icon'       => 'hiking',
+			'icon'     => 'hiking',
 			'category' => array(
 				'users-people',
 				'camping',
@@ -15354,7 +15382,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'highlighter',
+			'icon'     => 'highlighter',
 			'category' => array(
 				'design',
 				'editors',
@@ -15363,7 +15391,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'helicopter',
+			'icon'     => 'helicopter',
 			'category' => array(
 				'vehicles',
 				'objects',
@@ -15371,7 +15399,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'heartbeat',
+			'icon'     => 'heartbeat',
 			'category' => array(
 				'medical',
 				'fitness',
@@ -15380,14 +15408,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'heart-broken',
+			'icon'     => 'heart-broken',
 			'category' => array(
 				'shapes',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'heart',
+			'icon'     => 'heart',
 			'category' => array(
 				'social',
 				'medical',
@@ -15403,21 +15431,21 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'headset',
+			'icon'     => 'headset',
 			'category' => array(
 				'games',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'headphones-alt',
+			'icon'     => 'headphones-alt',
 			'category' => array(
 				'music',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'headphones',
+			'icon'     => 'headphones',
 			'category' => array(
 				'computers',
 				'audio-video',
@@ -15426,27 +15454,27 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'heading',
+			'icon'     => 'heading',
 			'category' => array(
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'hdd',
+			'icon'     => 'hdd',
 			'category' => array(
 				'computers',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'haykal',
+			'icon'     => 'haykal',
 			'category' => array(
 				'religion',
 				'spinners',
 			),
 		),
 		array(
-			'icon'       => 'hat-wizard',
+			'icon'     => 'hat-wizard',
 			'category' => array(
 				'clothing',
 				'halloween',
@@ -15455,39 +15483,39 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'hat-cowboy-side',
+			'icon'     => 'hat-cowboy-side',
 			'category' => array(
 				'clothing',
 			),
 		),
 		array(
-			'icon'       => 'hat-cowboy',
+			'icon'     => 'hat-cowboy',
 			'category' => array(
 				'clothing',
 			),
 		),
 		array(
-			'icon'       => 'hashtag',
+			'icon'     => 'hashtag',
 			'category' => array(
 				'social',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'hard-hat',
+			'icon'     => 'hard-hat',
 			'category' => array(
 				'logistics',
 				'construction',
 			),
 		),
 		array(
-			'icon'       => 'hanukiah',
+			'icon'     => 'hanukiah',
 			'category' => array(
 				'religion',
 			),
 		),
 		array(
-			'icon'       => 'handshake',
+			'icon'     => 'handshake',
 			'category' => array(
 				'charity',
 				'political',
@@ -15496,97 +15524,97 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'hands-helping',
+			'icon'     => 'hands-helping',
 			'category' => array(
 				'charity',
 				'hands',
 			),
 		),
 		array(
-			'icon'       => 'hands',
+			'icon'     => 'hands',
 			'category' => array(
 				'hands',
 			),
 		),
 		array(
-			'icon'       => 'hand-spock',
+			'icon'     => 'hand-spock',
 			'category' => array(
 				'hands',
 			),
 		),
 		array(
-			'icon'       => 'hand-scissors',
+			'icon'     => 'hand-scissors',
 			'category' => array(
 				'hands',
 			),
 		),
 		array(
-			'icon'       => 'hand-rock',
+			'icon'     => 'hand-rock',
 			'category' => array(
 				'hands',
 			),
 		),
 		array(
-			'icon'       => 'hand-pointer',
-			'category' => array(
-				'arrows',
-				'hands',
-			),
-		),
-		array(
-			'icon'       => 'hand-point-up',
+			'icon'     => 'hand-pointer',
 			'category' => array(
 				'arrows',
 				'hands',
 			),
 		),
 		array(
-			'icon'       => 'hand-point-right',
+			'icon'     => 'hand-point-up',
 			'category' => array(
 				'arrows',
 				'hands',
 			),
 		),
 		array(
-			'icon'       => 'hand-point-left',
+			'icon'     => 'hand-point-right',
 			'category' => array(
 				'arrows',
 				'hands',
 			),
 		),
 		array(
-			'icon'       => 'hand-point-down',
+			'icon'     => 'hand-point-left',
 			'category' => array(
 				'arrows',
 				'hands',
 			),
 		),
 		array(
-			'icon'       => 'hand-peace',
+			'icon'     => 'hand-point-down',
+			'category' => array(
+				'arrows',
+				'hands',
+			),
+		),
+		array(
+			'icon'     => 'hand-peace',
 			'category' => array(
 				'hands',
 			),
 		),
 		array(
-			'icon'       => 'hand-paper',
+			'icon'     => 'hand-paper',
 			'category' => array(
 				'hands',
 			),
 		),
 		array(
-			'icon'       => 'hand-middle-finger',
+			'icon'     => 'hand-middle-finger',
 			'category' => array(
 				'hands',
 			),
 		),
 		array(
-			'icon'       => 'hand-lizard',
+			'icon'     => 'hand-lizard',
 			'category' => array(
 				'hands',
 			),
 		),
 		array(
-			'icon'       => 'hand-holding-usd',
+			'icon'     => 'hand-holding-usd',
 			'category' => array(
 				'finance',
 				'charity',
@@ -15594,172 +15622,172 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'hand-holding-heart',
+			'icon'     => 'hand-holding-heart',
 			'category' => array(
 				'charity',
 				'hands',
 			),
 		),
 		array(
-			'icon'       => 'hand-holding',
+			'icon'     => 'hand-holding',
 			'category' => array(
 				'hands',
 			),
 		),
 		array(
-			'icon'       => 'hamsa',
+			'icon'     => 'hamsa',
 			'category' => array(
 				'religion',
 			),
 		),
 		array(
-			'icon'       => 'hammer',
+			'icon'     => 'hammer',
 			'category' => array(
 				'construction',
 			),
 		),
 		array(
-			'icon'       => 'hamburger',
+			'icon'     => 'hamburger',
 			'category' => array(
 				'food',
 			),
 		),
 		array(
-			'icon'       => 'h-square',
+			'icon'     => 'h-square',
 			'category' => array(
 				'health',
 				'maps',
 			),
 		),
 		array(
-			'icon'       => 'guitar',
+			'icon'     => 'guitar',
 			'category' => array(
 				'music',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'grip-vertical',
+			'icon'     => 'grip-vertical',
 			'category' => array(
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'grip-lines-vertical',
+			'icon'     => 'grip-lines-vertical',
 			'category' => array(
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'grip-lines',
+			'icon'     => 'grip-lines',
 			'category' => array(
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'grip-horizontal',
+			'icon'     => 'grip-horizontal',
 			'category' => array(
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'grin-wink',
+			'icon'     => 'grin-wink',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'grin-tongue-wink',
+			'icon'     => 'grin-tongue-wink',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'grin-tongue-squint',
+			'icon'     => 'grin-tongue-squint',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'grin-tongue',
+			'icon'     => 'grin-tongue',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'grin-tears',
+			'icon'     => 'grin-tears',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'grin-stars',
+			'icon'     => 'grin-stars',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'grin-squint-tears',
+			'icon'     => 'grin-squint-tears',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'grin-squint',
+			'icon'     => 'grin-squint',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'grin-hearts',
+			'icon'     => 'grin-hearts',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'grin-beam-sweat',
+			'icon'     => 'grin-beam-sweat',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'grin-beam',
+			'icon'     => 'grin-beam',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'grin-alt',
+			'icon'     => 'grin-alt',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'grin',
+			'icon'     => 'grin',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'grimace',
+			'icon'     => 'grimace',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'greater-than-equal',
+			'icon'     => 'greater-than-equal',
 			'category' => array(
 				'mathematics',
 			),
 		),
 		array(
-			'icon'       => 'greater-than',
+			'icon'     => 'greater-than',
 			'category' => array(
 				'mathematics',
 			),
 		),
 		array(
-			'icon'       => 'graduation-cap',
+			'icon'     => 'graduation-cap',
 			'category' => array(
 				'clothing',
 				'education',
@@ -15768,44 +15796,44 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'gopuram',
+			'icon'     => 'gopuram',
 			'category' => array(
 				'buildings',
 				'religion',
 			),
 		),
 		array(
-			'icon'       => 'golf-ball',
+			'icon'     => 'golf-ball',
 			'category' => array(
 				'sports',
 			),
 		),
 		array(
-			'icon'       => 'globe-europe',
+			'icon'     => 'globe-europe',
 			'category' => array(
 				'travel',
 			),
 		),
 		array(
-			'icon'       => 'globe-asia',
+			'icon'     => 'globe-asia',
 			'category' => array(
 				'travel',
 			),
 		),
 		array(
-			'icon'       => 'globe-americas',
+			'icon'     => 'globe-americas',
 			'category' => array(
 				'travel',
 			),
 		),
 		array(
-			'icon'       => 'globe-africa',
+			'icon'     => 'globe-africa',
 			'category' => array(
 				'travel',
 			),
 		),
 		array(
-			'icon'       => 'globe',
+			'icon'     => 'globe',
 			'category' => array(
 				'science-fiction',
 				'charity',
@@ -15815,7 +15843,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'glasses',
+			'icon'     => 'glasses',
 			'category' => array(
 				'interfaces',
 				'editors',
@@ -15824,7 +15852,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'glass-whiskey',
+			'icon'     => 'glass-whiskey',
 			'category' => array(
 				'beverage',
 				'winter',
@@ -15832,7 +15860,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'glass-martini-alt',
+			'icon'     => 'glass-martini-alt',
 			'category' => array(
 				'beverage',
 				'travel',
@@ -15840,7 +15868,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'glass-martini',
+			'icon'     => 'glass-martini',
 			'category' => array(
 				'beverage',
 				'travel',
@@ -15850,7 +15878,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'glass-cheers',
+			'icon'     => 'glass-cheers',
 			'category' => array(
 				'beverage',
 				'holiday',
@@ -15858,7 +15886,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'gifts',
+			'icon'     => 'gifts',
 			'category' => array(
 				'shopping',
 				'holiday',
@@ -15866,7 +15894,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'gift',
+			'icon'     => 'gift',
 			'category' => array(
 				'charity',
 				'payments-shopping',
@@ -15877,34 +15905,34 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'ghost',
+			'icon'     => 'ghost',
 			'category' => array(
 				'halloween',
 				'games',
 			),
 		),
 		array(
-			'icon'       => 'genderless',
+			'icon'     => 'genderless',
 			'category' => array(
 				'gender',
 			),
 		),
 		array(
-			'icon'       => 'gem',
+			'icon'     => 'gem',
 			'category' => array(
 				'payments-shopping',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'gavel',
+			'icon'     => 'gavel',
 			'category' => array(
 				'objects',
 				'maps',
 			),
 		),
 		array(
-			'icon'       => 'gas-pump',
+			'icon'     => 'gas-pump',
 			'category' => array(
 				'energy',
 				'status',
@@ -15912,7 +15940,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'gamepad',
+			'icon'     => 'gamepad',
 			'category' => array(
 				'childhood',
 				'games',
@@ -15921,26 +15949,26 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'futbol',
+			'icon'     => 'futbol',
 			'category' => array(
 				'sports',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'funnel-dollar',
+			'icon'     => 'funnel-dollar',
 			'category' => array(
 				'marketing',
 			),
 		),
 		array(
-			'icon'       => 'frown-open',
+			'icon'     => 'frown-open',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'frown',
+			'icon'     => 'frown',
 			'category' => array(
 				'users-people',
 				'chat',
@@ -15949,7 +15977,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'frog',
+			'icon'     => 'frog',
 			'category' => array(
 				'animals',
 				'science',
@@ -15959,32 +15987,32 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'forward',
+			'icon'     => 'forward',
 			'category' => array(
 				'audio-video',
 			),
 		),
 		array(
-			'icon'       => 'football-ball',
+			'icon'     => 'football-ball',
 			'category' => array(
 				'sports',
 				'autumn',
 			),
 		),
 		array(
-			'icon'       => 'font',
+			'icon'     => 'font',
 			'category' => array(
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'folder-plus',
+			'icon'     => 'folder-plus',
 			'category' => array(
 				'business',
 			),
 		),
 		array(
-			'icon'       => 'folder-open',
+			'icon'     => 'folder-open',
 			'category' => array(
 				'files',
 				'status',
@@ -15995,13 +16023,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'folder-minus',
+			'icon'     => 'folder-minus',
 			'category' => array(
 				'business',
 			),
 		),
 		array(
-			'icon'       => 'folder',
+			'icon'     => 'folder',
 			'category' => array(
 				'files',
 				'status',
@@ -16013,13 +16041,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'flushed',
+			'icon'     => 'flushed',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'flask',
+			'icon'     => 'flask',
 			'category' => array(
 				'beverage',
 				'science',
@@ -16029,13 +16057,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'flag-usa',
+			'icon'     => 'flag-usa',
 			'category' => array(
 				'political',
 			),
 		),
 		array(
-			'icon'       => 'flag-checkered',
+			'icon'     => 'flag-checkered',
 			'category' => array(
 				'interfaces',
 				'objects',
@@ -16043,7 +16071,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'flag',
+			'icon'     => 'flag',
 			'category' => array(
 				'interfaces',
 				'objects',
@@ -16051,7 +16079,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'fist-raised',
+			'icon'     => 'fist-raised',
 			'category' => array(
 				'political',
 				'hands',
@@ -16059,7 +16087,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'fish',
+			'icon'     => 'fish',
 			'category' => array(
 				'animals',
 				'summer',
@@ -16067,7 +16095,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'first-aid',
+			'icon'     => 'first-aid',
 			'category' => array(
 				'medical',
 				'camping',
@@ -16075,7 +16103,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'fire-extinguisher',
+			'icon'     => 'fire-extinguisher',
 			'category' => array(
 				'objects',
 				'maps',
@@ -16083,7 +16111,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'fire-alt',
+			'icon'     => 'fire-alt',
 			'category' => array(
 				'energy',
 				'science',
@@ -16094,7 +16122,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'fire',
+			'icon'     => 'fire',
 			'category' => array(
 				'energy',
 				'science',
@@ -16104,14 +16132,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'fingerprint',
+			'icon'     => 'fingerprint',
 			'category' => array(
 				'interfaces',
 				'security',
 			),
 		),
 		array(
-			'icon'       => 'filter',
+			'icon'     => 'filter',
 			'category' => array(
 				'science',
 				'interfaces',
@@ -16119,7 +16147,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'film',
+			'icon'     => 'film',
 			'category' => array(
 				'images',
 				'audio-video',
@@ -16127,44 +16155,44 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'fill-drip',
+			'icon'     => 'fill-drip',
 			'category' => array(
 				'design',
 			),
 		),
 		array(
-			'icon'       => 'fill',
+			'icon'     => 'fill',
 			'category' => array(
 				'design',
 			),
 		),
 		array(
-			'icon'       => 'file-word',
+			'icon'     => 'file-word',
 			'category' => array(
 				'files',
 			),
 		),
 		array(
-			'icon'       => 'file-video',
+			'icon'     => 'file-video',
 			'category' => array(
 				'files',
 				'audio-video',
 			),
 		),
 		array(
-			'icon'       => 'file-upload',
+			'icon'     => 'file-upload',
 			'category' => array(
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'file-signature',
+			'icon'     => 'file-signature',
 			'category' => array(
 				'security',
 			),
 		),
 		array(
-			'icon'       => 'file-prescription',
+			'icon'     => 'file-prescription',
 			'category' => array(
 				'medical',
 				'pharmacy',
@@ -16172,92 +16200,92 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'file-powerpoint',
+			'icon'     => 'file-powerpoint',
 			'category' => array(
 				'files',
 			),
 		),
 		array(
-			'icon'       => 'file-pdf',
+			'icon'     => 'file-pdf',
 			'category' => array(
 				'files',
 			),
 		),
 		array(
-			'icon'       => 'file-medical-alt',
+			'icon'     => 'file-medical-alt',
 			'category' => array(
 				'medical',
 			),
 		),
 		array(
-			'icon'       => 'file-medical',
+			'icon'     => 'file-medical',
 			'category' => array(
 				'medical',
 				'pharmacy',
 			),
 		),
 		array(
-			'icon'       => 'file-invoice-dollar',
+			'icon'     => 'file-invoice-dollar',
 			'category' => array(
 				'finance',
 			),
 		),
 		array(
-			'icon'       => 'file-invoice',
+			'icon'     => 'file-invoice',
 			'category' => array(
 				'finance',
 			),
 		),
 		array(
-			'icon'       => 'file-import',
+			'icon'     => 'file-import',
 			'category' => array(
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'file-image',
+			'icon'     => 'file-image',
 			'category' => array(
 				'files',
 				'images',
 			),
 		),
 		array(
-			'icon'       => 'file-export',
+			'icon'     => 'file-export',
 			'category' => array(
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'file-excel',
+			'icon'     => 'file-excel',
 			'category' => array(
 				'files',
 			),
 		),
 		array(
-			'icon'       => 'file-download',
+			'icon'     => 'file-download',
 			'category' => array(
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'file-csv',
+			'icon'     => 'file-csv',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'file-contract',
+			'icon'     => 'file-contract',
 			'category' => array(
 				'security',
 			),
 		),
 		array(
-			'icon'       => 'file-code',
+			'icon'     => 'file-code',
 			'category' => array(
 				'files',
 				'code',
 			),
 		),
 		array(
-			'icon'       => 'file-audio',
+			'icon'     => 'file-audio',
 			'category' => array(
 				'files',
 				'audio-video',
@@ -16265,13 +16293,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'file-archive',
+			'icon'     => 'file-archive',
 			'category' => array(
 				'files',
 			),
 		),
 		array(
-			'icon'       => 'file-alt',
+			'icon'     => 'file-alt',
 			'category' => array(
 				'files',
 				'status',
@@ -16284,7 +16312,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'file',
+			'icon'     => 'file',
 			'category' => array(
 				'files',
 				'status',
@@ -16298,7 +16326,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'fighter-jet',
+			'icon'     => 'fighter-jet',
 			'category' => array(
 				'vehicles',
 				'objects',
@@ -16306,27 +16334,27 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'female',
+			'icon'     => 'female',
 			'category' => array(
 				'users-people',
 			),
 		),
 		array(
-			'icon'       => 'feather-alt',
+			'icon'     => 'feather-alt',
 			'category' => array(
 				'animals',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'feather',
+			'icon'     => 'feather',
 			'category' => array(
 				'animals',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'fax',
+			'icon'     => 'fax',
 			'category' => array(
 				'communication',
 				'business',
@@ -16334,26 +16362,26 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'fast-forward',
+			'icon'     => 'fast-forward',
 			'category' => array(
 				'audio-video',
 			),
 		),
 		array(
-			'icon'       => 'fast-backward',
+			'icon'     => 'fast-backward',
 			'category' => array(
 				'audio-video',
 			),
 		),
 		array(
-			'icon'       => 'fan',
+			'icon'     => 'fan',
 			'category' => array(
 				'spinners',
 				'household',
 			),
 		),
 		array(
-			'icon'       => 'eye-slash',
+			'icon'     => 'eye-slash',
 			'category' => array(
 				'images',
 				'status',
@@ -16364,7 +16392,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'eye-dropper',
+			'icon'     => 'eye-dropper',
 			'category' => array(
 				'images',
 				'science',
@@ -16374,7 +16402,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'eye',
+			'icon'     => 'eye',
 			'category' => array(
 				'images',
 				'status',
@@ -16386,35 +16414,35 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'external-link-square-alt',
+			'icon'     => 'external-link-square-alt',
 			'category' => array(
 				'arrows',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'external-link-alt',
+			'icon'     => 'external-link-alt',
 			'category' => array(
 				'arrows',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'expand-arrows-alt',
+			'icon'     => 'expand-arrows-alt',
 			'category' => array(
 				'arrows',
 				'audio-video',
 			),
 		),
 		array(
-			'icon'       => 'expand',
+			'icon'     => 'expand',
 			'category' => array(
 				'images',
 				'audio-video',
 			),
 		),
 		array(
-			'icon'       => 'exclamation-triangle',
+			'icon'     => 'exclamation-triangle',
 			'category' => array(
 				'alert',
 				'status',
@@ -16422,7 +16450,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'exclamation-circle',
+			'icon'     => 'exclamation-circle',
 			'category' => array(
 				'alert',
 				'status',
@@ -16430,7 +16458,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'exclamation',
+			'icon'     => 'exclamation',
 			'category' => array(
 				'alert',
 				'status',
@@ -16438,25 +16466,25 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'exchange-alt',
+			'icon'     => 'exchange-alt',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'euro-sign',
+			'icon'     => 'euro-sign',
 			'category' => array(
 				'currency',
 			),
 		),
 		array(
-			'icon'       => 'ethernet',
+			'icon'     => 'ethernet',
 			'category' => array(
 				'computers',
 			),
 		),
 		array(
-			'icon'       => 'eraser',
+			'icon'     => 'eraser',
 			'category' => array(
 				'design',
 				'writing',
@@ -16467,26 +16495,26 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'equals',
+			'icon'     => 'equals',
 			'category' => array(
 				'mathematics',
 			),
 		),
 		array(
-			'icon'       => 'envelope-square',
+			'icon'     => 'envelope-square',
 			'category' => array(
 				'communication',
 				'business',
 			),
 		),
 		array(
-			'icon'       => 'envelope-open-text',
+			'icon'     => 'envelope-open-text',
 			'category' => array(
 				'marketing',
 			),
 		),
 		array(
-			'icon'       => 'envelope-open',
+			'icon'     => 'envelope-open',
 			'category' => array(
 				'writing',
 				'interfaces',
@@ -16496,7 +16524,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'envelope',
+			'icon'     => 'envelope',
 			'category' => array(
 				'social',
 				'writing',
@@ -16507,31 +16535,31 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'ellipsis-v',
+			'icon'     => 'ellipsis-v',
 			'category' => array(
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'ellipsis-h',
+			'icon'     => 'ellipsis-h',
 			'category' => array(
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'eject',
+			'icon'     => 'eject',
 			'category' => array(
 				'audio-video',
 			),
 		),
 		array(
-			'icon'       => 'egg',
+			'icon'     => 'egg',
 			'category' => array(
 				'food',
 			),
 		),
 		array(
-			'icon'       => 'edit',
+			'icon'     => 'edit',
 			'category' => array(
 				'design',
 				'writing',
@@ -16541,7 +16569,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'dungeon',
+			'icon'     => 'dungeon',
 			'category' => array(
 				'buildings',
 				'gaming-tabletop',
@@ -16550,17 +16578,17 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'dumpster-fire',
+			'icon'     => 'dumpster-fire',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'dumpster',
+			'icon'     => 'dumpster',
 			'category' => array(
 				'construction',
 			),
 		),
 		array(
-			'icon'       => 'dumbbell',
+			'icon'     => 'dumbbell',
 			'category' => array(
 				'travel',
 				'sports',
@@ -16568,49 +16596,49 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'drumstick-bite',
+			'icon'     => 'drumstick-bite',
 			'category' => array(
 				'autumn',
 				'food',
 			),
 		),
 		array(
-			'icon'       => 'drum-steelpan',
+			'icon'     => 'drum-steelpan',
 			'category' => array(
 				'music',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'drum',
+			'icon'     => 'drum',
 			'category' => array(
 				'music',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'draw-polygon',
+			'icon'     => 'draw-polygon',
 			'category' => array(
 				'design',
 				'maps',
 			),
 		),
 		array(
-			'icon'       => 'dragon',
+			'icon'     => 'dragon',
 			'category' => array(
 				'animals',
 				'gaming-tabletop',
 			),
 		),
 		array(
-			'icon'       => 'drafting-compass',
+			'icon'     => 'drafting-compass',
 			'category' => array(
 				'construction',
 				'design',
 			),
 		),
 		array(
-			'icon'       => 'download',
+			'icon'     => 'download',
 			'category' => array(
 				'computers',
 				'arrows',
@@ -16618,7 +16646,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'dove',
+			'icon'     => 'dove',
 			'category' => array(
 				'animals',
 				'religion',
@@ -16627,14 +16655,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'dot-circle',
+			'icon'     => 'dot-circle',
 			'category' => array(
 				'interfaces',
 				'toggle',
 			),
 		),
 		array(
-			'icon'       => 'door-open',
+			'icon'     => 'door-open',
 			'category' => array(
 				'status',
 				'hotel',
@@ -16644,7 +16672,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'door-closed',
+			'icon'     => 'door-closed',
 			'category' => array(
 				'status',
 				'hotel',
@@ -16654,7 +16682,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'donate',
+			'icon'     => 'donate',
 			'category' => array(
 				'finance',
 				'charity',
@@ -16662,20 +16690,20 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'dolly-flatbed',
+			'icon'     => 'dolly-flatbed',
 			'category' => array(
 				'logistics',
 			),
 		),
 		array(
-			'icon'       => 'dolly',
+			'icon'     => 'dolly',
 			'category' => array(
 				'logistics',
 				'moving',
 			),
 		),
 		array(
-			'icon'       => 'dollar-sign',
+			'icon'     => 'dollar-sign',
 			'category' => array(
 				'charity',
 				'currency',
@@ -16683,79 +16711,79 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'dog',
+			'icon'     => 'dog',
 			'category' => array(
 				'animals',
 			),
 		),
 		array(
-			'icon'       => 'dna',
+			'icon'     => 'dna',
 			'category' => array(
 				'medical',
 				'science',
 			),
 		),
 		array(
-			'icon'       => 'dizzy',
+			'icon'     => 'dizzy',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'divide',
+			'icon'     => 'divide',
 			'category' => array(
 				'mathematics',
 			),
 		),
 		array(
-			'icon'       => 'directions',
+			'icon'     => 'directions',
 			'category' => array(
 				'maps',
 			),
 		),
 		array(
-			'icon'       => 'digital-tachograph',
+			'icon'     => 'digital-tachograph',
 			'category' => array(
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'dice-two',
-			'category' => array(
-				'games',
-				'objects',
-			),
-		),
-		array(
-			'icon'       => 'dice-three',
+			'icon'     => 'dice-two',
 			'category' => array(
 				'games',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'dice-six',
+			'icon'     => 'dice-three',
 			'category' => array(
 				'games',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'dice-one',
+			'icon'     => 'dice-six',
 			'category' => array(
 				'games',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'dice-four',
+			'icon'     => 'dice-one',
 			'category' => array(
 				'games',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'dice-five',
+			'icon'     => 'dice-four',
+			'category' => array(
+				'games',
+				'objects',
+			),
+		),
+		array(
+			'icon'     => 'dice-five',
 			'category' => array(
 				'hotel',
 				'games',
@@ -16763,7 +16791,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'dice-d6',
+			'icon'     => 'dice-d6',
 			'category' => array(
 				'gaming-tabletop',
 				'games',
@@ -16771,7 +16799,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'dice-d20',
+			'icon'     => 'dice-d20',
 			'category' => array(
 				'gaming-tabletop',
 				'games',
@@ -16779,7 +16807,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'dice',
+			'icon'     => 'dice',
 			'category' => array(
 				'hotel',
 				'games',
@@ -16787,13 +16815,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'diagnoses',
+			'icon'     => 'diagnoses',
 			'category' => array(
 				'medical',
 			),
 		),
 		array(
-			'icon'       => 'dharmachakra',
+			'icon'     => 'dharmachakra',
 			'category' => array(
 				'religion',
 				'spinners',
@@ -16801,32 +16829,32 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'desktop',
+			'icon'     => 'desktop',
 			'category' => array(
 				'computers',
 			),
 		),
 		array(
-			'icon'       => 'democrat',
+			'icon'     => 'democrat',
 			'category' => array(
 				'political',
 			),
 		),
 		array(
-			'icon'       => 'deaf',
+			'icon'     => 'deaf',
 			'category' => array(
 				'accessibility',
 			),
 		),
 		array(
-			'icon'       => 'database',
+			'icon'     => 'database',
 			'category' => array(
 				'computers',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'cut',
+			'icon'     => 'cut',
 			'category' => array(
 				'files',
 				'design',
@@ -16837,36 +16865,36 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'cubes',
+			'icon'     => 'cubes',
 			'category' => array(
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'cube',
+			'icon'     => 'cube',
 			'category' => array(
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'crutch',
+			'icon'     => 'crutch',
 			'category' => array(
 				'medical',
 			),
 		),
 		array(
-			'icon'       => 'crown',
+			'icon'     => 'crown',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'crow',
+			'icon'     => 'crow',
 			'category' => array(
 				'animals',
 				'halloween',
 			),
 		),
 		array(
-			'icon'       => 'crosshairs',
+			'icon'     => 'crosshairs',
 			'category' => array(
 				'design',
 				'spinners',
@@ -16874,45 +16902,45 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'cross',
+			'icon'     => 'cross',
 			'category' => array(
 				'religion',
 			),
 		),
 		array(
-			'icon'       => 'crop-alt',
+			'icon'     => 'crop-alt',
 			'category' => array(
 				'design',
 			),
 		),
 		array(
-			'icon'       => 'crop',
+			'icon'     => 'crop',
 			'category' => array(
 				'design',
 			),
 		),
 		array(
-			'icon'       => 'credit-card',
+			'icon'     => 'credit-card',
 			'category' => array(
 				'finance',
 				'payments-shopping',
 			),
 		),
 		array(
-			'icon'       => 'couch',
+			'icon'     => 'couch',
 			'category' => array(
 				'moving',
 				'household',
 			),
 		),
 		array(
-			'icon'       => 'copyright',
+			'icon'     => 'copyright',
 			'category' => array(
 				'business',
 			),
 		),
 		array(
-			'icon'       => 'copy',
+			'icon'     => 'copy',
 			'category' => array(
 				'files',
 				'design',
@@ -16923,7 +16951,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'cookie-bite',
+			'icon'     => 'cookie-bite',
 			'category' => array(
 				'childhood',
 				'holiday',
@@ -16931,7 +16959,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'cookie',
+			'icon'     => 'cookie',
 			'category' => array(
 				'childhood',
 				'objects',
@@ -16939,14 +16967,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'concierge-bell',
+			'icon'     => 'concierge-bell',
 			'category' => array(
 				'travel',
 				'hotel',
 			),
 		),
 		array(
-			'icon'       => 'compress-arrows-alt',
+			'icon'     => 'compress-arrows-alt',
 			'category' => array(
 				'images',
 				'arrows',
@@ -16954,14 +16982,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'compress',
+			'icon'     => 'compress',
 			'category' => array(
 				'images',
 				'audio-video',
 			),
 		),
 		array(
-			'icon'       => 'compass',
+			'icon'     => 'compass',
 			'category' => array(
 				'status',
 				'spinners',
@@ -16972,54 +17000,54 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'compact-disc',
+			'icon'     => 'compact-disc',
 			'category' => array(
 				'spinners',
 			),
 		),
 		array(
-			'icon'       => 'comments-dollar',
+			'icon'     => 'comments-dollar',
 			'category' => array(
 				'finance',
 				'marketing',
 			),
 		),
 		array(
-			'icon'       => 'comments',
+			'icon'     => 'comments',
 			'category' => array(
 				'chat',
 				'communication',
 			),
 		),
 		array(
-			'icon'       => 'comment-slash',
+			'icon'     => 'comment-slash',
 			'category' => array(
 				'chat',
 				'status',
 			),
 		),
 		array(
-			'icon'       => 'comment-medical',
+			'icon'     => 'comment-medical',
 			'category' => array(
 				'medical',
 				'chat',
 			),
 		),
 		array(
-			'icon'       => 'comment-dots',
+			'icon'     => 'comment-dots',
 			'category' => array(
 				'chat',
 			),
 		),
 		array(
-			'icon'       => 'comment-dollar',
+			'icon'     => 'comment-dollar',
 			'category' => array(
 				'finance',
 				'marketing',
 			),
 		),
 		array(
-			'icon'       => 'comment-alt',
+			'icon'     => 'comment-alt',
 			'category' => array(
 				'social',
 				'chat',
@@ -17028,7 +17056,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'comment',
+			'icon'     => 'comment',
 			'category' => array(
 				'social',
 				'chat',
@@ -17038,27 +17066,27 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'columns',
+			'icon'     => 'columns',
 			'category' => array(
 				'editors',
 				'business',
 			),
 		),
 		array(
-			'icon'       => 'coins',
+			'icon'     => 'coins',
 			'category' => array(
 				'finance',
 			),
 		),
 		array(
-			'icon'       => 'cogs',
+			'icon'     => 'cogs',
 			'category' => array(
 				'interfaces',
 				'objects',
 			),
 		),
 		array(
-			'icon'       => 'cog',
+			'icon'     => 'cog',
 			'category' => array(
 				'spinners',
 				'interfaces',
@@ -17066,7 +17094,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'coffee',
+			'icon'     => 'coffee',
 			'category' => array(
 				'beverage',
 				'interfaces',
@@ -17078,19 +17106,19 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'code-branch',
+			'icon'     => 'code-branch',
 			'category' => array(
 				'code',
 			),
 		),
 		array(
-			'icon'       => 'code',
+			'icon'     => 'code',
 			'category' => array(
 				'code',
 			),
 		),
 		array(
-			'icon'       => 'cocktail',
+			'icon'     => 'cocktail',
 			'category' => array(
 				'beverage',
 				'travel',
@@ -17098,21 +17126,21 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'cloud-upload-alt',
+			'icon'     => 'cloud-upload-alt',
 			'category' => array(
 				'arrows',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'cloud-sun-rain',
+			'icon'     => 'cloud-sun-rain',
 			'category' => array(
 				'weather',
 				'spring',
 			),
 		),
 		array(
-			'icon'       => 'cloud-sun',
+			'icon'     => 'cloud-sun',
 			'category' => array(
 				'weather',
 				'spring',
@@ -17120,46 +17148,46 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'cloud-showers-heavy',
+			'icon'     => 'cloud-showers-heavy',
 			'category' => array(
 				'weather',
 			),
 		),
 		array(
-			'icon'       => 'cloud-rain',
+			'icon'     => 'cloud-rain',
 			'category' => array(
 				'weather',
 			),
 		),
 		array(
-			'icon'       => 'cloud-moon-rain',
+			'icon'     => 'cloud-moon-rain',
 			'category' => array(
 				'weather',
 			),
 		),
 		array(
-			'icon'       => 'cloud-moon',
+			'icon'     => 'cloud-moon',
 			'category' => array(
 				'halloween',
 				'weather',
 			),
 		),
 		array(
-			'icon'       => 'cloud-meatball',
+			'icon'     => 'cloud-meatball',
 			'category' => array(
 				'weather',
 				'food',
 			),
 		),
 		array(
-			'icon'       => 'cloud-download-alt',
+			'icon'     => 'cloud-download-alt',
 			'category' => array(
 				'arrows',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'cloud',
+			'icon'     => 'cloud',
 			'category' => array(
 				'shapes',
 				'interfaces',
@@ -17168,14 +17196,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'closed-captioning',
+			'icon'     => 'closed-captioning',
 			'category' => array(
 				'audio-video',
 				'accessibility',
 			),
 		),
 		array(
-			'icon'       => 'clone',
+			'icon'     => 'clone',
 			'category' => array(
 				'files',
 				'images',
@@ -17185,26 +17213,26 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'clock',
+			'icon'     => 'clock',
 			'category' => array(
 				'date-time',
 			),
 		),
 		array(
-			'icon'       => 'clipboard-list',
+			'icon'     => 'clipboard-list',
 			'category' => array(
 				'logistics',
 			),
 		),
 		array(
-			'icon'       => 'clipboard-check',
+			'icon'     => 'clipboard-check',
 			'category' => array(
 				'logistics',
 				'science',
 			),
 		),
 		array(
-			'icon'       => 'clipboard',
+			'icon'     => 'clipboard',
 			'category' => array(
 				'interfaces',
 				'editors',
@@ -17213,7 +17241,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'clinic-medical',
+			'icon'     => 'clinic-medical',
 			'category' => array(
 				'buildings',
 				'medical',
@@ -17221,20 +17249,20 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'city',
+			'icon'     => 'city',
 			'category' => array(
 				'buildings',
 				'business',
 			),
 		),
 		array(
-			'icon'       => 'circle-notch',
+			'icon'     => 'circle-notch',
 			'category' => array(
 				'spinners',
 			),
 		),
 		array(
-			'icon'       => 'circle',
+			'icon'     => 'circle',
 			'category' => array(
 				'audio-video',
 				'shapes',
@@ -17243,7 +17271,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'church',
+			'icon'     => 'church',
 			'category' => array(
 				'buildings',
 				'religion',
@@ -17251,156 +17279,156 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'child',
+			'icon'     => 'child',
 			'category' => array(
 				'users-people',
 			),
 		),
 		array(
-			'icon'       => 'chevron-up',
+			'icon'     => 'chevron-up',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'chevron-right',
+			'icon'     => 'chevron-right',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'chevron-left',
+			'icon'     => 'chevron-left',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'chevron-down',
+			'icon'     => 'chevron-down',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'chevron-circle-up',
+			'icon'     => 'chevron-circle-up',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'chevron-circle-right',
+			'icon'     => 'chevron-circle-right',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'chevron-circle-left',
+			'icon'     => 'chevron-circle-left',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'chevron-circle-down',
+			'icon'     => 'chevron-circle-down',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'chess-rook',
+			'icon'     => 'chess-rook',
 			'category' => array(
 				'chess',
 				'games',
 			),
 		),
 		array(
-			'icon'       => 'chess-queen',
+			'icon'     => 'chess-queen',
 			'category' => array(
 				'chess',
 				'games',
 			),
 		),
 		array(
-			'icon'       => 'chess-pawn',
+			'icon'     => 'chess-pawn',
 			'category' => array(
 				'chess',
 				'games',
 			),
 		),
 		array(
-			'icon'       => 'chess-knight',
+			'icon'     => 'chess-knight',
 			'category' => array(
 				'chess',
 				'games',
 			),
 		),
 		array(
-			'icon'       => 'chess-king',
+			'icon'     => 'chess-king',
 			'category' => array(
 				'chess',
 				'games',
 			),
 		),
 		array(
-			'icon'       => 'chess-board',
+			'icon'     => 'chess-board',
 			'category' => array(
 				'chess',
 				'games',
 			),
 		),
 		array(
-			'icon'       => 'chess-bishop',
+			'icon'     => 'chess-bishop',
 			'category' => array(
 				'chess',
 				'games',
 			),
 		),
 		array(
-			'icon'       => 'chess',
+			'icon'     => 'chess',
 			'category' => array(
 				'chess',
 				'games',
 			),
 		),
 		array(
-			'icon'       => 'cheese',
+			'icon'     => 'cheese',
 			'category' => array(
 				'food',
 			),
 		),
 		array(
-			'icon'       => 'check-square',
+			'icon'     => 'check-square',
 			'category' => array(
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'check-double',
+			'icon'     => 'check-double',
 			'category' => array(
 				'political',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'check-circle',
+			'icon'     => 'check-circle',
 			'category' => array(
 				'interfaces',
 				'toggle',
 			),
 		),
 		array(
-			'icon'       => 'check',
+			'icon'     => 'check',
 			'category' => array(
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'chart-pie',
+			'icon'     => 'chart-pie',
 			'category' => array(
 				'finance',
 				'business',
 			),
 		),
 		array(
-			'icon'       => 'chart-line',
+			'icon'     => 'chart-line',
 			'category' => array(
 				'finance',
 				'arrows',
@@ -17408,33 +17436,33 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'chart-bar',
+			'icon'     => 'chart-bar',
 			'category' => array(
 				'business',
 			),
 		),
 		array(
-			'icon'       => 'chart-area',
+			'icon'     => 'chart-area',
 			'category' => array(
 				'business',
 			),
 		),
 		array(
-			'icon'       => 'charging-station',
+			'icon'     => 'charging-station',
 			'category' => array(
 				'energy',
 				'automotive',
 			),
 		),
 		array(
-			'icon'       => 'chalkboard-teacher',
+			'icon'     => 'chalkboard-teacher',
 			'category' => array(
 				'users-people',
 				'education',
 			),
 		),
 		array(
-			'icon'       => 'chalkboard',
+			'icon'     => 'chalkboard',
 			'category' => array(
 				'images',
 				'education',
@@ -17442,13 +17470,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'chair',
+			'icon'     => 'chair',
 			'category' => array(
 				'household',
 			),
 		),
 		array(
-			'icon'       => 'certificate',
+			'icon'     => 'certificate',
 			'category' => array(
 				'spinners',
 				'shapes',
@@ -17458,21 +17486,21 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'cat',
+			'icon'     => 'cat',
 			'category' => array(
 				'animals',
 				'halloween',
 			),
 		),
 		array(
-			'icon'       => 'cash-register',
+			'icon'     => 'cash-register',
 			'category' => array(
 				'finance',
 				'shopping',
 			),
 		),
 		array(
-			'icon'       => 'cart-plus',
+			'icon'     => 'cart-plus',
 			'category' => array(
 				'status',
 				'payments-shopping',
@@ -17480,7 +17508,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'cart-arrow-down',
+			'icon'     => 'cart-arrow-down',
 			'category' => array(
 				'status',
 				'arrows',
@@ -17489,7 +17517,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'carrot',
+			'icon'     => 'carrot',
 			'category' => array(
 				'fruit-vegetable',
 				'holiday',
@@ -17498,82 +17526,82 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'caret-up',
+			'icon'     => 'caret-up',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'caret-square-up',
+			'icon'     => 'caret-square-up',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'caret-square-right',
+			'icon'     => 'caret-square-right',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'caret-square-left',
+			'icon'     => 'caret-square-left',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'caret-square-down',
+			'icon'     => 'caret-square-down',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'caret-right',
+			'icon'     => 'caret-right',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'caret-left',
+			'icon'     => 'caret-left',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'caret-down',
+			'icon'     => 'caret-down',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'car-side',
+			'icon'     => 'car-side',
 			'category' => array(
 				'vehicles',
 				'automotive',
 			),
 		),
 		array(
-			'icon'       => 'car-crash',
+			'icon'     => 'car-crash',
 			'category' => array(
 				'vehicles',
 				'automotive',
 			),
 		),
 		array(
-			'icon'       => 'car-battery',
+			'icon'     => 'car-battery',
 			'category' => array(
 				'automotive',
 			),
 		),
 		array(
-			'icon'       => 'car-alt',
+			'icon'     => 'car-alt',
 			'category' => array(
 				'vehicles',
 				'automotive',
 			),
 		),
 		array(
-			'icon'       => 'car',
+			'icon'     => 'car',
 			'category' => array(
 				'vehicles',
 				'automotive',
@@ -17583,7 +17611,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'capsules',
+			'icon'     => 'capsules',
 			'category' => array(
 				'medical',
 				'science',
@@ -17591,14 +17619,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'cannabis',
+			'icon'     => 'cannabis',
 			'category' => array(
 				'medical',
 				'pharmacy',
 			),
 		),
 		array(
-			'icon'       => 'candy-cane',
+			'icon'     => 'candy-cane',
 			'category' => array(
 				'holiday',
 				'objects',
@@ -17606,7 +17634,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'campground',
+			'icon'     => 'campground',
 			'category' => array(
 				'buildings',
 				'camping',
@@ -17614,7 +17642,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'camera-retro',
+			'icon'     => 'camera-retro',
 			'category' => array(
 				'images',
 				'payments-shopping',
@@ -17622,7 +17650,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'camera',
+			'icon'     => 'camera',
 			'category' => array(
 				'social',
 				'images',
@@ -17631,21 +17659,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'calendar-week',
+			'icon'     => 'calendar-week',
 			'category' => array(
 				'status',
 			),
 		),
 		array(
-			'icon'       => 'calendar-times',
-			'category' => array(
-				'status',
-				'interfaces',
-				'date-time',
-			),
-		),
-		array(
-			'icon'       => 'calendar-plus',
+			'icon'     => 'calendar-times',
 			'category' => array(
 				'status',
 				'interfaces',
@@ -17653,7 +17673,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'calendar-minus',
+			'icon'     => 'calendar-plus',
 			'category' => array(
 				'status',
 				'interfaces',
@@ -17661,13 +17681,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'calendar-day',
-			'category' => array(
-				'status',
-			),
-		),
-		array(
-			'icon'       => 'calendar-check',
+			'icon'     => 'calendar-minus',
 			'category' => array(
 				'status',
 				'interfaces',
@@ -17675,7 +17689,21 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'calendar-alt',
+			'icon'     => 'calendar-day',
+			'category' => array(
+				'status',
+			),
+		),
+		array(
+			'icon'     => 'calendar-check',
+			'category' => array(
+				'status',
+				'interfaces',
+				'date-time',
+			),
+		),
+		array(
+			'icon'     => 'calendar-alt',
 			'category' => array(
 				'status',
 				'interfaces',
@@ -17685,7 +17713,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'calendar',
+			'icon'     => 'calendar',
 			'category' => array(
 				'status',
 				'shapes',
@@ -17696,7 +17724,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'calculator',
+			'icon'     => 'calculator',
 			'category' => array(
 				'mathematics',
 				'interfaces',
@@ -17705,13 +17733,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'business-time',
+			'icon'     => 'business-time',
 			'category' => array(
 				'business',
 			),
 		),
 		array(
-			'icon'       => 'bus-alt',
+			'icon'     => 'bus-alt',
 			'category' => array(
 				'travel',
 				'vehicles',
@@ -17719,7 +17747,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'bus',
+			'icon'     => 'bus',
 			'category' => array(
 				'travel',
 				'vehicles',
@@ -17728,7 +17756,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'burn',
+			'icon'     => 'burn',
 			'category' => array(
 				'energy',
 				'medical',
@@ -17737,7 +17765,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'bullseye',
+			'icon'     => 'bullseye',
 			'category' => array(
 				'interfaces',
 				'toggle',
@@ -17747,7 +17775,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'bullhorn',
+			'icon'     => 'bullhorn',
 			'category' => array(
 				'political',
 				'interfaces',
@@ -17759,7 +17787,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'building',
+			'icon'     => 'building',
 			'category' => array(
 				'buildings',
 				'business',
@@ -17768,7 +17796,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'bug',
+			'icon'     => 'bug',
 			'category' => array(
 				'interfaces',
 				'security',
@@ -17777,21 +17805,21 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'brush',
+			'icon'     => 'brush',
 			'category' => array(
 				'construction',
 				'design',
 			),
 		),
 		array(
-			'icon'       => 'broom',
+			'icon'     => 'broom',
 			'category' => array(
 				'halloween',
 				'spring',
 			),
 		),
 		array(
-			'icon'       => 'broadcast-tower',
+			'icon'     => 'broadcast-tower',
 			'category' => array(
 				'energy',
 				'audio-video',
@@ -17800,13 +17828,13 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'briefcase-medical',
+			'icon'     => 'briefcase-medical',
 			'category' => array(
 				'medical',
 			),
 		),
 		array(
-			'icon'       => 'briefcase',
+			'icon'     => 'briefcase',
 			'category' => array(
 				'hotel',
 				'business',
@@ -17815,68 +17843,68 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'bread-slice',
+			'icon'     => 'bread-slice',
 			'category' => array(
 				'food',
 			),
 		),
 		array(
-			'icon'       => 'brain',
+			'icon'     => 'brain',
 			'category' => array(
 				'medical',
 				'science',
 			),
 		),
 		array(
-			'icon'       => 'braille',
+			'icon'     => 'braille',
 			'category' => array(
 				'accessibility',
 			),
 		),
 		array(
-			'icon'       => 'boxes',
+			'icon'     => 'boxes',
 			'category' => array(
 				'logistics',
 			),
 		),
 		array(
-			'icon'       => 'box-open',
+			'icon'     => 'box-open',
 			'category' => array(
 				'moving',
 			),
 		),
 		array(
-			'icon'       => 'box',
+			'icon'     => 'box',
 			'category' => array(
 				'logistics',
 			),
 		),
 		array(
-			'icon'       => 'bowling-ball',
+			'icon'     => 'bowling-ball',
 			'category' => array(
 				'sports',
 			),
 		),
 		array(
-			'icon'       => 'border-style',
+			'icon'     => 'border-style',
 			'category' => array(
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'border-none',
+			'icon'     => 'border-none',
 			'category' => array(
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'border-all',
+			'icon'     => 'border-all',
 			'category' => array(
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'bookmark',
+			'icon'     => 'bookmark',
 			'category' => array(
 				'shapes',
 				'writing',
@@ -17886,26 +17914,26 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'book-reader',
+			'icon'     => 'book-reader',
 			'category' => array(
 				'education',
 			),
 		),
 		array(
-			'icon'       => 'book-open',
+			'icon'     => 'book-open',
 			'category' => array(
 				'education',
 			),
 		),
 		array(
-			'icon'       => 'book-medical',
+			'icon'     => 'book-medical',
 			'category' => array(
 				'medical',
 				'pharmacy',
 			),
 		),
 		array(
-			'icon'       => 'book-dead',
+			'icon'     => 'book-dead',
 			'category' => array(
 				'halloween',
 				'gaming-tabletop',
@@ -17913,7 +17941,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'book',
+			'icon'     => 'book',
 			'category' => array(
 				'finance',
 				'writing',
@@ -17923,47 +17951,47 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'bong',
+			'icon'     => 'bong',
 			'category' => array(
 				'medical',
 			),
 		),
 		array(
-			'icon'       => 'bone',
+			'icon'     => 'bone',
 			'category' => array(
 				'medical',
 				'food',
 			),
 		),
 		array(
-			'icon'       => 'bomb',
+			'icon'     => 'bomb',
 			'category' => array(
 				'objects',
 				'maps',
 			),
 		),
 		array(
-			'icon'       => 'bolt',
+			'icon'     => 'bolt',
 			'category' => array(
 				'images',
 				'weather',
 			),
 		),
 		array(
-			'icon'       => 'bold',
+			'icon'     => 'bold',
 			'category' => array(
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'blog',
+			'icon'     => 'blog',
 			'category' => array(
 				'writing',
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'blind',
+			'icon'     => 'blind',
 			'category' => array(
 				'users-people',
 				'accessibility',
@@ -17971,11 +17999,11 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'blender-phone',
+			'icon'     => 'blender-phone',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'blender',
+			'icon'     => 'blender',
 			'category' => array(
 				'beverage',
 				'objects',
@@ -17983,7 +18011,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'birthday-cake',
+			'icon'     => 'birthday-cake',
 			'category' => array(
 				'social',
 				'childhood',
@@ -17993,14 +18021,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'biohazard',
+			'icon'     => 'biohazard',
 			'category' => array(
 				'medical',
 				'science',
 			),
 		),
 		array(
-			'icon'       => 'binoculars',
+			'icon'     => 'binoculars',
 			'category' => array(
 				'camping',
 				'maritime',
@@ -18009,7 +18037,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'biking',
+			'icon'     => 'biking',
 			'category' => array(
 				'users-people',
 				'summer',
@@ -18019,7 +18047,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'bicycle',
+			'icon'     => 'bicycle',
 			'category' => array(
 				'vehicles',
 				'fitness',
@@ -18028,19 +18056,19 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'bible',
+			'icon'     => 'bible',
 			'category' => array(
 				'religion',
 			),
 		),
 		array(
-			'icon'       => 'bezier-curve',
+			'icon'     => 'bezier-curve',
 			'category' => array(
 				'design',
 			),
 		),
 		array(
-			'icon'       => 'bell-slash',
+			'icon'     => 'bell-slash',
 			'category' => array(
 				'alert',
 				'education',
@@ -18052,7 +18080,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'bell',
+			'icon'     => 'bell',
 			'category' => array(
 				'alert',
 				'social',
@@ -18067,7 +18095,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'beer',
+			'icon'     => 'beer',
 			'category' => array(
 				'beverage',
 				'interfaces',
@@ -18076,7 +18104,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'bed',
+			'icon'     => 'bed',
 			'category' => array(
 				'users-people',
 				'travel',
@@ -18087,42 +18115,42 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'battery-three-quarters',
+			'icon'     => 'battery-three-quarters',
 			'category' => array(
 				'energy',
 				'status',
 			),
 		),
 		array(
-			'icon'       => 'battery-quarter',
+			'icon'     => 'battery-quarter',
 			'category' => array(
 				'energy',
 				'status',
 			),
 		),
 		array(
-			'icon'       => 'battery-half',
+			'icon'     => 'battery-half',
 			'category' => array(
 				'energy',
 				'status',
 			),
 		),
 		array(
-			'icon'       => 'battery-full',
+			'icon'     => 'battery-full',
 			'category' => array(
 				'energy',
 				'status',
 			),
 		),
 		array(
-			'icon'       => 'battery-empty',
+			'icon'     => 'battery-empty',
 			'category' => array(
 				'energy',
 				'status',
 			),
 		),
 		array(
-			'icon'       => 'bath',
+			'icon'     => 'bath',
 			'category' => array(
 				'childhood',
 				'hotel',
@@ -18133,25 +18161,25 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'basketball-ball',
+			'icon'     => 'basketball-ball',
 			'category' => array(
 				'sports',
 			),
 		),
 		array(
-			'icon'       => 'baseball-ball',
+			'icon'     => 'baseball-ball',
 			'category' => array(
 				'sports',
 			),
 		),
 		array(
-			'icon'       => 'bars',
+			'icon'     => 'bars',
 			'category' => array(
 				'interfaces',
 			),
 		),
 		array(
-			'icon'       => 'barcode',
+			'icon'     => 'barcode',
 			'category' => array(
 				'interfaces',
 				'shopping',
@@ -18159,14 +18187,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'band-aid',
+			'icon'     => 'band-aid',
 			'category' => array(
 				'medical',
 				'pharmacy',
 			),
 		),
 		array(
-			'icon'       => 'ban',
+			'icon'     => 'ban',
 			'category' => array(
 				'status',
 				'interfaces',
@@ -18174,7 +18202,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'balance-scale-right',
+			'icon'     => 'balance-scale-right',
 			'category' => array(
 				'finance',
 				'political',
@@ -18184,7 +18212,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'balance-scale-left',
+			'icon'     => 'balance-scale-left',
 			'category' => array(
 				'finance',
 				'political',
@@ -18194,7 +18222,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'balance-scale',
+			'icon'     => 'balance-scale',
 			'category' => array(
 				'finance',
 				'political',
@@ -18204,23 +18232,23 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'bacon',
+			'icon'     => 'bacon',
 			'category' => array(
 				'food',
 			),
 		),
 		array(
-			'icon'       => 'backward',
+			'icon'     => 'backward',
 			'category' => array(
 				'audio-video',
 			),
 		),
 		array(
-			'icon'       => 'backspace',
+			'icon'     => 'backspace',
 			'category' => array(),
 		),
 		array(
-			'icon'       => 'baby-carriage',
+			'icon'     => 'baby-carriage',
 			'category' => array(
 				'vehicles',
 				'childhood',
@@ -18229,14 +18257,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'baby',
+			'icon'     => 'baby',
 			'category' => array(
 				'users-people',
 				'childhood',
 			),
 		),
 		array(
-			'icon'       => 'award',
+			'icon'     => 'award',
 			'category' => array(
 				'education',
 				'political',
@@ -18245,14 +18273,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'audio-description',
+			'icon'     => 'audio-description',
 			'category' => array(
 				'audio-video',
 				'accessibility',
 			),
 		),
 		array(
-			'icon'       => 'atom',
+			'icon'     => 'atom',
 			'category' => array(
 				'energy',
 				'religion',
@@ -18262,129 +18290,129 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'atlas',
+			'icon'     => 'atlas',
 			'category' => array(
 				'travel',
 			),
 		),
 		array(
-			'icon'       => 'at',
+			'icon'     => 'at',
 			'category' => array(
 				'communication',
 			),
 		),
 		array(
-			'icon'       => 'asterisk',
+			'icon'     => 'asterisk',
 			'category' => array(
 				'spinners',
 			),
 		),
 		array(
-			'icon'       => 'assistive-listening-systems',
+			'icon'     => 'assistive-listening-systems',
 			'category' => array(
 				'communication',
 				'accessibility',
 			),
 		),
 		array(
-			'icon'       => 'arrows-alt-v',
+			'icon'     => 'arrows-alt-v',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'arrows-alt-h',
+			'icon'     => 'arrows-alt-h',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'arrows-alt',
+			'icon'     => 'arrows-alt',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'arrow-up',
+			'icon'     => 'arrow-up',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'arrow-right',
+			'icon'     => 'arrow-right',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'arrow-left',
+			'icon'     => 'arrow-left',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'arrow-down',
+			'icon'     => 'arrow-down',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'arrow-circle-up',
+			'icon'     => 'arrow-circle-up',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'arrow-circle-right',
+			'icon'     => 'arrow-circle-right',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'arrow-circle-left',
+			'icon'     => 'arrow-circle-left',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'arrow-circle-down',
+			'icon'     => 'arrow-circle-down',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'arrow-alt-circle-up',
+			'icon'     => 'arrow-alt-circle-up',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'arrow-alt-circle-right',
+			'icon'     => 'arrow-alt-circle-right',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'arrow-alt-circle-left',
+			'icon'     => 'arrow-alt-circle-left',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'arrow-alt-circle-down',
+			'icon'     => 'arrow-alt-circle-down',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'archway',
+			'icon'     => 'archway',
 			'category' => array(
 				'buildings',
 				'travel',
 			),
 		),
 		array(
-			'icon'       => 'archive',
+			'icon'     => 'archive',
 			'category' => array(
 				'files',
 				'writing',
@@ -18395,7 +18423,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'apple-alt',
+			'icon'     => 'apple-alt',
 			'category' => array(
 				'education',
 				'childhood',
@@ -18405,67 +18433,67 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'ankh',
+			'icon'     => 'ankh',
 			'category' => array(
 				'religion',
 			),
 		),
 		array(
-			'icon'       => 'angry',
+			'icon'     => 'angry',
 			'category' => array(
 				'emoji',
 			),
 		),
 		array(
-			'icon'       => 'angle-up',
+			'icon'     => 'angle-up',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'angle-right',
+			'icon'     => 'angle-right',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'angle-left',
+			'icon'     => 'angle-left',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'angle-down',
+			'icon'     => 'angle-down',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'angle-double-up',
+			'icon'     => 'angle-double-up',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'angle-double-right',
+			'icon'     => 'angle-double-right',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'angle-double-left',
+			'icon'     => 'angle-double-left',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'angle-double-down',
+			'icon'     => 'angle-double-down',
 			'category' => array(
 				'arrows',
 			),
 		),
 		array(
-			'icon'       => 'anchor',
+			'icon'     => 'anchor',
 			'category' => array(
 				'summer',
 				'maritime',
@@ -18474,14 +18502,14 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'american-sign-language-interpreting',
+			'icon'     => 'american-sign-language-interpreting',
 			'category' => array(
 				'communication',
 				'accessibility',
 			),
 		),
 		array(
-			'icon'       => 'ambulance',
+			'icon'     => 'ambulance',
 			'category' => array(
 				'medical',
 				'vehicles',
@@ -18492,7 +18520,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'allergies',
+			'icon'     => 'allergies',
 			'category' => array(
 				'medical',
 				'hands',
@@ -18500,44 +18528,44 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'align-right',
+			'icon'     => 'align-right',
 			'category' => array(
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'align-left',
+			'icon'     => 'align-left',
 			'category' => array(
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'align-justify',
+			'icon'     => 'align-justify',
 			'category' => array(
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'align-center',
+			'icon'     => 'align-center',
 			'category' => array(
 				'editors',
 			),
 		),
 		array(
-			'icon'       => 'air-freshener',
+			'icon'     => 'air-freshener',
 			'category' => array(
 				'automotive',
 			),
 		),
 		array(
-			'icon'       => 'adjust',
+			'icon'     => 'adjust',
 			'category' => array(
 				'images',
 				'design',
 			),
 		),
 		array(
-			'icon'       => 'address-card',
+			'icon'     => 'address-card',
 			'category' => array(
 				'users-people',
 				'communication',
@@ -18545,7 +18573,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'address-book',
+			'icon'     => 'address-book',
 			'category' => array(
 				'users-people',
 				'communication',
@@ -18553,7 +18581,7 @@ return array(
 			),
 		),
 		array(
-			'icon'       => 'ad',
+			'icon'     => 'ad',
 			'category' => array(
 				'marketing',
 			),

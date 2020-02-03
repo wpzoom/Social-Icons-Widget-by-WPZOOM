@@ -125,6 +125,10 @@ You can also create a hidden widget area using a plugin like Custom Sidebars if 
 
 == Changelog ==
 
+= 3.4.2 =
+* New Icons: ArtStation, Issuu, Google Calendar, Google Maps
+* Added detection for Whatsapp links: e.g. "https://wa.me/15551234567"
+
 = 3.4.1 =
 * New Icons: Mixer, Letterboxd
 
