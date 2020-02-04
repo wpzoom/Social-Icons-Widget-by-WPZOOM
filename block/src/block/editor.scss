@@ -74,6 +74,19 @@
       button.components-button.button-small {
         margin-left: 5px;
       }
+
+      .popover-color-picker {
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        align-self: center;
+        margin: 0px 5px;
+      }
+
+      .popover-color-picker-wrapper {
+        display: flex;
+        align-items: center;
+      }
     }
   }
 

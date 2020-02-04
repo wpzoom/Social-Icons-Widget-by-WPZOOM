@@ -34,7 +34,7 @@ class ModalColorPicker extends Component {
 
     render() {
         return (
-            <ColorIndicator colorValue={this.state.color} onClick={this.onClickColorIndicatorHandler}>
+            <ColorIndicator title={this.props.title} className={this.props.className} colorValue={this.state.color} onClick={this.onClickColorIndicatorHandler}>
                 {this.state.showColorPicker &&
                 (<Popover position={'middle right'} onFocusOutside={this.focusOutsideHandler}>
                     <div className={'popover-content'}>

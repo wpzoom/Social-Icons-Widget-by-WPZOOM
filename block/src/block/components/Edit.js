@@ -5,6 +5,7 @@ import Inspector from "./Inspector";
 import PopoverSearch from "./PopoverSearch";
 import SortableArrows from "./SortableArrows";
 import {get, isEmpty, omit, find} from 'lodash';
+import ModalColorPicker from "./ModalColorPicker";
 
 const {__} = wp.i18n; // Import __() from wp.i18n
 const {Component} = wp.element;
@@ -576,9 +577,32 @@ class Edit extends Component {
                                         label={__('Apply', 'zoom-social-icons-widget')}
                                         onClick={(e) => popoverEditSettingsHandler(e, key)}
                                         className={['is-link']}>{__('Edit Details', 'zoom-social-icons-widget')}</Button>
-                                    {(attributes.selectedIcons.length > 1) && <Button
-                                        onClick={(e) => popoverDeleteIconHandler(e, key)}
-                                        className={['is-button', 'button-link-delete', 'is-small']}>{__('Delete Icon', 'zoom-social-icons-widget')}</Button>}
+                                    <div className={classnames('popover-color-picker-wrapper')}>
+                                        <ModalColorPicker
+                                            title={'Color'}
+                                            className={classnames('popover-color-picker')}
+                                            save={(arg) => {
+                                                let selectedIconsClone = [...attributes.selectedIcons];
+                                                selectedIconsClone[attributes.activeIconIndex].color = arg.color;
+                                                setAttributes({selectedIcons: selectedIconsClone});
+                                            }}
+                                            color={list.color}
+                                        />
+                                        <ModalColorPicker
+                                            title={'Hover Color'}
+                                            className={classnames('popover-color-picker')}
+                                            save={(arg) => {
+                                                let selectedIconsClone = [...attributes.selectedIcons];
+                                                selectedIconsClone[attributes.activeIconIndex].hoverColor = arg.color;
+                                                setAttributes({selectedIcons: selectedIconsClone});
+                                            }}
+                                            color={list.hoverColor}
+                                        />
+                                        {(attributes.selectedIcons.length > 1) && <Button
+                                            onClick={(e) => popoverDeleteIconHandler(e, key)}
+                                            className={['is-button', 'button-link-delete', 'is-small']}>{__('Delete Icon', 'zoom-social-icons-widget')}</Button>}
+
+                                    </div>
 
                                 </div>
                             </div>
