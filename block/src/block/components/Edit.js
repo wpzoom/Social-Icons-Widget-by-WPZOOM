@@ -6,6 +6,8 @@ import PopoverSearch from "./PopoverSearch";
 import SortableArrows from "./SortableArrows";
 import {get, isEmpty, omit, find} from 'lodash';
 import ModalColorPicker from "./ModalColorPicker";
+import URI from 'urijs';
+
 
 const {__} = wp.i18n; // Import __() from wp.i18n
 const {Component} = wp.element;
@@ -480,6 +482,9 @@ class Edit extends Component {
         const popoverSearchHandler = (key, newUrl, e) => {
 
             e.stopPropagation();
+
+            newUrl = isEmpty(new URI(newUrl).protocol()) ? `https://${newUrl}`: newUrl;
+
             let selectedIconsClone = JSON.parse(JSON.stringify(attributes.selectedIcons));
             let iconFromUrl = Helper.filterUrlScheme(newUrl);
 
