@@ -3,10 +3,10 @@ import SocialIcon from './SocialIcon';
 import Helper from './Helper';
 import React from "react";
 import classnames from 'classnames';
+import {__} from '@wordpress/i18n';
+import {Component} from '@wordpress/element';
+import {Button, Modal, TextControl, SelectControl} from '@wordpress/components';
 
-const {__} = wp.i18n;
-const {Component} = wp.element;
-const {Button, Modal, TextControl, SelectControl} = wp.components;
 const {icons} = wpzSocialIconsBlock;
 
 class SocialIconsModal extends Component {
@@ -26,10 +26,6 @@ class SocialIconsModal extends Component {
         super(props);
         this.myRef = React.createRef();
     }
-
-    getIconPack = (iconKit) => {
-        return icons[iconKit];
-    };
 
     urlTextControlHandler = (value) => {
         this.setState({modalUrl: value});

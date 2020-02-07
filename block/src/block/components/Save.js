@@ -1,7 +1,6 @@
 import Helper from "./Helper";
 import classnames from "classnames";
-
-const {Component} = wp.element;
+import {Component} from '@wordpress/element';
 
 class Save extends Component {
 

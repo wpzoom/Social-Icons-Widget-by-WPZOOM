@@ -3,18 +3,10 @@
  */
 
 import Helper from './Helper';
-
-// Setup the block
-const {__} = wp.i18n;
-const {Component, Fragment} = wp.element;
-
-// Import block components
-const {
-    InspectorControls
-} = wp.blockEditor;
-
-// Import Inspector components
-const {
+import {__} from '@wordpress/i18n';
+import {Component, Fragment} from '@wordpress/element';
+import {InspectorControls} from '@wordpress/block-editor';
+import {
     Button,
     PanelBody,
     PanelRow,
@@ -23,7 +15,7 @@ const {
     ColorIndicator,
     ButtonGroup,
     RangeControl
-} = wp.components;
+} from '@wordpress/components';
 
 /**
  * Create an Inspector Controls wrapper Component
@@ -232,7 +224,7 @@ export default class Inspector extends Component {
                             }}
                         />
                     </PanelRow>
-                    {(this.props.attributes.showIconsLabel)?
+                    {(this.props.attributes.showIconsLabel) ?
                         <Fragment>
                             <PanelRow>
                                 <label htmlFor="icons-label-font-size">
@@ -251,7 +243,7 @@ export default class Inspector extends Component {
                                 />
                             </PanelRow>
                         </Fragment>
-                         : null}
+                        : null}
 
                     <PanelRow>
                         <label
@@ -337,7 +329,7 @@ export default class Inspector extends Component {
                             }}
                         />
                     </PanelRow>
-                    {(this.props.attributes.showIconsLabel)?
+                    {(this.props.attributes.showIconsLabel) ?
                         <Fragment>
                             <PanelRow>
                                 <label

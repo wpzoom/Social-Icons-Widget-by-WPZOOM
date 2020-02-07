@@ -7,24 +7,11 @@ import SortableArrows from "./SortableArrows";
 import {get, isEmpty, omit, find} from 'lodash';
 import ModalColorPicker from "./ModalColorPicker";
 import URI from 'urijs';
-
-
-const {__} = wp.i18n; // Import __() from wp.i18n
-const {Component} = wp.element;
-const {Fragment} = wp.element;
-const {select} = wp.data;
-
-const {
-    Icon,
-    Button,
-    Popover
-} = wp.components;
-
-const {
-    AlignmentToolbar,
-    BlockControls
-} = wp.blockEditor;
-
+import {__} from '@wordpress/i18n';
+import {Component, Fragment} from '@wordpress/element';
+import {select} from '@wordpress/data';
+import {Icon, Button, Popover} from '@wordpress/components';
+import {AlignmentToolbar, BlockControls} from '@wordpress/block-editor';
 
 class Edit extends Component {
 
@@ -376,7 +363,7 @@ class Edit extends Component {
             className = classnames(className, 'is-style-with-canvas-round');
         }
 
-        const closeModal = function () {
+        const closeModal = () => {
             setAttributes({showModal: false});
         };
 
@@ -394,7 +381,7 @@ class Edit extends Component {
             setAttributes({iconsAlignment: alignment});
         };
 
-        const saveModalHandler = function (iconObject) {
+        const saveModalHandler = (iconObject) => {
 
             let selectedIconsClone = JSON.parse(JSON.stringify(attributes.selectedIcons));
             let currentIcon = selectedIconsClone[attributes.activeIconIndex];
@@ -412,7 +399,7 @@ class Edit extends Component {
             setAttributes({'selectedIcons': selectedIconsClone, showModal: false});
         };
 
-        const onClickIconHandler = function (e, key, iconObject) {
+        const onClickIconHandler = (e, key, iconObject) => {
             e.preventDefault();
             let selectedIconsClone = JSON.parse(JSON.stringify(attributes.selectedIcons));
             selectedIconsClone.map((item) => item.isActive = false);
@@ -421,7 +408,7 @@ class Edit extends Component {
             setAttributes({activeIconIndex: key, 'selectedIcons': selectedIconsClone});
         };
 
-        const popoverCloseHandler = function (key) {
+        const popoverCloseHandler = (key) => {
             let selectedIconsClone = JSON.parse(JSON.stringify(attributes.selectedIcons));
             selectedIconsClone[key].showPopover = false;
             setAttributes({'selectedIcons': selectedIconsClone});
@@ -483,7 +470,7 @@ class Edit extends Component {
 
             e.stopPropagation();
 
-            newUrl = isEmpty(new URI(newUrl).protocol()) ? `https://${newUrl}`: newUrl;
+            newUrl = isEmpty(new URI(newUrl).protocol()) ? `https://${newUrl}` : newUrl;
 
             let selectedIconsClone = JSON.parse(JSON.stringify(attributes.selectedIcons));
             let iconFromUrl = Helper.filterUrlScheme(newUrl);

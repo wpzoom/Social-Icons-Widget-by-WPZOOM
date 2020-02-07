@@ -1,9 +1,7 @@
-const {Component, Fragment} = wp.element;
-const {
-    TextControl,
-    IconButton
-} = wp.components;
-const {__} = wp.i18n; // Import __() from wp.i18n
+import {Component, Fragment} from '@wordpress/element';
+import {TextControl, IconButton} from '@wordpress/components';
+import {__} from '@wordpress/i18n';
+
 
 class PopoverSearch extends Component {
 

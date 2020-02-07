@@ -1,12 +1,7 @@
 import classnames from 'classnames';
+import {Icon, Button, ButtonGroup} from '@wordpress/components';
 
-const {
-    Icon,
-    Button,
-    ButtonGroup
-} = wp.components;
-
-const SortableArrows = function (props) {
+const SortableArrows = (props) => {
     return props.isActive && (
         <ButtonGroup className={classnames('sortable-arrows')}>
             <Button className={classnames('arrow-btn')}

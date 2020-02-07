@@ -1,4 +1,4 @@
-const {Component} = wp.element;
+import {Component} from '@wordpress/element';
 import classnames from 'classnames';
 import Helper from './Helper';
 

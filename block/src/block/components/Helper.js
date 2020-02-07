@@ -2,7 +2,8 @@ import URI from 'urijs';
 import {find} from 'lodash';
 
 const {icons} = wpzSocialIconsBlock;
-const TokenList = wp.tokenList;
+
+import TokenList from '@wordpress/token-list';
 
 class Helper {
 
@@ -12,8 +13,8 @@ class Helper {
         if (searchIcon == '')
             return icons;
 
-        _.each(icons, function (iconsArray, key) {
-            collector[key] = iconsArray.filter(function (item) {
+        _.each(icons, (iconsArray, key) => {
+            collector[key] = iconsArray.filter((item) => {
                 if (_.isObject(item)) {
                     return item.icon.indexOf(searchIcon) > -1;// && category;
                 }
@@ -52,7 +53,7 @@ class Helper {
 
         let domain = uri.domain() !== undefined ? uri.domain().split('.').shift() : uri.scheme();
 
-        let schemaHasIcon = _.findKey(schemas, function (val, key) {
+        let schemaHasIcon = _.findKey(schemas, (val, key) => {
             return key === uri.scheme();
         });
 
@@ -104,7 +105,7 @@ class Helper {
     }
 
     static addPercentageHalfPipe(value) {
-        return `${0.5*value}%/${value}%`;
+        return `${0.5 * value}%/${value}%`;
     }
 
     static addPixelsPipe(value) {

@@ -12,12 +12,9 @@ import blockIcon from './blockIcon';
 import previewImage from './previewImage';
 import Edit from './components/Edit';
 import Save from './components/Save';
-
-const {addFilter} = wp.hooks;
-
-
-const {__} = wp.i18n; // Import __() from wp.i18n
-const {registerBlockType} = wp.blocks; // Import registerBlockType() from wp.blocks
+import {addFilter} from '@wordpress/hooks';
+import {__} from '@wordpress/i18n';
+import {registerBlockType} from '@wordpress/blocks'; // Import registerBlockType() from wp.blocks
 
 /**
  * Filter block attributes.

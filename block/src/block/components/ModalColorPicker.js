@@ -1,5 +1,5 @@
-const {Component} = wp.element;
-const {ColorIndicator, ColorPicker, Popover} = wp.components;
+import {Component} from '@wordpress/element';
+import {ColorIndicator, ColorPicker, Popover} from '@wordpress/components';
 
 class ModalColorPicker extends Component {
 
@@ -10,15 +10,6 @@ class ModalColorPicker extends Component {
 
     onClickColorIndicatorHandler = () => {
         this.setState({showColorPicker: true});
-    };
-
-    onChangeColorPickerHandler = (color) => {
-        this.setState({flashColor: color.hex});
-    };
-
-    resetColorPickerHandler = (e) => {
-        e.stopPropagation();
-        this.setState({showColorPicker: false});
     };
 
     setColorPickerHandler = (color) => {
@@ -34,7 +25,8 @@ class ModalColorPicker extends Component {
 
     render() {
         return (
-            <ColorIndicator title={this.props.title} className={this.props.className} colorValue={this.state.color} onClick={this.onClickColorIndicatorHandler}>
+            <ColorIndicator title={this.props.title} className={this.props.className} colorValue={this.state.color}
+                            onClick={this.onClickColorIndicatorHandler}>
                 {this.state.showColorPicker &&
                 (<Popover position={'middle right'} onFocusOutside={this.focusOutsideHandler}>
                     <div className={'popover-content'}>
