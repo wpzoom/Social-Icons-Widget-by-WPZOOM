@@ -1,5 +1,5 @@
 import URI from 'urijs';
-import {find} from 'lodash';
+import {find, findKey, forEach, isObject} from 'lodash';
 
 const {icons} = wpzSocialIconsBlock;
 
@@ -13,9 +13,9 @@ class Helper {
         if (searchIcon == '')
             return icons;
 
-        _.each(icons, (iconsArray, key) => {
+        forEach(icons, (iconsArray, key) => {
             collector[key] = iconsArray.filter((item) => {
-                if (_.isObject(item)) {
+                if (isObject(item)) {
                     return item.icon.indexOf(searchIcon) > -1;// && category;
                 }
 
@@ -53,13 +53,13 @@ class Helper {
 
         let domain = uri.domain() !== undefined ? uri.domain().split('.').shift() : uri.scheme();
 
-        let schemaHasIcon = _.findKey(schemas, (val, key) => {
+        let schemaHasIcon = findKey(schemas, (val, key) => {
             return key === uri.scheme();
         });
 
         domain = schemaHasIcon !== undefined ? schemas[schemaHasIcon] : domain;
 
-        let domainHasIcon = _.findKey(domains, function (val, key) {
+        let domainHasIcon = findKey(domains, (val, key) => {
             return key === uri.hostname();
         });
 
