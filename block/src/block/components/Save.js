@@ -8,6 +8,36 @@ class Save extends Component {
         super(...arguments);
     }
 
+    getIconsAlignmentStyle = (alignment) => {
+        const styles = {
+            'left': 'flex-start',
+            'right': 'flex-end',
+            'center': 'center'
+        };
+
+        return styles[alignment];
+    };
+
+    getRelAttr = () => {
+        let relAttr = [];
+
+        if (this.props.attributes.nofollow) {
+            relAttr.push('nofollow');
+        }
+        if (this.props.attributes.noreferrer) {
+            relAttr.push('noreferrer');
+        }
+        if (this.props.attributes.noopener) {
+            relAttr.push('noopener');
+        }
+
+        if (this.props.attributes.openLinkInNewTab) {
+            relAttr = ['noopener', 'noreferrer'];
+        }
+
+        return relAttr;
+    };
+
     render() {
         const {
             attributes
@@ -19,43 +49,13 @@ class Save extends Component {
             className = classnames(className, 'is-style-with-canvas-round');
         }
 
-        const getIconsAlignmentStyle = (alignment) => {
-            const styles = {
-                'left': 'flex-start',
-                'right': 'flex-end',
-                'center': 'center'
-            };
-
-            return styles[alignment];
-        };
-
-        const getRelAttr = () => {
-            let relAttr = [];
-
-            if (attributes.nofollow) {
-                relAttr.push('nofollow');
-            }
-            if (attributes.noreferrer) {
-                relAttr.push('noreferrer');
-            }
-            if (attributes.noopener) {
-                relAttr.push('noopener');
-            }
-
-            if (attributes.openLinkInNewTab) {
-                relAttr = ['noopener', 'noreferrer'];
-            }
-
-            return relAttr;
-        };
-
         let IconsList = attributes.selectedIcons.map((list, key) => {
 
             let showIconsLabel = attributes.showIconsLabel ?
                 <span
                     className={classnames('icon-label')}>{list.label}</span> : '';
 
-            const relAttr = getRelAttr();
+            const relAttr = this.getRelAttr();
 
             return (
                 <a key={key}
@@ -83,7 +83,7 @@ class Save extends Component {
                 '--wpz-social-icons-block-label-font-size': Helper.addPixelsPipe(attributes.iconsLabelFontSize),
                 '--wpz-social-icons-block-label-color': attributes.iconsLabelColor,
                 '--wpz-social-icons-block-label-color-hover': attributes.iconsLabelHoverColor,
-                '--wpz-social-icons-alignment': getIconsAlignmentStyle(attributes.iconsAlignment)
+                '--wpz-social-icons-alignment': this.getIconsAlignmentStyle(attributes.iconsAlignment)
             }}>
                 {IconsList}
             </div>
