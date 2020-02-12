@@ -31,6 +31,7 @@ addFilter(
                 return item;
             });
             attributes.selectedIcons = selectedIconsClone;
+            attributes.showModal = false;
         }
 
         return attributes;
