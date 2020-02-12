@@ -130,9 +130,9 @@ class Zoom_Social_Icons_Widget extends WP_Widget
 
         wp_enqueue_script(
             'zoom-social-icons-widget-vue-js',
-            WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/js/vue.js',
+            WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/js/vue.min.js',
             array(),
-            filemtime(WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/js/vue.js'),
+            filemtime(WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/js/vue.min.js'),
             true
         );
 
@@ -373,9 +373,9 @@ class Zoom_Social_Icons_Widget extends WP_Widget
 
         wp_enqueue_script(
             'wpzoom-social-icons-vue-js',
-            WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/js/vue.js',
+            WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/js/vue.min.js',
             array(),
-            filemtime(WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/js/vue.js'),
+            filemtime(WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/js/vue.min.js'),
             true
         );
 
