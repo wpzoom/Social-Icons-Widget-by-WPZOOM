@@ -559,7 +559,7 @@ class Edit extends Component {
                             <div className={classnames('popover-content')}>
                                 <div className={classnames('popover-url-wrapper')}>
                                     <PopoverSearch key={key}
-                                                   value={attributes.selectedIcons[attributes.activeIconIndex].url}
+                                                   value={list.url}
                                                    save={(e, url) => this.popoverSearchHandler(key, url, e)}/>
                                 </div>
 
