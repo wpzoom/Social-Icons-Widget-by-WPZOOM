@@ -23,16 +23,22 @@
   margin: 0 auto;
   max-width: 740px;
 
-  .sortable-arrows .arrow-btn {
-    border: 1px solid #0e1c2e9e;
-    width: 20px;
-    height: 20px;
-    padding: 0px;
-    color: #0e1c2e9e;
-  }
+  .sortable-arrows {
+    margin: 0px 10px;
 
-  .sortable-arrows .arrow-btn .arrow-icon {
-    margin: 0px auto;
+    .arrow-btn {
+      border: 1px solid #0e1c2e9e;
+      width: 20px;
+      height: 20px;
+      padding: 0px;
+      color: #0e1c2e9e;
+
+      .arrow-icon {
+        margin: 0px auto;
+      }
+    }
+
+
   }
 
   .insert-icon {
