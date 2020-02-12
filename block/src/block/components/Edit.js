@@ -564,11 +564,10 @@ class Edit extends Component {
                                 </div>
 
                                 <div className={classnames("popover-controls")}>
-                                    <Button
-                                        icon={'editor-break'}
-                                        label={__('Apply', 'zoom-social-icons-widget')}
-                                        onClick={(e) => this.popoverEditSettingsHandler(e, key)}
-                                        className={['is-link']}>{__('Edit Details', 'zoom-social-icons-widget')}</Button>
+                                <Button isLink={true}
+                                        onClick={(e) => this.popoverEditSettingsHandler(e, key)}>
+                                    {__('Edit Details', 'zoom-social-icons-widget')}
+                                </Button>
                                     <div className={classnames('popover-color-picker-wrapper')}>
                                         <ModalColorPicker
                                             title={'Color'}
