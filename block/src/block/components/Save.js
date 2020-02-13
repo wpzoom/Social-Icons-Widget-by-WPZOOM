@@ -77,7 +77,8 @@ class Save extends Component {
         return (
             <div className={className} style={{
                 '--wpz-social-icons-block-item-font-size': Helper.addPixelsPipe(attributes.iconsFontSize),
-                '--wpz-social-icons-block-item-padding': Helper.addPixelsPipe(attributes.iconsPadding),
+                '--wpz-social-icons-block-item-padding-horizontal': Helper.addPixelsPipe(attributes.iconsPaddingHorizontal),
+                '--wpz-social-icons-block-item-padding-vertical': Helper.addPixelsPipe(attributes.iconsPaddingVertical),
                 '--wpz-social-icons-block-item-margin': Helper.addPixelsPipe(attributes.iconsMargin),
                 '--wpz-social-icons-block-item-border-radius': Helper.addPixelsPipe(attributes.iconsBorderRadius),
                 '--wpz-social-icons-block-label-font-size': Helper.addPixelsPipe(attributes.iconsLabelFontSize),

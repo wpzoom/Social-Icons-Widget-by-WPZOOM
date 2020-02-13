@@ -134,7 +134,11 @@ registerBlockType('wpzoom-blocks/social-icons', {
             'type': 'number',
             default: 20
         },
-        iconsPadding: {
+        iconsPaddingVertical: {
+            'type': 'number',
+            default: 10
+        },
+        iconsPaddingHorizontal: {
             'type': 'number',
             default: 10
         },

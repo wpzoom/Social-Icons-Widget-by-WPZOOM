@@ -249,14 +249,32 @@ export default class Inspector extends Component {
                         <label
                             htmlFor="icons-padding"
                         >
-                            {__('Icons Padding:', 'zoom-social-icons-widget')}
+                            {__('Icons Padding Horizontal:', 'zoom-social-icons-widget')}
                         </label>
                     </PanelRow>
                     <PanelRow>
                         <RangeControl
-                            id="icons-padding"
-                            value={this.props.attributes.iconsPadding}
-                            onChange={(padding) => setAttributes({iconsPadding: padding})}
+                            id="icons-padding-horizontal"
+                            beforeIcon={'image-flip-horizontal'}
+                            value={this.props.attributes.iconsPaddingHorizontal}
+                            onChange={(padding) => setAttributes({iconsPaddingHorizontal: padding})}
+                            min={0}
+                            max={200}
+                        />
+                    </PanelRow>
+                    <PanelRow>
+                        <label
+                            htmlFor="icons-padding"
+                        >
+                            {__('Icons Padding Vertical:', 'zoom-social-icons-widget')}
+                        </label>
+                    </PanelRow>
+                    <PanelRow>
+                        <RangeControl
+                            id="icons-padding-vertical"
+                            beforeIcon={'image-flip-vertical'}
+                            value={this.props.attributes.iconsPaddingVertical}
+                            onChange={(padding) => setAttributes({iconsPaddingVertical: padding})}
                             min={0}
                             max={200}
                         />
