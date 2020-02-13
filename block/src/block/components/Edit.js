@@ -415,8 +415,8 @@ class Edit extends Component {
 
         let selectedIconsClone = JSON.parse(JSON.stringify(this.props.attributes.selectedIcons));
         selectedIconsClone.map((item) => item.isActive = false);
-        selectedIconsClone.push(defaultIcon);
-        this.props.setAttributes({'selectedIcons': selectedIconsClone});
+        const key = selectedIconsClone.push(defaultIcon);
+        this.props.setAttributes({'selectedIcons': selectedIconsClone, activeIconIndex: key - 1});
     };
 
     onClickIconHandler = (e, key, iconObject) => {
@@ -564,10 +564,10 @@ class Edit extends Component {
                                 </div>
 
                                 <div className={classnames("popover-controls")}>
-                                <Button isLink={true}
-                                        onClick={(e) => this.popoverEditSettingsHandler(e, key)}>
-                                    {__('Edit Details', 'zoom-social-icons-widget')}
-                                </Button>
+                                    <Button isLink={true}
+                                            onClick={(e) => this.popoverEditSettingsHandler(e, key)}>
+                                        {__('Edit Details', 'zoom-social-icons-widget')}
+                                    </Button>
                                     <div className={classnames('popover-color-picker-wrapper')}>
                                         <ModalColorPicker
                                             title={'Color'}
