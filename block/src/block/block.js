@@ -142,7 +142,11 @@ registerBlockType('wpzoom-blocks/social-icons', {
             'type': 'number',
             default: 10
         },
-        iconsMargin: {
+        iconsMarginVertical: {
+            'type': 'number',
+            default: 5
+        },
+        iconsMarginHorizontal: {
             'type': 'number',
             default: 5
         },

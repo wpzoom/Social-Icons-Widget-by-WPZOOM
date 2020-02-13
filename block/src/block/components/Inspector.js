@@ -281,16 +281,34 @@ export default class Inspector extends Component {
                     </PanelRow>
                     <PanelRow>
                         <label
-                            htmlFor="icons-margin"
+                            htmlFor="icons-margin-horizontal"
                         >
-                            {__('Icons Margin:', 'zoom-social-icons-widget')}
+                            {__('Icons Margin Horizontal:', 'zoom-social-icons-widget')}
                         </label>
                     </PanelRow>
                     <PanelRow>
                         <RangeControl
-                            id="icons-margin"
-                            value={this.props.attributes.iconsMargin}
-                            onChange={(margin) => setAttributes({iconsMargin: margin})}
+                            id="icons-margin-horizontal"
+                            beforeIcon={'image-flip-horizontal'}
+                            value={this.props.attributes.iconsMarginHorizontal}
+                            onChange={(margin) => setAttributes({iconsMarginHorizontal: margin})}
+                            min={0}
+                            max={200}
+                        />
+                    </PanelRow>
+                    <PanelRow>
+                        <label
+                            htmlFor="icons-margin-vertical"
+                        >
+                            {__('Icons Margin Vertical:', 'zoom-social-icons-widget')}
+                        </label>
+                    </PanelRow>
+                    <PanelRow>
+                        <RangeControl
+                            id="icons-margin-vertical"
+                            beforeIcon={'image-flip-vertical'}
+                            value={this.props.attributes.iconsMarginVertical}
+                            onChange={(margin) => setAttributes({iconsMarginVertical: margin})}
                             min={0}
                             max={200}
                         />
