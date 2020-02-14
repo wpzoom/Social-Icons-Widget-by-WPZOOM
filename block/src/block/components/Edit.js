@@ -473,8 +473,6 @@ class Edit extends Component {
 
     popoverSearchHandler = (key, newUrl, e) => {
 
-        e.stopPropagation();
-
         newUrl = isEmpty(new URI(newUrl).protocol()) ? `https://${newUrl}` : newUrl;
 
         let selectedIconsClone = JSON.parse(JSON.stringify(this.props.attributes.selectedIcons));
@@ -654,8 +652,9 @@ class Edit extends Component {
                     </Button>)}
 
                     <SocialIconsModal
+                        className={classnames(Helper.getBlockStyle(className))}
                         showIconsLabel={attributes.showIconsLabel}
-                        backgroundStyle={attributes.iconsBackgroundStyle}
+                        iconsBorderRadius={attributes.iconsBorderRadius}
                         show={attributes.showModal}
                         url={attributes.selectedIcons[attributes.activeIconIndex].url}
                         label={attributes.selectedIcons[attributes.activeIconIndex].label}

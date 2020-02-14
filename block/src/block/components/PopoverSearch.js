@@ -14,6 +14,8 @@ class PopoverSearch extends Component {
     };
 
     onKeyDownHandler = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
         if (e.key === 'Enter') {
             this.props.save(e, this.state.searchValue);
         }

@@ -3,11 +3,11 @@ import SocialIcon from './SocialIcon';
 import Helper from './Helper';
 import React from "react";
 import classnames from 'classnames';
+import {isEmpty, debounce} from 'lodash';
 import {__} from '@wordpress/i18n';
 import {Component} from '@wordpress/element';
 import {Button, Modal, TextControl, SelectControl} from '@wordpress/components';
-
-const {icons} = wpzSocialIconsBlock;
+import URI from "urijs";
 
 class SocialIconsModal extends Component {
 
@@ -25,10 +25,15 @@ class SocialIconsModal extends Component {
     constructor(props) {
         super(props);
         this.myRef = React.createRef();
+
+        this.scrollMeDebounced = debounce(this.scrollMe, 1000);
     }
 
     urlTextControlHandler = (value) => {
-        this.setState({modalUrl: value});
+
+        value = isEmpty(new URI(value).protocol()) ? `https://${value}` : value;
+
+        const newState = {modalUrl: value};
 
         let iconFromUrl = Helper.filterUrlScheme(value);
 
@@ -36,9 +41,12 @@ class SocialIconsModal extends Component {
             const filteredIcons = Helper.filterIcons(iconFromUrl);
 
             if (filteredIcons[this.state.modalIconKit].length) {
-                this.setState({modalIcon: filteredIcons[this.state.modalIconKit][0].icon});
+                newState.modalIcon = filteredIcons[this.state.modalIconKit][0].icon;
             }
         }
+
+        this.setState(newState);
+
     };
 
     labelTextControlHandler = (value) => {
@@ -80,7 +88,7 @@ class SocialIconsModal extends Component {
     };
 
     componentDidUpdate() {
-        this.scrollMe();
+        this.scrollMeDebounced();
     }
 
     scrollMe = () => {
@@ -104,7 +112,6 @@ class SocialIconsModal extends Component {
                     <SocialIcon
                         key={key}
                         setRef={this.state.modalIcon === element.icon && this.state.modalIconKit === iconKit ? this.myRef : null}
-                        backgroundStyle={this.props.backgroundStyle}
                         color={this.state.modalColor}
                         hoverColor={this.state.modalHoverColor}
                         icon={element.icon}
@@ -117,7 +124,10 @@ class SocialIconsModal extends Component {
 
         return (
             <Modal
-                className={classnames('wpzoom-social-icons-modal')}
+                className={classnames('wpzoom-social-icons-modal', this.props.className)}
+                style={{
+                    '--wpz-social-icons-block-modal-item-border-radius':Helper.addPixelsPipe(this.props.iconsBorderRadius)
+                }}
                 title={__('Select Icon', 'zoom-social-icons-widget')}
                 shouldCloseOnClickOutside={false}
                 onRequestClose={() => this.props.onClose(this.state)}>

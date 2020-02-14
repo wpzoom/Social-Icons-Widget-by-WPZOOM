@@ -124,6 +124,10 @@
 
 .wpzoom-social-icons-modal {
 
+  .social-icon {
+    border-radius: var(--wpz-social-icons-block-modal-item-border-radius);
+  }
+
   .components-button.is-button {
     padding: 0 10px;
     line-height: 2;
@@ -232,14 +236,6 @@
 
   .social-icon.socicon {
     top: 0px;
-  }
-
-  .social-icon.rounded {
-    border-radius: 3px;
-  }
-
-  .social-icon.round {
-    border-radius: 50%;
   }
 
 }

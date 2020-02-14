@@ -20,7 +20,7 @@ class SocialIcon extends Component {
         return (<span
                 ref={this.props.setRef}
                 onClick={() => this.props.click(this.props.icon)}
-                className={classnames(Helper.getIconClassList(this.props.iconKit, this.props.icon), {'selected': this.props.isSelected}, this.props.backgroundStyle)}
+                className={classnames(Helper.getIconClassList(this.props.iconKit, this.props.icon), {'selected': this.props.isSelected})}
                 style={{backgroundColor: this.state.isHover ? this.props.hoverColor : this.props.color}}
                 onMouseEnter={this.onMouseEnterCallback}
                 onMouseLeave={this.onMouseLeaveCallback}
