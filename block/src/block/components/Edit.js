@@ -404,7 +404,14 @@ class Edit extends Component {
         this.props.setAttributes({'selectedIcons': selectedIconsClone, showModal: false});
     };
 
-    insertIcon = () => {
+    insertIcon = (e) => {
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (e.detail === 0) {
+            return;
+        }
 
         const styleVariation = this.getStyleVariations(Helper.getBlockStyle(this.props.className));
 
@@ -645,6 +652,7 @@ class Edit extends Component {
                      }}>
                     {IconsList}
                     {isSelected && (<Button
+                        type={'button'}
                         onClick={this.insertIcon}
                         style={{padding: attributes.iconsPadding}}
                         className={'insert-icon'}>

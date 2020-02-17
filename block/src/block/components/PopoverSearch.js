@@ -14,7 +14,6 @@ class PopoverSearch extends Component {
     };
 
     onKeyDownHandler = (e) => {
-        e.preventDefault();
         e.stopPropagation();
         if (e.key === 'Enter') {
             this.props.save(e, this.state.searchValue);
@@ -26,6 +25,7 @@ class PopoverSearch extends Component {
             <Fragment>
                 <TextControl
                     className={'url-input'}
+                    type={'text'}
                     value={this.state.searchValue}
                     onChange={this.onChangeTextControlHandler}
                     onKeyDown={(e) => this.onKeyDownHandler(e)}
