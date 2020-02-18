@@ -20,6 +20,11 @@ class PopoverSearch extends Component {
         }
     };
 
+    onClickHandler = (e) => {
+        e.stopPropagation();
+        this.props.save(e, this.state.searchValue);
+    };
+
     render() {
         return (
             <Fragment>
@@ -28,12 +33,12 @@ class PopoverSearch extends Component {
                     type={'text'}
                     value={this.state.searchValue}
                     onChange={this.onChangeTextControlHandler}
-                    onKeyDown={(e) => this.onKeyDownHandler(e)}
+                    onKeyDown={this.onKeyDownHandler}
                 />
                 <IconButton
                     icon={'editor-break'}
                     label={__('Apply', 'zoom-social-icons-widget')}
-                    onClick={(e) => this.props.save(e, this.state.searchValue)}
+                    onClick={this.onClickHandler}
                     className={['is-button', 'button-small', 'is-default', 'url-button']}>
                 </IconButton>
             </Fragment>
