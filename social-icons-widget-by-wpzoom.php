@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: Social Icons Widget by WPZOOM
+ * Plugin Name: Social Icons Widget & Block by WPZOOM
  * Plugin URI: https://www.wpzoom.com/plugins/social-widget/
- * Description: Social Icons Widget to display links to social sharing websites. Supports more than 80 sites and includes 400 icons. Sort icons by Drag & Drop and change their color easily.
+ * Description: Social Icons Widget & Block to display links to social media networks websites. Supports most of the known social networks and includes more than 400 icons. Sort icons by Drag & Drop and change their color easily.
  * Author: WPZOOM
  * Author URI: https://www.wpzoom.com/
- * Version: 3.4.1
+ * Version: 4.0.0
  * License: GPLv2 or later
  * Text Domain: zoom-social-icons-widget
  * Domain Path: /languages
