@@ -1,0 +1,239 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+.wp-block-wpzoom-blocks-social-icons {
+  margin: 0 auto;
+  max-width: 740px;
+  display: flex;
+  box-sizing: content-box;
+  flex-flow: row wrap;
+  justify-content: var(--wpz-social-icons-alignment);
+
+  a.social-icon-link {
+    text-decoration: none !important;
+  }
+
+  .social-icon.socicon, .social-icon.dashicons, .social-icon.genericon, .social-icon.academicons, .social-icon.fas, .social-icon.fab, .social-icon.far {
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    background: #5A5A59;
+    font-size: 1.2em;
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+    box-sizing: content-box;
+    line-height: 1.2em;
+    text-align: center;
+  }
+
+  .social-icon.socicon:empty {
+    width: 1.2em;
+    height: 1.2em;
+  }
+
+  .social-icon.socicon {
+    top: 0px;
+  }
+
+}
+
+.wp-block-wpzoom-blocks-social-icons.is-style-with-canvas-round {
+  .social-icon {
+    font-size: var(--wpz-social-icons-block-item-font-size);
+    padding: var(--wpz-social-icons-block-item-padding-vertical) var(--wpz-social-icons-block-item-padding-horizontal);
+    margin: var(--wpz-social-icons-block-item-margin-vertical) var(--wpz-social-icons-block-item-margin-horizontal);
+    border-radius: var(--wpz-social-icons-block-item-border-radius);
+    background-color: var(--wpz-social-icons-block-item-color);
+
+    &:hover {
+      background-color: var(--wpz-social-icons-block-item-color-hover);
+    }
+  }
+
+  .icon-label {
+    color: var(--wpz-social-icons-block-label-color);
+    font-size: var(--wpz-social-icons-block-label-font-size);
+
+    &:hover {
+      color: var(--wpz-social-icons-block-label-color-hover);
+    }
+  }
+}
+
+.wp-block-wpzoom-blocks-social-icons.is-style-with-canvas-rounded {
+  .social-icon {
+    font-size: var(--wpz-social-icons-block-item-font-size);
+    padding: var(--wpz-social-icons-block-item-padding-vertical) var(--wpz-social-icons-block-item-padding-horizontal);
+    margin: var(--wpz-social-icons-block-item-margin-vertical) var(--wpz-social-icons-block-item-margin-horizontal);
+    border-radius: var(--wpz-social-icons-block-item-border-radius);
+    background-color: var(--wpz-social-icons-block-item-color);
+
+    &:hover {
+      background-color: var(--wpz-social-icons-block-item-color-hover);
+    }
+  }
+
+  .icon-label {
+    color: var(--wpz-social-icons-block-label-color);
+    font-size: var(--wpz-social-icons-block-label-font-size);
+
+    &:hover {
+      color: var(--wpz-social-icons-block-label-color-hover);
+    }
+  }
+}
+
+.wp-block-wpzoom-blocks-social-icons.is-style-with-canvas-squared {
+
+  .social-icon {
+    font-size: var(--wpz-social-icons-block-item-font-size);
+    padding: var(--wpz-social-icons-block-item-padding-vertical) var(--wpz-social-icons-block-item-padding-horizontal);
+    margin: var(--wpz-social-icons-block-item-margin-vertical) var(--wpz-social-icons-block-item-margin-horizontal);
+    border-radius: var(--wpz-social-icons-block-item-border-radius);
+    background-color: var(--wpz-social-icons-block-item-color);
+
+    &:hover {
+      background-color: var(--wpz-social-icons-block-item-color-hover);
+    }
+  }
+
+  .icon-label {
+    color: var(--wpz-social-icons-block-label-color);
+    font-size: var(--wpz-social-icons-block-label-font-size);
+
+    &:hover {
+      color: var(--wpz-social-icons-block-label-color-hover);
+    }
+  }
+}
+
+.wp-block-wpzoom-blocks-social-icons.is-style-without-canvas {
+
+  .social-icon {
+    font-size: var(--wpz-social-icons-block-item-font-size);
+    padding: var(--wpz-social-icons-block-item-padding-vertical) var(--wpz-social-icons-block-item-padding-horizontal);
+    margin: var(--wpz-social-icons-block-item-margin-vertical) var(--wpz-social-icons-block-item-margin-horizontal);
+    border-radius: var(--wpz-social-icons-block-item-border-radius);
+    color: var(--wpz-social-icons-block-item-color);
+    background-color: transparent;
+
+    &:hover {
+      color: var(--wpz-social-icons-block-item-color-hover);
+    }
+  }
+
+  .icon-label {
+    color: var(--wpz-social-icons-block-label-color);
+    font-size: var(--wpz-social-icons-block-label-font-size);
+
+    &:hover {
+      color: var(--wpz-social-icons-block-label-color-hover);
+    }
+  }
+}
+
+.wp-block-wpzoom-blocks-social-icons.is-style-without-canvas-with-border {
+
+  .social-icon {
+    font-size: var(--wpz-social-icons-block-item-font-size);
+    padding: var(--wpz-social-icons-block-item-padding-vertical) var(--wpz-social-icons-block-item-padding-horizontal);
+    margin: var(--wpz-social-icons-block-item-margin-vertical) var(--wpz-social-icons-block-item-margin-horizontal);
+    border-radius: var(--wpz-social-icons-block-item-border-radius);
+    color: var(--wpz-social-icons-block-item-color);
+    background-color: transparent;
+    border-width: 1px;
+    border-style: solid;
+
+    &:hover {
+      color: var(--wpz-social-icons-block-item-color-hover);
+    }
+  }
+
+  .icon-label {
+    color: var(--wpz-social-icons-block-label-color);
+    font-size: var(--wpz-social-icons-block-label-font-size);
+
+    &:hover {
+      color: var(--wpz-social-icons-block-label-color-hover);
+    }
+  }
+}
+
+.wp-block-wpzoom-blocks-social-icons.is-style-without-canvas-with-label {
+
+  .social-icon-link {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .social-icon, .icon-label {
+      display: flex;
+      justify-content: center;
+    }
+
+    .social-icon {
+      background-color: transparent;
+      color: var(--wpz-social-icons-block-item-color);
+      font-size: var(--wpz-social-icons-block-item-font-size);
+      padding: var(--wpz-social-icons-block-item-padding-vertical) var(--wpz-social-icons-block-item-padding-horizontal);
+      margin: var(--wpz-social-icons-block-item-margin-vertical) var(--wpz-social-icons-block-item-margin-horizontal);
+      border-radius: var(--wpz-social-icons-block-item-border-radius);
+
+      &:hover {
+        color: var(--wpz-social-icons-block-item-color-hover);
+      }
+
+    }
+
+    .icon-label {
+      padding: 0px 5px 5px 5px;
+
+      color: var(--wpz-social-icons-block-label-color);
+      font-size: var(--wpz-social-icons-block-label-font-size);
+
+      &:hover {
+        color: var(--wpz-social-icons-block-label-color-hover);
+      }
+    }
+  }
+
+}
+
+
+.wp-block-wpzoom-blocks-social-icons.is-style-with-label-canvas-rounded {
+
+  .social-icon-link {
+    color: #fff;
+    margin: 16px 10px;
+
+    background-color: var(--wpz-social-icons-block-item-color);
+    padding: var(--wpz-social-icons-block-item-padding-vertical) var(--wpz-social-icons-block-item-padding-horizontal);
+    margin: var(--wpz-social-icons-block-item-margin-vertical) var(--wpz-social-icons-block-item-margin-horizontal);
+    border-radius: var(--wpz-social-icons-block-item-border-radius);
+
+    .social-icon {
+      font-size: var(--wpz-social-icons-block-item-font-size);
+      background-color: transparent;
+      padding: 0px;
+    }
+
+    &:hover {
+      background-color: var(--wpz-social-icons-block-item-color-hover);
+    }
+
+    .icon-label {
+      padding: 5px 5px 5px 0px;
+      color: var(--wpz-social-icons-block-label-color);
+      font-size: var(--wpz-social-icons-block-label-font-size);
+
+      &:hover {
+        color: var(--wpz-social-icons-block-label-color-hover);
+      }
+    }
+  }
+}
