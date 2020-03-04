@@ -47,6 +47,13 @@ function wpzoom_social_icons_block_enqueue_assets() { // phpcs:ignore
 	);
 
 	/**
+	 * Enqueue dashicons.css
+	 */
+
+	wp_enqueue_style( 'dashicons' );
+
+
+	/**
 	 * Enqueue academicons.css
 	 */
 	wp_enqueue_style(
