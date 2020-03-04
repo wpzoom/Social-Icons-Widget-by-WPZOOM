@@ -133,6 +133,9 @@ You can also create a hidden widget area using a plugin like Custom Sidebars if 
 
 == Changelog ==
 
+= 4.0.1 =
+* Fixed a bug affecting column blocks after 4.0 update
+
 = 4.0.0 =
 * NEW: Gutenberg Block - Social Icons Block
 * New icon styles in the new Social Icons Block
