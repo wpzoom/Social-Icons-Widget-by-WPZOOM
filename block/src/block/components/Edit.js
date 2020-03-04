@@ -416,7 +416,7 @@ class Edit extends Component {
         const styleVariation = this.getStyleVariations(Helper.getBlockStyle(this.props.className));
 
         let defaultIcon = {
-            'url': 'https://wordpress.com',
+            'url': 'https://wordpress.org',
             'icon': 'wordpress',
             'iconKit': 'socicon',
             'color': '#444140',

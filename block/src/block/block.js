@@ -53,7 +53,8 @@ addFilter(
  */
 registerBlockType('wpzoom-blocks/social-icons', {
     // Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
-    title: __('Social Icons Block', "wpzoom-social-icons-block"), // Block title.
+    title: __('Social Icons Block', "zoom-social-icons-widget"), // Block title.
+    description: __('Display icons with links to social media platforms.', 'zoom-social-icons-widget'),
     icon: {
         foreground: '#274474',
         src: blockIcon,
@@ -66,11 +67,11 @@ registerBlockType('wpzoom-blocks/social-icons', {
     },
     category: 'wpzoom-blocks', // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
     keywords: [
-        __('Social Icons', "wpzoom-social-icons-block"),
-        __('Dashicons', "wpzoom-social-icons-block"),
-        __('Socicons', "wpzoom-social-icons-block"),
-        __('Fontawesome', "wpzoom-social-icons-block"),
-        __('Academic Icons', "wpzoom-social-icons-block"),
+        __('Social Icons', "zoom-social-icons-widget"),
+        __('Dashicons', "zoom-social-icons-widget"),
+        __('Socicons', "zoom-social-icons-widget"),
+        __('Fontawesome', "zoom-social-icons-widget"),
+        __('Academic Icons', "zoom-social-icons-widget"),
     ],
 
     attributes: {
@@ -213,32 +214,32 @@ registerBlockType('wpzoom-blocks/social-icons', {
     styles: [
         {
             name: 'with-canvas-round',
-            label: __("Color Background / Round White Icon", "wpzoom-social-icons-block"),
+            label: __("Color Background / Round White Icon", "zoom-social-icons-widget"),
             isDefault: true
         },
         {
             name: 'with-canvas-rounded',
-            label: __("Color Background / Rounded White Icon", "wpzoom-social-icons-block"),
+            label: __("Color Background / Rounded White Icon", "zoom-social-icons-widget"),
         },
         {
             name: 'with-canvas-squared',
-            label: __("Color Background / Squared White Icon", "wpzoom-social-icons-block"),
+            label: __("Color Background / Squared White Icon", "zoom-social-icons-widget"),
         },
         {
             name: 'without-canvas',
-            label: __("Color Icon / No Background", "wpzoom-social-icons-block"),
+            label: __("Color Icon / No Background", "zoom-social-icons-widget"),
         },
         {
             name: 'without-canvas-with-border',
-            label: __("Color Icon / No Background with border", "wpzoom-social-icons-block"),
+            label: __("Color Icon / No Background with border", "zoom-social-icons-widget"),
         },
         {
             name: 'with-label-canvas-rounded',
-            label: __("Color Background / Rounded White Icon with label", "wpzoom-social-icons-block"),
+            label: __("Color Background / Rounded White Icon with label", "zoom-social-icons-widget"),
         },
         {
             name: 'without-canvas-with-label',
-            label: __("Color Icon / No Background with label", "wpzoom-social-icons-block"),
+            label: __("Color Icon / No Background with label", "zoom-social-icons-widget"),
         }
     ],
     /**
