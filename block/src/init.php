@@ -33,7 +33,7 @@ function wpzoom_social_icons_block_enqueue_assets() { // phpcs:ignore
 	wp_register_style(
 		'wpzoom-social-icons-block-style',
 		plugins_url( 'dist/blocks.style.build.css', dirname( __FILE__ ) ),
-		array( 'wp-editor' ),
+		array(),
 		filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.style.build.css' )
 	);
 
@@ -52,7 +52,7 @@ function wpzoom_social_icons_block_enqueue_assets() { // phpcs:ignore
 	wp_enqueue_style(
 		'wpzoom-social-icons-academicons',
 		WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/academicons.min.css',
-		array( 'wp-edit-blocks' ),
+		array(),
 		filemtime( WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/academicons.min.css' )
 	);
 
@@ -62,7 +62,7 @@ function wpzoom_social_icons_block_enqueue_assets() { // phpcs:ignore
 	wp_enqueue_style(
 		'wpzoom-social-icons-socicon',
 		WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/socicon.css',
-		array( 'wp-edit-blocks' ),
+		array(),
 		filemtime( WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/socicon.css' )
 	);
 
@@ -72,7 +72,7 @@ function wpzoom_social_icons_block_enqueue_assets() { // phpcs:ignore
 	wp_enqueue_style(
 		'wpzoom-social-icons-font-awesome-5',
 		WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/font-awesome-5.min.css',
-		array( 'wp-edit-blocks' ),
+		array(),
 		filemtime( WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/font-awesome-5.min.css' )
 	);
 
@@ -82,7 +82,7 @@ function wpzoom_social_icons_block_enqueue_assets() { // phpcs:ignore
 	wp_enqueue_style(
 		'wpzoom-social-icons-genericons',
 		WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/genericons.css',
-		array( 'wp-edit-blocks' ),
+		array(),
 		filemtime( WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/genericons.css' )
 	);
 
