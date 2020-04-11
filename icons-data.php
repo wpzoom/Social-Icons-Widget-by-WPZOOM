@@ -15,6 +15,13 @@ return array(
 			),
 			'color'    => '#FF5A5F',
 		),
+        array(
+            'icon'     => 'anchor',
+            'category' => array(
+                'business',
+            ),
+            'color'    => '#8940fa',
+        ),
 		array(
 			'icon'     => 'android',
 			'category' => array(
@@ -202,6 +209,14 @@ return array(
 			),
 			'color'    => '#2e9fff',
 		),
+        array(
+            'icon'     => 'displate',
+            'category' => array(
+                'communication',
+                'web-tools',
+            ),
+            'color'    => '#2e9fff',
+        ),
 		array(
 			'icon'     => 'dribbble',
 			'category' => array(
@@ -600,6 +615,13 @@ return array(
 			),
 			'color'    => '#c92619',
 		),
+        array(
+            'icon'     => 'pixiv',
+            'category' => array(
+                'social-media',
+            ),
+            'color'    => '#049CFF',
+        ),
 		array(
 			'icon'     => 'play',
 			'category' => array(
@@ -714,6 +736,13 @@ return array(
 			),
 			'color'    => '#7bb342',
 		),
+        array(
+            'icon'     => 'ssrn',
+            'category' => array(
+                'audio',
+            ),
+            'color'    => '#063a73',
+        ),
 		array(
 			'icon'     => 'stackoverflow',
 			'category' => array(
@@ -988,6 +1017,22 @@ return array(
 			),
 			'color'    => '#e02a20',
 		),
+        array(
+            'icon'     => 'yummly',
+            'category' => array(
+                'video',
+                'search-engines',
+            ),
+            'color'    => '#e16220',
+        ),
+        array(
+            'icon'     => 'zazzle',
+            'category' => array(
+                'video',
+                'games',
+            ),
+            'color'    => '#46c3e0',
+        ),
 		array(
 			'icon'     => 'zerply',
 			'category' => array(
