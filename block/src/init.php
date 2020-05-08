@@ -27,8 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @uses {wp-editor} for WP editor styles.
  * @since 1.0.0
  */
-function wpzoom_social_icons_block_enqueue_assets() { // phpcs:ignore
-	// Register block styles for both frontend + backend.
+function wpzoom_social_icons_block_enqueue_assets() {
 
 	wp_register_style(
 		'wpzoom-social-icons-block-style',
@@ -46,52 +45,6 @@ function wpzoom_social_icons_block_enqueue_assets() { // phpcs:ignore
 		true
 	);
 
-	/**
-	 * Enqueue dashicons.css
-	 */
-
-	wp_enqueue_style( 'dashicons' );
-
-
-	/**
-	 * Enqueue academicons.css
-	 */
-	wp_enqueue_style(
-		'wpzoom-social-icons-academicons',
-		WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/academicons.min.css',
-		array(),
-		filemtime( WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/academicons.min.css' )
-	);
-
-	/**
-	 * Enqueue socicons.css
-	 */
-	wp_enqueue_style(
-		'wpzoom-social-icons-socicon',
-		WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/socicon.css',
-		array(),
-		filemtime( WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/socicon.css' )
-	);
-
-	/**
-	 * Enqueue font-awesome.css
-	 */
-	wp_enqueue_style(
-		'wpzoom-social-icons-font-awesome-5',
-		WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/font-awesome-5.min.css',
-		array(),
-		filemtime( WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/font-awesome-5.min.css' )
-	);
-
-	/**
-	 * Enqueue genericons.css
-	 */
-	wp_enqueue_style(
-		'wpzoom-social-icons-genericons',
-		WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/genericons.css',
-		array(),
-		filemtime( WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/genericons.css' )
-	);
 
 	// Register block editor styles for backend.
 	wp_register_style(
@@ -153,5 +106,122 @@ function wpzoom_social_icons_block_add_custom_category( $categories, $post ) {
 
 // Hook: Block assets.
 add_action( 'init', 'wpzoom_social_icons_block_enqueue_assets' );
+
+/**
+ * Register css and js files.
+ */
+function wpzoom_social_icons_block_register_secondary_assets() {
+
+	/**
+	 * Register academicons.css
+	 */
+	wp_register_style(
+		'wpzoom-social-icons-academicons',
+		WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/academicons.min.css',
+		array(),
+		filemtime( WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/academicons.min.css' )
+	);
+
+	/**
+	 * Register socicons.css
+	 */
+	wp_register_style(
+		'wpzoom-social-icons-socicon',
+		WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/socicon.css',
+		array(),
+		filemtime( WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/socicon.css' )
+	);
+
+	/**
+	 * Register font-awesome.css
+	 */
+	wp_register_style(
+		'wpzoom-social-icons-font-awesome-5',
+		WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/font-awesome-5.min.css',
+		array(),
+		filemtime( WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/font-awesome-5.min.css' )
+	);
+
+	/**
+	 * Register genericons.css
+	 */
+	wp_register_style(
+		'wpzoom-social-icons-genericons',
+		WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/genericons.css',
+		array(),
+		filemtime( WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/genericons.css' )
+	);
+
+}
+
+add_action( 'wp_enqueue_scripts', 'wpzoom_social_icons_block_register_secondary_assets' );
+
+/**
+ * Enqueue css and js files.
+ *
+ * @param string $content
+ *
+ * @return string
+ */
+function wpzoom_social_icons_block_enqueue_secondary_assets( $content = '' ) {
+	{
+
+		if ( has_block( 'wpzoom-blocks/social-icons' ) || is_admin() ) {
+			/**
+			 * Enqueue dashicons.css
+			 */
+
+			wp_enqueue_style( 'dashicons' );
+
+
+			/**
+			 * Enqueue academicons.css
+			 */
+			wp_enqueue_style(
+				'wpzoom-social-icons-academicons',
+				WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/academicons.min.css',
+				array(),
+				filemtime( WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/academicons.min.css' )
+			);
+
+			/**
+			 * Enqueue socicons.css
+			 */
+			wp_enqueue_style(
+				'wpzoom-social-icons-socicon',
+				WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/socicon.css',
+				array(),
+				filemtime( WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/socicon.css' )
+			);
+
+			/**
+			 * Enqueue font-awesome.css
+			 */
+			wp_enqueue_style(
+				'wpzoom-social-icons-font-awesome-5',
+				WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/font-awesome-5.min.css',
+				array(),
+				filemtime( WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/font-awesome-5.min.css' )
+			);
+
+			/**
+			 * Enqueue genericons.css
+			 */
+			wp_enqueue_style(
+				'wpzoom-social-icons-genericons',
+				WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/genericons.css',
+				array(),
+				filemtime( WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/genericons.css' )
+			);
+		}
+
+
+		return $content;
+	}
+
+}
+
+add_filter( 'the_content', 'wpzoom_social_icons_block_enqueue_secondary_assets' );
+
 //Hook: Add block category.
 add_filter( 'block_categories', 'wpzoom_social_icons_block_add_custom_category', 10, 2 );

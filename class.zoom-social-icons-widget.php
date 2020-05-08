@@ -57,7 +57,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
         $this->plugin_file = dirname(__FILE__) . '/social-icons-widget-by-wpzoom.php';
 
         add_action('current_screen', array($this, 'check_current_screen'));
-        add_action('wp_enqueue_scripts', array($this, 'scripts'));
+        add_action('wp_enqueue_scripts', array($this, 'register_scripts'));
 
         //Hooks to enqueue javascript file in SiteOrigin builder.
         add_action('siteorigin_panel_enqueue_admin_scripts', array($this, 'admin_scripts'));
@@ -1287,6 +1287,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
      */
     public function widget($args, $instance)
     {
+        $this->enqueue_scripts();
         $instance = $this->normalize_data_array($instance);
         $instance = wp_parse_args((array)$instance, $this->get_defaults());
 
@@ -1408,10 +1409,52 @@ class Zoom_Social_Icons_Widget extends WP_Widget
         echo $args['after_widget'];
     }
 
-    /**
+	/**
+	 * Register scripts & styles.
+	 */
+	public function register_scripts()
+	{
+		wp_register_style(
+			'wpzoom-social-icons-socicon',
+			WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/socicon.css',
+			array(),
+			filemtime(WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/socicon.css')
+		);
+
+		wp_register_style(
+			'wpzoom-social-icons-genericons',
+			WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/genericons.css',
+			array(),
+			filemtime(WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/genericons.css')
+		);
+
+		wp_register_style(
+			'wpzoom-social-icons-academicons',
+			WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/academicons.min.css',
+			array(),
+			filemtime(WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/academicons.min.css')
+		);
+
+		wp_register_style(
+			'wpzoom-social-icons-font-awesome-3',
+			WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/font-awesome-3.min.css',
+			array(),
+			filemtime(WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/font-awesome-3.min.css')
+		);
+
+		wp_register_script(
+			'zoom-social-icons-widget-frontend',
+			WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/js/social-icons-widget-frontend.js',
+			array('jquery'),
+			filemtime(WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/js/social-icons-widget-frontend.js'),
+			true
+		);
+	}
+
+	/**
      * Scripts & styles for front-end display of widget.
      */
-    public function scripts()
+    public function enqueue_scripts()
     {
         wp_enqueue_style(
             'wpzoom-social-icons-socicon',
