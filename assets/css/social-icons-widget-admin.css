@@ -211,7 +211,7 @@ border-radius: 0;
 
 /* Fixes for Beaver builder */
 .fl-lightbox .socicon {
-    font-family: socicon;
+    font-family: 'wpzoom-socicon';
 }
 
 .fl-lightbox .genericon {

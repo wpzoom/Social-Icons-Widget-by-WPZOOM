@@ -127,9 +127,9 @@ function wpzoom_social_icons_block_register_secondary_assets() {
 	 */
 	wp_register_style(
 		'wpzoom-social-icons-socicon',
-		WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/socicon.css',
+		WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/wpzoom-socicon.css',
 		array(),
-		filemtime( WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/socicon.css' )
+		filemtime( WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/wpzoom-socicon.css' )
 	);
 
 	/**
@@ -189,9 +189,9 @@ function wpzoom_social_icons_block_enqueue_secondary_assets( $content = '' ) {
 			 */
 			wp_enqueue_style(
 				'wpzoom-social-icons-socicon',
-				WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/socicon.css',
+				WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/wpzoom-socicon.css',
 				array(),
-				filemtime( WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/socicon.css' )
+				filemtime( WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/wpzoom-socicon.css' )
 			);
 
 			/**

@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'socicon';
+    font-family: 'wpzoom-socicon';
     src:  url('../font/socicon.eot');
     src:  url('../font/socicon.eot') format('embedded-opentype'),
       url('../font/socicon.ttf') format('truetype'),
@@ -16,13 +16,18 @@
     position: relative;
     top: 3px;
     display: inline-block;
-    font-family: 'socicon';
+    font-family: 'wpzoom-socicon';
     font-style: normal;
     font-weight: normal;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 1.2em;
+}
+
+.wp-block-wpzoom-blocks-social-icons .socicon,
+.zoom-social-icons-widget .socicon {
+    font-family: 'wpzoom-socicon' !important;
 }
 
 .socicon:empty {
@@ -45,6 +50,15 @@
 
 .socicon-airbnb:before {
     content: "\e00e"
+}
+
+.socicon-anchor {
+    background-color: #8940fa;
+    color: #8940fa;
+}
+
+.socicon-anchor:before {
+    content: "\e91e"
 }
 
 .socicon-android {
@@ -279,6 +293,15 @@
 
 .socicon-disqus:before {
     content: "\e019"
+}
+
+.socicon-displate {
+    background-color: #000;
+    color: #000;
+}
+
+.socicon-displate:before {
+    content: "\e91d"
 }
 
 .socicon-dribbble {
@@ -727,7 +750,7 @@
 }
 
 .socicon-patreon:before {
-    content: "\e01c"
+    content: "\e05f"
 }
 
 .socicon-paypal {
@@ -764,6 +787,15 @@
 
 .socicon-pinterest:before {
     content: "\e043"
+}
+
+.socicon-pixiv {
+    background-color: #049CFF;
+    color: #049CFF;
+}
+
+.socicon-pixiv:before {
+    content: "\e94f"
 }
 
 .socicon-play {
@@ -899,6 +931,15 @@
 
 .socicon-spotify:before {
     content: "\e04e"
+}
+
+.socicon-ssrn {
+    background-color: #063a73;
+    color: #063a73;
+}
+
+.socicon-ssrn:before {
+    content: "\e921"
 }
 
 .socicon-stackoverflow {
@@ -1244,6 +1285,24 @@
 
 .socicon-youtube:before {
     content: "\e051"
+}
+
+.socicon-yummly {
+    background-color: #e16220;
+    color: #e16220;
+}
+
+.socicon-yummly:before {
+    content: "\e920"
+}
+
+.socicon-zazzle {
+    background-color: #9DBC7A;
+    color: #9DBC7A;
+}
+
+.socicon-zazzle:before {
+    content: "\e97b"
 }
 
 .socicon-zerply {

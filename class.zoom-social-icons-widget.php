@@ -51,6 +51,8 @@ class Zoom_Social_Icons_Widget extends WP_Widget
         );
 
         $this->icons = include WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'icons-data.php';
+	    $removed_keys = ['fab', 'fas', 'far'];
+	    $this->icons = array_diff_key($this->icons, array_flip($removed_keys));
         $this->icons = apply_filters('zoom_social_icons_filter', $this->icons);
         $this->protocols = apply_filters('zoom_social_protocols_filter', $this->protocols);
 
@@ -330,9 +332,9 @@ class Zoom_Social_Icons_Widget extends WP_Widget
 
         wp_enqueue_style(
             'wpzoom-social-icons-socicon',
-            WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/socicon.css',
+            WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/wpzoom-socicon.css',
             array(),
-            filemtime(WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/socicon.css')
+            filemtime(WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/wpzoom-socicon.css')
         );
 
         wp_enqueue_style(
@@ -1416,9 +1418,9 @@ class Zoom_Social_Icons_Widget extends WP_Widget
 	{
 		wp_register_style(
 			'wpzoom-social-icons-socicon',
-			WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/socicon.css',
+			WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/wpzoom-socicon.css',
 			array(),
-			filemtime(WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/socicon.css')
+			filemtime(WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/wpzoom-socicon.css')
 		);
 
 		wp_register_style(
@@ -1458,9 +1460,9 @@ class Zoom_Social_Icons_Widget extends WP_Widget
     {
         wp_enqueue_style(
             'wpzoom-social-icons-socicon',
-            WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/socicon.css',
+            WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/wpzoom-socicon.css',
             array(),
-            filemtime(WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/socicon.css')
+            filemtime(WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/wpzoom-socicon.css')
         );
 
         wp_enqueue_style(
