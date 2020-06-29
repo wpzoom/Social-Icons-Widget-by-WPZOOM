@@ -89,7 +89,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
         wp_enqueue_style(
             'social-icons-widget-admin',
             WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/social-icons-widget-admin.css',
-            array('socicon'),
+            array('wpzoom-social-icons-socicon'),
             filemtime(WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/social-icons-widget-admin.css')
         );
 

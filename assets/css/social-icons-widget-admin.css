@@ -222,6 +222,10 @@ border-radius: 0;
     font-family: 'Academicons';
 }
 
+.fl-lightbox .fa, .fl-widget .zoom-social_icons-list__item .fa {
+    font-family: 'FontAwesome';
+}
+
 .fl-lightbox .media-modal-content .icon-kit span {
     line-height: 1;
 }
