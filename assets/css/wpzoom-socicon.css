@@ -8,6 +8,7 @@
     font-weight: normal;
     font-style: normal;
     text-transform: initial;
+    font-display: block;
 }
 
 /* inline icon
@@ -95,6 +96,15 @@
 
 .socicon-apple:before {
     content: "\e02e"
+}
+
+.socicon-apple-podcasts {
+    background-color: #9933CC;
+    color: #9933CC;
+}
+
+.socicon-apple-podcasts:before {
+    content: "\e924"
 }
 
 .socicon-appnet {
@@ -242,12 +252,12 @@
 }
 
 .socicon-deviantart {
-    background-color: #c5d200;
-    color: #c5d200;
+    background-color: #05CC47;
+    color: #05CC47;
 }
 
 .socicon-deviantart:before {
-    content: "\e029"
+    content: "\e927"
 }
 
 .socicon-deezer {
@@ -492,6 +502,25 @@
 .socicon-google-maps:before {
     content: "\e937"
 }
+
+.socicon-google-news {
+    background-color: #174EA6;
+    color: #174EA6;
+}
+
+.socicon-google-news:before {
+    content: "\e925"
+}
+
+.socicon-google-podcasts {
+    background-color: #4285F4;
+    color: #4285F4;
+}
+
+.socicon-google-podcasts:before {
+    content: "\e923"
+}
+
 .socicon-grooveshark {
     background-color: #000000;
     color: #000000;
@@ -726,6 +755,15 @@
     content: "\e00d"
 }
 
+.socicon-overcast {
+    background-color: #FC7E0F;
+    color: #FC7E0F;
+}
+
+.socicon-overcast:before {
+    content: "\e922"
+}
+
 .socicon-overwatch {
     background-color: #9E9E9E;
     color: #9E9E9E;
@@ -814,6 +852,15 @@
 
 .socicon-playstation:before {
     content: "\e03d"
+}
+
+.socicon-redbubble {
+    background-color: #E41321;
+    color: #E41321;
+}
+
+.socicon-redbubble:before {
+    content: "\e979"
 }
 
 .socicon-reddit {

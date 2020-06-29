@@ -50,6 +50,13 @@ return array(
 			),
 			'color'    => '#B9BFC1',
 		),
+        array(
+            'icon'     => 'apple-podcasts',
+            'category' => array(
+                'podcast',
+            ),
+            'color'    => '#9933CC',
+        ),
 		array(
 			'icon'     => 'appnet',
 			'category' => array(
@@ -171,7 +178,7 @@ return array(
 			'category' => array(
 				'design',
 			),
-			'color'    => '#c5d200',
+			'color'    => '#05CC47',
 		),
 		array(
 			'icon'     => 'deezer',
@@ -372,6 +379,20 @@ return array(
 			),
 			'color'    => '#4285F4'
 		),
+        array(
+            'icon'     => 'google-news',
+            'category' => array(
+                'maps'
+            ),
+            'color'    => '#174EA6'
+        ),
+        array(
+            'icon'     => 'google-podcasts',
+            'category' => array(
+                'podcasts'
+            ),
+            'color'    => '#4285F4'
+        ),
 		array(
 			'icon'     => 'grooveshark',
 			'category' => array(
@@ -568,6 +589,13 @@ return array(
 			),
 			'color'    => '#0072C6',
 		),
+        array(
+            'icon'     => 'overcast',
+            'category' => array(
+                'podcast',
+            ),
+            'color'    => '#FC7E0F',
+        ),
 		array(
 			'icon'     => 'overwatch',
 			'category' => array(
@@ -637,6 +665,14 @@ return array(
 			),
 			'color'    => '#000000',
 		),
+        array(
+            'icon'     => 'redbubble',
+            'category' => array(
+                'news',
+                'social-media',
+            ),
+            'color'    => '#E41321',
+        ),
 		array(
 			'icon'     => 'reddit',
 			'category' => array(

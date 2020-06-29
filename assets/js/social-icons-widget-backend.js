@@ -236,6 +236,10 @@
                             'ok.ru':'odnoklassniki',
                             't.me':'telegram',
                             'wa.me':'whatsapp',
+                            'news.google.com':'google-news',
+                            'itunes.apple.com/us/podcast':'apple-podcasts',
+                            'podcasts.apple.com':'apple-podcasts',
+                            'podcasts.google.com':'google-podcasts',
                             'zen.yandex.com':'zen-yandex',
                             'zen.yandex.ru':'zen-yandex'
                         };

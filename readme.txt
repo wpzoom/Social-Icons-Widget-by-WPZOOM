@@ -133,8 +133,14 @@ You can also create a hidden widget area using a plugin like Custom Sidebars if 
 
 == Changelog ==
 
+= 4.0.3 =
+* Fixed a conflict with the Divi Booster plugin
+* Minor performance improvements
+* New icons: Apple Podcasts, Google Podcasts, Overcast, Google News, Deviantart (updated), RedBubble
+
 = 4.0.2 =
 * New icons: Patreon (updated), Zazzle, Displate, Pixiv, Anchorfm, SSRN, Yummly
+
 = 4.0.1 =
 * Fixed a bug affecting column blocks after 4.0 update
 
