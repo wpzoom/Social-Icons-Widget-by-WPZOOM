@@ -50,6 +50,12 @@ class Zoom_Social_Icons_Widget extends WP_Widget
             )
         );
 
+	    if ( is_active_widget( false, false, 'zoom-social-icons-widget' ) ) {
+
+		    add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
+
+	    }
+
         $this->icons = include WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'icons-data.php';
 	    $removed_keys = ['fab', 'fas', 'far'];
 	    $this->icons = array_diff_key($this->icons, array_flip($removed_keys));
@@ -298,7 +304,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
                                                     @mouseover="overOnIcon"
                                                     @mouseleave="leaveOnIcon"
                                                     v-for="(icon, icon_key) in icons_kit"
-                                                    :class='["zoom-social-icons__single-element" ,icon_type , icon_type+"-"+icon.icon, icon_canvas_style, {selected : icon.icon === modal_icon && icon_type === modal_icon_kit }]'
+                                                    :class='["zoom-social-icons__single-element social-icon" ,icon_type , icon_type+"-"+icon.icon, icon_canvas_style, {selected : icon.icon === modal_icon && icon_type === modal_icon_kit }]'
                                             ></span>
                                         </div>
                                     </template>
@@ -917,7 +923,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
                         </modal>
 
                         <span class="dashicons dashicons-sort zoom-social-icons__field-handle"></span>
-                        <span class="zoom-social-icons__field-icon-handler "
+                        <span class="zoom-social-icons__field-icon-handler social-icon"
                               :style="normalizeStyle(key)"
                               :class="[ field.icon_kit, field.icon_kit+'-'+field.icon, icon_canvas_style]"
                               @mouseover='mouseoverIcon(key, $event)'
@@ -1289,7 +1295,6 @@ class Zoom_Social_Icons_Widget extends WP_Widget
      */
     public function widget($args, $instance)
     {
-        $this->enqueue_scripts();
         $instance = $this->normalize_data_array($instance);
         $instance = wp_parse_args((array)$instance, $this->get_defaults());
 
@@ -1393,7 +1398,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
                             <span class="screen-reader-text"><?php echo esc_html($field['icon']); ?></span>
                         <?php endif; ?>
 
-                        <span class="zoom-social_icons-list-span <?php echo $class ?>" <?php echo $hover_style ?> style="<?php echo $style ?>" <?php echo $aria_image_role; ?>></span>
+                        <span class="zoom-social_icons-list-span social-icon <?php echo $class ?>" <?php echo $hover_style ?> style="<?php echo $style ?>" <?php echo $aria_image_role; ?>></span>
 
                         <?php
                         if ($instance['show_icon_labels'] === 'true') : ?>
