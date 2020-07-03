@@ -156,12 +156,39 @@ function wpzoom_social_icons_block_register_secondary_assets() {
 
 add_action( 'wp_enqueue_scripts', 'wpzoom_social_icons_block_register_secondary_assets' );
 
+function wpzoom_has_reusable_block( $block_name, $id = false ){
+	$id = (!$id) ? get_the_ID() : $id;
+	if( $id ){
+		if ( has_block( 'block', $id ) ){
+			// Check reusable blocks
+			$content = get_post_field( 'post_content', $id );
+			$blocks = parse_blocks( $content );
+
+			if ( ! is_array( $blocks ) || empty( $blocks ) ) {
+				return false;
+			}
+
+			foreach ( $blocks as $block ) {
+				if ( $block['blockName'] === 'core/block' && ! empty( $block['attrs']['ref'] ) ) {
+					if( has_block( $block_name, $block['attrs']['ref'] ) ){
+						return true;
+					}
+				}
+			}
+		}
+	}
+
+	return false;
+}
+
 /**
  * Enqueue css and js files.
  */
 function wpzoom_social_icons_block_enqueue_secondary_assets() {
 
-	if ( has_block( 'wpzoom-blocks/social-icons' ) || is_admin() ) {
+	if ( wpzoom_has_reusable_block( 'wpzoom-blocks/social-icons' ) ||
+	     has_block( 'wpzoom-blocks/social-icons' ) ||
+	     is_admin() ) {
 		/**
 		 * Enqueue dashicons.css
 		 */
