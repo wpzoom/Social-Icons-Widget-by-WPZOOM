@@ -77,7 +77,6 @@ class Zoom_Social_Icons_Widget extends WP_Widget
 
         // Hooks to enqueue admin scripts in Elementor
 	    add_action( 'elementor/editor/before_enqueue_scripts', function() {
-		    error_log('elementor/editor/before_enqueue_scripts');
 		    $this->admin_scripts();
 		    $this->admin_js_templates();
 	    } );
