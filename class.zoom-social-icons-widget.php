@@ -75,6 +75,12 @@ class Zoom_Social_Icons_Widget extends WP_Widget
         add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts_for_beaver'));
         add_action('wp_footer', array($this, 'admin_js_templates_for_beaver'));
 
+        // Hooks to enqueue admin scripts in Elementor
+	    add_action( 'elementor/editor/before_enqueue_scripts', function() {
+		    error_log('elementor/editor/before_enqueue_scripts');
+		    $this->admin_scripts();
+		    $this->admin_js_templates();
+	    } );
 
     }
 
@@ -199,15 +205,14 @@ class Zoom_Social_Icons_Widget extends WP_Widget
     /**
      * Enqueue admin javascript only on widgets and customizer pages.
      */
-    public function check_current_screen()
-    {
-        $current_screen = get_current_screen();
+	public function check_current_screen() {
+		$current_screen = get_current_screen();
 
-        if (!empty($current_screen->id) && ($current_screen->id === 'widgets' || $current_screen->id === 'customize')) {
-            add_action('admin_enqueue_scripts', array($this, 'admin_scripts'));
-            add_action('admin_print_footer_scripts', array($this, 'admin_js_templates'));
-        }
-    }
+		if ( ! empty( $current_screen->id ) && ( $current_screen->id === 'widgets' || $current_screen->id === 'customize' ) ) {
+			add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ) );
+			add_action( 'admin_print_footer_scripts', array( $this, 'admin_js_templates' ) );
+		}
+	}
 
     /**
      * JavaScript templates for back-end widget form.
@@ -908,10 +913,11 @@ class Zoom_Social_Icons_Widget extends WP_Widget
                     <li class="zoom-social-icons__field">
 
                         <modal
-                                @input='field.color_picker = arguments[0];field.icon_kit = arguments[1];field.icon = arguments[2];field.color_picker_hover=arguments[3]'
+                                @input='onInputModal'
                                 @keyup.esc.stop="closeModal(key)"
                                 @close='closeModal(key)'
                                 v-if='field.show_modal'
+                                :field_key="key"
                                 :icon="field.icon"
                                 :icon_style="icon_style"
                                 :icon_canvas_style="icon_canvas_style"
@@ -930,7 +936,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
                               @mouseleave='mouseleaveIcon(key, $event)'
                               @click="clickonIconHandler(key)"></span>
                         <div class="zoom-social-icons__cw">
-                            <div class="zoom-social-icons__inputs">
+                            <div class="zoom-social-icons__inputs" ref="inputFields">
 
                                 <input class="widefat zoom-social-icons__field-url"
                                        :id="field.url_field_id"
@@ -943,7 +949,9 @@ class Zoom_Social_Icons_Widget extends WP_Widget
                                        placeholder="<?php _e('Start typing the URL...', 'zoom-social-icons-widget') ?>">
                                 <input class="widefat zoom-social-icons__field-label"
                                        :id="field.label_field_id"
-                                       :name="field.label_field_name" v-model="field.label" type="text"
+                                       :name="field.label_field_name"
+                                       v-model="field.label"
+                                       type="text"
                                        :value="field.label_field_name"
                                        placeholder="<?php _e('Label', 'zoom-social-icons-widget') ?>">
                                 <input type="hidden"
@@ -954,13 +962,17 @@ class Zoom_Social_Icons_Widget extends WP_Widget
                                 <input type="hidden"
                                        :id="field.color_picker_hover_field_id"
                                        :name="field.color_picker_hover_field_name"
-                                       v-model='field.color_picker_hover' :value="field.color_picker_hover">
+                                       v-model='field.color_picker_hover'
+                                       :value="field.color_picker_hover">
                                 <input type="hidden"
                                        :id="field.icon_field_id"
-                                       :name="field.icon_field_name" v-model="field.icon" :value="field.icon">
+                                       :name="field.icon_field_name"
+                                       v-model="field.icon"
+                                       :value="field.icon">
                                 <input type="hidden"
                                        :id="field.icon_kit_field_id"
-                                       :name="field.icon_kit_field_name" v-model="field.icon_kit"
+                                       :name="field.icon_kit_field_name"
+                                       v-model="field.icon_kit"
                                        :value="field.icon_kit">
                             </div>
                         </div>

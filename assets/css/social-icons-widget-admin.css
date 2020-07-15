@@ -266,3 +266,11 @@ border-radius: 0;
     box-shadow: 0 1px 0 #ccc;
     vertical-align: top;
 }
+
+.elementor-control-content .social-icon:before, .elementor-control-content .social-icon, .elementor-control-content .social-icon:after {
+    box-sizing: content-box !important;
+    -webkit-box-sizing: content-box !important;
+    padding: 4px !important;
+    margin: inherit !important;
+    text-align: center !important;
+}
