@@ -191,18 +191,18 @@ export default class Inspector extends Component {
                             <Button
                                 onClick={() => this.setAlignment('left')}
                                 isPrimary={isLeftAlignment}
-                                isDefault={!isLeftAlignment}
+                                isSecondary={!isLeftAlignment}
                             >Left</Button>
                             <Button
                                 onClick={() => this.setAlignment('center')}
                                 isPrimary={isCenterAlignment}
-                                isDefault={!isCenterAlignment}
+                                isSecondary={!isCenterAlignment}
 
                             >Center</Button>
                             <Button
                                 onClick={() => this.setAlignment('right')}
                                 isPrimary={isRightAlignment}
-                                isDefault={!isRightAlignment}
+                                isSecondary={!isRightAlignment}
                             >Right</Button>
                         </ButtonGroup>
                     </PanelRow>

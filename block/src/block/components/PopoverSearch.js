@@ -1,5 +1,5 @@
 import {Component, Fragment} from '@wordpress/element';
-import {TextControl, IconButton} from '@wordpress/components';
+import {TextControl, Button} from '@wordpress/components';
 import {__} from '@wordpress/i18n';
 
 
@@ -35,12 +35,12 @@ class PopoverSearch extends Component {
                     onChange={this.onChangeTextControlHandler}
                     onKeyDown={this.onKeyDownHandler}
                 />
-                <IconButton
+                <Button
                     icon={'editor-break'}
                     label={__('Apply', 'zoom-social-icons-widget')}
                     onClick={this.onClickHandler}
                     className={['is-button', 'button-small', 'is-default', 'url-button']}>
-                </IconButton>
+                </Button>
             </Fragment>
         )
     }
