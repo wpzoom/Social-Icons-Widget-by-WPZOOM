@@ -5,7 +5,7 @@
  * Description: Social Icons Widget & Block to display links to social media networks websites. Supports most of the known social networks and includes more than 400 icons. Sort icons by Drag & Drop and change their color easily.
  * Author: WPZOOM
  * Author URI: https://www.wpzoom.com/
- * Version: 4.0.3
+ * Version: 4.0.4
  * License: GPLv2 or later
  * Text Domain: zoom-social-icons-widget
  * Domain Path: /languages
