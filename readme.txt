@@ -136,6 +136,7 @@ You can also create a hidden widget area using a plugin like Custom Sidebars if 
 = 4.0.4 =
 * Bug fix when using the Social Icons Block as a Reusable Block
 * Fixed compatibility issues with Elementor
+* New icon: Fiverr
 
 = 4.0.3 =
 * Fixed a conflict with the Divi Booster plugin

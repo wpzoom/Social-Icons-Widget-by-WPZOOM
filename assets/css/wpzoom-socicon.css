@@ -404,6 +404,15 @@
     content: "\e074"
 }
 
+.socicon-fiverr {
+    background-color: #1DBF73;
+    color: #1DBF73;
+}
+
+.social-icon.socicon-fiverr:before {
+    content: "\e928"
+}
+
 .socicon-flattr {
     background-color: #F67C1A;
     color: #F67C1A;
@@ -1495,14 +1504,17 @@
     padding: 0;
 }
 
+.elementor-widget-wp-widget-zoom-social-icons-widget .zoom-social-icons-list--align-left,
 .zoom-social-icons-widget .zoom-social-icons-list--align-left {
     text-align: left;
 }
 
+.elementor-widget-wp-widget-zoom-social-icons-widget .zoom-social-icons-list--align-right,
 .zoom-social-icons-widget .zoom-social-icons-list--align-right {
     text-align: right;
 }
 
+.elementor-widget-wp-widget-zoom-social-icons-widget .zoom-social-icons-list--align-center,
 .zoom-social-icons-widget .zoom-social-icons-list--align-center {
     text-align: center;
 }

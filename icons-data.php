@@ -298,6 +298,13 @@ return array(
 			),
 			'color'    => '#34B151',
 		),
+        array(
+            'icon'     => 'fiverr',
+            'category' => array(
+                'web-tools',
+            ),
+            'color'    => '#1DBF73',
+        ),
 		array(
 			'icon'     => 'flattr',
 			'category' => array(
