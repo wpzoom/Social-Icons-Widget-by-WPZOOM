@@ -509,6 +509,22 @@ return array(
 			),
 			'color'    => '#000000',
 		),
+        array(
+            'icon'     => 'mailchimp',
+            'category' => array(
+                'web-tools',
+                'communication',
+            ),
+            'color'    => '#FFE01B',
+        ),
+        array(
+            'icon'     => 'mailchimp2',
+            'category' => array(
+                'web-tools',
+                'communication',
+            ),
+            'color'    => '#FFE01B',
+        ),
 		array(
 			'icon'     => 'mastodon',
 			'category' => array(
@@ -572,8 +588,15 @@ return array(
 			'category' => array(
 				'business',
 			),
-			'color'    => '#01B247',
+			'color'    => '#8ed500',
 		),
+        array(
+            'icon'     => 'nextdoor2',
+            'category' => array(
+                'business',
+            ),
+            'color'    => '#01B247',
+        ),
 		array(
 			'icon'     => 'odnoklassniki',
 			'category' => array(
@@ -612,6 +635,13 @@ return array(
 			),
 			'color'    => '#9E9E9E',
 		),
+        array(
+            'icon'     => 'parler',
+            'category' => array(
+                'social-network',
+            ),
+            'color'    => '#b91d2b',
+        ),
 		array(
 			'icon'     => 'patreon',
 			'category' => array(

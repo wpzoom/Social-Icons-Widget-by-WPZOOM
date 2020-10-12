@@ -665,6 +665,25 @@
     content: "\e01f"
 }
 
+.socicon-mailchimp {
+    background-color: #FFE01B;
+    color: #FFE01B;
+}
+
+.social-icon.socicon-mailchimp:before {
+    content: "\e92c";
+    color: #000 !important;
+}
+
+.socicon-mailchimp2 {
+    background-color: #FFE01B;
+    color: #FFE01B;
+}
+
+.social-icon.socicon-mailchimp2:before {
+    content: "\e929";
+}
+
 .socicon-mastodon {
     background-color: #2B8BD0;
     color: #2B8BD0;
@@ -738,11 +757,20 @@
 }
 
 .socicon-nextdoor {
+    background-color: #8ed500;
+    color: #8ed500;
+}
+
+.social-icon.socicon-nextdoor:before {
+    content: "\e92b"
+}
+
+.socicon-nextdoor2 {
     background-color: #01B247;
     color: #01B247;
 }
 
-.social-icon.socicon-nextdoor:before {
+.social-icon.socicon-nextdoor2:before {
     content: "\e942"
 }
 
@@ -789,6 +817,15 @@
 
 .social-icon.socicon-outlook:before {
     content: "\e010"
+}
+
+.socicon-parler {
+    background-color: #b91d2b;
+    color: #b91d2b;
+}
+
+.social-icon.socicon-parler:before {
+    content: "\e92a"
 }
 
 .socicon-patreon {

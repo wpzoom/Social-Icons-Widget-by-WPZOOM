@@ -3,7 +3,7 @@ Contributors: WPZOOM, nvartolomei, ciorici
 Donate link: https://www.wpzoom.com/
 Tags: social icons, social networks, social media, social profiles, widget, block, gutenberg, styles, twitter, facebook, google, pinterest, foursquare, yahoo, skype, yelp, feedburner, linkedin, viadeo, xing, myspace, soundcloud, spotify, grooveshark, lastfm, youtube, vimeo, dailymotion, vine, flickr, 500px, instagram, wordpress, tumblr, blogger, technorati, reddit, dribbble, stumbleupon, digg, envato, behance, delicious, deviantart, forrst, play, zerply, wikipedia, apple, flattr, github, chimein, friendfeed, newsvine, identica, bebo, zynga, steam, xbox, windows, outlook, coderwall, tripadvisor, appnet, goodreads, tripit, lanyrd, slideshare, buffer, rss, vkontakte, disqus, houzz, mail, patreon, paypal, smugmug, swarm, triplej, yammer, stackoverflow, drupal, odnoklassniki, android, meetup, persona, airbnb, baidu, ebay, medium, periscope, lookbook, feedly, snapchat, telegram, bloglovin, fontawesome, tidal, deezer, unsplash, whatsapp, flipboard, discord, academia, academicons, ok, tiktok, zillow, aparat, shutterstock, zomato, thefork, fork, elementor
 Requires at least: 5.0
-Tested up to: 5.5
+Tested up to: 5.5.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -132,6 +132,9 @@ You can also create a hidden widget area using a plugin like Custom Sidebars if 
 8. Widget Settings
 
 == Changelog ==
+
+= 4.0.5 =
+* New icons: Mailchimp, Parler, Nextdoor (updated icon)
 
 = 4.0.4 =
 * Bug fix when using the Social Icons Block as a Reusable Block
