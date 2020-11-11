@@ -50,6 +50,8 @@ class Zoom_Social_Icons_Widget extends WP_Widget
             )
         );
 
+	    add_filter( 'style_loader_tag', [ $this, 'add_preload_value_for_rel_attribute' ], 10, 2 );
+
 	    if ( is_active_widget( false, false, 'zoom-social-icons-widget' ) ) {
 
 		    add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
@@ -83,7 +85,24 @@ class Zoom_Social_Icons_Widget extends WP_Widget
 
     }
 
-    function admin_js_templates_for_beaver()
+	function add_preload_value_for_rel_attribute( $tag, $handle ) {
+
+		$style_handlers = [
+			'wpzoom-social-icons-socicon',
+			'wpzoom-social-icons-genericons',
+			'wpzoom-social-icons-academicons',
+			'wpzoom-social-icons-font-awesome-3',
+			'wpzoom-social-icons-font-awesome-5'
+		];
+
+		if ( in_array( $handle, $style_handlers ) ) {
+			$tag = preg_replace( "/='stylesheet'/", "='preload' as='style' onload=\"this.onload=null;this.rel='stylesheet'\"", $tag );
+		}
+
+		return $tag;
+	}
+
+	function admin_js_templates_for_beaver()
     {
         if ((class_exists('FLBuilderModel') && FLBuilderModel::is_builder_active())) {
             $this->admin_js_templates();
