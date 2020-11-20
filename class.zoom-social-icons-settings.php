@@ -10,7 +10,7 @@ class WPZOOM_Social_Icons_Settings {
 	public static $option_defaults = [
 		'disable-widget'                         => false,
 		'disable-block'                          => false,
-		'enable-fonts-preloading'                => false,
+		'disable-fonts-preloading'                => false,
 		'disable-css-loading-for-academicons'    => false,
 		'disable-css-loading-for-font-awesome-3' => false,
 		'disable-css-loading-for-font-awesome-5' => false,
@@ -127,8 +127,8 @@ class WPZOOM_Social_Icons_Settings {
 
 		add_settings_field(
 			'wpzoom-enable-social-icons-fonts-preloader',
-			__( 'Enable preload web fonts to improve loading speed', 'zoom-social-icons-widget' ), // Title
-			array( $this, 'field_enable_fonts_preloading' ),
+			__( 'Disable web fonts preload', 'zoom-social-icons-widget' ), // Title
+			array( $this, 'field_disable_fonts_preloading' ),
 			'wpzoom-social-icons-widget-settings-group',
 			'wpzoom-social-icons-widget-settings-font-preload'
 		);
@@ -197,8 +197,8 @@ class WPZOOM_Social_Icons_Settings {
 			$new_input['disable-block'] = wp_validate_boolean( $input['disable-block'] );
 		}
 
-		if ( isset( $input['enable-fonts-preloading'] ) ) {
-			$new_input['enable-fonts-preloading'] = wp_validate_boolean( $input['enable-fonts-preloading'] );
+		if ( isset( $input['disable-fonts-preloading'] ) ) {
+			$new_input['disable-fonts-preloading'] = wp_validate_boolean( $input['disable-fonts-preloading'] );
 		}
 
 		if ( isset( $input['disable-css-loading-for-academicons'] ) ) {
@@ -259,14 +259,14 @@ class WPZOOM_Social_Icons_Settings {
 	/**
 	 * Get the settings option array and print one of its values
 	 */
-	public function field_enable_fonts_preloading() {
+	public function field_disable_fonts_preloading() {
 		?>
-        <input type="hidden" name="wpzoom-social-icons-widget-settings[enable-fonts-preloading]" value="0"/>
+        <input type="hidden" name="wpzoom-social-icons-widget-settings[disable-fonts-preloading]" value="0"/>
         <input type="checkbox"
-               id="enable-fonts-preloading"
-               name="wpzoom-social-icons-widget-settings[enable-fonts-preloading]"
+               id="disable-fonts-preloading"
+               name="wpzoom-social-icons-widget-settings[disable-fonts-preloading]"
                value="1"
-			<?php checked( $this->options['enable-fonts-preloading'], 1 ) ?>/>
+			<?php checked( $this->options['disable-fonts-preloading'], 1 ) ?>/>
 		<?php
 	}
 

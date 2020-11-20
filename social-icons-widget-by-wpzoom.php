@@ -138,7 +138,7 @@ add_action( 'init', function () {
 
 	$settings = WPZOOM_Social_Icons_Settings::get_settings();
 
-	if ( ! empty( $settings['enable-fonts-preloading'] ) ) {
+	if ( empty( $settings['disable-fonts-preloading'] ) ) {
 		add_action( 'wp_enqueue_scripts', 'zoom_social_icons_enqueue_fonts', 999 );
 		add_filter( 'style_loader_tag', 'zoom_social_icons_add_preload_to_rel_attribute', 10, 3 );
 	}
