@@ -213,7 +213,10 @@ class Zoom_Social_Icons_Widget extends WP_Widget
 	public function check_current_screen() {
 		$current_screen = get_current_screen();
 
-		if ( ! empty( $current_screen->id ) && ( $current_screen->id === 'widgets' || $current_screen->id === 'customize' ) ) {
+		if ( ! empty( $current_screen->id ) &&
+		     ( $current_screen->id === 'widgets' ||
+		       $current_screen->id === 'appearance_page_gutenberg-widgets' ||
+		       $current_screen->id === 'customize' ) ) {
 			add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ) );
 			add_action( 'admin_print_footer_scripts', array( $this, 'admin_js_templates' ) );
 		}
@@ -240,7 +243,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
                 <button type="button" class="media-modal-close" @click="$emit('close')"><span
                             class="media-modal-icon"><span class="screen-reader-text">Close media panel</span></span>
                 </button>
-                <div class="media-modal-content">
+                <div class="media-modal-content" ref="mediaModal">
 
                     <div class="zoom-social-modal-title">
                         <slot name="header">
@@ -925,6 +928,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
                     <li class="zoom-social-icons__field">
 
                         <modal
+                                ref="modals"
                                 @input='onInputModal'
                                 @keyup.esc.stop="closeModal(key)"
                                 @close='closeModal(key)'
@@ -946,7 +950,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
                               :class="[ field.icon_kit, field.icon_kit+'-'+field.icon, icon_canvas_style]"
                               @mouseover='mouseoverIcon(key, $event)'
                               @mouseleave='mouseleaveIcon(key, $event)'
-                              @click="clickonIconHandler(key)"></span>
+                              @click.stop="clickonIconHandler(key)"></span>
                         <div class="zoom-social-icons__cw">
                             <div class="zoom-social-icons__inputs" ref="inputFields">
 
@@ -1118,18 +1122,23 @@ class Zoom_Social_Icons_Widget extends WP_Widget
      *
      * @return array
      */
-    public function normalize_data_array($value)
-    {
-        $collector = array();
-        foreach ($value as $val_key => $val) {
-            if (is_array($val)) {
-                $val = $this->normalize_data_array($val);
-            }
-            $collector[str_replace('-', '_', $val_key)] = $val;
-        }
+	public function normalize_data_array( $value ) {
 
-        return $collector;
-    }
+		$collector = [];
+
+		if ( empty( $value ) ) {
+			return $collector;
+		}
+
+		foreach ( $value as $val_key => $val ) {
+			if ( is_array( $val ) ) {
+				$val = $this->normalize_data_array( $val );
+			}
+			$collector[ str_replace( '-', '_', $val_key ) ] = $val;
+		}
+
+		return $collector;
+	}
 
     /**
      * It is a function for backward compatibility that normalize data values between old and new version

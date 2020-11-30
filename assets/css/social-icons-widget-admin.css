@@ -39,6 +39,7 @@ border-radius: 0;
     z-index: 5;
     cursor: move;
     position: relative;
+    box-sizing: content-box;
 }
 .zoom-social-icons__field-icon-handler:hover{
     opacity: 0.8;
@@ -72,6 +73,7 @@ border-radius: 0;
     text-align: center;
     top:0;
     margin-top: 0px;
+    box-sizing: content-box;
 }
 
 .zoom-social-icons__single-element.socicon, .zoom-social-icons__single-element.dashicons, .zoom-social-icons__single-element.genericon, .zoom-social-icons__single-element.academicons, .zoom-social-icons__single-element.fa {
@@ -81,6 +83,7 @@ border-radius: 0;
     margin-right: 10px;
     background: #5A5A59;
     font-size: 20px;
+    box-sizing: content-box;
 }
 .zoom-social-modal-wrapper {
     max-width: 720px;
@@ -125,6 +128,7 @@ border-radius: 0;
     padding: 16px;
     border: 0 solid #dfdfdf;
     overflow: hidden;
+    box-sizing: content-box;
 }
 .zoom-social-modal-toolbar button{
     float: right;
@@ -273,4 +277,41 @@ border-radius: 0;
     padding: 4px !important;
     margin: inherit !important;
     text-align: center !important;
+}
+
+
+.block-editor-block-list__layout .block-editor-block-list__block[data-is-social-icons-widget]:not([contenteditable]):focus:after {
+    z-index: -1;
+}
+
+.block-editor-block-list__layout .block-editor-block-list__block[data-is-social-icons-widget] {
+    z-index: 999;
+}
+
+.zoom-social-icons-settings .form-table {
+    background-color: #ffffff;
+    box-shadow: 0 0 0 1px #ccd0d4, 0 1px 1px 1px rgba(0, 0, 0, .04);
+}
+
+.zoom-social-icons-settings .form-table th[scope='row'] {
+    padding-left: 20px;
+}
+
+.zoom-social-icons-settings .filter-links li > a {
+    border-bottom: none;
+}
+
+.zoom-social-icons-settings .filter-links li > a:focus {
+    box-shadow: none;
+    outline: 0;
+}
+
+.zoom-social-icons-settings .form-table td span.description {
+    font-style: italic;
+    padding-left: 50px;
+    color: #666;
+}
+
+.zoom-social-icons-settings .tab {
+    display: none;
 }
