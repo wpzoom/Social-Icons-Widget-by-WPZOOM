@@ -37,6 +37,13 @@ class WPZOOM_Social_Icons_Settings {
 
 	function enqueue( $hook ) {
 		if ( $this->get_hook_name() === $hook ) {
+			wp_enqueue_style(
+				'zoom-social-icons-settings-page',
+				WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/social-icons-settings-page.css',
+				[],
+				filemtime( WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/social-icons-settings-page.css' )
+			);
+
 			wp_enqueue_script(
 				'zoom-social-icons-settings-page',
 				WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/js/social-icons-settings-page.js',
