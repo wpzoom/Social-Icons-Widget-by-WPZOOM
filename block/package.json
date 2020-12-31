@@ -11,6 +11,6 @@
     "@wordpress/token-list": "^1.9.0",
     "cgb-scripts": "1.22.0",
     "classnames": "^2.2.6",
-    "urijs": "^1.19.2"
+    "urijs": "^1.19.4"
   }
 }
