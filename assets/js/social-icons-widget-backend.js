@@ -97,6 +97,8 @@
                         'feedburner.google.com': 'rss',
                         'ok.ru':'odnoklassniki',
                         't.me':'telegram',
+                        'm.me':'messenger',
+                        'mail.ru':'mailru',
                         'wa.me':'whatsapp',
                         'news.google.com':'google-news',
                         'itunes.apple.com/us/podcast':'apple-podcasts',

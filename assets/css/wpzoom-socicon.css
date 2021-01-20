@@ -224,6 +224,15 @@
     content: "\e940"
 }
 
+.socicon-coronavirus {
+    background-color: #E6502A;
+    color: #E6502A;
+}
+
+.social-icon.socicon-coronavirus:before {
+    content: "\e936"
+}
+
 .socicon-crunchbase {
     background-color: #0288d1;
     color: #0288d1;
@@ -369,17 +378,17 @@
 }
 
 .socicon-facebook {
-    background-color: #3b5998;
-    color: #3b5998;
+    background-color: #1877F2;
+    color: #1877F2;
 }
 
 .social-icon.socicon-facebook:before {
-    content: "\e041"
+    content: "\e91a"
 }
 
 .socicon-facebook2 {
-    background-color: #0D7BED;
-    color: #0D7BED;
+    background-color: #1877F2;
+    color: #1877F2;
 }
 
 .social-icon.socicon-facebook2:before {
@@ -539,6 +548,15 @@
     content: "\e04f"
 }
 
+.socicon-guilded {
+    background-color: #F5C400;
+    color: #F5C400;
+}
+
+.social-icon.socicon-guilded:before {
+    content: "\e935"
+}
+
 .socicon-hellocoton {
     background-color: #D50066;
     color: #D50066;
@@ -575,9 +593,18 @@
     content: "\e034"
 }
 
+.socicon-iheartradio {
+    background-color: #C6002B;
+    color: #C6002B;
+}
+
+.social-icon.socicon-iheartradio:before {
+    content: "\e930"
+}
+
 .socicon-instagram {
-    background-color: #e4405f;
-    color: #e4405f;
+    background-color: #E4405F;
+    color: #E4405F;
 }
 
 .social-icon.socicon-instagram:before {
@@ -600,6 +627,15 @@
 
 .social-icon.socicon-issuu:before {
     content: "\e06b"
+}
+
+.socicon-ko-fi {
+    background-color: #F16061;
+    color: #F16061;
+}
+
+.social-icon.socicon-ko-fi:before {
+    content: "\e934"
 }
 
 .socicon-lanyrd {
@@ -665,6 +701,15 @@
     content: "\e01f"
 }
 
+.socicon-mailru {
+    background-color: #005FF9;
+    color: #005FF9;
+}
+
+.social-icon.socicon-mailru:before {
+    content: "\e932"
+}
+
 .socicon-mailchimp {
     background-color: #FFE01B;
     color: #FFE01B;
@@ -720,6 +765,15 @@
     content: "\e906"
 }
 
+.socicon-mewe {
+    background-color: #17377F;
+    color: #17377F;
+}
+
+.social-icon.socicon-mewe:before {
+    content: "\e931"
+}
+
 .socicon-mixer {
     background-color: #1FBAED;
     color: #1FBAED;
@@ -772,6 +826,15 @@
 
 .social-icon.socicon-nextdoor2:before {
     content: "\e942"
+}
+
+.socicon-newgrounds {
+    background-color: #000;
+    color: #000;
+}
+
+.social-icon.socicon-newgrounds:before {
+    content: "\e939"
 }
 
 .socicon-odnoklassniki {
@@ -891,6 +954,15 @@
     content: "\e02b"
 }
 
+.socicon-playerfm {
+    background-color: #C8122A;
+    color: #C8122A;
+}
+
+.social-icon.socicon-playerfm:before {
+    content: "\e92f"
+}
+
 .socicon-playstation {
     background-color: #000000;
     color: #000000;
@@ -898,6 +970,15 @@
 
 .social-icon.socicon-playstation:before {
     content: "\e03d"
+}
+
+.socicon-ravelry {
+    background-color: #EE6E62;
+    color: #EE6E62;
+}
+
+.social-icon.socicon-ravelry:before {
+    content: "\e92d"
 }
 
 .socicon-redbubble {
@@ -1054,12 +1135,13 @@
 }
 
 .socicon-stitcher {
-    background-color: #00BDE8;
-    color: #00BDE8;
+    background-color: #000;
+    color: #000;
 }
 
 .social-icon.socicon-stitcher:before {
-    content: "\e907"
+    /*content: "\e907" old icon */
+    content: "\e92e"
 }
 
 .socicon-strava {

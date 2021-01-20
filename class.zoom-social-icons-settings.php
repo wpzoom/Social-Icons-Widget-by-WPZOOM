@@ -66,7 +66,7 @@ class WPZOOM_Social_Icons_Settings {
 		// This page will be under "Settings"
 		add_options_page(
 			__( 'Social Icons Widget By WPZOOM Settings Page', 'zoom-social-icons-widget' ),
-			__( 'Social Icons', 'zoom-social-icons-widget' ),
+			__( 'Social Icons Widget', 'zoom-social-icons-widget' ),
 			'manage_options',
 			self::$menu_slug,
 			[ $this, 'create_admin_page' ]
@@ -83,28 +83,27 @@ class WPZOOM_Social_Icons_Settings {
 		?>
         <div class="wrap zoom-social-icons-settings">
             <h1><?php _e( 'Social Icons Widget & Block by WPZOOM', 'zoom-social-icons-widget' ) ?></h1>
-            <h2 class="description"><?php _e( 'Settings Page', 'zoom-social-icons-widget' ) ?></h2>
 
             <div class="wp-filter">
                 <ul class="filter-links">
                     <li>
-                        <a href="#general-tab"><?php _e( 'General', 'zoom-social-icons-widget' ) ?></a>
-                    </li>
-                    <li>
-                        <a href="#font-preload"><?php _e( 'Font Preload', 'zoom-social-icons-widget' ) ?></a>
-                    </li>
-                    <li>
-                        <a href="#font-styles"><?php _e( 'Font Icons', 'zoom-social-icons-widget' ) ?></a>
+                        <a href="#font-styles"><?php _e( 'Icon Sets', 'zoom-social-icons-widget' ) ?></a>
                     </li>
 
+                    <li>
+                        <a href="#font-preload"><?php _e( 'Optimization', 'zoom-social-icons-widget' ) ?></a>
+                    </li>
+                    <li>
+                        <a href="#general-tab"><?php _e( 'Misc.', 'zoom-social-icons-widget' ) ?></a>
+                    </li>
                 </ul>
             </div>
 
             <form method="post" action="options.php">
 
-                <div id="general-tab" class="tab">
-					<?php settings_fields( 'wpzoom-social-icons-widget-settings-group-general' );
-					do_settings_sections( 'wpzoom-social-icons-widget-settings-group-general' ); ?>
+                <div id="font-styles" class="tab">
+                    <?php settings_fields( 'wpzoom-social-icons-widget-settings-group-font-styles' );
+                    do_settings_sections( 'wpzoom-social-icons-widget-settings-group-font-styles' ); ?>
                 </div>
 
                 <div id="font-preload" class="tab">
@@ -112,9 +111,9 @@ class WPZOOM_Social_Icons_Settings {
 					do_settings_sections( 'wpzoom-social-icons-widget-settings-group-font-preload' ); ?>
                 </div>
 
-                <div id="font-styles" class="tab">
-					<?php settings_fields( 'wpzoom-social-icons-widget-settings-group-font-styles' );
-					do_settings_sections( 'wpzoom-social-icons-widget-settings-group-font-styles' ); ?>
+                <div id="general-tab" class="tab">
+                    <?php settings_fields( 'wpzoom-social-icons-widget-settings-group-general' );
+                    do_settings_sections( 'wpzoom-social-icons-widget-settings-group-general' ); ?>
                 </div>
 
 				<?php submit_button(); ?>
@@ -206,7 +205,7 @@ class WPZOOM_Social_Icons_Settings {
 
 		add_settings_field(
 			'wpzoom-enable-social-icons-fonts-preloader',
-			__( 'Web fonts preload', 'zoom-social-icons-widget' ),
+			__( 'Preload Fonts', 'zoom-social-icons-widget' ),
 			[ $this, 'field_disable_fonts_preloading' ],
 			'wpzoom-social-icons-widget-settings-group-font-preload',
 			'wpzoom-social-icons-widget-settings-font-preload'
@@ -371,7 +370,7 @@ class WPZOOM_Social_Icons_Settings {
 				<?php checked( $this->options['disable-fonts-preloading'], 1 ) ?>/>
 			<?php _e( 'Disable', 'zoom-social-icons-widget' ) ?>
         </label>
-        <span class="description"><?php _e( 'Preload web fonts using rel="preload" to remove any flash of unstyled text and improve loading speed, by default enabled.', 'zoom-social-icons-widget' ) ?></span>
+        <span class="description"><?php _e( 'Preload web fonts using rel="preload" to remove any flash of unstyled text and improve the PageSpeed score.', 'zoom-social-icons-widget' ) ?></span>
 		<?php
 	}
 
@@ -388,7 +387,7 @@ class WPZOOM_Social_Icons_Settings {
                    name="wpzoom-social-icons-widget-settings[disable-css-loading-for-academicons]"
                    value="1"
 				<?php checked( $this->options['disable-css-loading-for-academicons'], 1 ) ?>/>
-			<?php _e( 'Disable file loading', 'zoom-social-icons-widget' ) ?>
+			<?php _e( 'Disable this font', 'zoom-social-icons-widget' ) ?>
         </label>
 		<?php
 	}
@@ -406,9 +405,9 @@ class WPZOOM_Social_Icons_Settings {
                    name="wpzoom-social-icons-widget-settings[disable-css-loading-for-font-awesome-3]"
                    value="1"
 				<?php checked( $this->options['disable-css-loading-for-font-awesome-3'], 1 ) ?>/>
-			<?php _e( 'Disable file loading', 'zoom-social-icons-widget' ) ?>
+			<?php _e( 'Disable this font', 'zoom-social-icons-widget' ) ?>
         </label>
-        <span class="description"><?php _e( 'Font Awesome 3 is loaded only for Widgets.', 'zoom-social-icons-widget' ) ?></span>
+        <span class="description"><?php _e( 'Font Awesome 3 is loaded only in the Social Icons Widget', 'zoom-social-icons-widget' ) ?></span>
 		<?php
 	}
 
@@ -425,9 +424,9 @@ class WPZOOM_Social_Icons_Settings {
                    name="wpzoom-social-icons-widget-settings[disable-css-loading-for-font-awesome-5]"
                    value="1"
 				<?php checked( $this->options['disable-css-loading-for-font-awesome-5'], 1 ) ?>/>
-			<?php _e( 'Disable file loading', 'zoom-social-icons-widget' ) ?>
+			<?php _e( 'Disable this font', 'zoom-social-icons-widget' ) ?>
         </label>
-        <span class="description"><?php _e( 'Font Awesome 5 is loaded only for Blocks.', 'zoom-social-icons-widget' ) ?></span>
+        <span class="description"><?php _e( 'Font Awesome 5 is loaded only in the Social Icons Block.', 'zoom-social-icons-widget' ) ?></span>
 
 		<?php
 	}
@@ -445,7 +444,7 @@ class WPZOOM_Social_Icons_Settings {
                    name="wpzoom-social-icons-widget-settings[disable-css-loading-for-genericons]"
                    value="1"
 				<?php checked( $this->options['disable-css-loading-for-genericons'], 1 ) ?>/>
-			<?php _e( 'Disable file loading', 'zoom-social-icons-widget' ) ?>
+			<?php _e( 'Disable this font', 'zoom-social-icons-widget' ) ?>
         </label>
 		<?php
 	}
@@ -463,7 +462,7 @@ class WPZOOM_Social_Icons_Settings {
                    name="wpzoom-social-icons-widget-settings[disable-css-loading-for-dashicons]"
                    value="1"
 				<?php checked( $this->options['disable-css-loading-for-dashicons'], 1 ) ?>/>
-			<?php _e( 'Disable file loading', 'zoom-social-icons-widget' ) ?>
+			<?php _e( 'Disable this font', 'zoom-social-icons-widget' ) ?>
         </label>
 		<?php
 	}
@@ -481,7 +480,7 @@ class WPZOOM_Social_Icons_Settings {
                    name="wpzoom-social-icons-widget-settings[disable-css-loading-for-socicons]"
                    value="1"
 				<?php checked( $this->options['disable-css-loading-for-socicons'], 1 ) ?>/>
-			<?php _e( 'Disable file loading', 'zoom-social-icons-widget' ) ?>
+			<?php _e( 'Disable this font', 'zoom-social-icons-widget' ) ?>
         </label>
 		<?php
 	}

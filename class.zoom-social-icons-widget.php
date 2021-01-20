@@ -1084,8 +1084,8 @@ class Zoom_Social_Icons_Widget extends WP_Widget
                         'label' => 'Facebook',
                         'icon' => 'facebook',
                         'icon_kit' => 'socicon',
-                        'color_picker' => '#3b5998',
-                        'color_picker_hover' => '#3b5998',
+                        'color_picker' => '#1877F2',
+                        'color_picker_hover' => '#1877F2',
                         'aria_label' => '',
                         // 'is_rel_me'          => 'false'
                     ),

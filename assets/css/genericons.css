@@ -25,12 +25,14 @@
        url("../font/Genericons.svg#Genericons") format("svg");
   font-weight: normal;
   font-style: normal;
+  font-display: block;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: "Genericons";
     src: url("../font/Genericons.svg#Genericons") format("svg");
+    font-display: block;
   }
 }
 
@@ -258,7 +260,3 @@
 .genericon-xpost:before { content: "\f504"; }
 .genericon-youtube:before { content: "\f213"; }
 .genericon-zoom:before { content: "\f402"; }
-
-
-
-
