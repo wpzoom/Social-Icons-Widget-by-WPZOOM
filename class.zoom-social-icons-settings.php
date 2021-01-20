@@ -488,6 +488,8 @@ class WPZOOM_Social_Icons_Settings {
 				<?php checked( self::get_option_key('disable-css-loading-for-socicons'), 1 ) ?>/>
 			<?php _e( 'Enable this font', 'zoom-social-icons-widget' ) ?>
         </label>
+        <span class="description"><?php _e( 'Main icon set', 'zoom-social-icons-widget' ) ?></span>
+
 		<?php
 	}
 }
