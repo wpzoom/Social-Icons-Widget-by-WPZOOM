@@ -56,9 +56,6 @@ class Zoom_Social_Icons_Widget extends WP_Widget
             )
         );
 
-	    $this->settings = WPZOOM_Social_Icons_Settings::get_settings();
-
-
 	    add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
 
 
@@ -1504,7 +1501,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
     public function enqueue_scripts()
     {
 
-	    if ( empty( $this->settings['disable-css-loading-for-socicons'] ) ) {
+	    if ( !empty( WPZOOM_Social_Icons_Settings::get_option_key('disable-css-loading-for-socicons') ) ) {
 		    wp_enqueue_style(
 			    'wpzoom-social-icons-socicon',
 			    WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/wpzoom-socicon.css',
@@ -1514,7 +1511,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
 	    }
 
 
-	    if ( empty( $this->settings['disable-css-loading-for-genericons'] ) ) {
+	    if ( !empty( WPZOOM_Social_Icons_Settings::get_option_key('disable-css-loading-for-genericons') ) ) {
 
 		    wp_enqueue_style(
 			    'wpzoom-social-icons-genericons',
@@ -1524,7 +1521,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
 		    );
 	    }
 
-	    if ( empty( $this->settings['disable-css-loading-for-academicons'] ) ) {
+	    if ( !empty( WPZOOM_Social_Icons_Settings::get_option_key('disable-css-loading-for-academicons') ) ) {
 
 		    wp_enqueue_style(
 			    'wpzoom-social-icons-academicons',
@@ -1534,7 +1531,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
 		    );
 	    }
 
-	    if ( empty( $this->settings['disable-css-loading-for-font-awesome-3'] ) ) {
+	    if ( !empty( WPZOOM_Social_Icons_Settings::get_option_key('disable-css-loading-for-font-awesome-3') ) ) {
 
 		    wp_enqueue_style(
 			    'wpzoom-social-icons-font-awesome-3',
@@ -1544,7 +1541,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
 		    );
 	    }
 
-	    if ( empty( $this->settings['disable-css-loading-for-dashicons'] ) ) {
+	    if ( !empty( WPZOOM_Social_Icons_Settings::get_option_key('disable-css-loading-for-dashicons') ) ) {
 
 		    wp_enqueue_style( 'dashicons' );
 
