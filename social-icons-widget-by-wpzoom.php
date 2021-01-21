@@ -77,8 +77,8 @@ function zoom_social_icons_enqueue_fonts() {
 	}
 
 	if ( wp_style_is( 'wpzoom-social-icons-socicon' ) ) {
-		wp_enqueue_style( 'wpzoom-social-icons-font-socicon-ttf', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/socicon.ttf', [], null );
-		wp_enqueue_style( 'wpzoom-social-icons-font-socicon-woff', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/socicon.woff', [], null );
+		wp_enqueue_style( 'wpzoom-social-icons-font-socicon-ttf', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/socicon.ttf?v=1.0.0', [], null );
+		wp_enqueue_style( 'wpzoom-social-icons-font-socicon-woff', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/socicon.woff?v=1.0.0', [], null );
 	}
 
 }
@@ -127,6 +127,43 @@ function zoom_social_icons_add_preload_to_rel_attribute( $tag, $handle, $href ) 
  */
 function zoom_social_icons_widget_load_textdomain() {
 	load_plugin_textdomain( 'zoom-social-icons-widget', false, plugin_basename( dirname( __FILE__ ) ) . '/languages' );
+}
+
+/**
+ * Generate select values for block and widget options that are synced with fonts loading values from Settings Page.
+ *
+ * @param string $type
+ *
+ * @return array[]
+ */
+function zoom_social_icons_kits_categories_list( $type = 'widget' ) {
+
+	$icons_kits = WPZOOM_Social_Icons_Settings::get_settings_for_icons_kits();
+
+	$categories_list = [
+		[ 'value' => 'socicon', 'label' => __( 'Socicons', 'zoom-social-icons-widget' ) ],
+		[ 'value' => 'dashicons', 'label' => __( 'Dashicons', 'zoom-social-icons-widget' ) ],
+		[ 'value' => 'genericon', 'label' => __( 'Genericons', 'zoom-social-icons-widget' ) ],
+		[ 'value' => 'academicons', 'label' => __( 'Academicons', 'zoom-social-icons-widget' ) ]
+	];
+
+	if ( 'widget' === $type ) {
+		$categories_list[] = [ 'value' => 'fa', 'label' => __( 'Font Awesome', 'zoom-social-icons-widget' ) ];
+	}
+
+	if ( 'block' === $type ) {
+		$categories_list[] = [ 'value' => 'fab', 'label' => __( 'Font Awesome Brands', 'zoom-social-icons-widget' ) ];
+		$categories_list[] = [ 'value' => 'far', 'label' => __( 'Font Awesome Regular', 'zoom-social-icons-widget' ) ];
+		$categories_list[] = [ 'value' => 'fas', 'label' => __( 'Font Awesome Solid', 'zoom-social-icons-widget' ) ];
+	}
+
+	if ( empty( WPZOOM_Social_Icons_Settings::get_option_key( 'categories-sync' ) ) ) {
+		return $categories_list;
+	}
+
+	return array_filter( $categories_list, function ( $category_item ) use ( $icons_kits ) {
+		return ! empty( $icons_kits[ $category_item['value'] ] );
+	} );
 }
 
 add_action( 'init', 'zoom_social_icons_widget_load_textdomain' );

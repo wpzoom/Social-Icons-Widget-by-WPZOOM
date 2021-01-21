@@ -61,7 +61,8 @@ function wpzoom_social_icons_block_enqueue_assets() {
 		[
 			'pluginDirPath' => plugin_dir_path( __DIR__ ),
 			'pluginDirUrl'  => plugin_dir_url( __DIR__ ),
-			'icons'         => include WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'icons-data.php'
+			'icons'         => include WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'icons-data.php',
+			'iconKitsCategories' => zoom_social_icons_kits_categories_list('block')
 		]
 	);
 

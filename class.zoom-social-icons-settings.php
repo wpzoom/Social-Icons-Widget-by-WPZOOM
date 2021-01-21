@@ -19,6 +19,7 @@ class WPZOOM_Social_Icons_Settings {
 		'disable-css-loading-for-genericons'     => true,
 		'disable-css-loading-for-dashicons'      => true,
 		'disable-css-loading-for-socicons'       => true,
+		'categories-sync'                        => true
 	];
 	/**
 	 * Holds the values to be used in the fields callbacks
@@ -33,6 +34,19 @@ class WPZOOM_Social_Icons_Settings {
 		add_action( 'admin_init', [ $this, 'page_init' ] );
 		add_action( 'admin_enqueue_scripts', [ $this, 'enqueue' ] );
 
+	}
+
+	static public function get_settings_for_icons_kits() {
+		return [
+			'socicon'     => self::get_option_key( 'disable-css-loading-for-socicons' ),
+			'dashicons'   => self::get_option_key( 'disable-css-loading-for-dashicons' ),
+			'genericon'   => self::get_option_key( 'disable-css-loading-for-genericons' ),
+			'academicons' => self::get_option_key( 'disable-css-loading-for-academicons' ),
+			'fab'         => self::get_option_key( 'disable-css-loading-for-font-awesome-5' ),
+			'far'         => self::get_option_key( 'disable-css-loading-for-font-awesome-5' ),
+			'fas'         => self::get_option_key( 'disable-css-loading-for-font-awesome-5' ),
+			'fa'          => self::get_option_key( 'disable-css-loading-for-font-awesome-3' ),
+		];
 	}
 
 	function enqueue( $hook ) {
@@ -274,6 +288,14 @@ class WPZOOM_Social_Icons_Settings {
 			'wpzoom-social-icons-widget-settings-group-font-styles',
 			'wpzoom-social-icons-widget-settings-font-styles'
 		);
+
+		add_settings_field(
+			'wpzoom-categories-sync',
+			__( 'Sync Icon Sets', 'zoom-social-icons-widget' ),
+			[ $this, 'field_categories_sync' ],
+			'wpzoom-social-icons-widget-settings-group-font-styles',
+			'wpzoom-social-icons-widget-settings-font-styles'
+		);
 	}
 
 	/**
@@ -321,11 +343,15 @@ class WPZOOM_Social_Icons_Settings {
 			$new_input['disable-css-loading-for-socicons'] = wp_validate_boolean( $input['disable-css-loading-for-socicons'] );
 		}
 
+		if ( isset( $input['categories-sync'] ) ) {
+			$new_input['categories-sync'] = wp_validate_boolean( $input['categories-sync'] );
+		}
+
 		return $new_input;
 	}
 
 	/**
-	 * Get the settings option array and print one of its values
+	 * Render Disable Widget checkbox in settings page.
 	 */
 	public function field_disable_widget_checkbox() {
 		?>
@@ -344,7 +370,7 @@ class WPZOOM_Social_Icons_Settings {
 	}
 
 	/**
-	 * Get the settings option array and print one of its values
+	 * Render Disable Block checkbox in settings page.
 	 */
 	public function field_disable_block_checkbox() {
 		?>
@@ -363,7 +389,7 @@ class WPZOOM_Social_Icons_Settings {
 	}
 
 	/**
-	 * Get the settings option array and print one of its values
+	 * Render Fonts Preloading checkbox in settings page.
 	 */
 	public function field_disable_fonts_preloading() {
 		?>
@@ -381,7 +407,7 @@ class WPZOOM_Social_Icons_Settings {
 	}
 
 	/**
-	 * Get the settings option array and print one of its values
+	 * Render Academicons CSS Loading checkbox in settings page.
 	 */
 	public function field_disable_css_loading_for_academicons() {
 		?>
@@ -399,7 +425,7 @@ class WPZOOM_Social_Icons_Settings {
 	}
 
 	/**
-	 * Get the settings option array and print one of its values
+	 * Render Font Awesome 3 CSS Loading checkbox in settings page.
 	 */
 	public function field_disable_css_loading_for_font_awesome_3() {
 		?>
@@ -418,7 +444,7 @@ class WPZOOM_Social_Icons_Settings {
 	}
 
 	/**
-	 * Get the settings option array and print one of its values
+	 * Render Font Awesome 5 CSS Loading checkbox in settings page.
 	 */
 	public function field_disable_css_loading_for_font_awesome_5() {
 		?>
@@ -438,7 +464,7 @@ class WPZOOM_Social_Icons_Settings {
 	}
 
 	/**
-	 * Get the settings option array and print one of its values
+	 * Render Genericons CSS Loading checkbox in settings page.
 	 */
 	public function field_disable_css_loading_for_genericons() {
 		?>
@@ -456,7 +482,7 @@ class WPZOOM_Social_Icons_Settings {
 	}
 
 	/**
-	 * Get the settings option array and print one of its values
+	 * Render Dashicons CSS Loading checkbox in settings page.
 	 */
 	public function field_disable_css_loading_for_dashicons() {
 		?>
@@ -474,7 +500,7 @@ class WPZOOM_Social_Icons_Settings {
 	}
 
 	/**
-	 * Get the settings option array and print one of its values
+	 * Render Socicons CSS Loading checkbox in settings page.
 	 */
 	public function field_disable_css_loading_for_socicons() {
 		?>
@@ -490,6 +516,25 @@ class WPZOOM_Social_Icons_Settings {
         </label>
         <span class="description"><?php _e( 'Main icon set', 'zoom-social-icons-widget' ) ?></span>
 
+		<?php
+	}
+
+	/**
+	 * Render categories sync checkbox in settings page.
+	 */
+	public function field_categories_sync() {
+		?>
+        <label>
+            <input type="hidden" name="wpzoom-social-icons-widget-settings[categories-sync]"
+                   value="0"/>
+            <input type="checkbox"
+                   id="categories-sync"
+                   name="wpzoom-social-icons-widget-settings[categories-sync]"
+                   value="1"
+				<?php checked( self::get_option_key('categories-sync'), 1 ) ?>/>
+			<?php _e( 'Enable sync', 'zoom-social-icons-widget' ) ?>
+        </label>
+        <span class="description"><?php _e( 'Sync Icon sets with Block and Widget Settings from popup.', 'zoom-social-icons-widget' ) ?></span>
 		<?php
 	}
 }

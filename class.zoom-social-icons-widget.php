@@ -281,16 +281,10 @@ class Zoom_Social_Icons_Widget extends WP_Widget
                                     <div class="wrap-input">
                                         <select v-model='modal_icon_kit' class="zoom-social-icons__field-icon-kit"
                                                 name="zoom-social-icons__field-icon-kit">
-                                            <option
-                                                    value="socicon"><?php _e('Socicons', 'zoom-social-icons-widget') ?></option>
-                                            <option
-                                                    value="dashicons"><?php _e('Dashicons', 'zoom-social-icons-widget') ?></option>
-                                            <option
-                                                    value="genericon"><?php _e('Genericons', 'zoom-social-icons-widget') ?></option>
-                                            <option
-                                                    value="academicons"><?php _e('Academicons', 'zoom-social-icons-widget') ?></option>
-                                            <option
-                                                    value="fa"><?php _e('Font Awesome', 'zoom-social-icons-widget') ?></option>
+	                                        <?php $icons_kits = zoom_social_icons_kits_categories_list();
+	                                        foreach ( $icons_kits as $icon_kit ): ?>
+                                                <option value="<?php echo $icon_kit['value'] ?>"><?php echo $icon_kit['label'] ?></option>
+	                                        <?php endforeach; ?>
                                         </select>
                                         <select v-model="modal_icon_kit_category">
                                             <option v-for="cat in getIconCategories" :value="cat">{{cat | spacify |

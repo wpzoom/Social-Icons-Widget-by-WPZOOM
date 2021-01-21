@@ -9,6 +9,10 @@ import {Component} from '@wordpress/element';
 import {Button, Modal, TextControl, SelectControl} from '@wordpress/components';
 import URI from "urijs";
 
+const {iconKitsCategories} = wpzSocialIconsBlock;
+
+console.log(iconKitsCategories);
+
 class SocialIconsModal extends Component {
 
     state = {
@@ -177,15 +181,7 @@ class SocialIconsModal extends Component {
                                 onChange={(currentIconKit) => {
                                     this.setState({modalIconKit: currentIconKit})
                                 }}
-                                options={[
-                                    {value: 'socicon', label: __('Socicons', 'zoom-social-icons-widget')},
-                                    {value: 'dashicons', label: __('Dashicons', 'zoom-social-icons-widget')},
-                                    {value: 'genericon', label: __('Genericons', 'zoom-social-icons-widget')},
-                                    {value: 'academicons', label: __('Academicons', 'zoom-social-icons-widget')},
-                                    {value: 'fab', label: __('Font Awesome Brands', 'zoom-social-icons-widget')},
-                                    {value: 'far', label: __('Font Awesome Regular', 'zoom-social-icons-widget')},
-                                    {value: 'fas', label: __('Font Awesome Solid', 'zoom-social-icons-widget')},
-                                ]}
+                                options={Object.values(iconKitsCategories)}
                             />
                         </div>
                     </div>
