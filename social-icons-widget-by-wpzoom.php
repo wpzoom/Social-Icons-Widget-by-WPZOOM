@@ -5,11 +5,14 @@
  * Description: Social Icons Widget & Block to display links to social media networks websites. Supports most of the known social networks and includes more than 400 icons. Sort icons by Drag & Drop and change their color easily.
  * Author: WPZOOM
  * Author URI: https://www.wpzoom.com/
- * Version: 4.1.0
+ * Version: 4.1.1
  * License: GPLv2 or later
  * Text Domain: zoom-social-icons-widget
  * Domain Path: /languages
  */
+if ( ! defined( 'WPZOOM_SOCIAL_ICONS_PLUGIN_VERSION' ) ) {
+	define( 'WPZOOM_SOCIAL_ICONS_PLUGIN_VERSION', '4.1.1' );
+}
 
 if ( ! defined( 'WPZOOM_SOCIAL_ICONS_PLUGIN_URL' ) ) {
 	define( 'WPZOOM_SOCIAL_ICONS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
@@ -77,8 +80,8 @@ function zoom_social_icons_enqueue_fonts() {
 	}
 
 	if ( wp_style_is( 'wpzoom-social-icons-socicon' ) ) {
-		wp_enqueue_style( 'wpzoom-social-icons-font-socicon-ttf', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/socicon.ttf?v=1.0.0', [], null );
-		wp_enqueue_style( 'wpzoom-social-icons-font-socicon-woff', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/socicon.woff?v=1.0.0', [], null );
+		wp_enqueue_style( 'wpzoom-social-icons-font-socicon-ttf', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/socicon.ttf?v='.WPZOOM_SOCIAL_ICONS_PLUGIN_VERSION, [], null );
+		wp_enqueue_style( 'wpzoom-social-icons-font-socicon-woff', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/socicon.woff?v='.WPZOOM_SOCIAL_ICONS_PLUGIN_VERSION, [], null );
 	}
 
 }
