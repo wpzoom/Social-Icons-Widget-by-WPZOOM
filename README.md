@@ -1,10 +1,10 @@
-# [Social Icons Widget & Block by WPZOOM](https://wordpress.org/plugins/social-icons-widget-by-wpzoom/) #
+# [Social Icons Widget & Block for WordPress](https://wordpress.org/plugins/social-icons-widget-by-wpzoom/) #
 
 ![Plugin Version](https://img.shields.io/wordpress/plugin/v/social-icons-widget-by-wpzoom.svg?maxAge=2592000) ![Total Downloads](https://img.shields.io/wordpress/plugin/dt/social-icons-widget-by-wpzoom.svg?maxAge=2592000) ![Plugin Rating](https://img.shields.io/wordpress/plugin/r/social-icons-widget-by-wpzoom.svg?maxAge=2592000) ![WordPress Compatibility](https://img.shields.io/wordpress/v/social-icons-widget-by-wpzoom.svg?maxAge=2592000) [![Build Status](https://img.shields.io/travis/wpzoom/social-icons-widget/master.svg?maxAge=2592000)](https://travis-ci.org/wpzoom/social-icons-widget) [![License](https://img.shields.io/badge/license-GPL--2.0%2B-red.svg)](https://github.com/wpzoom/social-icons-widget/blob/master/license.txt)
 
 ### Welcome to our GitHub Repository
 
-Social Icons Widget & Block helps you to add quickly icons with links to your profiles from different social networks. The plugin includes several icon sets, which gives you the possibility to use the widget for more than just linking to your social media profiles. You can use generic icons to add links to anything you want.
+**Social Icons Widget & Block** helps you to add quickly icons with links to your profiles from different social networks to your WordPress website. The plugin includes several icon sets, which gives you the possibility to use the widget for more than just linking to your social media profiles. You can use generic icons to add links to anything you want.
 
 [View Demo](https://demo.wpzoom.com/social-icons/)
 
