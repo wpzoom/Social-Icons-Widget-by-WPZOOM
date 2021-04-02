@@ -3,7 +3,7 @@ Contributors: WPZOOM, nvartolomei, ciorici, llemurya
 Donate link: https://www.wpzoom.com/
 Tags: social icons, social networks, social media, social media icons, icons, social profiles, social widget, widget, block, social block, block icons, academicons, elementor, social networking, sharing, share buttons, fontawesome
 Requires at least: 5.0
-Tested up to: 5.6
+Tested up to: 5.7
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -89,7 +89,7 @@ You can view the widget live in all our themes at [WPZOOM](https://www.wpzoom.co
 
 Icons are provided by [socicon](http://www.socicon.com) icon font.
 
-Twitter, Facebook, Google+, Instagram, Pinterest, Snapchat, Skype, Yelp, Feedburner, LinkedIn, Bloglovin', Lookbook, Feedly, Periscope, SoundCloud, Spotify, Last.fm, YouTube, Vimeo, Vine, Flickr, 500px, Tumblr, Blogger, Reddit, Dribbble, Envato, Behance, DeviantArt, GitHub, RSS, Disqus, Stackoverflow, and many others.
+Twitter, Facebook, Google+, Instagram, Pinterest, Snapchat, Skype, Yelp, Feedburner, LinkedIn, Bloglovin', Lookbook, Feedly, Periscope, SoundCloud, Spotify, Last.fm, YouTube, Vimeo, Vine, Flickr, 500px, Tumblr, Blogger, Reddit, Dribbble, Envato, Behance, DeviantArt, GitHub, RSS, Disqus, Stackoverflow, Komoot, Tiktok, Mailchimp, Podcasts and many others.
 
 = Credits =
 
@@ -132,6 +132,9 @@ You can also create a hidden widget area using a plugin like Custom Sidebars if 
 8. Widget Settings
 
 == Changelog ==
+
+= 4.1.1 =
+* New icons: Komoot, Gab, KKBox, Etsy, CastBox, Pocketcasts
 
 = 4.1.0 =
 * New options on the settings page to disable individual icon sets
