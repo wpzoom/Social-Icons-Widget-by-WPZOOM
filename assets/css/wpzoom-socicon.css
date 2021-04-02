@@ -206,6 +206,15 @@
     content: "\e018"
 }
 
+.socicon-castbox {
+    background-color: #F55B23;
+    color: #F55B23;
+}
+
+.social-icon.socicon-castbox:before {
+    content: "\e93d"
+}
+
 .socicon-coderwall {
     background-color: #3E8DCC;
     color: #3E8DCC;
@@ -359,6 +368,15 @@
     content: "\e006"
 }
 
+.socicon-etsy {
+    background-color: #F16521;
+    color: #F16521;
+}
+
+.social-icon.socicon-etsy:before {
+    content: "\e941"
+}
+
 .socicon-envato {
     background-color: #82B540;
     color: #82B540;
@@ -474,6 +492,15 @@
 
 .social-icon.socicon-friendfeed:before {
     content: "\e032"
+}
+
+.socicon-gab {
+    background-color: #28cf7a;
+    color: #28cf7a;
+}
+
+.social-icon.socicon-gab:before {
+    content: "\e93c"
 }
 
 .socicon-github {
@@ -636,6 +663,24 @@
 
 .social-icon.socicon-ko-fi:before {
     content: "\e934"
+}
+
+.socicon-kkbox {
+    background-color: #20afd6;
+    color: #20afd6;
+}
+
+.social-icon.socicon-kkbox:before {
+    content: "\e93e"
+}
+
+.socicon-komoot {
+    background-color: #6AA127;
+    color: #6AA127;
+}
+
+.social-icon.socicon-komoot:before {
+    content: "\e93a"
 }
 
 .socicon-lanyrd {
@@ -970,6 +1015,15 @@
 
 .social-icon.socicon-playstation:before {
     content: "\e03d"
+}
+
+.socicon-pocketcasts {
+    background-color: #F43E37;
+    color: #F43E37;
+}
+
+.social-icon.socicon-pocketcasts:before {
+    content: "\e943"
 }
 
 .socicon-ravelry {
