@@ -1,0 +1,16 @@
+{
+  "name": "wpzoom-social-icons-block-cgb-guten-block",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "cgb-scripts start",
+    "build": "cgb-scripts build",
+    "eject": "cgb-scripts eject"
+  },
+  "dependencies": {
+    "@wordpress/token-list": "^1.9.0",
+    "cgb-scripts": "1.22.0",
+    "classnames": "^2.2.6",
+    "urijs": "^1.19.6"
+  }
+}

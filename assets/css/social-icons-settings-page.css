@@ -1,0 +1,27 @@
+.zoom-social-icons-settings .form-table {
+    background-color: #ffffff;
+    box-shadow: 0 0 0 1px #ccd0d4, 0 1px 1px 1px rgba(0, 0, 0, .04);
+}
+
+.zoom-social-icons-settings .form-table th[scope='row'] {
+    padding-left: 20px;
+}
+
+.zoom-social-icons-settings .filter-links li > a {
+    border-bottom: none;
+}
+
+.zoom-social-icons-settings .filter-links li > a:focus {
+    box-shadow: none;
+    outline: 0;
+}
+
+.zoom-social-icons-settings .form-table td span.description {
+    font-style: italic;
+    padding-left: 50px;
+    color: #666;
+}
+
+.zoom-social-icons-settings .tab {
+    display: none;
+}

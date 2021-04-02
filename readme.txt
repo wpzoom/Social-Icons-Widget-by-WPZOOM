@@ -1,14 +1,14 @@
-=== Social Icons Widget by WPZOOM ===
-Contributors: WPZOOM, nvartolomei, ciorici
+=== Social Icons Widget & Block by WPZOOM ===
+Contributors: WPZOOM, nvartolomei, ciorici, llemurya
 Donate link: https://www.wpzoom.com/
-Tags: social icons, social networks, social media, social profiles, widget, twitter, facebook, google, pinterest, foursquare, yahoo, skype, yelp, feedburner, linkedin, viadeo, xing, myspace, soundcloud, spotify, grooveshark, lastfm, youtube, vimeo, dailymotion, vine, flickr, 500px, instagram, wordpress, tumblr, blogger, technorati, reddit, dribbble, stumbleupon, digg, envato, behance, delicious, deviantart, forrst, play, zerply, wikipedia, apple, flattr, github, chimein, friendfeed, newsvine, identica, bebo, zynga, steam, xbox, windows, outlook, coderwall, tripadvisor, appnet, goodreads, tripit, lanyrd, slideshare, buffer, rss, vkontakte, disqus, houzz, mail, patreon, paypal, smugmug, swarm, triplej, yammer, stackoverflow, drupal, odnoklassniki, android, meetup, persona, airbnb, baidu, ebay, medium, periscope, lookbook, feedly, snapchat, telegram, bloglovin, fontawesome, tidal, deezer, unsplash, whatsapp, flipboard, discord, academia, academicons, ok, tiktok, zillow, aparat, shutterstock, zomato, thefork, fork
-Requires at least: 4.3
-Tested up to: 5.3
+Tags: social icons, social networks, social media, social media icons, icons, social profiles, social widget, widget, block, social block, block icons, academicons, elementor, social networking, sharing, share buttons, fontawesome
+Requires at least: 5.0
+Tested up to: 5.7
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Social Icons Widget to displays links to social sharing websites. Supports more than 100 sites and includes 400 icons.
+Social Icons Widget & Block helps adding icons with links to social media profiles on your website. Supports more than 100 websites and includes 400 icons.
 
 == Description ==
 
@@ -16,7 +16,7 @@ Social Icons Widget to displays links to social sharing websites. Supports more 
 
 **[View Demo](https://demo.wpzoom.com/social-icons/)**
 
-**Social Icons Widget** helps you to add quickly icons with links to your profiles from different social networks. The plugin includes 4 icon sets, which gives you the possibility to use the widget for more than just linking to your social networks. You can use generic icons to add links to anything you want.
+**Social Icons Widget & Block** helps you to add quickly icons with links to your profiles from different social networks. The plugin includes several icon sets, which gives you the possibility to use the widget for more than just linking to your social media profiles. You can use generic icons to add links to anything you want.
 
 > With the help of WPZOOM’s excellent Social Icons Widget plugin, you can link to all your social network profiles in no time, letting your visitors easily get in touch with you on all social media channels.
 > ⭐️⭐️⭐️⭐️⭐️
@@ -24,6 +24,11 @@ Social Icons Widget to displays links to social sharing websites. Supports more 
 
 
 [youtube https://www.youtube.com/watch?v=mFClpAjzCpc]
+
+= What's new in 4.0.0 =
+* **NEW: Gutenberg Block**
+* New icon styles in the new Social Icons Block
+* New options to customize your icons: change margin, padding, alignment, roundness etc.
 
 = What's new in 3.0.0 =
 
@@ -61,7 +66,8 @@ You can view the widget live in all our themes at [WPZOOM](https://www.wpzoom.co
 
 = Features: =
 
-* 80+ Sites/Social Networks supported
+* Gutenberg Block - **NEW**
+* 100+ Sites/Social Networks supported
 * 400+ Custom Icons
 * 5 Icons Sets
 * FontAwesome Integration
@@ -83,7 +89,7 @@ You can view the widget live in all our themes at [WPZOOM](https://www.wpzoom.co
 
 Icons are provided by [socicon](http://www.socicon.com) icon font.
 
-Twitter, Facebook, Google+, Instagram, Pinterest, Snapchat, Skype, Yelp, Feedburner, LinkedIn, Bloglovin', Lookbook, Feedly, Periscope, SoundCloud, Spotify, Last.fm, YouTube, Vimeo, Vine, Flickr, 500px, Tumblr, Blogger, Reddit, Dribbble, Envato, Behance, DeviantArt, GitHub, RSS, Disqus, Stackoverflow, and many others.
+Twitter, Facebook, Google+, Instagram, Pinterest, Snapchat, Skype, Yelp, Feedburner, LinkedIn, Bloglovin', Lookbook, Feedly, Periscope, SoundCloud, Spotify, Last.fm, YouTube, Vimeo, Vine, Flickr, 500px, Tumblr, Blogger, Reddit, Dribbble, Envato, Behance, DeviantArt, GitHub, RSS, Disqus, Stackoverflow, Komoot, Tiktok, Mailchimp, Podcasts and many others.
 
 = Credits =
 
@@ -116,14 +122,48 @@ You can also create a hidden widget area using a plugin like Custom Sidebars if 
 
 == Screenshots ==
 
-1. Rounded Corners Style
-2. Square Style
-3. Rounded Icons Style
-4. No Background Style
-5. With Icon label
-6. Widget Settings
+1. NEW: Social Icons Block
+2. NEW: Social Icons Block
+3. Rounded Corners Style
+4. Square Style
+5. Rounded Icons Style
+6. No Background Style
+7. With Icon label
+8. Widget Settings
 
 == Changelog ==
+
+= 4.1.1 =
+* New icons: Komoot, Gab, KKBox, Etsy, CastBox, Pocketcasts
+
+= 4.1.0 =
+* New options on the settings page to disable individual icon sets
+* Plugin optimization: enabled font preloading to improve the PageSpeed score. This option can be disabled from the Settings page.
+* New icons: Guilded, ko-fi, MeWe, Mail.ru, iHeartRadio, PlayerFM, Stitcher (new icon), Ravelry, NewGrounds
+
+= 4.0.5 =
+* New icons: Mailchimp, Parler, Nextdoor (updated icon)
+
+= 4.0.4 =
+* Bug fix when using the Social Icons Block as a Reusable Block
+* Fixed compatibility issues with Elementor
+* New icon: Fiverr
+
+= 4.0.3 =
+* Fixed a conflict with the Divi Booster plugin
+* Minor performance improvements
+* New icons: Apple Podcasts, Google Podcasts, Overcast, Google News, Deviantart (updated), RedBubble
+
+= 4.0.2 =
+* New icons: Patreon (updated), Zazzle, Displate, Pixiv, Anchorfm, SSRN, Yummly
+
+= 4.0.1 =
+* Fixed a bug affecting column blocks after 4.0 update
+
+= 4.0.0 =
+* NEW: Gutenberg Block - Social Icons Block
+* New icon styles in the new Social Icons Block
+* New options to customize your icons: change margin, padding, alignment, roundness etc.
 
 = 3.4.2 =
 * New Icons: ArtStation, Issuu, Google Calendar, Google Maps
@@ -262,6 +302,9 @@ You can also create a hidden widget area using a plugin like Custom Sidebars if 
 * Initial release.
 
 == Upgrade Notice ==
+
+= 4.0.0 =
+Major update. We've added a new Social Icons Block in the new Gutenberg editor!
 
 = 3.0.0 =
 Major update. Make sure to check if all your icons work fine.

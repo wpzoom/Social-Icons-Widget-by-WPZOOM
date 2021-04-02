@@ -26,7 +26,8 @@
     src: url(../font/academicons.eot?v=1.8.6);
     src: url(../font/academicons.eot?v=1.8.6) format('embedded-opentype'), url(../font/academicons.ttf?v=1.8.6) format('truetype'), url(../font/academicons.woff?v=1.8.6) format('woff'), url(../font/academicons.svg?v=1.8.6#academicons) format('svg');
     font-weight: 400;
-    font-style: normal
+    font-style: normal;
+    font-display: block;
 }
 
 .academicons {

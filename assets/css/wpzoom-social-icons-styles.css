@@ -1,0 +1,143 @@
+.zoom-social-icons-list {
+    list-style-type: none;
+}
+
+.zoom-social_icons-list__item {
+    margin: 0 0 10px;
+}
+
+.zoom-social_icons-list__label {
+    margin-left: 4px;
+}
+
+.zoom-social-icons-list--no-labels .zoom-social_icons-list__item {
+    display: inline-block;
+    margin: 4px;
+    border: none;
+}
+
+.zoom-social-icons-list .socicon,
+.zoom-social-icons-list .dashicons,
+.zoom-social-icons-list .genericon,
+.zoom-social-icons-list .academicons,
+.zoom-social-icons-list .fa
+{
+    padding: 8px;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    -moz-transition: opacity .2s;
+    -webkit-transition: opacity .2s;
+    transition: opacity .2s;
+    top: 0px;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    font-size: 1.2em;
+}
+
+.zoom-social-icons-list--with-canvas .socicon,
+.zoom-social-icons-list--with-canvas .dashicons,
+.zoom-social-icons-list--with-canvas .genericon,
+.zoom-social-icons-list--with-canvas .academicons,
+.zoom-social-icons-list--with-canvas .fa
+{
+    color: #ffffff;
+}
+
+.zoom-social-icons-list--without-canvas .socicon,
+.zoom-social-icons-list--without-canvas .dashicons,
+.zoom-social-icons-list--without-canvas .genericon,
+.zoom-social-icons-list--without-canvas .academicons,
+.zoom-social-icons-list--without-canvas .fa
+{
+    background: none;
+}
+
+/* .widget because we need higher css specificity */
+.widget .zoom-social-icons-list--without-canvas {
+    margin-left: -8px;
+    margin-top: -4px;
+}
+
+.widget .zoom-social-icons-list--no-labels.zoom-social-icons-list--without-canvas {
+    margin-left: -14px;
+    margin-top: -8px;
+}
+
+.zoom-social-icons-list--rounded .socicon,
+.zoom-social-icons-list--rounded .genericon,
+.zoom-social-icons-list--rounded .academicons,
+.zoom-social-icons-list--rounded .dashicons,
+.zoom-social-icons-list--rounded .fa
+{
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.zoom-social_icons-list__link {
+    text-align: center;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+}
+
+.zoom-social_icons-list__link:hover {
+    opacity: .9;
+    border: none;
+    text-decoration: none;
+    box-shadow: none !important;
+}
+
+.zoom-social-icons-list--round .socicon,
+.zoom-social-icons-list--round .genericon,
+.zoom-social-icons-list--round .academicons,
+.zoom-social-icons-list--round .dashicons,
+.zoom-social-icons-list--round .fa
+{
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+}
+
+.zoom-social-icons-list {
+    margin: 0;
+    padding: 0;
+}
+
+.elementor-widget-wp-widget-zoom-social-icons-widget .zoom-social-icons-list--align-left,
+.zoom-social-icons-widget .zoom-social-icons-list--align-left {
+    text-align: left;
+}
+
+.elementor-widget-wp-widget-zoom-social-icons-widget .zoom-social-icons-list--align-right,
+.zoom-social-icons-widget .zoom-social-icons-list--align-right {
+    text-align: right;
+}
+
+.elementor-widget-wp-widget-zoom-social-icons-widget .zoom-social-icons-list--align-center,
+.zoom-social-icons-widget .zoom-social-icons-list--align-center {
+    text-align: center;
+}
+
+
+/*
+Text meant only for screen readers.
+Provides support for themes that do not bundle this CSS yet.
+@see https://make.wordpress.org/accessibility/2015/02/09/hiding-text-for-screen-readers-with-wordpress-core/
+***********************************/
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute ! important;
+    width: 1px;
+    word-wrap: normal ! important;
+}

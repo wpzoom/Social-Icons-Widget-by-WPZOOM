@@ -1,0 +1,12 @@
+# Omit files and folders when repository is downloaded.
+.gitattributes export-ignore
+.gitignore export-ignore
+/block/package-lock.json export-ignore
+/block/package.json export-ignore
+/block/src/block export-ignore
+/block/src/blocks.js export-ignore
+/block/src/common.scss export-ignore
+/block/.editorconfig export-ignore
+/block/.eslintignore export-ignore
+/block/.eslintrc.json export-ignore
+/block/.eslintrc.json export-ignore
