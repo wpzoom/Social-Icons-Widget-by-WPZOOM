@@ -59,7 +59,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
 	    add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
 
 
-        $this->icons = include WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'icons-data.php';
+        $this->icons = include WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'includes/icons-data.php';
 	    $removed_keys = ['fab', 'fas', 'far'];
 	    $this->icons = array_diff_key($this->icons, array_flip($removed_keys));
         $this->icons = apply_filters('zoom_social_icons_filter', $this->icons);
