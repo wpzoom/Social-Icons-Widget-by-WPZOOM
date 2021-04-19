@@ -5,7 +5,7 @@ Tags: social icons, social networks, social media, social media icons, icons, so
 Requires at least: 5.0
 Tested up to: 5.7
 Stable tag: trunk
-License: GPLv2 or later
+License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Social Icons Widget & Block helps adding icons with links to social media profiles on your website. Supports more than 100 websites and includes 400 icons.
