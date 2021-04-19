@@ -1,0 +1,10 @@
+includes:
+    - vendor/szepeviktor/phpstan-wordpress/extension.neon
+parameters:
+    level: max
+    bootstrapFiles:
+        - social-icons-widget-by-wpzoom.php
+    paths:
+        - social-icons-widget-by-wpzoom.php
+        - includes
+    checkMissingIterableValueType: false

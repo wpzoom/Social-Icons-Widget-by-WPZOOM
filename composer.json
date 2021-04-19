@@ -17,5 +17,9 @@
             "email": "support@wpzoom.com"
         }
     ],
-    "require": {}
+    "scripts": {
+      "format": "@php ./vendor/bin/phpcbf",
+      "lint": "@php ./vendor/bin/phpcs",
+      "phpstan": "@php vendor/bin/phpstan analyse"
+    }
 }
