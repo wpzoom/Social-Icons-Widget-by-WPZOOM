@@ -7,3 +7,4 @@ block/node_modules
 assets/.DS_Store
 assets/css/.DS_Store
 block/.DS_Store
+/vendor/
