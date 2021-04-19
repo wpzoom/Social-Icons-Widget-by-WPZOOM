@@ -1,10 +1,16 @@
-block/node_modules
+**/node_modules/
 
-## Uncomment line below if you prefer to
-## keep compiled files out of version control
-# dist/
 .DS_Store
 assets/.DS_Store
 assets/css/.DS_Store
 block/.DS_Store
+
+phpcs.xml
+phpunit.xml
+Thumbs.db
+wp-cli.local.yml
+*.sql
+*.tar.gz
+*.zip
+
 /vendor/

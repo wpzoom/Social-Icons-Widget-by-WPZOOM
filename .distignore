@@ -42,3 +42,12 @@ webpack.config.js
 wp-cli.local.yml
 vendor
 yarn.lock
+/block/package-lock.json
+/block/package.json
+/block/src/block
+/block/src/blocks.js
+/block/src/common.scss
+/block/.editorconfig
+/block/.eslintignore
+/block/.eslintrc.json
+/block/.eslintrc.json
