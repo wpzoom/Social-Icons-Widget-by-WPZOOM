@@ -56,6 +56,7 @@ if ( empty( $wpzoom_social_icons_settings['disable-widget'] ) ) {
  * @return void
  */
 function zoom_social_icons_enqueue_fonts() {
+	// phpcs:disable WordPress.WP.EnqueuedResourceParameters.MissingVersion
 	if ( wp_style_is( 'wpzoom-social-icons-academicons' ) ) {
 		wp_enqueue_style( 'wpzoom-social-icons-font-academicons-ttf', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/academicons.ttf?v=1.8.6', array(), null );
 		wp_enqueue_style( 'wpzoom-social-icons-font-academicons-woff', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/academicons.woff?v=1.8.6', array(), null );
@@ -131,7 +132,8 @@ function zoom_social_icons_add_preload_to_rel_attribute( $tag, $handle, $href ) 
 	);
 
 	if ( in_array( $handle, $style_handlers ) ) {
-		$file_type = strtolower( pathinfo( basename( parse_url( $href, PHP_URL_PATH ) ), PATHINFO_EXTENSION ) );
+		$file      = parse_url( $href, PHP_URL_PATH );
+		$file_type = strtolower( pathinfo( basename( $file, PATHINFO_EXTENSION ) ) );
 
 		$file_type = ! empty( $file_type ) ? ( 'type="font/' . $file_type . '"' ) : '';
 		$tag       = preg_replace(
