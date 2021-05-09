@@ -133,6 +133,9 @@ You can also create a hidden widget area using a plugin like Custom Sidebars if 
 
 == Changelog ==
 
+= 4.1.2 =
+* Bug fix when font preloading is enabled.
+
 = 4.1.1 =
 * New icons: Komoot, Gab, KKBox, Etsy, CastBox, Pocketcasts
 

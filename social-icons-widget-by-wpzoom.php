@@ -5,13 +5,13 @@
  * Description: Social Icons Widget & Block to display links to social media networks websites. Supports most of the known social networks and includes more than 400 icons. Sort icons by Drag & Drop and change their color easily.
  * Author: WPZOOM
  * Author URI: https://www.wpzoom.com/
- * Version: 4.1.1
+ * Version: 4.1.2
  * License: GPLv2 or later
  * Text Domain: zoom-social-icons-widget
  * Domain Path: /languages
  */
 if ( ! defined( 'WPZOOM_SOCIAL_ICONS_PLUGIN_VERSION' ) ) {
-	define( 'WPZOOM_SOCIAL_ICONS_PLUGIN_VERSION', '4.1.1' );
+	define( 'WPZOOM_SOCIAL_ICONS_PLUGIN_VERSION', '4.1.2' );
 }
 
 if ( ! defined( 'WPZOOM_SOCIAL_ICONS_PLUGIN_URL' ) ) {
@@ -109,17 +109,11 @@ function zoom_social_icons_add_preload_to_rel_attribute( $tag, $handle, $href ) 
 		'wpzoom-social-icons-font-fontawesome-5-solid-woff2',
 	] );
 
-
-	if ( in_array( $handle, $style_handlers ) ) {
-		$file_type = strtolower( pathinfo( basename( parse_url( $href, PHP_URL_PATH ) ), PATHINFO_EXTENSION ) );
-
-		$file_type = ! empty( $file_type ) ? ( 'type="font/' . $file_type . '"' ) : '';
-		$tag       = preg_replace( [ "/='stylesheet'/", "/media='all'/" ], [
-			"=\"preload\" as=\"font\" ",
-			"{$file_type} crossorigin"
-		], $tag );
-
-	}
+    if ( in_array( $handle, $style_handlers ) ) {
+        $file_type = strtolower( pathinfo( basename( parse_url( $href, PHP_URL_PATH ) ), PATHINFO_EXTENSION ) );
+        $file_type = ! empty( $file_type ) ? ( "type='font/{$file_type}'" ) : '';
+        $tag       = preg_replace( array( "/='stylesheet'/", "/media='all'/", "/type=['\"]text\/(css)['\"]/" ), array( "='preload' as='font' ", $file_type . ' crossorigin', '' ), $tag );
+    }
 
 	return $tag;
 }
