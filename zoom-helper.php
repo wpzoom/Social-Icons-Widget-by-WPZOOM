@@ -113,10 +113,10 @@ if ( ! function_exists( 'zoom_get_pointer_data' ) ):
 			'target'         => '#wp-admin-bar-my-account',
 			'options'        => array(
 				'content'      => sprintf( '<h3> %s </h3> <p> %s </p>',
-					__( 'Rate ' . $plugin_name, 'plugindomain' ),
-					__( 'Thank you for using <b>' . $plugin_name . '.</b><br/>Would you mind taking a moment to rate it! It won\'t take more than two minutes<p><b>Thanks for your support!</b></p><p>' .
-					    '<a class="button button-primary button-hero" href="https://wordpress.org/support/plugin/social-icons-widget-by-wpzoom/reviews/" target="_blank">Rate ' . $plugin_name . ' Now!</a></p>' .
-					    '<p><a class="zoom-social-remind-me-later button button-secondary button-hero">Remind Me later!</a></p>', 'plugindomain' )
+					__( 'Rate Social Icons Widget by WPZOOM', 'zoom-social-icons-widget' ),
+					__( 'Thank you for using <b>Social Icons Widget by WPZOOM</b><br/>Would you mind taking a moment to rate it! It won\'t take more than two minutes.<p><b>Thanks for your support!</b></p><p>' .
+					    '<a class="button button-primary button-hero" href="https://wordpress.org/support/plugin/social-icons-widget-by-wpzoom/reviews/#new-post" target="_blank"> &#9733; Rate Now  &#9733;</a></p>' .
+					    '<p><a class="zoom-social-remind-me-later button button-secondary button-hero">Remind Me later!</a></p>', 'zoom-social-icons-widget' )
 				),
 				'position'     => array( 'edge' => 'top', 'align' => 'left' ),
 				'pointerClass' => 'wp-pointer zoom-pointer-class',
@@ -132,5 +132,3 @@ endif;
 add_action( 'admin_enqueue_scripts', 'zoom_pointer_load', 1000 );
 add_action( 'wp_ajax_zoom_ajax_set_pointer_transient', 'zoom_ajax_set_pointer_transient' );
 add_filter( 'zoom_admin_pointers_widgets', 'zoom_register_pointer_callback' );
-
-
