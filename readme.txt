@@ -3,6 +3,7 @@ Contributors: WPZOOM, nvartolomei, ciorici, llemurya
 Donate link: https://www.wpzoom.com/
 Tags: social icons, social networks, social media, social media icons, icons, social profiles, social widget, widget, block, social block, block icons, academicons, elementor, social networking, sharing, share buttons, fontawesome
 Requires at least: 5.0
+Requires PHP: 5.6
 Tested up to: 5.7
 Stable tag: trunk
 License: GPLv2 or later
@@ -11,6 +12,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Social Icons Widget & Block helps adding icons with links to social media profiles on your website. Supports more than 100 websites and includes 400 icons.
 
 == Description ==
+
+⭐️ **[Social Icons Widget PRO](https://www.wpzoom.com/plugins/social-widget/?utm_source=wporg&utm_medium=website&utm_campaign=free_description)** *NOW AVAILABLE!* ⭐️
 
 > Did you find this plugin helpful? Please consider [leaving a 5-star review](http://wordpress.org/support/view/plugin-reviews/social-icons-widget-by-wpzoom).
 
@@ -24,6 +27,18 @@ Social Icons Widget & Block helps adding icons with links to social media profil
 
 
 [youtube https://www.youtube.com/watch?v=mFClpAjzCpc]
+
+= ⭐️ PRO FEATURES ⭐️ =
+* **Upload your SVG icons - 🆕**
+* **Load icons in SVG format - 🆕**
+* **Create your own custom icon set**
+* **Outstanding performance**
+* Premium Support
+* and many new features coming soon!
+
+⭐️ **[Get the PRO version!](https://www.wpzoom.com/plugins/social-widget/?utm_source=wporg&utm_medium=website&utm_campaign=free_description)** ⭐️
+
+
 
 = What's new in 4.0.0 =
 * **NEW: Gutenberg Block**
@@ -89,13 +104,17 @@ You can view the widget live in all our themes at [WPZOOM](https://www.wpzoom.co
 
 Icons are provided by [socicon](http://www.socicon.com) icon font.
 
-Twitter, Facebook, Google+, Instagram, Pinterest, Snapchat, Skype, Yelp, Feedburner, LinkedIn, Bloglovin', Lookbook, Feedly, Periscope, SoundCloud, Spotify, Last.fm, YouTube, Vimeo, Vine, Flickr, 500px, Tumblr, Blogger, Reddit, Dribbble, Envato, Behance, DeviantArt, GitHub, RSS, Disqus, Stackoverflow, Komoot, Tiktok, Mailchimp, Podcasts and many others.
+Twitter, Facebook, Google+, Instagram, Pinterest, Snapchat, Skype, Yelp, Feedburner, LinkedIn, Bloglovin', Lookbook, Feedly, Periscope, SoundCloud, Spotify, Last.fm, YouTube, Vimeo, Vine, Flickr, 500px, Tumblr, Blogger, Reddit, Dribbble, Envato, Behance, DeviantArt, GitHub, RSS, Disqus, Stackoverflow, Komoot, Tiktok, Mailchimp, Podcasts, Telegram and many others.
 
 = Credits =
 
 Social Icons are provided by [socicon](http://www.socicon.com) icon font.
 
 [Academicons](https://jpswalsh.github.io/academicons/) are provided by James Walsh.
+
+= GDPR COMPLIANCE =
+
+Social Icons Widget does not collect any information from your visitors, therefore it’s **100% GDPR compliant**.
 
 
 = Get Involved =
@@ -132,6 +151,9 @@ You can also create a hidden widget area using a plugin like Custom Sidebars if 
 8. Widget Settings
 
 == Changelog ==
+
+= 4.1.3 =
+* Added new tab in the Settings page with a promo for the new PRO version
 
 = 4.1.2 =
 * Bug fix when font preloading is enabled.
