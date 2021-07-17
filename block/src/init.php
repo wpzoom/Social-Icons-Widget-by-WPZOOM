@@ -259,4 +259,4 @@ function wpzoom_social_icons_block_enqueue_secondary_assets() {
 add_action( 'enqueue_block_assets', 'wpzoom_social_icons_block_enqueue_secondary_assets' );
 
 //Hook: Add block category.
-add_filter( 'block_categories', 'wpzoom_social_icons_block_add_custom_category', 10, 2 );
+add_filter( 'block_categories_all', 'wpzoom_social_icons_block_add_custom_category', 10, 2 );
