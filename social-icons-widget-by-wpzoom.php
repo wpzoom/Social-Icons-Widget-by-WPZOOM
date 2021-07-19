@@ -127,6 +127,15 @@ function zoom_social_icons_widget_load_textdomain() {
 }
 
 /**
+ * Hide old widget
+ */
+function zoom_social_icons_widget_hide( $widget_types ) {
+	$widget_types[] = 'zoom-social-icons-widget';
+	return $widget_types;
+}
+add_filter( 'widget_types_to_hide_from_legacy_widget_block', 'zoom_social_icons_widget_hide' );
+
+/**
  * Generate select values for block and widget options that are synced with fonts loading values from Settings Page.
  *
  * @param string $type

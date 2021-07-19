@@ -53,6 +53,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget
             array(
                 'classname' => 'zoom-social-icons-widget',
                 'description' => __('Sortable widget that supports more than 80+ social networks', 'zoom-social-icons-widget'),
+                'show_instance_in_rest' => true,
             )
         );
 

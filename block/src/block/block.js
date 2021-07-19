@@ -73,7 +73,6 @@ registerBlockType('wpzoom-blocks/social-icons', {
         __('Fontawesome', "zoom-social-icons-widget"),
         __('Academic Icons', "zoom-social-icons-widget"),
     ],
-
     attributes: {
         wasStyled: {
             type: 'boolean',
@@ -242,6 +241,26 @@ registerBlockType('wpzoom-blocks/social-icons', {
             label: __("Color Icon / No Background with label", "zoom-social-icons-widget"),
         }
     ],
+    transforms: {
+        from: [
+            {
+                type: 'block',
+                blocks: [ 'core/legacy-widget' ],
+                isMatch: ( { idBase, instance } ) => {
+                    if ( ! instance?.raw ) {
+                        // Can't transform if raw instance is not shown in REST API.
+                        return false;
+                    }
+                    return idBase === 'zoom-social-icons-widget';
+                },
+                transform: ( { instance } ) => {
+                    return createBlock( 'wpzoom-blocks/social-icons', {
+                        name: instance.raw.name,
+                    } );
+                },
+            },
+        ]
+    },
     /**
      * The edit function describes the structure of your block in the context of the editor.
      * This represents what the editor will render when the block is used.
