@@ -12,6 +12,8 @@
 import './block/block.js';
 import wpzoomCategoryIcon from './block/wpzoomCategoryIcon';
 
+import { updateCategory } from '@wordpress/blocks';
+
 ( function() {
-    wp.blocks.updateCategory( 'wpzoom-blocks', { icon: wpzoomCategoryIcon } );
-} )();
+	updateCategory( 'wpzoom-blocks', { icon: wpzoomCategoryIcon } );
+}() );

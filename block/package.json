@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "@wordpress/token-list": "^1.9.0",
-    "cgb-scripts": "1.22.0",
+    "babel-loader": "^7.1.5",
+    "cgb-scripts": "^1.22.0",
     "classnames": "^2.2.6",
     "urijs": "^1.19.6"
   }

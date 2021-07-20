@@ -10,7 +10,7 @@ import ModalColorPicker from './ModalColorPicker';
 import URI from 'urijs';
 import { __ } from '@wordpress/i18n';
 import { Component, Fragment } from '@wordpress/element';
-import { select } from '@wordpress/data';
+import { withSelect } from '@wordpress/data';
 import { Icon, Button, Popover } from '@wordpress/components';
 import { AlignmentToolbar, BlockControls } from '@wordpress/block-editor';
 
@@ -245,8 +245,9 @@ class Edit extends Component {
 	}
 
 	getActiveStyle() {
+		const { blockStyles } = this.props;
 		const blockStyle = Helper.getActiveStyle(
-			select( 'core/blocks' ).getBlockStyles( this.props.name ),
+			blockStyles,
 			this.props.className
 		);
 		return blockStyle.name;
@@ -747,31 +748,42 @@ class Edit extends Component {
 							<Icon icon={ 'insert' } size={ '20' } />
 						</Button>
 					) }
-
-					<SocialIconsModal
-						className={ classnames( Helper.getBlockStyle( className ) ) }
-						showIconsLabel={ attributes.showIconsLabel }
-						iconsBorderRadius={ attributes.iconsBorderRadius }
-						show={ attributes.showModal }
-						url={ attributes.selectedIcons[ attributes.activeIconIndex ].url }
-						label={ attributes.selectedIcons[ attributes.activeIconIndex ].label }
-						icon={ attributes.selectedIcons[ attributes.activeIconIndex ].icon }
-						iconKit={
-							attributes.selectedIcons[ attributes.activeIconIndex ].iconKit
-						}
-						color={ attributes.selectedIcons[ attributes.activeIconIndex ].color }
-						hoverColor={
-							attributes.selectedIcons[ attributes.activeIconIndex ].hoverColor
-						}
-						save={ this.saveModalHandler }
-						delete={ this.deleteIconHandler }
-						showDeleteBtn={ attributes.selectedIcons.length > 1 }
-						onClose={ this.closeModal }
-					/>
+					{ attributes.selectedIcons[ attributes.activeIconIndex ] && (
+						<SocialIconsModal
+							className={ classnames( Helper.getBlockStyle( className ) ) }
+							showIconsLabel={ attributes.showIconsLabel }
+							iconsBorderRadius={ attributes.iconsBorderRadius }
+							show={ attributes.showModal }
+							url={ attributes.selectedIcons[ attributes.activeIconIndex ].url }
+							label={ attributes.selectedIcons[ attributes.activeIconIndex ].label }
+							icon={ attributes.selectedIcons[ attributes.activeIconIndex ].icon }
+							iconKit={
+								attributes.selectedIcons[ attributes.activeIconIndex ].iconKit
+							}
+							color={ attributes.selectedIcons[ attributes.activeIconIndex ].color }
+							hoverColor={
+								attributes.selectedIcons[ attributes.activeIconIndex ].hoverColor
+							}
+							save={ this.saveModalHandler }
+							delete={ this.deleteIconHandler }
+							showDeleteBtn={ attributes.selectedIcons.length > 1 }
+							onClose={ this.closeModal }
+						/>
+					) }
 				</div>
 			</Fragment>
 		);
 	}
 }
 
-export default Edit;
+const applyWithSelect = withSelect( ( select, props ) => {
+	const { getBlockStyles } = select( 'core/blocks' );
+
+	return {
+		blockStyles: getBlockStyles( props.name ),
+	};
+} );
+
+export default wp.compose.compose(
+	applyWithSelect
+)( Edit );
