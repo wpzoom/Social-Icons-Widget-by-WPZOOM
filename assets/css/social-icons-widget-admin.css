@@ -287,3 +287,8 @@ border-radius: 0;
 .block-editor-block-list__layout .block-editor-block-list__block[data-is-social-icons-widget] {
     z-index: 999;
 }
+
+.wp-block-legacy-widget .zoom-social-icons__notice {
+	display: block !important;
+	font-size: 14px;
+}
