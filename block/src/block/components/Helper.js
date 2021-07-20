@@ -1,142 +1,146 @@
-import URI from 'urijs';
-import {find, findKey, forEach, isObject} from 'lodash';
+/* global wpzSocialIconsBlock */
 
-const {icons} = wpzSocialIconsBlock;
+import URI from 'urijs';
+import { find, findKey, forEach, isObject } from 'lodash';
+
+const { icons } = wpzSocialIconsBlock;
 
 import TokenList from '@wordpress/token-list';
 
 class Helper {
+	static filterIcons( searchIcon ) {
+		const collector = {};
 
-    static filterIcons(searchIcon) {
-        let collector = {};
+		if ( searchIcon === '' ) {
+			return icons;
+		}
 
-        if (searchIcon == '')
-            return icons;
+		forEach( icons, ( iconsArray, key ) => {
+			collector[ key ] = iconsArray.filter( ( item ) => {
+				if ( isObject( item ) ) {
+					return item.icon.indexOf( searchIcon ) > -1; // && category;
+				}
 
-        forEach(icons, (iconsArray, key) => {
-            collector[key] = iconsArray.filter((item) => {
-                if (isObject(item)) {
-                    return item.icon.indexOf(searchIcon) > -1;// && category;
-                }
+				return item.indexOf( searchIcon ) > -1;
+			} );
+		} );
 
-                return item.indexOf(searchIcon) > -1;
-            });
-        });
+		return collector;
+	}
 
-        return collector;
-    }
+	static filterUrlScheme( url ) {
+		const schemas = {
+			mailto: 'mail',
+			viber: 'viber',
+			skype: 'skype',
+			tg: 'tg',
+			tel: 'mobile',
+			sms: 'comments',
+			fax: 'fax',
+			news: 'newspaper-o',
+			feed: 'rss',
+		};
 
-    static filterUrlScheme(url) {
+		const domains = {
+			'feedburner.google.com': 'rss',
+			'ok.ru': 'odnoklassniki',
+			't.me': 'telegram',
+			'wa.me': 'whatsapp',
+			'zen.yandex.com': 'zen-yandex',
+			'zen.yandex.ru': 'zen-yandex',
+		};
 
-        const schemas = {
-            'mailto': 'mail',
-            'viber': 'viber',
-            'skype': 'skype',
-            'tg': 'tg',
-            'tel': 'mobile',
-            'sms': 'comments',
-            'fax': 'fax',
-            'news': 'newspaper-o',
-            'feed': 'rss'
-        };
+		const uri = new URI( url );
 
-        const domains = {
-            'feedburner.google.com': 'rss',
-            'ok.ru': 'odnoklassniki',
-            't.me': 'telegram',
-            'wa.me': 'whatsapp',
-            'zen.yandex.com': 'zen-yandex',
-            'zen.yandex.ru': 'zen-yandex'
-        };
+		let domain =
+			uri.domain() !== undefined ?
+				uri.domain().split( '.' ).shift() :
+				uri.scheme();
 
-        let uri = new URI(url);
+		const schemaHasIcon = findKey( schemas, ( val, key ) => {
+			return key === uri.scheme();
+		} );
 
-        let domain = uri.domain() !== undefined ? uri.domain().split('.').shift() : uri.scheme();
+		domain = schemaHasIcon !== undefined ? schemas[ schemaHasIcon ] : domain;
 
-        let schemaHasIcon = findKey(schemas, (val, key) => {
-            return key === uri.scheme();
-        });
+		const domainHasIcon = findKey( domains, ( val, key ) => {
+			return key === uri.hostname();
+		} );
 
-        domain = schemaHasIcon !== undefined ? schemas[schemaHasIcon] : domain;
+		return domainHasIcon !== undefined ? domains[ domainHasIcon ] : domain;
+	}
 
-        let domainHasIcon = findKey(domains, (val, key) => {
-            return key === uri.hostname();
-        });
+	static hyphensToSpaces( s ) {
+		return s.replace( /-/g, ' ' );
+	}
 
-        return (domainHasIcon !== undefined) ? domains[domainHasIcon] : domain;
-    }
+	static capitalize( s ) {
+		if ( typeof s !== 'string' ) {
+			return '';
+		}
+		return s.charAt( 0 ).toUpperCase() + s.slice( 1 );
+	}
 
-    static hyphensToSpaces(s) {
-        return s.replace(/-/g, ' ');
-    }
+	static humanizeIconLabel( s ) {
+		return this.hyphensToSpaces( this.capitalize( s ) );
+	}
 
-    static capitalize(s) {
-        if (typeof s !== 'string') return '';
-        return s.charAt(0).toUpperCase() + s.slice(1)
-    }
+	static getBlockStyle( className ) {
+		const regex = /is-style-(\S*)/g;
+		const m = regex.exec( className );
+		return m !== null ? m[ 1 ] : null;
+	}
 
-    static humanizeIconLabel(s) {
-        return this.hyphensToSpaces(this.capitalize(s));
-    }
+	static getIconClassList( iconKit, icon ) {
+		const classes = { 'social-icon': true };
+		classes[ iconKit ] = true;
 
-    static getBlockStyle(className) {
-        const regex = /is-style-(\S*)/g;
-        let m = regex.exec(className);
-        return m !== null ? m[1] : null;
-    }
+		if ( [ 'fab', 'fas', 'far' ].includes( iconKit ) ) {
+			classes[ 'fa-' + icon ] = true;
+		} else {
+			classes[ iconKit + '-' + icon ] = true;
+		}
 
-    static getIconClassList(iconKit, icon) {
+		return classes;
+	}
 
-        let classes = {'social-icon': true};
-        classes[iconKit] = true;
+	static addPercentagePipe( value ) {
+		return `${ value }%`;
+	}
 
-        if (['fab', 'fas', 'far'].includes(iconKit)) {
-            classes['fa-' + icon] = true;
-        } else {
-            classes[iconKit + '-' + icon] = true;
-        }
+	static addPercentageHalfPipe( value ) {
+		return `${ 0.5 * value }%/${ value }%`;
+	}
 
-        return classes;
+	static addPixelsPipe( value ) {
+		return `${ value }px`;
+	}
 
-    }
+	static arrayMoveMutate( array, from, to ) {
+		array.splice( to < 0 ? array.length + to : to, 0, array.splice( from, 1 )[ 0 ] );
+	}
 
-    static addPercentagePipe(value) {
-        return `${value}%`;
-    }
+	static arrayMove( array, from, to ) {
+		array = array.slice();
+		this.arrayMoveMutate( array, from, to );
+		return array;
+	}
 
-    static addPercentageHalfPipe(value) {
-        return `${0.5 * value}%/${value}%`;
-    }
+	static getActiveStyle( styles, className ) {
+		for ( const style of new TokenList( className ).values() ) {
+			if ( style.indexOf( 'is-style-' ) === -1 ) {
+				continue;
+			}
 
-    static addPixelsPipe(value) {
-        return `${value}px`;
-    }
+			const potentialStyleName = style.substring( 9 );
+			const activeStyle = find( styles, { name: potentialStyleName } );
+			if ( activeStyle ) {
+				return activeStyle;
+			}
+		}
 
-    static arrayMoveMutate(array, from, to) {
-        array.splice(to < 0 ? array.length + to : to, 0, array.splice(from, 1)[0]);
-    }
-
-    static arrayMove(array, from, to) {
-        array = array.slice();
-        this.arrayMoveMutate(array, from, to);
-        return array;
-    }
-
-    static getActiveStyle(styles, className) {
-        for (const style of new TokenList(className).values()) {
-            if (style.indexOf('is-style-') === -1) {
-                continue;
-            }
-
-            const potentialStyleName = style.substring(9);
-            const activeStyle = find(styles, {name: potentialStyleName});
-            if (activeStyle) {
-                return activeStyle;
-            }
-        }
-
-        return find(styles, 'isDefault');
-    }
+		return find( styles, [ 'isDefault', true ] );
+	}
 }
 
 export default Helper;

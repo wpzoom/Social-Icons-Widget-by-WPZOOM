@@ -88,6 +88,9 @@ function wpzoom_social_icons_block_enqueue_assets() {
 	);
 }
 
+// Hook: Block assets.
+add_action( 'init', 'wpzoom_social_icons_block_enqueue_assets' );
+
 /**
  * Add custom block category
  *
@@ -105,8 +108,13 @@ function wpzoom_social_icons_block_add_custom_category( $categories, $post ) {
 	);
 }
 
-// Hook: Block assets.
-add_action( 'init', 'wpzoom_social_icons_block_enqueue_assets' );
+//Hook: Add block category.
+global $wp_version;
+// if ( version_compare( $wp_version, '5.8.0', '<' ) ) {
+// 	add_filter( 'block_categories', 'wpzoom_social_icons_block_add_custom_category', 10, 2 );
+// } else {
+	add_filter( 'block_categories_all', 'wpzoom_social_icons_block_add_custom_category', 10, 2 );
+// }
 
 /**
  * Register css and js files.
@@ -258,10 +266,3 @@ function wpzoom_social_icons_block_enqueue_secondary_assets() {
 
 add_action( 'enqueue_block_assets', 'wpzoom_social_icons_block_enqueue_secondary_assets' );
 
-//Hook: Add block category.
-global $wp_version;
-if ( version_compare( $wp_version, '5.8.0', '<' ) ) {
-	add_filter( 'block_categories', 'wpzoom_social_icons_block_add_custom_category', 10, 2 );
-} else {
-	add_filter( 'block_categories_all', 'wpzoom_social_icons_block_add_custom_category', 10, 2 );
-}
