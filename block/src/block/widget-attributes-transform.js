@@ -1,3 +1,5 @@
+import { mapValues, merge } from 'lodash';
+
 /**
  * WordPress dependencies
  */
@@ -20,10 +22,14 @@ function convertIconProps( props ) {
  * Set global transforms that every block uses.
  *
  * @param {Object} props The passed props.
+ * @param {Object} defaultAttributes The block default attributes.
  * @return {Object} The transforms.
  */
-function widgetAttributesTransform( props ) {
-	const transforms = {
+function widgetAttributesTransform( props, defaultAttributes ) {
+	const defaults = mapValues( defaultAttributes, ( attr ) => {
+		return attr.default;
+	} );
+	const converted = {
 		wasStyled: true,
 		canvasType: props.icon_style,
 		showIconsLabel: props.show_icon_labels === 'true',
@@ -45,6 +51,8 @@ function widgetAttributesTransform( props ) {
 		title: props.title,
 		description: props.description,
 	};
+
+	const transforms = merge( defaults, converted );
 
 	// Icons border radius.
 	if ( transforms.iconsBackgroundStyle === 'rounded' ) {

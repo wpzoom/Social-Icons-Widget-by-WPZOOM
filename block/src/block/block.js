@@ -23,7 +23,11 @@ import widgetAttributesTransform from './widget-attributes-transform';
  */
 import { addFilter } from '@wordpress/hooks';
 import { __ } from '@wordpress/i18n';
-import { registerBlockType, createBlock } from '@wordpress/blocks'; // Import registerBlockType() from wp.blocks
+import { registerBlockType, createBlock, getBlockTypes, rawHandler, serialize } from '@wordpress/blocks'; // Import registerBlockType() from wp.blocks
+import { useDispatch } from '@wordpress/data';
+import { Disabled, ExternalLink, Text } from '@wordpress/components';
+import { Fragment } from '@wordpress/element';
+const { createHigherOrderComponent } = wp.compose;
 
 /**
  * Filter block attributes.
@@ -44,6 +48,81 @@ addFilter(
 
 		return attributes;
 	}
+);
+
+const withGroupedBlocks = createHigherOrderComponent( ( BlockEdit ) => {
+	return ( props ) => {
+		const { attributes } = props;
+		const legacyBlockName = props.name;
+		const { idBase, instance } = attributes;
+
+		if ( legacyBlockName === 'core/legacy-widget' && idBase === 'zoom-social-icons-widget' ) {
+			const blockType = getBlockTypes().filter( ( block ) => {
+				return block.name.indexOf( 'wpzoom-blocks/social-icons' ) !== -1;
+			} )[ 0 ];
+
+			const defaultBlockAttributes = blockType.attributes;
+			const blockAttributes = widgetAttributesTransform( instance.raw, defaultBlockAttributes );
+
+			const ConvertToSocialIconsBlock = ( { clientId } ) => {
+				const { replaceBlocks } = useDispatch( 'core/block-editor' );
+
+				// const warning = (
+				// 	<Disabled>
+				// 		<Text adjustLineHeightForInnerControls>
+				// 			{ __( 'Social Icons Widget is currently not supported properly by the new block-based widget screen in WordPress 5.8. Now you are editing the automaticaly converted legacy widget to a group block.', 'zoom-social-icons-widget' ) }
+				// 			{ __( 'You can also disable the new block-based widget screen by installing the', 'zoom-social-icons-widget' ) } <ExternalLink href="https://wordpress.org/plugins/classic-widgets/">Classic Widget plugin</ExternalLink>
+				// 		</Text>
+				// 	</Disabled>
+				// );
+
+				const innerBlocks = [
+					createBlock( 'core/heading', {
+						content: blockAttributes.title,
+						level: 3,
+						placeholder: __( 'Title', 'zoom-social-icons-widget' ),
+					} ),
+					createBlock( 'core/paragraph', {
+						content: blockAttributes.description,
+						placeholder: __( 'Text above icons', 'zoom-social-icons-widget' ),
+					} ),
+					createBlock( 'wpzoom-blocks/social-icons', blockAttributes ),
+				];
+
+				return (
+					<Fragment>
+						{
+							replaceBlocks( clientId, [
+								createBlock( 'core/group',
+									{
+										tagName: 'div',
+										layout: { inherit: true },
+									},
+									innerBlocks,
+								),
+							] )
+						}
+					</Fragment>
+				);
+			};
+
+			return (
+				<ConvertToSocialIconsBlock clientId={ props.clientId } />
+			);
+		}
+
+		return (
+			<Fragment>
+				<BlockEdit { ...props } />
+			</Fragment>
+		);
+	};
+}, 'withGroupedBlock' );
+
+addFilter(
+	'editor.BlockEdit',
+	'wpzoom-blocks/social-icons',
+	withGroupedBlocks
 );
 
 /**
