@@ -1,4 +1,4 @@
-import { mapValues, merge } from 'lodash';
+import { mapValues, assign } from 'lodash';
 
 /**
  * WordPress dependencies
@@ -52,7 +52,7 @@ function widgetAttributesTransform( props, defaultAttributes ) {
 		description: props.description,
 	};
 
-	const transforms = merge( defaults, converted );
+	const transforms = assign( defaults, converted );
 
 	// Icons border radius.
 	if ( transforms.iconsBackgroundStyle === 'rounded' ) {
