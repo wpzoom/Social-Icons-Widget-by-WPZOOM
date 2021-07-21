@@ -3,7 +3,7 @@ import { mapValues, assign } from 'lodash';
 /**
  * WordPress dependencies
  */
-import { registerBlockStyle, unregisterBlockStyle } from '@wordpress/blocks';
+import { registerBlockStyle, unregisterBlockStyle, getBlockTypes } from '@wordpress/blocks';
 
 function convertIconProps( props ) {
 	return {
@@ -22,10 +22,14 @@ function convertIconProps( props ) {
  * Set global transforms that every block uses.
  *
  * @param {Object} props The passed props.
- * @param {Object} defaultAttributes The block default attributes.
  * @return {Object} The transforms.
  */
-function widgetAttributesTransform( props, defaultAttributes ) {
+function widgetAttributesTransform( props ) {
+	const blockType = getBlockTypes().filter( ( block ) => {
+		return block.name.indexOf( 'wpzoom-blocks/social-icons' ) !== -1;
+	} )[ 0 ];
+	const { attributes: defaultAttributes } = blockType;
+
 	const defaults = mapValues( defaultAttributes, ( attr ) => {
 		return attr.default;
 	} );

@@ -4,6 +4,7 @@
  * Registering a basic block with Gutenberg.
  * Simple block, renders and saves the same content without any interactivity.
  */
+import { assign } from 'lodash';
 
 //  Import CSS.
 import './editor.scss';
@@ -16,98 +17,90 @@ import blockIcon from './blockIcon';
 import previewImage from './previewImage';
 import Edit from './components/Edit';
 import Save from './components/Save';
-import widgetAttributesTransform from './widget-attributes-transform';
+import TransformToBlock from './legacy-transform/transform-to-block';
+import widgetAttributesTransform from './legacy-transform/widget-attributes-transform';
 
 /**
  * WordPress dependencies
  */
 import { addFilter } from '@wordpress/hooks';
 import { __ } from '@wordpress/i18n';
-import { registerBlockType, createBlock, getBlockTypes, rawHandler, serialize } from '@wordpress/blocks'; // Import registerBlockType() from wp.blocks
-import { useDispatch } from '@wordpress/data';
-import { Disabled, ExternalLink, Text } from '@wordpress/components';
+import { registerBlockType, createBlock } from '@wordpress/blocks'; // Import registerBlockType() from wp.blocks
 import { Fragment } from '@wordpress/element';
 const { createHigherOrderComponent } = wp.compose;
 
 /**
- * Filter block attributes.
+ * Filters registered block attributes, extending attributes to include `selectedIcons` & `showModal`.
+ *
+ * @param {Object} attributes Original block attributes.
+ *
+ * @return {Object} Filtered block attributes.
  */
-addFilter(
-	'blocks.getBlockAttributes',
-	'wpzoom-blocks/social-icons',
-	( attributes ) => {
-		if ( ! ( undefined === attributes.selectedIcons ) ) {
-			const selectedIconsClone = [ ...attributes.selectedIcons ];
-			selectedIconsClone.map( ( item ) => {
-				item.isActive = false;
-				return item;
-			} );
-			attributes.selectedIcons = selectedIconsClone;
-			attributes.showModal = false;
-		}
-
-		return attributes;
+function addAttributes( attributes ) {
+	if ( ! ( undefined === attributes.selectedIcons ) ) {
+		const selectedIconsClone = [ ...attributes.selectedIcons ];
+		selectedIconsClone.map( ( item ) => {
+			item.isActive = false;
+			return item;
+		} );
+		attributes.selectedIcons = selectedIconsClone;
+		attributes.showModal = false;
 	}
-);
 
-const withGroupedBlocks = createHigherOrderComponent( ( BlockEdit ) => {
-	return ( props ) => {
-		const { attributes } = props;
-		const legacyBlockName = props.name;
+	return attributes;
+}
+
+function applySaveClassnames( elem, blockType, attributes ) {
+	const { name: blockName } = blockType;
+	if ( blockName === 'core/heading' ) {
+		// do some stuff here
+	}
+
+	return elem;
+}
+
+function addBlockClassName( settings, name ) {
+	if ( name !== 'core/heading' || name !== 'core/paragraph' ) {
+		return settings;
+	}
+
+	return assign( {}, settings, {
+		supports: assign( {}, settings.supports, {
+			className: true,
+		} ),
+	} );
+}
+
+function setBlockCustomClassName( className, blockName ) {
+	if ( blockName === 'core/heading' ) {
+		className = classnames( 'widget-title subheading', className );
+	}
+	return className;
+}
+
+/**
+ * Override the default edit UI of legacy widget to replace with grouped inner blocks.
+ *
+ * @param {Function} BlockEdit Original component.
+ *
+ * @return {Function} Wrapped component.
+ */
+const withGroupedBlocks = createHigherOrderComponent(
+	( BlockEdit ) => ( props ) => {
+		const { attributes, name: legacyBlockName } = props;
 		const { idBase, instance } = attributes;
 
 		if ( legacyBlockName === 'core/legacy-widget' && idBase === 'zoom-social-icons-widget' ) {
-			const blockType = getBlockTypes().filter( ( block ) => {
-				return block.name.indexOf( 'wpzoom-blocks/social-icons' ) !== -1;
-			} )[ 0 ];
-
-			const defaultBlockAttributes = blockType.attributes;
-			const blockAttributes = widgetAttributesTransform( instance.raw, defaultBlockAttributes );
-
-			const ConvertToSocialIconsBlock = ( { clientId } ) => {
-				const { replaceBlocks } = useDispatch( 'core/block-editor' );
-
-				// const warning = (
-				// 	<Disabled>
-				// 		<Text adjustLineHeightForInnerControls>
-				// 			{ __( 'Social Icons Widget is currently not supported properly by the new block-based widget screen in WordPress 5.8. Now you are editing the automaticaly converted legacy widget to a group block.', 'zoom-social-icons-widget' ) }
-				// 			{ __( 'You can also disable the new block-based widget screen by installing the', 'zoom-social-icons-widget' ) } <ExternalLink href="https://wordpress.org/plugins/classic-widgets/">Classic Widget plugin</ExternalLink>
-				// 		</Text>
-				// 	</Disabled>
-				// );
-
-				const innerBlocks = [
-					createBlock( 'core/heading', {
-						content: blockAttributes.title,
-						level: 3,
-						placeholder: __( 'Title', 'zoom-social-icons-widget' ),
-					} ),
-					createBlock( 'core/paragraph', {
-						content: blockAttributes.description,
-						placeholder: __( 'Text above icons', 'zoom-social-icons-widget' ),
-					} ),
-					createBlock( 'wpzoom-blocks/social-icons', blockAttributes ),
-				];
-
-				return (
-					<Fragment>
-						{
-							replaceBlocks( clientId, [
-								createBlock( 'core/group',
-									{
-										tagName: 'div',
-										layout: { inherit: true },
-									},
-									innerBlocks,
-								),
-							] )
-						}
-					</Fragment>
-				);
-			};
+			const blockAttributes = widgetAttributesTransform( instance.raw );
 
 			return (
-				<ConvertToSocialIconsBlock clientId={ props.clientId } />
+				<Fragment>
+					<BlockEdit { ...props } />
+					<TransformToBlock
+						{ ...props }
+						attributes={ blockAttributes }
+					/>
+				</Fragment>
 			);
 		}
 
@@ -116,14 +109,38 @@ const withGroupedBlocks = createHigherOrderComponent( ( BlockEdit ) => {
 				<BlockEdit { ...props } />
 			</Fragment>
 		);
-	};
-}, 'withGroupedBlock' );
+	}, 'withGroupedBlock'
+);
+
+wp.hooks.addFilter(
+	'blocks.registerBlockType',
+	'wpzoom-blocks/social-icons/class-names/heading-paragraph-block',
+	addBlockClassName
+);
+
+addFilter(
+	'blocks.getBlockAttributes',
+	'wpzoom-blocks/social-icons',
+	addAttributes
+);
 
 addFilter(
 	'editor.BlockEdit',
-	'wpzoom-blocks/social-icons',
+	'wpzoom-blocks/social-icons/wrap-group-blocks',
 	withGroupedBlocks
 );
+
+// addFilter(
+// 	'blocks.getSaveElement',
+// 	'wpzoom-blocks/social-icons/save-classnames',
+// 	applySaveClassnames
+// );
+
+// wp.hooks.addFilter(
+// 	'blocks.getBlockDefaultClassName',
+// 	'wpzoom-blocks/social-icons/set-block-custom-class-name',
+// 	setBlockCustomClassName
+// );
 
 /**
  * Register: WPZOOM Social Icons Block.
