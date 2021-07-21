@@ -50,16 +50,7 @@ function addAttributes( attributes ) {
 	return attributes;
 }
 
-function applySaveClassnames( elem, blockType, attributes ) {
-	const { name: blockName } = blockType;
-	if ( blockName === 'core/heading' ) {
-		// do some stuff here
-	}
-
-	return elem;
-}
-
-function addBlockClassName( settings, name ) {
+function addBlockClassNameSupport( settings, name ) {
 	if ( name !== 'core/heading' || name !== 'core/paragraph' ) {
 		return settings;
 	}
@@ -69,13 +60,6 @@ function addBlockClassName( settings, name ) {
 			className: true,
 		} ),
 	} );
-}
-
-function setBlockCustomClassName( className, blockName ) {
-	if ( blockName === 'core/heading' ) {
-		className = classnames( 'widget-title subheading', className );
-	}
-	return className;
 }
 
 /**
@@ -88,9 +72,12 @@ function setBlockCustomClassName( className, blockName ) {
 const withGroupedBlocks = createHigherOrderComponent(
 	( BlockEdit ) => ( props ) => {
 		const { attributes, name: legacyBlockName } = props;
-		const { idBase, instance } = attributes;
+		const { idBase, instance, __internalWidgetId: widgetId } = attributes;
 
-		if ( legacyBlockName === 'core/legacy-widget' && idBase === 'zoom-social-icons-widget' ) {
+		if (
+			legacyBlockName === 'core/legacy-widget' &&
+			idBase === 'zoom-social-icons-widget'
+		) {
 			const blockAttributes = widgetAttributesTransform( instance.raw );
 
 			return (
@@ -99,6 +86,7 @@ const withGroupedBlocks = createHigherOrderComponent(
 					<TransformToBlock
 						{ ...props }
 						attributes={ blockAttributes }
+						widgetId={ widgetId }
 					/>
 				</Fragment>
 			);
@@ -109,13 +97,14 @@ const withGroupedBlocks = createHigherOrderComponent(
 				<BlockEdit { ...props } />
 			</Fragment>
 		);
-	}, 'withGroupedBlock'
+	},
+	'withGroupedBlock'
 );
 
 wp.hooks.addFilter(
 	'blocks.registerBlockType',
 	'wpzoom-blocks/social-icons/class-names/heading-paragraph-block',
-	addBlockClassName
+	addBlockClassNameSupport
 );
 
 addFilter(
@@ -129,18 +118,6 @@ addFilter(
 	'wpzoom-blocks/social-icons/wrap-group-blocks',
 	withGroupedBlocks
 );
-
-// addFilter(
-// 	'blocks.getSaveElement',
-// 	'wpzoom-blocks/social-icons/save-classnames',
-// 	applySaveClassnames
-// );
-
-// wp.hooks.addFilter(
-// 	'blocks.getBlockDefaultClassName',
-// 	'wpzoom-blocks/social-icons/set-block-custom-class-name',
-// 	setBlockCustomClassName
-// );
 
 /**
  * Register: WPZOOM Social Icons Block.
@@ -381,7 +358,7 @@ registerBlockType( 'wpzoom-blocks/social-icons', {
 				transform: ( { instance } ) => {
 					return createBlock(
 						'wpzoom-blocks/social-icons',
-						widgetAttributesTransform( instance.raw ),
+						widgetAttributesTransform( instance.raw )
 					);
 				},
 			},

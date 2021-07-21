@@ -3,7 +3,11 @@ import { mapValues, assign } from 'lodash';
 /**
  * WordPress dependencies
  */
-import { registerBlockStyle, unregisterBlockStyle, getBlockTypes } from '@wordpress/blocks';
+import {
+	registerBlockStyle,
+	unregisterBlockStyle,
+	getBlockTypes,
+} from '@wordpress/blocks';
 
 function convertIconProps( props ) {
 	return {
@@ -65,6 +69,15 @@ function widgetAttributesTransform( props ) {
 		transforms.iconsBorderRadius = 50;
 	} else {
 		transforms.iconsBorderRadius = 0;
+	}
+
+	/**
+	 * Add className depending on selected style.
+	 */
+	if ( transforms.canvasType === 'without-canvas' ) {
+		transforms.className = `is-style-${ transforms.canvasType }`;
+	} else if ( transforms.canvasType === 'with-canvas' ) {
+		transforms.className = 'is-style-with-canvas-round';
 	}
 
 	/**
