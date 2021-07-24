@@ -13,7 +13,7 @@ import { createBlock } from '@wordpress/blocks';
 import { useDispatch } from '@wordpress/data';
 import { addAction, doAction } from '@wordpress/hooks';
 import { Spinner, Placeholder } from '@wordpress/components';
-const { addQueryArgs } = wp.url;
+import { addQueryArgs } from '@wordpress/url';
 
 const replacementData = {};
 

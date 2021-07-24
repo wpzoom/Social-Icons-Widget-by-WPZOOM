@@ -13,6 +13,7 @@ import { Component, Fragment } from '@wordpress/element';
 import { withSelect } from '@wordpress/data';
 import { Icon, Button, Popover } from '@wordpress/components';
 import { AlignmentToolbar, BlockControls } from '@wordpress/block-editor';
+import {compose} from '@wordpress/compose';
 
 class Edit extends Component {
 	getStyleVariations( styleType ) {
@@ -784,6 +785,6 @@ const applyWithSelect = withSelect( ( select, props ) => {
 	};
 } );
 
-export default wp.compose.compose(
+export default compose(
 	applyWithSelect
 )( Edit );

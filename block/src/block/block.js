@@ -25,9 +25,13 @@ import widgetAttributesTransform from './legacy-transform/widget-attributes-tran
  */
 import { addFilter } from '@wordpress/hooks';
 import { __ } from '@wordpress/i18n';
-import { registerBlockType, createBlock } from '@wordpress/blocks'; // Import registerBlockType() from wp.blocks
+import { registerBlockType, createBlock } from '@wordpress/blocks';
 import { Fragment } from '@wordpress/element';
-const { createHigherOrderComponent } = wp.compose;
+import { createHigherOrderComponent } from '@wordpress/compose';
+
+const parentContainer = document.getElementById(
+	'customize-theme-controls'
+);
 
 /**
  * Filters registered block attributes, extending attributes to include `selectedIcons` & `showModal`.
@@ -101,7 +105,7 @@ const withGroupedBlocks = createHigherOrderComponent(
 	'withGroupedBlock'
 );
 
-wp.hooks.addFilter(
+addFilter(
 	'blocks.registerBlockType',
 	'wpzoom-blocks/social-icons/class-names/heading-paragraph-block',
 	addBlockClassNameSupport
@@ -113,11 +117,16 @@ addFilter(
 	addAttributes
 );
 
-addFilter(
-	'editor.BlockEdit',
-	'wpzoom-blocks/social-icons/wrap-group-blocks',
-	withGroupedBlocks
-);
+/**
+ * Don't display convert notice in Customizer.
+ */
+if ( ! parentContainer ) {
+	addFilter(
+		'editor.BlockEdit',
+		'wpzoom-blocks/social-icons/wrap-group-blocks',
+		withGroupedBlocks
+	);
+}
 
 /**
  * Register: WPZOOM Social Icons Block.
