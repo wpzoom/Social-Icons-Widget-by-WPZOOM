@@ -118,9 +118,9 @@ function convertWidgetToBlock( clientData, replaceBlock ) {
 			const innerBlocks = [
 				createBlock( 'core/heading', {
 					content: widgetTitle,
-					level: 2,
+					level: 3,
 					placeholder: __( 'Title', 'zoom-social-icons-widget' ),
-					className: 'widget-title title heading-size-2',
+					className: 'widget-title title heading-size-3',
 				} ),
 				createBlock( 'core/paragraph', {
 					content: widgetDescription,
