@@ -51,3 +51,5 @@ yarn.lock
 /block/.eslintignore
 /block/.eslintrc.json
 /block/.eslintrc.json
+/block/.dev
+/block/.babelrc
