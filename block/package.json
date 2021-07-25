@@ -27,7 +27,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "7.10.4",
     "@babel/plugin-syntax-class-static-block": "^7.14.5",
-    "@wordpress/api-fetch": "^3.21.2",
+    "@wordpress/api-fetch": "^3.23.1",
     "@wordpress/babel-preset-default": "^5.0.0",
     "@wordpress/blob": "^2.12.1",
     "@wordpress/block-editor": "3.1.0",
@@ -43,7 +43,7 @@
     "@wordpress/icons": "^2.9.1",
     "@wordpress/keycodes": "^2.18.3",
     "@wordpress/notices": "^2.12.7",
-    "@wordpress/primitives": "^1.11.1",
+    "@wordpress/primitives": "^1.12.3",
     "@wordpress/scripts": "^17.0.0",
     "@wordpress/token-list": "^1.14.1",
     "@wordpress/url": "^2.21.1",
