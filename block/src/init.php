@@ -29,16 +29,16 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function wpzoom_social_icons_block_enqueue_assets() {
 
-	$asset_file = wpzoom_social_icons_get_asset_file('dist/style-wpzoom-social-icons');
+	$asset_file = wpzoom_social_icons_get_asset_file('block/dist/style-wpzoom-social-icons');
 
 	wp_register_style(
 		'wpzoom-social-icons-block-style',
 		plugins_url( 'dist/style-wpzoom-social-icons.css', dirname( __FILE__ ) ),
-		array(),
+		$asset_file['dependencies'],
 		$asset_file['version']
 	);
 
-	$asset_file = wpzoom_social_icons_get_asset_file('dist/wpzoom-social-icons');
+	$asset_file = wpzoom_social_icons_get_asset_file('block/dist/wpzoom-social-icons');
 
 	// Register block editor script for backend.
 	wp_register_script(

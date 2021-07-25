@@ -1,10 +1,10 @@
 /**
  * WordPress dependencies
  */
-import { SVG, Path } from "@wordpress/components";
+import { SVG, Path } from "@wordpress/primitives";
 
 export default (
-	<SVG viewBox="0 0 225.43 225.56">
+	<SVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 225.43 225.56">
 		<Path
 			d="M947.67,465.69h72a18,18,0,0,0,18-18v-72a18,18,0,0,0-18-18h-72a18,18,0,0,0-18,18v12a6,6,0,0,0,12,0v-12a6,6,0,0,1,6-6h72a6,6,0,0,1,6,6v72a6,6,0,0,1-6,6h-72a6,6,0,0,1-6-6v-36a6,6,0,1,0-12,0v36A18,18,0,0,0,947.67,465.69Z"
 			transform="translate(-812.57 -357.69)"
