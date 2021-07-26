@@ -237,3 +237,8 @@
     }
   }
 }
+
+.zoom-social-icons-legacy-widget-title:empty,
+.zoom-social-icons-legacy-widget-description:empty {
+	display: none !important;
+}

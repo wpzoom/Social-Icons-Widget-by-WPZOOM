@@ -66,18 +66,15 @@ function useInsertionPoint( {
 		[ rootClientId, insertionIndex, clientId ]
 	);
 
-	const { insertBlocks, removeBlock } = useDispatch( 'core/block-editor' );
+	const { replaceBlock } = useDispatch( 'core/block-editor' );
 
 	const onReplaceBlock = useCallback(
 		( blocks, meta, shouldForceFocusBlock = false ) => {
 			const { attributes: { name: sidebarName } } = sidebar;
-			removeBlock( clientId );
-
-			insertBlocks(
+			replaceBlock(
+				clientId,
 				blocks,
 				destinationIndex,
-				destinationRootClientId,
-				true,
 				shouldFocusBlock || shouldForceFocusBlock ? 0 : null,
 				meta
 			);
@@ -90,13 +87,12 @@ function useInsertionPoint( {
 			speak( message );
 		},
 		[
-			insertBlocks,
+			replaceBlock,
 			sidebar,
 			clientId,
 			destinationRootClientId,
 			destinationIndex,
 			shouldFocusBlock,
-			removeBlock,
 		]
 	);
 

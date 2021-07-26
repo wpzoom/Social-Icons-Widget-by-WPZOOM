@@ -312,11 +312,11 @@ class Edit extends Component {
 	}
 
 	componentDidMount() {
-		const styleVariation = this.getStyleVariations( this.getActiveStyle() );
-
 		if ( this.props.attributes.wasStyled === true ) {
 			return;
 		}
+
+		const styleVariation = this.getStyleVariations( this.getActiveStyle() );
 
 		if ( ! isEmpty( styleVariation ) ) {
 			styleVariation.wasStyled = true;

@@ -136,14 +136,14 @@ function convertWidgetToBlock( clientData ) {
 					content: widgetTitle,
 					level: 3,
 					placeholder: __( 'Title', 'zoom-social-icons-widget' ),
-					className: 'widget-title title heading-size-3',
+					className: 'zoom-social-icons-legacy-widget-title widget-title title heading-size-3',
 				} ),
 				createBlock( 'core/paragraph', {
 					content: widgetDescription,
 					placeholder: __( 'Text above icons', 'zoom-social-icons-widget' ),
-					className: classnames( {
+					className: classnames( 'zoom-social-icons-legacy-widget-description', {
 						[ `zoom-social-icons-list--align-${ alignment }` ]:
-							alignment !== 'none',
+							alignment !== undefined && alignment !== 'none',
 					} ),
 				} ),
 				createBlock( 'wpzoom-blocks/social-icons', attributes ),
@@ -154,6 +154,7 @@ function convertWidgetToBlock( clientData ) {
 				'core/group',
 				{
 					tagName: 'div',
+					className: 'zoom-social-icons-widget zoom-social-icons-legacy-widget-group',
 					layout: { inherit: true },
 				},
 				innerBlocks
