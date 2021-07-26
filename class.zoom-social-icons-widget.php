@@ -42,18 +42,28 @@ class Zoom_Social_Icons_Widget extends WP_Widget
         'xmpp'
     );
 
+	public $id_base = 'zoom-social-icons-widget';
+
+	public $widget_name;
+
+	public $widget_options = array();
+
     /**
      * Zoom_Social_Icons_Widget constructor.
      */
     public function __construct()
     {
+		$this->widget_name = esc_html__('Social Icons by WPZOOM', 'zoom-social-icons-widget');
+		$this->widget_options = array(
+			'classname' => 'zoom-social-icons-widget',
+			'description' => __('Sortable widget that supports more than 80+ social networks', 'zoom-social-icons-widget'),
+			'show_instance_in_rest' => true,
+		);
+
         parent::__construct(
-            'zoom-social-icons-widget',
-            esc_html__('Social Icons by WPZOOM', 'zoom-social-icons-widget'),
-            array(
-                'classname' => 'zoom-social-icons-widget',
-                'description' => __('Sortable widget that supports more than 80+ social networks', 'zoom-social-icons-widget'),
-            )
+            $this->id_base,
+            $this->widget_name,
+            $this->widget_options
         );
 
 	    add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
@@ -621,6 +631,8 @@ class Zoom_Social_Icons_Widget extends WP_Widget
      */
     public function form($instance)
     {
+        global $wp_version;
+
         $defaults = $this->get_defaults();
 
         if (isset($instance['show-icon-labels']) or
@@ -652,6 +664,18 @@ class Zoom_Social_Icons_Widget extends WP_Widget
 
             $instance_attr = 'data-instance="' . htmlentities(json_encode($encoded)) . '"';
         }
+
+		// $transform_to_block = '';
+		// if ( current_theme_supports( 'widgets-block-editor' ) && version_compare( $wp_version, '5.8', '>=' ) ) {
+		// 	$transform_to_block = sprintf( __('<strong>%s</strong> is currently not supported by the new block-based widget screen in WordPress 5.8. You can edit it in the Customizer or transform it to Social Icons Block by clicking on the calendar icon.
+        //     You can also disable the new block-based widget screen by installing the Classic Widget plugin', 'zoom-social-icons-widget'), $this->widget_name);
+        //     $transform_to_block .= '(<a href="https://wordpress.org/plugins/classic-widgets/" target="_blank">https://wordpress.org/plugins/classic-widgets/</a>)';
+		// }
+
+		// if ( ! empty( $transform_to_block ) ) {
+		// 	echo '<p class="notice notice-warning zoom-social-icons__notice">' . wp_kses_post( $transform_to_block ) .'</p>';
+        //     return;
+		// }
 
         ?>
         <div class="form-instance" <?php echo $instance_attr ?> id="<?php echo $this->id ?>">

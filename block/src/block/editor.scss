@@ -247,3 +247,10 @@
   width: 100%;
 }
 
+.wp-admin, .wp-customizer {
+	.zoom-social-icons-legacy-widget-title:empty,
+	.zoom-social-icons-legacy-widget-description:empty {
+		display: block !important;
+	}
+}
+
