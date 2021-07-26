@@ -50,6 +50,6 @@ yarn.lock
 /block/.editorconfig
 /block/.eslintignore
 /block/.eslintrc.json
-/block/.eslintrc.json
+/block/.eslintrc.js
 /block/.dev
 /block/.babelrc
