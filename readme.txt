@@ -4,7 +4,7 @@ Donate link: https://www.wpzoom.com/
 Tags: social icons, social networks, social media, social media icons, icons, social profiles, social widget, widget, block, social block, block icons, academicons, elementor, social networking, sharing, share buttons, fontawesome
 Requires at least: 5.0
 Requires PHP: 5.6
-Tested up to: 5.7
+Tested up to: 5.8
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -151,6 +151,11 @@ You can also create a hidden widget area using a plugin like Custom Sidebars if 
 8. Widget Settings
 
 == Changelog ==
+
+= 4.2.0 =
+* Fixed compatibility issues with WordPress 5.8
+* Added warning notice to widgets block-based page. Please make sure you've read the message before doing some changes to widgets!
+* Added the ability to convert legacy widget "Social Icons" to block
 
 = 4.1.3 =
 * Added new tab in the Settings page with a promo for the new PRO version
