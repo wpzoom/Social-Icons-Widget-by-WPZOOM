@@ -13,7 +13,7 @@ import { Component, Fragment } from '@wordpress/element';
 import { withSelect } from '@wordpress/data';
 import { Icon, Button, Popover } from '@wordpress/components';
 import { AlignmentToolbar, BlockControls } from '@wordpress/block-editor';
-import {compose} from '@wordpress/compose';
+import { compose } from '@wordpress/compose';
 
 class Edit extends Component {
 	getStyleVariations( styleType ) {
@@ -240,9 +240,9 @@ class Edit extends Component {
 			},
 		};
 
-		return get( styleVariations, styleType, false ) ?
-			get( styleVariations, styleType, false ) :
-			get( styleVariations, this.getActiveStyle() );
+		return get( styleVariations, styleType, false )
+			? get( styleVariations, styleType, false )
+			: get( styleVariations, this.getActiveStyle() );
 	}
 
 	getActiveStyle() {
@@ -251,7 +251,7 @@ class Edit extends Component {
 			blockStyles,
 			this.props.className
 		);
-		return blockStyle.name;
+		return ( blockStyle && blockStyle.name ) || '';
 	}
 
 	// eslint-disable-next-line no-unused-vars
@@ -276,12 +276,12 @@ class Edit extends Component {
 							item.icon,
 						] );
 
-						item.color = isEmpty( current ) ?
-							styleVariation.defaultIcon.color :
-							current.color;
-						item.hoverColor = isEmpty( current ) ?
-							styleVariation.defaultIcon.hoverColor :
-							current.hoverColor;
+						item.color = isEmpty( current )
+							? styleVariation.defaultIcon.color
+							: current.color;
+						item.hoverColor = isEmpty( current )
+							? styleVariation.defaultIcon.hoverColor
+							: current.hoverColor;
 						return item;
 					} );
 
@@ -332,12 +332,12 @@ class Edit extends Component {
 						'icon',
 						item.icon,
 					] );
-					item.color = isEmpty( current ) ?
-						styleVariation.defaultIcon.color :
-						current.color;
-					item.hoverColor = isEmpty( current ) ?
-						styleVariation.defaultIcon.hoverColor :
-						current.hoverColor;
+					item.color = isEmpty( current )
+						? styleVariation.defaultIcon.color
+						: current.color;
+					item.hoverColor = isEmpty( current )
+						? styleVariation.defaultIcon.hoverColor
+						: current.hoverColor;
 					return item;
 				} );
 			}

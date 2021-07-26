@@ -1,39 +1,47 @@
 /**
  * External dependencies
  */
-import { map } from 'lodash';
+import { map, size } from 'lodash';
 import classnames from 'classnames';
 
 /**
  * WordPress dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __, _n, sprintf } from '@wordpress/i18n';
 import { Fragment, useEffect, useState, memo } from '@wordpress/element';
 import { createBlock } from '@wordpress/blocks';
-import { useDispatch } from '@wordpress/data';
+import { useDispatch, useSelect } from '@wordpress/data';
 import { addAction, doAction } from '@wordpress/hooks';
 import { Spinner, Placeholder } from '@wordpress/components';
 import { addQueryArgs } from '@wordpress/url';
+
+/**
+ * Internal dependencies
+ */
+import useInsertionPoint from '../hooks/use-insertion-point';
 
 const replacementData = {};
 
 const TransformToBlock = ( { clientId, attributes, widgetId } ) => {
 	const [ isConvertRun, setButtonClick ] = useState( false );
-	const { createInfoNotice, createWarningNotice, createSuccessNotice } =
-		useDispatch( 'core/notices' );
+	const {
+		createInfoNotice,
+		createWarningNotice,
+		createSuccessNotice,
+	} = useDispatch( 'core/notices' );
 
 	// store client id and social icons block attributes.
 	replacementData[ widgetId ] = {};
 	replacementData[ widgetId ].clientId = clientId;
 	replacementData[ widgetId ].attributes = attributes;
 
-	const message = __(
+	const warningMessage = __(
 		'Social Icons Widget is currently not supported by the new block-based widget screen in WordPress 5.8. We highly recommend to edit it in the Customizer or transform it to Social Icons Block by clicking on the "Convert to block" button. You can also disable the new block-based widget screen by installing the Classic Widgets plugin.',
 		'zoom-social-icons-widget'
 	);
 
 	useEffect( () => {
-		createWarningNotice( message, {
+		createWarningNotice( warningMessage, {
 			id: 'wpzoom-social-icons-notice',
 			isDismissible: true,
 			actions: [
@@ -64,7 +72,7 @@ const TransformToBlock = ( { clientId, attributes, widgetId } ) => {
 		if ( isConvertRun ) {
 			createInfoNotice(
 				__(
-					'Convert process is started. Please wait...',
+					'Convert process is started. Please wait…',
 					'zoom-social-icons-widget'
 				),
 				{
@@ -78,12 +86,9 @@ const TransformToBlock = ( { clientId, attributes, widgetId } ) => {
 	addAction(
 		'converter.isConvertDone',
 		'wpzoom-blocks/social-icons/convert-legacy-widget',
-		() => {
+		( { message } ) => {
 			createSuccessNotice(
-				__(
-					'Successfully converted Social Icons legacy widget to block.',
-					'zoom-social-icons-widget'
-				),
+				message,
 				{
 					type: 'snackbar',
 					id: 'wpzoom-social-icons-notice',
@@ -106,8 +111,10 @@ const TransformToBlock = ( { clientId, attributes, widgetId } ) => {
 	);
 };
 
-function convertWidgetToBlock( clientData, replaceBlock ) {
+function convertWidgetToBlock( clientData ) {
 	return new Promise( function( resolve ) {
+		let replaced = 0;
+
 		map( clientData, ( client ) => {
 			const { clientId, attributes } = client;
 			const {
@@ -115,6 +122,15 @@ function convertWidgetToBlock( clientData, replaceBlock ) {
 				description: widgetDescription,
 				iconsAlignment: alignment,
 			} = attributes;
+
+			const { rootClientId } = useSelect( ( select ) => {
+				return {
+					rootClientId: select( 'core/block-editor' ).getBlockRootClientId(
+						clientId
+					),
+				};
+			} );
+
 			const innerBlocks = [
 				createBlock( 'core/heading', {
 					content: widgetTitle,
@@ -133,20 +149,36 @@ function convertWidgetToBlock( clientData, replaceBlock ) {
 				createBlock( 'wpzoom-blocks/social-icons', attributes ),
 			];
 
-			replaceBlock( clientId, [
-				createBlock(
-					'core/group',
-					{
-						tagName: 'div',
-						layout: { inherit: true },
-					},
-					innerBlocks
-				),
-			] );
-		} );
+			const [ onReplaceBlock ] = useInsertionPoint( { rootClientId, clientId } );
+			const blocks = createBlock(
+				'core/group',
+				{
+					tagName: 'div',
+					layout: { inherit: true },
+				},
+				innerBlocks
+			);
 
-		// call resolve if the method succeeds
-		resolve( true );
+			onReplaceBlock( blocks );
+
+			replaced++;
+
+			if ( size( clientData ) === replaced ) {
+				const message = sprintf(
+					// translators: %d: the number of the block that has been converted
+					_n(
+						'%d legacy widget "Social Icons" successfully converted to block',
+						'%d legacy widgets "Social Icons" successfully converted to block',
+						replaced,
+						'zoom-social-icons-widget'
+					),
+					replaced,
+				);
+
+				// call resolve if the method succeeds
+				resolve( message );
+			}
+		} );
 	} );
 }
 
@@ -154,21 +186,8 @@ const ConvertToSocialIconsBlock = ( {
 	replacementData: clientData,
 	isConvertRun,
 } ) => {
-	const { replaceBlock } = useDispatch( 'core/block-editor' );
 	const [ isConvertDone, setConvertDone ] = useState( false );
 	const shouldReplaceBlock = isConvertRun && ! isConvertDone;
-
-	useEffect( () => {
-		if ( shouldReplaceBlock ) {
-			convertWidgetToBlock( clientData, replaceBlock ).then( () => {
-				// Set state convert done
-				setConvertDone( true );
-
-				// Call action after convert isDone
-				doAction( 'converter.isConvertDone' );
-			} );
-		}
-	}, [ shouldReplaceBlock, clientData ] );
 
 	if ( ! shouldReplaceBlock ) {
 		return (
@@ -177,6 +196,14 @@ const ConvertToSocialIconsBlock = ( {
 			</Placeholder>
 		);
 	}
+
+	convertWidgetToBlock( clientData ).then( ( message ) => {
+		// Set state convert done
+		setConvertDone( true );
+
+		// Call action after convert isDone
+		doAction( 'converter.isConvertDone', { message } );
+	} );
 
 	return null;
 };

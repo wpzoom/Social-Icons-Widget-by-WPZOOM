@@ -17,8 +17,8 @@ import blockIcon from './blockIcon';
 import previewImage from './previewImage';
 import Edit from './components/Edit';
 import Save from './components/Save';
-import TransformToBlock from './legacy-transform/transform-to-block';
-import widgetAttributesTransform from './legacy-transform/widget-attributes-transform';
+import TransformToBlock from './legacy-widget-transform/transform-to-block';
+import widgetAttributesTransform from './legacy-widget-transform/widget-attributes-transform';
 
 /**
  * WordPress dependencies
@@ -28,6 +28,7 @@ import { __ } from '@wordpress/i18n';
 import { registerBlockType, createBlock } from '@wordpress/blocks';
 import { Fragment } from '@wordpress/element';
 import { createHigherOrderComponent } from '@wordpress/compose';
+import { useSelect } from '@wordpress/data';
 
 const parentContainer = document.getElementById(
 	'customize-theme-controls'
@@ -37,7 +38,6 @@ const parentContainer = document.getElementById(
  * Filters registered block attributes, extending attributes to include `selectedIcons` & `showModal`.
  *
  * @param {Object} attributes Original block attributes.
- *
  * @return {Object} Filtered block attributes.
  */
 function addAttributes( attributes ) {
@@ -70,28 +70,41 @@ function addBlockClassNameSupport( settings, name ) {
  * Override the default edit UI of legacy widget to replace with grouped inner blocks.
  *
  * @param {Function} BlockEdit Original component.
- *
  * @return {Function} Wrapped component.
  */
 const withGroupedBlocks = createHigherOrderComponent(
 	( BlockEdit ) => ( props ) => {
 		const { attributes, name: legacyBlockName } = props;
-		const { idBase, instance, __internalWidgetId: widgetId } = attributes;
+		const { id, idBase, instance, __internalWidgetId: widgetId } = attributes;
+		const widgetTypeId = id ?? idBase;
 
 		if (
 			legacyBlockName === 'core/legacy-widget' &&
-			idBase === 'zoom-social-icons-widget'
+			widgetTypeId === 'zoom-social-icons-widget'
 		) {
+			const { widgetType, hasResolvedWidgetType } = useSelect(
+				( select ) => {
+					return {
+						widgetType: select( 'core' ).getWidgetType( widgetTypeId ),
+						hasResolvedWidgetType: select(
+							'core'
+						).hasFinishedResolution( 'getWidgetType', [ widgetTypeId ] ),
+					};
+				},
+				[ id, idBase ]
+			);
 			const blockAttributes = widgetAttributesTransform( instance.raw );
 
 			return (
 				<Fragment>
 					<BlockEdit { ...props } />
-					<TransformToBlock
-						{ ...props }
-						attributes={ blockAttributes }
-						widgetId={ widgetId }
-					/>
+					{ widgetType && hasResolvedWidgetType && (
+						<TransformToBlock
+							{ ...props }
+							attributes={ blockAttributes }
+							widgetId={ widgetId }
+						/>
+					) }
 				</Fragment>
 			);
 		}
@@ -136,8 +149,8 @@ if ( ! parentContainer ) {
  * editor interface where blocks are implemented.
  *
  * @link https://wordpress.org/gutenberg/handbook/block-api/
- * @param  {string}   name     Block name.
- * @param  {Object}   settings Block settings.
+ * @param {string} name     Block name.
+ * @param {Object} settings Block settings.
  * @return {?WPBlock}          The block, if it has been successfully
  *                             registered; otherwise `undefined`.
  */
@@ -380,9 +393,8 @@ registerBlockType( 'wpzoom-blocks/social-icons', {
 	 * The "edit" property must be a valid function.
 	 *
 	 * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
-	 *
 	 * @param {Object} props Props.
-	 * @returns {Mixed} JSX Component.
+	 * @return {Mixed} JSX Component.
 	 */
 	edit: Edit,
 
@@ -393,9 +405,8 @@ registerBlockType( 'wpzoom-blocks/social-icons', {
 	 * The "save" property must be specified and must be a valid function.
 	 *
 	 * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
-	 *
 	 * @param {Object} props Props.
-	 * @returns {Mixed} JSX Frontend HTML.
+	 * @return {Mixed} JSX Frontend HTML.
 	 */
 	save: Save,
 } );
