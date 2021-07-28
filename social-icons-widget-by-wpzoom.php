@@ -107,7 +107,6 @@ function zoom_social_icons_enqueue_fonts() {
  * @return string $tag The HTML link tag of an enqueued style.
  */
 function zoom_social_icons_add_preload_to_rel_attribute( $tag, $handle, $href ) {
-
 	$style_handlers = apply_filters(
 		'wpzoom-social-icons-fonts-preload-filter',
 		array(
