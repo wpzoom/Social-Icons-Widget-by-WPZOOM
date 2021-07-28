@@ -151,6 +151,10 @@ function zoom_social_icons_widget_load_textdomain() {
 
 /**
  * Hide old widget
+ *
+ * @since 4.2.0
+ * @param array $widget_types Array of widgets types to hide from legacy widget block.
+ * @return array The parsed widget types
  */
 function zoom_social_icons_widget_hide( $widget_types ) {
 	$widget_types[] = 'zoom-social-icons-widget';
