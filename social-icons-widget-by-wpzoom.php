@@ -3,20 +3,20 @@
  * Plugin Name:         Social Icons Widget & Block by WPZOOM
  * Plugin URI:          https://www.wpzoom.com/plugins/social-widget/
  * Description:         Social Icons Widget & Block to display links to social media networks websites. Supports most of the known social networks and includes more than 400 icons. Sort icons by Drag & Drop and change their color easily.
- * Version:             4.1.1
+ * Version:             4.2.0
  * Author:              WPZOOM
  * Author URI:          https://www.wpzoom.com/
  * Text Domain:         zoom-social-icons-widget
  * License:             GNU General Public License v2.0 or later
  * License URI:         http://www.gnu.org/licenses/gpl-2.0.txt
  * Requires at least:   5.2
- * Tested up to:        5.7
+ * Tested up to:        5.8
  *
  * @package WPZOOM_Social_Icons
  */
 
 if ( ! defined( 'WPZOOM_SOCIAL_ICONS_PLUGIN_VERSION' ) ) {
-	define( 'WPZOOM_SOCIAL_ICONS_PLUGIN_VERSION', '4.1.1' );
+	define( 'WPZOOM_SOCIAL_ICONS_PLUGIN_VERSION', '4.2.0' );
 }
 
 if ( ! defined( 'WPZOOM_SOCIAL_ICONS_PLUGIN_URL' ) ) {
@@ -107,6 +107,7 @@ function zoom_social_icons_enqueue_fonts() {
  * @return string $tag The HTML link tag of an enqueued style.
  */
 function zoom_social_icons_add_preload_to_rel_attribute( $tag, $handle, $href ) {
+
 	$style_handlers = apply_filters(
 		'wpzoom-social-icons-fonts-preload-filter',
 		array(
@@ -132,18 +133,9 @@ function zoom_social_icons_add_preload_to_rel_attribute( $tag, $handle, $href ) 
 	);
 
 	if ( in_array( $handle, $style_handlers ) ) {
-		$file      = parse_url( $href, PHP_URL_PATH );
-		$file_type = strtolower( pathinfo( basename( $file, PATHINFO_EXTENSION ) ) );
-
-		$file_type = ! empty( $file_type ) ? ( 'type="font/' . $file_type . '"' ) : '';
-		$tag       = preg_replace(
-			array( "/='stylesheet'/", "/media='all'/" ),
-			array(
-				'="preload" as="font" ',
-				"{$file_type} crossorigin",
-			),
-			$tag
-		);
+		$file_type = strtolower( pathinfo( basename( parse_url( $href, PHP_URL_PATH ) ), PATHINFO_EXTENSION ) );
+		$file_type = ! empty( $file_type ) ? ( "type='font/{$file_type}'" ) : '';
+		$tag       = preg_replace( array( "/='stylesheet'/", "/media='all'/", "/type=['\"]text\/(css)['\"]/" ), array( "='preload' as='font' ", $file_type . ' crossorigin', '' ), $tag );
 	}
 
 	return $tag;
@@ -157,6 +149,15 @@ function zoom_social_icons_add_preload_to_rel_attribute( $tag, $handle, $href ) 
 function zoom_social_icons_widget_load_textdomain() {
 	load_plugin_textdomain( 'zoom-social-icons-widget', false, plugin_basename( dirname( __FILE__ ) ) . '/languages' );
 }
+
+/**
+ * Hide old widget
+ */
+function zoom_social_icons_widget_hide( $widget_types ) {
+	$widget_types[] = 'zoom-social-icons-widget';
+	return $widget_types;
+}
+add_filter( 'widget_types_to_hide_from_legacy_widget_block', 'zoom_social_icons_widget_hide' );
 
 /**
  * Generate select values for block and widget options that are synced with fonts loading values from Settings Page.

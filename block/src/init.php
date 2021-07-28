@@ -17,9 +17,9 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Enqueue Gutenberg block assets for both frontend + backend.
  *
  * Assets enqueued:
- * 1. blocks.style.build.css - Frontend + Backend.
- * 2. blocks.build.js - Backend.
- * 3. blocks.editor.build.css - Backend.
+ * 1. style-wpzoom-social-icons.css - Frontend + Backend.
+ * 2. wpzoom-social-icons.js - Backend.
+ * 3. wpzoom-social-icons.css - Backend.
  *
  * @uses {wp-blocks} for block type registration & related functions.
  * @uses {wp-element} for WP Element abstraction — structure of blocks.
@@ -29,19 +29,23 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function wpzoom_social_icons_block_enqueue_assets() {
 
+	$asset_file = wpzoom_social_icons_get_asset_file('block/dist/style-wpzoom-social-icons');
+
 	wp_register_style(
 		'wpzoom-social-icons-block-style',
-		plugins_url( 'dist/blocks.style.build.css', dirname( __FILE__ ) ),
-		array(),
-		filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.style.build.css' )
+		plugins_url( 'dist/style-wpzoom-social-icons.css', dirname( __FILE__ ) ),
+		$asset_file['dependencies'],
+		$asset_file['version']
 	);
+
+	$asset_file = wpzoom_social_icons_get_asset_file('block/dist/wpzoom-social-icons');
 
 	// Register block editor script for backend.
 	wp_register_script(
 		'wpzoom-social-icons-block-js',
-		plugins_url( '/dist/blocks.build.js', dirname( __FILE__ ) ),
-		array( 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor' ),
-		filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.build.js' ),
+		plugins_url( '/dist/wpzoom-social-icons.js', dirname( __FILE__ ) ),
+		$asset_file['dependencies'],
+		$asset_file['version'],
 		true
 	);
 
@@ -49,9 +53,9 @@ function wpzoom_social_icons_block_enqueue_assets() {
 	// Register block editor styles for backend.
 	wp_register_style(
 		'wpzoom-social-icons-block-editor',
-		plugins_url( 'dist/blocks.editor.build.css', dirname( __FILE__ ) ),
+		plugins_url( 'dist/wpzoom-social-icons.css', dirname( __FILE__ ) ),
 		array( 'wp-edit-blocks' ),
-		filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.editor.build.css' )
+		$asset_file['version']
 	);
 
 	// WP Localized globals. Use dynamic PHP stuff in JavaScript via `cgbGlobal` object.
@@ -78,15 +82,18 @@ function wpzoom_social_icons_block_enqueue_assets() {
 	 */
 	register_block_type(
 		'wpzoom-blocks/social-icons', array(
-			// Enqueue blocks.style.build.css on both frontend & backend.
+			// Enqueue style-wpzoom-social-icons.css on both frontend & backend.
 			'style'         => 'wpzoom-social-icons-block-style',
-			// Enqueue blocks.build.js in the editor only.
+			// Enqueue wpzoom-social-icons.js in the editor only.
 			'editor_script' => 'wpzoom-social-icons-block-js',
-			// Enqueue blocks.editor.build.css in the editor only.
+			// Enqueue wpzoom-social-icons.css in the editor only.
 			'editor_style'  => 'wpzoom-social-icons-block-editor',
 		)
 	);
 }
+
+// Hook: Block assets.
+add_action( 'init', 'wpzoom_social_icons_block_enqueue_assets' );
 
 /**
  * Add custom block category
@@ -105,8 +112,13 @@ function wpzoom_social_icons_block_add_custom_category( $categories, $post ) {
 	);
 }
 
-// Hook: Block assets.
-add_action( 'init', 'wpzoom_social_icons_block_enqueue_assets' );
+//Hook: Add block category.
+global $wp_version;
+if ( version_compare( $wp_version, '5.8', '<' ) ) {
+	add_filter( 'block_categories', 'wpzoom_social_icons_block_add_custom_category', 10, 2 );
+} else {
+	add_filter( 'block_categories_all', 'wpzoom_social_icons_block_add_custom_category', 10, 2 );
+}
 
 /**
  * Register css and js files.
@@ -258,5 +270,22 @@ function wpzoom_social_icons_block_enqueue_secondary_assets() {
 
 add_action( 'enqueue_block_assets', 'wpzoom_social_icons_block_enqueue_secondary_assets' );
 
-//Hook: Add block category.
-add_filter( 'block_categories', 'wpzoom_social_icons_block_add_custom_category', 10, 2 );
+/**
+ * Loads the asset file for the given script or style.
+ * Returns a default if the asset file is not found.
+ *
+ * @since 4.2.0
+ * @param string $filepath The name of the file without the extension.
+ *
+ * @return array The asset file contents.
+ */
+function wpzoom_social_icons_get_asset_file( $filepath ) {
+	$asset_path = WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . $filepath . '.asset.php';
+
+	return file_exists( $asset_path )
+		? include $asset_path
+		: array(
+			'dependencies' => array(),
+			'version'      => WPZOOM_SOCIAL_ICONS_PLUGIN_VERSION,
+		);
+}

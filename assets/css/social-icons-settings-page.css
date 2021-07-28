@@ -25,3 +25,120 @@
 .zoom-social-icons-settings .tab {
     display: none;
 }
+
+.zoom-social-icons-settings .filter-links li>a span {
+    background: #3EBD3E;
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 0 8px;
+    margin-left: 5px;
+    height: 18px;
+    line-height: 18px;
+    border-radius: 7px;
+    box-shadow: 0 2px 8px -2px rgb(0 0 0 / 25%);
+    box-sizing: border-box;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none!important;
+}
+
+.zoom-social-icons-settings .filter-links .current a {
+    font-weight: 700;
+}
+
+.wpz-section_disabled_pro {
+    opacity: .45;
+    filter: grayscale(60%);
+    pointer-events: none;
+    cursor: not-allowed!important;
+}
+
+.wpz-pro-plugin-wrap {
+    position: relative;
+}
+
+.wpz-pro-btn-wrap {
+    z-index: 50;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 88%;
+    margin: 0 auto;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.wpz-social-pro-btn {
+    border-radius: 4px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    padding: 15px 30px;
+    background: #3496ff;
+    text-decoration: none;
+    box-shadow: 0 2px 8px -2px rgb(0 0 0 / 25%);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.wpz-social-pro-btn:focus,
+.wpz-social-pro-btn:hover {
+    color: #fff;
+    background: #298fef;
+}
+
+.zoom-social-icons-settings .form-table {
+    background-color: #ffffff;
+    box-shadow: 0 0 0 1px #ccd0d4, 0 1px 1px 1px rgba(0, 0, 0, .04);
+}
+
+.zoom-social-icons-settings .form-table th[scope='row'] {
+    padding-left: 20px;
+}
+
+.zoom-social-icons-settings .filter-links li > a {
+    border-bottom: none;
+}
+
+.zoom-social-icons-settings .filter-links li > a:focus {
+    box-shadow: none;
+    outline: 0;
+}
+
+.zoom-social-icons-settings .form-table td span.description {
+    font-style: italic;
+    padding-left: 50px;
+    color: #666;
+}
+
+.zoom-social-icons-settings .tab {
+    display: none;
+}
+
+.add-to-custom-iconset {
+    display: none;
+}
+
+.add-to-custom-iconset--show {
+    display: block;
+}
+
+.custom-icon__list {
+    width: 64px;
+    height: 64px;
+    border: 1px solid;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+    border-radius: 100%;
+    justify-content: center;
+}
+.custom-icon__list svg {
+    height: 32px;
+    width: auto;
+}
+
+.file-wrapper {
+    margin: 1em 0;
+}
