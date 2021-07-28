@@ -27,7 +27,7 @@ if ( ! defined( 'WPZOOM_SOCIAL_ICONS_PLUGIN_PATH' ) ) {
 	define( 'WPZOOM_SOCIAL_ICONS_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 }
 
-require_once plugin_dir_path( __FILE__ ) . 'includes/classes/class.zoom-social-icons-settings.php';
+require_once plugin_dir_path( __FILE__ ) . 'includes/classes/class-zoom-social-icons-settings.php';
 require_once plugin_dir_path( __FILE__ ) . 'includes/zoom-helper.php';
 
 $wpzoom_social_icons_settings = WPZOOM_Social_Icons_Settings::get_settings();
@@ -37,7 +37,7 @@ if ( empty( $wpzoom_social_icons_settings['disable-block'] ) ) {
 }
 
 if ( empty( $wpzoom_social_icons_settings['disable-widget'] ) ) {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/classes/class.zoom-social-icons-widget.php';
+	require_once plugin_dir_path( __FILE__ ) . 'includes/classes/class-zoom-social-icons-widget.php';
 
 	/**
 	 * Register the widget
