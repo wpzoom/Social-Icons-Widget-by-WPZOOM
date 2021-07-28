@@ -1,4 +1,10 @@
 <?php
+/**
+ * All icons packs data.
+ *
+ * @package WPZOOM_Social_Icons
+ */
+
 return array(
 	'socicon'     => array(
 		array(

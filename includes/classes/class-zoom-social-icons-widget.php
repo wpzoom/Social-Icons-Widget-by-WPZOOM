@@ -149,6 +149,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 		wp_enqueue_style( 'wp-color-picker' );
 
+		// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.NoExplicitVersion
 		wp_enqueue_script(
 			'iris',
 			admin_url( 'js/iris.min.js' ),
@@ -157,15 +158,16 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'jquery-ui-slider',
 				'jquery-touch-punch',
 			),
-			false, // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.NoExplicitVersion
+			false,
 			true
 		);
 
+		// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.NoExplicitVersion
 		wp_enqueue_script(
 			'wp-color-picker',
 			admin_url( 'js/color-picker.min.js' ),
 			array( 'iris' ),
-			false, // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.NoExplicitVersion
+			false,
 			true
 		);
 
@@ -1159,10 +1161,12 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 		$this->inject_values( $instance );
 
-		echo $args['before_widget']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo $args['before_widget'];
 
 		if ( $instance['title'] ) {
-			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
 		}
 
 		$class_list   = array();
@@ -1204,7 +1208,8 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 		<?php if ( ! empty( $instance['description'] ) ) : ?>
 
-<p class="<?php echo esc_attr( $desc_class ); ?>"><?php echo $instance['description']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+		<?php // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+<p class="<?php echo esc_attr( $desc_class ); ?>"><?php echo $instance['description']; ?></p>
 
 		<?php endif; ?>
 
@@ -1258,7 +1263,8 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			<span class="screen-reader-text"><?php echo esc_html( $field['icon'] ); ?></span>
 			<?php endif; ?>
 
-			<span class="zoom-social_icons-list-span social-icon <?php echo esc_attr( $class ); ?>" <?php echo $hover_style; ?> style="<?php echo $style; ?>" <?php echo $aria_image_role; ?>></span><?php // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+			<?php // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+			<span class="zoom-social_icons-list-span social-icon <?php echo esc_attr( $class ); ?>" <?php echo $hover_style; ?> style="<?php echo $style; ?>" <?php echo $aria_image_role; ?>></span>
 
 			<?php
 			if ( $instance['show_icon_labels'] === 'true' ) :
@@ -1274,7 +1280,8 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 		<?php
 
-		echo $args['after_widget']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo $args['after_widget'];
 	}
 
 	/**
