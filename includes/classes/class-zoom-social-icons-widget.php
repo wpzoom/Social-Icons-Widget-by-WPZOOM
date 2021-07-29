@@ -1161,12 +1161,10 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 		$this->inject_values( $instance );
 
-		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		echo $args['before_widget'];
+		echo wp_kses_post( $args['before_widget'] );
 
 		if ( $instance['title'] ) {
-			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
+			echo wp_kses_post( $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'] );
 		}
 
 		$class_list   = array();
@@ -1174,9 +1172,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		$class_list[] = 'zoom-social-icons-list--' . $instance['icon_style'];
 		$class_list[] = 'zoom-social-icons-list--' . $instance['icon_canvas_style'];
 
-		if ( ! empty( $instance['icon_alignment'] ) &&
-			in_array( $instance['icon_alignment'], array( 'left', 'center', 'right' ) )
-		) {
+		if ( ! empty( $instance['icon_alignment'] ) && in_array( $instance['icon_alignment'], array( 'left', 'center', 'right' ) ) ) {
 			$class_list[] = 'zoom-social-icons-list--align-' . $instance['icon_alignment'];
 			$desc_class   = 'zoom-social-icons-list--align-' . $instance['icon_alignment'];
 		}
@@ -1201,15 +1197,14 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			$instance['no_referrer'] = true === $instance['no_referrer'] ? 'true' : 'false';
 		}
 
-		if ( $instance['show_icon_labels'] === 'false' ) {
+		if ( 'false' === $instance['show_icon_labels'] ) {
 			$class_list[] = 'zoom-social-icons-list--no-labels';
 		}
 		?>
 
 		<?php if ( ! empty( $instance['description'] ) ) : ?>
 
-		<?php // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-<p class="<?php echo esc_attr( $desc_class ); ?>"><?php echo $instance['description']; ?></p>
+<p class="<?php echo esc_attr( $desc_class ); ?>"><?php echo wp_kses_post( $instance['description'] ); ?></p>
 
 		<?php endif; ?>
 
@@ -1220,7 +1215,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			?>
 
 			<?php
-			$rule            = ( $instance['icon_style'] === 'with-canvas' ) ? 'background-color' : 'color';
+			$rule            = ( 'with-canvas' === $instance['icon_style'] ) ? 'background-color' : 'color';
 			$hover_style     = empty( $field['color_picker_hover'] ) ? '' : 'data-hover-rule="' . $rule . '" data-hover-color="' . $field['color_picker_hover'] . '"';
 			$rel_tag         = 'true' == $instance['no_follow'] ? 'nofollow' : '';
 			$rel_tag        .= 'true' == $instance['no_opener'] ? ' noopener' : '';
@@ -1237,7 +1232,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			}
 			?>
 	<li class="zoom-social_icons-list__item">
-		<a class="zoom-social_icons-list__link" href="<?php echo $url; ?>" <?php echo( $instance['open_new_tab'] === 'true' ? 'target="_blank"' : '' ); ?> <?php echo( strlen( $rel_tag ) > 0 ? 'rel="' . $rel_tag . '"' : '' ); ?>>
+		<a class="zoom-social_icons-list__link" href="<?php echo esc_url( $url ); ?>" <?php echo( 'true' === $instance['open_new_tab'] ? 'target="_blank"' : '' ); ?> <?php echo( strlen( $rel_tag ) > 0 ? 'rel="' . esc_attr( $rel_tag ) . '"' : '' ); ?>>
 			<?php
 			if ( ! empty( $field['icon'] ) && ! empty( $field['icon_kit'] ) && ! empty( $field['color_picker'] ) ) {
 				$class = $field['icon_kit'] . ' ' . $field['icon_kit'] . '-' . $field['icon'];
@@ -1259,15 +1254,16 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			}
 			?>
 
-			<?php if ( $instance['show_icon_labels'] === 'false' ) : ?>
+			<?php if ( 'false' === $instance['show_icon_labels'] ) : ?>
 			<span class="screen-reader-text"><?php echo esc_html( $field['icon'] ); ?></span>
 			<?php endif; ?>
 
-			<?php // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+			<?php // phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			<span class="zoom-social_icons-list-span social-icon <?php echo esc_attr( $class ); ?>" <?php echo $hover_style; ?> style="<?php echo $style; ?>" <?php echo $aria_image_role; ?>></span>
+			<?php // phpcs:enable WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 
 			<?php
-			if ( $instance['show_icon_labels'] === 'true' ) :
+			if ( 'true' === $instance['show_icon_labels'] ) :
 				?>
 			<span class="zoom-social_icons-list__label"><?php echo esc_html( $field['label'] ); ?></span>
 			<?php endif; ?>
@@ -1279,9 +1275,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 </ul>
 
 		<?php
-
-		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		echo $args['after_widget'];
+		echo wp_kses_post( $args['after_widget'] );
 	}
 
 	/**
