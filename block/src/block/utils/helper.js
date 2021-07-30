@@ -53,9 +53,9 @@ class Helper {
 		const uri = new URI( url );
 
 		let domain =
-			uri.domain() !== undefined ?
-				uri.domain().split( '.' ).shift() :
-				uri.scheme();
+			uri.domain() !== undefined
+				? uri.domain().split( '.' ).shift()
+				: uri.scheme();
 
 		const schemaHasIcon = findKey( schemas, ( val, key ) => {
 			return key === uri.scheme();

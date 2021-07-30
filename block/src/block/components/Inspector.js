@@ -2,7 +2,7 @@
  * Inspector Controls
  */
 
-import Helper from './Helper';
+import Helper from '../utils/helper';
 import {__} from '@wordpress/i18n';
 import {Component, Fragment} from '@wordpress/element';
 import {InspectorControls} from '@wordpress/block-editor';
