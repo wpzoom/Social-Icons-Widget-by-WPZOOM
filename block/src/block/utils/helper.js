@@ -44,6 +44,8 @@ class Helper {
 		const domains = {
 			'feedburner.google.com': 'rss',
 			'ok.ru': 'odnoklassniki',
+			'yt.com': 'youtube',
+			'fb.com': 'facebook',
 			't.me': 'telegram',
 			'wa.me': 'whatsapp',
 			'zen.yandex.com': 'zen-yandex',
