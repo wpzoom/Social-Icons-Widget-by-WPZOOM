@@ -1,49 +1,49 @@
-import {Component, Fragment} from '@wordpress/element';
-import {TextControl, Button} from '@wordpress/components';
-import {__} from '@wordpress/i18n';
+/**
+ * WordPress dependencies
+ */
+import { __ } from '@wordpress/i18n';
+import { Fragment, useState } from '@wordpress/element';
+import { TextControl, Button } from '@wordpress/components';
 
+export default function PopoverSearch( {
+	value,
+	save,
+} ) {
+	const [ search, setSearch ] = useState( value );
 
-class PopoverSearch extends Component {
+	const onKeyDownHandler = ( e ) => {
+		e.stopPropagation();
+		if ( e.key === 'Enter' ) {
+			save( search );
+		}
+	};
 
-    state = {
-        searchValue: this.props.value
-    };
+	const onClickHandler = ( e ) => {
+		e.stopPropagation();
+		save( search );
+	};
 
-    onChangeTextControlHandler = (newValue) => {
-        this.setState({searchValue: newValue});
-    };
-
-    onKeyDownHandler = (e) => {
-        e.stopPropagation();
-        if (e.key === 'Enter') {
-            this.props.save(e, this.state.searchValue);
-        }
-    };
-
-    onClickHandler = (e) => {
-        e.stopPropagation();
-        this.props.save(e, this.state.searchValue);
-    };
-
-    render() {
-        return (
-            <Fragment>
-                <TextControl
-                    className={'url-input'}
-                    type={'text'}
-                    value={this.state.searchValue}
-                    onChange={this.onChangeTextControlHandler}
-                    onKeyDown={this.onKeyDownHandler}
-                />
-                <Button
-                    icon={'editor-break'}
-                    label={__('Apply', 'zoom-social-icons-widget')}
-                    onClick={this.onClickHandler}
-                    className={['is-button', 'button-small', 'is-default', 'url-button']}>
-                </Button>
-            </Fragment>
-        )
-    }
+	return (
+		<Fragment>
+			<TextControl
+				className="url-input"
+				type="text"
+				value={ search }
+				onChange={ setSearch }
+				onKeyDown={ onKeyDownHandler }
+				onFocus={ ( e ) => e.target.select() }
+			/>
+			<Button
+				icon="editor-break"
+				label={ __( 'Apply', 'zoom-social-icons-widget' ) }
+				onClick={ onClickHandler }
+				className={ [
+					'is-button',
+					'button-small',
+					'is-default',
+					'url-button',
+				] }
+			></Button>
+		</Fragment>
+	);
 }
-
-export default PopoverSearch;
