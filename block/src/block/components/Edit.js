@@ -287,22 +287,13 @@ class Edit extends Component {
 
 				if ( ! isEmpty( styleVariation.selectedIcons ) ) {
 					clonedSelectedIcons.map( ( item ) => {
-						const current = find( styleVariation.selectedIcons, [
-							'icon',
-							item.icon,
-						] );
-
-						item.color = isEmpty( current )
-							? styleVariation.defaultIcon.color
-							: current.color;
-						item.hoverColor = isEmpty( current )
-							? styleVariation.defaultIcon.hoverColor
-							: current.hoverColor;
+						if ( isEmpty( item.color ) ) {
+							item.color = styleVariation.defaultIcon.color;
+						}
+						if ( isEmpty( item.hoverColor ) ) {
+							item.hoverColor = styleVariation.defaultIcon.hoverColor;
+						}
 						return item;
-					} );
-
-					this.props.setAttributes( {
-						selectedIcons: clonedSelectedIcons,
 					} );
 				}
 
