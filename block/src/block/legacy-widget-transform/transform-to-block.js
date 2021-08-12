@@ -36,7 +36,7 @@ const TransformToBlock = ( { clientId, attributes, widgetId } ) => {
 	replacementData[ widgetId ].attributes = attributes;
 
 	const warningMessage = __(
-		'Social Icons Widget is currently not supported by the new block-based widget screen in WordPress 5.8. We highly recommend to edit it in the Customizer or transform it to Social Icons Block by clicking on the "Convert to block" button. You can also disable the new block-based widget screen by installing the Classic Widgets plugin.',
+		'Legacy Social Icons Widget has been detected on this page. Since our plugin includes a Social Icons Block, supported by WordPress 5.8, we highly recommend transforming legacy widgets to blocks. You can do that by clicking on the "Convert to block" button. You can also disable the new block-based widget screen by installing the Classic Widgets plugin.',
 		'zoom-social-icons-widget'
 	);
 

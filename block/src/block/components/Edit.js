@@ -33,9 +33,9 @@ class Edit extends Component {
 			'with-label-canvas-rounded': {
 				canvasType: 'with-label-canvas',
 				showIconsLabel: true,
-				iconsColor: '#2f4974',
+				iconsColor: false,
 				iconsLabelColor: '#fff',
-				iconsHoverColor: '#2f4974',
+				iconsHoverColor: false,
 				iconsLabelHoverColor: '#fff',
 				iconsFontSize: 20,
 				iconsLabelFontSize: 15,
@@ -48,8 +48,8 @@ class Edit extends Component {
 				wasStyled: true,
 				defaultIcon: {
 					icon: 'facebook',
-					color: '#2f4974',
-					hoverColor: '#2f4974',
+					color: false,
+					hoverColor: false,
 				},
 			},
 			'with-canvas-rounded': {
@@ -66,18 +66,18 @@ class Edit extends Component {
 				iconsMarginHorizontal: 5,
 				iconsMarginVertical: 5,
 				iconsHasBorder: true,
-				iconsBorderRadius: 10,
+				iconsBorderRadius: 5,
 				wasStyled: true,
 				defaultIcon: {
 					icon: 'facebook',
-					color: '#3b5998',
-					hoverColor: '#3b5998',
+					color: '#1877F2',
+					hoverColor: '#1877F2',
 				},
 				selectedIcons: [
 					{
 						icon: 'facebook',
-						color: '#3b5998',
-						hoverColor: '#3b5998',
+						color: '#1877F2',
+						hoverColor: '#1877F2',
 					},
 					{
 						icon: 'twitter',
@@ -86,8 +86,8 @@ class Edit extends Component {
 					},
 					{
 						icon: 'instagram',
-						color: '#E44060',
-						hoverColor: '#E44060',
+						color: '#E4405F',
+						hoverColor: '#E4405F',
 					},
 				],
 			},
@@ -109,14 +109,14 @@ class Edit extends Component {
 				wasStyled: true,
 				defaultIcon: {
 					icon: 'facebook',
-					color: '#3b5998',
-					hoverColor: '#3b5998',
+					color: '#1877F2',
+					hoverColor: '#1877F2',
 				},
 				selectedIcons: [
 					{
 						icon: 'facebook',
-						color: '#3b5998',
-						hoverColor: '#3b5998',
+						color: '#1877F2',
+						hoverColor: '#1877F2',
 					},
 					{
 						icon: 'twitter',
@@ -125,8 +125,8 @@ class Edit extends Component {
 					},
 					{
 						icon: 'instagram',
-						color: '#E44060',
-						hoverColor: '#E44060',
+						color: '#E4405F',
+						hoverColor: '#E4405F',
 					},
 				],
 			},
@@ -148,14 +148,14 @@ class Edit extends Component {
 				wasStyled: true,
 				defaultIcon: {
 					icon: 'facebook',
-					color: '#3b5998',
-					hoverColor: '#3b5998',
+					color: '#1877F2',
+					hoverColor: '#1877F2',
 				},
 				selectedIcons: [
 					{
 						icon: 'facebook',
-						color: '#3b5998',
-						hoverColor: '#3b5998',
+						color: '#1877F2',
+						hoverColor: '#1877F2',
 					},
 					{
 						icon: 'twitter',
@@ -164,8 +164,8 @@ class Edit extends Component {
 					},
 					{
 						icon: 'instagram',
-						color: '#E44060',
-						hoverColor: '#E44060',
+						color: '#E4405F',
+						hoverColor: '#E4405F',
 					},
 				],
 			},
@@ -186,14 +186,14 @@ class Edit extends Component {
 				wasStyled: true,
 				defaultIcon: {
 					icon: 'facebook',
-					color: '#3b5998',
-					hoverColor: '#3b5998',
+					color: '#1877F2',
+					hoverColor: '#1877F2',
 				},
 				selectedIcons: [
 					{
 						icon: 'facebook',
-						color: '#3b5998',
-						hoverColor: '#3b5998',
+						color: '#1877F2',
+						hoverColor: '#1877F2',
 					},
 					{
 						icon: 'twitter',
@@ -202,18 +202,18 @@ class Edit extends Component {
 					},
 					{
 						icon: 'instagram',
-						color: '#E44060',
-						hoverColor: '#E44060',
+						color: '#E4405F',
+						hoverColor: '#E4405F',
 					},
 				],
 			},
 			'without-canvas-with-border': {
 				canvasType: 'without-canvas',
 				showIconsLabel: false,
-				iconsColor: '#2f4974',
-				iconsLabelColor: '#2f4974',
-				iconsHoverColor: '#2f4974',
-				iconsLabelHoverColor: '#2f4974',
+				iconsColor: false,
+				iconsLabelColor: false,
+				iconsHoverColor: false,
+				iconsLabelHoverColor: false,
 				iconsFontSize: 20,
 				iconsLabelFontSize: 20,
 				iconsPaddingHorizontal: 10,
@@ -225,17 +225,17 @@ class Edit extends Component {
 				wasStyled: true,
 				defaultIcon: {
 					icon: 'facebook',
-					color: '#2f4974',
-					hoverColor: '#2f4974',
+					color: false,
+					hoverColor: false,
 				},
 			},
 			'without-canvas-with-label': {
 				canvasType: 'without-canvas',
 				showIconsLabel: true,
-				iconsColor: '#2f4974',
-				iconsLabelColor: '#2f4974',
-				iconsHoverColor: '#2f4974',
-				iconsLabelHoverColor: '#2f4974',
+				iconsColor: false,
+				iconsLabelColor: false,
+				iconsHoverColor: false,
+				iconsLabelHoverColor: false,
 				iconsFontSize: 40,
 				iconsLabelFontSize: 15,
 				iconsPaddingHorizontal: 10,
@@ -246,8 +246,8 @@ class Edit extends Component {
 				wasStyled: true,
 				defaultIcon: {
 					icon: 'facebook',
-					color: '#2f4974',
-					hoverColor: '#2f4974',
+					color: false,
+					hoverColor: false,
 				},
 			},
 		};
