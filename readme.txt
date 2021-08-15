@@ -152,6 +152,10 @@ You can also create a hidden widget area using a plugin like Custom Sidebars if 
 
 == Changelog ==
 
+= 4.2.1 =
+* Multiple fixes and improvements when converting legacy widgets to blocks
+* Improvements to icon styles in the Social Icons Block
+
 = 4.2.0 =
 * Fixed compatibility issues with WordPress 5.8
 * Added warning notice to widgets block-based page. Please make sure you've read the message before doing some changes to widgets!

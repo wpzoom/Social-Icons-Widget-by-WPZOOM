@@ -150,7 +150,7 @@ if ( ! function_exists( 'zoom_get_pointer_data' ) ) :
 		$plugin_data = get_plugin_data( WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . '/social-icons-widget-by-wpzoom.php' );
 		$plugin_name = $plugin_data['Name'];
 
-		$pointer_content  = esc_html__( 'Thank you for using', 'zoom-social-icons-widget' ) . '<b>Social Icons Widget by WPZOOM</b><br/>';
+		$pointer_content  = esc_html__( 'Thank you for using', 'zoom-social-icons-widget' ) . ' <b>Social Icons Widget by WPZOOM</b><br/>';
 		$pointer_content .= esc_html__( 'Would you mind taking a moment to rate it! It won\'t take more than two minutes.', 'zoom-social-icons-widget' );
 		$pointer_content .= '<p><b>' . esc_html__( 'Thanks for your support!', 'zoom-social-icons-widget' ) . '</b></p>';
 		$pointer_content .= '<p><a class="button button-primary button-hero" href="https://wordpress.org/support/plugin/social-icons-widget-by-wpzoom/reviews/#new-post" target="_blank"> &#9733; ' . esc_html__( 'Rate Now', 'zoom-social-icons-widget' ) . '  &#9733;</a></p>';
