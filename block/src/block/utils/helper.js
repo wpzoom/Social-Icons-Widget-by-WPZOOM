@@ -44,6 +44,8 @@ class Helper {
 		const domains = {
 			'feedburner.google.com': 'rss',
 			'ok.ru': 'odnoklassniki',
+			'yt.com': 'youtube',
+			'fb.com': 'facebook',
 			't.me': 'telegram',
 			'wa.me': 'whatsapp',
 			'zen.yandex.com': 'zen-yandex',
@@ -53,9 +55,9 @@ class Helper {
 		const uri = new URI( url );
 
 		let domain =
-			uri.domain() !== undefined ?
-				uri.domain().split( '.' ).shift() :
-				uri.scheme();
+			uri.domain() !== undefined
+				? uri.domain().split( '.' ).shift()
+				: uri.scheme();
 
 		const schemaHasIcon = findKey( schemas, ( val, key ) => {
 			return key === uri.scheme();

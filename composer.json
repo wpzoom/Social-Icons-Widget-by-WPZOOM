@@ -10,12 +10,16 @@
         "phpstan/phpstan": "^0.12.83",
         "szepeviktor/phpstan-wordpress": "^0.7.5"
     },
-    "license": "GPLv2 or later",
+    "license": "GNU General Public License v2.0 or later",
     "authors": [
         {
             "name": "WPZOOM",
             "email": "support@wpzoom.com"
         }
     ],
-    "require": {}
+    "scripts": {
+      "format": "@php ./vendor/bin/phpcbf",
+      "lint": "@php ./vendor/bin/phpcs",
+      "phpstan": "@php vendor/bin/phpstan analyse"
+    }
 }

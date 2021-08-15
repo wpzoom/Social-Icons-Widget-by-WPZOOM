@@ -2,7 +2,7 @@
 
 import ModalColorPicker from './ModalColorPicker';
 import SocialIcon from './SocialIcon';
-import Helper from './Helper';
+import Helper from '../utils/helper';
 import React from 'react';
 import classnames from 'classnames';
 import { isEmpty, debounce } from 'lodash';
@@ -128,9 +128,9 @@ class SocialIconsModal extends Component {
 							key={ key }
 							setRef={
 								this.state.modalIcon === element.icon &&
-								this.state.modalIconKit === iconKit ?
-									this.myRef :
-									null
+								this.state.modalIconKit === iconKit
+									? this.myRef
+									: null
 							}
 							color={ this.state.modalColor }
 							hoverColor={ this.state.modalHoverColor }

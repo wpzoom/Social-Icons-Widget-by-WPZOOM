@@ -2,11 +2,11 @@
 Contributors: WPZOOM, nvartolomei, ciorici, llemurya
 Donate link: https://www.wpzoom.com/
 Tags: social icons, social networks, social media, social media icons, icons, social profiles, social widget, widget, block, social block, block icons, academicons, elementor, social networking, sharing, share buttons, fontawesome
-Requires at least: 5.0
+Requires at least: 5.2
 Requires PHP: 5.6
 Tested up to: 5.8
 Stable tag: trunk
-License: GPLv2 or later
+License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Social Icons Widget & Block helps adding icons with links to social media profiles on your website. Supports more than 100 websites and includes 400 icons.
@@ -151,6 +151,10 @@ You can also create a hidden widget area using a plugin like Custom Sidebars if 
 8. Widget Settings
 
 == Changelog ==
+
+= 4.2.1 =
+* Multiple fixes and improvements when converting legacy widgets to blocks
+* Improvements to icon styles in the Social Icons Block
 
 = 4.2.0 =
 * Fixed compatibility issues with WordPress 5.8

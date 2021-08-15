@@ -1,13 +1,15 @@
 /* eslint-disable react/jsx-no-target-blank */
-import Helper from './Helper';
-import classnames from 'classnames';
-import SocialIconsModal from './SocialIconsModal';
-import Inspector from './Inspector';
-import PopoverSearch from './PopoverSearch';
-import SortableArrows from './SortableArrows';
-import { get, isEmpty, omit, find } from 'lodash';
-import ModalColorPicker from './ModalColorPicker';
+
+/**
+ * External dependencies
+ */
+import { get, isEmpty, omit, find, map, filter } from 'lodash';
 import URI from 'urijs';
+import classnames from 'classnames';
+
+/**
+ * WordPress dependencies
+ */
 import { __ } from '@wordpress/i18n';
 import { Component, Fragment } from '@wordpress/element';
 import { withSelect } from '@wordpress/data';
@@ -15,15 +17,25 @@ import { Icon, Button, Popover } from '@wordpress/components';
 import { AlignmentToolbar, BlockControls } from '@wordpress/block-editor';
 import { compose } from '@wordpress/compose';
 
+/**
+ * Internal dependencies
+ */
+import Helper from '../utils/helper';
+import SocialIconsModal from './SocialIconsModal';
+import Inspector from './Inspector';
+import PopoverSearch from './PopoverSearch';
+import SortableArrows from './SortableArrows';
+import ModalColorPicker from './ModalColorPicker';
+
 class Edit extends Component {
 	getStyleVariations( styleType ) {
 		const styleVariations = {
 			'with-label-canvas-rounded': {
 				canvasType: 'with-label-canvas',
 				showIconsLabel: true,
-				iconsColor: '#2f4974',
+				iconsColor: false,
 				iconsLabelColor: '#fff',
-				iconsHoverColor: '#2f4974',
+				iconsHoverColor: false,
 				iconsLabelHoverColor: '#fff',
 				iconsFontSize: 20,
 				iconsLabelFontSize: 15,
@@ -36,8 +48,8 @@ class Edit extends Component {
 				wasStyled: true,
 				defaultIcon: {
 					icon: 'facebook',
-					color: '#2f4974',
-					hoverColor: '#2f4974',
+					color: false,
+					hoverColor: false,
 				},
 			},
 			'with-canvas-rounded': {
@@ -54,18 +66,18 @@ class Edit extends Component {
 				iconsMarginHorizontal: 5,
 				iconsMarginVertical: 5,
 				iconsHasBorder: true,
-				iconsBorderRadius: 10,
+				iconsBorderRadius: 5,
 				wasStyled: true,
 				defaultIcon: {
 					icon: 'facebook',
-					color: '#3b5998',
-					hoverColor: '#3b5998',
+					color: '#1877F2',
+					hoverColor: '#1877F2',
 				},
 				selectedIcons: [
 					{
 						icon: 'facebook',
-						color: '#3b5998',
-						hoverColor: '#3b5998',
+						color: '#1877F2',
+						hoverColor: '#1877F2',
 					},
 					{
 						icon: 'twitter',
@@ -74,8 +86,8 @@ class Edit extends Component {
 					},
 					{
 						icon: 'instagram',
-						color: '#E44060',
-						hoverColor: '#E44060',
+						color: '#E4405F',
+						hoverColor: '#E4405F',
 					},
 				],
 			},
@@ -97,14 +109,14 @@ class Edit extends Component {
 				wasStyled: true,
 				defaultIcon: {
 					icon: 'facebook',
-					color: '#3b5998',
-					hoverColor: '#3b5998',
+					color: '#1877F2',
+					hoverColor: '#1877F2',
 				},
 				selectedIcons: [
 					{
 						icon: 'facebook',
-						color: '#3b5998',
-						hoverColor: '#3b5998',
+						color: '#1877F2',
+						hoverColor: '#1877F2',
 					},
 					{
 						icon: 'twitter',
@@ -113,8 +125,8 @@ class Edit extends Component {
 					},
 					{
 						icon: 'instagram',
-						color: '#E44060',
-						hoverColor: '#E44060',
+						color: '#E4405F',
+						hoverColor: '#E4405F',
 					},
 				],
 			},
@@ -136,14 +148,14 @@ class Edit extends Component {
 				wasStyled: true,
 				defaultIcon: {
 					icon: 'facebook',
-					color: '#3b5998',
-					hoverColor: '#3b5998',
+					color: '#1877F2',
+					hoverColor: '#1877F2',
 				},
 				selectedIcons: [
 					{
 						icon: 'facebook',
-						color: '#3b5998',
-						hoverColor: '#3b5998',
+						color: '#1877F2',
+						hoverColor: '#1877F2',
 					},
 					{
 						icon: 'twitter',
@@ -152,8 +164,8 @@ class Edit extends Component {
 					},
 					{
 						icon: 'instagram',
-						color: '#E44060',
-						hoverColor: '#E44060',
+						color: '#E4405F',
+						hoverColor: '#E4405F',
 					},
 				],
 			},
@@ -174,14 +186,14 @@ class Edit extends Component {
 				wasStyled: true,
 				defaultIcon: {
 					icon: 'facebook',
-					color: '#3b5998',
-					hoverColor: '#3b5998',
+					color: '#1877F2',
+					hoverColor: '#1877F2',
 				},
 				selectedIcons: [
 					{
 						icon: 'facebook',
-						color: '#3b5998',
-						hoverColor: '#3b5998',
+						color: '#1877F2',
+						hoverColor: '#1877F2',
 					},
 					{
 						icon: 'twitter',
@@ -190,18 +202,18 @@ class Edit extends Component {
 					},
 					{
 						icon: 'instagram',
-						color: '#E44060',
-						hoverColor: '#E44060',
+						color: '#E4405F',
+						hoverColor: '#E4405F',
 					},
 				],
 			},
 			'without-canvas-with-border': {
 				canvasType: 'without-canvas',
 				showIconsLabel: false,
-				iconsColor: '#2f4974',
-				iconsLabelColor: '#2f4974',
-				iconsHoverColor: '#2f4974',
-				iconsLabelHoverColor: '#2f4974',
+				iconsColor: false,
+				iconsLabelColor: false,
+				iconsHoverColor: false,
+				iconsLabelHoverColor: false,
 				iconsFontSize: 20,
 				iconsLabelFontSize: 20,
 				iconsPaddingHorizontal: 10,
@@ -213,17 +225,17 @@ class Edit extends Component {
 				wasStyled: true,
 				defaultIcon: {
 					icon: 'facebook',
-					color: '#2f4974',
-					hoverColor: '#2f4974',
+					color: false,
+					hoverColor: false,
 				},
 			},
 			'without-canvas-with-label': {
 				canvasType: 'without-canvas',
 				showIconsLabel: true,
-				iconsColor: '#2f4974',
-				iconsLabelColor: '#2f4974',
-				iconsHoverColor: '#2f4974',
-				iconsLabelHoverColor: '#2f4974',
+				iconsColor: false,
+				iconsLabelColor: false,
+				iconsHoverColor: false,
+				iconsLabelHoverColor: false,
 				iconsFontSize: 40,
 				iconsLabelFontSize: 15,
 				iconsPaddingHorizontal: 10,
@@ -234,8 +246,8 @@ class Edit extends Component {
 				wasStyled: true,
 				defaultIcon: {
 					icon: 'facebook',
-					color: '#2f4974',
-					hoverColor: '#2f4974',
+					color: false,
+					hoverColor: false,
 				},
 			},
 		};
@@ -260,10 +272,14 @@ class Edit extends Component {
 			Helper.getBlockStyle( prevProps.className ) !==
 			Helper.getBlockStyle( this.props.className )
 		) {
-			const styleVariation = this.getStyleVariations( this.getActiveStyle() );
+			const styleVariation = this.getStyleVariations(
+				this.getActiveStyle()
+			);
 
 			if ( ! isEmpty( styleVariation ) ) {
-				this.props.setAttributes( omit( styleVariation, [ 'selectedIcons' ] ) );
+				this.props.setAttributes(
+					omit( styleVariation, [ 'selectedIcons' ] )
+				);
 
 				const clonedSelectedIcons = JSON.parse(
 					JSON.stringify( this.props.attributes.selectedIcons )
@@ -271,22 +287,13 @@ class Edit extends Component {
 
 				if ( ! isEmpty( styleVariation.selectedIcons ) ) {
 					clonedSelectedIcons.map( ( item ) => {
-						const current = find( styleVariation.selectedIcons, [
-							'icon',
-							item.icon,
-						] );
-
-						item.color = isEmpty( current )
-							? styleVariation.defaultIcon.color
-							: current.color;
-						item.hoverColor = isEmpty( current )
-							? styleVariation.defaultIcon.hoverColor
-							: current.hoverColor;
+						if ( isEmpty( item.color ) ) {
+							item.color = styleVariation.defaultIcon.color;
+						}
+						if ( isEmpty( item.hoverColor ) ) {
+							item.hoverColor = styleVariation.defaultIcon.hoverColor;
+						}
 						return item;
-					} );
-
-					this.props.setAttributes( {
-						selectedIcons: clonedSelectedIcons,
 					} );
 				}
 
@@ -510,7 +517,9 @@ class Edit extends Component {
 	};
 
 	popoverSearchHandler = ( key, newUrl ) => {
-		newUrl = isEmpty( new URI( newUrl ).protocol() ) ? `https://${ newUrl }` : newUrl;
+		newUrl = isEmpty( new URI( newUrl ).protocol() )
+			? `https://${ newUrl }`
+			: newUrl;
 
 		const selectedIconsClone = JSON.parse(
 			JSON.stringify( this.props.attributes.selectedIcons )
@@ -519,19 +528,26 @@ class Edit extends Component {
 
 		if ( iconFromUrl ) {
 			const filteredIcons = Helper.filterIcons( iconFromUrl );
-			if ( filteredIcons[ selectedIconsClone[ key ].iconKit ].length ) {
-				selectedIconsClone[ key ].icon =
-					filteredIcons[ selectedIconsClone[ key ].iconKit ][ 0 ].icon;
 
-				if ( filteredIcons[ selectedIconsClone[ key ].iconKit ][ 0 ].color ) {
-					selectedIconsClone[ key ].color =
-						filteredIcons[ selectedIconsClone[ key ].iconKit ][ 0 ].color;
-					selectedIconsClone[ key ].hoverColor =
-						filteredIcons[ selectedIconsClone[ key ].iconKit ][ 0 ].color;
+			map( filteredIcons, ( icon, iconKit ) => {
+				if ( ! isEmpty( icon ) ) {
+					filter( icon, function( o ) {
+						if ( o.icon === iconFromUrl && selectedIconsClone[ key ].icon !== o.icon ) {
+							selectedIconsClone[ key ].iconKit = iconKit;
+							selectedIconsClone[ key ].icon = o.icon;
+
+							if ( o.color ) {
+								selectedIconsClone[ key ].color = o.color;
+								selectedIconsClone[ key ].hoverColor = o.color;
+							}
+
+							selectedIconsClone[ key ].label = Helper.humanizeIconLabel(
+								iconFromUrl
+							);
+						}
+					} );
 				}
-
-				selectedIconsClone[ key ].label = Helper.humanizeIconLabel( iconFromUrl );
-			}
+			} );
 		}
 
 		selectedIconsClone[ key ].url = newUrl;
@@ -608,11 +624,14 @@ class Edit extends Component {
 						className={ classnames( 'social-icon-link', {
 							selected: list.isActive,
 						} ) }
-						target={ attributes.openLinkInNewTab ? '_blank' : undefined }
+						target={
+							attributes.openLinkInNewTab ? '_blank' : undefined
+						}
 						rel={ relAttr.length ? relAttr.join( ' ' ) : undefined }
 						style={ {
 							'--wpz-social-icons-block-item-color': list.color,
-							'--wpz-social-icons-block-item-color-hover': list.hoverColor,
+							'--wpz-social-icons-block-item-color-hover':
+								list.hoverColor,
 						} }
 					>
 						<span
@@ -623,44 +642,78 @@ class Edit extends Component {
 						{ showIconsLabel }
 						{ list.showPopover && isSelected && (
 							<Popover
-								className={ classnames( 'wpzoom-social-icons-popover' ) }
+								className={ classnames(
+									'wpzoom-social-icons-popover'
+								) }
 								key={ key }
 								position={ 'bottom center' }
 								onClose={ () => this.popoverCloseHandler( key ) }
 							>
 								<div className={ classnames( 'popover-content' ) }>
-									<div className={ classnames( 'popover-url-wrapper' ) }>
+									<div
+										className={ classnames(
+											'popover-url-wrapper'
+										) }
+									>
 										<PopoverSearch
 											key={ key }
 											value={ list.url }
-											save={ ( e, url ) => this.popoverSearchHandler( key, url, e ) }
+											save={ ( url ) =>
+												this.popoverSearchHandler(
+													key,
+													url
+												)
+											}
 										/>
 									</div>
 
-									<div className={ classnames( 'popover-controls' ) }>
+									<div
+										className={ classnames(
+											'popover-controls'
+										) }
+									>
 										<Button
 											isLink={ true }
-											onClick={ ( e ) => this.popoverEditSettingsHandler( e, key ) }
+											onClick={ ( e ) =>
+												this.popoverEditSettingsHandler(
+													e,
+													key
+												)
+											}
 										>
-											{ __( 'Edit Details', 'zoom-social-icons-widget' ) }
+											{ __(
+												'Edit Details',
+												'zoom-social-icons-widget'
+											) }
 										</Button>
-										<div className={ classnames( 'popover-color-picker-wrapper' ) }>
+										<div
+											className={ classnames(
+												'popover-color-picker-wrapper'
+											) }
+										>
 											<ModalColorPicker
 												title={ 'Color' }
-												className={ classnames( 'popover-color-picker' ) }
+												className={ classnames(
+													'popover-color-picker'
+												) }
 												save={ ( arg ) => {
 													const selectedIconsClone = [
 														...attributes.selectedIcons,
 													];
-													selectedIconsClone[ attributes.activeIconIndex ].color =
-														arg.color;
-													setAttributes( { selectedIcons: selectedIconsClone } );
+													selectedIconsClone[
+														attributes.activeIconIndex
+													].color = arg.color;
+													setAttributes( {
+														selectedIcons: selectedIconsClone,
+													} );
 												} }
 												color={ list.color }
 											/>
 											<ModalColorPicker
 												title={ 'Hover Color' }
-												className={ classnames( 'popover-color-picker' ) }
+												className={ classnames(
+													'popover-color-picker'
+												) }
 												save={ ( arg ) => {
 													const selectedIconsClone = [
 														...attributes.selectedIcons,
@@ -668,20 +721,31 @@ class Edit extends Component {
 													selectedIconsClone[
 														attributes.activeIconIndex
 													].hoverColor = arg.color;
-													setAttributes( { selectedIcons: selectedIconsClone } );
+													setAttributes( {
+														selectedIcons: selectedIconsClone,
+													} );
 												} }
 												color={ list.hoverColor }
 											/>
-											{ attributes.selectedIcons.length > 1 && (
+											{ attributes.selectedIcons.length >
+												1 && (
 												<Button
-													onClick={ ( e ) => this.popoverDeleteIconHandler( e, key ) }
+													onClick={ ( e ) =>
+														this.popoverDeleteIconHandler(
+															e,
+															key
+														)
+													}
 													className={ [
 														'is-button',
 														'button-link-delete',
 														'is-small',
 													] }
 												>
-													{ __( 'Delete Icon', 'zoom-social-icons-widget' ) }
+													{ __(
+														'Delete Icon',
+														'zoom-social-icons-widget'
+													) }
 												</Button>
 											) }
 										</div>
@@ -707,7 +771,9 @@ class Edit extends Component {
 				<BlockControls>
 					<AlignmentToolbar
 						value={ attributes.iconsAlignment }
-						onChange={ ( iconsAlignment ) => this.setAlignment( iconsAlignment ) }
+						onChange={ ( iconsAlignment ) =>
+							this.setAlignment( iconsAlignment )
+						}
 					></AlignmentToolbar>
 				</BlockControls>
 				<div
@@ -716,21 +782,26 @@ class Edit extends Component {
 						'--wpz-social-icons-block-item-font-size': Helper.addPixelsPipe(
 							attributes.iconsFontSize
 						),
-						'--wpz-social-icons-block-item-padding-horizontal':
-							Helper.addPixelsPipe( attributes.iconsPaddingHorizontal ),
-						'--wpz-social-icons-block-item-padding-vertical':
-							Helper.addPixelsPipe( attributes.iconsPaddingVertical ),
-						'--wpz-social-icons-block-item-margin-horizontal':
-							Helper.addPixelsPipe( attributes.iconsMarginHorizontal ),
-						'--wpz-social-icons-block-item-margin-vertical':
-							Helper.addPixelsPipe( attributes.iconsMarginVertical ),
+						'--wpz-social-icons-block-item-padding-horizontal': Helper.addPixelsPipe(
+							attributes.iconsPaddingHorizontal
+						),
+						'--wpz-social-icons-block-item-padding-vertical': Helper.addPixelsPipe(
+							attributes.iconsPaddingVertical
+						),
+						'--wpz-social-icons-block-item-margin-horizontal': Helper.addPixelsPipe(
+							attributes.iconsMarginHorizontal
+						),
+						'--wpz-social-icons-block-item-margin-vertical': Helper.addPixelsPipe(
+							attributes.iconsMarginVertical
+						),
 						'--wpz-social-icons-block-item-border-radius': Helper.addPixelsPipe(
 							attributes.iconsBorderRadius
 						),
 						'--wpz-social-icons-block-label-font-size': Helper.addPixelsPipe(
 							attributes.iconsLabelFontSize
 						),
-						'--wpz-social-icons-block-label-color': attributes.iconsLabelColor,
+						'--wpz-social-icons-block-label-color':
+							attributes.iconsLabelColor,
 						'--wpz-social-icons-block-label-color-hover':
 							attributes.iconsLabelHoverColor,
 						'--wpz-social-icons-alignment': this.getIconsAlignmentStyle(
@@ -751,19 +822,41 @@ class Edit extends Component {
 					) }
 					{ attributes.selectedIcons[ attributes.activeIconIndex ] && (
 						<SocialIconsModal
-							className={ classnames( Helper.getBlockStyle( className ) ) }
+							className={ classnames(
+								Helper.getBlockStyle( className )
+							) }
 							showIconsLabel={ attributes.showIconsLabel }
 							iconsBorderRadius={ attributes.iconsBorderRadius }
 							show={ attributes.showModal }
-							url={ attributes.selectedIcons[ attributes.activeIconIndex ].url }
-							label={ attributes.selectedIcons[ attributes.activeIconIndex ].label }
-							icon={ attributes.selectedIcons[ attributes.activeIconIndex ].icon }
-							iconKit={
-								attributes.selectedIcons[ attributes.activeIconIndex ].iconKit
+							url={
+								attributes.selectedIcons[
+									attributes.activeIconIndex
+								].url
 							}
-							color={ attributes.selectedIcons[ attributes.activeIconIndex ].color }
+							label={
+								attributes.selectedIcons[
+									attributes.activeIconIndex
+								].label
+							}
+							icon={
+								attributes.selectedIcons[
+									attributes.activeIconIndex
+								].icon
+							}
+							iconKit={
+								attributes.selectedIcons[
+									attributes.activeIconIndex
+								].iconKit
+							}
+							color={
+								attributes.selectedIcons[
+									attributes.activeIconIndex
+								].color
+							}
 							hoverColor={
-								attributes.selectedIcons[ attributes.activeIconIndex ].hoverColor
+								attributes.selectedIcons[
+									attributes.activeIconIndex
+								].hoverColor
 							}
 							save={ this.saveModalHandler }
 							delete={ this.deleteIconHandler }
@@ -785,6 +878,4 @@ const applyWithSelect = withSelect( ( select, props ) => {
 	};
 } );
 
-export default compose(
-	applyWithSelect
-)( Edit );
+export default compose( applyWithSelect )( Edit );

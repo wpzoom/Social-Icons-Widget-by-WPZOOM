@@ -1,4 +1,10 @@
 <?php
+/**
+ * All icons packs data.
+ *
+ * @package WPZOOM_Social_Icons
+ */
+
 return array(
 	'socicon'     => array(
 		array(
@@ -15,13 +21,13 @@ return array(
 			),
 			'color'    => '#FF5A5F',
 		),
-        array(
-            'icon'     => 'anchor',
-            'category' => array(
-                'business',
-            ),
-            'color'    => '#8940fa',
-        ),
+		array(
+			'icon'     => 'anchor',
+			'category' => array(
+				'business',
+			),
+			'color'    => '#8940fa',
+		),
 		array(
 			'icon'     => 'android',
 			'category' => array(
@@ -50,13 +56,13 @@ return array(
 			),
 			'color'    => '#B9BFC1',
 		),
-        array(
-            'icon'     => 'apple-podcasts',
-            'category' => array(
-                'podcast',
-            ),
-            'color'    => '#9933CC',
-        ),
+		array(
+			'icon'     => 'apple-podcasts',
+			'category' => array(
+				'podcast',
+			),
+			'color'    => '#9933CC',
+		),
 		array(
 			'icon'     => 'appnet',
 			'category' => array(
@@ -74,9 +80,9 @@ return array(
 		array(
 			'icon'     => 'artstation',
 			'category' => array(
-				'software'
+				'software',
 			),
-			'color'    => '#13aff0'
+			'color'    => '#13aff0',
 		),
 		array(
 			'icon'     => 'baidu',
@@ -136,13 +142,13 @@ return array(
 			),
 			'color'    => '#000000',
 		),
-        array(
-            'icon'     => 'castbox',
-            'category' => array(
-                'podcast',
-            ),
-            'color'    => '#F55B23',
-        ),
+		array(
+			'icon'     => 'castbox',
+			'category' => array(
+				'podcast',
+			),
+			'color'    => '#F55B23',
+		),
 		array(
 			'icon'     => 'codered',
 			'category' => array(
@@ -159,13 +165,13 @@ return array(
 			),
 			'color'    => '#3E8DCC',
 		),
-        array(
-            'icon'     => 'coronavirus',
-            'category' => array(
-                'general'
-            ),
-            'color'    => '#E6502A',
-        ),
+		array(
+			'icon'     => 'coronavirus',
+			'category' => array(
+				'general',
+			),
+			'color'    => '#E6502A',
+		),
 		array(
 			'icon'     => 'crunchbase',
 			'category' => array(
@@ -230,14 +236,14 @@ return array(
 			),
 			'color'    => '#2e9fff',
 		),
-        array(
-            'icon'     => 'displate',
-            'category' => array(
-                'communication',
-                'web-tools',
-            ),
-            'color'    => '#2e9fff',
-        ),
+		array(
+			'icon'     => 'displate',
+			'category' => array(
+				'communication',
+				'web-tools',
+			),
+			'color'    => '#2e9fff',
+		),
 		array(
 			'icon'     => 'dribbble',
 			'category' => array(
@@ -275,13 +281,13 @@ return array(
 			),
 			'color'    => '#82B540',
 		),
-        array(
-            'icon'     => 'etsy',
-            'category' => array(
-                'ecommerce',
-            ),
-            'color'    => '#F16521',
-        ),
+		array(
+			'icon'     => 'etsy',
+			'category' => array(
+				'ecommerce',
+			),
+			'color'    => '#F16521',
+		),
 		array(
 			'icon'     => 'eyeem',
 			'category' => array(
@@ -319,13 +325,13 @@ return array(
 			),
 			'color'    => '#34B151',
 		),
-        array(
-            'icon'     => 'fiverr',
-            'category' => array(
-                'web-tools',
-            ),
-            'color'    => '#1DBF73',
-        ),
+		array(
+			'icon'     => 'fiverr',
+			'category' => array(
+				'web-tools',
+			),
+			'color'    => '#1DBF73',
+		),
 		array(
 			'icon'     => 'flattr',
 			'category' => array(
@@ -372,13 +378,13 @@ return array(
 			),
 			'color'    => '#2F72C4',
 		),
-        array(
-            'icon'     => 'gab',
-            'category' => array(
-                'social-network',
-            ),
-            'color'    => '#28cf7a',
-        ),
+		array(
+			'icon'     => 'gab',
+			'category' => array(
+				'social-network',
+			),
+			'color'    => '#28cf7a',
+		),
 		array(
 			'icon'     => 'github',
 			'category' => array(
@@ -403,31 +409,31 @@ return array(
 		array(
 			'icon'     => 'google-calendar',
 			'category' => array(
-				'calendar'
+				'calendar',
 			),
-			'color'    => '#3D81F6'
+			'color'    => '#3D81F6',
 		),
 		array(
 			'icon'     => 'google-maps',
 			'category' => array(
-				'maps'
+				'maps',
 			),
-			'color'    => '#4285F4'
+			'color'    => '#4285F4',
 		),
-        array(
-            'icon'     => 'google-news',
-            'category' => array(
-                'maps'
-            ),
-            'color'    => '#174EA6'
-        ),
-        array(
-            'icon'     => 'google-podcasts',
-            'category' => array(
-                'podcasts'
-            ),
-            'color'    => '#4285F4'
-        ),
+		array(
+			'icon'     => 'google-news',
+			'category' => array(
+				'maps',
+			),
+			'color'    => '#174EA6',
+		),
+		array(
+			'icon'     => 'google-podcasts',
+			'category' => array(
+				'podcasts',
+			),
+			'color'    => '#4285F4',
+		),
 		array(
 			'icon'     => 'grooveshark',
 			'category' => array(
@@ -435,13 +441,13 @@ return array(
 			),
 			'color'    => '#000000',
 		),
-        array(
-            'icon'     => 'guilded',
-            'category' => array(
-                'gaming',
-            ),
-            'color'    => '#F5C400',
-        ),
+		array(
+			'icon'     => 'guilded',
+			'category' => array(
+				'gaming',
+			),
+			'color'    => '#F5C400',
+		),
 		array(
 			'icon'     => 'hellocoton',
 			'category' => array(
@@ -471,14 +477,14 @@ return array(
 			),
 			'color'    => '#000000',
 		),
-        array(
-            'icon'     => 'iheartradio',
-            'category' => array(
-                'blogging',
-                'social-media',
-            ),
-            'color'    => '#C6002B',
-        ),
+		array(
+			'icon'     => 'iheartradio',
+			'category' => array(
+				'blogging',
+				'social-media',
+			),
+			'color'    => '#C6002B',
+		),
 		array(
 			'icon'     => 'instagram',
 			'category' => array(
@@ -490,9 +496,9 @@ return array(
 		array(
 			'icon'     => 'issuu',
 			'category' => array(
-				'reading'
+				'reading',
 			),
-			'color'    => '#F26F61'
+			'color'    => '#F26F61',
 		),
 		array(
 			'icon'     => 'itunes',
@@ -501,27 +507,27 @@ return array(
 			),
 			'color'    => '#F16061',
 		),
-        array(
-            'icon'     => 'kkbox',
-            'category' => array(
-                'music',
-            ),
-            'color'    => '#20afd6',
-        ),
-        array(
-            'icon'     => 'ko-fi',
-            'category' => array(
-                'music',
-            ),
-            'color'    => '#ff5e51',
-        ),
-        array(
-            'icon'     => 'komoot',
-            'category' => array(
-                'travel',
-            ),
-            'color'    => '#6AA127',
-        ),
+		array(
+			'icon'     => 'kkbox',
+			'category' => array(
+				'music',
+			),
+			'color'    => '#20afd6',
+		),
+		array(
+			'icon'     => 'ko-fi',
+			'category' => array(
+				'music',
+			),
+			'color'    => '#ff5e51',
+		),
+		array(
+			'icon'     => 'komoot',
+			'category' => array(
+				'travel',
+			),
+			'color'    => '#6AA127',
+		),
 		array(
 			'icon'     => 'lanyrd',
 			'category' => array(
@@ -534,14 +540,14 @@ return array(
 			'category' => array(
 				'audio',
 			),
-			'color'    => '#d41316'
+			'color'    => '#d41316',
 		),
 		array(
 			'icon'     => 'letterboxd',
 			'category' => array(
-				'communication'
+				'communication',
 			),
-			'color'    => '#2c3440'
+			'color'    => '#2c3440',
 		),
 		array(
 			'icon'     => 'line',
@@ -573,30 +579,30 @@ return array(
 			),
 			'color'    => '#000000',
 		),
-        array(
-            'icon'     => 'mailru',
-            'category' => array(
-                'web-tools',
-                'communication',
-            ),
-            'color'    => '#005FF9',
-        ),
-        array(
-            'icon'     => 'mailchimp',
-            'category' => array(
-                'web-tools',
-                'communication',
-            ),
-            'color'    => '#FFE01B',
-        ),
-        array(
-            'icon'     => 'mailchimp2',
-            'category' => array(
-                'web-tools',
-                'communication',
-            ),
-            'color'    => '#FFE01B',
-        ),
+		array(
+			'icon'     => 'mailru',
+			'category' => array(
+				'web-tools',
+				'communication',
+			),
+			'color'    => '#005FF9',
+		),
+		array(
+			'icon'     => 'mailchimp',
+			'category' => array(
+				'web-tools',
+				'communication',
+			),
+			'color'    => '#FFE01B',
+		),
+		array(
+			'icon'     => 'mailchimp2',
+			'category' => array(
+				'web-tools',
+				'communication',
+			),
+			'color'    => '#FFE01B',
+		),
 		array(
 			'icon'     => 'mastodon',
 			'category' => array(
@@ -624,23 +630,23 @@ return array(
 				'social-media',
 				'communication',
 			),
-			'color'    => '#0084ff'
+			'color'    => '#0084ff',
 		),
-        array(
-            'icon'     => 'mewe',
-            'category' => array(
-                'social-media',
-                'communication',
-            ),
-            'color'    => '#17377F'
-        ),
+		array(
+			'icon'     => 'mewe',
+			'category' => array(
+				'social-media',
+				'communication',
+			),
+			'color'    => '#17377F',
+		),
 		array(
 			'icon'     => 'mixer',
 			'category' => array(
 				'social-media',
-				'video'
+				'video',
 			),
-			'color'    => '#1FBAED'
+			'color'    => '#1FBAED',
 		),
 		array(
 			'icon'     => 'myspace',
@@ -663,13 +669,13 @@ return array(
 			),
 			'color'    => '#075B2F',
 		),
-        array(
-            'icon'     => 'newgrounds',
-            'category' => array(
-                'news',
-            ),
-            'color'    => '#000',
-        ),
+		array(
+			'icon'     => 'newgrounds',
+			'category' => array(
+				'news',
+			),
+			'color'    => '#000',
+		),
 		array(
 			'icon'     => 'nextdoor',
 			'category' => array(
@@ -677,13 +683,13 @@ return array(
 			),
 			'color'    => '#8ed500',
 		),
-        array(
-            'icon'     => 'nextdoor2',
-            'category' => array(
-                'business',
-            ),
-            'color'    => '#01B247',
-        ),
+		array(
+			'icon'     => 'nextdoor2',
+			'category' => array(
+				'business',
+			),
+			'color'    => '#01B247',
+		),
 		array(
 			'icon'     => 'odnoklassniki',
 			'category' => array(
@@ -706,13 +712,13 @@ return array(
 			),
 			'color'    => '#0072C6',
 		),
-        array(
-            'icon'     => 'overcast',
-            'category' => array(
-                'podcast',
-            ),
-            'color'    => '#FC7E0F',
-        ),
+		array(
+			'icon'     => 'overcast',
+			'category' => array(
+				'podcast',
+			),
+			'color'    => '#FC7E0F',
+		),
 		array(
 			'icon'     => 'overwatch',
 			'category' => array(
@@ -722,13 +728,13 @@ return array(
 			),
 			'color'    => '#9E9E9E',
 		),
-        array(
-            'icon'     => 'parler',
-            'category' => array(
-                'social-network',
-            ),
-            'color'    => '#b91d2b',
-        ),
+		array(
+			'icon'     => 'parler',
+			'category' => array(
+				'social-network',
+			),
+			'color'    => '#b91d2b',
+		),
 		array(
 			'icon'     => 'patreon',
 			'category' => array(
@@ -767,13 +773,13 @@ return array(
 			),
 			'color'    => '#c92619',
 		),
-        array(
-            'icon'     => 'pixiv',
-            'category' => array(
-                'social-media',
-            ),
-            'color'    => '#049CFF',
-        ),
+		array(
+			'icon'     => 'pixiv',
+			'category' => array(
+				'social-media',
+			),
+			'color'    => '#049CFF',
+		),
 		array(
 			'icon'     => 'play',
 			'category' => array(
@@ -781,14 +787,14 @@ return array(
 			),
 			'color'    => '#000000',
 		),
-        array(
-            'icon'     => 'playerfm',
-            'category' => array(
-                'podcast',
-                'video',
-            ),
-            'color'    => '#C8122A',
-        ),
+		array(
+			'icon'     => 'playerfm',
+			'category' => array(
+				'podcast',
+				'video',
+			),
+			'color'    => '#C8122A',
+		),
 		array(
 			'icon'     => 'playstation',
 			'category' => array(
@@ -797,28 +803,28 @@ return array(
 			),
 			'color'    => '#000000',
 		),
-        array(
-            'icon'     => 'pocketcasts',
-            'category' => array(
-                'podcast',
-            ),
-            'color'    => '#F43E37',
-        ),
-        array(
-            'icon'     => 'ravelry',
-            'category' => array(
-                'social-media',
-            ),
-            'color'    => '#EE6E62',
-        ),
-        array(
-            'icon'     => 'redbubble',
-            'category' => array(
-                'news',
-                'social-media',
-            ),
-            'color'    => '#E41321',
-        ),
+		array(
+			'icon'     => 'pocketcasts',
+			'category' => array(
+				'podcast',
+			),
+			'color'    => '#F43E37',
+		),
+		array(
+			'icon'     => 'ravelry',
+			'category' => array(
+				'social-media',
+			),
+			'color'    => '#EE6E62',
+		),
+		array(
+			'icon'     => 'redbubble',
+			'category' => array(
+				'news',
+				'social-media',
+			),
+			'color'    => '#E41321',
+		),
 		array(
 			'icon'     => 'reddit',
 			'category' => array(
@@ -918,13 +924,13 @@ return array(
 			),
 			'color'    => '#7bb342',
 		),
-        array(
-            'icon'     => 'ssrn',
-            'category' => array(
-                'audio',
-            ),
-            'color'    => '#063a73',
-        ),
+		array(
+			'icon'     => 'ssrn',
+			'category' => array(
+				'audio',
+			),
+			'color'    => '#063a73',
+		),
 		array(
 			'icon'     => 'stackoverflow',
 			'category' => array(
@@ -1199,22 +1205,22 @@ return array(
 			),
 			'color'    => '#e02a20',
 		),
-        array(
-            'icon'     => 'yummly',
-            'category' => array(
-                'video',
-                'search-engines',
-            ),
-            'color'    => '#e16220',
-        ),
-        array(
-            'icon'     => 'zazzle',
-            'category' => array(
-                'video',
-                'games',
-            ),
-            'color'    => '#46c3e0',
-        ),
+		array(
+			'icon'     => 'yummly',
+			'category' => array(
+				'video',
+				'search-engines',
+			),
+			'color'    => '#e16220',
+		),
+		array(
+			'icon'     => 'zazzle',
+			'category' => array(
+				'video',
+				'games',
+			),
+			'color'    => '#46c3e0',
+		),
 		array(
 			'icon'     => 'zerply',
 			'category' => array(
@@ -5332,7 +5338,7 @@ return array(
 			'icon'     => 'info-circle',
 			'category' => array(
 				'web-application',
-				'spinner'
+				'spinner',
 			),
 		),
 
@@ -18813,5 +18819,5 @@ return array(
 				'marketing',
 			),
 		),
-	)
+	),
 );
