@@ -14,6 +14,11 @@
   a.social-icon-link {
     text-decoration: none !important;
     box-shadow: none;
+    transition: opacity .2s ease;
+
+    &:hover {
+       opacity:.8;
+    }
   }
 
   .social-icon.socicon, .social-icon.dashicons, .social-icon.genericon, .social-icon.academicons, .social-icon.fas, .social-icon.fab, .social-icon.far {
