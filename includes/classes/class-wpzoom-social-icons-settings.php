@@ -44,6 +44,7 @@ class WPZOOM_Social_Icons_Settings {
 		'disable-css-loading-for-dashicons'      => true,
 		'disable-css-loading-for-socicons'       => true,
 		'categories-sync'                        => true,
+		'custom-icon-set'                        => array(),
 	);
 
 	/**

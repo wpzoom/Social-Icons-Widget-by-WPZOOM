@@ -78,17 +78,19 @@ function wpzoom_social_icons_block_enqueue_assets() {
 	 * @link https://wordpress.org/gutenberg/handbook/blocks/writing-your-first-block-type#enqueuing-block-scripts
 	 * @since 1.16.0
 	 */
-	register_block_type(
-		'wpzoom-blocks/social-icons',
-		array(
-			// Enqueue style-wpzoom-social-icons.css on both frontend & backend.
-			'style'         => 'wpzoom-social-icons-block-style',
-			// Enqueue wpzoom-social-icons.js in the editor only.
-			'editor_script' => 'wpzoom-social-icons-block-js',
-			// Enqueue wpzoom-social-icons.css in the editor only.
-			'editor_style'  => 'wpzoom-social-icons-block-editor',
-		)
-	);
+	if ( ! WP_Block_Type_Registry::get_instance()->is_registered( 'wpzoom-blocks/social-icons' ) ) {
+		register_block_type(
+			'wpzoom-blocks/social-icons',
+			array(
+				// Enqueue style-wpzoom-social-icons.css on both frontend & backend.
+				'style'         => 'wpzoom-social-icons-block-style',
+				// Enqueue wpzoom-social-icons.js in the editor only.
+				'editor_script' => 'wpzoom-social-icons-block-js',
+				// Enqueue wpzoom-social-icons.css in the editor only.
+				'editor_style'  => 'wpzoom-social-icons-block-editor',
+			)
+		);
+	}
 }
 
 // Hook: Block assets.
@@ -289,13 +291,15 @@ add_action( 'enqueue_block_assets', 'wpzoom_social_icons_block_enqueue_secondary
  *
  * @return array The asset file contents.
  */
-function wpzoom_social_icons_get_asset_file( $filepath ) {
-	$asset_path = WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . $filepath . '.asset.php';
+if ( ! function_exists( 'wpzoom_social_icons_get_asset_file' ) ) {
+	function wpzoom_social_icons_get_asset_file( $filepath ) {
+		$asset_path = WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . $filepath . '.asset.php';
 
-	return file_exists( $asset_path )
-		? include $asset_path
-		: array(
-			'dependencies' => array(),
-			'version'      => WPZOOM_SOCIAL_ICONS_PLUGIN_VERSION,
-		);
+		return file_exists( $asset_path )
+			? include $asset_path
+			: array(
+				'dependencies' => array(),
+				'version'      => WPZOOM_SOCIAL_ICONS_PLUGIN_VERSION,
+			);
+	}
 }
