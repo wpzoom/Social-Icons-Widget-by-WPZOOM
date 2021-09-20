@@ -27,6 +27,10 @@ if ( ! defined( 'WPZOOM_SOCIAL_ICONS_PLUGIN_PATH' ) ) {
 	define( 'WPZOOM_SOCIAL_ICONS_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 }
 
+if ( ! defined( 'WPZOOM_SOCIAL_ICONS_PLUGIN_BASE' ) ) {
+	define( 'WPZOOM_SOCIAL_ICONS_PLUGIN_BASE', plugin_basename( __FILE__ ) );
+}
+
 require_once plugin_dir_path( __FILE__ ) . 'includes/classes/class-wpzoom-social-icons-settings.php';
 require_once plugin_dir_path( __FILE__ ) . 'includes/zoom-helper.php';
 
@@ -240,3 +244,56 @@ function zoom_enqueue_preloaded_fonts() {
 	}
 }
 add_action( 'init', 'zoom_enqueue_preloaded_fonts' );
+
+/**
+ * Plugin action links.
+ *
+ * Adds action links to the plugin list table
+ *
+ * Fired by `plugin_action_links` filter.
+ *
+ * @since 4.2.2
+ *
+ * @param array $links An array of plugin action links.
+ *
+ * @return array An array of plugin action links.
+ */
+function wpzoom_social_icons_plugin_action_links( $links ) {
+	$settings_link = sprintf( '<a href="%1$s">%2$s</a>', admin_url( 'admin.php?page=' . WPZOOM_Social_Icons_Settings::$menu_slug ), esc_html__( 'Settings', 'zoom-social-icons-widget' ) );
+
+	array_unshift( $links, $settings_link );
+
+	$links['go_pro'] = sprintf( '<a href="%1$s" target="_blank" class="wpzoom-social-icons-gopro" style="font-weight: bold;">%2$s</a>', 'https://www.wpzoom.com/plugins/social-widget/', esc_html__( 'Go Pro', 'zoom-social-icons-widget' ) );
+
+	return $links;
+}
+add_filter( 'plugin_action_links_' . WPZOOM_SOCIAL_ICONS_PLUGIN_BASE, 'wpzoom_social_icons_plugin_action_links' );
+
+/**
+ * Plugin row meta.
+ *
+ * Adds row meta links to the plugin list table
+ *
+ * Fired by `plugin_row_meta` filter.
+ *
+ * @since 4.2.2
+ *
+ * @param array  $plugin_meta An array of the plugin's metadata, including
+ *                            the version, author, author URI, and plugin URI.
+ * @param string $plugin_file Path to the plugin file, relative to the plugins
+ *                            directory.
+ *
+ * @return array An array of plugin row meta links.
+ */
+function wpzoom_social_icons_plugin_row_meta( $plugin_meta, $plugin_file ) {
+	if ( WPZOOM_SOCIAL_ICONS_PLUGIN_BASE === $plugin_file ) {
+		$row_meta = array(
+			'docs' => '<a href="https://www.wpzoom.com/documentation/social-icons-widget-by-wpzoom/" aria-label="' . esc_attr( esc_html__( 'View Documentation', 'zoom-social-icons-widget' ) ) . '" target="_blank">' . esc_html__( 'Documentation', 'zoom-social-icons-widget' ) . '</a>',
+		);
+
+		$plugin_meta = array_merge( $plugin_meta, $row_meta );
+	}
+
+	return $plugin_meta;
+}
+add_filter( 'plugin_row_meta', 'wpzoom_social_icons_plugin_row_meta', 10, 2 );
