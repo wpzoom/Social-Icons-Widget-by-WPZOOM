@@ -317,17 +317,20 @@ if ( ! function_exists( 'wpzoom_social_icons_upgrade_pro_notice' ) ) {
 					<?php echo esc_html__( 'Dismiss this notice.', 'zoom-social-icons-widget' ); ?>
 				</span>
 			</a>
-			<p>
-			<?php
-			/* translators: %s The pro version features */
-			echo sprintf( esc_html__( 'Thank you for using our Social Icons Widget & Block plugin. The PRO version is available and includes several features such as: %s', 'zoom-social-icons-widget' ), '<strong>' . esc_html__( 'upload custom SVG icons, load icons in SVG format, outstanding performance, premium support and much more...', 'zoom-social-icons-widget' ) . '</strong>' );
-			?>
-			</p>
-			<p class="wpz-social-icons-notice-actions">
-				<a class="button-secondary" href="https://www.wpzoom.com/documentation/social-icons-widget-by-wpzoom/?utm_source=admin-notice&utm_medium=admin-notice-actions&utm_campaign=docs" target="_blank"><?php esc_html_e( 'Read documentation', 'zoom-social-icons-widget' ); ?></a>
-				<a class="button-secondary" href="<?php echo esc_url( admin_url( 'admin.php?page=' . WPZOOM_Social_Icons_Settings::$menu_slug ) ); ?>"><?php esc_html_e( 'Settings', 'zoom-social-icons-widget' ); ?></a>
-				<a class="button-primary" href="https://www.wpzoom.com/plugins/social-widget/?utm_source=admin-notices&utm_medium=admin-notice-actions&utm_campaign=go_pro" target="_blank"><?php esc_html_e( 'Get Social Icons Widget PRO', 'zoom-social-icons-widget' ); ?></a>
-			</p>
+			<div class="wp-clearfix wpz-social-icons-notice-wrap-content">
+				<img class="alignleft" src="<?php echo esc_url( WPZOOM_SOCIAL_ICONS_PLUGIN_URL . '/assets/images/social-icons-pro-avatar.png' ); ?>" width="100" height="100" alt="Social Icons PRO"/>
+				<p class="wpz-social-icons-notice-text">
+				<?php
+				/* translators: %s The pro version features */
+				echo sprintf( esc_html__( 'Thank you for using our Social Icons Widget & Block plugin. The PRO version is available and includes several features such as: %s', 'zoom-social-icons-widget' ), '<strong>' . esc_html__( 'upload custom SVG icons, load icons in SVG format, outstanding performance, premium support and much more...', 'zoom-social-icons-widget' ) . '</strong>' );
+				?>
+				</p>
+				<p class="wpz-social-icons-notice-actions">
+					<a class="button-primary" href="https://www.wpzoom.com/plugins/social-widget/?utm_source=admin-notices&utm_medium=admin-notice-actions&utm_campaign=go_pro" target="_blank"><?php esc_html_e( 'Get Social Icons Widget PRO', 'zoom-social-icons-widget' ); ?></a>
+					<a class="button-link" href="https://www.wpzoom.com/documentation/social-icons-widget-by-wpzoom/?utm_source=admin-notice&utm_medium=admin-notice-actions&utm_campaign=docs" target="_blank"><?php esc_html_e( 'Documentation', 'zoom-social-icons-widget' ); ?></a>
+					<a class="button-link" href="<?php echo esc_url( admin_url( 'admin.php?page=' . WPZOOM_Social_Icons_Settings::$menu_slug ) ); ?>"><?php esc_html_e( 'Settings', 'zoom-social-icons-widget' ); ?></a>
+				</p>
+			</div>
 		</div>
 		<?php
 	}
@@ -340,10 +343,26 @@ if ( ! function_exists( 'wpzoom_social_icons_upgrade_pro_notice' ) ) {
 	function wpzoom_social_icons_custom_admin_styles() {
 		echo '<style id="wpzoom-social-icons-custom-admin-styles">
 		.wpz-social-icons-notice .wpz-social-icons-notice-actions a {
-			margin-right: 5px;
+			margin-right: .5em;
 		}
 		.wpz-social-icons-notice .wpz-social-icons-notice-actions a:last-child {
 			margin-right: 0;
+		}
+		.wpz-social-icons-notice .wpz-social-icons-notice-wrap-content {
+			padding: .5em 0;
+		}
+		.wpz-social-icons-notice .wpz-social-icons-notice-wrap-content img {
+			margin-right: 1em;
+		}
+		.wpz-social-icons-notice .wpz-social-icons-notice-wrap-content p:last-child {
+			margin-bottom: 0;
+		}
+		.wpz-social-icons-notice .wpz-social-icons-notice-text,
+		.wpz-social-icons-notice .wpz-social-icons-notice-actions {
+			float: left;
+		}
+		.wpz-social-icons-notice .wpz-social-icons-notice-text {
+			width: calc(100% - 100px - 1em - 4px);
 		}
 		</style>';
 	}
@@ -361,8 +380,7 @@ if ( ! function_exists( 'wpzoom_social_icons_admin_notices' ) ) {
 		global $pagenow;
 
 		$dismiss_notice        = get_option( 'wpz_social_icons_dismiss_admin_notices' );
-		$current_user_can      = current_user_can( 'edit_theme_options' );
-		$should_display_notice = ( $current_user_can && 'index.php' === $pagenow && ! $dismiss_notice ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$should_display_notice = ( ( 'index.php' === $pagenow || 'plugins.php' === $pagenow ) && ! $dismiss_notice ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 
 		if ( $should_display_notice ) {
 			wpzoom_social_icons_upgrade_pro_notice();
