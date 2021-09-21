@@ -245,55 +245,153 @@ function zoom_enqueue_preloaded_fonts() {
 }
 add_action( 'init', 'zoom_enqueue_preloaded_fonts' );
 
-/**
- * Plugin action links.
- *
- * Adds action links to the plugin list table
- *
- * Fired by `plugin_action_links` filter.
- *
- * @since 4.2.2
- *
- * @param array $links An array of plugin action links.
- *
- * @return array An array of plugin action links.
- */
-function wpzoom_social_icons_plugin_action_links( $links ) {
-	$settings_link = sprintf( '<a href="%1$s">%2$s</a>', admin_url( 'admin.php?page=' . WPZOOM_Social_Icons_Settings::$menu_slug ), esc_html__( 'Settings', 'zoom-social-icons-widget' ) );
+if ( ! function_exists( 'wpzoom_social_icons_plugin_action_links' ) ) {
+	/**
+	 * Plugin action links.
+	 *
+	 * Adds action links to the plugin list table
+	 *
+	 * Fired by `plugin_action_links` filter.
+	 *
+	 * @since 4.2.2
+	 *
+	 * @param array $links An array of plugin action links.
+	 *
+	 * @return array An array of plugin action links.
+	 */
+	function wpzoom_social_icons_plugin_action_links( $links ) {
+		$settings_link = sprintf( '<a href="%1$s">%2$s</a>', admin_url( 'admin.php?page=' . WPZOOM_Social_Icons_Settings::$menu_slug ), esc_html__( 'Settings', 'zoom-social-icons-widget' ) );
 
-	array_unshift( $links, $settings_link );
+		array_unshift( $links, $settings_link );
 
-	$links['go_pro'] = sprintf( '<a href="%1$s" target="_blank" class="wpzoom-social-icons-gopro" style="font-weight: bold;">%2$s</a>', 'https://www.wpzoom.com/plugins/social-widget/', esc_html__( 'Go Pro', 'zoom-social-icons-widget' ) );
+		$links['go_pro'] = sprintf( '<a href="%1$s" target="_blank" class="wpzoom-social-icons-gopro" style="font-weight: bold;">%2$s</a>', 'https://www.wpzoom.com/plugins/social-widget/?utm_source=plugins-admin-page&utm_medium=plugins-row-action-links&utm_campaign=go_pro', esc_html__( 'Go Pro', 'zoom-social-icons-widget' ) );
 
-	return $links;
+		return $links;
+	}
+	add_filter( 'plugin_action_links_' . WPZOOM_SOCIAL_ICONS_PLUGIN_BASE, 'wpzoom_social_icons_plugin_action_links' );
 }
-add_filter( 'plugin_action_links_' . WPZOOM_SOCIAL_ICONS_PLUGIN_BASE, 'wpzoom_social_icons_plugin_action_links' );
 
-/**
- * Plugin row meta.
- *
- * Adds row meta links to the plugin list table
- *
- * Fired by `plugin_row_meta` filter.
- *
- * @since 4.2.2
- *
- * @param array  $plugin_meta An array of the plugin's metadata, including
- *                            the version, author, author URI, and plugin URI.
- * @param string $plugin_file Path to the plugin file, relative to the plugins
- *                            directory.
- *
- * @return array An array of plugin row meta links.
- */
-function wpzoom_social_icons_plugin_row_meta( $plugin_meta, $plugin_file ) {
-	if ( WPZOOM_SOCIAL_ICONS_PLUGIN_BASE === $plugin_file ) {
-		$row_meta = array(
-			'docs' => '<a href="https://www.wpzoom.com/documentation/social-icons-widget-by-wpzoom/" aria-label="' . esc_attr( esc_html__( 'View Documentation', 'zoom-social-icons-widget' ) ) . '" target="_blank">' . esc_html__( 'Documentation', 'zoom-social-icons-widget' ) . '</a>',
-		);
+if ( ! function_exists( 'wpzoom_social_icons_plugin_row_meta' ) ) {
+	/**
+	 * Plugin row meta.
+	 *
+	 * Adds row meta links to the plugin list table
+	 *
+	 * Fired by `plugin_row_meta` filter.
+	 *
+	 * @since 4.2.2
+	 *
+	 * @param array  $plugin_meta An array of the plugin's metadata, including
+	 *                            the version, author, author URI, and plugin URI.
+	 * @param string $plugin_file Path to the plugin file, relative to the plugins
+	 *                            directory.
+	 *
+	 * @return array An array of plugin row meta links.
+	 */
+	function wpzoom_social_icons_plugin_row_meta( $plugin_meta, $plugin_file ) {
+		if ( WPZOOM_SOCIAL_ICONS_PLUGIN_BASE === $plugin_file ) {
+			$row_meta = array(
+				'docs' => '<a href="https://www.wpzoom.com/documentation/social-icons-widget-by-wpzoom/?utm_source=plugins-admin-page&utm_medium=plugin-row-meta&utm_campaign=plugins-admin-docs" aria-label="' . esc_attr( esc_html__( 'View Documentation', 'zoom-social-icons-widget' ) ) . '" target="_blank">' . esc_html__( 'Documentation', 'zoom-social-icons-widget' ) . '</a>',
+			);
 
-		$plugin_meta = array_merge( $plugin_meta, $row_meta );
+			$plugin_meta = array_merge( $plugin_meta, $row_meta );
+		}
+
+		return $plugin_meta;
+	}
+	add_filter( 'plugin_row_meta', 'wpzoom_social_icons_plugin_row_meta', 10, 2 );
+}
+
+if ( ! function_exists( 'wpzoom_social_icons_upgrade_pro_notice' ) ) {
+	/**
+	 * Content of Admin Notices in WordPress Dashboard
+	 *
+	 * @since 4.2.2
+	 * @return void
+	 */
+	function wpzoom_social_icons_upgrade_pro_notice() {
+		?>
+		<div class="notice notice-success wpz-social-icons-notice is-dismissible">
+			<a class="notice-dismiss" href="<?php echo esc_url( wp_nonce_url( add_query_arg( 'social-icons-dismiss', 'dismiss_admin_notices' ), 'wpz_social_icons_hide_notices_nonce', '_wpz_social_icons_notice_nonce' ) ); ?>" style="text-decoration: none">
+				<span class="screen-reader-text">
+					<?php echo esc_html__( 'Dismiss this notice.', 'zoom-social-icons-widget' ); ?>
+				</span>
+			</a>
+			<p>
+			<?php
+			/* translators: %s The pro version features */
+			echo sprintf( esc_html__( 'Thank you for using our Social Icons Widget & Block plugin. The PRO version is available and includes several features such as: %s', 'zoom-social-icons-widget' ), '<strong>' . esc_html__( 'upload custom SVG icons, load icons in SVG format, outstanding performance, premium support and much more...', 'zoom-social-icons-widget' ) . '</strong>' );
+			?>
+			</p>
+			<p class="wpz-social-icons-notice-actions">
+				<a class="button-secondary" href="https://www.wpzoom.com/documentation/social-icons-widget-by-wpzoom/?utm_source=admin-notice&utm_medium=admin-notice-actions&utm_campaign=docs" target="_blank"><?php esc_html_e( 'Read documentation', 'zoom-social-icons-widget' ); ?></a>
+				<a class="button-secondary" href="<?php echo esc_url( admin_url( 'admin.php?page=' . WPZOOM_Social_Icons_Settings::$menu_slug ) ); ?>"><?php esc_html_e( 'Settings', 'zoom-social-icons-widget' ); ?></a>
+				<a class="button-primary" href="https://www.wpzoom.com/plugins/social-widget/?utm_source=admin-notices&utm_medium=admin-notice-actions&utm_campaign=go_pro" target="_blank"><?php esc_html_e( 'Get Social Icons Widget PRO', 'zoom-social-icons-widget' ); ?></a>
+			</p>
+		</div>
+		<?php
 	}
 
-	return $plugin_meta;
+	/**
+	 * Admin styles.
+	 *
+	 * @since 4.2.2
+	 */
+	function wpzoom_social_icons_custom_admin_styles() {
+		echo '<style id="wpzoom-social-icons-custom-admin-styles">
+		.wpz-social-icons-notice .wpz-social-icons-notice-actions a {
+			margin-right: 5px;
+		}
+		.wpz-social-icons-notice .wpz-social-icons-notice-actions a:last-child {
+			margin-right: 0;
+		}
+		</style>';
+	}
+	add_action( 'admin_head', 'wpzoom_social_icons_custom_admin_styles' );
 }
-add_filter( 'plugin_row_meta', 'wpzoom_social_icons_plugin_row_meta', 10, 2 );
+
+if ( ! function_exists( 'wpzoom_social_icons_admin_notices' ) ) {
+	/**
+	 * Admin Notice after Plugin Activation
+	 *
+	 * @since 4.2.2
+	 * @return void
+	 */
+	function wpzoom_social_icons_admin_notices() {
+		global $pagenow;
+
+		$dismiss_notice        = get_option( 'wpz_social_icons_dismiss_admin_notices' );
+		$current_user_can      = current_user_can( 'edit_theme_options' );
+		$should_display_notice = ( $current_user_can && 'index.php' === $pagenow && ! $dismiss_notice ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+
+		if ( $should_display_notice ) {
+			wpzoom_social_icons_upgrade_pro_notice();
+		}
+	}
+	add_action( 'admin_notices', 'wpzoom_social_icons_admin_notices' );
+}
+
+if ( ! function_exists( 'wpzoom_social_icons_hide_notice' ) ) {
+	/**
+	 * Hide Admin Notice in WordPress Dashboard
+	 *
+	 * @since 4.2.2
+	 * @return void
+	 */
+	function wpzoom_social_icons_hide_notice() {
+		$hide_notice = isset( $_GET['social-icons-dismiss'] ) ? sanitize_text_field( wp_unslash( $_GET['social-icons-dismiss'] ) ) : '';
+
+		if ( 'dismiss_admin_notices' === $hide_notice && isset( $_GET['_wpz_social_icons_notice_nonce'] ) ) {
+			if ( ! check_admin_referer( 'wpz_social_icons_hide_notices_nonce', '_wpz_social_icons_notice_nonce' ) ) {
+				wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'zoom-social-icons-widget' ) );
+			}
+
+			if ( ! current_user_can( 'edit_theme_options' ) ) {
+				wp_die( esc_html__( 'You do not have the necessary permission to perform this action.', 'zoom-social-icons-widget' ) );
+			}
+
+			update_option( 'wpz_social_icons_' . $hide_notice, 1 );
+		}
+	}
+}
+add_action( 'wp_loaded', 'wpzoom_social_icons_hide_notice' );
