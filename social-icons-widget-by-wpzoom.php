@@ -260,11 +260,15 @@ if ( ! function_exists( 'wpzoom_social_icons_plugin_action_links' ) ) {
 	 * @return array An array of plugin action links.
 	 */
 	function wpzoom_social_icons_plugin_action_links( $links ) {
-		$settings_link = sprintf( '<a href="%1$s">%2$s</a>', admin_url( 'admin.php?page=' . WPZOOM_Social_Icons_Settings::$menu_slug ), esc_html__( 'Settings', 'zoom-social-icons-widget' ) );
+		$is_active = is_plugin_active( WPZOOM_SOCIAL_ICONS_PLUGIN_BASE ); // Used to prevent the display of admin notice when activate PRO version of the plugin.
 
-		array_unshift( $links, $settings_link );
+		if ( $is_active ) {
+			$settings_link = sprintf( '<a href="%1$s">%2$s</a>', admin_url( 'admin.php?page=' . WPZOOM_Social_Icons_Settings::$menu_slug ), esc_html__( 'Settings', 'zoom-social-icons-widget' ) );
 
-		$links['go_pro'] = sprintf( '<a href="%1$s" target="_blank" class="wpzoom-social-icons-gopro" style="font-weight: bold;">%2$s</a>', 'https://www.wpzoom.com/plugins/social-widget/?utm_source=plugins-admin-page&utm_medium=plugins-row-action-links&utm_campaign=go_pro', esc_html__( 'Go Pro', 'zoom-social-icons-widget' ) );
+			array_unshift( $links, $settings_link );
+
+			$links['go_pro'] = sprintf( '<a href="%1$s" target="_blank" class="wpzoom-social-icons-gopro" style="font-weight: bold;">%2$s</a>', 'https://www.wpzoom.com/plugins/social-widget/?utm_source=plugins-admin-page&utm_medium=plugins-row-action-links&utm_campaign=go_pro', esc_html__( 'Go Pro', 'zoom-social-icons-widget' ) );
+		}
 
 		return $links;
 	}
@@ -289,7 +293,9 @@ if ( ! function_exists( 'wpzoom_social_icons_plugin_row_meta' ) ) {
 	 * @return array An array of plugin row meta links.
 	 */
 	function wpzoom_social_icons_plugin_row_meta( $plugin_meta, $plugin_file ) {
-		if ( WPZOOM_SOCIAL_ICONS_PLUGIN_BASE === $plugin_file ) {
+		$is_active = is_plugin_active( WPZOOM_SOCIAL_ICONS_PLUGIN_BASE ); // Used to prevent the display of admin notice when activate PRO version of the plugin.
+
+		if ( $is_active && WPZOOM_SOCIAL_ICONS_PLUGIN_BASE === $plugin_file ) {
 			$row_meta = array(
 				'docs' => '<a href="https://www.wpzoom.com/documentation/social-icons-widget-by-wpzoom/?utm_source=plugins-admin-page&utm_medium=plugin-row-meta&utm_campaign=plugins-admin-docs" aria-label="' . esc_attr( esc_html__( 'View Documentation', 'zoom-social-icons-widget' ) ) . '" target="_blank">' . esc_html__( 'Documentation', 'zoom-social-icons-widget' ) . '</a>',
 			);
@@ -393,8 +399,9 @@ if ( ! function_exists( 'wpzoom_social_icons_admin_notices' ) ) {
 	function wpzoom_social_icons_admin_notices() {
 		global $pagenow;
 
+		$is_active             = is_plugin_active( WPZOOM_SOCIAL_ICONS_PLUGIN_BASE ); // Used to prevent the display of admin notice when activate PRO version of the plugin.
 		$dismiss_notice        = get_option( 'wpz_social_icons_dismiss_admin_notices' );
-		$should_display_notice = ( ( 'index.php' === $pagenow || 'plugins.php' === $pagenow ) && ! $dismiss_notice ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$should_display_notice = ( ( 'index.php' === $pagenow || 'plugins.php' === $pagenow ) && $is_active && ! $dismiss_notice ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 
 		if ( $should_display_notice ) {
 			wpzoom_social_icons_upgrade_pro_notice();
