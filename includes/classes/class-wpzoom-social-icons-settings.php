@@ -155,58 +155,60 @@ class WPZOOM_Social_Icons_Settings {
 		?>
 <div class="wrap zoom-social-icons-settings">
 	<h1><?php esc_html_e( 'Social Icons Widget & Block by WPZOOM', 'zoom-social-icons-widget' ); ?></h1>
+	
+	<div class="wpzoom-social-icons-settings-inner">
+		<div class="wp-filter">
+			<ul class="filter-links">
+				<li>
+					<a href="#font-styles"><?php esc_html_e( 'Icon Sets', 'zoom-social-icons-widget' ); ?></a>
+				</li>
 
-	<div class="wp-filter">
-		<ul class="filter-links">
-			<li>
-				<a href="#font-styles"><?php esc_html_e( 'Icon Sets', 'zoom-social-icons-widget' ); ?></a>
-			</li>
+				<li>
+					<a href="#font-preload"><?php esc_html_e( 'Optimization', 'zoom-social-icons-widget' ); ?></a>
+				</li>
+				<li>
+					<a href="#general-tab"><?php esc_html_e( 'Misc.', 'zoom-social-icons-widget' ); ?></a>
+				</li>
 
-			<li>
-				<a href="#font-preload"><?php esc_html_e( 'Optimization', 'zoom-social-icons-widget' ); ?></a>
-			</li>
-			<li>
-				<a href="#general-tab"><?php esc_html_e( 'Misc.', 'zoom-social-icons-widget' ); ?></a>
-			</li>
+				<li>
+					<a href="#upload-pro"><?php esc_html_e( 'Upload Icons', 'zoom-social-icons-widget' ); ?> <span>PRO</span></a>
+				</li>
+			</ul>
+		</div>
 
-			<li>
-				<a href="#upload-pro"><?php esc_html_e( 'Upload Icons', 'zoom-social-icons-widget' ); ?> <span>PRO</span></a>
-			</li>
-		</ul>
+		<form method="post" action="options.php">
+
+			<div id="font-styles" class="tab">
+				<?php
+						settings_fields( 'wpzoom-social-icons-widget-settings-group-font-styles' );
+						do_settings_sections( 'wpzoom-social-icons-widget-settings-group-font-styles' );
+				?>
+			</div>
+
+			<div id="font-preload" class="tab">
+				<?php
+						settings_fields( 'wpzoom-social-icons-widget-settings-group-font-preload' );
+						do_settings_sections( 'wpzoom-social-icons-widget-settings-group-font-preload' );
+				?>
+			</div>
+
+			<div id="general-tab" class="tab">
+				<?php
+						settings_fields( 'wpzoom-social-icons-widget-settings-group-general' );
+						do_settings_sections( 'wpzoom-social-icons-widget-settings-group-general' );
+				?>
+			</div>
+
+			<div id="upload-pro" class="tab">
+				<?php
+						settings_fields( 'wpzoom-social-icons-widget-settings-upload-pro' );
+						do_settings_sections( 'wpzoom-social-icons-widget-settings-upload-pro' );
+				?>
+			</div>
+
+			<?php submit_button(); ?>
+		</form>
 	</div>
-
-	<form method="post" action="options.php">
-
-		<div id="font-styles" class="tab">
-			<?php
-					settings_fields( 'wpzoom-social-icons-widget-settings-group-font-styles' );
-					do_settings_sections( 'wpzoom-social-icons-widget-settings-group-font-styles' );
-			?>
-		</div>
-
-		<div id="font-preload" class="tab">
-			<?php
-					settings_fields( 'wpzoom-social-icons-widget-settings-group-font-preload' );
-					do_settings_sections( 'wpzoom-social-icons-widget-settings-group-font-preload' );
-			?>
-		</div>
-
-		<div id="general-tab" class="tab">
-			<?php
-					settings_fields( 'wpzoom-social-icons-widget-settings-group-general' );
-					do_settings_sections( 'wpzoom-social-icons-widget-settings-group-general' );
-			?>
-		</div>
-
-		<div id="upload-pro" class="tab">
-			<?php
-					settings_fields( 'wpzoom-social-icons-widget-settings-upload-pro' );
-					do_settings_sections( 'wpzoom-social-icons-widget-settings-upload-pro' );
-			?>
-		</div>
-
-		<?php submit_button(); ?>
-	</form>
 </div>
 
 		<?php
