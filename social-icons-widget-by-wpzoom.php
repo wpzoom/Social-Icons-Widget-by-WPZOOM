@@ -263,7 +263,7 @@ if ( ! function_exists( 'wpzoom_social_icons_plugin_action_links' ) ) {
 		$is_active = is_plugin_active( WPZOOM_SOCIAL_ICONS_PLUGIN_BASE ); // Used to prevent the display of admin notice when activate PRO version of the plugin.
 
 		if ( $is_active ) {
-			$settings_link = sprintf( '<a href="%1$s">%2$s</a>', admin_url( 'admin.php?page=' . WPZOOM_Social_Icons_Settings::$menu_slug ), esc_html__( 'Settings', 'zoom-social-icons-widget' ) );
+			$settings_link = sprintf( '<a href="%1$s">%2$s</a>', admin_url( 'options-general.php?page=' . WPZOOM_Social_Icons_Settings::$menu_slug ), esc_html__( 'Settings', 'zoom-social-icons-widget' ) );
 
 			array_unshift( $links, $settings_link );
 
@@ -340,8 +340,13 @@ if ( ! function_exists( 'wpzoom_social_icons_upgrade_pro_notice' ) ) {
 					</p>
 					<p class="wpz-social-icons-notice-actions">
 						<a class="button-primary" href="https://www.wpzoom.com/plugins/social-widget/?utm_source=admin-notices&utm_medium=admin-notice-actions&utm_campaign=go_pro" target="_blank"><strong><?php esc_html_e( 'Get Social Icons Widget PRO &rarr;', 'zoom-social-icons-widget' ); ?></strong></a>
-						<?php /* <a class="button-link" href="https://www.wpzoom.com/documentation/social-icons-widget-by-wpzoom/?utm_source=admin-notice&utm_medium=admin-notice-actions&utm_campaign=docs" target="_blank"><?php esc_html_e( 'Documentation', 'zoom-social-icons-widget' ); ?></a>
-						<a class="button-link" href="<?php echo esc_url( admin_url( 'admin.php?page=' . WPZOOM_Social_Icons_Settings::$menu_slug ) ); ?>"><?php esc_html_e( 'Settings', 'zoom-social-icons-widget' ); ?></a> */ ?>
+						<?php
+						// phpcs:disable
+						/*
+						<a class="button-link" href="https://www.wpzoom.com/documentation/social-icons-widget-by-wpzoom/?utm_source=admin-notice&utm_medium=admin-notice-actions&utm_campaign=docs" target="_blank"><?php esc_html_e( 'Documentation', 'zoom-social-icons-widget' ); ?></a>
+						<a class="button-link" href="<?php echo esc_url( admin_url( 'admin.php?page=' . WPZOOM_Social_Icons_Settings::$menu_slug ) ); ?>"><?php esc_html_e( 'Settings', 'zoom-social-icons-widget' ); ?></a> */
+						// phpcs:enable
+						?>
 					</p>
 				</div>
 			</div>
@@ -399,9 +404,10 @@ if ( ! function_exists( 'wpzoom_social_icons_admin_notices' ) ) {
 	function wpzoom_social_icons_admin_notices() {
 		global $pagenow;
 
+		$page                  = isset( $_GET['page'] ) ? sanitize_text_field( $_GET['page'] ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		$is_active             = is_plugin_active( WPZOOM_SOCIAL_ICONS_PLUGIN_BASE ); // Used to prevent the display of admin notice when activate PRO version of the plugin.
 		$dismiss_notice        = get_option( 'wpz_social_icons_dismiss_admin_notices' );
-		$should_display_notice = ( ( 'index.php' === $pagenow || 'plugins.php' === $pagenow ) && $is_active && ! $dismiss_notice ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$should_display_notice = ( ( 'index.php' === $pagenow || 'plugins.php' === $pagenow || 'options-general.php' === $pagenow && 'wpzoom-social-icons-widget' === $page ) && $is_active && ! $dismiss_notice ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 
 		if ( $should_display_notice ) {
 			wpzoom_social_icons_upgrade_pro_notice();
