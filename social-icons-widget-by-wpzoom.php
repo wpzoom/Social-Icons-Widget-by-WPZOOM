@@ -330,18 +330,18 @@ if ( ! function_exists( 'wpzoom_social_icons_upgrade_pro_notice' ) ) {
 				<div class="wpz-social-icons-notice-content">
 					<?php
 					/* translators: %s The heading title */
-					echo sprintf( '<h3>%s</h3>', esc_html__( 'Thank you for using our Social Icons Widget & Block plugin', 'zoom-social-icons-widget' ) );
+					echo sprintf( '<h3>%s</h3>', esc_html__( '🤩 Thank you for using Social Icons Widget by WPZOOM!', 'zoom-social-icons-widget' ) );
 					?>
 					<p class="wpz-social-icons-notice-text">
 					<?php
 					/* translators: %s The pro version features */
-					echo sprintf( esc_html__( 'The PRO version is available and includes several features such as: %s', 'zoom-social-icons-widget' ), '<strong>' . esc_html__( 'upload custom SVG icons, load icons in SVG format, outstanding performance, premium support and much more...', 'zoom-social-icons-widget' ) . '</strong>' );
+					echo sprintf( esc_html__( 'Big News! We\'ve released a new PRO version with unique features such as %s', 'zoom-social-icons-widget' ), '<strong>' . esc_html__( 'SVG Icons Uploader, Loading Icons in SVG format, and many other improvements to boost your PageSpeed score!', 'zoom-social-icons-widget' ) . '</strong>' );
 					?>
 					</p>
 					<p class="wpz-social-icons-notice-actions">
-						<a class="button-primary" href="https://www.wpzoom.com/plugins/social-widget/?utm_source=admin-notices&utm_medium=admin-notice-actions&utm_campaign=go_pro" target="_blank"><?php esc_html_e( 'Get Social Icons Widget PRO', 'zoom-social-icons-widget' ); ?></a>
-						<a class="button-link" href="https://www.wpzoom.com/documentation/social-icons-widget-by-wpzoom/?utm_source=admin-notice&utm_medium=admin-notice-actions&utm_campaign=docs" target="_blank"><?php esc_html_e( 'Documentation', 'zoom-social-icons-widget' ); ?></a>
-						<a class="button-link" href="<?php echo esc_url( admin_url( 'admin.php?page=' . WPZOOM_Social_Icons_Settings::$menu_slug ) ); ?>"><?php esc_html_e( 'Settings', 'zoom-social-icons-widget' ); ?></a>
+						<a class="button-primary" href="https://www.wpzoom.com/plugins/social-widget/?utm_source=admin-notices&utm_medium=admin-notice-actions&utm_campaign=go_pro" target="_blank"><strong><?php esc_html_e( 'Get Social Icons Widget PRO &rarr;', 'zoom-social-icons-widget' ); ?></strong></a>
+						<?php /* <a class="button-link" href="https://www.wpzoom.com/documentation/social-icons-widget-by-wpzoom/?utm_source=admin-notice&utm_medium=admin-notice-actions&utm_campaign=docs" target="_blank"><?php esc_html_e( 'Documentation', 'zoom-social-icons-widget' ); ?></a>
+						<a class="button-link" href="<?php echo esc_url( admin_url( 'admin.php?page=' . WPZOOM_Social_Icons_Settings::$menu_slug ) ); ?>"><?php esc_html_e( 'Settings', 'zoom-social-icons-widget' ); ?></a> */ ?>
 					</p>
 				</div>
 			</div>
