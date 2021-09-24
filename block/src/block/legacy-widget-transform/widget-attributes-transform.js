@@ -96,10 +96,11 @@ function widgetAttributesTransform( props ) {
 		},
 	];
 
-	blockStyles.map( ( blockStyle ) => {
+	for ( let i = 0; i < blockStyles.length; i++ ) {
+		const blockStyle = blockStyles[ i ];
 		unregisterBlockStyle( 'wpzoom-blocks/social-icons', blockStyle.name );
 		registerBlockStyle( 'wpzoom-blocks/social-icons', blockStyle );
-	} );
+	}
 
 	return transforms;
 }
