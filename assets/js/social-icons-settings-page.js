@@ -1,5 +1,5 @@
 jQuery(function ($) {
-    $(".zoom-social-icons-settings").tabs({
+    $(".wpzoom-social-icons-settings-inner").tabs({
         classes: {"ui-tabs-active": "current"},
         active: localStorage.getItem("socialIconsCurrentSettingsTab"),
         activate: function (event, ui) {
