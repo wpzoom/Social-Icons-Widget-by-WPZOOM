@@ -155,7 +155,7 @@ class WPZOOM_Social_Icons_Settings {
 		?>
 <div class="wrap zoom-social-icons-settings">
 	<h1><?php esc_html_e( 'Social Icons Widget & Block by WPZOOM', 'zoom-social-icons-widget' ); ?></h1>
-	
+
 	<div class="wpzoom-social-icons-settings-inner">
 		<div class="wp-filter">
 			<ul class="filter-links">

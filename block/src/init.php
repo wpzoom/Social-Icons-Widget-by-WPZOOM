@@ -282,16 +282,16 @@ function wpzoom_social_icons_block_enqueue_secondary_assets() {
 
 add_action( 'enqueue_block_assets', 'wpzoom_social_icons_block_enqueue_secondary_assets' );
 
-/**
- * Loads the asset file for the given script or style.
- * Returns a default if the asset file is not found.
- *
- * @since 4.2.0
- * @param string $filepath The name of the file without the extension.
- *
- * @return array The asset file contents.
- */
 if ( ! function_exists( 'wpzoom_social_icons_get_asset_file' ) ) {
+	/**
+	 * Loads the asset file for the given script or style.
+	 * Returns a default if the asset file is not found.
+	 *
+	 * @since 4.2.0
+	 * @param string $filepath The name of the file without the extension.
+	 *
+	 * @return array The asset file contents.
+	 */
 	function wpzoom_social_icons_get_asset_file( $filepath ) {
 		$asset_path = WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . $filepath . '.asset.php';
 
