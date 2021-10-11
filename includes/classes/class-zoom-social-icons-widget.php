@@ -581,6 +581,10 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	 * @return array Updated safe values to be saved.
 	 */
 	public function update( $new_instance, $old_instance ) {
+		$defaults = $this->get_defaults();
+		$instance = $this->normalize_data_array( $new_instance );
+		$instance = wp_parse_args( (array) $instance, $defaults );
+
 		$instance['title']                     = sanitize_text_field( $new_instance['title'] );
 		$instance['description']               = balanceTags( wp_kses( $new_instance['description'], wp_kses_allowed_html() ), true );
 		$instance['show_icon_labels']          = ( ! empty( $new_instance['show_icon_labels'] ) && 'true' === $new_instance['show_icon_labels'] ) ? 'true' : 'false';
