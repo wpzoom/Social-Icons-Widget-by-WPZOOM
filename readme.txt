@@ -5,7 +5,7 @@ Tags: social icons, social networks, social media, social media icons, icons, so
 Requires at least: 5.2
 Requires PHP: 5.6
 Tested up to: 5.8
-Stable tag: trunk
+Stable tag: 4.2.3
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -151,6 +151,9 @@ You can also create a hidden widget area using a plugin like Custom Sidebars if 
 8. Widget Settings
 
 == Changelog ==
+
+= 4.2.3 =
+* Change textdomain to match with plugin slug
 
 = 4.2.2 =
 * Fixed an issue with the Legacy Widget
