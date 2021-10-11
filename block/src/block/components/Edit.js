@@ -683,7 +683,7 @@ class Edit extends Component {
 										>
 											{ __(
 												'Edit Details',
-												'zoom-social-icons-widget'
+												'social-icons-widget-by-wpzoom'
 											) }
 										</Button>
 										<div
@@ -744,7 +744,7 @@ class Edit extends Component {
 												>
 													{ __(
 														'Delete Icon',
-														'zoom-social-icons-widget'
+														'social-icons-widget-by-wpzoom'
 													) }
 												</Button>
 											) }

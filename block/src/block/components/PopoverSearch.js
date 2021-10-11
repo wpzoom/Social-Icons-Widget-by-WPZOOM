@@ -35,7 +35,7 @@ export default function PopoverSearch( {
 			/>
 			<Button
 				icon="editor-break"
-				label={ __( 'Apply', 'zoom-social-icons-widget' ) }
+				label={ __( 'Apply', 'social-icons-widget-by-wpzoom' ) }
 				onClick={ onClickHandler }
 				className={ [
 					'is-button',

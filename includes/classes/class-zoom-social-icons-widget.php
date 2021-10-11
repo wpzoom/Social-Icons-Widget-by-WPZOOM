@@ -81,10 +81,10 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	 * Constructor.
 	 */
 	public function __construct() {
-		$this->widget_name    = esc_html__( 'Social Icons by WPZOOM', 'zoom-social-icons-widget' );
+		$this->widget_name    = esc_html__( 'Social Icons by WPZOOM', 'social-icons-widget-by-wpzoom' );
 		$this->widget_options = array(
 			'classname'             => 'zoom-social-icons-widget',
-			'description'           => __( 'Sortable widget that supports more than 80+ social networks', 'zoom-social-icons-widget' ),
+			'description'           => __( 'Sortable widget that supports more than 80+ social networks', 'social-icons-widget-by-wpzoom' ),
 			'show_instance_in_rest' => true,
 		);
 
@@ -172,10 +172,10 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		);
 
 		$colorpicker_l10n = array(
-			'clear'         => __( 'Clear', 'zoom-social-icons-widget' ),
-			'defaultString' => __( 'Default', 'zoom-social-icons-widget' ),
-			'pick'          => __( 'Select Color', 'zoom-social-icons-widget' ),
-			'current'       => __( 'Current Color', 'zoom-social-icons-widget' ),
+			'clear'         => __( 'Clear', 'social-icons-widget-by-wpzoom' ),
+			'defaultString' => __( 'Default', 'social-icons-widget-by-wpzoom' ),
+			'pick'          => __( 'Select Color', 'social-icons-widget-by-wpzoom' ),
+			'current'       => __( 'Current Color', 'social-icons-widget-by-wpzoom' ),
 		);
 		wp_localize_script(
 			'wp-color-picker',
@@ -290,13 +290,13 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		?>
 <div class="modal-mask">
 	<div class="media-modal wp-core-ui zoom-social-modal-wrapper">
-		<button type="button" class="media-modal-close" @click="$emit('close')"><span class="media-modal-icon"><span class="screen-reader-text"><?php esc_html_e( 'Close media panel', 'zoom-social-icons-widget' ); ?></span></span>
+		<button type="button" class="media-modal-close" @click="$emit('close')"><span class="media-modal-icon"><span class="screen-reader-text"><?php esc_html_e( 'Close media panel', 'social-icons-widget-by-wpzoom' ); ?></span></span>
 		</button>
 		<div class="media-modal-content" ref="mediaModal">
 
 			<div class="zoom-social-modal-title">
 				<slot name="header">
-					<h3><?php esc_html_e( 'Select Icon', 'zoom-social-icons-widget' ); ?></h3>
+					<h3><?php esc_html_e( 'Select Icon', 'social-icons-widget-by-wpzoom' ); ?></h3>
 				</slot>
 			</div>
 
@@ -306,7 +306,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 					<div class="zoom-social-modal-form">
 						<div class="form-group">
 							<div class="wrap-label">
-								<label><?php esc_html_e( 'Choose icon color', 'zoom-social-icons-widget' ); ?></label>
+								<label><?php esc_html_e( 'Choose icon color', 'social-icons-widget-by-wpzoom' ); ?></label>
 
 							</div>
 							<div class="wrap-input wrap-input-color-picker">
@@ -315,7 +315,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 						</div>
 						<div class="form-group">
 							<div class="wrap-label">
-								<label><?php esc_html_e( 'Choose hover color', 'zoom-social-icons-widget' ); ?></label>
+								<label><?php esc_html_e( 'Choose hover color', 'social-icons-widget-by-wpzoom' ); ?></label>
 
 							</div>
 							<div class="wrap-input wrap-input-color-picker-hover">
@@ -324,7 +324,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 						</div>
 						<div class="form-group">
 							<div class="wrap-label">
-								<label><?php esc_html_e( 'Select Icon Kit', 'zoom-social-icons-widget' ); ?></label>
+								<label><?php esc_html_e( 'Select Icon Kit', 'social-icons-widget-by-wpzoom' ); ?></label>
 							</div>
 							<div class="wrap-input">
 								<select v-model='modal_icon_kit' class="zoom-social-icons__field-icon-kit" name="zoom-social-icons__field-icon-kit">
@@ -361,7 +361,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			<div class="zoom-social-modal-toolbar">
 				<slot name="footer">
 					<input class="search-action-input" style="width: 50%; float: left;" type="text" v-model='searchIcons' placeholder="Type to search icon" />
-					<a href='#' class="button-primary zoom-social-modal-save-btn" @click.prevent="saveModal"><?php esc_html_e( 'Save', 'zoom-social-icons-widget' ); ?></a>
+					<a href='#' class="button-primary zoom-social-modal-save-btn" @click.prevent="saveModal"><?php esc_html_e( 'Save', 'social-icons-widget-by-wpzoom' ); ?></a>
 				</slot>
 			</div>
 		</div>
@@ -633,7 +633,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			 * Register strings for translation.
 			 */
 			if ( function_exists( 'icl_register_string' ) ) {
-				icl_register_string( 'zoom-social-icons-widget', 'url-' . $i, $url );
+				icl_register_string( 'social-icons-widget-by-wpzoom', 'url-' . $i, $url );
 			}
 		}
 
@@ -681,105 +681,105 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		?>
 <div class="form-instance" <?php echo $instance_attr; ?> id="<?php echo $this->id; ?>">
 	<p>
-		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'zoom-social-icons-widget' ); ?></label>
+		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'social-icons-widget-by-wpzoom' ); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" v-model="title" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" />
 	</p>
 
 	<p>
-		<label for="<?php echo $this->get_field_id( 'description' ); ?>"><?php esc_html_e( 'Text above icons:', 'zoom-social-icons-widget' ); ?></label>
+		<label for="<?php echo $this->get_field_id( 'description' ); ?>"><?php esc_html_e( 'Text above icons:', 'social-icons-widget-by-wpzoom' ); ?></label>
 		<textarea class="widefat" id="<?php echo $this->get_field_id( 'description' ); ?>" name="<?php echo $this->get_field_name( 'description' ); ?>" cols="20" v-model="description" rows="3"></textarea>
 	</p>
 
-	<p class="description"><?php esc_html_e( 'You can add here a text above the icons. Basic HTML allowed.', 'zoom-social-icons-widget' ); ?></p>
+	<p class="description"><?php esc_html_e( 'You can add here a text above the icons. Basic HTML allowed.', 'social-icons-widget-by-wpzoom' ); ?></p>
 
 
 	<p>
 		<input class="checkbox zoom-social-icons-show-icon-labels" type="checkbox" v-model="show_icon_labels" :true-value="'true'" :false-value="'false'" :value="show_icon_labels" id="<?php echo $this->get_field_id( 'show_icon_labels' ); ?>" name="<?php echo $this->get_field_name( 'show_icon_labels' ); ?>" />
-		<label for="<?php echo $this->get_field_id( 'show_icon_labels' ); ?>"><?php esc_html_e( 'Show icon labels? ', 'zoom-social-icons-widget' ); ?></label>
+		<label for="<?php echo $this->get_field_id( 'show_icon_labels' ); ?>"><?php esc_html_e( 'Show icon labels? ', 'social-icons-widget-by-wpzoom' ); ?></label>
 	</p>
 
 	<p>
 		<input class="checkbox" type="checkbox" v-model="open_new_tab" :true-value="'true'" :false-value="'false'" :value="open_new_tab" id="<?php echo $this->get_field_id( 'open_new_tab' ); ?>" name="<?php echo $this->get_field_name( 'open_new_tab' ); ?>" />
-		<label for="<?php echo $this->get_field_id( 'open_new_tab' ); ?>"><?php esc_html_e( 'Open links in new tab? ', 'zoom-social-icons-widget' ); ?></label>
+		<label for="<?php echo $this->get_field_id( 'open_new_tab' ); ?>"><?php esc_html_e( 'Open links in new tab? ', 'social-icons-widget-by-wpzoom' ); ?></label>
 	</p>
 	<?php // phpcs:disable WordPress.WP.I18n.MissingTranslatorsComment ?>
 	<p>
 		<input class="checkbox" type="checkbox" v-model="no_follow" :true-value="'true'" :false-value="'false'" :value="no_follow" id="<?php echo $this->get_field_id( 'no_follow' ); ?>" name="<?php echo $this->get_field_name( 'no_follow' ); ?>" />
-		<label for="<?php echo $this->get_field_id( 'no_follow' ); ?>"><?php echo sprintf( __( 'Add %s to links', 'zoom-social-icons-widget' ), '<code>rel="nofollow"</code>' ); ?></label>
+		<label for="<?php echo $this->get_field_id( 'no_follow' ); ?>"><?php echo sprintf( __( 'Add %s to links', 'social-icons-widget-by-wpzoom' ), '<code>rel="nofollow"</code>' ); ?></label>
 	</p>
 
 	<p>
 		<input class="checkbox" type="checkbox" v-model="no_referrer" :true-value="'true'" :false-value="'false'" :value="no_referrer" id="<?php echo $this->get_field_id( 'no_referrer' ); ?>" name="<?php echo $this->get_field_name( 'no_referrer' ); ?>" />
-		<label for="<?php echo $this->get_field_id( 'no_referrer' ); ?>"><?php echo sprintf( __( 'Add %s to links', 'zoom-social-icons-widget' ), '<code>rel="noreferrer"</code>' ); ?></label>
+		<label for="<?php echo $this->get_field_id( 'no_referrer' ); ?>"><?php echo sprintf( __( 'Add %s to links', 'social-icons-widget-by-wpzoom' ), '<code>rel="noreferrer"</code>' ); ?></label>
 	</p>
 
 	<p>
 		<input class="checkbox" type="checkbox" v-model="no_opener" :true-value="'true'" :false-value="'false'" :value="no_opener" id="<?php echo $this->get_field_id( 'no_opener' ); ?>" name="<?php echo $this->get_field_name( 'no_opener' ); ?>" />
-		<label for="<?php echo $this->get_field_id( 'no_opener' ); ?>"><?php echo sprintf( __( 'Add %s to links', 'zoom-social-icons-widget' ), '<code>rel="noopener"</code>' ); ?></label>
+		<label for="<?php echo $this->get_field_id( 'no_opener' ); ?>"><?php echo sprintf( __( 'Add %s to links', 'social-icons-widget-by-wpzoom' ), '<code>rel="noopener"</code>' ); ?></label>
 	</p>
 	<?php // phpcs:enable WordPress.WP.I18n.MissingTranslatorsComment ?>
 
-	<p class="description"><?php esc_html_e( 'Recommended if links or icons open in a new tab', 'zoom-social-icons-widget' ); ?></p>
+	<p class="description"><?php esc_html_e( 'Recommended if links or icons open in a new tab', 'social-icons-widget-by-wpzoom' ); ?></p>
 
 
 	<p>
-		<label for="<?php echo $this->get_field_id( 'icon_alignment' ); ?>"><?php esc_html_e( 'Icons Alignment:', 'zoom-social-icons-widget' ); ?>
+		<label for="<?php echo $this->get_field_id( 'icon_alignment' ); ?>"><?php esc_html_e( 'Icons Alignment:', 'social-icons-widget-by-wpzoom' ); ?>
 		</label>
 		<select name="<?php echo $this->get_field_name( 'icon_alignment' ); ?>" id="<?php echo $this->get_field_id( 'icon_alignment' ); ?>" v-model="icon_alignment" class="widefat">
-			<option value="none"><?php esc_html_e( 'None', 'zoom-social-icons-widget' ); ?></option>
-			<option value="left"><?php esc_html_e( 'Align Left', 'zoom-social-icons-widget' ); ?></option>
-			<option value="center"><?php esc_html_e( 'Align Center', 'zoom-social-icons-widget' ); ?></option>
-			<option value="right"><?php esc_html_e( 'Align Right', 'zoom-social-icons-widget' ); ?></option>
+			<option value="none"><?php esc_html_e( 'None', 'social-icons-widget-by-wpzoom' ); ?></option>
+			<option value="left"><?php esc_html_e( 'Align Left', 'social-icons-widget-by-wpzoom' ); ?></option>
+			<option value="center"><?php esc_html_e( 'Align Center', 'social-icons-widget-by-wpzoom' ); ?></option>
+			<option value="right"><?php esc_html_e( 'Align Right', 'social-icons-widget-by-wpzoom' ); ?></option>
 		</select>
 	</p>
 
 	<p>
-		<label for="<?php echo $this->get_field_id( 'icon_style' ); ?>"><?php esc_html_e( 'Icon Style:', 'zoom-social-icons-widget' ); ?>
+		<label for="<?php echo $this->get_field_id( 'icon_style' ); ?>"><?php esc_html_e( 'Icon Style:', 'social-icons-widget-by-wpzoom' ); ?>
 		</label>
 		<select name="<?php echo $this->get_field_name( 'icon_style' ); ?>" id="<?php echo $this->get_field_id( 'icon_style' ); ?>" v-model="icon_style" class="widefat">
-			<option value="with-canvas"><?php esc_html_e( 'Color Background / White Icon', 'zoom-social-icons-widget' ); ?></option>
-			<option value="without-canvas"><?php esc_html_e( 'Color Icon / No Background', 'zoom-social-icons-widget' ); ?></option>
+			<option value="with-canvas"><?php esc_html_e( 'Color Background / White Icon', 'social-icons-widget-by-wpzoom' ); ?></option>
+			<option value="without-canvas"><?php esc_html_e( 'Color Icon / No Background', 'social-icons-widget-by-wpzoom' ); ?></option>
 		</select>
 	</p>
 
 	<p>
-		<label :style="iconCanvasStyleLabel()" for="<?php echo $this->get_field_id( 'icon_canvas_style' ); ?>"><?php esc_html_e( 'Icon Background Style:', 'zoom-social-icons-widget' ); ?></label>
+		<label :style="iconCanvasStyleLabel()" for="<?php echo $this->get_field_id( 'icon_canvas_style' ); ?>"><?php esc_html_e( 'Icon Background Style:', 'social-icons-widget-by-wpzoom' ); ?></label>
 		<select :disabled="this.icon_style == 'without-canvas'" name="<?php echo $this->get_field_name( 'icon_canvas_style' ); ?>" id="<?php echo $this->get_field_id( 'icon_canvas_style' ); ?>" v-model="icon_canvas_style" class="widefat zoom-social-icons-change-icon-canvas-style">
-			<option value="round"><?php esc_html_e( 'Round', 'zoom-social-icons-widget' ); ?></option>
-			<option value="rounded"><?php esc_html_e( 'Rounded Corners', 'zoom-social-icons-widget' ); ?></option>
-			<option value="square"><?php esc_html_e( 'Square', 'zoom-social-icons-widget' ); ?></option>
+			<option value="round"><?php esc_html_e( 'Round', 'social-icons-widget-by-wpzoom' ); ?></option>
+			<option value="rounded"><?php esc_html_e( 'Rounded Corners', 'social-icons-widget-by-wpzoom' ); ?></option>
+			<option value="square"><?php esc_html_e( 'Square', 'social-icons-widget-by-wpzoom' ); ?></option>
 		</select>
 	</p>
 
 	<p class="description">
-		<?php echo wp_kses_post( __( 'This option has no effect if <i>Color Icon / No Background</i> icon style is selected.', 'zoom-social-icons-widget' ) ); ?>
+		<?php echo wp_kses_post( __( 'This option has no effect if <i>Color Icon / No Background</i> icon style is selected.', 'social-icons-widget-by-wpzoom' ) ); ?>
 	</p>
 
 	<p>
-		<label for="<?php echo $this->get_field_id( 'icon_padding_size' ); ?>"><?php esc_html_e( 'Icon Padding (pixels):', 'zoom-social-icons-widget' ); ?>
+		<label for="<?php echo $this->get_field_id( 'icon_padding_size' ); ?>"><?php esc_html_e( 'Icon Padding (pixels):', 'social-icons-widget-by-wpzoom' ); ?>
 			<input type="number" min="0" max="200" id="<?php echo $this->get_field_id( 'icon_padding_size' ); ?>" name="<?php echo $this->get_field_name( 'icon_padding_size' ); ?>" v-model="icon_padding_size" class="widefat" />
 		</label>
 	</p>
 
 	<p>
-		<label for="<?php echo $this->get_field_id( 'icon_font_size' ); ?>"><?php esc_html_e( 'Icon Size (pixels):', 'zoom-social-icons-widget' ); ?>
+		<label for="<?php echo $this->get_field_id( 'icon_font_size' ); ?>"><?php esc_html_e( 'Icon Size (pixels):', 'social-icons-widget-by-wpzoom' ); ?>
 			<input type="number" min="0" max="200" id="<?php echo $this->get_field_id( 'icon_font_size' ); ?>" name="<?php echo $this->get_field_name( 'icon_font_size' ); ?>" v-model="icon_font_size" class="widefat" />
 		</label>
 	</p>
 
 	<p>
-		<label><?php esc_html_e( 'Set color for all icons', 'zoom-social-icons-widget' ); ?></label>
+		<label><?php esc_html_e( 'Set color for all icons', 'social-icons-widget-by-wpzoom' ); ?></label>
 	<div class="wrap-input-color-picker">
 		<input v-model="global_color_picker" type="text" class="zoom-social-icons__field-color-picker" id="<?php echo $this->get_field_id( 'global_color_picker' ); ?>" name="<?php echo $this->get_field_name( 'global_color_picker' ); ?>" :value="global_color_picker">
 	</div>
 	</p>
 	<p>
-		<label><?php esc_html_e( 'Set hover color for all icons', 'zoom-social-icons-widget' ); ?></label>
+		<label><?php esc_html_e( 'Set hover color for all icons', 'social-icons-widget-by-wpzoom' ); ?></label>
 	<div class="wrap-input-color-picker">
 		<input v-model="global_color_picker_hover" type="text" class="zoom-social-icons__field-color-picker" id="<?php echo $this->get_field_id( 'global_color_picker_hover' ); ?>" name="<?php echo $this->get_field_name( 'global_color_picker_hover' ); ?>" :value="global_color_picker_hover">
 	</div>
 	</p>
-	<p style="margin-bottom: 0;"><?php esc_html_e( 'Icons:', 'zoom-social-icons-widget' ); ?></p>
+	<p style="margin-bottom: 0;"><?php esc_html_e( 'Icons:', 'social-icons-widget-by-wpzoom' ); ?></p>
 
 	<div class="must-remove">
 		<input type="hidden" value="<?php echo $defaults['title']; ?>" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" />
@@ -853,8 +853,8 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				<div class="zoom-social-icons__cw">
 					<div class="zoom-social-icons__inputs" ref="inputFields">
 
-						<input class="widefat zoom-social-icons__field-url" :id="field.url_field_id" :name="field.url_field_name" v-model="field.url" type="text" :value="field.url_field_name" @input="urlFieldNameHandler(key)" @keyup.enter.stop="insertField" placeholder="<?php esc_html_e( 'Start typing the URL...', 'zoom-social-icons-widget' ); ?>">
-						<input class="widefat zoom-social-icons__field-label" :id="field.label_field_id" :name="field.label_field_name" v-model="field.label" type="text" :value="field.label_field_name" placeholder="<?php esc_html_e( 'Label', 'zoom-social-icons-widget' ); ?>">
+						<input class="widefat zoom-social-icons__field-url" :id="field.url_field_id" :name="field.url_field_name" v-model="field.url" type="text" :value="field.url_field_name" @input="urlFieldNameHandler(key)" @keyup.enter.stop="insertField" placeholder="<?php esc_html_e( 'Start typing the URL...', 'social-icons-widget-by-wpzoom' ); ?>">
+						<input class="widefat zoom-social-icons__field-label" :id="field.label_field_id" :name="field.label_field_name" v-model="field.label" type="text" :value="field.label_field_name" placeholder="<?php esc_html_e( 'Label', 'social-icons-widget-by-wpzoom' ); ?>">
 						<input type="hidden" :id="field.color_picker_field_id" :name="field.color_picker_field_name" v-model='field.color_picker' :value="field.color_picker">
 						<input type="hidden" :id="field.color_picker_hover_field_id" :name="field.color_picker_hover_field_name" v-model='field.color_picker_hover' :value="field.color_picker_hover">
 						<input type="hidden" :id="field.icon_field_id" :name="field.icon_field_name" v-model="field.icon" :value="field.icon">
@@ -869,13 +869,13 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				<div class="extra-options" v-show="field.show_extra_options == true">
 					<p>
 						<label :for="field.aria_label_field_id">
-							<code>"aria-label"</code> <?php esc_html_e( 'description', 'zoom-social-icons-widget' ); ?>
+							<code>"aria-label"</code> <?php esc_html_e( 'description', 'social-icons-widget-by-wpzoom' ); ?>
 							<input class="widefat" :id="field.aria_label_field_id" :name="field.aria_label_field_name" v-model="field.aria_label" type="text" :value="field.aria_label_field_name">
 						</label>
 					</p>
 
 					<p class="description">
-						<?php echo wp_kses_post( __( 'This is used to provide a description of this icon to screen reader users (for accessibility purposes).', 'zoom-social-icons-widget' ) ); ?>
+						<?php echo wp_kses_post( __( 'This is used to provide a description of this icon to screen reader users (for accessibility purposes).', 'social-icons-widget-by-wpzoom' ) ); ?>
 					</p>
 
 				</div>
@@ -886,15 +886,15 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	</ul>
 
 	<div class="zoom-social-icons__add-button">
-		<a @click.prevent='insertField' class="button"><?php esc_html_e( 'Add more', 'zoom-social-icons-widget' ); ?></a>
+		<a @click.prevent='insertField' class="button"><?php esc_html_e( 'Add more', 'social-icons-widget-by-wpzoom' ); ?></a>
 	</div>
 
 	<p class="description">
-		<?php echo wp_kses_post( __( 'To add an icon with an email address, use the <strong><em>mailto:mail@example.com</em></strong> format.', 'zoom-social-icons-widget' ) ); ?>
+		<?php echo wp_kses_post( __( 'To add an icon with an email address, use the <strong><em>mailto:mail@example.com</em></strong> format.', 'social-icons-widget-by-wpzoom' ) ); ?>
 	</p>
 
 	<p class="description">
-		<?php echo wp_kses_post( __( 'Note that icons above is not how they will look on front-end. This is just for reference.', 'zoom-social-icons-widget' ) ); ?>
+		<?php echo wp_kses_post( __( 'Note that icons above is not how they will look on front-end. This is just for reference.', 'social-icons-widget-by-wpzoom' ) ); ?>
 	</p>
 </div>
 		<?php
@@ -910,7 +910,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		return apply_filters(
 			'zoom_social_icons_get_defaults',
 			array(
-				'title'                     => esc_html__( 'Follow us', 'zoom-social-icons-widget' ),
+				'title'                     => esc_html__( 'Follow us', 'social-icons-widget-by-wpzoom' ),
 				'description'               => '',
 				'show_icon_labels'          => 'false',
 				'open_new_tab'              => 'true',
@@ -1141,7 +1141,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		return array(
 			array(
 				'url'                => '',
-				'label'              => __( 'Default Label', 'zoom-social-icons-widget' ),
+				'label'              => __( 'Default Label', 'social-icons-widget-by-wpzoom' ),
 				'icon'               => 'wordpress',
 				'icon_kit'           => 'socicon',
 				'color_picker'       => '#1e73be',

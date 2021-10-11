@@ -156,10 +156,10 @@ if ( ! parentContainer ) {
  */
 registerBlockType( 'wpzoom-blocks/social-icons', {
 	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
-	title: __( 'Social Icons Block', 'zoom-social-icons-widget' ), // Block title.
+	title: __( 'Social Icons Block', 'social-icons-widget-by-wpzoom' ), // Block title.
 	description: __(
 		'Display icons with links to social media platforms.',
-		'zoom-social-icons-widget'
+		'social-icons-widget-by-wpzoom'
 	),
 	icon: {
 		foreground: '#274474',
@@ -173,11 +173,11 @@ registerBlockType( 'wpzoom-blocks/social-icons', {
 	},
 	category: 'wpzoom-blocks', // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
 	keywords: [
-		__( 'Social Icons', 'zoom-social-icons-widget' ),
-		__( 'Dashicons', 'zoom-social-icons-widget' ),
-		__( 'Socicons', 'zoom-social-icons-widget' ),
-		__( 'Fontawesome', 'zoom-social-icons-widget' ),
-		__( 'Academic Icons', 'zoom-social-icons-widget' ),
+		__( 'Social Icons', 'social-icons-widget-by-wpzoom' ),
+		__( 'Dashicons', 'social-icons-widget-by-wpzoom' ),
+		__( 'Socicons', 'social-icons-widget-by-wpzoom' ),
+		__( 'Fontawesome', 'social-icons-widget-by-wpzoom' ),
+		__( 'Academic Icons', 'social-icons-widget-by-wpzoom' ),
 	],
 	attributes: {
 		wasStyled: {
@@ -321,7 +321,7 @@ registerBlockType( 'wpzoom-blocks/social-icons', {
 			name: 'with-canvas-round',
 			label: __(
 				'Color Background / Round White Icon',
-				'zoom-social-icons-widget'
+				'social-icons-widget-by-wpzoom'
 			),
 			isDefault: true,
 		},
@@ -329,39 +329,39 @@ registerBlockType( 'wpzoom-blocks/social-icons', {
 			name: 'with-canvas-rounded',
 			label: __(
 				'Color Background / Rounded White Icon',
-				'zoom-social-icons-widget'
+				'social-icons-widget-by-wpzoom'
 			),
 		},
 		{
 			name: 'with-canvas-squared',
 			label: __(
 				'Color Background / Squared White Icon',
-				'zoom-social-icons-widget'
+				'social-icons-widget-by-wpzoom'
 			),
 		},
 		{
 			name: 'without-canvas',
-			label: __( 'Color Icon / No Background', 'zoom-social-icons-widget' ),
+			label: __( 'Color Icon / No Background', 'social-icons-widget-by-wpzoom' ),
 		},
 		{
 			name: 'without-canvas-with-border',
 			label: __(
 				'Color Icon / No Background with border',
-				'zoom-social-icons-widget'
+				'social-icons-widget-by-wpzoom'
 			),
 		},
 		{
 			name: 'with-label-canvas-rounded',
 			label: __(
 				'Color Background / Rounded White Icon with label',
-				'zoom-social-icons-widget'
+				'social-icons-widget-by-wpzoom'
 			),
 		},
 		{
 			name: 'without-canvas-with-label',
 			label: __(
 				'Color Icon / No Background with label',
-				'zoom-social-icons-widget'
+				'social-icons-widget-by-wpzoom'
 			),
 		},
 	],

@@ -37,7 +37,7 @@ const TransformToBlock = ( { clientId, attributes, widgetId } ) => {
 
 	const warningMessage = __(
 		'Legacy Social Icons Widget has been detected on this page. Since our plugin includes a Social Icons Block, supported by WordPress 5.8, we highly recommend transforming legacy widgets to blocks. You can do that by clicking on the "Convert to block" button. You can also disable the new block-based widget screen by installing the Classic Widgets plugin.',
-		'zoom-social-icons-widget'
+		'social-icons-widget-by-wpzoom'
 	);
 
 	useEffect( () => {
@@ -50,7 +50,7 @@ const TransformToBlock = ( { clientId, attributes, widgetId } ) => {
 						'autofocus[panel]': 'widgets',
 						return: window.location.pathname,
 					} ),
-					label: __( 'Manage in Customizer', 'zoom-social-icons-widget' ),
+					label: __( 'Manage in Customizer', 'social-icons-widget-by-wpzoom' ),
 				},
 				{
 					url: addQueryArgs( 'plugin-install.php', {
@@ -61,7 +61,7 @@ const TransformToBlock = ( { clientId, attributes, widgetId } ) => {
 					label: 'Install Classic Widgets',
 				},
 				{
-					label: __( 'Convert to block', 'zoom-social-icons-widget' ),
+					label: __( 'Convert to block', 'social-icons-widget-by-wpzoom' ),
 					onClick: () => setButtonClick( ! isConvertRun ),
 				},
 			],
@@ -73,7 +73,7 @@ const TransformToBlock = ( { clientId, attributes, widgetId } ) => {
 			createInfoNotice(
 				__(
 					'Convert process is started. Please wait…',
-					'zoom-social-icons-widget'
+					'social-icons-widget-by-wpzoom'
 				),
 				{
 					type: 'snackbar',
@@ -135,12 +135,12 @@ function convertWidgetToBlock( clientData ) {
 				createBlock( 'core/heading', {
 					content: widgetTitle,
 					level: 3,
-					placeholder: __( 'Title', 'zoom-social-icons-widget' ),
+					placeholder: __( 'Title', 'social-icons-widget-by-wpzoom' ),
 					className: 'zoom-social-icons-legacy-widget-title widget-title title heading-size-3',
 				} ),
 				createBlock( 'core/paragraph', {
 					content: widgetDescription,
-					placeholder: __( 'Text above icons', 'zoom-social-icons-widget' ),
+					placeholder: __( 'Text above icons', 'social-icons-widget-by-wpzoom' ),
 					className: classnames( 'zoom-social-icons-legacy-widget-description', {
 						[ `zoom-social-icons-list--align-${ alignment }` ]:
 							alignment !== undefined && alignment !== 'none',
@@ -171,7 +171,7 @@ function convertWidgetToBlock( clientData ) {
 						'%d legacy widget "Social Icons" successfully converted to block',
 						'%d legacy widgets "Social Icons" successfully converted to block',
 						replaced,
-						'zoom-social-icons-widget'
+						'social-icons-widget-by-wpzoom'
 					),
 					replaced,
 				);

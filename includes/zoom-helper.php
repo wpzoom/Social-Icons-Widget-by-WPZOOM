@@ -61,7 +61,7 @@ if ( ! function_exists( 'zoom_pointer_load' ) ) :
 			'wp-pointer',
 			'wpPointerL10n',
 			array(
-				'dismiss' => __( 'I already did this', 'zoom-social-icons-widget' ),
+				'dismiss' => __( 'I already did this', 'social-icons-widget-by-wpzoom' ),
 			)
 		);
 		// Add pointers style to queue.
@@ -150,18 +150,18 @@ if ( ! function_exists( 'zoom_get_pointer_data' ) ) :
 		$plugin_data = get_plugin_data( WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . '/social-icons-widget-by-wpzoom.php' );
 		$plugin_name = $plugin_data['Name'];
 
-		$pointer_content  = esc_html__( 'Thank you for using', 'zoom-social-icons-widget' ) . ' <b>Social Icons Widget by WPZOOM!</b><br/>';
-		$pointer_content .= esc_html__( 'Would you mind taking a moment to rate it! It won\'t take more than two minutes.', 'zoom-social-icons-widget' );
-		$pointer_content .= '<p><b>' . esc_html__( 'Thanks for your support!', 'zoom-social-icons-widget' ) . '</b></p>';
-		$pointer_content .= '<p><a class="button button-primary button-hero" href="https://wordpress.org/support/plugin/social-icons-widget-by-wpzoom/reviews/#new-post" target="_blank"> &#9733; ' . esc_html__( 'Rate Now', 'zoom-social-icons-widget' ) . '  &#9733;</a></p>';
-		$pointer_content .= '<p><a class="zoom-social-remind-me-later button button-secondary button-hero">' . esc_html__( 'Remind Me later!', 'zoom-social-icons-widget' ) . '</a></p>';
+		$pointer_content  = esc_html__( 'Thank you for using', 'social-icons-widget-by-wpzoom' ) . ' <b>Social Icons Widget by WPZOOM!</b><br/>';
+		$pointer_content .= esc_html__( 'Would you mind taking a moment to rate it! It won\'t take more than two minutes.', 'social-icons-widget-by-wpzoom' );
+		$pointer_content .= '<p><b>' . esc_html__( 'Thanks for your support!', 'social-icons-widget-by-wpzoom' ) . '</b></p>';
+		$pointer_content .= '<p><a class="button button-primary button-hero" href="https://wordpress.org/support/plugin/social-icons-widget-by-wpzoom/reviews/#new-post" target="_blank"> &#9733; ' . esc_html__( 'Rate Now', 'social-icons-widget-by-wpzoom' ) . '  &#9733;</a></p>';
+		$pointer_content .= '<p><a class="zoom-social-remind-me-later button button-secondary button-hero">' . esc_html__( 'Remind Me later!', 'social-icons-widget-by-wpzoom' ) . '</a></p>';
 
 		return array(
 			'target'         => '#wp-admin-bar-my-account',
 			'options'        => array(
 				'content'      => sprintf(
 					'<h3> %s </h3> <p> %s </p>',
-					__( 'Rate Social Icons Widget by WPZOOM', 'zoom-social-icons-widget' ),
+					__( 'Rate Social Icons Widget by WPZOOM', 'social-icons-widget-by-wpzoom' ),
 					$pointer_content
 				),
 				'position'     => array(

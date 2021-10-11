@@ -154,13 +154,13 @@ class SocialIconsModal extends Component {
 					'--wpz-social-icons-block-modal-item-border-radius':
 						Helper.addPixelsPipe( this.props.iconsBorderRadius ),
 				} }
-				title={ __( 'Select Icon', 'zoom-social-icons-widget' ) }
+				title={ __( 'Select Icon', 'social-icons-widget-by-wpzoom' ) }
 				shouldCloseOnClickOutside={ false }
 				onRequestClose={ () => this.props.onClose( this.state ) }
 			>
 				<div className={ 'modal-content' }>
 					<div className={ 'option-item' }>
-						<div className="label">{ __( 'URL', 'zoom-social-icons-widget' ) }</div>
+						<div className="label">{ __( 'URL', 'social-icons-widget-by-wpzoom' ) }</div>
 						<div className="option-wrapper">
 							<TextControl
 								value={ this.state.modalUrl }
@@ -171,7 +171,7 @@ class SocialIconsModal extends Component {
 					{ this.props.showIconsLabel ? (
 						<div className="option-item">
 							<div className="label">
-								{ __( 'Label', 'zoom-social-icons-widget' ) }
+								{ __( 'Label', 'social-icons-widget-by-wpzoom' ) }
 							</div>
 							<div className="option-wrapper">
 								<TextControl
@@ -183,7 +183,7 @@ class SocialIconsModal extends Component {
 					) : null }
 					<div className="option-item">
 						<div className="label">
-							{ __( 'Pick icon color', 'zoom-social-icons-widget' ) }
+							{ __( 'Pick icon color', 'social-icons-widget-by-wpzoom' ) }
 						</div>
 						<div className="option-wrapper">
 							<ModalColorPicker
@@ -194,7 +194,7 @@ class SocialIconsModal extends Component {
 					</div>
 					<div className="option-item">
 						<div className="label">
-							{ __( 'Pick hover color', 'zoom-social-icons-widget' ) }
+							{ __( 'Pick hover color', 'social-icons-widget-by-wpzoom' ) }
 						</div>
 						<div className="option-wrapper">
 							<ModalColorPicker
@@ -205,7 +205,7 @@ class SocialIconsModal extends Component {
 					</div>
 					<div className="option-item">
 						<div className="label">
-							{ __( 'Select Icon Kit', 'zoom-social-icons-widget' ) }
+							{ __( 'Select Icon Kit', 'social-icons-widget-by-wpzoom' ) }
 						</div>
 						<div className="option-wrapper">
 							<SelectControl
@@ -224,7 +224,7 @@ class SocialIconsModal extends Component {
 						<TextControl
 							placeholder={ __(
 								'Type to search icon',
-								'zoom-social-icons-widget'
+								'social-icons-widget-by-wpzoom'
 							) }
 							value={ this.state.modalSearch }
 							onChange={ this.searchTextControlHandler }
@@ -236,11 +236,11 @@ class SocialIconsModal extends Component {
 								className={ 'button-link-delete is-button' }
 								onClick={ () => this.props.delete() }
 							>
-								{ __( 'Delete Icon', 'zoom-social-icons-widget' ) }
+								{ __( 'Delete Icon', 'social-icons-widget-by-wpzoom' ) }
 							</Button>
 						) }
 						<Button isPrimary onClick={ () => this.props.save( this.state ) }>
-							{ __( 'Save', 'zoom-social-icons-widget' ) }
+							{ __( 'Save', 'social-icons-widget-by-wpzoom' ) }
 						</Button>
 					</div>
 				</div>

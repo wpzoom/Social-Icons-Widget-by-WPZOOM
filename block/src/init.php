@@ -110,7 +110,7 @@ function wpzoom_social_icons_block_add_custom_category( $categories ) {
 		array(
 			array(
 				'slug'  => 'wpzoom-blocks',
-				'title' => __( 'WPZOOM - Blocks', 'zoom-social-icons-widget' ),
+				'title' => __( 'WPZOOM - Blocks', 'social-icons-widget-by-wpzoom' ),
 			),
 		)
 	);

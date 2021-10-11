@@ -123,8 +123,8 @@ class WPZOOM_Social_Icons_Settings {
 	public function add_plugin_page() {
 		// This page will be under "Settings".
 		add_options_page(
-			__( 'Social Icons Widget By WPZOOM Settings Page', 'zoom-social-icons-widget' ),
-			__( 'Social Icons Widget', 'zoom-social-icons-widget' ),
+			__( 'Social Icons Widget By WPZOOM Settings Page', 'social-icons-widget-by-wpzoom' ),
+			__( 'Social Icons Widget', 'social-icons-widget-by-wpzoom' ),
 			'manage_options',
 			self::$menu_slug,
 			array( $this, 'create_admin_page' )
@@ -154,24 +154,24 @@ class WPZOOM_Social_Icons_Settings {
 
 		?>
 <div class="wrap zoom-social-icons-settings">
-	<h1><?php esc_html_e( 'Social Icons Widget & Block by WPZOOM', 'zoom-social-icons-widget' ); ?></h1>
+	<h1><?php esc_html_e( 'Social Icons Widget & Block by WPZOOM', 'social-icons-widget-by-wpzoom' ); ?></h1>
 
 	<div class="wpzoom-social-icons-settings-inner">
 		<div class="wp-filter">
 			<ul class="filter-links">
 				<li>
-					<a href="#font-styles"><?php esc_html_e( 'Icon Sets', 'zoom-social-icons-widget' ); ?></a>
+					<a href="#font-styles"><?php esc_html_e( 'Icon Sets', 'social-icons-widget-by-wpzoom' ); ?></a>
 				</li>
 
 				<li>
-					<a href="#font-preload"><?php esc_html_e( 'Optimization', 'zoom-social-icons-widget' ); ?></a>
+					<a href="#font-preload"><?php esc_html_e( 'Optimization', 'social-icons-widget-by-wpzoom' ); ?></a>
 				</li>
 				<li>
-					<a href="#general-tab"><?php esc_html_e( 'Misc.', 'zoom-social-icons-widget' ); ?></a>
+					<a href="#general-tab"><?php esc_html_e( 'Misc.', 'social-icons-widget-by-wpzoom' ); ?></a>
 				</li>
 
 				<li>
-					<a href="#upload-pro"><?php esc_html_e( 'Upload Icons', 'zoom-social-icons-widget' ); ?> <span>PRO</span></a>
+					<a href="#upload-pro"><?php esc_html_e( 'Upload Icons', 'social-icons-widget-by-wpzoom' ); ?> <span>PRO</span></a>
 				</li>
 			</ul>
 		</div>
@@ -289,7 +289,7 @@ class WPZOOM_Social_Icons_Settings {
 
 		add_settings_field(
 			'wpzoom-disable-social-icons-widget-checkbox',
-			__( 'Social Icons Widget', 'zoom-social-icons-widget' ),
+			__( 'Social Icons Widget', 'social-icons-widget-by-wpzoom' ),
 			array( $this, 'field_disable_widget_checkbox' ),
 			'wpzoom-social-icons-widget-settings-group-general',
 			'wpzoom-social-icons-widget-settings-general'
@@ -297,7 +297,7 @@ class WPZOOM_Social_Icons_Settings {
 
 		add_settings_field(
 			'wpzoom-disable-social-icons-block-checkbox',
-			__( 'Social Icons Block', 'zoom-social-icons-widget' ),
+			__( 'Social Icons Block', 'social-icons-widget-by-wpzoom' ),
 			array( $this, 'field_disable_block_checkbox' ),
 			'wpzoom-social-icons-widget-settings-group-general',
 			'wpzoom-social-icons-widget-settings-general'
@@ -332,7 +332,7 @@ class WPZOOM_Social_Icons_Settings {
 
 		add_settings_field(
 			'wpzoom-enable-social-icons-fonts-preloader',
-			__( 'Preload Fonts', 'zoom-social-icons-widget' ),
+			__( 'Preload Fonts', 'social-icons-widget-by-wpzoom' ),
 			array( $this, 'field_disable_fonts_preloading' ),
 			'wpzoom-social-icons-widget-settings-group-font-preload',
 			'wpzoom-social-icons-widget-settings-font-preload'
@@ -350,7 +350,7 @@ class WPZOOM_Social_Icons_Settings {
 
 		add_settings_field(
 			'wpzoom-disable-css-loading-for-academicons',
-			__( 'Academicons', 'zoom-social-icons-widget' ),
+			__( 'Academicons', 'social-icons-widget-by-wpzoom' ),
 			array( $this, 'field_disable_css_loading_for_academicons' ),
 			'wpzoom-social-icons-widget-settings-group-font-styles',
 			'wpzoom-social-icons-widget-settings-font-styles'
@@ -358,7 +358,7 @@ class WPZOOM_Social_Icons_Settings {
 
 		add_settings_field(
 			'wpzoom-disable-css-loading-for-font-awesome-3',
-			__( 'Font Awesome 3', 'zoom-social-icons-widget' ),
+			__( 'Font Awesome 3', 'social-icons-widget-by-wpzoom' ),
 			array( $this, 'field_disable_css_loading_for_font_awesome_3' ),
 			'wpzoom-social-icons-widget-settings-group-font-styles',
 			'wpzoom-social-icons-widget-settings-font-styles'
@@ -366,7 +366,7 @@ class WPZOOM_Social_Icons_Settings {
 
 		add_settings_field(
 			'wpzoom-disable-css-loading-for-font-awesome-5',
-			__( 'Font Awesome 5', 'zoom-social-icons-widget' ),
+			__( 'Font Awesome 5', 'social-icons-widget-by-wpzoom' ),
 			array( $this, 'field_disable_css_loading_for_font_awesome_5' ),
 			'wpzoom-social-icons-widget-settings-group-font-styles',
 			'wpzoom-social-icons-widget-settings-font-styles'
@@ -374,7 +374,7 @@ class WPZOOM_Social_Icons_Settings {
 
 		add_settings_field(
 			'wpzoom-disable-css-loading-for-font-genericons',
-			__( 'Genericons', 'zoom-social-icons-widget' ),
+			__( 'Genericons', 'social-icons-widget-by-wpzoom' ),
 			array( $this, 'field_disable_css_loading_for_genericons' ),
 			'wpzoom-social-icons-widget-settings-group-font-styles',
 			'wpzoom-social-icons-widget-settings-font-styles'
@@ -382,7 +382,7 @@ class WPZOOM_Social_Icons_Settings {
 
 		add_settings_field(
 			'wpzoom-disable-css-loading-for-font-dashicons',
-			__( 'Dashicons', 'zoom-social-icons-widget' ),
+			__( 'Dashicons', 'social-icons-widget-by-wpzoom' ),
 			array( $this, 'field_disable_css_loading_for_dashicons' ),
 			'wpzoom-social-icons-widget-settings-group-font-styles',
 			'wpzoom-social-icons-widget-settings-font-styles'
@@ -390,7 +390,7 @@ class WPZOOM_Social_Icons_Settings {
 
 		add_settings_field(
 			'wpzoom-disable-css-loading-for-font-socicons',
-			__( 'Socicons', 'zoom-social-icons-widget' ),
+			__( 'Socicons', 'social-icons-widget-by-wpzoom' ),
 			array( $this, 'field_disable_css_loading_for_socicons' ),
 			'wpzoom-social-icons-widget-settings-group-font-styles',
 			'wpzoom-social-icons-widget-settings-font-styles'
@@ -398,7 +398,7 @@ class WPZOOM_Social_Icons_Settings {
 
 		add_settings_field(
 			'wpzoom-categories-sync',
-			__( 'Sync Icon Sets', 'zoom-social-icons-widget' ),
+			__( 'Sync Icon Sets', 'social-icons-widget-by-wpzoom' ),
 			array( $this, 'field_categories_sync' ),
 			'wpzoom-social-icons-widget-settings-group-font-styles',
 			'wpzoom-social-icons-widget-settings-font-styles'
@@ -464,9 +464,9 @@ class WPZOOM_Social_Icons_Settings {
 <label>
 	<input type="hidden" name="wpzoom-social-icons-widget-settings[disable-widget]" value="0" />
 	<input type="checkbox" id="disable-widget" name="wpzoom-social-icons-widget-settings[disable-widget]" value="1" <?php checked( self::get_option_key( 'disable-widget' ), 1 ); ?> />
-		<?php esc_html_e( 'Disable', 'zoom-social-icons-widget' ); ?>
+		<?php esc_html_e( 'Disable', 'social-icons-widget-by-wpzoom' ); ?>
 </label>
-<span class="description"><?php esc_html_e( 'Social Icons Widget module functionality, by default enabled.', 'zoom-social-icons-widget' ); ?></span>
+<span class="description"><?php esc_html_e( 'Social Icons Widget module functionality, by default enabled.', 'social-icons-widget-by-wpzoom' ); ?></span>
 
 		<?php
 	}
@@ -479,9 +479,9 @@ class WPZOOM_Social_Icons_Settings {
 <label>
 	<input type="hidden" name="wpzoom-social-icons-widget-settings[disable-block]" value="0" />
 	<input type="checkbox" id="disable-block" name="wpzoom-social-icons-widget-settings[disable-block]" value="1" <?php checked( self::get_option_key( 'disable-block' ), 1 ); ?> />
-		<?php esc_html_e( 'Disable', 'zoom-social-icons-widget' ); ?>
+		<?php esc_html_e( 'Disable', 'social-icons-widget-by-wpzoom' ); ?>
 </label>
-<span class="description"><?php esc_html_e( 'Social Icons Block module functionality, by default enabled.', 'zoom-social-icons-widget' ); ?></span>
+<span class="description"><?php esc_html_e( 'Social Icons Block module functionality, by default enabled.', 'social-icons-widget-by-wpzoom' ); ?></span>
 
 		<?php
 	}
@@ -494,9 +494,9 @@ class WPZOOM_Social_Icons_Settings {
 <label>
 	<input type="hidden" name="wpzoom-social-icons-widget-settings[disable-fonts-preloading]" value="0" />
 	<input type="checkbox" id="disable-fonts-preloading" name="wpzoom-social-icons-widget-settings[disable-fonts-preloading]" value="1" <?php checked( self::get_option_key( 'disable-fonts-preloading' ), 1 ); ?> />
-		<?php esc_html_e( 'Enable', 'zoom-social-icons-widget' ); ?>
+		<?php esc_html_e( 'Enable', 'social-icons-widget-by-wpzoom' ); ?>
 </label>
-<span class="description"><?php esc_html_e( 'Preload web fonts using rel="preload" to remove any flash of unstyled text and improve the PageSpeed score.', 'zoom-social-icons-widget' ); ?></span>
+<span class="description"><?php esc_html_e( 'Preload web fonts using rel="preload" to remove any flash of unstyled text and improve the PageSpeed score.', 'social-icons-widget-by-wpzoom' ); ?></span>
 		<?php
 	}
 
@@ -508,7 +508,7 @@ class WPZOOM_Social_Icons_Settings {
 <label>
 	<input type="hidden" name="wpzoom-social-icons-widget-settings[disable-css-loading-for-academicons]" value="0" />
 	<input type="checkbox" id="disable-css-loading-for-academicons" name="wpzoom-social-icons-widget-settings[disable-css-loading-for-academicons]" value="1" <?php checked( self::get_option_key( 'disable-css-loading-for-academicons' ), 1 ); ?> />
-		<?php esc_html_e( 'Enable this font', 'zoom-social-icons-widget' ); ?>
+		<?php esc_html_e( 'Enable this font', 'social-icons-widget-by-wpzoom' ); ?>
 </label>
 		<?php
 	}
@@ -521,9 +521,9 @@ class WPZOOM_Social_Icons_Settings {
 <label>
 	<input type="hidden" name="wpzoom-social-icons-widget-settings[disable-css-loading-for-font-awesome-3]" value="0" />
 	<input type="checkbox" id="disable-css-loading-for-font-awesome-3" name="wpzoom-social-icons-widget-settings[disable-css-loading-for-font-awesome-3]" value="1" <?php checked( self::get_option_key( 'disable-css-loading-for-font-awesome-3' ), 1 ); ?> />
-		<?php esc_html_e( 'Enable this font', 'zoom-social-icons-widget' ); ?>
+		<?php esc_html_e( 'Enable this font', 'social-icons-widget-by-wpzoom' ); ?>
 </label>
-<span class="description"><?php esc_html_e( 'Font Awesome 3 is loaded only in the Social Icons Widget', 'zoom-social-icons-widget' ); ?></span>
+<span class="description"><?php esc_html_e( 'Font Awesome 3 is loaded only in the Social Icons Widget', 'social-icons-widget-by-wpzoom' ); ?></span>
 		<?php
 	}
 
@@ -535,9 +535,9 @@ class WPZOOM_Social_Icons_Settings {
 <label>
 	<input type="hidden" name="wpzoom-social-icons-widget-settings[disable-css-loading-for-font-awesome-5]" value="0" />
 	<input type="checkbox" id="disable-css-loading-for-font-awesome-5" name="wpzoom-social-icons-widget-settings[disable-css-loading-for-font-awesome-5]" value="1" <?php checked( self::get_option_key( 'disable-css-loading-for-font-awesome-5' ), 1 ); ?> />
-		<?php esc_html_e( 'Enable this font', 'zoom-social-icons-widget' ); ?>
+		<?php esc_html_e( 'Enable this font', 'social-icons-widget-by-wpzoom' ); ?>
 </label>
-<span class="description"><?php esc_html_e( 'Font Awesome 5 is loaded only in the Social Icons Block.', 'zoom-social-icons-widget' ); ?></span>
+<span class="description"><?php esc_html_e( 'Font Awesome 5 is loaded only in the Social Icons Block.', 'social-icons-widget-by-wpzoom' ); ?></span>
 		<?php
 	}
 
@@ -549,7 +549,7 @@ class WPZOOM_Social_Icons_Settings {
 <label>
 	<input type="hidden" name="wpzoom-social-icons-widget-settings[disable-css-loading-for-genericons]" value="0" />
 	<input type="checkbox" id="disable-css-loading-for-genericons" name="wpzoom-social-icons-widget-settings[disable-css-loading-for-genericons]" value="1" <?php checked( self::get_option_key( 'disable-css-loading-for-genericons' ), 1 ); ?> />
-		<?php esc_html_e( 'Enable this font', 'zoom-social-icons-widget' ); ?>
+		<?php esc_html_e( 'Enable this font', 'social-icons-widget-by-wpzoom' ); ?>
 </label>
 		<?php
 	}
@@ -562,7 +562,7 @@ class WPZOOM_Social_Icons_Settings {
 <label>
 	<input type="hidden" name="wpzoom-social-icons-widget-settings[disable-css-loading-for-dashicons]" value="0" />
 	<input type="checkbox" id="disable-css-loading-for-dashicons" name="wpzoom-social-icons-widget-settings[disable-css-loading-for-dashicons]" value="1" <?php checked( self::get_option_key( 'disable-css-loading-for-dashicons' ), 1 ); ?> />
-		<?php esc_html_e( 'Enable this font', 'zoom-social-icons-widget' ); ?>
+		<?php esc_html_e( 'Enable this font', 'social-icons-widget-by-wpzoom' ); ?>
 </label>
 		<?php
 	}
@@ -575,9 +575,9 @@ class WPZOOM_Social_Icons_Settings {
 <label>
 	<input type="hidden" name="wpzoom-social-icons-widget-settings[disable-css-loading-for-socicons]" value="0" />
 	<input type="checkbox" id="disable-css-loading-for-socicons" name="wpzoom-social-icons-widget-settings[disable-css-loading-for-socicons]" value="1" <?php checked( self::get_option_key( 'disable-css-loading-for-socicons' ), 1 ); ?> />
-		<?php esc_html_e( 'Enable this font', 'zoom-social-icons-widget' ); ?>
+		<?php esc_html_e( 'Enable this font', 'social-icons-widget-by-wpzoom' ); ?>
 </label>
-<span class="description"><?php esc_html_e( 'Main icon set', 'zoom-social-icons-widget' ); ?></span>
+<span class="description"><?php esc_html_e( 'Main icon set', 'social-icons-widget-by-wpzoom' ); ?></span>
 		<?php
 	}
 
@@ -589,9 +589,9 @@ class WPZOOM_Social_Icons_Settings {
 <label>
 	<input type="hidden" name="wpzoom-social-icons-widget-settings[categories-sync]" value="0" />
 	<input type="checkbox" id="categories-sync" name="wpzoom-social-icons-widget-settings[categories-sync]" value="1" <?php checked( self::get_option_key( 'categories-sync' ), 1 ); ?> />
-		<?php esc_html_e( 'Enable sync', 'zoom-social-icons-widget' ); ?>
+		<?php esc_html_e( 'Enable sync', 'social-icons-widget-by-wpzoom' ); ?>
 </label>
-<span class="description"><?php esc_html_e( 'Sync Icon sets with Block and Widget Settings from popup.', 'zoom-social-icons-widget' ); ?></span>
+<span class="description"><?php esc_html_e( 'Sync Icon sets with Block and Widget Settings from popup.', 'social-icons-widget-by-wpzoom' ); ?></span>
 		<?php
 	}
 
@@ -606,29 +606,29 @@ class WPZOOM_Social_Icons_Settings {
 <div class="wpz-pro-plugin-wrap">
 
 	<div class="wpz-pro-btn-wrap">
-		<a class="wpz-social-pro-btn" href="https://www.wpzoom.com/plugins/social-widget/?utm_source=wpadmin&utm_medium=website&utm_campaign=social_free_promotab" target="_blank"><?php esc_html_e( 'Get Social Icons Widget PRO', 'zoom-social-icons-widget' ); ?></a>
+		<a class="wpz-social-pro-btn" href="https://www.wpzoom.com/plugins/social-widget/?utm_source=wpadmin&utm_medium=website&utm_campaign=social_free_promotab" target="_blank"><?php esc_html_e( 'Get Social Icons Widget PRO', 'social-icons-widget-by-wpzoom' ); ?></a>
 	</div>
 
 
 	<table class="form-table wpz-section_disabled_pro" role="presentation">
 		<tbody>
 			<tr>
-				<th scope="row"><?php esc_html_e( 'Upload Icons', 'zoom-social-icons-widget' ); ?></th>
+				<th scope="row"><?php esc_html_e( 'Upload Icons', 'social-icons-widget-by-wpzoom' ); ?></th>
 				<td>
-					<p style="margin-bottom: 16px;"><?php esc_html_e( 'Upload your icons here and create a new Custom Icons set', 'zoom-social-icons-widget' ); ?></p>
+					<p style="margin-bottom: 16px;"><?php esc_html_e( 'Upload your icons here and create a new Custom Icons set', 'social-icons-widget-by-wpzoom' ); ?></p>
 
-					<div class="zoom-instagram-user-avatar-media-uploader" data-type="image" data-button-add-text="<?php esc_html_e( 'Upload an SVG icon', 'zoom-social-icons-widget' ); ?>" data-button-replace-text="Replace SVG icon">
-						<a href="#" class="button add-media" title="<?php esc_html_e( 'Upload SVG icon', 'zoom-social-icons-widget' ); ?>"><?php esc_html_e( 'Upload an SVG icon', 'zoom-social-icons-widget' ); ?></a>
+					<div class="zoom-instagram-user-avatar-media-uploader" data-type="image" data-button-add-text="<?php esc_html_e( 'Upload an SVG icon', 'social-icons-widget-by-wpzoom' ); ?>" data-button-replace-text="Replace SVG icon">
+						<a href="#" class="button add-media" title="<?php esc_html_e( 'Upload SVG icon', 'social-icons-widget-by-wpzoom' ); ?>"><?php esc_html_e( 'Upload an SVG icon', 'social-icons-widget-by-wpzoom' ); ?></a>
 
 						<div class="file-wrapper custom-icon__list" style="display: none;"></div>
 
-						<button type="button" class="remove-avatar button-link delete-attachment" style="display: none;"><?php esc_html_e( 'Remove Icon', 'zoom-social-icons-widget' ); ?></button>
+						<button type="button" class="remove-avatar button-link delete-attachment" style="display: none;"><?php esc_html_e( 'Remove Icon', 'social-icons-widget-by-wpzoom' ); ?></button>
 
 						<input class="attachment-url-input" type="hidden" name="wpzoom-custom-icon[attachment-url]">
 						<input class="attachment-title-input" type="hidden" name="wpzoom-custom-icon[attachment-title]">
 					</div>
 					<div class="add-to-custom-iconset" id="add-to-custom-iconset">
-						<p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="<?php esc_html_e( 'Add icon to set', 'zoom-social-icons-widget' ); ?>"></p>
+						<p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="<?php esc_html_e( 'Add icon to set', 'social-icons-widget-by-wpzoom' ); ?>"></p>
 					</div>
 
 					<div class="modal-icons-wrapper" style="margin-top: 1em;">
@@ -644,7 +644,7 @@ class WPZOOM_Social_Icons_Settings {
 								</div>
 								<label>
 									<input type="checkbox" name="remove[]" value="0">
-									<?php esc_html_e( 'Remove', 'zoom-social-icons-widget' ); ?>
+									<?php esc_html_e( 'Remove', 'social-icons-widget-by-wpzoom' ); ?>
 								</label>
 							</div>
 							<p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="update"></p>
@@ -660,7 +660,7 @@ class WPZOOM_Social_Icons_Settings {
 								</div>
 								<label>
 									<input type="checkbox" name="remove[]" value="1">
-									<?php esc_html_e( 'Remove', 'zoom-social-icons-widget' ); ?>
+									<?php esc_html_e( 'Remove', 'social-icons-widget-by-wpzoom' ); ?>
 								</label>
 							</div>
 							<p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="update"></p>
@@ -676,7 +676,7 @@ class WPZOOM_Social_Icons_Settings {
 								</div>
 								<label>
 									<input type="checkbox" name="remove[]" value="2">
-									<?php esc_html_e( 'Remove', 'zoom-social-icons-widget' ); ?>
+									<?php esc_html_e( 'Remove', 'social-icons-widget-by-wpzoom' ); ?>
 								</label>
 							</div>
 							<p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="update"></p>
@@ -692,7 +692,7 @@ class WPZOOM_Social_Icons_Settings {
 								</div>
 								<label>
 									<input type="checkbox" name="remove[]" value="3">
-									<?php esc_html_e( 'Remove', 'zoom-social-icons-widget' ); ?>
+									<?php esc_html_e( 'Remove', 'social-icons-widget-by-wpzoom' ); ?>
 								</label>
 							</div>
 							<p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="update"></p>
@@ -708,7 +708,7 @@ class WPZOOM_Social_Icons_Settings {
 								</div>
 								<label>
 									<input type="checkbox" name="remove[]" value="4">
-									<?php esc_html_e( 'Remove', 'zoom-social-icons-widget' ); ?>
+									<?php esc_html_e( 'Remove', 'social-icons-widget-by-wpzoom' ); ?>
 								</label>
 							</div>
 							<p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="update"></p>

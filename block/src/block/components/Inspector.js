@@ -57,21 +57,21 @@ export default class Inspector extends Component {
 	render() {
 		const colors = [
 			{
-				name: __( 'Turquoise', 'zoom-social-icons-widget' ),
+				name: __( 'Turquoise', 'social-icons-widget-by-wpzoom' ),
 				color: '#4ECDC4',
 			},
 			{
-				name: __( 'Charcoal', 'zoom-social-icons-widget' ),
+				name: __( 'Charcoal', 'social-icons-widget-by-wpzoom' ),
 				color: '#2E3131',
 			},
-			{ name: __( 'White', 'zoom-social-icons-widget' ), color: '#fff' },
+			{ name: __( 'White', 'social-icons-widget-by-wpzoom' ), color: '#fff' },
 			{
-				name: __( 'Dodger blue', 'zoom-social-icons-widget' ),
+				name: __( 'Dodger blue', 'social-icons-widget-by-wpzoom' ),
 				color: '#22A7F0',
 			},
-			{ name: __( 'Red', 'zoom-social-icons-widget' ), color: '#D91E18' },
+			{ name: __( 'Red', 'social-icons-widget-by-wpzoom' ), color: '#D91E18' },
 			{
-				name: __( 'Orange', 'zoom-social-icons-widget' ),
+				name: __( 'Orange', 'social-icons-widget-by-wpzoom' ),
 				color: '#F89406',
 			},
 		];
@@ -89,21 +89,21 @@ export default class Inspector extends Component {
 				<PanelBody
 					title={ __(
 						'Icon Labels Settings',
-						'zoom-social-icons-widget'
+						'social-icons-widget-by-wpzoom'
 					) }
 				>
 					<PanelRow>
 						<label htmlFor="show-icon-labels">
 							{ __(
 								' Show icon labels?',
-								'zoom-social-icons-widget'
+								'social-icons-widget-by-wpzoom'
 							) }
 						</label>
 						<FormToggle
 							id="show-icon-labels"
 							label={ __(
 								' Show icon labels?',
-								'zoom-social-icons-widget'
+								'social-icons-widget-by-wpzoom'
 							) }
 							checked={ this.props.attributes.showIconsLabel }
 							onChange={ () => {
@@ -118,14 +118,14 @@ export default class Inspector extends Component {
 						<label htmlFor="open-link-in-new-tab">
 							{ __(
 								'Open links in new tab?',
-								'zoom-social-icons-widget'
+								'social-icons-widget-by-wpzoom'
 							) }
 						</label>
 						<FormToggle
 							id="open-link-in-new-tab"
 							label={ __(
 								'Open links in new tab?',
-								'zoom-social-icons-widget'
+								'social-icons-widget-by-wpzoom'
 							) }
 							checked={ this.props.attributes.openLinkInNewTab }
 							onChange={ () => {
@@ -142,14 +142,14 @@ export default class Inspector extends Component {
 								<label htmlFor="add-nofollow-to-links">
 									{ __(
 										'Add rel="nofollow" to links',
-										'zoom-social-icons-widget'
+										'social-icons-widget-by-wpzoom'
 									) }
 								</label>
 								<FormToggle
 									id="add-nofollow-to-links"
 									label={ __(
 										'Add rel="nofollow" to links',
-										'zoom-social-icons-widget'
+										'social-icons-widget-by-wpzoom'
 									) }
 									checked={ this.props.attributes.nofollow }
 									onChange={ () => {
@@ -164,14 +164,14 @@ export default class Inspector extends Component {
 								<label htmlFor="add-noreferrer-to-links">
 									{ __(
 										'Add rel="noreferrer" to links',
-										'zoom-social-icons-widget'
+										'social-icons-widget-by-wpzoom'
 									) }
 								</label>
 								<FormToggle
 									id="add-noreferrer-to-links"
 									label={ __(
 										'Add rel="noreferrer" to links',
-										'zoom-social-icons-widget'
+										'social-icons-widget-by-wpzoom'
 									) }
 									checked={ this.props.attributes.noreferrer }
 									onChange={ () => {
@@ -186,14 +186,14 @@ export default class Inspector extends Component {
 								<label htmlFor="add-noopener-to-links">
 									{ __(
 										'Add rel="noopener" to links',
-										'zoom-social-icons-widget'
+										'social-icons-widget-by-wpzoom'
 									) }
 								</label>
 								<FormToggle
 									id="add-noopener-to-links"
 									label={ __(
 										'Add rel="noopener" to links',
-										'zoom-social-icons-widget'
+										'social-icons-widget-by-wpzoom'
 									) }
 									checked={ this.props.attributes.noopener }
 									onChange={ () => {
@@ -210,7 +210,7 @@ export default class Inspector extends Component {
 				<PanelBody
 					title={ __(
 						'Icon Styling Settings',
-						'zoom-social-icons-widget'
+						'social-icons-widget-by-wpzoom'
 					) }
 				>
 					{ this.props.attributes.iconsHasBorder ? (
@@ -219,7 +219,7 @@ export default class Inspector extends Component {
 								<label htmlFor="icons-border-radius">
 									{ __(
 										'Icons Border Radius:',
-										'zoom-social-icons-widget'
+										'social-icons-widget-by-wpzoom'
 									) }
 								</label>
 							</PanelRow>
@@ -242,7 +242,7 @@ export default class Inspector extends Component {
 					) : null }
 					<PanelRow>
 						<label htmlFor="add-noopener-to-links">
-							{ __( 'Icons Alignment:', 'zoom-social-icons-widget' ) }
+							{ __( 'Icons Alignment:', 'social-icons-widget-by-wpzoom' ) }
 						</label>
 					</PanelRow>
 					<PanelRow>
@@ -272,7 +272,7 @@ export default class Inspector extends Component {
 					</PanelRow>
 					<PanelRow>
 						<label htmlFor="icons-font-size">
-							{ __( 'Icons Font Size:', 'zoom-social-icons-widget' ) }
+							{ __( 'Icons Font Size:', 'social-icons-widget-by-wpzoom' ) }
 						</label>
 					</PanelRow>
 					<PanelRow>
@@ -292,7 +292,7 @@ export default class Inspector extends Component {
 								<label htmlFor="icons-label-font-size">
 									{ __(
 										'Icons Label Font Size:',
-										'zoom-social-icons-widget'
+										'social-icons-widget-by-wpzoom'
 									) }
 								</label>
 							</PanelRow>
@@ -318,7 +318,7 @@ export default class Inspector extends Component {
 						<label htmlFor="icons-padding">
 							{ __(
 								'Icons Padding Horizontal:',
-								'zoom-social-icons-widget'
+								'social-icons-widget-by-wpzoom'
 							) }
 						</label>
 					</PanelRow>
@@ -340,7 +340,7 @@ export default class Inspector extends Component {
 						<label htmlFor="icons-padding">
 							{ __(
 								'Icons Padding Vertical:',
-								'zoom-social-icons-widget'
+								'social-icons-widget-by-wpzoom'
 							) }
 						</label>
 					</PanelRow>
@@ -360,7 +360,7 @@ export default class Inspector extends Component {
 						<label htmlFor="icons-margin-horizontal">
 							{ __(
 								'Icons Margin Horizontal:',
-								'zoom-social-icons-widget'
+								'social-icons-widget-by-wpzoom'
 							) }
 						</label>
 					</PanelRow>
@@ -380,7 +380,7 @@ export default class Inspector extends Component {
 						<label htmlFor="icons-margin-vertical">
 							{ __(
 								'Icons Margin Vertical:',
-								'zoom-social-icons-widget'
+								'social-icons-widget-by-wpzoom'
 							) }
 						</label>
 					</PanelRow>
@@ -400,14 +400,14 @@ export default class Inspector extends Component {
 				<PanelBody
 					title={ __(
 						'Icon Color Settings',
-						'zoom-social-icons-widget'
+						'social-icons-widget-by-wpzoom'
 					) }
 				>
 					<PanelRow>
 						<label htmlFor="icon-color">
 							{ __(
 								'Set color for all icons',
-								'zoom-social-icons-widget'
+								'social-icons-widget-by-wpzoom'
 							) }
 						</label>
 						<ColorIndicator
@@ -446,7 +446,7 @@ export default class Inspector extends Component {
 						<label htmlFor="icon-hover-color">
 							{ __(
 								'Set hover color for all icons',
-								'zoom-social-icons-widget'
+								'social-icons-widget-by-wpzoom'
 							) }
 						</label>
 						<ColorIndicator
@@ -485,7 +485,7 @@ export default class Inspector extends Component {
 								<label htmlFor="icon-label-color">
 									{ __(
 										'Set color for all label icons',
-										'zoom-social-icons-widget'
+										'social-icons-widget-by-wpzoom'
 									) }
 								</label>
 								<ColorIndicator
@@ -512,7 +512,7 @@ export default class Inspector extends Component {
 								<label htmlFor="icon-hover-label-color">
 									{ __(
 										'Set hover color for all label icons',
-										'zoom-social-icons-widget'
+										'social-icons-widget-by-wpzoom'
 									) }
 								</label>
 								<ColorIndicator
