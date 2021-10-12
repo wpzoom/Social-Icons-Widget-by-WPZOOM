@@ -72,7 +72,7 @@ const TransformToBlock = ( { clientId, attributes, widgetId } ) => {
 		if ( isConvertRun ) {
 			createInfoNotice(
 				__(
-					'Convert process is started. Please wait…',
+					'Converting process is starting. Please wait…',
 					'social-icons-widget-by-wpzoom'
 				),
 				{
