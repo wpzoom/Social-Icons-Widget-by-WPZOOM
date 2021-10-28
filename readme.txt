@@ -133,11 +133,9 @@ After that go to the **Widgets** page and add the widget **Social Icons by WPZOO
 
 On our [website](http://www.wpzoom.com/plugins/social-widget/).
 
-= Can I insert the Widget as a Shortcode in a Page? =
+= How can I add Social Icons to a Page? =
 
-Yes, using the [Widget Shortcode](https://wordpress.org/plugins/widget-shortcode/) plugin you can generate a shortcode for each Social Icons widget and insert the shortcode in posts or pages where you need it.
-You can also create a hidden widget area using a plugin like Custom Sidebars if you don’t want to add the widget in a sidebar to be visible.
-
+Add the Social Icons Block to the editor and customize the icons as you want.
 
 == Screenshots ==
 
