@@ -922,7 +922,7 @@ return array(
 			'category' => array(
 				'audio',
 			),
-			'color'    => '#7bb342',
+			'color'    => '#1DB954',
 		),
 		array(
 			'icon'     => 'ssrn',
