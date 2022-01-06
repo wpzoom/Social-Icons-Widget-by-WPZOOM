@@ -103,7 +103,7 @@ return array(
 			'category' => array(
 				'music',
 			),
-			'color'    => '#94d500',
+			'color'    => '#01FF95',
 		),
 		array(
 			'icon'     => 'bebo',

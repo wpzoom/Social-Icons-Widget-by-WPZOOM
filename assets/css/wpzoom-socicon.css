@@ -153,12 +153,12 @@
 }
 
 .socicon-beatport {
-    background-color: #94d500;
-    color: #94d500;
+    background-color: #01FF95;
+    color: #01FF95;
 }
 
 .social-icon.socicon-beatport:before {
-    content: "\e955"
+    content: "\e944"
 }
 
 .socicon-bebo {
@@ -1158,7 +1158,7 @@
 }
 
 .social-icon.socicon-spotify:before {
-    content: "\e04e"
+    content: "\e945"
 }
 
 .socicon-ssrn {
