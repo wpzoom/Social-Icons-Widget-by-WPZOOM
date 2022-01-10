@@ -53,6 +53,15 @@
     content: "\e00e"
 }
 
+.socicon-amazon {
+    background-color: #FF9900;
+    color: #FF9900;
+}
+
+.social-icon.socicon-amazon:before {
+    content: "\e05c"
+}
+
 .socicon-anchor {
     background-color: #8940fa;
     color: #8940fa;

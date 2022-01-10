@@ -21,6 +21,13 @@ return array(
 			),
 			'color'    => '#FF5A5F',
 		),
+        array(
+            'icon'     => 'amazon',
+            'category' => array(
+                'ecommerce',
+            ),
+            'color'    => '#FF9900',
+        ),
 		array(
 			'icon'     => 'anchor',
 			'category' => array(
