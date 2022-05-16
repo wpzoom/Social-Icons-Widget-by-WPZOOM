@@ -45,6 +45,10 @@ class Save extends Component {
 		if ( Helper.getBlockStyle( className ) == null ) {
 			className = classnames( className, 'is-style-with-canvas-round' );
 		}
+		if( attributes.showIconsLabel ) {
+			className = classnames( className, 'show-icon-labels-style' );
+		}
+
 
 		const IconsList = attributes.selectedIcons.map( ( list, key ) => {
 			const showIconsLabel = attributes.showIconsLabel ? (
@@ -60,6 +64,7 @@ class Save extends Component {
 					key={ key }
 					href={ list.url }
 					className={ 'social-icon-link' }
+					title={ list.label }
 					target={ attributes.openLinkInNewTab ? '_blank' : undefined }
 					rel={ relAttr.length ? relAttr.join( ' ' ) : undefined }
 					style={ {

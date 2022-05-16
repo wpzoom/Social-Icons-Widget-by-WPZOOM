@@ -11,6 +11,10 @@
   flex-flow: row wrap;
   justify-content: var(--wpz-social-icons-alignment);
 
+  &.show-icon-labels-style {
+	display: grid;
+  }
+
   a.social-icon-link {
     text-decoration: none !important;
     box-shadow: none;

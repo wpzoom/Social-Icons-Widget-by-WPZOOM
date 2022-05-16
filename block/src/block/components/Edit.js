@@ -606,6 +606,9 @@ class Edit extends Component {
 		if ( Helper.getBlockStyle( className ) === null ) {
 			className = classnames( className, 'is-style-with-canvas-round' );
 		}
+		if( attributes.showIconsLabel ) {
+			className = classnames( className, 'show-icon-labels-style' );
+		}
 
 		const IconsList = attributes.selectedIcons.map( ( list, key ) => {
 			const showIconsLabel = attributes.showIconsLabel ? (
@@ -628,6 +631,7 @@ class Edit extends Component {
 							attributes.openLinkInNewTab ? '_blank' : undefined
 						}
 						rel={ relAttr.length ? relAttr.join( ' ' ) : undefined }
+						title={ list.label }
 						style={ {
 							'--wpz-social-icons-block-item-color': list.color,
 							'--wpz-social-icons-block-item-color-hover':
