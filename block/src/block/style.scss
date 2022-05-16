@@ -11,7 +11,7 @@
   flex-flow: row wrap;
   justify-content: var(--wpz-social-icons-alignment);
 
-  &.show-icon-labels-style {
+  &:not(.is-style-with-label-canvas-rounded):not(.is-style-without-canvas-with-label).show-icon-labels-style {
 	display: grid;
   }
 
