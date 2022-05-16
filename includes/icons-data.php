@@ -235,6 +235,13 @@ return array(
 			),
 			'color'    => '#7289da',
 		),
+        array(
+            'icon'     => 'discourse',
+            'category' => array(
+                'chat',
+            ),
+            'color'    => '#000',
+        ),
 		array(
 			'icon'     => 'disqus',
 			'category' => array(
@@ -885,7 +892,7 @@ return array(
 			'category' => array(
 				'communication',
 			),
-			'color'    => '#4B6BC6',
+			'color'    => '#4A154B',
 		),
 		array(
 			'icon'     => 'slideshare',

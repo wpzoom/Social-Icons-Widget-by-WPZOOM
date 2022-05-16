@@ -323,6 +323,15 @@
     content: "\e079";
 }
 
+.socicon-discourse{
+    background-color: #000;
+    color: #000;
+}
+
+.social-icon.socicon-discourse:before {
+    content: "\e947";
+}
+
 .socicon-disqus {
     background-color: #2e9fff;
     color: #2e9fff;
@@ -1108,12 +1117,12 @@
 }
 
 .socicon-slack {
-    background-color: #4B6BC6;
-    color: #4B6BC6;
+    background-color: #4A154B;
+    color: #4A154B;
 }
 
 .social-icon.socicon-slack:before {
-    content: "\e918"
+    content: "\e946"
 }
 
 .socicon-slideshare {

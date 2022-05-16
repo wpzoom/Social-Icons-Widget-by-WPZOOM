@@ -1236,7 +1236,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			}
 			?>
 	<li class="zoom-social_icons-list__item">
-		<a class="zoom-social_icons-list__link" href="<?php echo esc_url( $url ); ?>" <?php echo( 'true' === $instance['open_new_tab'] ? 'target="_blank"' : '' ); ?> <?php echo( strlen( $rel_tag ) > 0 ? 'rel="' . esc_attr( $rel_tag ) . '"' : '' ); ?>>
+		<a class="zoom-social_icons-list__link" href="<?php echo esc_url( $url ); ?>" <?php echo( 'true' === $instance['open_new_tab'] ? 'target="_blank"' : '' ); ?> title="<?php echo esc_html( $field['label'] ); ?>" <?php echo( strlen( $rel_tag ) > 0 ? 'rel="' . esc_attr( $rel_tag ) . '"' : '' ); ?>>
 			<?php
 			if ( ! empty( $field['icon'] ) && ! empty( $field['icon_kit'] ) && ! empty( $field['color_picker'] ) ) {
 				$class = $field['icon_kit'] . ' ' . $field['icon_kit'] . '-' . $field['icon'];

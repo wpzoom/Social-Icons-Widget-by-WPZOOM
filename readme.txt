@@ -3,9 +3,9 @@ Contributors: WPZOOM, nvartolomei, ciorici
 Donate link: https://www.wpzoom.com/
 Tags: social icons, social networks, social media, social media icons, icons, social profiles, social widget, widget, block, social block, block icons, academicons, elementor, social networking, sharing, share buttons, fontawesome
 Requires at least: 5.2
-Requires PHP: 5.6
-Tested up to: 5.8
-Stable tag: 4.2.4
+Requires PHP: 7.2
+Tested up to: 5.9
+Stable tag: 4.2.5
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -149,6 +149,11 @@ Add the Social Icons Block to the editor and customize the icons as you want.
 8. Widget Settings
 
 == Changelog ==
+
+= 4.2.5 =
+* New icon: Discourse
+* Updated icon: Slack
+* Minor improvements
 
 = 4.2.4 =
 * Bug fix with the Amazon icon
