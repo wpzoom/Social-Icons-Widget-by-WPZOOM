@@ -105,15 +105,19 @@ add_action( 'init', 'wpzoom_social_icons_block_enqueue_assets' );
  * @return array Filters the default array of categories for block types.
  */
 function wpzoom_social_icons_block_add_custom_category( $categories ) {
-	return array_merge(
-		$categories,
-		array(
+	if ( empty( $categories ) || ( ! empty( $categories ) && is_array( $categories ) && ! in_array( 'wpzoom-blocks', wp_list_pluck( $categories, 'slug' ) ) ) ) {
+		$categories = array_merge(
+			$categories,
 			array(
-				'slug'  => 'wpzoom-blocks',
-				'title' => __( 'WPZOOM - Blocks', 'social-icons-widget-by-wpzoom' ),
-			),
-		)
-	);
+				array(
+					'slug'  => 'wpzoom-blocks',
+					'title' => __( 'WPZOOM - Blocks', 'social-icons-widget-by-wpzoom' ),
+				),
+			)
+		);
+	}
+
+	return $categories;
 }
 
 /**
