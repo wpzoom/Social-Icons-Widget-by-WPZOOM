@@ -149,6 +149,10 @@ Add the Social Icons Block to the editor and customize the icons as you want.
 
 == Changelog ==
 
+= 4.2.7 =
+* New icons: IMDb, Spotlight
+* Minor bug fix
+
 = 4.2.6 =
 * Multiple fixes for WordPress 6.0 compatibility
 
