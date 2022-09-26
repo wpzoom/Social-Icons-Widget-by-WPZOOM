@@ -64,7 +64,7 @@ Social Icons Widget & Block helps adding icons with links to social media profil
 
 = What's new in 2.0 =
 
-* Support for custom icons
+* New custom icons
 * Color picker for each icon
 * 3 Icon Sets from which you can choose more than 400 icons
 
