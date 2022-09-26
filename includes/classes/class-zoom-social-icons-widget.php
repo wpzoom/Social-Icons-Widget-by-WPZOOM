@@ -1141,7 +1141,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		return array(
 			array(
 				'url'                => '',
-				'label'              => __( 'Default Label', 'social-icons-widget-by-wpzoom' ),
+				'label'              => '',
 				'icon'               => 'wordpress',
 				'icon_kit'           => 'socicon',
 				'color_picker'       => '#1e73be',
