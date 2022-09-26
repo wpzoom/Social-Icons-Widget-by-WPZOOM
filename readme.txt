@@ -5,7 +5,7 @@ Tags: social icons, social networks, social media, social media icons, icons, so
 Requires at least: 5.2
 Requires PHP: 7.2
 Tested up to: 6.0
-Stable tag: 4.2.6
+Stable tag: 4.2.7
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -102,13 +102,12 @@ You can view the widget live in all our themes at [WPZOOM](https://www.wpzoom.co
 
 = Icons =
 
-Icons are provided by [socicon](http://www.socicon.com) icon font.
 
 Twitter, Facebook, Google+, Instagram, Pinterest, Snapchat, Skype, Yelp, Feedburner, LinkedIn, Bloglovin', Lookbook, Feedly, Periscope, SoundCloud, Spotify, Last.fm, YouTube, Vimeo, Vine, Flickr, 500px, Tumblr, Blogger, Reddit, Dribbble, Envato, Behance, DeviantArt, GitHub, RSS, Disqus, Stackoverflow, Komoot, Tiktok, Mailchimp, Podcasts, Telegram and many others.
 
 = Credits =
 
-Social Icons are provided by [socicon](http://www.socicon.com) icon font.
+Some Social Icons are provided by the Socicon icon font.
 
 [Academicons](https://jpswalsh.github.io/academicons/) are provided by James Walsh.
 
