@@ -499,6 +499,13 @@ return array(
 			),
 			'color'    => '#C6002B',
 		),
+        array(
+            'icon'     => 'imdb',
+            'category' => array(
+                'social',
+            ),
+            'color'    => '#F5C518',
+        ),
 		array(
 			'icon'     => 'instagram',
 			'category' => array(
@@ -938,6 +945,13 @@ return array(
 			),
 			'color'    => '#1DB954',
 		),
+        array(
+            'icon'     => 'spotlight',
+            'category' => array(
+                'movie',
+            ),
+            'color'    => '#352A71',
+        ),
 		array(
 			'icon'     => 'ssrn',
 			'category' => array(

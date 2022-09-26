@@ -647,6 +647,15 @@
     content: "\e930"
 }
 
+.socicon-imdb {
+    background-color: #F5C518;
+    color: #F5C518;
+}
+
+.social-icon.socicon-imdb:before {
+    content: "\e064"
+}
+
 .socicon-instagram {
     background-color: #E4405F;
     color: #E4405F;
@@ -1177,6 +1186,15 @@
 
 .social-icon.socicon-spotify:before {
     content: "\e945"
+}
+
+.socicon-spotlight{
+    background-color: #352A71;
+    color: #352A71;
+}
+
+.social-icon.socicon-spotlight:before {
+    content: "\e948"
 }
 
 .socicon-ssrn {
