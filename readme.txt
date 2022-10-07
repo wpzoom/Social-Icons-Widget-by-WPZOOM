@@ -5,7 +5,7 @@ Tags: social icons, social networks, social media, social media icons, icons, so
 Requires at least: 5.2
 Requires PHP: 7.2
 Tested up to: 6.0
-Stable tag: 4.2.7
+Stable tag: 4.2.8
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,8 +37,6 @@ Social Icons Widget & Block helps adding icons with links to social media profil
 * and many new features coming soon!
 
 ⭐️ **[Get the PRO version!](https://www.wpzoom.com/plugins/social-widget/?utm_source=wporg&utm_medium=website&utm_campaign=free_description)** ⭐️
-
-
 
 = What's new in 4.0.0 =
 * **NEW: Gutenberg Block**
@@ -102,7 +100,6 @@ You can view the widget live in all our themes at [WPZOOM](https://www.wpzoom.co
 
 = Icons =
 
-
 Twitter, Facebook, Google+, Instagram, Pinterest, Snapchat, Skype, Yelp, Feedburner, LinkedIn, Bloglovin', Lookbook, Feedly, Periscope, SoundCloud, Spotify, Last.fm, YouTube, Vimeo, Vine, Flickr, 500px, Tumblr, Blogger, Reddit, Dribbble, Envato, Behance, DeviantArt, GitHub, RSS, Disqus, Stackoverflow, Komoot, Tiktok, Mailchimp, Podcasts, Telegram and many others.
 
 = Credits =
@@ -148,6 +145,9 @@ Add the Social Icons Block to the editor and customize the icons as you want.
 8. Widget Settings
 
 == Changelog ==
+
+= 4.2.8 =
+* Updating Academicons set to the latest version with new icons
 
 = 4.2.7 =
 * New icons: IMDb, Spotlight

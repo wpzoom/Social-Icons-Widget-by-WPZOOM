@@ -3756,162 +3756,576 @@ return array(
 			),
 			'icon'     => 'academia',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'academia-square',
+        ),
 		array(
 			'category' => array(
 				'',
 			),
 			'icon'     => 'acclaim',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'acclaim-square',
+        ),
 		array(
 			'category' => array(
 				'',
 			),
 			'icon'     => 'acm',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'acm-square',
+        ),
 		array(
 			'category' => array(
 				'',
 			),
 			'icon'     => 'acmdl',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'acmdl-square',
+        ),
 		array(
 			'category' => array(
 				'',
 			),
 			'icon'     => 'ads',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'ads-square',
+        ),
 		array(
 			'category' => array(
 				'',
 			),
-			'icon'     => 'arxiv',
+			'icon'     => 'africarxiv',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'africarxiv-square',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'archive',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'archive-square',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'arxiv',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'arxiv-square',
+        ),
 		array(
 			'category' => array(
 				'',
 			),
 			'icon'     => 'biorxiv',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'biorxiv-square',
+        ),
 		array(
 			'category' => array(
 				'',
 			),
 			'icon'     => 'ceur',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'ceur-square',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'ciencia-vitae',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'ciencia-vitae-square',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'closed-access',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'closed-access-square',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'conversation',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'conversation-square',
+        ),
 		array(
 			'category' => array(
 				'',
 			),
 			'icon'     => 'coursera',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'coursera-square',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'crossref',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'crossref-square',
+        ),
 		array(
 			'category' => array(
 				'',
 			),
 			'icon'     => 'cv',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'cv-square',
+        ),
+                array(
+                    'category' => array(
+                        '',
+                    ),
+                    'icon'     => 'datacite',
+                ),
+                array(
+                    'category' => array(
+                        '',
+                    ),
+                    'icon'     => 'datacite-square',
+                ),
 		array(
 			'category' => array(
 				'',
 			),
 			'icon'     => 'dataverse',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'dataverse-square',
+        ),
 		array(
 			'category' => array(
 				'',
 			),
 			'icon'     => 'dblp',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'dblp-square',
+        ),
 		array(
 			'category' => array(
 				'',
 			),
 			'icon'     => 'depsy',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'depsy-square',
+        ),
 		array(
 			'category' => array(
 				'',
 			),
 			'icon'     => 'doi',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'doi-square',
+        ),
 		array(
 			'category' => array(
 				'',
 			),
 			'icon'     => 'dryad',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'dryad-square',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'elsevier',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'elsevier-square',
+        ),
 		array(
 			'category' => array(
 				'',
 			),
 			'icon'     => 'figshare',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'figshare-square',
+        ),
 		array(
 			'category' => array(
 				'',
 			),
 			'icon'     => 'google-scholar',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'google-scholar-square',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'hal',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'hal-square',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'hypothesis',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'hypothesis-square',
+        ),
 		array(
 			'category' => array(
 				'',
 			),
 			'icon'     => 'ideas-repec',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'ideas-repec-square',
+        ),
 		array(
 			'category' => array(
 				'',
 			),
 			'icon'     => 'ieee',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'ieee-square',
+        ),
 		array(
 			'category' => array(
 				'',
 			),
 			'icon'     => 'impactstory',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'impactstory-square',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'inaturalist',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'inaturalist-square',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'inpn',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'inpn-square',
+        ),
 		array(
 			'category' => array(
 				'',
 			),
 			'icon'     => 'inspire',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'inspire-square',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'isidore',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'isidore-square',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'jstor',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'jstor-square',
+        ),
 		array(
 			'category' => array(
 				'',
 			),
 			'icon'     => 'lattes',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'lattes-square',
+        ),
 		array(
 			'category' => array(
 				'',
 			),
 			'icon'     => 'mathoverflow',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'mathoverflow-square',
+        ),
 		array(
 			'category' => array(
 				'',
 			),
 			'icon'     => 'mendeley',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'mendeley-square',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'moodle',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'moodle-square',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'mtmt',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'mtmt-square',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'nakala',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'nakala-square',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'obp',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'obp-square',
+        ),
 		array(
 			'category' => array(
 				'',
 			),
 			'icon'     => 'open-access',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'open-access-square',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'open-data',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'open-data-square',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'open-materials',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'open-materials-square',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'openedition',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'openedition-square',
+        ),
 		array(
 			'category' => array(
 				'',
 			),
 			'icon'     => 'orcid',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'orcid-square',
+        ),
 		array(
 			'category' => array(
 				'',
 			),
 			'icon'     => 'osf',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'osf-square',
+        ),
 		array(
 			'category' => array(
 				'',
@@ -3930,6 +4344,24 @@ return array(
 			),
 			'icon'     => 'piazza',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'preregistered',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'protocols',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'psyarxiv',
+        ),
 		array(
 			'category' => array(
 				'',
@@ -3948,6 +4380,12 @@ return array(
 			),
 			'icon'     => 'publons',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'pubpeer',
+        ),
 		array(
 			'category' => array(
 				'',
@@ -3960,12 +4398,42 @@ return array(
 			),
 			'icon'     => 'researcherid',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'researchgate',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'ror',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'sci-hub',
+        ),
 		array(
 			'category' => array(
 				'',
 			),
 			'icon'     => 'scirate',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'scopus',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'scopus-square',
+        ),
 		array(
 			'category' => array(
 				'',
@@ -3978,6 +4446,24 @@ return array(
 			),
 			'icon'     => 'springer',
 		),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'ssrn',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'ssrn-square',
+        ),
+        array(
+            'category' => array(
+                '',
+            ),
+            'icon'     => 'zenodo',
+        ),
 		array(
 			'category' => array(
 				'',
