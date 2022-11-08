@@ -136,7 +136,6 @@ export default class Inspector extends Component {
 							} }
 						/>
 					</PanelRow>
-					{ ! this.props.attributes.openLinkInNewTab && (
 						<Fragment>
 							<PanelRow>
 								<label htmlFor="add-nofollow-to-links">
@@ -204,8 +203,29 @@ export default class Inspector extends Component {
 									} }
 								/>
 							</PanelRow>
+							<PanelRow>
+								<label htmlFor="add-noopener-to-links">
+									{ __(
+										'Add rel="me" to links',
+										'social-icons-widget-by-wpzoom'
+									) }
+								</label>
+								<FormToggle
+									id="add-noopener-to-links"
+									label={ __(
+										'Add rel="me" to links',
+										'social-icons-widget-by-wpzoom'
+									) }
+									checked={ this.props.attributes.relme }
+									onChange={ () => {
+										setAttributes( {
+											relme: ! this.props.attributes
+												.relme,
+										} );
+									} }
+								/>
+							</PanelRow>
 						</Fragment>
-					) }
 				</PanelBody>
 				<PanelBody
 					title={ __(

@@ -592,6 +592,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		$instance['no_follow']                 = ( ! empty( $new_instance['no_follow'] ) && 'true' === $new_instance['no_follow'] ) ? 'true' : 'false';
 		$instance['no_opener']                 = ( ! empty( $new_instance['no_opener'] ) && 'true' === $new_instance['no_opener'] ) ? 'true' : 'false';
 		$instance['no_referrer']               = ( ! empty( $new_instance['no_referrer'] ) && 'true' === $new_instance['no_referrer'] ) ? 'true' : 'false';
+		$instance['rel_me']                    = ( ! empty( $new_instance['rel_me'] ) && 'true' === $new_instance['rel_me'] ) ? 'true' : 'false';
 		$instance['icon_padding_size']         = (int) $new_instance['icon_padding_size'];
 		$instance['icon_font_size']            = (int) $new_instance['icon_font_size'];
 		$instance['global_color_picker']       = $new_instance['global_color_picker'];
@@ -717,6 +718,10 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		<input class="checkbox" type="checkbox" v-model="no_opener" :true-value="'true'" :false-value="'false'" :value="no_opener" id="<?php echo $this->get_field_id( 'no_opener' ); ?>" name="<?php echo $this->get_field_name( 'no_opener' ); ?>" />
 		<label for="<?php echo $this->get_field_id( 'no_opener' ); ?>"><?php echo sprintf( __( 'Add %s to links', 'social-icons-widget-by-wpzoom' ), '<code>rel="noopener"</code>' ); ?></label>
 	</p>
+	<p>
+		<input class="checkbox" type="checkbox" v-model="rel_me" :true-value="'true'" :false-value="'false'" :value="rel_me" id="<?php echo $this->get_field_id( 'rel_me' ); ?>" name="<?php echo $this->get_field_name( 'rel_me' ); ?>" />
+		<label for="<?php echo $this->get_field_id( 'rel_me' ); ?>"><?php echo sprintf( __( 'Add %s to links', 'social-icons-widget-by-wpzoom' ), '<code>rel="me"</code>' ); ?></label>
+	</p>
 	<?php // phpcs:enable WordPress.WP.I18n.MissingTranslatorsComment ?>
 
 	<p class="description"><?php esc_html_e( 'Recommended if links or icons open in a new tab', 'social-icons-widget-by-wpzoom' ); ?></p>
@@ -789,6 +794,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		<input type='hidden' value="<?php echo $defaults['no_follow']; ?>" id="<?php echo $this->get_field_id( 'no_follow' ); ?>" name="<?php echo $this->get_field_name( 'no_follow' ); ?>" />
 		<input type='hidden' value="<?php echo $defaults['no_opener']; ?>" id="<?php echo $this->get_field_id( 'no_opener' ); ?>" name="<?php echo $this->get_field_name( 'no_opener' ); ?>" />
 		<input type='hidden' value="<?php echo $defaults['no_referrer']; ?>" id="<?php echo $this->get_field_id( 'no_referrer' ); ?>" name="<?php echo $this->get_field_name( 'no_referrer' ); ?>" />
+		<input type='hidden' value="<?php echo $defaults['rel_me']; ?>" id="<?php echo $this->get_field_id( 'rel_me' ); ?>" name="<?php echo $this->get_field_name( 'rel_me' ); ?>" />
 
 		<input type='hidden' value="<?php echo $defaults['show_icon_labels']; ?>" id="<?php echo $this->get_field_id( 'show_icon_labels' ); ?>" name="<?php echo $this->get_field_name( 'show_icon_labels' ); ?>" />
 		<?php
@@ -917,6 +923,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 				'no_follow'                 => 'false',
 				'no_opener'                 => 'false',
 				'no_referrer'               => 'false',
+				'rel_me'                    => 'false',
 				'icon_style'                => 'with-canvas',
 				'icon_alignment'            => 'none',
 				'icon_canvas_style'         => 'round',
@@ -1201,6 +1208,10 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			$instance['no_referrer'] = true === $instance['no_referrer'] ? 'true' : 'false';
 		}
 
+		if ( is_bool( $instance['rel_me'] ) ) {
+			$instance['rel_me'] = true === $instance['rel_me'] ? 'true' : 'false';
+		}
+
 		if ( 'false' === $instance['show_icon_labels'] ) {
 			$class_list[] = 'zoom-social-icons-list--no-labels';
 		}
@@ -1224,6 +1235,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			$rel_tag         = 'true' == $instance['no_follow'] ? 'nofollow' : '';
 			$rel_tag        .= 'true' == $instance['no_opener'] ? ' noopener' : '';
 			$rel_tag        .= 'true' == $instance['no_referrer'] ? ' noreferrer' : '';
+			$rel_tag        .= 'true' == $instance['rel_me'] ? ' me' : '';
 			$aria_image_role = '';
 			$url             = esc_url( $field['url'], $this->protocols );
 

@@ -212,6 +212,10 @@ registerBlockType( 'wpzoom-blocks/social-icons', {
 			type: 'boolean',
 			default: false,
 		},
+		relme: {
+			type: 'boolean',
+			default: false,
+		},
 		iconsAlignment: {
 			type: 'string',
 			default: 'left',

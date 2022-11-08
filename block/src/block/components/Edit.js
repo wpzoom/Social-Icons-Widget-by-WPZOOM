@@ -590,6 +590,9 @@ class Edit extends Component {
 		if ( this.props.attributes.noopener ) {
 			relAttr.push( 'noopener' );
 		}
+		if ( this.props.attributes.relme ) {
+			relAttr.push( 'me' );
+		}
 
 		if ( this.props.attributes.openLinkInNewTab ) {
 			relAttr = [ 'noopener', 'noreferrer' ];
