@@ -5,7 +5,7 @@ Tags: social icons, social networks, social media, social media icons, icons, so
 Requires at least: 5.2
 Requires PHP: 7.2
 Tested up to: 6.1
-Stable tag: 4.2.8
+Stable tag: 4.2.9
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -145,6 +145,10 @@ Add the Social Icons Block to the editor and customize the icons as you want.
 8. Widget Settings
 
 == Changelog ==
+
+= 4.2.9 =
+* Fix Mastodon icon color
+* Add 'rel="me"' parameter
 
 = 4.2.8 =
 * Updating Academicons set to the latest version with new icons
