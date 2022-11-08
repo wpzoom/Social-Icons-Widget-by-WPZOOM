@@ -629,7 +629,7 @@ return array(
 			'category' => array(
 				'social-media',
 			),
-			'color'    => '#2B8BD0',
+			'color'    => '#6364FF',
 		),
 		array(
 			'icon'     => 'medium',
