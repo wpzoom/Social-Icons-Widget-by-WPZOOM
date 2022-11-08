@@ -33,10 +33,6 @@ class Save extends Component {
 			relAttr.push( 'me' );
 		}
 
-		if ( this.props.attributes.openLinkInNewTab ) {
-			relAttr = [ 'noopener', 'noreferrer' ];
-		}
-
 		return relAttr;
 	};
 
