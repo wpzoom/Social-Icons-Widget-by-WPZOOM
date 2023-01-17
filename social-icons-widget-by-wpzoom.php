@@ -62,42 +62,27 @@ if ( empty( $wpzoom_social_icons_settings['disable-widget'] ) ) {
 function zoom_social_icons_enqueue_fonts() {
 	// phpcs:disable WordPress.WP.EnqueuedResourceParameters.MissingVersion
 	if ( wp_style_is( 'wpzoom-social-icons-academicons' ) ) {
-		wp_enqueue_style( 'wpzoom-social-icons-font-academicons-ttf', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/academicons.ttf?v=1.9.2', array(), null );
-		wp_enqueue_style( 'wpzoom-social-icons-font-academicons-woff', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/academicons.woff?v=1.9.2', array(), null );
+		wp_enqueue_style( 'wpzoom-social-icons-font-academicons-woff2', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/academicons.woff2?v=1.9.2', array(), null );
 	}
 
 	if ( wp_style_is( 'wpzoom-social-icons-font-awesome-3' ) ) {
-		wp_enqueue_style( 'wpzoom-social-icons-font-fontawesome-3-ttf', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/fontawesome-webfont.ttf?v=4.7.0', array(), null );
-		wp_enqueue_style( 'wpzoom-social-icons-font-fontawesome-3-woff', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/fontawesome-webfont.woff?v=4.7.0', array(), null );
 		wp_enqueue_style( 'wpzoom-social-icons-font-fontawesome-3-woff2', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/fontawesome-webfont.woff2?v=4.7.0', array(), null );
 	}
 
 	if ( wp_style_is( 'wpzoom-social-icons-font-awesome-5' ) ) {
-		wp_enqueue_style( 'wpzoom-social-icons-font-fontawesome-5-brands-ttf', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/fa-brands-400.ttf', array(), null );
-		wp_enqueue_style( 'wpzoom-social-icons-font-fontawesome-5-brands-woff', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/fa-brands-400.woff', array(), null );
 		wp_enqueue_style( 'wpzoom-social-icons-font-fontawesome-5-brands-woff2', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/fa-brands-400.woff2', array(), null );
 
-		wp_enqueue_style( 'wpzoom-social-icons-font-fontawesome-5-regular-ttf', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/fa-regular-400.ttf', array(), null );
-		wp_enqueue_style( 'wpzoom-social-icons-font-fontawesome-5-regular-woff', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/fa-regular-400.woff', array(), null );
 		wp_enqueue_style( 'wpzoom-social-icons-font-fontawesome-5-regular-woff2', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/fa-regular-400.woff2', array(), null );
 
-		wp_enqueue_style( 'wpzoom-social-icons-font-fontawesome-5-solid-ttf', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/fa-solid-900.ttf', array(), null );
-		wp_enqueue_style( 'wpzoom-social-icons-font-fontawesome-5-solid-woff', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/fa-solid-900.woff', array(), null );
-		wp_enqueue_style( 'wpzoom-social-icons-font-fontawesome-5-solid-woff2', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/fa-solid-900.woff2', array(), null );
-
-		wp_enqueue_style( 'wpzoom-social-icons-font-fontawesome-5-solid-ttf', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/fa-solid-900.ttf', array(), null );
-		wp_enqueue_style( 'wpzoom-social-icons-font-fontawesome-5-solid-woff', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/fa-solid-900.woff', array(), null );
 		wp_enqueue_style( 'wpzoom-social-icons-font-fontawesome-5-solid-woff2', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/fa-solid-900.woff2', array(), null );
 	}
 
 	if ( wp_style_is( 'wpzoom-social-icons-genericons' ) ) {
-		wp_enqueue_style( 'wpzoom-social-icons-font-genericons-ttf', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/Genericons.ttf', array(), null );
 		wp_enqueue_style( 'wpzoom-social-icons-font-genericons-woff', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/Genericons.woff', array(), null );
 	}
 
 	if ( wp_style_is( 'wpzoom-social-icons-socicon' ) ) {
-		wp_enqueue_style( 'wpzoom-social-icons-font-socicon-ttf', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/socicon.ttf?v=' . WPZOOM_SOCIAL_ICONS_PLUGIN_VERSION, array(), null );
-		wp_enqueue_style( 'wpzoom-social-icons-font-socicon-woff', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/socicon.woff?v=' . WPZOOM_SOCIAL_ICONS_PLUGIN_VERSION, array(), null );
+		wp_enqueue_style( 'wpzoom-social-icons-font-socicon-woff2', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/socicon.woff2?v=' . WPZOOM_SOCIAL_ICONS_PLUGIN_VERSION, array(), null );
 	}
 }
 
@@ -114,23 +99,12 @@ function zoom_social_icons_add_preload_to_rel_attribute( $tag, $handle, $href ) 
 	$style_handlers = apply_filters(
 		'wpzoom-social-icons-fonts-preload-filter',
 		array(
-			'wpzoom-social-icons-font-academicons-ttf',
-			'wpzoom-social-icons-font-academicons-woff',
-			'wpzoom-social-icons-font-fontawesome-3-ttf',
-			'wpzoom-social-icons-font-fontawesome-3-woff',
+			'wpzoom-social-icons-font-academicons-woff2',
 			'wpzoom-social-icons-font-fontawesome-3-woff2',
-			'wpzoom-social-icons-font-genericons-ttf',
 			'wpzoom-social-icons-font-genericons-woff',
-			'wpzoom-social-icons-font-socicon-ttf',
-			'wpzoom-social-icons-font-socicon-woff',
-			'wpzoom-social-icons-font-fontawesome-5-brands-ttf',
-			'wpzoom-social-icons-font-fontawesome-5-brands-woff',
+			'wpzoom-social-icons-font-socicon-woff2',
 			'wpzoom-social-icons-font-fontawesome-5-brands-woff2',
-			'wpzoom-social-icons-font-fontawesome-5-regular-ttf',
-			'wpzoom-social-icons-font-fontawesome-5-regular-woff',
 			'wpzoom-social-icons-font-fontawesome-5-regular-woff2',
-			'wpzoom-social-icons-font-fontawesome-5-solid-ttf',
-			'wpzoom-social-icons-font-fontawesome-5-solid-woff',
 			'wpzoom-social-icons-font-fontawesome-5-solid-woff2',
 		)
 	);

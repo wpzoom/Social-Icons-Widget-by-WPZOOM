@@ -30,11 +30,7 @@
 
 @font-face {
     font-family: Academicons;
-    src: url(../font/academicons.eot?v=1.8.7);
-    src: url(../font/academicons.eot?v=1.8.7) format('embedded-opentype'),
-         url(../font/academicons.ttf?v=1.8.7) format('truetype'),
-         url(../font/academicons.woff?v=1.8.7) format('woff'),
-         url(../font/academicons.svg?v=1.8.7#academicons) format('svg');
+    src: url(../font/academicons.woff2?v=1.8.7) format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: block;
