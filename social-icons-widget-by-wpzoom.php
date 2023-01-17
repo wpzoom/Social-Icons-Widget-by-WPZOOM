@@ -62,7 +62,7 @@ if ( empty( $wpzoom_social_icons_settings['disable-widget'] ) ) {
 function zoom_social_icons_enqueue_fonts() {
 	// phpcs:disable WordPress.WP.EnqueuedResourceParameters.MissingVersion
 	if ( wp_style_is( 'wpzoom-social-icons-academicons' ) ) {
-		wp_enqueue_style( 'wpzoom-social-icons-font-academicons-woff', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/academicons.woff?v=1.9.2', array(), null );
+		wp_enqueue_style( 'wpzoom-social-icons-font-academicons-woff2', WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/font/academicons.woff2?v=1.9.2', array(), null );
 	}
 
 	if ( wp_style_is( 'wpzoom-social-icons-font-awesome-3' ) ) {
@@ -99,7 +99,7 @@ function zoom_social_icons_add_preload_to_rel_attribute( $tag, $handle, $href ) 
 	$style_handlers = apply_filters(
 		'wpzoom-social-icons-fonts-preload-filter',
 		array(
-			'wpzoom-social-icons-font-academicons-woff',
+			'wpzoom-social-icons-font-academicons-woff2',
 			'wpzoom-social-icons-font-fontawesome-3-woff2',
 			'wpzoom-social-icons-font-genericons-woff',
 			'wpzoom-social-icons-font-socicon-woff2',

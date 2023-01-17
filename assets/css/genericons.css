@@ -10,14 +10,6 @@
   font-display: block;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: "Genericons";
-    src: url("../font/Genericons.svg#Genericons") format("svg");
-    font-display: block;
-  }
-}
-
 
 /**
  * All Genericons
