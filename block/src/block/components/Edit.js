@@ -593,8 +593,18 @@ class Edit extends Component {
 		if ( this.props.attributes.relme ) {
 			relAttr.push( 'me' );
 		}
+		if ( this.props.attributes.openLinkInNewTab ) {
+			relAttr = [ 'noopener' ];
+		}
 
 		return relAttr;
+	};
+
+	getTarget = () => {
+		if( this.props.attributes.openLinkInNewTab ) {
+			return '_blank';
+		}
+		return undefined;
 	};
 
 	render() {
@@ -617,6 +627,7 @@ class Edit extends Component {
 			);
 
 			const relAttr = this.getRelAttr();
+			const getTarget = this.getTarget();
 
 			return (
 				<Fragment key={ key }>
@@ -626,9 +637,7 @@ class Edit extends Component {
 						className={ classnames( 'social-icon-link', {
 							selected: list.isActive,
 						} ) }
-						target={
-							attributes.openLinkInNewTab ? '_blank' : undefined
-						}
+						target={ getTarget }
 						rel={ relAttr.length ? relAttr.join( ' ' ) : undefined }
 						title={ list.label }
 						style={ {

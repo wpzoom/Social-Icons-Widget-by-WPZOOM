@@ -32,8 +32,18 @@ class Save extends Component {
 		if ( this.props.attributes.relme ) {
 			relAttr.push( 'me' );
 		}
+		if ( this.props.attributes.openLinkInNewTab ) {
+			relAttr = [ 'noopener' ];
+		}
 
 		return relAttr;
+	};
+
+	getTarget = () => {
+		if( this.props.attributes.openLinkInNewTab ) {
+			return '_blank';
+		}
+		return undefined;
 	};
 
 	render() {
@@ -57,15 +67,16 @@ class Save extends Component {
 			);
 
 			const relAttr = this.getRelAttr();
+			const getTarget = this.getTarget();
 
 			return (
 				<a
 					key={ key }
 					href={ list.url }
 					className={ 'social-icon-link' }
-					title={ list.label }
-					target={ attributes.openLinkInNewTab ? '_blank' : undefined }
+					target={ getTarget }
 					rel={ relAttr.length ? relAttr.join( ' ' ) : undefined }
+					title={ list.label }
 					style={ {
 						'--wpz-social-icons-block-item-color': list.color,
 						'--wpz-social-icons-block-item-color-hover':

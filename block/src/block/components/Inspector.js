@@ -132,6 +132,9 @@ export default class Inspector extends Component {
 								setAttributes( {
 									openLinkInNewTab: ! this.props.attributes
 										.openLinkInNewTab,
+									noopener: ! this.props.attributes
+										.noopener,
+
 								} );
 							} }
 						/>
