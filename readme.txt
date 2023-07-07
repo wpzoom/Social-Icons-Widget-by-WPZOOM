@@ -5,7 +5,7 @@ Tags: social icons, social networks, social media, social media icons, icons, so
 Requires at least: 5.2
 Requires PHP: 7.2
 Tested up to: 6.2
-Stable tag: 4.2.12
+Stable tag: 4.2.13
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -145,6 +145,9 @@ Add the Social Icons Block to the editor and customize the icons as you want.
 8. Widget Settings
 
 == Changelog ==
+
+= 4.2.13 =
+* New icons: Threads, Venmo, Wise, Revolut, Gutenberg, Gravatar, OpenAI, Midjourney, WeChat, Roblox, OnlyFans, Figma, Elementor, Shopify, Woo, Gumroad, Artgram, Cubebrush, Aristree, OpenSea
 
 = 4.2.12 =
 * Minor bug fix

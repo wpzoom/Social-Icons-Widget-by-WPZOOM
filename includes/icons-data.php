@@ -1033,6 +1033,13 @@ return array(
 			),
 			'color'    => '#589548',
 		),
+        array(
+            'icon'     => 'threads',
+            'category' => array(
+                'social-media',
+            ),
+            'color'    => '#000',
+        ),
 		array(
 			'icon'     => 'tidal',
 			'category' => array(
@@ -1278,6 +1285,160 @@ return array(
 			),
 			'color'    => '#DC0606',
 		),
+
+        array(
+            'icon'     => 'midjourney',
+            'category' => array(
+                'games',
+            ),
+            'color'    => '#000',
+        ),
+
+        array(
+            'icon'     => 'openai',
+            'category' => array(
+                'games',
+            ),
+            'color'    => '#412991',
+        ),
+
+        array(
+            'icon'     => 'gravatar',
+            'category' => array(
+                'games',
+            ),
+            'color'    => '#1E8CBE',
+        ),
+
+        array(
+            'icon'     => 'gutenberg',
+            'category' => array(
+                'games',
+            ),
+            'color'    => '#000',
+        ),
+
+        array(
+            'icon'     => 'wechat',
+            'category' => array(
+                'games',
+            ),
+            'color'    => '#07C160',
+        ),
+
+        array(
+            'icon'     => 'venmo',
+            'category' => array(
+                'games',
+            ),
+            'color'    => '#3D95CE',
+        ),
+
+        array(
+            'icon'     => 'roblox',
+            'category' => array(
+                'games',
+            ),
+            'color'    => '#000',
+        ),
+
+        array(
+            'icon'     => 'wise',
+            'category' => array(
+                'games',
+            ),
+            'color'    => '#9FE870',
+        ),
+
+        array(
+            'icon'     => 'revolut',
+            'category' => array(
+                'games',
+            ),
+            'color'    => '#0075EB',
+        ),
+
+        array(
+            'icon'     => 'elementor',
+            'category' => array(
+                'games',
+            ),
+            'color'    => '#92003B',
+        ),
+
+        array(
+            'icon'     => 'figma',
+            'category' => array(
+                'games',
+            ),
+            'color'    => '#F24E1E',
+        ),
+
+        array(
+            'icon'     => 'shopify',
+            'category' => array(
+                'games',
+            ),
+            'color'    => '#7AB55C',
+        ),
+
+        array(
+            'icon'     => 'woo',
+            'category' => array(
+                'games',
+            ),
+            'color'    => '#96588A',
+        ),
+
+        array(
+            'icon'     => 'onlyfans',
+            'category' => array(
+                'games',
+            ),
+            'color'    => '#00AFF0',
+        ),
+
+        array(
+            'icon'     => 'opensea',
+            'category' => array(
+                'games',
+            ),
+            'color'    => '#2081E2',
+        ),
+
+        array(
+            'icon'     => 'gumroad',
+            'category' => array(
+                'games',
+            ),
+            'color'    => '#ff90e8',
+        ),
+
+        array(
+            'icon'     => 'artgram',
+            'category' => array(
+                'games',
+            ),
+            'color'    => '#10b981',
+        ),
+
+        array(
+            'icon'     => 'cubebrush ',
+            'category' => array(
+                'games',
+            ),
+            'color'    => '#34b6ea',
+        ),
+
+        array(
+            'icon'     => 'artistree',
+            'category' => array(
+                'games',
+            ),
+            'color'    => '#000',
+        ),
+
+
 	),
 	'dashicons'   => array(
 		array(

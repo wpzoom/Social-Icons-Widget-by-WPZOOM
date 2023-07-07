@@ -1293,6 +1293,15 @@
     content: "\e912"
 }
 
+.socicon-threads {
+    background-color: #000;
+    color: #000;
+}
+
+.social-icon.socicon-threads:before {
+    content: "\e949"
+}
+
 .socicon-tidal {
     background-color: #01FFFF;
     color: #01FFFF;
@@ -1597,4 +1606,189 @@
 
 .social-icon.socicon-zynga:before {
     content: "\e036"
+}
+
+
+.socicon-midjourney {
+    background-color: #000;
+    color: #000;
+}
+
+.social-icon.socicon-midjourney:before {
+    content: "\e94a"
+}
+
+.socicon-openai {
+    background-color: #412991;
+    color: #412991;
+}
+
+.social-icon.socicon-openai:before {
+    content: "\e94b"
+}
+
+.socicon-gravatar {
+    background-color: #1E8CBE;
+    color: #1E8CBE;
+}
+
+.social-icon.socicon-gravatar:before {
+    content: "\e94c"
+}
+
+.socicon-gutenberg {
+    background-color: #000;
+    color: #000;
+}
+
+.social-icon.socicon-gutenberg:before {
+    content: "\e94d"
+}
+
+.socicon-wechat {
+    background-color: #07C160;
+    color: #07C160;
+}
+
+.social-icon.socicon-wechat:before {
+    content: "\e94e"
+}
+
+.socicon-venmo {
+    background-color: #3D95CE;
+    color: #3D95CE;
+}
+
+.social-icon.socicon-venmo:before {
+    content: "\e950"
+}
+
+.socicon-roblox {
+    background-color: #000;
+    color: #000;
+}
+
+.social-icon.socicon-roblox:before {
+    content: "\e951"
+}
+
+.socicon-wise {
+    background-color: #9FE870;
+    color: #9FE870;
+}
+
+.social-icon.socicon-wise:before {
+    content: "\e952"
+}
+
+.socicon-revolut {
+    background-color: #0075EB;
+    color: #0075EB;
+}
+
+.social-icon.socicon-revolut:before {
+    content: "\e953"
+}
+
+.socicon-revolut {
+    background-color: #0075EB;
+    color: #0075EB;
+}
+
+.social-icon.socicon-revolut:before {
+    content: "\e953"
+}
+
+.socicon-elementor {
+    background-color: #92003B;
+    color: #92003B;
+}
+
+.social-icon.socicon-elementor:before {
+    content: "\e954"
+}
+
+.socicon-figma {
+    background-color: #F24E1E;
+    color: #F24E1E;
+}
+
+.social-icon.socicon-figma:before {
+    content: "\e956"
+}
+
+.socicon-shopify {
+    background-color: #7AB55C;
+    color: #7AB55C;
+}
+
+.social-icon.socicon-shopify:before {
+    content: "\e957"
+}
+
+.socicon-woo {
+    background-color: #96588A;
+    color: #96588A;
+}
+
+.social-icon.socicon-woo:before {
+    content: "\e958"
+}
+
+.socicon-onlyfans {
+    background-color: #00AFF0;
+    color: #00AFF0;
+}
+
+.social-icon.socicon-onlyfans:before {
+    content: "\e95a"
+}
+
+.socicon-opensea {
+    background-color: #2081E2;
+    color: #2081E2;
+}
+
+.social-icon.socicon-opensea:before {
+    content: "\e95b"
+}
+
+.socicon-gumroad {
+    background-color: #ff90e8;
+    color: #ff90e8;
+}
+
+.zoom-social-icons-list--with-canvas .socicon-gumroad {
+    color: #000 !important;
+}
+
+.social-icon.socicon-gumroad:before {
+    content: "\e95c"
+}
+
+.socicon-artgram {
+    background-color: #10b981;
+    color: #10b981;
+}
+
+.social-icon.socicon-artgram:before {
+    content: "\e95d"
+}
+
+.socicon-cubebrush {
+    background-color: #34b6ea;
+    color: #34b6ea;
+}
+
+.social-icon.socicon-cubebrush:before {
+    content: "\e95e"
+}
+
+.socicon-artistree {
+    background-color: #000;
+    color: #000;
+}
+
+.social-icon.socicon-artistree:before {
+    content: "\e95f"
 }
