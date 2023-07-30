@@ -7,6 +7,14 @@
 
 return array(
 	'socicon'     => array(
+        array(
+            'icon'     => 'x',
+            'category' => array(
+                'games',
+            ),
+            'color'    => '#000',
+        ),
+
 		array(
 			'icon'     => '500px',
 			'category' => array(
@@ -1359,6 +1367,14 @@ return array(
         ),
 
         array(
+            'icon'     => 'element',
+            'category' => array(
+                'games',
+            ),
+            'color'    => '#0DBD8B',
+        ),
+
+        array(
             'icon'     => 'elementor',
             'category' => array(
                 'games',
@@ -1429,6 +1445,16 @@ return array(
             ),
             'color'    => '#34b6ea',
         ),
+
+        array(
+            'icon'     => 'matrix',
+            'category' => array(
+                'games',
+            ),
+            'color'    => '#000',
+        ),
+
+
 
         array(
             'icon'     => 'artistree',

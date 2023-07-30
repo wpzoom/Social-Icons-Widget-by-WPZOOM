@@ -1792,3 +1792,30 @@
 .social-icon.socicon-artistree:before {
     content: "\e95f"
 }
+
+.socicon-element {
+    background-color: #0DBD8B;
+    color: #0DBD8B;
+}
+
+.social-icon.socicon-element:before {
+    content: "\e962"
+}
+
+.socicon-x {
+    background-color: #000;
+    color: #000;
+}
+
+.social-icon.socicon-x:before {
+    content: "\e960"
+}
+
+.socicon-matrix {
+    background-color: #000;
+    color: #000;
+}
+
+.social-icon.socicon-matrix:before {
+    content: "\e961"
+}
