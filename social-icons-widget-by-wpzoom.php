@@ -16,7 +16,7 @@
  */
 
 if ( ! defined( 'WPZOOM_SOCIAL_ICONS_PLUGIN_VERSION' ) ) {
-	define( 'WPZOOM_SOCIAL_ICONS_PLUGIN_VERSION', '4.2.14' );
+	define( 'WPZOOM_SOCIAL_ICONS_PLUGIN_VERSION', get_file_data( __FILE__, [ 'Version' ] )[0] ); // phpcs:ignore
 }
 
 if ( ! defined( 'WPZOOM_SOCIAL_ICONS_PLUGIN_URL' ) ) {
