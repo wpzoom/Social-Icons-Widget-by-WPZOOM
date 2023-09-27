@@ -384,7 +384,7 @@ if ( ! function_exists( 'wpzoom_social_icons_admin_notices' ) ) {
 		$should_display_notice = ( ( 'index.php' === $pagenow || 'plugins.php' === $pagenow || 'options-general.php' === $pagenow && 'wpzoom-social-icons-widget' === $page ) && $is_active && ! $dismiss_notice ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 
 		if ( $should_display_notice ) {
-			wpzoom_social_icons_upgrade_pro_notice();
+			// wpzoom_social_icons_upgrade_pro_notice();
 		}
 	}
 	add_action( 'admin_notices', 'wpzoom_social_icons_admin_notices' );
