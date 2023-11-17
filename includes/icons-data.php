@@ -323,7 +323,7 @@ return array(
 			'category' => array(
 				'social-media',
 			),
-			'color'    => '#1877F2',
+			'color'    => '#0866FF',
 		),
 		array(
 			'icon'     => 'facebook2',

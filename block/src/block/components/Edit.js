@@ -70,19 +70,19 @@ class Edit extends Component {
 				wasStyled: true,
 				defaultIcon: {
 					icon: 'facebook',
-					color: '#1877F2',
-					hoverColor: '#1877F2',
+					color: '#0866FF',
+					hoverColor: '#0866FF',
 				},
 				selectedIcons: [
 					{
 						icon: 'facebook',
-						color: '#1877F2',
-						hoverColor: '#1877F2',
+						color: '#0866FF',
+						hoverColor: '#0866FF',
 					},
 					{
-						icon: 'twitter',
-						color: '#1da1f2',
-						hoverColor: '#1da1f2',
+						icon: 'x',
+						color: '#000000',
+						hoverColor: '#000000',
 					},
 					{
 						icon: 'instagram',
@@ -109,19 +109,19 @@ class Edit extends Component {
 				wasStyled: true,
 				defaultIcon: {
 					icon: 'facebook',
-					color: '#1877F2',
-					hoverColor: '#1877F2',
+					color: '#0866FF',
+					hoverColor: '#0866FF',
 				},
 				selectedIcons: [
 					{
 						icon: 'facebook',
-						color: '#1877F2',
-						hoverColor: '#1877F2',
+						color: '#0866FF',
+						hoverColor: '#0866FF',
 					},
 					{
-						icon: 'twitter',
-						color: '#1da1f2',
-						hoverColor: '#1da1f2',
+						icon: 'x',
+						color: '#000000',
+						hoverColor: '#000000',
 					},
 					{
 						icon: 'instagram',
@@ -148,19 +148,19 @@ class Edit extends Component {
 				wasStyled: true,
 				defaultIcon: {
 					icon: 'facebook',
-					color: '#1877F2',
-					hoverColor: '#1877F2',
+					color: '#0866FF',
+					hoverColor: '#0866FF',
 				},
 				selectedIcons: [
 					{
 						icon: 'facebook',
-						color: '#1877F2',
-						hoverColor: '#1877F2',
+						color: '#0866FF',
+						hoverColor: '#0866FF',
 					},
 					{
-						icon: 'twitter',
-						color: '#1da1f2',
-						hoverColor: '#1da1f2',
+						icon: 'x',
+						color: '#000000',
+						hoverColor: '#000000',
 					},
 					{
 						icon: 'instagram',
@@ -186,19 +186,19 @@ class Edit extends Component {
 				wasStyled: true,
 				defaultIcon: {
 					icon: 'facebook',
-					color: '#1877F2',
-					hoverColor: '#1877F2',
+					color: '#0866FF',
+					hoverColor: '#0866FF',
 				},
 				selectedIcons: [
 					{
 						icon: 'facebook',
-						color: '#1877F2',
-						hoverColor: '#1877F2',
+						color: '#0866FF',
+						hoverColor: '#0866FF',
 					},
 					{
-						icon: 'twitter',
-						color: '#1da1f2',
-						hoverColor: '#1da1f2',
+						icon: 'x',
+						color: '#000000',
+						hoverColor: '#000000',
 					},
 					{
 						icon: 'instagram',
