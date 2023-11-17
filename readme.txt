@@ -4,8 +4,8 @@ Donate link: https://www.wpzoom.com/
 Tags: social icons, social networks, social media, social media icons, icons, social profiles, social widget, widget, block, social block, block icons, academicons, elementor, social networking, sharing, share buttons, fontawesome
 Requires at least: 5.2
 Requires PHP: 7.2
-Tested up to: 6.2
-Stable tag: 4.2.14
+Tested up to: 6.4
+Stable tag: 4.2.15
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -145,6 +145,9 @@ Add the Social Icons Block to the editor and customize the icons as you want.
 8. Widget Settings
 
 == Changelog ==
+
+= 4.2.15 =
+* Updates to the Twitter icon
 
 = 4.2.14 =
 * New icons: X (use x.com/username for the new Twitter icon), Matrix, Element
