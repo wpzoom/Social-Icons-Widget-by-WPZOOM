@@ -32,7 +32,6 @@ if ( ! defined( 'WPZOOM_SOCIAL_ICONS_PLUGIN_BASE' ) ) {
 }
 
 require_once plugin_dir_path( __FILE__ ) . 'includes/classes/class-wpzoom-social-icons-settings.php';
-require_once plugin_dir_path( __FILE__ ) . 'includes/zoom-helper.php';
 
 $wpzoom_social_icons_settings = WPZOOM_Social_Icons_Settings::get_settings();
 
