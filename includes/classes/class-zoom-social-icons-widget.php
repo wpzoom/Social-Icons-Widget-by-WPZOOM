@@ -1231,7 +1231,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 
 			<?php
 			$rule            = ( 'with-canvas' === $instance['icon_style'] ) ? 'background-color' : 'color';
-			$hover_style     = empty( $field['color_picker_hover'] ) ? '' : 'data-hover-rule="' . $rule . '" data-hover-color="' . $field['color_picker_hover'] . '"';
+			$hover_style     = empty( $field['color_picker_hover'] ) ? '' : 'data-hover-rule="' . $rule . '" data-hover-color="' . esc_attr( $field['color_picker_hover'] ) . '"';
 			$rel_tag         = 'true' == $instance['no_follow'] ? 'nofollow' : '';
 			$rel_tag        .= 'true' == $instance['no_opener'] ? ' noopener' : '';
 			$rel_tag        .= 'true' == $instance['no_referrer'] ? ' noreferrer' : '';
@@ -1252,7 +1252,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			<?php
 			if ( ! empty( $field['icon'] ) && ! empty( $field['icon_kit'] ) && ! empty( $field['color_picker'] ) ) {
 				$class = $field['icon_kit'] . ' ' . $field['icon_kit'] . '-' . $field['icon'];
-				$style = $rule . ' : ' . $field['color_picker'];
+				$style = $rule . ' : ' . esc_attr( $field['color_picker'] );
 			} else {
 				$style = '';
 
