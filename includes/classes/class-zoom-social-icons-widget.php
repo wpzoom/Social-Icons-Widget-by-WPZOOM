@@ -1244,7 +1244,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			}
 
 			if ( ! empty( $field['aria_label'] ) ) {
-				$aria_image_role = "role='img' aria-label='" . $field['aria_label'] . "'";
+				$aria_image_role = "role='img' aria-label='" . esc_attr( $field['aria_label'] ) . "'";
 			}
 			?>
 	<li class="zoom-social_icons-list__item">
@@ -1261,12 +1261,12 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 			?>
 			<?php
 			if ( ! empty( $instance['icon_font_size'] ) ) {
-				$style .= '; font-size: ' . $instance['icon_font_size'] . 'px';
+				$style .= '; font-size: ' . esc_attr( $instance['icon_font_size'] ) . 'px';
 			}
 			?>
 			<?php
 			if ( ! empty( $instance['icon_padding_size'] ) ) {
-				$style .= '; padding:' . $instance['icon_padding_size'] . 'px';
+				$style .= '; padding:' . esc_attr( $instance['icon_padding_size'] ) . 'px';
 			}
 			?>
 
