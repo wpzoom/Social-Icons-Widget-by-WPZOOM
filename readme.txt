@@ -1,15 +1,15 @@
 === Social Icons Widget & Block by WPZOOM ===
 Contributors: WPZOOM, nvartolomei, ciorici
 Donate link: https://www.wpzoom.com/
-Tags: social icons, social networks, social media, social media icons, icons, social profiles, social widget, widget, block, social block, block icons, academicons, elementor, social networking, sharing, share buttons, fontawesome
+Tags: social icons, social networks, social media, social media icons, icons
 Requires at least: 5.2
 Requires PHP: 7.2
 Tested up to: 6.5
-Stable tag: 4.2.17
+Stable tag: 4.2.18
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Social Icons Widget & Block helps adding icons with links to social media profiles on your website. Supports more than 100 websites and includes 400 icons.
+Quickly add icons with links to your profiles from different social networks and sites! Social Icons Widget & Block includes more than 400 icons
 
 == Description ==
 
@@ -145,6 +145,9 @@ Add the Social Icons Block to the editor and customize the icons as you want.
 8. Widget Settings
 
 == Changelog ==
+
+= 4.2.18 =
+* Fixed an issue with arial label escaping
 
 = 4.2.17 =
 * Fixed an issue with the values of some fields not being escaped
