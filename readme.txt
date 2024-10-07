@@ -2,10 +2,10 @@
 Contributors: WPZOOM, nvartolomei, ciorici
 Donate link: https://www.wpzoom.com/
 Tags: social icons, social networks, social media, social media icons, icons
-Requires at least: 5.2
-Requires PHP: 7.2
-Tested up to: 6.5
-Stable tag: 4.2.18
+Requires at least: 5.8
+Requires PHP: 7.4
+Tested up to: 6.6
+Stable tag: 4.3.0
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,7 +31,7 @@ Quickly add icons with links to your profiles from different social networks and
 = ⭐️ PRO FEATURES ⭐️ =
 * **Upload your SVG icons - 🆕**
 * **Load icons in SVG format - 🆕**
-* **Create your own custom icon set**
+* **Add Icons to Menus**
 * **Outstanding performance**
 * Premium Support
 * and many new features coming soon!
@@ -72,14 +72,13 @@ Quickly add icons with links to your profiles from different social networks and
 You can view the widget live in all our themes at [WPZOOM](https://www.wpzoom.com/themes/).
 
 = View Demo & Examples =
-* [Monte Theme](https://demo.wpzoom.com/?theme=monte) - header bar and footer
-* [Tempo Theme](https://demo.wpzoom.com/?theme=tempo) - header (under logo) and footer
 * [Foodica Theme](https://demo.wpzoom.com/?theme=foodica) - header bar and sidebar
-* [Inspiro Theme](https://demo.wpzoom.com/?theme=inspiro) - sidebar panel and footer
+* [Inspiro Theme](https://demo.wpzoom.com/?theme=inspiro-demo) - sidebar panel and footer
 
 = Features: =
 
-* Gutenberg Block - **NEW**
+* Gutenberg Block
+* Icon Sets + Shortcodes - **NEW**
 * 100+ Sites/Social Networks supported
 * 400+ Custom Icons
 * 5 Icons Sets
@@ -145,6 +144,10 @@ Add the Social Icons Block to the editor and customize the icons as you want.
 8. Widget Settings
 
 == Changelog ==
+
+= 4.3.0 =
+* Create Icon Sets and embed them anywhere with Shortcodes
+* Minor bug fixes
 
 = 4.2.18 =
 * Fixed an issue with arial label escaping
