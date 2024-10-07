@@ -39,8 +39,11 @@ if ( empty( $wpzoom_social_icons_settings['disable-block'] ) ) {
 	require_once plugin_dir_path( __FILE__ ) . 'block/src/init.php';
 }
 
+
+require_once plugin_dir_path( __FILE__ ) . 'includes/classes/class-zoom-social-icons-widget.php';
+require_once plugin_dir_path( __FILE__ ) . 'includes/classes/class-wpzoom-social-icons-shortcode.php';
+
 if ( empty( $wpzoom_social_icons_settings['disable-widget'] ) ) {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/classes/class-zoom-social-icons-widget.php';
 
 	/**
 	 * Register the widget

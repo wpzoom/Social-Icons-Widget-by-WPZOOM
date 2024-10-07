@@ -88,6 +88,7 @@ class WPZOOM_Social_Icons_Settings {
 	 * @return void
 	 */
 	public function enqueue( $hook ) {
+
 		if ( $this->get_hook_name() === $hook ) {
 			wp_enqueue_style(
 				'zoom-social-icons-settings-page',
@@ -112,7 +113,8 @@ class WPZOOM_Social_Icons_Settings {
 	 * @return string
 	 */
 	public function get_hook_name() {
-		return 'settings_page_' . self::$menu_slug;
+
+		return 'wpzoom-shortcode_page_' . self::$menu_slug;
 	}
 
 	/**
@@ -121,13 +123,19 @@ class WPZOOM_Social_Icons_Settings {
 	 * @return void
 	 */
 	public function add_plugin_page() {
+
+		// Remove Add New submenu item.
+		remove_submenu_page( 'edit.php?post_type=wpzoom-shortcode', 'post-new.php?post_type=wpzoom-shortcode' );
+
 		// This page will be under "Settings".
-		add_options_page(
-			__( 'Social Icons Widget By WPZOOM Settings Page', 'social-icons-widget-by-wpzoom' ),
-			__( 'Social Icons Widget', 'social-icons-widget-by-wpzoom' ),
+		add_submenu_page(
+			'edit.php?post_type=wpzoom-shortcode',
+			esc_html__( 'Social Icons Widget By WPZOOM Settings Page', 'social-icons-widget-by-wpzoom' ),
+			esc_html__( 'Settings', 'social-icons-widget-by-wpzoom' ),
 			'manage_options',
 			self::$menu_slug,
-			array( $this, 'create_admin_page' )
+			array( $this, 'create_admin_page' ),
+			5
 		);
 	}
 

@@ -292,3 +292,51 @@ border-radius: 0;
 	display: block !important;
 	font-size: 14px;
 }
+
+/* Shortcodes page */
+
+.social_shortcode_wrap {
+    border: 1px solid #c3c4c7;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 4%);
+    background: #fff;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.social_shortcode_wrap .social_shortcode_wrap_left {
+    float: left;
+    width: 45%;
+}
+
+.social_shortcode_wrap .social_shortcode_wrap_right {
+    float: right;
+    width: 45%;
+}
+
+.social_shortcode_wrap .social_shortcode_wrap_left > p:nth-child(2){
+    display: none;
+}
+
+
+.social_shortcode_wrap .zoom-social-icons__list {
+    background: #f0f0f1;
+    padding: 25px;
+    margin: 15px 0;
+}
+
+
+#wpz-social-shortcode {
+    min-width: 300px;
+    font-family: Consolas,Monaco,monospace;
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .social_shortcode_wrap .social_shortcode_wrap_right,
+    .social_shortcode_wrap .social_shortcode_wrap_left {
+        float: none;
+        width: 100%;
+    }
+
+}
