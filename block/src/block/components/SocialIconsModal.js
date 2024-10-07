@@ -168,19 +168,17 @@ class SocialIconsModal extends Component {
 							/>
 						</div>
 					</div>
-					{ this.props.showIconsLabel ? (
-						<div className="option-item">
-							<div className="label">
-								{ __( 'Label', 'social-icons-widget-by-wpzoom' ) }
-							</div>
-							<div className="option-wrapper">
-								<TextControl
-									value={ this.state.modalLabel }
-									onChange={ this.labelTextControlHandler }
-								/>
-							</div>
+					<div className="option-item">
+						<div className="label">
+							{ __( 'Label', 'social-icons-widget-by-wpzoom' ) }
 						</div>
-					) : null }
+						<div className="option-wrapper">
+							<TextControl
+								value={ this.state.modalLabel }
+								onChange={ this.labelTextControlHandler }
+							/>
+						</div>
+					</div>
 					<div className="option-item">
 						<div className="label">
 							{ __( 'Pick icon color', 'social-icons-widget-by-wpzoom' ) }

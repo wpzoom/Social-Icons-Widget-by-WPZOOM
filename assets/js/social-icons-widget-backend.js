@@ -221,6 +221,10 @@
                         $(this.$el).find('input:first').trigger('change');
                     });
                 },
+                openModal: function (key) {
+                    this.fields[key].show_modal = true;
+                    $('body').addClass('modal-open');
+                },
                 closeModal: function (key) {
                     this.fields[key].show_modal = false;
                     $('body').removeClass('modal-open');

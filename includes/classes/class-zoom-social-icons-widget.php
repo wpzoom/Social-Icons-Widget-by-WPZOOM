@@ -869,7 +869,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 		?>
 	</div>
 
-	<ul v-sortable="{ handle: '.zoom-social-icons__field-handle', onUpdate : onUpdate  }" class="zoom-social-icons__list" :class="{ 'zoom-social-icons__list--no-labels' : show_icon_labels !== 'true' }">
+	<ul v-sortable="{ handle: '.zoom-social-icons__field-handle', onUpdate : onUpdate  }" class="zoom-social-icons__list">
 
 		<template v-for="(field, key) in fields">
 
@@ -892,9 +892,9 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 					</div>
 				</div>
 
-
-				<a v-show='fields.length > 1' class="zoom-social-icons__field-trash" href="#" @click.prevent="clickOnDeleteIconHandler(key)"><span class="dashicons dashicons-trash"></span></a>
-				<span :class="toggleExtraOptionsClass(key)" @click.prevent='toggleExtraOptions(key, field)'></span>
+				<a title="Edit" v-show='fields.length > 1' @click.prevent="openModal(key)" class="zoom-social-icons__field-edit" href="#"><span class="dashicons dashicons-admin-appearance"></span></a>
+				<a title="Remove" v-show='fields.length > 1' class="zoom-social-icons__field-trash" href="#" @click.prevent="clickOnDeleteIconHandler(key)"><span class="dashicons dashicons-trash"></span></a>
+				<span title="Expand" :class="toggleExtraOptionsClass(key)" @click.prevent='toggleExtraOptions(key, field)'></span>
 				<br style="clear:both">
 				<div class="extra-options" v-show="field.show_extra_options == true">
 					<p>
