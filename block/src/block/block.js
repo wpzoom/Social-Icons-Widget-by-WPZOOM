@@ -133,13 +133,13 @@ addFilter(
 /**
  * Don't display convert notice in Customizer.
  */
-if ( ! parentContainer ) {
-	addFilter(
-		'editor.BlockEdit',
-		'wpzoom-blocks/social-icons/wrap-group-blocks',
-		withGroupedBlocks
-	);
-}
+// if ( ! parentContainer ) {
+// 	addFilter(
+// 		'editor.BlockEdit',
+// 		'wpzoom-blocks/social-icons/wrap-group-blocks',
+// 		withGroupedBlocks
+// 	);
+// }
 
 /**
  * Register: WPZOOM Social Icons Block.
