@@ -777,7 +777,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	</p>
 
 	<p class="description">
-		<?php echo wp_kses_post( __( 'This option has no effect if <i>Color Icon / No Background</i> icon style is selected.', 'social-icons-widget-by-wpzoom' ) ); ?>
+		<?php echo wp_kses_post( __( 'This option has no effect if the <i>Color Icon / No Background</i> icon style is selected.', 'social-icons-widget-by-wpzoom' ) ); ?>
 	</p>
 
 	<p>
@@ -924,7 +924,7 @@ class Zoom_Social_Icons_Widget extends WP_Widget {
 	</p>
 
 	<p class="description">
-		<?php echo wp_kses_post( __( 'Note that icons above is not how they will look on front-end. This is just for reference.', 'social-icons-widget-by-wpzoom' ) ); ?>
+		<?php echo wp_kses_post( __( 'Note that the icons above may not look the same on the front end. This is just for reference.', 'social-icons-widget-by-wpzoom' ) ); ?>
 	</p>
 	</div>
 </div>

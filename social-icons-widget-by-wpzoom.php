@@ -306,12 +306,12 @@ if ( ! function_exists( 'wpzoom_social_icons_upgrade_pro_notice' ) ) {
 				<div class="wpz-social-icons-notice-content">
 					<?php
 					/* translators: %s The heading title */
-					echo sprintf( '<h3>%s</h3>', esc_html__( '🤩&nbsp; Thank you for using Social Icons Widget by WPZOOM!', 'social-icons-widget-by-wpzoom' ) );
+					echo sprintf( '<h3>%s</h3>', esc_html__( 'The Ultimate Social Media Icons Plugin for WordPress 🤩&nbsp;', 'social-icons-widget-by-wpzoom' ) );
 					?>
 					<p class="wpz-social-icons-notice-text">
 					<?php
 					/* translators: %s The pro version features */
-					echo sprintf( esc_html__( 'Big News! We\'ve released a new PRO version with unique features such as %s', 'social-icons-widget-by-wpzoom' ), '<strong>' . esc_html__( 'SVG Icons Uploader, Loading Icons in SVG format, and many other improvements to boost your PageSpeed score!', 'social-icons-widget-by-wpzoom' ) . '</strong>' );
+					echo sprintf( esc_html__( 'Upgrade to the PRO version to unlock unique features such as the %s', 'social-icons-widget-by-wpzoom' ), '<strong>' . esc_html__( 'Custom SVG Icons Uploader, Loading Icons in SVG format, Adding Icons to Menus, and more!', 'social-icons-widget-by-wpzoom' ) . '</strong>' );
 					?>
 					</p>
 					<p class="wpz-social-icons-notice-actions">
@@ -386,7 +386,7 @@ if ( ! function_exists( 'wpzoom_social_icons_admin_notices' ) ) {
 		$should_display_notice = ( ( 'index.php' === $pagenow || 'plugins.php' === $pagenow || 'options-general.php' === $pagenow && 'wpzoom-social-icons-widget' === $page ) && $is_active && ! $dismiss_notice ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 
 		if ( $should_display_notice ) {
-			// wpzoom_social_icons_upgrade_pro_notice();
+			wpzoom_social_icons_upgrade_pro_notice();
 		}
 	}
 	add_action( 'admin_notices', 'wpzoom_social_icons_admin_notices' );

@@ -109,16 +109,19 @@
 }
 
 .elementor-widget-wp-widget-zoom-social-icons-widget .zoom-social-icons-list--align-left,
+.zoom-social-icons-shortcode .zoom-social-icons-list--align-left,
 .zoom-social-icons-widget .zoom-social-icons-list--align-left {
     text-align: left;
 }
 
 .elementor-widget-wp-widget-zoom-social-icons-widget .zoom-social-icons-list--align-right,
+.zoom-social-icons-shortcode .zoom-social-icons-list--align-right,
 .zoom-social-icons-widget .zoom-social-icons-list--align-right {
     text-align: right;
 }
 
 .elementor-widget-wp-widget-zoom-social-icons-widget .zoom-social-icons-list--align-center,
+.zoom-social-icons-shortcode .zoom-social-icons-list--align-center,
 .zoom-social-icons-widget .zoom-social-icons-list--align-center {
     text-align: center;
 }
