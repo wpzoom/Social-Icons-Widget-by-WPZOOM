@@ -237,7 +237,7 @@ class WPZOOM_Social_Icons_Shortcode {
 		ob_start();
 		$instance['widget']->widget(
 			array(
-				'before_widget' => '<section class="widget zoom-social-icons-shortocde">',
+				'before_widget' => '<section class="zoom-social-icons-shortcode">',
 				'after_widget'  => '</section>',
 				'before_title'  => '<h2 class="widget-title">',
 				'after_title'   => '</h2>',
