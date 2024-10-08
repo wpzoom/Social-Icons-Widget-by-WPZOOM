@@ -416,3 +416,11 @@ if ( ! function_exists( 'wpzoom_social_icons_hide_notice' ) ) {
 	}
 }
 add_action( 'wp_loaded', 'wpzoom_social_icons_hide_notice' );
+
+/**
+ * Check if the Elementor Page Builder is enabled load the widget
+ */
+if ( defined( 'ELEMENTOR_VERSION' ) && is_callable( 'Elementor\Plugin::instance' ) ) {
+	require_once 'elementor/wpzoom-social-icons-elementor.php';
+}
+
