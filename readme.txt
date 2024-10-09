@@ -5,7 +5,7 @@ Tags: social icons, social networks, social media, social media icons, icons
 Requires at least: 5.8
 Requires PHP: 7.4
 Tested up to: 6.6
-Stable tag: 4.3.0
+Stable tag: 4.3.1
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -144,6 +144,9 @@ Add the Social Icons Block to the editor and customize the icons as you want.
 8. Widget Settings
 
 == Changelog ==
+
+= 4.3.1 =
+* Added a new Elementor widget to display icon sets created using this plugin
 
 = 4.3.0 =
 * Create Icon Sets and embed them anywhere with Shortcodes
