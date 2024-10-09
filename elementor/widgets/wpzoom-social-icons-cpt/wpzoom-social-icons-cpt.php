@@ -64,7 +64,7 @@ class Wpzoom_Social_Icons_Cpt extends Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return esc_html__( 'Social Icons set by WPZOOM', 'wpzoom-forms' );
+		return esc_html__( 'Social Icons Sets', 'wpzoom-forms' );
 	}
 
 	/**
@@ -164,15 +164,47 @@ class Wpzoom_Social_Icons_Cpt extends Widget_Base {
 		$this->start_controls_section(
 			'_section_social_icons_cpt',
 			array(
-				'label' => esc_html__( 'Social Icons', 'wpzoom-forms' ),
+				'label' => esc_html__( 'Social Icons Sets', 'wpzoom-forms' ),
 				'tab'   => Controls_Manager::TAB_CONTENT,
 			)
 		);
 
+
+        $inline_style = 'style="
+            color:#856404;
+            font-size:12px;
+            line-height:22px;
+            margin-top:10px;
+            font-weight:300 !important;
+            display:block;
+            background:#fff3cd;
+            border:1px solid;
+            border-color:#ffeeba;
+            border-radius:5px;
+            padding:10px 15px;
+        "';
+
+        $cpt_link = admin_url( 'edit.php?post_type=wpzoom-shortcode' );
+
+        $rec_note = sprintf(
+            '<span %s>You can create a new set of icons on the <a href="%s" target="_blank">Social Icons Sets</a> page.</span>',
+            $inline_style,
+            $cpt_link
+        );
+
+        $this->add_control(
+            'recomendation_note',
+            array(
+                'label'       => '' . $rec_note,
+                'type'        => Controls_Manager::HEADING,
+            )
+        );
+
+
 		$this->add_control(
 			'social_icons_post_id',
 			array(
-				'label'    => esc_html__( 'Select a Social Icons Set', 'wpzoom-forms' ),
+				'label'    => esc_html__( 'Select a Set', 'wpzoom-forms' ),
 				'type'     => Controls_Manager::SELECT2,
 				'label_block' => true,
 				'options'  => $this->get_social_icons_posts(),
@@ -183,13 +215,13 @@ class Wpzoom_Social_Icons_Cpt extends Widget_Base {
 	}
 
 	/**
-	 * Get rcb posts.
+	 * Get social posts.
 	 *
 	 * Retrieve a list of all forms posts.
 	 *
 	 * @since 1.0.0
 	 * @access public
-	 * @return array All rcb posts.
+	 * @return array All social posts.
 	 */
 	protected function get_social_icons_posts() {
 

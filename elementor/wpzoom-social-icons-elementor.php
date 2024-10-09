@@ -110,7 +110,7 @@ class WPZOOM_Elementor_Social_Icons {
 		$elements_manager->add_category(
 			'wpzoom-elementor-social-icons',
 			array(
-				'title' => esc_html__( 'WPZOOM Social Icons', 'wpzoom-forms' ),
+				'title' => esc_html__( 'Social Icons by WPZOOM', 'wpzoom-forms' ),
 				'icon'  => 'eicon-social-icons',
 			)
 		);
