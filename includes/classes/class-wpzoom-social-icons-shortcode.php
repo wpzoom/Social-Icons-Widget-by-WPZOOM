@@ -234,6 +234,9 @@ class WPZOOM_Social_Icons_Shortcode {
 		$post_id  = $atts['id'];
 		$instance = $this->get_data( $post_id );
 
+		// Remove title from shortcode.
+		$instance['instance']['title'] = '';
+
 		ob_start();
 		$instance['widget']->widget(
 			array(
