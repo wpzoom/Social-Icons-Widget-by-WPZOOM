@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Main class for Social Icons Widget
  */
-class WPZOOM_Social_Icons_Shortcode {
+class WPZOOM_Social_Icons_Free_Shortcode {
 
 	/**
 	 * Post type name
@@ -253,4 +253,4 @@ class WPZOOM_Social_Icons_Shortcode {
 	}
 }
 
-new WPZOOM_Social_Icons_Shortcode();
+new WPZOOM_Social_Icons_Free_Shortcode();
