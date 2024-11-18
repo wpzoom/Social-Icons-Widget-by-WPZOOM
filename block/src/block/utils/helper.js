@@ -47,9 +47,11 @@ class Helper {
 			'yt.com': 'youtube',
 			'fb.com': 'facebook',
 			't.me': 'telegram',
+            'm.me': 'messenger',
 			'wa.me': 'whatsapp',
 			'zen.yandex.com': 'zen-yandex',
 			'zen.yandex.ru': 'zen-yandex',
+            'bsky.app': 'bluesky',
 		};
 
 		const uri = new URI( url );

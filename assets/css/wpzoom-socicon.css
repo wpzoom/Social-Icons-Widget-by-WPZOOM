@@ -202,6 +202,15 @@
     content: "\e075"
 }
 
+.socicon-bluesky {
+    background-color: #0285FF;
+    color: #0285FF;
+}
+
+.social-icon.socicon-bluesky:before {
+  content: "\e963";
+}
+
 .socicon-buffer {
     background-color: #000000;
     color: #000000;

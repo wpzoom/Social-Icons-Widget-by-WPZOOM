@@ -149,6 +149,13 @@ return array(
 			),
 			'color'    => '#000000',
 		),
+        array(
+            'icon'     => 'bluesky',
+            'category' => array(
+                'social-media',
+            ),
+            'color'    => '#0285FF',
+        ),
 		array(
 			'icon'     => 'buffer',
 			'category' => array(

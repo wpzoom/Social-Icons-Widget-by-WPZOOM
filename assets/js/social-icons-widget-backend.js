@@ -100,6 +100,7 @@
                         'm.me':'messenger',
                         'mail.ru':'mailru',
                         'wa.me':'whatsapp',
+                        'bsky.app': 'bluesky',
                         'news.google.com':'google-news',
                         'itunes.apple.com/us/podcast':'apple-podcasts',
                         'podcasts.apple.com':'apple-podcasts',
