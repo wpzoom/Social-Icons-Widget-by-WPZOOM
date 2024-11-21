@@ -239,7 +239,7 @@ if ( ! function_exists( 'wpzoom_social_icons_plugin_action_links' ) ) {
 		$is_active = is_plugin_active( WPZOOM_SOCIAL_ICONS_PLUGIN_BASE ); // Used to prevent the display of admin notice when activate PRO version of the plugin.
 
 		if ( $is_active ) {
-			$settings_link = sprintf( '<a href="%1$s">%2$s</a>', admin_url( 'options-general.php?page=' . WPZOOM_Social_Icons_Settings::$menu_slug ), esc_html__( 'Settings', 'social-icons-widget-by-wpzoom' ) );
+			$settings_link = sprintf( '<a href="%1$s">%2$s</a>', admin_url( 'edit.php?post_type=wpzoom-shortcode&page=' . WPZOOM_Social_Icons_Settings::$menu_slug ), esc_html__( 'Settings', 'social-icons-widget-by-wpzoom' ) );
 
 			array_unshift( $links, $settings_link );
 
