@@ -43,6 +43,11 @@ if ( empty( $wpzoom_social_icons_settings['disable-block'] ) ) {
 require_once plugin_dir_path( __FILE__ ) . 'includes/classes/class-zoom-social-icons-widget.php';
 require_once plugin_dir_path( __FILE__ ) . 'includes/classes/class-wpzoom-social-icons-shortcode.php';
 
+$current_theme = get_template();
+if( 'inspiro' !== $current_theme  ) {
+    require_once plugin_dir_path( __FILE__ ) . 'includes/classes/class-wpzoom-marketing-banner.php';
+}
+
 if ( empty( $wpzoom_social_icons_settings['disable-widget'] ) ) {
 
 	/**
@@ -386,7 +391,7 @@ if ( ! function_exists( 'wpzoom_social_icons_admin_notices' ) ) {
 		$should_display_notice = ( ( 'index.php' === $pagenow || 'plugins.php' === $pagenow || 'options-general.php' === $pagenow && 'wpzoom-social-icons-widget' === $page ) && $is_active && ! $dismiss_notice ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 
 		if ( $should_display_notice ) {
-			wpzoom_social_icons_upgrade_pro_notice();
+			// wpzoom_social_icons_upgrade_pro_notice();
 		}
 	}
 	add_action( 'admin_notices', 'wpzoom_social_icons_admin_notices' );
