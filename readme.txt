@@ -5,7 +5,7 @@ Tags: social icons, social networks, social media, social media icons, icons
 Requires at least: 5.8
 Requires PHP: 7.4
 Tested up to: 6.7
-Stable tag: 4.3.3
+Stable tag: 4.3.4
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -144,6 +144,9 @@ Add the Social Icons Block to the editor and customize the icons as you want.
 8. Widget Settings
 
 == Changelog ==
+
+= 4.3.4 =
+* Minor bug fixes
 
 = 4.3.3 =
 * New: Bluesky icon
