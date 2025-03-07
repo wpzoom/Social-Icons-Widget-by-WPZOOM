@@ -85,7 +85,8 @@ export default class Inspector extends Component {
 			'right' === this.props.attributes.iconsAlignment;
 
 		return (
-			<InspectorControls>
+            <>
+			<InspectorControls group="settings">
 				<PanelBody
 					title={ __(
 						'Icon Labels Settings',
@@ -230,6 +231,8 @@ export default class Inspector extends Component {
 							</PanelRow>
 						</Fragment>
 				</PanelBody>
+            </InspectorControls>
+            <InspectorControls group="styles">
 				<PanelBody
 					title={ __(
 						'Icon Styling Settings',
@@ -564,6 +567,7 @@ export default class Inspector extends Component {
 					) : null }
 				</PanelBody>
 			</InspectorControls>
+            </>
 		);
 	}
 }
