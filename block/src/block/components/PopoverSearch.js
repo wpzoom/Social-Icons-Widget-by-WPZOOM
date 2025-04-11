@@ -43,7 +43,7 @@ export default function PopoverSearch( {
 				onClick={ onClickHandler }
 				className="url-apply-button"
 			>
-				{ __( 'Apply URL', 'social-icons-widget-by-wpzoom' ) }
+				{ __( 'Detect Icon', 'social-icons-widget-by-wpzoom' ) }
 			</Button>
 		</Fragment>
 	);

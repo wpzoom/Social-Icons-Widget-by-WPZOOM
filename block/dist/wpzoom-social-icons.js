@@ -4920,12 +4920,16 @@ class Edit extends _wordpress_element__WEBPACK_IMPORTED_MODULE_1__["Component"] 
         isPrimary: true,
         onClick: e => this.popoverEditSettingsHandler(e, key),
         className: "popover-edit-details-button"
-      }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__["__"])('Choose Icon Manually', 'social-icons-widget-by-wpzoom')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
+      }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_7__["Icon"], {
+        icon: "edit"
+      }), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__["__"])('Choose Icon & Edit Details', 'social-icons-widget-by-wpzoom')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
         className: "popover-section-divider"
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("span", null, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__["__"])('Or', 'social-icons-widget-by-wpzoom'))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_7__["Button"], {
         className: "popover-custom-svg-button",
         onClick: () => this.openCustomSvgModal(key)
-      }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__["__"])('Insert Custom SVG Icon', 'social-icons-widget-by-wpzoom')))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
+      }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_7__["Icon"], {
+        icon: "editor-code"
+      }), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__["__"])('Insert Custom SVG Icon', 'social-icons-widget-by-wpzoom')))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
         className: "popover-colors-section"
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
         className: "popover-section-title"
@@ -4935,7 +4939,7 @@ class Edit extends _wordpress_element__WEBPACK_IMPORTED_MODULE_1__["Component"] 
         className: "color-pickers-container"
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
         className: "color-picker-option",
-        "data-tooltip": Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__["__"])('Click to change icon color', 'social-icons-widget-by-wpzoom')
+        "data-tooltip": Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__["__"])('Change color', 'social-icons-widget-by-wpzoom')
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("span", {
         className: "color-label"
       }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__["__"])('Normal:', 'social-icons-widget-by-wpzoom')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_ModalColorPicker__WEBPACK_IMPORTED_MODULE_15__["default"], {
@@ -4951,7 +4955,7 @@ class Edit extends _wordpress_element__WEBPACK_IMPORTED_MODULE_1__["Component"] 
         color: list.color
       })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
         className: "color-picker-option",
-        "data-tooltip": Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__["__"])('Click to change hover color', 'social-icons-widget-by-wpzoom')
+        "data-tooltip": Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__["__"])('Change color', 'social-icons-widget-by-wpzoom')
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("span", {
         className: "color-label"
       }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__["__"])('Hover:', 'social-icons-widget-by-wpzoom')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_ModalColorPicker__WEBPACK_IMPORTED_MODULE_15__["default"], {
@@ -5543,7 +5547,7 @@ function PopoverSearch({
     isPrimary: true,
     onClick: onClickHandler,
     className: "url-apply-button"
-  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Apply URL', 'social-icons-widget-by-wpzoom')));
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Detect Icon', 'social-icons-widget-by-wpzoom')));
 }
 
 /***/ }),

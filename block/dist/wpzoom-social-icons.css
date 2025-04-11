@@ -187,7 +187,7 @@
   align-items: center;
   margin-top: 12px;
 }
-.wpzoom-social-icons-popover .popover-content .popover-alternate-options span {
+.wpzoom-social-icons-popover .popover-content .popover-alternate-options > span {
   font-size: 12px;
   color: #666;
   margin-bottom: 8px;
@@ -197,17 +197,17 @@
   justify-content: center;
   align-items: center;
 }
-.wpzoom-social-icons-popover .popover-content .popover-alternate-options span:before, .wpzoom-social-icons-popover .popover-content .popover-alternate-options span:after {
+.wpzoom-social-icons-popover .popover-content .popover-alternate-options > span:before, .wpzoom-social-icons-popover .popover-content .popover-alternate-options > span:after {
   content: "";
   position: absolute;
   height: 1px;
   background-color: #e2e4e7;
   width: calc(50% - 20px);
 }
-.wpzoom-social-icons-popover .popover-content .popover-alternate-options span:before {
+.wpzoom-social-icons-popover .popover-content .popover-alternate-options > span:before {
   left: 0;
 }
-.wpzoom-social-icons-popover .popover-content .popover-alternate-options span:after {
+.wpzoom-social-icons-popover .popover-content .popover-alternate-options > span:after {
   right: 0;
 }
 .wpzoom-social-icons-popover .popover-content .popover-alternate-options .popover-edit-details-button {
@@ -278,7 +278,7 @@
 }
 .wpzoom-social-icons-popover .popover-content .popover-section-divider {
   width: 100%;
-  margin: 12px 0;
+  margin: 12px 0 0;
   position: relative;
   display: flex;
   justify-content: center;
@@ -307,8 +307,8 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 8px;
   height: 36px;
+  margin-top: 8px;
   background-color: #f1f1f1;
   color: #333;
   border: 1px solid #ddd;
@@ -397,7 +397,7 @@
   overflow-y: scroll;
   max-height: 290px;
 }
-.wpzoom-social-icons-modal .social-icon.socicon, .wpzoom-social-icons-modal .social-icon.dashicons, .wpzoom-social-icons-modal .social-icon.genericon, .wpzoom-social-icons-modal .social-icon.academicons, .wpzoom-social-icons-modal .social-icon.fas, .wpzoom-social-icons-modal .social-icon.fab, .wpzoom-social-icons-modal .social-icon.far {
+.wpzoom-social-icons-modal .social-icon.socicon, .wpzoom-social-icons-modal .social-icon-svg, .wpzoom-social-icons-modal .social-icon.dashicons, .wpzoom-social-icons-modal .social-icon.genericon, .wpzoom-social-icons-modal .social-icon.academicons, .wpzoom-social-icons-modal .social-icon.fas, .wpzoom-social-icons-modal .social-icon.fab, .wpzoom-social-icons-modal .social-icon.far {
   color: white;
   padding: 10px;
   margin: 5px;
@@ -504,7 +504,6 @@
 
 .social-icon-svg svg {
   display: inline-block;
-  vertical-align: middle;
 }
 
 .is-style-with-canvas-round .social-icon-svg svg,

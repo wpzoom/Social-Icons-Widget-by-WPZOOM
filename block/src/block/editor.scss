@@ -203,7 +203,7 @@
       align-items: center;
       margin-top: 12px;
 
-      span {
+      > span {
         font-size: 12px;
         color: #666;
         margin-bottom: 8px;
@@ -311,7 +311,7 @@
 
     .popover-section-divider {
       width: 100%;
-      margin: 12px 0;
+      margin: 12px 0 0;
       position: relative;
       display: flex;
       justify-content: center;
@@ -343,8 +343,8 @@
       align-items: center;
       justify-content: center;
       width: 100%;
-      margin-top: 8px;
       height: 36px;
+      margin-top: 8px;
       background-color: #f1f1f1;
       color: #333;
       border: 1px solid #ddd;
@@ -453,7 +453,7 @@
     max-height: 290px;
   }
 
-  .social-icon.socicon, .social-icon.dashicons, .social-icon.genericon, .social-icon.academicons, .social-icon.fas, .social-icon.fab, .social-icon.far {
+  .social-icon.socicon,.social-icon-svg, .social-icon.dashicons, .social-icon.genericon, .social-icon.academicons, .social-icon.fas, .social-icon.fab, .social-icon.far {
     color: white;
     padding: 10px;
     margin: 5px;
@@ -588,7 +588,7 @@
 .social-icon-svg {
   svg {
     display: inline-block;
-    vertical-align: middle;
+    // vertical-align: middle;
   }
 }
 

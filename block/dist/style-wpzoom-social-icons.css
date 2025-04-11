@@ -22,7 +22,7 @@
 .wp-block-wpzoom-blocks-social-icons a.social-icon-link:hover {
   opacity: 0.8;
 }
-.wp-block-wpzoom-blocks-social-icons .social-icon.socicon, .wp-block-wpzoom-blocks-social-icons .social-icon.dashicons, .wp-block-wpzoom-blocks-social-icons .social-icon.genericon, .wp-block-wpzoom-blocks-social-icons .social-icon.academicons, .wp-block-wpzoom-blocks-social-icons .social-icon.fas, .wp-block-wpzoom-blocks-social-icons .social-icon.fab, .wp-block-wpzoom-blocks-social-icons .social-icon.far {
+.wp-block-wpzoom-blocks-social-icons .social-icon.socicon, .wp-block-wpzoom-blocks-social-icons .social-icon-svg, .wp-block-wpzoom-blocks-social-icons .social-icon.dashicons, .wp-block-wpzoom-blocks-social-icons .social-icon.genericon, .wp-block-wpzoom-blocks-social-icons .social-icon.academicons, .wp-block-wpzoom-blocks-social-icons .social-icon.fas, .wp-block-wpzoom-blocks-social-icons .social-icon.fab, .wp-block-wpzoom-blocks-social-icons .social-icon.far {
   color: white;
   padding: 10px;
   margin: 5px;
