@@ -15,6 +15,23 @@ class Helper {
 			return icons;
 		}
 
+		// Special case for WordPress - add both dashicons and genericon variants
+		if (searchIcon.toLowerCase() === 'wordpress') {
+			const wordpressCollector = {};
+			
+			// Look for wordpress icons in different icon sets
+			forEach( icons, ( iconsArray, key ) => {
+				wordpressCollector[ key ] = iconsArray.filter( ( item ) => {
+					if ( isObject( item ) ) {
+						return item.icon === 'wordpress' || item.icon === 'wordpress-alt';
+					}
+					return item === 'wordpress' || item === 'wordpress-alt';
+				} );
+			} );
+			
+			return wordpressCollector;
+		}
+
 		forEach( icons, ( iconsArray, key ) => {
 			collector[ key ] = iconsArray.filter( ( item ) => {
 				if ( isObject( item ) ) {
@@ -52,14 +69,56 @@ class Helper {
 			'zen.yandex.com': 'zen-yandex',
 			'zen.yandex.ru': 'zen-yandex',
             'bsky.app': 'bluesky',
+            'wordpress.org': 'wordpress',
+            'wordpress.com': 'wordpress',
+		};
+
+		// Common domain name mappings
+		const commonDomains = {
+			'wordpress': 'wordpress',
+			'twitter': 'twitter',
+			'x': 'x',
+			'facebook': 'facebook',
+			'instagram': 'instagram',
+			'linkedin': 'linkedin',
+			'youtube': 'youtube',
+			'pinterest': 'pinterest',
+			'github': 'github',
+			'spotify': 'spotify',
+			'tiktok': 'tiktok',
 		};
 
 		const uri = new URI( url );
 
-		let domain =
-			uri.domain() !== undefined
-				? uri.domain().split( '.' ).shift()
-				: uri.scheme();
+		// First check if the full hostname is in our domains list
+		const fullHostname = uri.hostname();
+		if (domains[fullHostname]) {
+			return domains[fullHostname];
+		}
+
+		// Then try to extract the domain name without TLD
+		let domainParts = fullHostname ? fullHostname.split('.') : [];
+		let domain = '';
+		
+		if (domainParts.length >= 2) {
+			// Check for subdomains like shop.example.com
+			// First try the subdomain
+			domain = domainParts[0];
+			let mainDomain = domainParts[domainParts.length - 2]; // Get the main domain name
+			
+			// Check if the subdomain or main domain is in our common domains list
+			if (commonDomains[domain]) {
+				return commonDomains[domain];
+			}
+			if (commonDomains[mainDomain]) {
+				return commonDomains[mainDomain];
+			}
+		}
+		
+		// Fall back to the first part of the domain or the scheme
+		domain = uri.domain() !== undefined
+			? uri.domain().split('.').shift()
+			: uri.scheme();
 
 		const schemaHasIcon = findKey( schemas, ( val, key ) => {
 			return key === uri.scheme();

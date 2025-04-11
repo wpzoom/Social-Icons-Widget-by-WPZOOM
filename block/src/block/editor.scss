@@ -66,59 +66,249 @@
 }
 
 .wpzoom-social-icons-popover {
+  min-width: 300px;
+  max-width: 300px;
+  z-index: 100000;
+
+  .components-popover__content {
+    padding: 0;
+    border-radius: 4px;
+    width: 100%;
+  }
 
   .popover-content {
     display: flex;
-    padding: 5px;
     flex-direction: column;
 
-    .components-button.is-button {
-      padding: 0 10px;
-      line-height: 2;
-      height: 28px;
-      border-radius: 3px;
-      white-space: nowrap;
-      border-width: 1px;
-      border-style: solid;
+    .popover-header {
+      background-color: #f9f9f9;
+      padding: 12px 16px;
+      border-bottom: 1px solid #e2e4e7;
+
+      .popover-title {
+        font-size: 14px;
+        font-weight: 600;
+        color: #1e1e1e;
+      }
     }
 
-    .popover-controls {
+    .popover-section-title {
       display: flex;
-      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #757575;
+      margin-bottom: 8px;
 
-      button.components-button.button-small {
-        margin-left: 5px;
+      .dashicon {
+        margin-right: 5px;
+        font-size: 16px;
+        height: 16px;
+        width: 16px;
+      }
+    }
+
+    .popover-description {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 12px;
+    }
+
+    .popover-url-wrapper {
+      padding: 16px;
+      border-bottom: 1px solid #e2e4e7;
+    }
+
+    .popover-url-input-container {
+      margin-bottom: 10px;
+    }
+
+    .url-input-wrapper {
+      position: relative;
+      margin-bottom: 10px;
+
+      .url-input-icon {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #757575;
       }
 
-      .popover-color-picker {
-        border-radius: 50%;
-        width: 18px;
-        height: 18px;
-        align-self: center;
-        margin: 0px 5px;
+      .url-input {
+        margin-bottom: 0;
+
+        .components-text-control__input {
+          height: 40px;
+          padding-left: 36px;
+          border-radius: 4px;
+          border: 1px solid #ddd;
+
+          &:focus {
+            box-shadow: 0 0 0 1.5px #1e1e1e;
+            border-color: #1e1e1e;
+          }
+        }
+      }
+    }
+
+    .url-apply-button {
+      height: 36px;
+      justify-content: center;
+      width: 100%;
+      margin-top: 8px;
+
+      &.is-primary {
+        background-color: #1e1e1e;
+      }
+    }
+
+    .icon-status-message {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+      padding: 10px 12px;
+      border-radius: 4px;
+      font-size: 13px;
+      animation: fadeIn 0.3s ease-in-out;
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-5px); }
+        to { opacity: 1; transform: translateY(0); }
       }
 
-      .popover-color-picker-wrapper {
+      .dashicon {
+        margin-right: 8px;
+        font-size: 18px;
+      }
+
+      &.success {
+        background-color: #f0f9eb;
+        color: #67c23a;
+        border-left: 3px solid #67c23a;
+      }
+
+      &.notice {
+        background-color: #f4f4f5;
+        color: #909399;
+        border-left: 3px solid #909399;
+      }
+    }
+
+    .popover-alternate-options {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 12px;
+
+      span {
+        font-size: 12px;
+        color: #666;
+        margin-bottom: 8px;
+        position: relative;
         display: flex;
+        width: 100%;
+        justify-content: center;
         align-items: center;
+
+        &:before, &:after {
+          content: "";
+          position: absolute;
+          height: 1px;
+          background-color: #e2e4e7;
+          width: calc(50% - 20px);
+        }
+
+        &:before {
+          left: 0;
+        }
+
+        &:after {
+          right: 0;
+        }
+      }
+
+      .popover-edit-details-button {
+        width: 100%;
+        justify-content: center;
+        height: 36px;
+
+        .dashicon {
+          margin-right: 6px;
+        }
+      }
+    }
+
+    .popover-colors-section {
+      padding: 16px;
+      border-bottom: 1px solid #e2e4e7;
+
+      .color-pickers-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        .color-picker-option {
+          display: flex;
+          align-items: center;
+          position: relative;
+
+          &:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            white-space: nowrap;
+            margin-bottom: 5px;
+            z-index: 10;
+          }
+
+          .color-label {
+            font-size: 13px;
+            margin-right: 8px;
+            color: #555;
+          }
+
+          .popover-color-picker {
+            border-radius: 4px;
+            width: 32px;
+            height: 32px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.2s;
+
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+
+    .popover-footer {
+      padding: 16px;
+      display: flex;
+      justify-content: center;
+
+      .delete-icon-button {
+        width: 100%;
+        justify-content: center;
+
+        .dashicon {
+          margin-right: 6px;
+        }
       }
     }
   }
-
-  .popover-url-wrapper {
-    display: flex;
-
-    .url-input {
-      width: 90%;
-    }
-
-    .url-button {
-      height: 30px;
-      margin-left: 3px;
-      margin-top: 1px;
-    }
-  }
-
 }
 
 .wpzoom-social-icons-modal {

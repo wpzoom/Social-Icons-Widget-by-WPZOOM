@@ -3,7 +3,7 @@
  */
 import { __ } from '@wordpress/i18n';
 import { Fragment, useState } from '@wordpress/element';
-import { TextControl, Button } from '@wordpress/components';
+import { TextControl, Button, Icon } from '@wordpress/components';
 
 export default function PopoverSearch( {
 	value,
@@ -25,25 +25,26 @@ export default function PopoverSearch( {
 
 	return (
 		<Fragment>
-			<TextControl
-				className="url-input"
-				type="text"
-				value={ search }
-				onChange={ setSearch }
-				onKeyDown={ onKeyDownHandler }
-				onFocus={ ( e ) => e.target.select() }
-			/>
+			<div className="url-input-wrapper">
+				<Icon icon="admin-site" className="url-input-icon" />
+				<TextControl
+					className="url-input"
+					type="text"
+					value={ search }
+					onChange={ setSearch }
+					onKeyDown={ onKeyDownHandler }
+					onFocus={ ( e ) => e.target.select() }
+					placeholder={ __('https://example.com', 'social-icons-widget-by-wpzoom') }
+				/>
+			</div>
 			<Button
-				icon="editor-break"
-				label={ __( 'Apply', 'social-icons-widget-by-wpzoom' ) }
+				icon="update"
+				isPrimary
 				onClick={ onClickHandler }
-				className={ [
-					'is-button',
-					'button-small',
-					'is-default',
-					'url-button',
-				] }
-			></Button>
+				className="url-apply-button"
+			>
+				{ __( 'Apply URL', 'social-icons-widget-by-wpzoom' ) }
+			</Button>
 		</Fragment>
 	);
 }

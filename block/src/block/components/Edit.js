@@ -426,7 +426,7 @@ class Edit extends Component {
 		);
 
 		const defaultIcon = {
-			url: 'https://wordpress.org',
+			url: '',
 			icon: 'wordpress',
 			iconKit: 'socicon',
 			color: '#444140',
@@ -524,9 +524,28 @@ class Edit extends Component {
 		const selectedIconsClone = JSON.parse(
 			JSON.stringify( this.props.attributes.selectedIcons )
 		);
-		const iconFromUrl = Helper.filterUrlScheme( newUrl );
 
-		if ( iconFromUrl ) {
+		// Direct WordPress URL detection
+		const isWordPressUrl = newUrl.includes('wordpress.org') ||
+                              newUrl.includes('wordpress.com') ||
+                              newUrl.includes('wp.org');
+
+		const iconFromUrl = isWordPressUrl ? 'wordpress' : Helper.filterUrlScheme( newUrl );
+		let iconDetected = false;
+
+		// Set WordPress icon directly if it's a WordPress URL
+		if (isWordPressUrl) {
+            selectedIconsClone[ key ].iconKit = 'dashicons';
+            selectedIconsClone[ key ].icon = 'wordpress';
+            iconDetected = true;
+            selectedIconsClone[ key ].label = 'WordPress';
+
+            // Let's set WordPress blue color as default
+            selectedIconsClone[ key ].color = '#0866FF';
+            selectedIconsClone[ key ].hoverColor = '#0866FF';
+        }
+        // Otherwise proceed with normal icon detection
+		else if ( iconFromUrl ) {
 			const filteredIcons = Helper.filterIcons( iconFromUrl );
 
 			map( filteredIcons, ( icon, iconKit ) => {
@@ -535,6 +554,7 @@ class Edit extends Component {
 						if ( o.icon === iconFromUrl && selectedIconsClone[ key ].icon !== o.icon ) {
 							selectedIconsClone[ key ].iconKit = iconKit;
 							selectedIconsClone[ key ].icon = o.icon;
+							iconDetected = true;
 
 							if ( o.color ) {
 								selectedIconsClone[ key ].color = o.color;
@@ -551,9 +571,22 @@ class Edit extends Component {
 		}
 
 		selectedIconsClone[ key ].url = newUrl;
-		selectedIconsClone[ key ].showPopover = false;
+		selectedIconsClone[ key ].showPopover = true;
+		selectedIconsClone[ key ].iconDetected = iconDetected;
+		selectedIconsClone[ key ].justUpdated = true;
 
 		this.props.setAttributes( { selectedIcons: selectedIconsClone } );
+
+		// Reset the justUpdated flag after a short delay
+		setTimeout(() => {
+			const resetIconsClone = JSON.parse(
+				JSON.stringify( this.props.attributes.selectedIcons )
+			);
+			if (resetIconsClone[key]) {
+				resetIconsClone[key].justUpdated = false;
+				this.props.setAttributes( { selectedIcons: resetIconsClone } );
+			}
+		}, 2000);
 	};
 
 	moveLeftHandler = ( e, key ) => {
@@ -662,106 +695,131 @@ class Edit extends Component {
 								onClose={ () => this.popoverCloseHandler( key ) }
 							>
 								<div className={ classnames( 'popover-content' ) }>
-									<div
-										className={ classnames(
-											'popover-url-wrapper'
-										) }
-									>
-										<PopoverSearch
-											key={ key }
-											value={ list.url }
-											save={ ( url ) =>
-												this.popoverSearchHandler(
-													key,
-													url
-												)
-											}
-										/>
+									<div className="popover-header">
+										<span className="popover-title">{ __( 'Social Icon Settings', 'social-icons-widget-by-wpzoom' ) }</span>
 									</div>
 
-									<div
-										className={ classnames(
-											'popover-controls'
-										) }
-									>
-										<Button
-											isLink={ true }
-											onClick={ ( e ) =>
-												this.popoverEditSettingsHandler(
-													e,
-													key
-												)
-											}
-										>
-											{ __(
-												'Edit Details',
-												'social-icons-widget-by-wpzoom'
-											) }
-										</Button>
-										<div
-											className={ classnames(
-												'popover-color-picker-wrapper'
-											) }
-										>
-											<ModalColorPicker
-												title={ 'Color' }
-												className={ classnames(
-													'popover-color-picker'
-												) }
-												save={ ( arg ) => {
-													const selectedIconsClone = [
-														...attributes.selectedIcons,
-													];
-													selectedIconsClone[
-														attributes.activeIconIndex
-													].color = arg.color;
-													setAttributes( {
-														selectedIcons: selectedIconsClone,
-													} );
-												} }
-												color={ list.color }
+									<div className={ classnames( 'popover-url-wrapper' ) }>
+										<div className="popover-section-title">
+											<Icon icon="admin-links" />
+											{ __( 'URL & ICON', 'social-icons-widget-by-wpzoom' ) }
+										</div>
+										<div className="popover-description">
+											{ __( 'Enter a website URL to automatically detect its icon', 'social-icons-widget-by-wpzoom' ) }
+										</div>
+										<div className="popover-url-input-container">
+											<PopoverSearch
+												key={ key }
+												value={ list.url }
+												save={ ( url ) =>
+													this.popoverSearchHandler(
+														key,
+														url
+													)
+												}
 											/>
-											<ModalColorPicker
-												title={ 'Hover Color' }
-												className={ classnames(
-													'popover-color-picker'
+										</div>
+										{list.justUpdated && (
+											<div className={`icon-status-message ${list.iconDetected ? 'success' : 'notice'}`}>
+												<Icon icon={list.iconDetected ? 'yes-alt' : 'info-outline'} />
+												{list.iconDetected
+													? __( 'Icon detected and applied!', 'social-icons-widget-by-wpzoom' )
+													: __( 'No matching icon found. Choose manually below.', 'social-icons-widget-by-wpzoom' )
+												}
+											</div>
+										)}
+										<div className="popover-alternate-options">
+											<span>{ __( 'Or', 'social-icons-widget-by-wpzoom' ) }</span>
+											<Button
+												isPrimary
+												onClick={ ( e ) =>
+													this.popoverEditSettingsHandler(
+														e,
+														key
+													)
+												}
+												className="popover-edit-details-button"
+											>
+												<Icon icon="edit" />
+												{ __(
+													'Choose Icon Manually',
+													'social-icons-widget-by-wpzoom'
 												) }
-												save={ ( arg ) => {
-													const selectedIconsClone = [
-														...attributes.selectedIcons,
-													];
-													selectedIconsClone[
-														attributes.activeIconIndex
-													].hoverColor = arg.color;
-													setAttributes( {
-														selectedIcons: selectedIconsClone,
-													} );
-												} }
-												color={ list.hoverColor }
-											/>
-											{ attributes.selectedIcons.length >
-												1 && (
-												<Button
-													onClick={ ( e ) =>
-														this.popoverDeleteIconHandler(
-															e,
-															key
-														)
-													}
-													className={ [
-														'is-button',
-														'button-link-delete',
-														'is-small',
-													] }
-												>
-													{ __(
-														'Delete Icon',
-														'social-icons-widget-by-wpzoom'
-													) }
-												</Button>
-											) }
+											</Button>
 										</div>
 									</div>
+
+									<div className="popover-colors-section">
+										<div className="popover-section-title">
+											<Icon icon="art" />
+											{ __( 'COLORS', 'social-icons-widget-by-wpzoom' ) }
+										</div>
+										<div className="color-pickers-container">
+											<div className="color-picker-option" data-tooltip={ __( 'Click to change icon color', 'social-icons-widget-by-wpzoom' ) }>
+												<span className="color-label">{ __( 'Normal:', 'social-icons-widget-by-wpzoom' ) }</span>
+												<ModalColorPicker
+													title={ __( 'Icon Color', 'social-icons-widget-by-wpzoom' ) }
+													className={ classnames(
+														'popover-color-picker'
+													) }
+													save={ ( arg ) => {
+														const selectedIconsClone = [
+															...attributes.selectedIcons,
+														];
+														selectedIconsClone[
+															attributes.activeIconIndex
+														].color = arg.color;
+														setAttributes( {
+															selectedIcons: selectedIconsClone,
+														} );
+													} }
+													color={ list.color }
+												/>
+											</div>
+											<div className="color-picker-option" data-tooltip={ __( 'Click to change hover color', 'social-icons-widget-by-wpzoom' ) }>
+												<span className="color-label">{ __( 'Hover:', 'social-icons-widget-by-wpzoom' ) }</span>
+												<ModalColorPicker
+													title={ __( 'Hover Color', 'social-icons-widget-by-wpzoom' ) }
+													className={ classnames(
+														'popover-color-picker'
+													) }
+													save={ ( arg ) => {
+														const selectedIconsClone = [
+															...attributes.selectedIcons,
+														];
+														selectedIconsClone[
+															attributes.activeIconIndex
+														].hoverColor = arg.color;
+														setAttributes( {
+															selectedIcons: selectedIconsClone,
+														} );
+													} }
+													color={ list.hoverColor }
+												/>
+											</div>
+										</div>
+									</div>
+
+									{ attributes.selectedIcons.length > 1 && (
+										<div className="popover-footer">
+											<Button
+												isDestructive
+												onClick={ ( e ) =>
+													this.popoverDeleteIconHandler(
+														e,
+														key
+													)
+												}
+												className="delete-icon-button"
+											>
+												<Icon icon="trash" />
+												{ __(
+													'Delete Icon',
+													'social-icons-widget-by-wpzoom'
+												) }
+											</Button>
+										</div>
+									) }
 								</div>
 							</Popover>
 						) }
