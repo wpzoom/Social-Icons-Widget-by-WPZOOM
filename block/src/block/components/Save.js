@@ -68,6 +68,29 @@ class Save extends Component {
 
 			const relAttr = this.getRelAttr();
 			const getTarget = this.getTarget();
+			
+			// Determine if this is a custom SVG icon
+			const isCustomSvg = list.iconKit === 'svg' && list.customSvg;
+			
+			// Prepare the icon content (either SVG or icon font)
+			let iconContent;
+            
+            if (isCustomSvg) {
+                iconContent = (
+                    <span 
+                        className={classnames('social-icon', 'social-icon-svg')}
+                        dangerouslySetInnerHTML={{ __html: list.customSvg }}
+                    ></span>
+                );
+            } else {
+                iconContent = (
+                    <span
+                        className={ classnames(
+                            Helper.getIconClassList( list.iconKit, list.icon )
+                        ) }
+                    ></span>
+                );
+            }
 
 			return (
 				<a
@@ -83,11 +106,7 @@ class Save extends Component {
 							list.hoverColor,
 					} }
 				>
-					<span
-						className={ classnames(
-							Helper.getIconClassList( list.iconKit, list.icon )
-						) }
-					></span>
+					{iconContent}
 					{ showIconsLabel }
 				</a>
 			);

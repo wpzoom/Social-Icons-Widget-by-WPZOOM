@@ -13,7 +13,7 @@ import classnames from 'classnames';
 import { __ } from '@wordpress/i18n';
 import { Component, Fragment } from '@wordpress/element';
 import { withSelect } from '@wordpress/data';
-import { Icon, Button, Popover } from '@wordpress/components';
+import { Icon, Button, Popover, Modal, TextareaControl } from '@wordpress/components';
 import { AlignmentToolbar, BlockControls } from '@wordpress/block-editor';
 import { compose } from '@wordpress/compose';
 
@@ -28,6 +28,16 @@ import SortableArrows from './SortableArrows';
 import ModalColorPicker from './ModalColorPicker';
 
 class Edit extends Component {
+	constructor() {
+		super(...arguments);
+
+		this.state = {
+			isCustomSvgModalOpen: false,
+			customSvgCode: '',
+			activeIconKey: null
+		};
+	}
+
 	getStyleVariations( styleType ) {
 		const styleVariations = {
 			'with-label-canvas-rounded': {
@@ -434,6 +444,7 @@ class Edit extends Component {
 			label: 'WordPress',
 			showPopover: true,
 			isActive: true,
+			customSvg: null,
 		};
 
 		if ( ! isEmpty( styleVariation.defaultIcon.color ) ) {
@@ -640,8 +651,64 @@ class Edit extends Component {
 		return undefined;
 	};
 
+	openCustomSvgModal = (key) => {
+		this.setState({
+			isCustomSvgModalOpen: true,
+			activeIconKey: key,
+			customSvgCode: ''
+		});
+	}
+
+	closeCustomSvgModal = () => {
+		this.setState({
+			isCustomSvgModalOpen: false,
+			customSvgCode: '',
+			activeIconKey: null
+		});
+	}
+
+	updateCustomSvgCode = (value) => {
+		this.setState({ customSvgCode: value });
+	}
+
+	applySvgIcon = () => {
+		const { customSvgCode, activeIconKey } = this.state;
+
+		if (!customSvgCode || customSvgCode.trim() === '') {
+			return;
+		}
+
+		if (activeIconKey === null) {
+			return;
+		}
+
+		// Create a sanitized SVG code (basic sanitization, may need enhancement)
+		const sanitizedSvg = customSvgCode.replace(/javascript:/gi, '')
+										.replace(/on\w+=/gi, '')
+										.replace(/data:/gi, '');
+
+		const selectedIconsClone = JSON.parse(
+			JSON.stringify(this.props.attributes.selectedIcons)
+		);
+
+		// Set the custom SVG for the selected icon
+		selectedIconsClone[activeIconKey].iconKit = 'svg';
+		selectedIconsClone[activeIconKey].icon = 'custom-svg';
+		selectedIconsClone[activeIconKey].customSvg = sanitizedSvg;
+		selectedIconsClone[activeIconKey].showPopover = false;
+
+		// Update the label if it's empty
+		if (!selectedIconsClone[activeIconKey].label || selectedIconsClone[activeIconKey].label === '') {
+			selectedIconsClone[activeIconKey].label = __('Custom Icon', 'social-icons-widget-by-wpzoom');
+		}
+
+		this.props.setAttributes({ selectedIcons: selectedIconsClone });
+		this.closeCustomSvgModal();
+	}
+
 	render() {
 		const { attributes, setAttributes, isSelected } = this.props;
+		const { isCustomSvgModalOpen, customSvgCode } = this.state;
 
 		let { className } = this.props;
 
@@ -662,6 +729,27 @@ class Edit extends Component {
 			const relAttr = this.getRelAttr();
 			const getTarget = this.getTarget();
 
+			let iconContent;
+
+			if (list.iconKit === 'svg' && list.customSvg) {
+				// Render the custom SVG icon
+				iconContent = (
+					<span
+						className={classnames('social-icon', 'social-icon-svg')}
+						dangerouslySetInnerHTML={{ __html: list.customSvg }}
+					></span>
+				);
+			} else {
+				// Render the standard icon font
+				iconContent = (
+					<span
+						className={classnames(
+							Helper.getIconClassList(list.iconKit, list.icon)
+						)}
+					></span>
+				);
+			}
+
 			return (
 				<Fragment key={ key }>
 					<a
@@ -679,11 +767,7 @@ class Edit extends Component {
 								list.hoverColor,
 						} }
 					>
-						<span
-							className={ classnames(
-								Helper.getIconClassList( list.iconKit, list.icon )
-							) }
-						></span>
+						{iconContent}
 						{ showIconsLabel }
 						{ list.showPopover && isSelected && (
 							<Popover
@@ -745,6 +829,20 @@ class Edit extends Component {
 													'social-icons-widget-by-wpzoom'
 												) }
 											</Button>
+
+											<div className="popover-section-divider">
+												<span>{ __( 'Or', 'social-icons-widget-by-wpzoom' ) }</span>
+											</div>
+
+											<Button
+												className="popover-custom-svg-button"
+												onClick={() => this.openCustomSvgModal(key)}
+											>
+												{ __(
+													'Insert Custom SVG Icon',
+													'social-icons-widget-by-wpzoom'
+												) }
+											</Button>
 										</div>
 									</div>
 
@@ -754,7 +852,7 @@ class Edit extends Component {
 											{ __( 'COLORS', 'social-icons-widget-by-wpzoom' ) }
 										</div>
 										<div className="color-pickers-container">
-											<div className="color-picker-option" data-tooltip={ __( 'Change color', 'social-icons-widget-by-wpzoom' ) }>
+											<div className="color-picker-option" data-tooltip={ __( 'Click to change icon color', 'social-icons-widget-by-wpzoom' ) }>
 												<span className="color-label">{ __( 'Normal:', 'social-icons-widget-by-wpzoom' ) }</span>
 												<ModalColorPicker
 													title={ __( 'Icon Color', 'social-icons-widget-by-wpzoom' ) }
@@ -775,7 +873,7 @@ class Edit extends Component {
 													color={ list.color }
 												/>
 											</div>
-											<div className="color-picker-option" data-tooltip={ __( 'Change color', 'social-icons-widget-by-wpzoom' ) }>
+											<div className="color-picker-option" data-tooltip={ __( 'Click to change hover color', 'social-icons-widget-by-wpzoom' ) }>
 												<span className="color-label">{ __( 'Hover:', 'social-icons-widget-by-wpzoom' ) }</span>
 												<ModalColorPicker
 													title={ __( 'Hover Color', 'social-icons-widget-by-wpzoom' ) }
@@ -933,6 +1031,55 @@ class Edit extends Component {
 							onClose={ this.closeModal }
 						/>
 					) }
+
+					{isCustomSvgModalOpen && (
+						<Modal
+							title={__('Insert Custom SVG Icon', 'social-icons-widget-by-wpzoom')}
+							onRequestClose={this.closeCustomSvgModal}
+							className="wpzoom-custom-svg-modal"
+						>
+							<div className="wpzoom-custom-svg-modal-content">
+								<p className="wpzoom-custom-svg-modal-description">
+									{__("Paste your SVG code below. Make sure it's clean and valid SVG code for security reasons.", 'social-icons-widget-by-wpzoom')}
+								</p>
+
+								<TextareaControl
+									label={__('SVG Code', 'social-icons-widget-by-wpzoom')}
+									help={__('Paste SVG code here. For security reasons, scripts and event handlers will be removed.', 'social-icons-widget-by-wpzoom')}
+									value={customSvgCode}
+									onChange={this.updateCustomSvgCode}
+									rows={10}
+									className="wpzoom-custom-svg-textarea"
+								/>
+
+								{customSvgCode && customSvgCode.trim() !== '' && (
+									<div className="wpzoom-custom-svg-preview">
+										<p className="wpzoom-custom-svg-preview-title">{__('Preview:', 'social-icons-widget-by-wpzoom')}</p>
+										<div
+											className="wpzoom-custom-svg-preview-box"
+											dangerouslySetInnerHTML={{ __html: customSvgCode }}
+										/>
+									</div>
+								)}
+
+								<div className="wpzoom-custom-svg-modal-buttons">
+									<Button
+										isPrimary
+										onClick={this.applySvgIcon}
+										disabled={!customSvgCode || customSvgCode.trim() === ''}
+									>
+										{__('Apply SVG Icon', 'social-icons-widget-by-wpzoom')}
+									</Button>
+									<Button
+										isSecondary
+										onClick={this.closeCustomSvgModal}
+									>
+										{__('Cancel', 'social-icons-widget-by-wpzoom')}
+									</Button>
+								</div>
+							</div>
+						</Modal>
+					)}
 				</div>
 			</Fragment>
 		);

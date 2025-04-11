@@ -296,6 +296,7 @@ registerBlockType( 'wpzoom-blocks/social-icons', {
 					label: 'Facebook',
 					showPopover: false,
 					isActive: false,
+					customSvg: null,
 				},
 				{
 					url: 'https://x.com',
@@ -306,6 +307,7 @@ registerBlockType( 'wpzoom-blocks/social-icons', {
 					label: 'X',
 					showPopover: false,
 					isActive: false,
+					customSvg: null,
 				},
 				{
 					url: 'https://instagram.com',
@@ -316,6 +318,7 @@ registerBlockType( 'wpzoom-blocks/social-icons', {
 					label: 'Instagram',
 					showPopover: false,
 					isActive: false,
+					customSvg: null,
 				},
 			],
 		},

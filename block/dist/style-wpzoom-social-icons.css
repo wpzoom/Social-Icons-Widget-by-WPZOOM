@@ -196,4 +196,63 @@
   display: none !important;
 }
 
+.social-icon-svg {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+.social-icon-svg svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+.social-icon-svg svg * {
+  fill: currentColor;
+}
+
+.social-icon, .social-icon-svg {
+  box-sizing: content-box;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.is-style-with-canvas-round .social-icon-svg svg,
+.is-style-with-canvas-rounded .social-icon-svg svg,
+.is-style-with-canvas-squared .social-icon-svg svg,
+.is-style-with-label-canvas-rounded .social-icon-svg svg {
+  fill: #fff !important;
+}
+.is-style-with-canvas-round .social-icon-svg svg *,
+.is-style-with-canvas-rounded .social-icon-svg svg *,
+.is-style-with-canvas-squared .social-icon-svg svg *,
+.is-style-with-label-canvas-rounded .social-icon-svg svg * {
+  fill: #fff !important;
+}
+
+.is-style-without-canvas .social-icon-svg svg,
+.is-style-without-canvas-with-border .social-icon-svg svg,
+.is-style-without-canvas-with-label .social-icon-svg svg {
+  fill: var(--wpz-social-icons-block-item-color);
+}
+.is-style-without-canvas .social-icon-svg svg *,
+.is-style-without-canvas-with-border .social-icon-svg svg *,
+.is-style-without-canvas-with-label .social-icon-svg svg * {
+  fill: var(--wpz-social-icons-block-item-color);
+}
+.is-style-without-canvas .social-icon-link:hover .social-icon-svg svg,
+.is-style-without-canvas-with-border .social-icon-link:hover .social-icon-svg svg,
+.is-style-without-canvas-with-label .social-icon-link:hover .social-icon-svg svg {
+  fill: var(--wpz-social-icons-block-item-color-hover);
+}
+.is-style-without-canvas .social-icon-link:hover .social-icon-svg svg *,
+.is-style-without-canvas-with-border .social-icon-link:hover .social-icon-svg svg *,
+.is-style-without-canvas-with-label .social-icon-link:hover .social-icon-svg svg * {
+  fill: var(--wpz-social-icons-block-item-color-hover);
+}
+
+.social-icon-svg {
+  width: var(--wpz-social-icons-block-item-font-size);
+  height: var(--wpz-social-icons-block-item-font-size);
+}
+
 /*# sourceMappingURL=style-wpzoom-social-icons.css.map*/

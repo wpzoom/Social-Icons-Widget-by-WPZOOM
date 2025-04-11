@@ -251,3 +251,75 @@
 .zoom-social-icons-legacy-widget-description:empty {
 	display: none !important;
 }
+
+// Add SVG icon support
+.social-icon-svg {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+    
+    * {
+      fill: currentColor;
+    }
+  }
+}
+
+// Apply proper box sizing to all social icons
+.social-icon, .social-icon-svg {
+  box-sizing: content-box;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+// SVG icon styles for different canvas types
+.is-style-with-canvas-round,
+.is-style-with-canvas-rounded,
+.is-style-with-canvas-squared,
+.is-style-with-label-canvas-rounded {
+  .social-icon-svg {
+    svg {
+      fill: #fff !important;
+      
+      * {
+        fill: #fff !important;
+      }
+    }
+  }
+}
+
+.is-style-without-canvas,
+.is-style-without-canvas-with-border,
+.is-style-without-canvas-with-label {
+  .social-icon-svg {
+    svg {
+      fill: var(--wpz-social-icons-block-item-color);
+      
+      * {
+        fill: var(--wpz-social-icons-block-item-color);
+      }
+    }
+  }
+  
+  .social-icon-link:hover {
+    .social-icon-svg {
+      svg {
+        fill: var(--wpz-social-icons-block-item-color-hover);
+        
+        * {
+          fill: var(--wpz-social-icons-block-item-color-hover);
+        }
+      }
+    }
+  }
+}
+
+// Ensure custom SVG icons follow the sizing rules
+.social-icon-svg {
+  width: var(--wpz-social-icons-block-item-font-size);
+  height: var(--wpz-social-icons-block-item-font-size);
+}
