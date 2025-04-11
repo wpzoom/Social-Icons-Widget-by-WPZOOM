@@ -754,7 +754,7 @@ class Edit extends Component {
 											{ __( 'COLORS', 'social-icons-widget-by-wpzoom' ) }
 										</div>
 										<div className="color-pickers-container">
-											<div className="color-picker-option" data-tooltip={ __( 'Click to change icon color', 'social-icons-widget-by-wpzoom' ) }>
+											<div className="color-picker-option" data-tooltip={ __( 'Change color', 'social-icons-widget-by-wpzoom' ) }>
 												<span className="color-label">{ __( 'Normal:', 'social-icons-widget-by-wpzoom' ) }</span>
 												<ModalColorPicker
 													title={ __( 'Icon Color', 'social-icons-widget-by-wpzoom' ) }
@@ -775,7 +775,7 @@ class Edit extends Component {
 													color={ list.color }
 												/>
 											</div>
-											<div className="color-picker-option" data-tooltip={ __( 'Click to change hover color', 'social-icons-widget-by-wpzoom' ) }>
+											<div className="color-picker-option" data-tooltip={ __( 'Change color', 'social-icons-widget-by-wpzoom' ) }>
 												<span className="color-label">{ __( 'Hover:', 'social-icons-widget-by-wpzoom' ) }</span>
 												<ModalColorPicker
 													title={ __( 'Hover Color', 'social-icons-widget-by-wpzoom' ) }

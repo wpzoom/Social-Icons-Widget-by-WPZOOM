@@ -4846,7 +4846,7 @@ class Edit extends _wordpress_element__WEBPACK_IMPORTED_MODULE_1__["Component"] 
         className: "color-pickers-container"
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
         className: "color-picker-option",
-        "data-tooltip": Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__["__"])('Click to change icon color', 'social-icons-widget-by-wpzoom')
+        "data-tooltip": Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__["__"])('Change color', 'social-icons-widget-by-wpzoom')
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("span", {
         className: "color-label"
       }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__["__"])('Normal:', 'social-icons-widget-by-wpzoom')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_ModalColorPicker__WEBPACK_IMPORTED_MODULE_15__["default"], {
@@ -4862,7 +4862,7 @@ class Edit extends _wordpress_element__WEBPACK_IMPORTED_MODULE_1__["Component"] 
         color: list.color
       })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
         className: "color-picker-option",
-        "data-tooltip": Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__["__"])('Click to change hover color', 'social-icons-widget-by-wpzoom')
+        "data-tooltip": Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__["__"])('Change color', 'social-icons-widget-by-wpzoom')
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("span", {
         className: "color-label"
       }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__["__"])('Hover:', 'social-icons-widget-by-wpzoom')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_ModalColorPicker__WEBPACK_IMPORTED_MODULE_15__["default"], {
