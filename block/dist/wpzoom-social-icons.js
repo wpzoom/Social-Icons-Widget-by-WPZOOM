@@ -4836,9 +4836,7 @@ class Edit extends _wordpress_element__WEBPACK_IMPORTED_MODULE_1__["Component"] 
         isPrimary: true,
         onClick: e => this.popoverEditSettingsHandler(e, key),
         className: "popover-edit-details-button"
-      }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_7__["Icon"], {
-        icon: "edit"
-      }), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__["__"])('Choose Icon Manually', 'social-icons-widget-by-wpzoom')))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
+      }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__["__"])('Choose Icon Manually', 'social-icons-widget-by-wpzoom')))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
         className: "popover-colors-section"
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
         className: "popover-section-title"

@@ -740,7 +740,6 @@ class Edit extends Component {
 												}
 												className="popover-edit-details-button"
 											>
-												<Icon icon="edit" />
 												{ __(
 													'Choose Icon Manually',
 													'social-icons-widget-by-wpzoom'
