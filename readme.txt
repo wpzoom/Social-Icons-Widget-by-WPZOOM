@@ -2,10 +2,10 @@
 Contributors: WPZOOM, nvartolomei, ciorici
 Donate link: https://www.wpzoom.com/
 Tags: social icons, social networks, social media, social media icons, icons
-Requires at least: 5.8
+Requires at least: 6.0
 Requires PHP: 7.4
-Tested up to: 6.7
-Stable tag: 4.3.4
+Tested up to: 6.8
+Stable tag: 4.4.0
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,10 @@ Quickly add icons with links to your profiles from different social networks and
 * and many new features coming soon!
 
 ⭐️ **[Get the PRO version!](https://www.wpzoom.com/plugins/social-widget/?utm_source=wporg&utm_medium=website&utm_campaign=free_description)** ⭐️
+
+= What's new in 4.4.0 =
+* **NEW: Add SVG Icons in the Social Icons Block**
+
 
 = What's new in 4.0.0 =
 * **NEW: Gutenberg Block**
@@ -76,7 +80,7 @@ You can view the widget live in all our themes at [WPZOOM](https://www.wpzoom.co
 * [Inspiro Theme](https://demo.wpzoom.com/?theme=inspiro-demo) - sidebar panel and footer
 
 = Features: =
-
+* SVG Icons Support
 * Gutenberg Block
 * Icon Sets + Shortcodes - **NEW**
 * 100+ Sites/Social Networks supported
@@ -134,8 +138,8 @@ Add the Social Icons Block to the editor and customize the icons as you want.
 
 == Screenshots ==
 
-1. NEW: Social Icons Block
-2. NEW: Social Icons Block
+1. Social Icons Block
+2. Social Icons Block
 3. Rounded Corners Style
 4. Square Style
 5. Rounded Icons Style
@@ -144,6 +148,10 @@ Add the Social Icons Block to the editor and customize the icons as you want.
 8. Widget Settings
 
 == Changelog ==
+
+= 4.4.0 =
+* Added SVG Icons support in the Social Icons Block
+* UI Improvements to the Block
 
 = 4.3.4 =
 * Minor bug fixes
