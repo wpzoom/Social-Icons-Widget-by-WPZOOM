@@ -88,11 +88,11 @@ registerBlockType( 'wpzoom-blocks/social-sharing', {
 		},
 		paddingVertical: {
 			type: 'number',
-			default: 10,
+			default: 5,
 		},
 		paddingHorizontal: {
 			type: 'number',
-			default: 17,
+			default: 15,
 		},
 		marginVertical: {
 			type: 'number',
@@ -138,6 +138,12 @@ registerBlockType( 'wpzoom-blocks/social-sharing', {
 				{
 					id: 'x',
 					name: 'X',
+					enabled: true,
+					color: '#000000'
+				},
+				{
+					id: 'threads',
+					name: 'Threads',
 					enabled: true,
 					color: '#000000'
 				},

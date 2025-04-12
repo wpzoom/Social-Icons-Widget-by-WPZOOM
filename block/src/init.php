@@ -138,8 +138,8 @@ function wpzoom_social_sharing_block_render_callback( $attributes ) {
 	$labelColor = isset( $attributes['labelColor'] ) ? $attributes['labelColor'] : 'inherit';
 	$iconSize = isset( $attributes['iconSize'] ) ? $attributes['iconSize'] : 20;
 	$labelSize = isset( $attributes['labelSize'] ) ? $attributes['labelSize'] : 16;
-	$paddingVertical = isset( $attributes['paddingVertical'] ) ? $attributes['paddingVertical'] : 10;
-	$paddingHorizontal = isset( $attributes['paddingHorizontal'] ) ? $attributes['paddingHorizontal'] : 17;
+	$paddingVertical = isset( $attributes['paddingVertical'] ) ? $attributes['paddingVertical'] : 5;
+	$paddingHorizontal = isset( $attributes['paddingHorizontal'] ) ? $attributes['paddingHorizontal'] : 15;
 	$marginVertical = isset( $attributes['marginVertical'] ) ? $attributes['marginVertical'] : 5;
 	$marginHorizontal = isset( $attributes['marginHorizontal'] ) ? $attributes['marginHorizontal'] : 5;
 	$borderRadius = isset( $attributes['borderRadius'] ) ? $attributes['borderRadius'] : 50;
@@ -203,6 +203,12 @@ function wpzoom_social_sharing_block_render_callback( $attributes ) {
 				'enabled' => true,
 				'color' => '#000000'
 			),
+            array(
+                'id' => 'threads',
+                'name' => __( 'Threads', 'social-icons-widget-by-wpzoom' ),
+                'enabled' => true,
+                'color' => '#000000'
+            ),
 			array(
 				'id' => 'linkedin',
 				'name' => __( 'LinkedIn', 'social-icons-widget-by-wpzoom' ),
