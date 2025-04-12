@@ -745,7 +745,7 @@
 
 .is-style-outlined-pill .social-sharing-icon {
   background-color: transparent !important;
-  border: 1px solid #000 !important;
+  border: 1px solid #000;
   border-radius: 50%;
 }
 .is-style-outlined-pill .social-sharing-icon svg {
@@ -757,7 +757,7 @@
 
 .is-style-outlined-square .social-sharing-icon {
   background-color: transparent !important;
-  border: 1px solid #000 !important;
+  border: 1px solid #000;
   border-radius: 0;
 }
 .is-style-outlined-square .social-sharing-icon svg {

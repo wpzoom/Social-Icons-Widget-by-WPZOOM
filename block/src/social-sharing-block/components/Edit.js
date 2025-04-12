@@ -122,6 +122,18 @@ export default function Edit({ attributes, setAttributes, className, isSelected 
 								bgColor = 'transparent';
 							}
 							
+							// Handle border styling
+							let borderStyle = 'none';
+							const borderWidth = attributes.borderWidth || 1;
+							
+							if (isOutlinedPill || isOutlinedSquare) {
+								// For outlined styles, use icon color for border and respect border width
+								borderStyle = `${borderWidth}px solid ${iconColorValue}`;
+							} else if (hasBorder) {
+								const borderColor = attributes.borderColor || iconColorValue;
+								borderStyle = `${borderWidth}px solid ${borderColor}`;
+							}
+							
 							const buttonStyle = {
 								padding: `${paddingVertical}px ${paddingHorizontal}px`,
 								margin: `${marginVertical}px ${marginHorizontal}px`,
@@ -129,7 +141,7 @@ export default function Edit({ attributes, setAttributes, className, isSelected 
 								fontSize: `${iconSize}px`,
 								color: iconColorValue,
 								backgroundColor: bgColor,
-								border: (isOutlinedPill || isOutlinedSquare) ? `1px solid ${iconColorValue}` : (hasBorder ? '1px solid' : 'none'),
+								border: borderStyle,
 							};
 
 							// Minimal style has reduced padding

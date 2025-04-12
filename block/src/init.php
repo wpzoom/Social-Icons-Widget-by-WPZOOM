@@ -144,6 +144,8 @@ function wpzoom_social_sharing_block_render_callback( $attributes ) {
 	$marginHorizontal = isset( $attributes['marginHorizontal'] ) ? $attributes['marginHorizontal'] : 5;
 	$borderRadius = isset( $attributes['borderRadius'] ) ? $attributes['borderRadius'] : 50;
 	$hasBorder = isset( $attributes['hasBorder'] ) ? $attributes['hasBorder'] : false;
+	$borderWidth = isset( $attributes['borderWidth'] ) ? $attributes['borderWidth'] : 1;
+	$borderColor = isset( $attributes['borderColor'] ) ? $attributes['borderColor'] : '';
 	$platforms = isset( $attributes['platforms'] ) ? $attributes['platforms'] : array();
 	$oneToneColor = isset( $attributes['oneToneColor'] ) ? $attributes['oneToneColor'] : '#000000';
 
@@ -263,10 +265,14 @@ function wpzoom_social_sharing_block_render_callback( $attributes ) {
 		
 		// Set border based on style
 		$border_style = '';
+		$border_width_px = $borderWidth . 'px';
+		
 		if ($is_outlined_pill || $is_outlined_square) {
-			$border_style = 'border:1px solid ' . $icon_color_value . ';';
+			// For outlined styles, use icon color for border and respect border width
+			$border_style = 'border:' . $border_width_px . ' solid ' . $icon_color_value . ';';
 		} elseif ($hasBorder) {
-			$border_style = 'border:1px solid;';
+			$border_color = !empty($borderColor) ? $borderColor : $icon_color_value;
+			$border_style = 'border:' . $border_width_px . ' solid ' . $border_color . ';';
 		}
 		
 		// Calculate padding

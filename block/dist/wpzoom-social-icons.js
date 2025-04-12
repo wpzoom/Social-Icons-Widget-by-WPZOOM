@@ -14656,6 +14656,14 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_7__["registerBlockType"])('wpz
       type: 'boolean',
       default: false
     },
+    borderWidth: {
+      type: 'number',
+      default: 1
+    },
+    borderColor: {
+      type: 'string',
+      default: ''
+    },
     oneToneColor: {
       type: 'string',
       default: '#000000'
@@ -14957,6 +14965,18 @@ function Edit({
       bgColor = oneToneColor || '#000000';
     } else if (isOutlinedPill || isOutlinedSquare || isMinimal) {
       bgColor = 'transparent';
+    } // Handle border styling
+
+
+    let borderStyle = 'none';
+    const borderWidth = attributes.borderWidth || 1;
+
+    if (isOutlinedPill || isOutlinedSquare) {
+      // For outlined styles, use icon color for border and respect border width
+      borderStyle = `${borderWidth}px solid ${iconColorValue}`;
+    } else if (hasBorder) {
+      const borderColor = attributes.borderColor || iconColorValue;
+      borderStyle = `${borderWidth}px solid ${borderColor}`;
     }
 
     const buttonStyle = {
@@ -14966,7 +14986,7 @@ function Edit({
       fontSize: `${iconSize}px`,
       color: iconColorValue,
       backgroundColor: bgColor,
-      border: isOutlinedPill || isOutlinedSquare ? `1px solid ${iconColorValue}` : hasBorder ? '1px solid' : 'none'
+      border: borderStyle
     }; // Minimal style has reduced padding
 
     if (isMinimal) {
@@ -15518,7 +15538,39 @@ function Inspector({
     }),
     disabled: hasOutlinedPillStyle || hasOutlinedSquareStyle || hasMinimalStyle,
     help: hasOutlinedPillStyle || hasOutlinedSquareStyle ? Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Border is always enabled for outlined styles.', 'social-icons-widget-by-wpzoom') : hasMinimalStyle ? Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Border is not applicable for minimal style.', 'social-icons-widget-by-wpzoom') : ''
-  })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["__experimentalPanelColorGradientSettings"], {
+  }), (hasBorder || hasOutlinedPillStyle || hasOutlinedSquareStyle) && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["RangeControl"], {
+    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Border Width', 'social-icons-widget-by-wpzoom'),
+    value: attributes.borderWidth || 1,
+    onChange: value => setAttributes({
+      borderWidth: value
+    }),
+    min: 1,
+    max: 5,
+    allowReset: true,
+    resetFallbackValue: 1,
+    withInputField: true
+  }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+    className: "wpzoom-border-color-setting"
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["__experimentalPanelColorGradientSettings"], {
+    title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Border Color', 'social-icons-widget-by-wpzoom'),
+    initialOpen: false,
+    settings: [{
+      colorValue: hasOutlinedPillStyle || hasOutlinedSquareStyle ? iconColor : attributes.borderColor || '#000000',
+      onColorChange: value => {
+        if (hasOutlinedPillStyle || hasOutlinedSquareStyle) {
+          setAttributes({
+            iconColor: value
+          });
+        } else {
+          setAttributes({
+            borderColor: value
+          });
+        }
+      },
+      label: hasOutlinedPillStyle || hasOutlinedSquareStyle ? Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Border & Icon Color', 'social-icons-widget-by-wpzoom') : Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Border Color', 'social-icons-widget-by-wpzoom'),
+      help: hasOutlinedPillStyle || hasOutlinedSquareStyle ? Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('For outlined styles, border color matches icon color', 'social-icons-widget-by-wpzoom') : ''
+    }]
+  })))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["__experimentalPanelColorGradientSettings"], {
     title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Color Settings', 'social-icons-widget-by-wpzoom'),
     initialOpen: true,
     settings: [// Always include the One Tone Background Color option but disable it when not using One Tone style

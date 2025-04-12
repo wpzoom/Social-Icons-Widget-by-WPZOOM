@@ -114,6 +114,14 @@ registerBlockType( 'wpzoom-blocks/social-sharing', {
 			type: 'boolean',
 			default: false,
 		},
+		borderWidth: {
+			type: 'number',
+			default: 1,
+		},
+		borderColor: {
+			type: 'string',
+			default: '',
+		},
 		oneToneColor: {
 			type: 'string',
 			default: '#000000',

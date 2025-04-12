@@ -529,6 +529,46 @@ export default function Inspector({ attributes, setAttributes }) {
 									''
 						}
 					/>
+					
+					{(hasBorder || hasOutlinedPillStyle || hasOutlinedSquareStyle) && (
+						<>
+							<RangeControl
+								label={__('Border Width', 'social-icons-widget-by-wpzoom')}
+								value={attributes.borderWidth || 1}
+								onChange={(value) => setAttributes({ borderWidth: value })}
+								min={1}
+								max={5}
+								allowReset
+								resetFallbackValue={1}
+								withInputField
+							/>
+							
+							<div className="wpzoom-border-color-setting">
+								<PanelColorGradientSettings
+									title={__('Border Color', 'social-icons-widget-by-wpzoom')}
+									initialOpen={false}
+									settings={[
+										{
+											colorValue: (hasOutlinedPillStyle || hasOutlinedSquareStyle) ? iconColor : (attributes.borderColor || '#000000'),
+											onColorChange: (value) => {
+												if (hasOutlinedPillStyle || hasOutlinedSquareStyle) {
+													setAttributes({ iconColor: value });
+												} else {
+													setAttributes({ borderColor: value });
+												}
+											},
+											label: (hasOutlinedPillStyle || hasOutlinedSquareStyle) 
+												? __('Border & Icon Color', 'social-icons-widget-by-wpzoom')
+												: __('Border Color', 'social-icons-widget-by-wpzoom'),
+											help: (hasOutlinedPillStyle || hasOutlinedSquareStyle)
+												? __('For outlined styles, border color matches icon color', 'social-icons-widget-by-wpzoom')
+												: '',
+										}
+									]}
+								/>
+							</div>
+						</>
+					)}
 				</PanelBody>
 
 				<PanelColorGradientSettings
