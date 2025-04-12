@@ -3881,7 +3881,7 @@ Object(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_11__["addFilter"])('blocks.getB
 
 Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_13__["registerBlockType"])('wpzoom-blocks/social-icons', {
   // Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
-  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_12__["__"])('Social Icons Block', 'social-icons-widget-by-wpzoom'),
+  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_12__["__"])('Social Icons PRO - WPZOOM', 'social-icons-widget-by-wpzoom'),
   // Block title.
   description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_12__["__"])('Display icons with links to social media platforms.', 'social-icons-widget-by-wpzoom'),
   icon: {
@@ -3896,7 +3896,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_13__["registerBlockType"])('wp
   },
   category: 'wpzoom-blocks',
   // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
-  keywords: [Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_12__["__"])('Social Icons', 'social-icons-widget-by-wpzoom'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_12__["__"])('Dashicons', 'social-icons-widget-by-wpzoom'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_12__["__"])('Socicons', 'social-icons-widget-by-wpzoom'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_12__["__"])('Fontawesome', 'social-icons-widget-by-wpzoom'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_12__["__"])('Academic Icons', 'social-icons-widget-by-wpzoom')],
+  keywords: [Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_12__["__"])('Social Icons', 'social-icons-widget-by-wpzoom'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_12__["__"])('icon', 'social-icons-widget-by-wpzoom'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_12__["__"])('svg', 'social-icons-widget-by-wpzoom'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_12__["__"])('share', 'social-icons-widget-by-wpzoom'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_12__["__"])('sharing', 'social-icons-widget-by-wpzoom'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_12__["__"])('Fontawesome', 'social-icons-widget-by-wpzoom')],
   attributes: {
     wasStyled: {
       type: 'boolean',

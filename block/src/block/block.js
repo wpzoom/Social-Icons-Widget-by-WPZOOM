@@ -156,7 +156,7 @@ addFilter(
  */
 registerBlockType( 'wpzoom-blocks/social-icons', {
 	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
-	title: __( 'Social Icons Block', 'social-icons-widget-by-wpzoom' ), // Block title.
+	title: __( 'Social Icons PRO - WPZOOM', 'social-icons-widget-by-wpzoom' ), // Block title.
 	description: __(
 		'Display icons with links to social media platforms.',
 		'social-icons-widget-by-wpzoom'
@@ -174,10 +174,11 @@ registerBlockType( 'wpzoom-blocks/social-icons', {
 	category: 'wpzoom-blocks', // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
 	keywords: [
 		__( 'Social Icons', 'social-icons-widget-by-wpzoom' ),
-		__( 'Dashicons', 'social-icons-widget-by-wpzoom' ),
-		__( 'Socicons', 'social-icons-widget-by-wpzoom' ),
+		__( 'icon', 'social-icons-widget-by-wpzoom' ),
+		__( 'svg', 'social-icons-widget-by-wpzoom' ),
+        __( 'share', 'social-icons-widget-by-wpzoom' ),
+        __( 'sharing', 'social-icons-widget-by-wpzoom' ),
 		__( 'Fontawesome', 'social-icons-widget-by-wpzoom' ),
-		__( 'Academic Icons', 'social-icons-widget-by-wpzoom' ),
 	],
 	attributes: {
 		wasStyled: {
