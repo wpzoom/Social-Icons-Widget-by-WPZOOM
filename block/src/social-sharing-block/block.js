@@ -170,12 +170,6 @@ registerBlockType( 'wpzoom-blocks/social-sharing', {
 					color: '#25D366'
 				},
 				{
-					id: 'viber',
-					name: 'Viber',
-					enabled: false,
-					color: '#665CAC'
-				},
-				{
 					id: 'bluesky',
 					name: 'Bluesky',
 					enabled: false,

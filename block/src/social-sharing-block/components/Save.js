@@ -68,12 +68,6 @@ const getPlatformData = (id) => {
 				hoverColor: '#25D366',
 				shareUrl: 'https://api.whatsapp.com/send?text={title}%20{url}',
 			};
-		case 'viber':
-			return { 
-				color: '#665CAC',
-				hoverColor: '#665CAC',
-				shareUrl: 'viber://forward?text={title}%20{url}',
-			};
 		case 'bluesky':
 			return { 
 				color: '#1DA1F2',
