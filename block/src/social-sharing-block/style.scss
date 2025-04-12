@@ -1,0 +1,117 @@
+/**
+ * Frontend styles for the Social Sharing Block
+ */
+
+.wp-block-wpzoom-blocks-social-sharing {
+    position: relative;
+    
+    .social-sharing-icons {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        
+        &.align-left {
+            justify-content: flex-start;
+        }
+        
+        &.align-center {
+            justify-content: center;
+        }
+        
+        &.align-right {
+            justify-content: flex-end;
+        }
+        
+        .social-sharing-icon-li {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .social-sharing-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            color: #fff;
+            
+            &:hover {
+                opacity: 0.9;
+                transform: scale(1.05);
+            }
+        }
+        
+        .social-sharing-icon-label {
+            margin-left: 8px;
+        }
+    }
+}
+
+// Block style variations
+.is-style-default {
+    .social-sharing-icon {
+        border-radius: 0;
+    }
+}
+
+.is-style-filled-rounded {
+    .social-sharing-icon {
+        border-radius: 8px;
+    }
+}
+
+.is-style-filled-circle {
+    .social-sharing-icon {
+        border-radius: 50%;
+    }
+}
+
+.is-style-outlined,
+.is-style-outlined-rounded,
+.is-style-outlined-circle {
+    .social-sharing-icon {
+        background-color: transparent !important;
+        border: 1px solid !important;
+        
+        svg {
+            fill: currentColor;
+        }
+    }
+}
+
+.is-style-outlined-rounded {
+    .social-sharing-icon {
+        border-radius: 8px;
+    }
+}
+
+.is-style-outlined-circle {
+    .social-sharing-icon {
+        border-radius: 50%;
+    }
+}
+
+.is-style-with-labels {
+    .social-sharing-icon {
+        padding-right: 16px !important;
+        
+        .social-sharing-icon-label {
+            display: inline-block !important;
+        }
+    }
+}
+
+.is-style-minimal {
+    .social-sharing-icon {
+        background-color: transparent !important;
+        border: none !important;
+        padding: 5px !important;
+        
+        svg {
+            fill: currentColor;
+        }
+    }
+} 

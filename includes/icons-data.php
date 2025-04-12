@@ -598,7 +598,7 @@ return array(
 				'programming',
 				'social-media',
 			),
-			'color'    => '#0077B5',
+			'color'    => '#0966c2',
 		),
 		array(
 			'icon'     => 'lookbook',

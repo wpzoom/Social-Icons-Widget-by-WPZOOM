@@ -518,5 +518,265 @@
 .is-style-with-label-canvas-rounded .social-icon-svg svg * {
   fill: #fff;
 }
+@charset "UTF-8";
+/**
+ * Editor styles for the Social Sharing Block
+ */
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+.wp-block-wpzoom-blocks-social-sharing {
+  position: relative;
+}
+.wp-block-wpzoom-blocks-social-sharing .social-sharing-icons {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.wp-block-wpzoom-blocks-social-sharing .social-sharing-icons.align-left {
+  justify-content: flex-start;
+}
+.wp-block-wpzoom-blocks-social-sharing .social-sharing-icons.align-center {
+  justify-content: center;
+}
+.wp-block-wpzoom-blocks-social-sharing .social-sharing-icons.align-right {
+  justify-content: flex-end;
+}
+.wp-block-wpzoom-blocks-social-sharing .social-sharing-icons .social-sharing-icon-li {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.wp-block-wpzoom-blocks-social-sharing .social-sharing-icons .social-sharing-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+.wp-block-wpzoom-blocks-social-sharing .social-sharing-icons .social-sharing-icon:hover {
+  opacity: 0.9;
+}
+.block-editor-block-list__layout .wp-block-wpzoom-blocks-social-sharing .social-sharing-icons .social-sharing-icon {
+  cursor: pointer;
+}
+.block-editor-block-list__layout .wp-block-wpzoom-blocks-social-sharing .social-sharing-icons .social-sharing-icon:hover {
+  box-shadow: 0 0 0 2px #007cba;
+  position: relative;
+  z-index: 1;
+}
+.block-editor-block-list__layout .wp-block-wpzoom-blocks-social-sharing .social-sharing-icons .social-sharing-icon:hover::after {
+  content: "";
+  font-family: dashicons;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #007cba;
+  color: white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 1;
+}
+.wp-block-wpzoom-blocks-social-sharing .social-sharing-icons .social-sharing-icon-label {
+  margin-left: 8px;
+}
+.wp-block-wpzoom-blocks-social-sharing .no-sharing-platforms-selected {
+  padding: 12px;
+  text-align: center;
+  background: #f0f0f0;
+  border-radius: 4px;
+  color: #757575;
+}
+.wp-block-wpzoom-blocks-social-sharing .wpzoom-click-to-edit-hint {
+  opacity: 0.8;
+  padding: 5px 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  -webkit-animation: fadeIn 0.3s ease-in-out;
+          animation: fadeIn 0.3s ease-in-out;
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+.wpzoom-social-sharing-edit-label-popover .components-popover__content {
+  padding: 0;
+  box-shadow: 0 3px 10px rgba(25, 30, 35, 0.2);
+  border-radius: 4px;
+  border: none;
+}
+.wpzoom-social-sharing-edit-label-popover .components-popover__content h3 {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.wpzoom-social-sharing-edit-label-popover .components-popover__content .components-base-control {
+  margin-bottom: 16px;
+  width: 100%;
+}
+.wpzoom-social-sharing-edit-label-popover .components-popover__content .components-base-control .components-base-control__field {
+  margin-bottom: 0;
+}
+.wpzoom-social-sharing-edit-label-popover .components-popover__content .components-button {
+  height: 32px;
+}
+
+.components-panel .components-base-control {
+  margin-bottom: 16px;
+}
+.components-panel .components-panel__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.components-panel .wpzoom-social-icons-platforms-list {
+  margin-top: 10px;
+}
+.components-panel .wpzoom-social-icons-platforms-list .wpzoom-social-platform-item {
+  transition: background-color 0.2s, transform 0.15s;
+}
+.components-panel .wpzoom-social-icons-platforms-list .wpzoom-social-platform-item:hover {
+  background-color: #f8f8f8;
+}
+.components-panel .wpzoom-social-icons-platforms-list .wpzoom-social-platform-item:hover .drag-handle {
+  color: #1e1e1e;
+}
+.components-panel .wpzoom-social-icons-platforms-list .wpzoom-social-platform-item.is-dragging {
+  background-color: #f0f7ff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  position: relative;
+  transform: scale(1.02);
+  opacity: 0.8;
+}
+.components-panel .wpzoom-social-icons-platforms-list .wpzoom-social-platform-item.drag-over {
+  border-top: 2px solid #007cba;
+  box-shadow: 0 0 0 1px #007cba;
+  position: relative;
+  z-index: 0;
+  background-color: #f0f7ff;
+}
+.components-panel .wpzoom-social-icons-platforms-list .wpzoom-social-platform-item.drag-over::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #007cba;
+  z-index: 1;
+}
+.components-panel .wpzoom-social-icons-platforms-list .wpzoom-social-platform-item .drag-handle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.components-panel .wpzoom-social-icons-platforms-list .wpzoom-social-platform-item .drag-handle:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+.components-panel .wpzoom-social-icons-platforms-list .wpzoom-social-platform-item .drag-handle svg {
+  width: 20px;
+  height: 20px;
+}
+.components-panel .wpzoom-social-icons-platforms-list .wpzoom-social-platform-item .components-checkbox-control {
+  margin-bottom: 0;
+}
+.components-panel .wpzoom-social-icons-platforms-list .wpzoom-social-platform-item .components-button-group {
+  display: flex;
+  gap: 2px;
+}
+.components-panel .wpzoom-social-icons-platforms-list .wpzoom-social-platform-item .components-button-group .components-button {
+  padding: 0;
+  min-width: 24px;
+  height: 24px;
+}
+.components-panel .wpzoom-social-icons-platforms-list .wpzoom-social-platform-item .components-button-group .components-button:disabled {
+  opacity: 0.5;
+}
+.components-panel .wpzoom-social-icons-platforms-list .wpzoom-social-platform-item-placeholder {
+  border: 1px dashed #ccc;
+  background-color: #f8f9fa;
+  height: 40px;
+  margin: 4px 0;
+}
+
+.is-style-default .social-sharing-icon {
+  border-radius: 0;
+}
+
+.is-style-filled-rounded .social-sharing-icon {
+  border-radius: 8px;
+}
+
+.is-style-filled-circle .social-sharing-icon {
+  border-radius: 50%;
+}
+
+.is-style-outlined .social-sharing-icon,
+.is-style-outlined-rounded .social-sharing-icon,
+.is-style-outlined-circle .social-sharing-icon {
+  background-color: transparent !important;
+  border: 1px solid !important;
+}
+.is-style-outlined .social-sharing-icon svg,
+.is-style-outlined-rounded .social-sharing-icon svg,
+.is-style-outlined-circle .social-sharing-icon svg {
+  fill: currentColor;
+}
+
+.is-style-outlined-rounded .social-sharing-icon {
+  border-radius: 8px;
+}
+
+.is-style-outlined-circle .social-sharing-icon {
+  border-radius: 50%;
+}
+
+.is-style-with-labels .social-sharing-icon {
+  padding-right: 16px !important;
+}
+.is-style-with-labels .social-sharing-icon .social-sharing-icon-label {
+  display: inline-block !important;
+}
+
+.is-style-minimal .social-sharing-icon {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 5px !important;
+}
+.is-style-minimal .social-sharing-icon svg {
+  fill: currentColor;
+}
 
 /*# sourceMappingURL=wpzoom-social-icons.css.map*/

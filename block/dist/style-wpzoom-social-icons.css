@@ -254,5 +254,95 @@
   width: var(--wpz-social-icons-block-item-font-size);
   height: var(--wpz-social-icons-block-item-font-size);
 }
+/**
+ * Frontend styles for the Social Sharing Block
+ */
+.wp-block-wpzoom-blocks-social-sharing {
+  position: relative;
+}
+.wp-block-wpzoom-blocks-social-sharing .social-sharing-icons {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.wp-block-wpzoom-blocks-social-sharing .social-sharing-icons.align-left {
+  justify-content: flex-start;
+}
+.wp-block-wpzoom-blocks-social-sharing .social-sharing-icons.align-center {
+  justify-content: center;
+}
+.wp-block-wpzoom-blocks-social-sharing .social-sharing-icons.align-right {
+  justify-content: flex-end;
+}
+.wp-block-wpzoom-blocks-social-sharing .social-sharing-icons .social-sharing-icon-li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.wp-block-wpzoom-blocks-social-sharing .social-sharing-icons .social-sharing-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+.wp-block-wpzoom-blocks-social-sharing .social-sharing-icons .social-sharing-icon:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+.wp-block-wpzoom-blocks-social-sharing .social-sharing-icons .social-sharing-icon-label {
+  margin-left: 8px;
+}
+
+.is-style-default .social-sharing-icon {
+  border-radius: 0;
+}
+
+.is-style-filled-rounded .social-sharing-icon {
+  border-radius: 8px;
+}
+
+.is-style-filled-circle .social-sharing-icon {
+  border-radius: 50%;
+}
+
+.is-style-outlined .social-sharing-icon,
+.is-style-outlined-rounded .social-sharing-icon,
+.is-style-outlined-circle .social-sharing-icon {
+  background-color: transparent !important;
+  border: 1px solid !important;
+}
+.is-style-outlined .social-sharing-icon svg,
+.is-style-outlined-rounded .social-sharing-icon svg,
+.is-style-outlined-circle .social-sharing-icon svg {
+  fill: currentColor;
+}
+
+.is-style-outlined-rounded .social-sharing-icon {
+  border-radius: 8px;
+}
+
+.is-style-outlined-circle .social-sharing-icon {
+  border-radius: 50%;
+}
+
+.is-style-with-labels .social-sharing-icon {
+  padding-right: 16px !important;
+}
+.is-style-with-labels .social-sharing-icon .social-sharing-icon-label {
+  display: inline-block !important;
+}
+
+.is-style-minimal .social-sharing-icon {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 5px !important;
+}
+.is-style-minimal .social-sharing-icon svg {
+  fill: currentColor;
+}
 
 /*# sourceMappingURL=style-wpzoom-social-icons.css.map*/
