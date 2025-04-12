@@ -15178,11 +15178,19 @@ function Inspector({
         iconColor: '#ffffff',
         labelColor: '#ffffff'
       });
+    } else if (className !== null && className !== void 0 && className.includes('is-style-default') || className !== null && className !== void 0 && className.includes('is-style-filled') || className !== null && className !== void 0 && className.includes('is-style-rounded')) {
+      // Set colors to white for default, filled, and rounded styles
+      setAttributes({
+        iconColor: '#ffffff',
+        labelColor: '#ffffff'
+      });
     }
   }, [className, setAttributes]); // When block className changes, check and update border radius and colors accordingly
 
   Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     if (blockProps.className) {
+      var _blockProps$className7, _blockProps$className8, _blockProps$className9;
+
       // Update border radius based on style
       updateBorderRadiusForStyle(blockProps.className); // Set colors to black for outlined and minimal styles
 
@@ -15201,6 +15209,12 @@ function Inspector({
         }
       } else if (hasOneToneStyle) {
         // Set colors to white for one tone style
+        setAttributes({
+          iconColor: '#ffffff',
+          labelColor: '#ffffff'
+        });
+      } else if ((_blockProps$className7 = blockProps.className) !== null && _blockProps$className7 !== void 0 && _blockProps$className7.includes('is-style-default') || (_blockProps$className8 = blockProps.className) !== null && _blockProps$className8 !== void 0 && _blockProps$className8.includes('is-style-filled') || (_blockProps$className9 = blockProps.className) !== null && _blockProps$className9 !== void 0 && _blockProps$className9.includes('is-style-rounded')) {
+        // Set colors to white for default, filled, and rounded styles
         setAttributes({
           iconColor: '#ffffff',
           labelColor: '#ffffff'

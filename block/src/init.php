@@ -167,6 +167,10 @@ function wpzoom_social_sharing_block_render_callback( $attributes ) {
 	if ($is_one_tone_style) {
 		$iconColor = '#ffffff';
 		$labelColor = '#ffffff';
+	} else if ($is_filled_square || strpos($class_name, 'is-style-default') !== false || strpos($class_name, 'is-style-rounded') !== false) {
+		// Set white color for default, filled square and rounded styles
+		$iconColor = '#ffffff';
+		$labelColor = '#ffffff';
 	}
 
 	// Start building output

@@ -135,6 +135,14 @@ export default function Inspector({ attributes, setAttributes }) {
 				iconColor: '#ffffff',
 				labelColor: '#ffffff'
 			});
+		} else if (className?.includes('is-style-default') || 
+		           className?.includes('is-style-filled') || 
+		           className?.includes('is-style-rounded')) {
+			// Set colors to white for default, filled, and rounded styles
+			setAttributes({ 
+				iconColor: '#ffffff',
+				labelColor: '#ffffff'
+			});
 		}
 	}, [className, setAttributes]);
 
@@ -156,6 +164,14 @@ export default function Inspector({ attributes, setAttributes }) {
 				}
 			} else if (hasOneToneStyle) {
 				// Set colors to white for one tone style
+				setAttributes({ 
+					iconColor: '#ffffff',
+					labelColor: '#ffffff'
+				});
+			} else if (blockProps.className?.includes('is-style-default') || 
+			           blockProps.className?.includes('is-style-filled') || 
+			           blockProps.className?.includes('is-style-rounded')) {
+				// Set colors to white for default, filled, and rounded styles
 				setAttributes({ 
 					iconColor: '#ffffff',
 					labelColor: '#ffffff'
