@@ -44,6 +44,7 @@ export default function Edit({ attributes, setAttributes, className, isSelected 
 		backgroundStyle,
 		hasBorder,
 		platforms,
+		oneToneColor
 	} = attributes;
 
 	// State for popover
@@ -56,6 +57,22 @@ export default function Edit({ attributes, setAttributes, className, isSelected 
 			'wpzoom-social-sharing-block': true,
 		}),
 	});
+
+	// Check styles directly from className for more reliability
+	const isOneTone = className?.includes('is-style-one-tone');
+	// Backup check using blockProps
+	const isOneToneStyle = isOneTone || blockProps.className?.includes('is-style-one-tone');
+	const isOutlinedPill = blockProps.className?.includes('is-style-outlined-pill');
+	const isOutlinedSquare = blockProps.className?.includes('is-style-outlined-square');
+	const isMinimal = blockProps.className?.includes('is-style-minimal');
+	const isFilledSquare = blockProps.className?.includes('is-style-filled');
+
+	// Ensure oneToneColor has a value if it's undefined
+	useEffect(() => {
+		if (isOneToneStyle && (!oneToneColor || oneToneColor === undefined)) {
+			setAttributes({ oneToneColor: '#000000' });
+		}
+	}, [isOneToneStyle, oneToneColor]);
 
 	const containerStyle = {
 		textAlign: align,
@@ -87,15 +104,38 @@ export default function Edit({ attributes, setAttributes, className, isSelected 
 				{enabledPlatforms.length > 0 ? (
 					<ul className="social-sharing-icons">
 						{enabledPlatforms.map((platform, index) => {
+							// Override borderRadius for filled-square style
+							const styleSpecificBorderRadius = isFilledSquare ? 0 : borderRadius;
+							
+							// Set appropriate colors for outlined and minimal styles
+							const iconColorValue = iconColor;
+							const labelColorValue = labelColor;
+							
+							// Set background color based on style
+							let bgColor = platform.color || '#333333';
+							
+							// Special handling for One Tone style
+							if (isOneToneStyle) {
+								// Ensure we have a valid color
+								bgColor = oneToneColor || '#000000';
+							} else if (isOutlinedPill || isOutlinedSquare || isMinimal) {
+								bgColor = 'transparent';
+							}
+							
 							const buttonStyle = {
 								padding: `${paddingVertical}px ${paddingHorizontal}px`,
 								margin: `${marginVertical}px ${marginHorizontal}px`,
-								borderRadius: `${borderRadius}px`,
+								borderRadius: `${styleSpecificBorderRadius}px`,
 								fontSize: `${iconSize}px`,
-								color: iconColor,
-								backgroundColor: platform.color || '#333333',
-								border: hasBorder ? '1px solid' : 'none',
+								color: iconColorValue,
+								backgroundColor: bgColor,
+								border: (isOutlinedPill || isOutlinedSquare) ? `1px solid ${iconColorValue}` : (hasBorder ? '1px solid' : 'none'),
 							};
+
+							// Minimal style has reduced padding
+							if (isMinimal) {
+								buttonStyle.padding = '5px';
+							}
 
 							return (
 								<li key={platform.id} className="social-sharing-icon-li">
@@ -115,7 +155,7 @@ export default function Edit({ attributes, setAttributes, className, isSelected 
 										<SocialIcons 
 											id={platform.id} 
 											size={iconSize} 
-											color={iconColor || '#ffffff'} 
+											color={iconColorValue} 
 										/>
 										
 										{showLabels && (
@@ -123,7 +163,7 @@ export default function Edit({ attributes, setAttributes, className, isSelected 
 												className="social-sharing-icon-label"
 												style={{ 
 													fontSize: `${labelSize}px`,
-													color: labelColor
+													color: labelColorValue
 												}}
 											>
 												{platform.name}

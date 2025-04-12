@@ -14656,6 +14656,10 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_7__["registerBlockType"])('wpz
       type: 'boolean',
       default: false
     },
+    oneToneColor: {
+      type: 'string',
+      default: '#000000'
+    },
     platforms: {
       type: 'array',
       default: [{
@@ -14723,29 +14727,26 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_7__["registerBlockType"])('wpz
   },
   styles: [{
     name: 'default',
-    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Default', 'social-icons-widget-by-wpzoom'),
+    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Default (Circle)', 'social-icons-widget-by-wpzoom'),
     isDefault: true
   }, {
-    name: 'filled-rounded',
+    name: 'filled',
+    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Square / Filled', 'social-icons-widget-by-wpzoom')
+  }, {
+    name: 'rounded',
     label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Rounded / Filled', 'social-icons-widget-by-wpzoom')
   }, {
-    name: 'filled-circle',
-    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Circle / Filled', 'social-icons-widget-by-wpzoom')
+    name: 'outlined-pill',
+    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Outlined / Pill', 'social-icons-widget-by-wpzoom')
   }, {
-    name: 'outlined',
+    name: 'outlined-square',
     label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Outlined / Square', 'social-icons-widget-by-wpzoom')
   }, {
-    name: 'outlined-rounded',
-    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Outlined / Rounded', 'social-icons-widget-by-wpzoom')
-  }, {
-    name: 'outlined-circle',
-    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Outlined / Circle', 'social-icons-widget-by-wpzoom')
-  }, {
-    name: 'with-labels',
-    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('With Labels', 'social-icons-widget-by-wpzoom')
-  }, {
     name: 'minimal',
-    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Minimal / No Background', 'social-icons-widget-by-wpzoom')
+    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Minimal', 'social-icons-widget-by-wpzoom')
+  }, {
+    name: 'one-tone',
+    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('One Tone', 'social-icons-widget-by-wpzoom')
   }],
   supports: {
     align: true,
@@ -14872,6 +14873,8 @@ function Edit({
   className,
   isSelected
 }) {
+  var _blockProps$className, _blockProps$className2, _blockProps$className3, _blockProps$className4, _blockProps$className5;
+
   const {
     align,
     showLabels,
@@ -14888,7 +14891,8 @@ function Edit({
     borderRadius,
     backgroundStyle,
     hasBorder,
-    platforms
+    platforms,
+    oneToneColor
   } = attributes; // State for popover
 
   const [editingPlatform, setEditingPlatform] = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["useState"])(null);
@@ -14898,7 +14902,23 @@ function Edit({
       [`align-${align}`]: align,
       'wpzoom-social-sharing-block': true
     })
-  });
+  }); // Check styles directly from className for more reliability
+
+  const isOneTone = className === null || className === void 0 ? void 0 : className.includes('is-style-one-tone'); // Backup check using blockProps
+
+  const isOneToneStyle = isOneTone || ((_blockProps$className = blockProps.className) === null || _blockProps$className === void 0 ? void 0 : _blockProps$className.includes('is-style-one-tone'));
+  const isOutlinedPill = (_blockProps$className2 = blockProps.className) === null || _blockProps$className2 === void 0 ? void 0 : _blockProps$className2.includes('is-style-outlined-pill');
+  const isOutlinedSquare = (_blockProps$className3 = blockProps.className) === null || _blockProps$className3 === void 0 ? void 0 : _blockProps$className3.includes('is-style-outlined-square');
+  const isMinimal = (_blockProps$className4 = blockProps.className) === null || _blockProps$className4 === void 0 ? void 0 : _blockProps$className4.includes('is-style-minimal');
+  const isFilledSquare = (_blockProps$className5 = blockProps.className) === null || _blockProps$className5 === void 0 ? void 0 : _blockProps$className5.includes('is-style-filled'); // Ensure oneToneColor has a value if it's undefined
+
+  Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(() => {
+    if (isOneToneStyle && (!oneToneColor || oneToneColor === undefined)) {
+      setAttributes({
+        oneToneColor: '#000000'
+      });
+    }
+  }, [isOneToneStyle, oneToneColor]);
   const containerStyle = {
     textAlign: align
   }; // Filter enabled platforms
@@ -14929,15 +14949,35 @@ function Edit({
   }), enabledPlatforms.length > 0 ? Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("ul", {
     className: "social-sharing-icons"
   }, enabledPlatforms.map((platform, index) => {
+    // Override borderRadius for filled-square style
+    const styleSpecificBorderRadius = isFilledSquare ? 0 : borderRadius; // Set appropriate colors for outlined and minimal styles
+
+    const iconColorValue = iconColor;
+    const labelColorValue = labelColor; // Set background color based on style
+
+    let bgColor = platform.color || '#333333'; // Special handling for One Tone style
+
+    if (isOneToneStyle) {
+      // Ensure we have a valid color
+      bgColor = oneToneColor || '#000000';
+    } else if (isOutlinedPill || isOutlinedSquare || isMinimal) {
+      bgColor = 'transparent';
+    }
+
     const buttonStyle = {
       padding: `${paddingVertical}px ${paddingHorizontal}px`,
       margin: `${marginVertical}px ${marginHorizontal}px`,
-      borderRadius: `${borderRadius}px`,
+      borderRadius: `${styleSpecificBorderRadius}px`,
       fontSize: `${iconSize}px`,
-      color: iconColor,
-      backgroundColor: platform.color || '#333333',
-      border: hasBorder ? '1px solid' : 'none'
-    };
+      color: iconColorValue,
+      backgroundColor: bgColor,
+      border: isOutlinedPill || isOutlinedSquare ? `1px solid ${iconColorValue}` : hasBorder ? '1px solid' : 'none'
+    }; // Minimal style has reduced padding
+
+    if (isMinimal) {
+      buttonStyle.padding = '5px';
+    }
+
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("li", {
       key: platform.id,
       className: "social-sharing-icon-li"
@@ -14957,12 +14997,12 @@ function Edit({
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_SocialIcons__WEBPACK_IMPORTED_MODULE_7__["default"], {
       id: platform.id,
       size: iconSize,
-      color: iconColor || '#ffffff'
+      color: iconColorValue
     }), showLabels && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("span", {
       className: "social-sharing-icon-label",
       style: {
         fontSize: `${labelSize}px`,
-        color: labelColor
+        color: labelColorValue
       }
     }, platform.name)), isSelected && editingPlatform === platform.id && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["Popover"], {
       className: "wpzoom-social-sharing-edit-label-popover",
@@ -15048,6 +15088,8 @@ function Inspector({
   attributes,
   setAttributes
 }) {
+  var _blockProps$className, _blockProps$className2, _blockProps$className3, _blockProps$className4, _blockProps$className5, _blockProps$className6;
+
   const {
     align,
     showLabels,
@@ -15064,12 +15106,113 @@ function Inspector({
     borderRadius,
     backgroundStyle,
     hasBorder,
-    platforms
+    platforms,
+    oneToneColor
   } = attributes; // State for dragging
 
   const [isDragging, setIsDragging] = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
   const [draggedItemIndex, setDraggedItemIndex] = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["useState"])(null);
-  const [dragOverItemIndex, setDragOverItemIndex] = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["useState"])(null);
+  const [dragOverItemIndex, setDragOverItemIndex] = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["useState"])(null); // Check styles directly from className for more reliability
+
+  const className = attributes.className;
+  const isOneToneStyle = className === null || className === void 0 ? void 0 : className.includes('is-style-one-tone');
+  const isFilledSquareStyle = className === null || className === void 0 ? void 0 : className.includes('is-style-filled');
+  const isRoundedStyle = className === null || className === void 0 ? void 0 : className.includes('is-style-rounded');
+  const isOutlinedPillStyle = className === null || className === void 0 ? void 0 : className.includes('is-style-outlined-pill');
+  const isOutlinedSquareStyle = className === null || className === void 0 ? void 0 : className.includes('is-style-outlined-square');
+  const isMinimalStyle = className === null || className === void 0 ? void 0 : className.includes('is-style-minimal'); // For backward compatibility, also check blockProps
+
+  const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["useBlockProps"].save();
+  const hasOneToneStyle = isOneToneStyle || ((_blockProps$className = blockProps.className) === null || _blockProps$className === void 0 ? void 0 : _blockProps$className.includes('is-style-one-tone'));
+  const hasFilledSquareStyle = isFilledSquareStyle || ((_blockProps$className2 = blockProps.className) === null || _blockProps$className2 === void 0 ? void 0 : _blockProps$className2.includes('is-style-filled'));
+  const hasRoundedStyle = isRoundedStyle || ((_blockProps$className3 = blockProps.className) === null || _blockProps$className3 === void 0 ? void 0 : _blockProps$className3.includes('is-style-rounded'));
+  const hasOutlinedPillStyle = isOutlinedPillStyle || ((_blockProps$className4 = blockProps.className) === null || _blockProps$className4 === void 0 ? void 0 : _blockProps$className4.includes('is-style-outlined-pill'));
+  const hasOutlinedSquareStyle = isOutlinedSquareStyle || ((_blockProps$className5 = blockProps.className) === null || _blockProps$className5 === void 0 ? void 0 : _blockProps$className5.includes('is-style-outlined-square'));
+  const hasMinimalStyle = isMinimalStyle || ((_blockProps$className6 = blockProps.className) === null || _blockProps$className6 === void 0 ? void 0 : _blockProps$className6.includes('is-style-minimal')); // Helper function to update border radius based on style
+
+  const updateBorderRadiusForStyle = styleName => {
+    let newBorderRadius = borderRadius; // Set appropriate border radius based on selected style
+
+    if (styleName.includes('is-style-filled')) {
+      newBorderRadius = 0;
+    } else if (styleName.includes('is-style-rounded')) {
+      newBorderRadius = 8;
+    } else if (styleName.includes('is-style-default') || styleName.includes('is-style-outlined-pill')) {
+      newBorderRadius = 50;
+    } else if (styleName.includes('is-style-outlined-square')) {
+      newBorderRadius = 0;
+    }
+
+    setAttributes({
+      borderRadius: newBorderRadius
+    });
+  }; // Ensure oneToneColor has a value when One Tone style is selected
+
+
+  Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    if (hasOneToneStyle && (!oneToneColor || oneToneColor === undefined)) {
+      setAttributes({
+        oneToneColor: '#000000'
+      }); // Set icon and label colors to white for One Tone style for better visibility
+
+      setAttributes({
+        iconColor: '#ffffff',
+        labelColor: '#ffffff'
+      });
+    }
+  }, [hasOneToneStyle, oneToneColor]); // React to className changes to detect style changes
+
+  Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    // Set colors for outlined and minimal styles
+    if (className !== null && className !== void 0 && className.includes('is-style-outlined-pill') || className !== null && className !== void 0 && className.includes('is-style-outlined-square') || className !== null && className !== void 0 && className.includes('is-style-minimal')) {
+      // Only update if current color is white or close to it, to avoid changing custom colors
+      if (iconColor === '#ffffff' || iconColor === '#fff' || !iconColor) {
+        setAttributes({
+          iconColor: '#000000'
+        });
+      }
+
+      if (labelColor === 'inherit' || labelColor === '#ffffff' || labelColor === '#fff' || !labelColor) {
+        setAttributes({
+          labelColor: '#000000'
+        });
+      }
+    } else if (className !== null && className !== void 0 && className.includes('is-style-one-tone')) {
+      // Set colors to white for one tone style
+      setAttributes({
+        iconColor: '#ffffff',
+        labelColor: '#ffffff'
+      });
+    }
+  }, [className, setAttributes]); // When block className changes, check and update border radius and colors accordingly
+
+  Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    if (blockProps.className) {
+      // Update border radius based on style
+      updateBorderRadiusForStyle(blockProps.className); // Set colors to black for outlined and minimal styles
+
+      if (hasOutlinedPillStyle || hasOutlinedSquareStyle || hasMinimalStyle) {
+        // Only update if current color is white or close to it, to avoid changing custom colors
+        if (iconColor === '#ffffff' || iconColor === '#fff' || !iconColor) {
+          setAttributes({
+            iconColor: '#000000'
+          });
+        }
+
+        if (labelColor === 'inherit' || labelColor === '#ffffff' || labelColor === '#fff' || !labelColor) {
+          setAttributes({
+            labelColor: '#000000'
+          });
+        }
+      } else if (hasOneToneStyle) {
+        // Set colors to white for one tone style
+        setAttributes({
+          iconColor: '#ffffff',
+          labelColor: '#ffffff'
+        });
+      }
+    }
+  }, [blockProps.className, hasOutlinedPillStyle, hasOutlinedSquareStyle, hasMinimalStyle, hasOneToneStyle, setAttributes]);
 
   const onTogglePlatform = (platformId, enabled) => {
     const updatedPlatforms = platforms.map(platform => {
@@ -15354,22 +15497,37 @@ function Inspector({
     min: 0,
     max: 50,
     allowReset: true,
-    resetFallbackValue: 0,
-    withInputField: true
+    resetFallbackValue: 50,
+    withInputField: true,
+    disabled: hasFilledSquareStyle || hasOutlinedSquareStyle || hasOutlinedPillStyle || hasMinimalStyle,
+    help: hasFilledSquareStyle || hasOutlinedSquareStyle ? Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Border radius is set to 0 for square styles.', 'social-icons-widget-by-wpzoom') : hasOutlinedPillStyle ? Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Border radius is set to 50 for pill styles.', 'social-icons-widget-by-wpzoom') : hasMinimalStyle ? Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Border radius is not applicable for minimal style.', 'social-icons-widget-by-wpzoom') : ''
   }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["ToggleControl"], {
     label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Add Border', 'social-icons-widget-by-wpzoom'),
     checked: hasBorder,
     onChange: () => setAttributes({
       hasBorder: !hasBorder
-    })
+    }),
+    disabled: hasOutlinedPillStyle || hasOutlinedSquareStyle || hasMinimalStyle,
+    help: hasOutlinedPillStyle || hasOutlinedSquareStyle ? Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Border is always enabled for outlined styles.', 'social-icons-widget-by-wpzoom') : hasMinimalStyle ? Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Border is not applicable for minimal style.', 'social-icons-widget-by-wpzoom') : ''
   })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["__experimentalPanelColorGradientSettings"], {
     title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Color Settings', 'social-icons-widget-by-wpzoom'),
-    settings: [{
+    initialOpen: true,
+    settings: [// Always include the One Tone Background Color option but disable it when not using One Tone style
+    {
+      colorValue: oneToneColor,
+      onColorChange: value => setAttributes({
+        oneToneColor: value
+      }),
+      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('One Tone Background Color', 'social-icons-widget-by-wpzoom'),
+      disabled: !hasOneToneStyle,
+      help: hasOneToneStyle ? Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Changes the background color of all icons.', 'social-icons-widget-by-wpzoom') : Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('This option is only available with the One Tone style.', 'social-icons-widget-by-wpzoom')
+    }, {
       colorValue: iconColor,
       onColorChange: value => setAttributes({
         iconColor: value
       }),
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Icon Color', 'social-icons-widget-by-wpzoom')
+      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Icon Color', 'social-icons-widget-by-wpzoom'),
+      help: hasOutlinedPillStyle || hasOutlinedSquareStyle || hasMinimalStyle ? Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('This color will be applied to icons for outlined and minimal styles', 'social-icons-widget-by-wpzoom') : ''
     }, {
       colorValue: iconHoverColor,
       onColorChange: value => setAttributes({
@@ -15381,7 +15539,8 @@ function Inspector({
       onColorChange: value => setAttributes({
         labelColor: value
       }),
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Label Color', 'social-icons-widget-by-wpzoom')
+      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Label Color', 'social-icons-widget-by-wpzoom'),
+      help: hasOutlinedPillStyle || hasOutlinedSquareStyle || hasMinimalStyle ? Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('This color will be applied to labels for outlined and minimal styles', 'social-icons-widget-by-wpzoom') : ''
     }, {
       colorValue: labelHoverColor,
       onColorChange: value => setAttributes({

@@ -7,7 +7,9 @@ import { __ } from '@wordpress/i18n';
 import { 
 	InspectorControls, 
 	PanelColorSettings,
-	__experimentalPanelColorGradientSettings as PanelColorGradientSettings
+	__experimentalPanelColorGradientSettings as PanelColorGradientSettings,
+	getColorClassName,
+	useBlockProps
 } from '@wordpress/block-editor';
 import {
 	PanelBody,
@@ -31,7 +33,7 @@ import {
 	Tooltip,
 	DraggableChip
 } from '@wordpress/components';
-import { useState } from '@wordpress/element';
+import { useState, useEffect } from '@wordpress/element';
 import { dragHandle } from '@wordpress/icons';
 
 /**
@@ -55,12 +57,112 @@ export default function Inspector({ attributes, setAttributes }) {
 		backgroundStyle,
 		hasBorder,
 		platforms,
+		oneToneColor
 	} = attributes;
 	
 	// State for dragging
 	const [isDragging, setIsDragging] = useState(false);
 	const [draggedItemIndex, setDraggedItemIndex] = useState(null);
 	const [dragOverItemIndex, setDragOverItemIndex] = useState(null);
+
+	// Check styles directly from className for more reliability
+	const className = attributes.className;
+	const isOneToneStyle = className?.includes('is-style-one-tone');
+	const isFilledSquareStyle = className?.includes('is-style-filled');
+	const isRoundedStyle = className?.includes('is-style-rounded'); 
+	const isOutlinedPillStyle = className?.includes('is-style-outlined-pill');
+	const isOutlinedSquareStyle = className?.includes('is-style-outlined-square');
+	const isMinimalStyle = className?.includes('is-style-minimal');
+	
+	// For backward compatibility, also check blockProps
+	const blockProps = useBlockProps.save();
+	const hasOneToneStyle = isOneToneStyle || blockProps.className?.includes('is-style-one-tone');
+	const hasFilledSquareStyle = isFilledSquareStyle || blockProps.className?.includes('is-style-filled');
+	const hasRoundedStyle = isRoundedStyle || blockProps.className?.includes('is-style-rounded');
+	const hasOutlinedPillStyle = isOutlinedPillStyle || blockProps.className?.includes('is-style-outlined-pill');
+	const hasOutlinedSquareStyle = isOutlinedSquareStyle || blockProps.className?.includes('is-style-outlined-square');
+	const hasMinimalStyle = isMinimalStyle || blockProps.className?.includes('is-style-minimal');
+
+	// Helper function to update border radius based on style
+	const updateBorderRadiusForStyle = (styleName) => {
+		let newBorderRadius = borderRadius;
+		
+		// Set appropriate border radius based on selected style
+		if (styleName.includes('is-style-filled')) {
+			newBorderRadius = 0;
+		} else if (styleName.includes('is-style-rounded')) {
+			newBorderRadius = 8;
+		} else if (styleName.includes('is-style-default') || styleName.includes('is-style-outlined-pill')) {
+			newBorderRadius = 50;
+		} else if (styleName.includes('is-style-outlined-square')) {
+			newBorderRadius = 0;
+		}
+		
+		setAttributes({ borderRadius: newBorderRadius });
+	};
+
+	// Ensure oneToneColor has a value when One Tone style is selected
+	useEffect(() => {
+		if (hasOneToneStyle && (!oneToneColor || oneToneColor === undefined)) {
+			setAttributes({ oneToneColor: '#000000' });
+			
+			// Set icon and label colors to white for One Tone style for better visibility
+			setAttributes({ 
+				iconColor: '#ffffff',
+				labelColor: '#ffffff'
+			});
+		}
+	}, [hasOneToneStyle, oneToneColor]);
+
+	// React to className changes to detect style changes
+	useEffect(() => {
+		// Set colors for outlined and minimal styles
+		if (className?.includes('is-style-outlined-pill') || 
+		    className?.includes('is-style-outlined-square') || 
+		    className?.includes('is-style-minimal')) {
+		    
+			// Only update if current color is white or close to it, to avoid changing custom colors
+			if (iconColor === '#ffffff' || iconColor === '#fff' || !iconColor) {
+				setAttributes({ iconColor: '#000000' });
+			}
+			
+			if (labelColor === 'inherit' || labelColor === '#ffffff' || labelColor === '#fff' || !labelColor) {
+				setAttributes({ labelColor: '#000000' });
+			}
+		} else if (className?.includes('is-style-one-tone')) {
+			// Set colors to white for one tone style
+			setAttributes({ 
+				iconColor: '#ffffff',
+				labelColor: '#ffffff'
+			});
+		}
+	}, [className, setAttributes]);
+
+	// When block className changes, check and update border radius and colors accordingly
+	useEffect(() => {
+		if (blockProps.className) {
+			// Update border radius based on style
+			updateBorderRadiusForStyle(blockProps.className);
+			
+			// Set colors to black for outlined and minimal styles
+			if (hasOutlinedPillStyle || hasOutlinedSquareStyle || hasMinimalStyle) {
+				// Only update if current color is white or close to it, to avoid changing custom colors
+				if (iconColor === '#ffffff' || iconColor === '#fff' || !iconColor) {
+					setAttributes({ iconColor: '#000000' });
+				}
+				
+				if (labelColor === 'inherit' || labelColor === '#ffffff' || labelColor === '#fff' || !labelColor) {
+					setAttributes({ labelColor: '#000000' });
+				}
+			} else if (hasOneToneStyle) {
+				// Set colors to white for one tone style
+				setAttributes({ 
+					iconColor: '#ffffff',
+					labelColor: '#ffffff'
+				});
+			}
+		}
+	}, [blockProps.className, hasOutlinedPillStyle, hasOutlinedSquareStyle, hasMinimalStyle, hasOneToneStyle, setAttributes]);
 
 	const onTogglePlatform = (platformId, enabled) => {
 		const updatedPlatforms = platforms.map(platform => {
@@ -384,24 +486,55 @@ export default function Inspector({ attributes, setAttributes }) {
 						min={0}
 						max={50}
 						allowReset
-						resetFallbackValue={0}
+						resetFallbackValue={50}
 						withInputField
+						disabled={hasFilledSquareStyle || hasOutlinedSquareStyle || hasOutlinedPillStyle || hasMinimalStyle}
+						help={
+							hasFilledSquareStyle || hasOutlinedSquareStyle ? 
+								__('Border radius is set to 0 for square styles.', 'social-icons-widget-by-wpzoom') :
+								hasOutlinedPillStyle ? 
+									__('Border radius is set to 50 for pill styles.', 'social-icons-widget-by-wpzoom') :
+									hasMinimalStyle ?
+										__('Border radius is not applicable for minimal style.', 'social-icons-widget-by-wpzoom') :
+										''
+						}
 					/>
 
 					<ToggleControl
 						label={__('Add Border', 'social-icons-widget-by-wpzoom')}
 						checked={hasBorder}
 						onChange={() => setAttributes({ hasBorder: !hasBorder })}
+						disabled={hasOutlinedPillStyle || hasOutlinedSquareStyle || hasMinimalStyle}
+						help={
+							hasOutlinedPillStyle || hasOutlinedSquareStyle ? 
+								__('Border is always enabled for outlined styles.', 'social-icons-widget-by-wpzoom') :
+								hasMinimalStyle ?
+									__('Border is not applicable for minimal style.', 'social-icons-widget-by-wpzoom') :
+									''
+						}
 					/>
 				</PanelBody>
 
 				<PanelColorGradientSettings
 					title={__('Color Settings', 'social-icons-widget-by-wpzoom')}
+					initialOpen={true}
 					settings={[
+						// Always include the One Tone Background Color option but disable it when not using One Tone style
+						{
+							colorValue: oneToneColor,
+							onColorChange: (value) => setAttributes({ oneToneColor: value }),
+							label: __('One Tone Background Color', 'social-icons-widget-by-wpzoom'),
+							disabled: !hasOneToneStyle,
+							help: hasOneToneStyle ? 
+								__('Changes the background color of all icons.', 'social-icons-widget-by-wpzoom') : 
+								__('This option is only available with the One Tone style.', 'social-icons-widget-by-wpzoom'),
+						},
 						{
 							colorValue: iconColor,
 							onColorChange: (value) => setAttributes({ iconColor: value }),
 							label: __('Icon Color', 'social-icons-widget-by-wpzoom'),
+							help: hasOutlinedPillStyle || hasOutlinedSquareStyle || hasMinimalStyle ? 
+								__('This color will be applied to icons for outlined and minimal styles', 'social-icons-widget-by-wpzoom') : '',
 						},
 						{
 							colorValue: iconHoverColor,
@@ -413,6 +546,8 @@ export default function Inspector({ attributes, setAttributes }) {
 								colorValue: labelColor,
 								onColorChange: (value) => setAttributes({ labelColor: value }),
 								label: __('Label Color', 'social-icons-widget-by-wpzoom'),
+								help: hasOutlinedPillStyle || hasOutlinedSquareStyle || hasMinimalStyle ? 
+									__('This color will be applied to labels for outlined and minimal styles', 'social-icons-widget-by-wpzoom') : '',
 							},
 							{
 								colorValue: labelHoverColor,

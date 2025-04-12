@@ -145,10 +145,29 @@ function wpzoom_social_sharing_block_render_callback( $attributes ) {
 	$borderRadius = isset( $attributes['borderRadius'] ) ? $attributes['borderRadius'] : 50;
 	$hasBorder = isset( $attributes['hasBorder'] ) ? $attributes['hasBorder'] : false;
 	$platforms = isset( $attributes['platforms'] ) ? $attributes['platforms'] : array();
+	$oneToneColor = isset( $attributes['oneToneColor'] ) ? $attributes['oneToneColor'] : '#000000';
 
 	// Class for block
 	$block_class = 'wp-block-wpzoom-blocks-social-sharing';
 	$class_name = isset( $attributes['className'] ) ? $attributes['className'] : '';
+	
+	// Check styles
+	$is_one_tone_style = strpos($class_name, 'is-style-one-tone') !== false;
+	$is_outlined_pill = strpos($class_name, 'is-style-outlined-pill') !== false;
+	$is_outlined_square = strpos($class_name, 'is-style-outlined-square') !== false;
+	$is_minimal = strpos($class_name, 'is-style-minimal') !== false;
+	$is_filled_square = strpos($class_name, 'is-style-filled') !== false;
+
+	// Ensure oneToneColor has a value
+	if ($is_one_tone_style && empty($oneToneColor)) {
+		$oneToneColor = '#000000';
+	}
+	
+	// Ensure icon colors are appropriate for the style
+	if ($is_one_tone_style) {
+		$iconColor = '#ffffff';
+		$labelColor = '#ffffff';
+	}
 
 	// Start building output
 	$output = '<div class="' . esc_attr( $block_class . ' ' . $class_name ) . ' align-' . esc_attr( $align ) . '"';
@@ -221,21 +240,51 @@ function wpzoom_social_sharing_block_render_callback( $attributes ) {
 			$featured_image
 		);
 		
-		// Get platform color
+		// Override borderRadius for filled-square style
+		$style_specific_border_radius = $is_filled_square ? 0 : $borderRadius;
+		
+		// Set appropriate colors for all styles
+		$icon_color_value = $iconColor;
+		$label_color_value = $labelColor;
+		
+		// Set background color based on style
 		$platform_color = isset( $platform['color'] ) ? $platform['color'] : wpzoom_social_sharing_get_platform_color( $platform['id'] );
+		
+		// Special handling for One Tone style
+		if ($is_one_tone_style) {
+			$platform_color = $oneToneColor;
+		} elseif ($is_outlined_pill || $is_outlined_square || $is_minimal) {
+			$platform_color = 'transparent';
+		}
+		
+		// Set border based on style
+		$border_style = '';
+		if ($is_outlined_pill || $is_outlined_square) {
+			$border_style = 'border:1px solid ' . $icon_color_value . ';';
+		} elseif ($hasBorder) {
+			$border_style = 'border:1px solid;';
+		}
+		
+		// Calculate padding
+		$padding_vertical = $paddingVertical;
+		$padding_horizontal = $paddingHorizontal;
+		if ($is_minimal) {
+			$padding_vertical = 5;
+			$padding_horizontal = 5;
+		}
 		
 		// Build output for this platform
 		$button_style = sprintf(
 			'padding:%dpx %dpx;margin:%dpx %dpx;border-radius:%dpx;font-size:%dpx;color:%s;background-color:%s;%s',
-			$paddingVertical,
-			$paddingHorizontal,
+			$padding_vertical,
+			$padding_horizontal,
 			$marginVertical,
 			$marginHorizontal,
-			$borderRadius,
+			$style_specific_border_radius,
 			$iconSize,
-			$iconColor,
+			$icon_color_value,
 			$platform_color,
-			$hasBorder ? 'border:1px solid;' : ''
+			$border_style
 		);
 		
 		$output .= '<li class="social-sharing-icon-li">';
@@ -252,10 +301,10 @@ function wpzoom_social_sharing_block_render_callback( $attributes ) {
 		$output .= 'data-platform="' . esc_attr( $platform['id'] ) . '">';
 		
 		// Add SVG icon
-		$output .= wpzoom_social_sharing_get_svg_icon( $platform['id'], $iconSize, $iconColor );
+		$output .= wpzoom_social_sharing_get_svg_icon( $platform['id'], $iconSize, $icon_color_value );
 		
 		if ( $showLabels ) {
-			$label_style = sprintf( 'font-size:%dpx;color:%s;', $labelSize, $labelColor );
+			$label_style = sprintf( 'font-size:%dpx;color:%s;', $labelSize, $label_color_value );
 			$output .= '<span class="social-sharing-icon-label" style="' . esc_attr( $label_style ) . '">' . esc_html( $platform['name'] ) . '</span>';
 		}
 		

@@ -242,53 +242,50 @@
 // Block style variations
 .is-style-default {
     .social-sharing-icon {
+        border-radius: 50%;
+    }
+}
+
+.is-style-filled {
+    .social-sharing-icon {
         border-radius: 0;
     }
 }
 
-.is-style-filled-rounded {
+.is-style-rounded {
     .social-sharing-icon {
         border-radius: 8px;
     }
 }
 
-.is-style-filled-circle {
-    .social-sharing-icon {
-        border-radius: 50%;
-    }
-}
-
-.is-style-outlined,
-.is-style-outlined-rounded,
-.is-style-outlined-circle {
+.is-style-outlined-pill {
     .social-sharing-icon {
         background-color: transparent !important;
-        border: 1px solid !important;
+        border: 1px solid #000 !important;
+        border-radius: 50%;
         
         svg {
-            fill: currentColor;
+            fill: #000;
+        }
+
+        .social-sharing-icon-label {
+            color: #000;
         }
     }
 }
 
-.is-style-outlined-rounded {
+.is-style-outlined-square {
     .social-sharing-icon {
-        border-radius: 8px;
-    }
-}
+        background-color: transparent !important;
+        border: 1px solid #000 !important;
+        border-radius: 0;
 
-.is-style-outlined-circle {
-    .social-sharing-icon {
-        border-radius: 50%;
-    }
-}
-
-.is-style-with-labels {
-    .social-sharing-icon {
-        padding-right: 16px !important;
+        svg {
+            fill: #000;
+        }
         
         .social-sharing-icon-label {
-            display: inline-block !important;
+            color: #000;
         }
     }
 }
@@ -300,7 +297,21 @@
         padding: 5px !important;
         
         svg {
-            fill: currentColor;
+            fill: #000;
+        }
+
+        .social-sharing-icon-label {
+            color: #000;
+        }
+    }
+}
+
+.is-style-one-tone {
+    .social-sharing-icon {
+        background-color: #000;
+
+        svg {
+            fill: #fff;
         }
     }
 } 

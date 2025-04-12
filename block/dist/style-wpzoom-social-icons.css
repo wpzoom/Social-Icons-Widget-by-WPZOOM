@@ -298,42 +298,39 @@
 }
 
 .is-style-default .social-sharing-icon {
+  border-radius: 50%;
+}
+
+.is-style-filled .social-sharing-icon {
   border-radius: 0;
 }
 
-.is-style-filled-rounded .social-sharing-icon {
+.is-style-rounded .social-sharing-icon {
   border-radius: 8px;
 }
 
-.is-style-filled-circle .social-sharing-icon {
-  border-radius: 50%;
-}
-
-.is-style-outlined .social-sharing-icon,
-.is-style-outlined-rounded .social-sharing-icon,
-.is-style-outlined-circle .social-sharing-icon {
+.is-style-outlined-pill .social-sharing-icon {
   background-color: transparent !important;
-  border: 1px solid !important;
-}
-.is-style-outlined .social-sharing-icon svg,
-.is-style-outlined-rounded .social-sharing-icon svg,
-.is-style-outlined-circle .social-sharing-icon svg {
-  fill: currentColor;
-}
-
-.is-style-outlined-rounded .social-sharing-icon {
-  border-radius: 8px;
-}
-
-.is-style-outlined-circle .social-sharing-icon {
+  border: 1px solid #000 !important;
   border-radius: 50%;
 }
-
-.is-style-with-labels .social-sharing-icon {
-  padding-right: 16px !important;
+.is-style-outlined-pill .social-sharing-icon svg {
+  fill: #000;
 }
-.is-style-with-labels .social-sharing-icon .social-sharing-icon-label {
-  display: inline-block !important;
+.is-style-outlined-pill .social-sharing-icon .social-sharing-icon-label {
+  color: #000;
+}
+
+.is-style-outlined-square .social-sharing-icon {
+  background-color: transparent !important;
+  border: 1px solid #000 !important;
+  border-radius: 0;
+}
+.is-style-outlined-square .social-sharing-icon svg {
+  fill: #000;
+}
+.is-style-outlined-square .social-sharing-icon .social-sharing-icon-label {
+  color: #000;
 }
 
 .is-style-minimal .social-sharing-icon {
@@ -342,7 +339,17 @@
   padding: 5px !important;
 }
 .is-style-minimal .social-sharing-icon svg {
-  fill: currentColor;
+  fill: #000;
+}
+.is-style-minimal .social-sharing-icon .social-sharing-icon-label {
+  color: #000;
+}
+
+.is-style-one-tone .social-sharing-icon {
+  background-color: #000;
+}
+.is-style-one-tone .social-sharing-icon svg {
+  fill: #fff;
 }
 
 /*# sourceMappingURL=style-wpzoom-social-icons.css.map*/

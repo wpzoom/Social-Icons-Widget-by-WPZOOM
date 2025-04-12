@@ -114,6 +114,10 @@ registerBlockType( 'wpzoom-blocks/social-sharing', {
 			type: 'boolean',
 			default: false,
 		},
+		oneToneColor: {
+			type: 'string',
+			default: '#000000',
+		},
 		platforms: {
 			type: 'array',
 			default: [
@@ -195,36 +199,32 @@ registerBlockType( 'wpzoom-blocks/social-sharing', {
 	styles: [
 		{
 			name: 'default',
-			label: __( 'Default', 'social-icons-widget-by-wpzoom' ),
+			label: __( 'Default (Circle)', 'social-icons-widget-by-wpzoom' ),
 			isDefault: true,
 		},
 		{
-			name: 'filled-rounded',
+			name: 'filled',
+			label: __( 'Square / Filled', 'social-icons-widget-by-wpzoom' ),
+		},
+		{
+			name: 'rounded',
 			label: __( 'Rounded / Filled', 'social-icons-widget-by-wpzoom' ),
 		},
 		{
-			name: 'filled-circle',
-			label: __( 'Circle / Filled', 'social-icons-widget-by-wpzoom' ),
+			name: 'outlined-pill',
+			label: __( 'Outlined / Pill', 'social-icons-widget-by-wpzoom' ),
 		},
 		{
-			name: 'outlined',
+			name: 'outlined-square',
 			label: __( 'Outlined / Square', 'social-icons-widget-by-wpzoom' ),
 		},
 		{
-			name: 'outlined-rounded',
-			label: __( 'Outlined / Rounded', 'social-icons-widget-by-wpzoom' ),
-		},
-		{
-			name: 'outlined-circle',
-			label: __( 'Outlined / Circle', 'social-icons-widget-by-wpzoom' ),
-		},
-		{
-			name: 'with-labels',
-			label: __( 'With Labels', 'social-icons-widget-by-wpzoom' ),
-		},
-		{
 			name: 'minimal',
-			label: __( 'Minimal / No Background', 'social-icons-widget-by-wpzoom' ),
+			label: __( 'Minimal', 'social-icons-widget-by-wpzoom' ),
+		},
+		{
+			name: 'one-tone',
+			label: __( 'One Tone', 'social-icons-widget-by-wpzoom' ),
 		},
 	],
 	supports: {
