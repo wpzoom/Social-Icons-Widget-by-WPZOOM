@@ -33,12 +33,6 @@
                 replaceWithValidBlock();
             }
             
-            // Remove the post title field
-            const titlePanel = document.querySelector('.edit-post-visual-editor__post-title-wrapper');
-            if (titlePanel) {
-                titlePanel.style.display = 'none';
-            }
-            
             // Add a custom header with instructions
             const editorCanvas = document.querySelector('.edit-post-visual-editor__content-area');
             if (editorCanvas) {

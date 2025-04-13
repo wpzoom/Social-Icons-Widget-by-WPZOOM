@@ -24,7 +24,7 @@ class WPZOOM_Social_Icons_Free_Shortcode {
 	 * @since 1.1.0
 	 * @var string
 	 */
-	public static $post_type_name = 'Social Icon Sets';
+	public static $post_type_name = 'Icons & Sharing';
 
 	/**
 	 * Constructor
