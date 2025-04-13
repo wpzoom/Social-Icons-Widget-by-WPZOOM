@@ -32,25 +32,76 @@
             if (!hasSocialSharingBlock) {
                 replaceWithValidBlock();
             }
-            
-            // Add a custom header with instructions
-            const editorCanvas = document.querySelector('.edit-post-visual-editor__content-area');
-            if (editorCanvas) {
-                const instructionsPanel = document.createElement('div');
-                instructionsPanel.className = 'wpzoom-sharing-editor-instructions';
-                instructionsPanel.innerHTML = `
-                    <h2>Configure Your Social Sharing Buttons</h2>
-                    <p>These buttons will automatically appear on your content based on the settings in the sidebar. Customize the buttons below, then use the "Display Settings" panel to control where they appear.</p>
-                `;
-                
-                // Insert before the editor content
-                const parent = editorCanvas.parentNode;
-                parent.insertBefore(instructionsPanel, editorCanvas);
+
+            // Remove the post title field
+            const titlePanel = document.querySelector('.edit-post-visual-editor__post-title-wrapper');
+            if (titlePanel) {
+                titlePanel.style.display = 'none';
             }
             
+            // Add a custom header with instructions
+            // Try different selectors used in various WordPress versions
+            addInstructionsPanel();
+
             // Focus the editor
             wp.data.dispatch('core/block-editor').clearSelectedBlock();
         }, 500);
+
+        /**
+         * Add instructions panel above the editor content
+         */
+        function addInstructionsPanel() {
+            // Try multiple potential selectors for the editor canvas
+            const editorSelectors = [
+                '.edit-post-visual-editor__content-area',
+                '.interface-interface-skeleton__content',
+                '.block-editor-block-list__layout',
+                '.editor-styles-wrapper'
+            ];
+
+            let editorElement = null;
+
+            // Try each selector until we find a matching element
+            for (let selector of editorSelectors) {
+                const element = document.querySelector(selector);
+                if (element) {
+                    editorElement = element;
+                    break;
+                }
+            }
+
+            // If we found an editor element
+            if (editorElement) {
+                // Create the instructions panel
+                const instructionsPanel = document.createElement('div');
+                instructionsPanel.className = 'wpzoom-sharing-editor-instructions';
+                instructionsPanel.style.backgroundColor = '#fff';
+                instructionsPanel.style.padding = '24px';
+                instructionsPanel.style.marginBottom = '20px';
+                instructionsPanel.style.borderRadius = '4px';
+                instructionsPanel.style.borderLeft = '4px solid #0073aa';
+                instructionsPanel.style.boxShadow = '0 1px 1px rgba(0, 0, 0, 0.04)';
+                instructionsPanel.style.marginTop = '20px';
+
+                instructionsPanel.innerHTML = `
+                    <h2 style="margin-top: 0; font-size: 18px; font-weight: 500; margin-bottom: 12px; color: #23282d;">Configure Your Social Sharing Buttons</h2>
+                    <p style="margin-bottom: 0; color: #646970;">These buttons will automatically appear on your content based on the settings in the sidebar. Customize the buttons below, then use the "Display Settings" panel to control where they appear.</p>
+                `;
+
+                // Try to find the best place to insert the panel
+                if (editorElement.classList.contains('interface-interface-skeleton__content')) {
+                    // For newer WordPress versions, insert at the top of the content area
+                    editorElement.insertBefore(instructionsPanel, editorElement.firstChild);
+                } else if (editorElement.parentNode) {
+                    // For older WordPress versions, insert before the editor canvas
+                    editorElement.parentNode.insertBefore(instructionsPanel, editorElement);
+                }
+
+                console.log('WPZOOM: Added instructions panel');
+            } else {
+                console.log('WPZOOM: Could not find editor element to add instructions');
+            }
+        }
         
         /**
          * Replace any existing content with a valid social sharing block
