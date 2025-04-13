@@ -42,6 +42,7 @@ if ( empty( $wpzoom_social_icons_settings['disable-block'] ) ) {
 
 require_once plugin_dir_path( __FILE__ ) . 'includes/classes/class-zoom-social-icons-widget.php';
 require_once plugin_dir_path( __FILE__ ) . 'includes/classes/class-wpzoom-social-icons-shortcode.php';
+require_once plugin_dir_path( __FILE__ ) . 'includes/classes/class-wpzoom-social-sharing-buttons.php';
 
 $current_theme = get_template();
 if( 'inspiro' !== $current_theme  ) {

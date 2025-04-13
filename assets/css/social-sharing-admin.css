@@ -1,0 +1,115 @@
+/**
+ * Styles for Social Sharing Buttons admin interface
+ */
+
+/* Custom header for block editor */
+.wpzoom-sharing-editor-instructions {
+    background-color: #fff;
+    padding: 24px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border-left: 4px solid #0073aa;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.wpzoom-sharing-editor-instructions h2 {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: #23282d;
+}
+
+.wpzoom-sharing-editor-instructions p {
+    margin-bottom: 0;
+    color: #646970;
+}
+
+/* Display Settings panel */
+#wpzoom_sharing_settings .inside {
+    margin-top: 12px;
+}
+
+#wpzoom_sharing_settings .components-base-control {
+    margin-bottom: 16px;
+}
+
+#wpzoom_sharing_settings label {
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+#wpzoom_sharing_settings .description {
+    margin-top: 10px;
+    color: #646970;
+    font-size: 13px;
+}
+
+/* Position options */
+#wpzoom_sharing_settings p:has(input[type="radio"]) {
+    margin: 8px 0;
+}
+
+/* Post types list */
+#wpzoom_sharing_settings p:has(input[type="checkbox"]) {
+    margin: 5px 0;
+}
+
+/* Save button */
+.wpzoom-social-sharing-editor .editor-post-publish-button__button {
+    background-color: #0073aa !important;
+}
+
+/* Override some editor styles */
+.wpzoom-social-sharing-editor .edit-post-visual-editor__post-title-wrapper {
+    max-width: 100%;
+    margin: 0;
+}
+
+.wpzoom-social-sharing-editor .wp-block {
+    max-width: 100%;
+}
+
+/* Front-end preview styling */
+.wpzoom-social-sharing-buttons-top {
+    margin-bottom: 30px;
+}
+
+.wpzoom-social-sharing-buttons-bottom {
+    margin-top: 30px;
+}
+
+/* Preview */
+.wpzoom-sharing-preview {
+    background-color: #f0f0f1;
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 30px;
+}
+
+.wpzoom-sharing-preview-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 4px;
+}
+
+.wpzoom-sharing-preview-header {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #646970;
+}
+
+.wpzoom-sharing-preview-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 20px;
+}
+
+.wpzoom-sharing-preview-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #50575e;
+} 
