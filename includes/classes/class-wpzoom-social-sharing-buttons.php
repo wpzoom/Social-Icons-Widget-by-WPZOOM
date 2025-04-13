@@ -146,7 +146,7 @@ class WPZOOM_Social_Sharing_Buttons {
 				
 				// Set default settings
 				update_post_meta( $new_config_id, '_wpzoom_sharing_position', 'bottom' );
-				update_post_meta( $new_config_id, '_wpzoom_sharing_post_types', array( 'post' ) );
+				update_post_meta( $new_config_id, '_wpzoom_sharing_post_types', array() );
 			}
 		}
 	}
@@ -200,7 +200,7 @@ class WPZOOM_Social_Sharing_Buttons {
 		$position = ! empty( $position ) ? $position : 'bottom';
 		
 		$post_types = get_post_meta( $post->ID, '_wpzoom_sharing_post_types', true );
-		$post_types = ! empty( $post_types ) ? $post_types : array( 'post' );
+		$post_types = is_array( $post_types ) ? $post_types : array();
 		
 		// Get all public post types
 		$all_post_types = get_post_types(
@@ -364,6 +364,11 @@ class WPZOOM_Social_Sharing_Buttons {
 		// Get settings
 		$position   = get_post_meta( $config->ID, '_wpzoom_sharing_position', true );
 		$post_types = get_post_meta( $config->ID, '_wpzoom_sharing_post_types', true );
+		
+		// If no post types are selected or post_types is not an array, don't show buttons anywhere
+		if ( empty( $post_types ) || ! is_array( $post_types ) ) {
+			return $content;
+		}
 		
 		// Check if we should show buttons on this post type
 		if ( ! is_singular( $post_types ) ) {
