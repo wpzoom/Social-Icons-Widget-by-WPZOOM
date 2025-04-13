@@ -308,20 +308,32 @@ class WPZOOM_Social_Sharing_Buttons {
 		$screen = get_current_screen();
 		
 		if ( 'post' === $screen->base && self::$post_type === $screen->post_type ) {
-			wp_enqueue_style(
-				'wpzoom-social-sharing-admin',
-				WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/social-sharing-admin.css',
-				array(),
-				WPZOOM_SOCIAL_ICONS_PLUGIN_VERSION
-			);
+			// First check if the CSS file exists
+			$css_path = WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/css/social-sharing-admin.css';
+			$css_url = WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/css/social-sharing-admin.css';
 			
-			wp_enqueue_script(
-				'wpzoom-social-sharing-admin',
-				WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/js/social-sharing-admin.js',
-				array( 'jquery' ),
-				WPZOOM_SOCIAL_ICONS_PLUGIN_VERSION,
-				true
-			);
+			if ( file_exists( $css_path ) ) {
+				wp_enqueue_style(
+					'wpzoom-social-sharing-admin',
+					$css_url,
+					array(),
+					WPZOOM_SOCIAL_ICONS_PLUGIN_VERSION
+				);
+			}
+			
+			// Check if the JS file exists
+			$js_path = WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'assets/js/social-sharing-admin.js';
+			$js_url = WPZOOM_SOCIAL_ICONS_PLUGIN_URL . 'assets/js/social-sharing-admin.js';
+			
+			if ( file_exists( $js_path ) ) {
+				wp_enqueue_script(
+					'wpzoom-social-sharing-admin',
+					$js_url,
+					array( 'jquery' ),
+					WPZOOM_SOCIAL_ICONS_PLUGIN_VERSION,
+					true
+				);
+			}
 		}
 	}
 
