@@ -15062,8 +15062,7 @@ function Edit({
       textAlign: 'center',
       fontSize: '13px',
       color: '#757575',
-      marginTop: '8px',
-      fontStyle: 'italic'
+      marginTop: '8px'
     }
   }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])('Click on any icon to edit its label', 'social-icons-widget-by-wpzoom'))));
 }

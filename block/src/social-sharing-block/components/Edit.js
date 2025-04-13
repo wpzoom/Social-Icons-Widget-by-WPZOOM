@@ -230,8 +230,7 @@ export default function Edit({ attributes, setAttributes, className, isSelected 
 						textAlign: 'center', 
 						fontSize: '13px', 
 						color: '#757575',
-						marginTop: '8px',
-						fontStyle: 'italic'
+						marginTop: '8px'
 					}}>
 						{__('Click on any icon to edit its label', 'social-icons-widget-by-wpzoom')}
 					</div>
