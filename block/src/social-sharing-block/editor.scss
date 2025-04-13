@@ -243,33 +243,39 @@
 .is-style-default {
     .social-sharing-icon {
         border-radius: 50%;
+        // No color overrides here to allow custom colors
     }
 }
 
 .is-style-filled {
     .social-sharing-icon {
         border-radius: 0;
+        // No color overrides here to allow custom colors
     }
 }
 
 .is-style-rounded {
     .social-sharing-icon {
         border-radius: 8px;
+        // No color overrides here to allow custom colors
     }
 }
 
 .is-style-outlined-pill {
     .social-sharing-icon {
         background-color: transparent !important;
-        border: 1px solid #000;
+        border: 1px solid currentColor;
         border-radius: 50%;
         
-        svg {
-            fill: #000;
-        }
+        // Only override colors if they haven't been customized
+        &:not([style*="color:"]) {
+            svg {
+                fill: #000;
+            }
 
-        .social-sharing-icon-label {
-            color: #000;
+            .social-sharing-icon-label {
+                color: #000;
+            }
         }
     }
 }
@@ -277,15 +283,18 @@
 .is-style-outlined-square {
     .social-sharing-icon {
         background-color: transparent !important;
-        border: 1px solid #000;
+        border: 1px solid currentColor;
         border-radius: 0;
 
-        svg {
-            fill: #000;
-        }
-        
-        .social-sharing-icon-label {
-            color: #000;
+        // Only override colors if they haven't been customized
+        &:not([style*="color:"]) {
+            svg {
+                fill: #000;
+            }
+            
+            .social-sharing-icon-label {
+                color: #000;
+            }
         }
     }
 }
@@ -296,22 +305,23 @@
         border: none !important;
         padding: 5px !important;
         
-        svg {
-            fill: #000;
-        }
+        // Only override colors if they haven't been customized
+        &:not([style*="color:"]) {
+            svg {
+                fill: #000;
+            }
 
-        .social-sharing-icon-label {
-            color: #000;
+            .social-sharing-icon-label {
+                color: #000;
+            }
         }
     }
 }
 
 .is-style-one-tone {
     .social-sharing-icon {
-        background-color: #000;
+        // No background-color override to allow custom colors
 
-        svg {
-            fill: #fff;
-        }
+        // Don't override SVG fill to respect the icon color set in attributes
     }
 } 

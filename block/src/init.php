@@ -165,16 +165,9 @@ function wpzoom_social_sharing_block_render_callback( $attributes ) {
 		$oneToneColor = '#000000';
 	}
 	
-	// Ensure icon colors are appropriate for the style
-	if ($is_one_tone_style) {
-		$iconColor = '#ffffff';
-		$labelColor = '#ffffff';
-	} else if ($is_filled_square || strpos($class_name, 'is-style-default') !== false || strpos($class_name, 'is-style-rounded') !== false) {
-		// Set white color for default, filled square and rounded styles
-		$iconColor = '#ffffff';
-		$labelColor = '#ffffff';
-	}
-
+	// Don't override user-set colors regardless of style
+	// The user's color settings from the block attributes should always take precedence
+	
 	// Start building output
 	$output = '<div class="' . esc_attr( $block_class . ' ' . $class_name ) . ' align-' . esc_attr( $align ) . '"';
 	if ($align !== 'none') {
@@ -255,7 +248,7 @@ function wpzoom_social_sharing_block_render_callback( $attributes ) {
 		// Override borderRadius for filled-square style
 		$style_specific_border_radius = $is_filled_square ? 0 : $borderRadius;
 		
-		// Set appropriate colors for all styles
+		// Set appropriate colors based on user settings
 		$icon_color_value = $iconColor;
 		$label_color_value = $labelColor;
 		

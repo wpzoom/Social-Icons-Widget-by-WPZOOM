@@ -745,25 +745,25 @@
 
 .is-style-outlined-pill .social-sharing-icon {
   background-color: transparent !important;
-  border: 1px solid #000;
+  border: 1px solid currentColor;
   border-radius: 50%;
 }
-.is-style-outlined-pill .social-sharing-icon svg {
+.is-style-outlined-pill .social-sharing-icon:not([style*="color:"]) svg {
   fill: #000;
 }
-.is-style-outlined-pill .social-sharing-icon .social-sharing-icon-label {
+.is-style-outlined-pill .social-sharing-icon:not([style*="color:"]) .social-sharing-icon-label {
   color: #000;
 }
 
 .is-style-outlined-square .social-sharing-icon {
   background-color: transparent !important;
-  border: 1px solid #000;
+  border: 1px solid currentColor;
   border-radius: 0;
 }
-.is-style-outlined-square .social-sharing-icon svg {
+.is-style-outlined-square .social-sharing-icon:not([style*="color:"]) svg {
   fill: #000;
 }
-.is-style-outlined-square .social-sharing-icon .social-sharing-icon-label {
+.is-style-outlined-square .social-sharing-icon:not([style*="color:"]) .social-sharing-icon-label {
   color: #000;
 }
 
@@ -772,18 +772,11 @@
   border: none !important;
   padding: 5px !important;
 }
-.is-style-minimal .social-sharing-icon svg {
+.is-style-minimal .social-sharing-icon:not([style*="color:"]) svg {
   fill: #000;
 }
-.is-style-minimal .social-sharing-icon .social-sharing-icon-label {
+.is-style-minimal .social-sharing-icon:not([style*="color:"]) .social-sharing-icon-label {
   color: #000;
-}
-
-.is-style-one-tone .social-sharing-icon {
-  background-color: #000;
-}
-.is-style-one-tone .social-sharing-icon svg {
-  fill: #fff;
 }
 
 /*# sourceMappingURL=wpzoom-social-icons.css.map*/
