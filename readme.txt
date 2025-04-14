@@ -5,7 +5,7 @@ Tags: social icons, social media, social sharing, share buttons, social media bu
 Requires at least: 6.0
 Requires PHP: 7.4
 Tested up to: 6.8
-Stable tag: 4.4.0
+Stable tag: 4.5.0
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 

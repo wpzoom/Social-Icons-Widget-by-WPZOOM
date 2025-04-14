@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Social Icons Widget & Block by WPZOOM\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-14 06:37+0000\n"
+"POT-Creation-Date: 2025-04-14 08:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -16,16 +16,16 @@ msgstr ""
 "X-Loco-Version: 2.5.4; wp-5.8.1\n"
 "X-Domain: social-icons-widget-by-wpzoom"
 
-#: includes/classes/class-wpzoom-social-sharing-buttons.php:235
+#: includes/classes/class-wpzoom-social-sharing-buttons.php:239
 msgid "Above and below content"
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-sharing-buttons.php:223
+#: includes/classes/class-wpzoom-social-sharing-buttons.php:227
 msgid "Above content"
 msgstr ""
 
 #: social-icons-widget-by-wpzoom.php:176
-#: includes/classes/class-wpzoom-social-icons-settings.php:361
+#: includes/classes/class-wpzoom-social-icons-settings.php:341
 msgid "Academicons"
 msgstr ""
 
@@ -39,10 +39,6 @@ msgstr ""
 #: includes/classes/class-zoom-social-icons-widget.php:743
 #, php-format
 msgid "Add %s to links"
-msgstr ""
-
-#: includes/classes/class-wpzoom-social-icons-settings.php:639
-msgid "Add icon to set"
 msgstr ""
 
 #: includes/classes/class-zoom-social-icons-widget.php:919
@@ -61,6 +57,14 @@ msgstr ""
 msgid "Add New Shortcode"
 msgstr ""
 
+#. Description of the plugin
+msgid ""
+"Add Social Icons and Share Buttons to your website easily. Link to your "
+"social media profiles or let visitors share your content on popular networks."
+" Supports over 400 social media icons, customizable colors, and drag-and-"
+"drop sorting."
+msgstr ""
+
 #: includes/classes/class-zoom-social-icons-widget.php:756
 msgid "Align Center"
 msgstr ""
@@ -73,11 +77,7 @@ msgstr ""
 msgid "Align Right"
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-icons-shortcode.php:55
-msgid "All Icon Sets"
-msgstr ""
-
-#: includes/classes/class-wpzoom-social-sharing-buttons.php:229
+#: includes/classes/class-wpzoom-social-sharing-buttons.php:233
 msgid "Below content"
 msgstr ""
 
@@ -109,7 +109,7 @@ msgstr ""
 msgid "Configure sharing buttons that appear automatically"
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-sharing-buttons.php:255
+#: includes/classes/class-wpzoom-social-sharing-buttons.php:259
 msgid ""
 "Configure the social sharing buttons above, then use these settings to "
 "control where they appear on your site."
@@ -134,7 +134,7 @@ msgid ""
 msgstr ""
 
 #: social-icons-widget-by-wpzoom.php:168
-#: includes/classes/class-wpzoom-social-icons-settings.php:393
+#: includes/classes/class-wpzoom-social-icons-settings.php:373
 msgid "Dashicons"
 msgstr ""
 
@@ -146,8 +146,8 @@ msgstr ""
 msgid "description"
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-icons-settings.php:475
-#: includes/classes/class-wpzoom-social-icons-settings.php:490
+#: includes/classes/class-wpzoom-social-icons-settings.php:455
+#: includes/classes/class-wpzoom-social-icons-settings.php:470
 msgid "Disable"
 msgstr ""
 
@@ -155,7 +155,7 @@ msgstr ""
 msgid "Dismiss this notice."
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-sharing-buttons.php:181
+#: includes/classes/class-wpzoom-social-sharing-buttons.php:185
 msgid "Display Settings"
 msgstr ""
 
@@ -175,20 +175,20 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-icons-settings.php:505
+#: includes/classes/class-wpzoom-social-icons-settings.php:485
 msgid "Enable"
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-icons-settings.php:600
+#: includes/classes/class-wpzoom-social-icons-settings.php:580
 msgid "Enable sync"
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-icons-settings.php:519
-#: includes/classes/class-wpzoom-social-icons-settings.php:532
-#: includes/classes/class-wpzoom-social-icons-settings.php:546
-#: includes/classes/class-wpzoom-social-icons-settings.php:560
-#: includes/classes/class-wpzoom-social-icons-settings.php:573
-#: includes/classes/class-wpzoom-social-icons-settings.php:586
+#: includes/classes/class-wpzoom-social-icons-settings.php:499
+#: includes/classes/class-wpzoom-social-icons-settings.php:512
+#: includes/classes/class-wpzoom-social-icons-settings.php:526
+#: includes/classes/class-wpzoom-social-icons-settings.php:540
+#: includes/classes/class-wpzoom-social-icons-settings.php:553
+#: includes/classes/class-wpzoom-social-icons-settings.php:566
 msgid "Enable this font"
 msgstr ""
 
@@ -204,19 +204,19 @@ msgstr ""
 msgid "Font Awesome"
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-icons-settings.php:369
+#: includes/classes/class-wpzoom-social-icons-settings.php:349
 msgid "Font Awesome 3"
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-icons-settings.php:534
+#: includes/classes/class-wpzoom-social-icons-settings.php:514
 msgid "Font Awesome 3 is loaded only in the Social Icons Widget"
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-icons-settings.php:377
+#: includes/classes/class-wpzoom-social-icons-settings.php:357
 msgid "Font Awesome 5"
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-icons-settings.php:548
+#: includes/classes/class-wpzoom-social-icons-settings.php:528
 msgid "Font Awesome 5 is loaded only in the Social Icons Block."
 msgstr ""
 
@@ -233,12 +233,8 @@ msgid "Font Awesome Solid"
 msgstr ""
 
 #: social-icons-widget-by-wpzoom.php:172
-#: includes/classes/class-wpzoom-social-icons-settings.php:385
+#: includes/classes/class-wpzoom-social-icons-settings.php:365
 msgid "Genericons"
-msgstr ""
-
-#: includes/classes/class-wpzoom-social-icons-settings.php:617
-msgid "Get Social Icons Widget PRO"
 msgstr ""
 
 #: social-icons-widget-by-wpzoom.php:324
@@ -265,6 +261,7 @@ msgstr ""
 msgid "Icon Padding (pixels):"
 msgstr ""
 
+#: includes/classes/class-wpzoom-social-icons-shortcode.php:55
 #: includes/classes/class-wpzoom-social-icons-settings.php:171
 msgid "Icon Sets"
 msgstr ""
@@ -293,7 +290,7 @@ msgstr ""
 msgid "LinkedIn"
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-icons-settings.php:588
+#: includes/classes/class-wpzoom-social-icons-settings.php:568
 msgid "Main icon set"
 msgstr ""
 
@@ -331,7 +328,7 @@ msgstr ""
 msgid "Optimization"
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-sharing-buttons.php:218
+#: includes/classes/class-wpzoom-social-sharing-buttons.php:222
 msgid "Position"
 msgstr ""
 
@@ -342,7 +339,7 @@ msgstr ""
 
 #: includes/classes/class-wpzoom-social-icons-shortcode.php:49
 msgctxt "post type general name"
-msgid "Social Icons Sets"
+msgid "Social Icon Sets"
 msgstr ""
 
 #: includes/classes/class-wpzoom-social-sharing-buttons.php:78
@@ -355,11 +352,11 @@ msgctxt "post type singular name"
 msgid "Social Icon Sets"
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-icons-settings.php:343
+#: includes/classes/class-wpzoom-social-icons-settings.php:323
 msgid "Preload Fonts"
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-icons-settings.php:507
+#: includes/classes/class-wpzoom-social-icons-settings.php:487
 msgid ""
 "Preload web fonts using rel=\"preload\" to remove any flash of unstyled text "
 "and improve the PageSpeed score."
@@ -371,18 +368,6 @@ msgstr ""
 
 #: block/src/init.php:213
 msgid "Reddit"
-msgstr ""
-
-#: includes/classes/class-wpzoom-social-icons-settings.php:655
-#: includes/classes/class-wpzoom-social-icons-settings.php:671
-#: includes/classes/class-wpzoom-social-icons-settings.php:687
-#: includes/classes/class-wpzoom-social-icons-settings.php:703
-#: includes/classes/class-wpzoom-social-icons-settings.php:719
-msgid "Remove"
-msgstr ""
-
-#: includes/classes/class-wpzoom-social-icons-settings.php:633
-msgid "Remove Icon"
 msgstr ""
 
 #: includes/classes/class-zoom-social-icons-widget.php:773
@@ -431,12 +416,12 @@ msgstr ""
 #: includes/classes/class-wpzoom-social-sharing-buttons.php:80
 #: includes/classes/class-wpzoom-social-sharing-buttons.php:116
 #: includes/classes/class-wpzoom-social-sharing-buttons.php:117
-#: includes/classes/class-wpzoom-social-sharing-buttons.php:141
-#: includes/classes/class-wpzoom-social-sharing-buttons.php:142
+#: includes/classes/class-wpzoom-social-sharing-buttons.php:143
+#: includes/classes/class-wpzoom-social-sharing-buttons.php:144
 msgid "Sharing Buttons"
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-sharing-buttons.php:130
+#: includes/classes/class-wpzoom-social-sharing-buttons.php:132
 msgid "Sharing Buttons Configuration"
 msgstr ""
 
@@ -453,7 +438,7 @@ msgstr ""
 msgid "Shortcode:"
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-sharing-buttons.php:240
+#: includes/classes/class-wpzoom-social-sharing-buttons.php:244
 msgid "Show buttons on"
 msgstr ""
 
@@ -461,11 +446,23 @@ msgstr ""
 msgid "Show icon labels? "
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-icons-settings.php:308
+#: includes/classes/class-wpzoom-social-icons-settings.php:133
+msgid "Social Icons     Page"
+msgstr ""
+
+#. Name of the plugin
+msgid "Social Icons & Sharing Buttons by WPZOOM"
+msgstr ""
+
+#: includes/classes/class-wpzoom-social-icons-settings.php:165
+msgid "Social Icons & Sharing Buttons Settings"
+msgstr ""
+
+#: includes/classes/class-wpzoom-social-icons-settings.php:305
 msgid "Social Icons Block"
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-icons-settings.php:492
+#: includes/classes/class-wpzoom-social-icons-settings.php:472
 msgid "Social Icons Block module functionality, by default enabled."
 msgstr ""
 
@@ -473,32 +470,16 @@ msgstr ""
 msgid "Social Icons by WPZOOM"
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-icons-settings.php:300
+#: includes/classes/class-wpzoom-social-icons-settings.php:297
 msgid "Social Icons Widget"
 msgstr ""
 
-#. Name of the plugin
-#: includes/classes/class-wpzoom-social-icons-settings.php:165
-msgid "Social Icons Widget & Block by WPZOOM"
-msgstr ""
-
-#. Description of the plugin
-msgid ""
-"Social Icons Widget & Block to display links to social media networks "
-"websites. Supports most of the known social networks and includes more than "
-"400 icons. Sort icons by Drag & Drop and change their color easily."
-msgstr ""
-
-#: includes/classes/class-wpzoom-social-icons-settings.php:133
-msgid "Social Icons Widget By WPZOOM Settings Page"
-msgstr ""
-
-#: includes/classes/class-wpzoom-social-icons-settings.php:477
+#: includes/classes/class-wpzoom-social-icons-settings.php:457
 msgid "Social Icons Widget module functionality, by default enabled."
 msgstr ""
 
 #: social-icons-widget-by-wpzoom.php:164
-#: includes/classes/class-wpzoom-social-icons-settings.php:401
+#: includes/classes/class-wpzoom-social-icons-settings.php:381
 msgid "Socicons"
 msgstr ""
 
@@ -514,11 +495,11 @@ msgstr ""
 msgid "Start typing the URL..."
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-icons-settings.php:409
+#: includes/classes/class-wpzoom-social-icons-settings.php:389
 msgid "Sync Icon Sets"
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-icons-settings.php:602
+#: includes/classes/class-wpzoom-social-icons-settings.php:582
 msgid "Sync Icon sets with Block and Widget Settings from popup."
 msgstr ""
 
@@ -561,24 +542,6 @@ msgstr ""
 #: social-icons-widget-by-wpzoom.php:320
 #, php-format
 msgid "Upgrade to the PRO version to unlock unique features such as the %s"
-msgstr ""
-
-#: includes/classes/class-wpzoom-social-icons-settings.php:628
-#: includes/classes/class-wpzoom-social-icons-settings.php:629
-msgid "Upload an SVG icon"
-msgstr ""
-
-#: includes/classes/class-wpzoom-social-icons-settings.php:182
-#: includes/classes/class-wpzoom-social-icons-settings.php:624
-msgid "Upload Icons"
-msgstr ""
-
-#: includes/classes/class-wpzoom-social-icons-settings.php:629
-msgid "Upload SVG icon"
-msgstr ""
-
-#: includes/classes/class-wpzoom-social-icons-settings.php:626
-msgid "Upload your icons here and create a new Custom Icons set"
 msgstr ""
 
 #: social-icons-widget-by-wpzoom.php:282
