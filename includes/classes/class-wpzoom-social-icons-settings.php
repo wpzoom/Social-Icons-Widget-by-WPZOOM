@@ -135,7 +135,7 @@ class WPZOOM_Social_Icons_Settings {
 			'manage_options',
 			self::$menu_slug,
 			array( $this, 'create_admin_page' ),
-			5
+			10
 		);
 	}
 
