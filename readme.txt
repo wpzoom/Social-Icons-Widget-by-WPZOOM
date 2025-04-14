@@ -9,7 +9,7 @@ Stable tag: 4.4.0
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Quickly add icons with links to your profiles from different social networks and sites! Social Icons Widget & Block includes more than 400 icons
+Quickly add social media icons and sharing buttons to your website! Social Icons & Sharing Buttons includes more than 400 icons and customizable sharing buttons.
 
 == Description ==
 
@@ -19,9 +19,9 @@ Quickly add icons with links to your profiles from different social networks and
 
 **[View Demo](https://demo.wpzoom.com/social-icons/)**
 
-**Social Icons Widget & Block** helps you to add quickly icons with links to your profiles from different social networks. The plugin includes several icon sets, which gives you the possibility to use the widget for more than just linking to your social media profiles. You can use generic icons to add links to anything you want.
+**Social Icons & Sharing Buttons** helps you to add social media icons and sharing buttons to your website. The plugin includes several icon sets, which gives you the possibility to use the widget for more than just linking to your social media profiles. You can use generic icons to add links to anything you want, and enable sharing buttons to let visitors share your content across social networks.
 
-> With the help of WPZOOM’s excellent Social Icons Widget plugin, you can link to all your social network profiles in no time, letting your visitors easily get in touch with you on all social media channels.
+> With the help of WPZOOM's excellent Social Icons Widget plugin, you can link to all your social network profiles and add sharing buttons in no time, letting your visitors easily get in touch with you on all social media channels and share your content.
 > ⭐️⭐️⭐️⭐️⭐️
 > Read [WPKlik's](https://wpklik.com/wordpress-plugins/wordpress-social-icons-widget/) review of this plugin: [A Complete Guide to Social Icons Widget](https://wpklik.com/wordpress-plugins/wordpress-social-icons-widget/)
 
@@ -38,9 +38,12 @@ Quickly add icons with links to your profiles from different social networks and
 
 ⭐️ **[Get the PRO version!](https://www.wpzoom.com/plugins/social-widget/?utm_source=wporg&utm_medium=website&utm_campaign=free_description)** ⭐️
 
+= What's new in 4.5.0 =
+* **NEW: Social Sharing Buttons Block**
+* **NEW: Add Social Sharing Buttons in posts and pages**
+
 = What's new in 4.4.0 =
 * **NEW: Add SVG Icons in the Social Icons Block**
-
 
 = What's new in 4.0.0 =
 * **NEW: Gutenberg Block**
@@ -73,7 +76,7 @@ Quickly add icons with links to your profiles from different social networks and
 
 = Where I can view a Demo? =
 
-You can view the widget live in all our themes at [WPZOOM](https://www.wpzoom.com/themes/).
+You can view the plugin live in all our themes at [WPZOOM](https://www.wpzoom.com/themes/).
 
 = View Demo & Examples =
 * [Foodica Theme](https://demo.wpzoom.com/?theme=foodica) - header bar and sidebar
@@ -82,7 +85,9 @@ You can view the widget live in all our themes at [WPZOOM](https://www.wpzoom.co
 = Features: =
 * SVG Icons Support
 * Gutenberg Block
-* Icon Sets + Shortcodes - **NEW**
+* Social Share Buttons in Posts and Pages - **NEW**
+* Social Sharing Buttons Block - **NEW**
+* Icon Sets + Shortcodes
 * 100+ Sites/Social Networks supported
 * 400+ Custom Icons
 * 5 Icons Sets
@@ -92,9 +97,8 @@ You can view the widget live in all our themes at [WPZOOM](https://www.wpzoom.co
 * Color Picker
 * Search by keywords
 * Adjust icon size & padding
-* 2 Styles: Icon Shape and Icon with Background
+* Multiple Styles: Icon Shape and Icon with Background
 * 3 Background Styles: Rounded Corners, Round, Square
-* Retina Ready Icons
 * Supports email addresses (mailto:email@example.com)
 * Supports Telephone numbers (tel:12345)
 * Supports Skype (skype:username?call)
@@ -103,7 +107,7 @@ You can view the widget live in all our themes at [WPZOOM](https://www.wpzoom.co
 
 = Icons =
 
-Twitter, X, Facebook, Google+, Instagram, Pinterest, Snapchat, Skype, Yelp, Feedburner, LinkedIn, Bloglovin', Lookbook, Feedly, Periscope, SoundCloud, Spotify, Last.fm, YouTube, Vimeo, Vine, Flickr, 500px, Tumblr, Blogger, Reddit, Dribbble, Envato, Behance, DeviantArt, GitHub, RSS, Disqus, Stackoverflow, Komoot, Tiktok, Mailchimp, Podcasts, Telegram, TripAdvisor, AirBnb, Baidu, ebay, Medium, Periscope, Snapchat, Bandcamp, Eyem, Viber, Quora, Etsy, Meetup, Linode, IMDB, Overwatch, Strava, Tidal, Deezer, Unsplash, Codered, Udemy, CrunchBase, Angie's List, App Store, Nextdoor, WhatsApp, ResearchGate, Slack, Songkick, ReverbNation
+Twitter, X, Facebook, Instagram, Pinterest, Snapchat, Threads, Yelp, LinkedIn, Bloglovin', Lookbook, Feedly, Periscope, SoundCloud, Spotify, Last.fm, YouTube, Vimeo, Flickr, 500px, Tumblr, Blogger, Reddit, Dribbble, Envato, Behance, DeviantArt, GitHub, RSS, Disqus, Stackoverflow, Komoot, Tiktok, Mailchimp, Podcasts, Telegram, TripAdvisor, AirBnb, Baidu, ebay, Medium, Periscope, Snapchat, Bandcamp, Eyem, Viber, Quora, Etsy, Meetup, Linode, IMDB, Overwatch, Strava, Tidal, Deezer, Unsplash, Codered, Udemy, CrunchBase, Angie's List, App Store, Nextdoor, WhatsApp, ResearchGate, Slack, Songkick, ReverbNation, Bluesky, Pocket
 
 = Credits =
 
@@ -113,7 +117,7 @@ Some Social Icons are provided by the Socicon icon font.
 
 = GDPR COMPLIANCE =
 
-Social Icons Widget does not collect any information from your visitors, therefore it’s **100% GDPR compliant**.
+Social Icons & Sharing Buttons does not collect any information from your visitors, therefore it's **100% GDPR compliant**.
 
 
 = Get Involved =
@@ -138,16 +142,22 @@ Add the Social Icons Block to the editor and customize the icons as you want.
 
 == Screenshots ==
 
-1. Social Icons Block
-2. Social Icons Block
-3. Rounded Corners Style
-4. Square Style
-5. Rounded Icons Style
-6. No Background Style
-7. With Icon label
-8. Widget Settings
+1. Social Icons & Sharing Buttons Preview
+2. Sharing Buttons in Posts & Pages
+3. Customizing Sharing Buttons
+4. Custom SVG Icons
+5. Social Sharing Block
+6. Social Icons Block
+7. Social Sharing Buttons - Outline Style
+8. Social Sharing Buttons - Minimal Style
+9. Social Sharing Buttons - One-tone Style
+10. Social Sharing Buttons - No Label Style
 
 == Changelog ==
+
+= 4.5.0 =
+* NEW: Social Sharing Buttons Block
+* NEW: Add Social Sharing Buttons in posts and pages (Icons & Sharing > Sharing Buttons)
 
 = 4.4.0 =
 * Added SVG Icons support in the Social Icons Block
