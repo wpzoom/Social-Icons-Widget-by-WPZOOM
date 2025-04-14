@@ -64,7 +64,7 @@ class Wpzoom_Social_Icons_Cpt extends Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return esc_html__( 'Social Icons Sets', 'wpzoom-forms' );
+		return esc_html__( 'Social Icon Sets', 'wpzoom-forms' );
 	}
 
 	/**
@@ -164,7 +164,7 @@ class Wpzoom_Social_Icons_Cpt extends Widget_Base {
 		$this->start_controls_section(
 			'_section_social_icons_cpt',
 			array(
-				'label' => esc_html__( 'Social Icons Sets', 'wpzoom-forms' ),
+				'label' => esc_html__( 'Social Icon Sets', 'wpzoom-forms' ),
 				'tab'   => Controls_Manager::TAB_CONTENT,
 			)
 		);
@@ -187,7 +187,7 @@ class Wpzoom_Social_Icons_Cpt extends Widget_Base {
         $cpt_link = admin_url( 'edit.php?post_type=wpzoom-shortcode' );
 
         $rec_note = sprintf(
-            '<span %s>You can create a new set of icons on the <a href="%s" target="_blank">Social Icons Sets</a> page.</span>',
+            '<span %s>You can create a new set of icons on the <a href="%s" target="_blank">Social Icon Sets</a> page.</span>',
             $inline_style,
             $cpt_link
         );

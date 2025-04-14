@@ -46,7 +46,7 @@ class WPZOOM_Social_Icons_Free_Shortcode {
 	 */
 	public function register_custom_post_type() {
 		$labels = array(
-			'name'               => _x( 'Social Icons Sets', 'post type general name', 'social-icons-widget-by-wpzoom' ),
+			'name'               => _x( 'Social Icon Sets', 'post type general name', 'social-icons-widget-by-wpzoom' ),
 			'singular_name'      => _x( 'Social Icon Sets', 'post type singular name', 'social-icons-widget-by-wpzoom' ),
 			'add_new'            => _x( 'Add New', 'shortcode', 'social-icons-widget-by-wpzoom' ),
 			'add_new_item'       => __( 'Add New Shortcode', 'social-icons-widget-by-wpzoom' ),

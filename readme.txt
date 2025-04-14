@@ -1,7 +1,7 @@
-=== Social Icons Widget & Block by WPZOOM ===
-Contributors: WPZOOM, nvartolomei, ciorici
+=== Social Icons & Sharing Buttons by WPZOOM ===
+Contributors: WPZOOM, ciorici
 Donate link: https://www.wpzoom.com/
-Tags: social icons, social networks, social media, social media icons, icons
+Tags: social icons, social media, social sharing, share buttons, social media buttons
 Requires at least: 5.8
 Requires PHP: 7.4
 Tested up to: 6.7
