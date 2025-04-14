@@ -11595,7 +11595,7 @@ Object(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_11__["addFilter"])('blocks.getB
 
 Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_13__["registerBlockType"])('wpzoom-blocks/social-icons', {
   // Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
-  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_12__["__"])('Social Icons PRO - WPZOOM', 'social-icons-widget-by-wpzoom'),
+  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_12__["__"])('Social Icons by WPZOOM', 'social-icons-widget-by-wpzoom'),
   // Block title.
   description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_12__["__"])('Display icons with links to social media platforms.', 'social-icons-widget-by-wpzoom'),
   icon: {
@@ -14585,7 +14585,7 @@ __webpack_require__.r(__webpack_exports__);
 
 Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_7__["registerBlockType"])('wpzoom-blocks/social-sharing', {
   // Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
-  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Social Sharing - WPZOOM', 'social-icons-widget-by-wpzoom'),
+  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Social Sharing Buttons', 'social-icons-widget-by-wpzoom'),
   // Block title.
   description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Add social sharing buttons to allow visitors to share your content.', 'social-icons-widget-by-wpzoom'),
   icon: {

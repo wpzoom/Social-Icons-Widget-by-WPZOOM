@@ -156,7 +156,7 @@ addFilter(
  */
 registerBlockType( 'wpzoom-blocks/social-icons', {
 	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
-	title: __( 'Social Icons PRO - WPZOOM', 'social-icons-widget-by-wpzoom' ), // Block title.
+	title: __( 'Social Icons by WPZOOM', 'social-icons-widget-by-wpzoom' ), // Block title.
 	description: __(
 		'Display icons with links to social media platforms.',
 		'social-icons-widget-by-wpzoom'

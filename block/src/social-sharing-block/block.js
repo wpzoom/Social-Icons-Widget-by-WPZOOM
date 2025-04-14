@@ -37,7 +37,7 @@ import { registerBlockType } from '@wordpress/blocks';
  */
 registerBlockType( 'wpzoom-blocks/social-sharing', {
 	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
-	title: __( 'Social Sharing - WPZOOM', 'social-icons-widget-by-wpzoom' ), // Block title.
+	title: __( 'Social Sharing Buttons', 'social-icons-widget-by-wpzoom' ), // Block title.
 	description: __(
 		'Add social sharing buttons to allow visitors to share your content.',
 		'social-icons-widget-by-wpzoom'
