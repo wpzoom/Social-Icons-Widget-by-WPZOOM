@@ -9,7 +9,7 @@ Stable tag: 4.5.0
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Quickly add social media icons and sharing buttons to your website! Social Icons & Sharing Buttons includes more than 400 icons and customizable sharing buttons.
+Add social media icons and sharing buttons to your website! Social Icons & Sharing Buttons includes 400+ icons and customizable sharing buttons.
 
 == Description ==
 
