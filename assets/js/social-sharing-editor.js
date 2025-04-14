@@ -75,13 +75,10 @@
                 // Create the instructions panel
                 const instructionsPanel = document.createElement('div');
                 instructionsPanel.className = 'wpzoom-sharing-editor-instructions';
-                instructionsPanel.style.backgroundColor = '#fff';
+                instructionsPanel.style.backgroundColor = '#eef8f9';
                 instructionsPanel.style.padding = '24px';
-                instructionsPanel.style.marginBottom = '20px';
-                instructionsPanel.style.borderRadius = '4px';
                 instructionsPanel.style.borderLeft = '4px solid #0073aa';
                 instructionsPanel.style.boxShadow = '0 1px 1px rgba(0, 0, 0, 0.04)';
-                instructionsPanel.style.marginTop = '20px';
 
                 instructionsPanel.innerHTML = `
                     <h2 style="margin-top: 0; font-size: 18px; font-weight: 500; margin-bottom: 12px; color: #23282d;">Configure Your Social Sharing Buttons</h2>

@@ -181,7 +181,7 @@ class WPZOOM_Social_Sharing_Buttons {
 			__( 'Display Settings', 'social-icons-widget-by-wpzoom' ),
 			array( $this, 'display_settings_meta_box' ),
 			self::$post_type,
-			'normal',
+			'side',
 			'high'
 		);
 	}

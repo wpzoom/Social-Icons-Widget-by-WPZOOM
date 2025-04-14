@@ -4,13 +4,14 @@
 
 /* Custom header for block editor */
 .wpzoom-sharing-editor-instructions {
-    background-color: #fff;
+    background-color: #eef8f9;
     padding: 24px;
-    margin-bottom: 20px;
-    border-radius: 4px;
+    margin-bottom: 0;
+    border-radius: 0;
     border-left: 4px solid #0073aa;
+    border-bottom: 2px solid #eee;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
-    margin-top: 20px;
+    margin-top: 0;
 }
 
 .wpzoom-sharing-editor-instructions h2 {
@@ -114,3 +115,8 @@
     line-height: 1.5;
     color: #50575e;
 } 
+
+.editor-styles-wrapper {
+    background-color: #f0f5fa;
+    padding: 2% 5%;
+}
