@@ -82,14 +82,22 @@ function wpzoom_social_sharing_get_svg_icon( $icon_id, $size = 24, $color = '#ff
  * @param string $url The URL to share.
  * @param string $title The title to share.
  * @param string $featured_image The featured image URL.
+ * @param string $x_username Optional X/Twitter username for mentions.
  * @return string The share URL.
  */
-function wpzoom_social_sharing_get_share_url( $platform_id, $url, $title, $featured_image = '' ) {
+function wpzoom_social_sharing_get_share_url( $platform_id, $url, $title, $featured_image = '', $x_username = '' ) {
     switch ( $platform_id ) {
         case 'facebook':
             return 'https://www.facebook.com/sharer/sharer.php?u=' . urlencode( $url ) . '&t=' . urlencode( $title );
         case 'x':
-            return 'https://x.com/intent/tweet?url=' . urlencode( $url ) . '&text=' . urlencode( $title );
+            $x_share_url = 'https://x.com/intent/tweet?url=' . urlencode( $url ) . '&text=' . urlencode( $title );
+            // Add the via parameter if username is provided
+            if ( ! empty( $x_username ) ) {
+                // Remove @ if it was included
+                $username = trim( str_replace( '@', '', $x_username ) );
+                $x_share_url .= '&via=' . urlencode( $username );
+            }
+            return $x_share_url;
         case 'threads':
             return 'https://threads.net/intent/post?text=' . urlencode( $title . ' ' . $url );
         case 'linkedin':

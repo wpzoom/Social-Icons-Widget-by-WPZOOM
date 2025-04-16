@@ -18,7 +18,7 @@ import SocialIcons from './SocialIcons';
  * @param {string} id Platform ID
  * @returns {object} Platform data
  */
-const getPlatformData = (id) => {
+const getPlatformData = (id, xUsername = '') => {
 	switch (id) {
 		case 'facebook':
 			return { 
@@ -27,10 +27,17 @@ const getPlatformData = (id) => {
 				shareUrl: 'https://www.facebook.com/sharer/sharer.php?u={url}&t={title}',
 			};
 		case 'x':
+			let shareUrl = 'https://x.com/intent/tweet?url={url}&text={title}';
+			// Add the via parameter if username is provided
+			if (xUsername && xUsername.trim() !== '') {
+				// Remove @ if it was included
+				const username = xUsername.trim().replace(/^@/, '');
+				shareUrl += '&via=' + username;
+			}
 			return { 
 				color: '#000000',
 				hoverColor: '#000000',
-				shareUrl: 'https://x.com/intent/tweet?url={url}&text={title}',
+				shareUrl: shareUrl,
 			};
 		case 'linkedin':
 			return { 
@@ -122,6 +129,7 @@ export default function Save({ attributes }) {
 		backgroundStyle,
 		hasBorder,
 		platforms,
+		xUsername,
 	} = attributes;
 
 	const blockProps = useBlockProps.save({
@@ -142,7 +150,7 @@ export default function Save({ attributes }) {
 		<div {...blockProps} style={containerStyle}>
 			<ul className="social-sharing-icons">
 				{enabledPlatforms.map((platform) => {
-					const platformData = getPlatformData(platform.id);
+					const platformData = getPlatformData(platform.id, xUsername);
 					const buttonStyle = {
 						padding: `${paddingVertical}px ${paddingHorizontal}px`,
 						margin: `${marginVertical}px ${marginHorizontal}px`,

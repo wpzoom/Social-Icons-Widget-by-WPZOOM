@@ -148,6 +148,7 @@ function wpzoom_social_sharing_block_render_callback( $attributes ) {
 	$borderColor = isset( $attributes['borderColor'] ) ? $attributes['borderColor'] : '';
 	$platforms = isset( $attributes['platforms'] ) ? $attributes['platforms'] : array();
 	$oneToneColor = isset( $attributes['oneToneColor'] ) ? $attributes['oneToneColor'] : '#000000';
+	$xUsername = isset( $attributes['xUsername'] ) ? $attributes['xUsername'] : '';
 
 	// Class for block
 	$block_class = 'wp-block-wpzoom-blocks-social-sharing';
@@ -242,7 +243,8 @@ function wpzoom_social_sharing_block_render_callback( $attributes ) {
 			$platform['id'],
 			$current_url,
 			$current_title,
-			$featured_image
+			$featured_image,
+			$xUsername
 		);
 		
 		// Override borderRadius for filled-square style
