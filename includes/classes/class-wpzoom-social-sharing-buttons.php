@@ -205,6 +205,8 @@ class WPZOOM_Social_Sharing_Buttons {
 		
 		$post_types = get_post_meta( $post->ID, '_wpzoom_sharing_post_types', true );
 		$post_types = is_array( $post_types ) ? $post_types : array();
+
+		$show_on_front = get_post_meta( $post->ID, '_wpzoom_sharing_show_on_front', true );
 		
 		// Get all public post types
 		$all_post_types = get_post_types(
@@ -242,6 +244,13 @@ class WPZOOM_Social_Sharing_Buttons {
 		
 		<p>
 			<strong><?php esc_html_e( 'Show buttons on', 'social-icons-widget-by-wpzoom' ); ?></strong>
+		</p>
+
+		<p>
+			<label>
+				<input type="checkbox" name="wpzoom_sharing_show_on_front" value="1" <?php checked( $show_on_front, '1' ); ?>>
+				<?php esc_html_e( 'Front Page', 'social-icons-widget-by-wpzoom' ); ?>
+			</label>
 		</p>
 		
 		<?php foreach ( $all_post_types as $post_type ) : ?>
@@ -292,6 +301,10 @@ class WPZOOM_Social_Sharing_Buttons {
 			$position = sanitize_text_field( $_POST['wpzoom_sharing_position'] );
 			update_post_meta( $post_id, '_wpzoom_sharing_position', $position );
 		}
+		
+		// Save show on front setting
+		$show_on_front = isset( $_POST['wpzoom_sharing_show_on_front'] ) ? '1' : '0';
+		update_post_meta( $post_id, '_wpzoom_sharing_show_on_front', $show_on_front );
 		
 		// Save post types setting
 		if ( isset( $_POST['wpzoom_sharing_post_types'] ) && is_array( $_POST['wpzoom_sharing_post_types'] ) ) {
@@ -380,8 +393,29 @@ class WPZOOM_Social_Sharing_Buttons {
 		// Get settings
 		$position   = get_post_meta( $config->ID, '_wpzoom_sharing_position', true );
 		$post_types = get_post_meta( $config->ID, '_wpzoom_sharing_post_types', true );
+		$show_on_front = get_post_meta( $config->ID, '_wpzoom_sharing_show_on_front', true );
 		
-		// If no post types are selected or post_types is not an array, don't show buttons anywhere
+		// Check if we're on the front page and if it's enabled
+		if ( is_front_page() ) {
+			if ( $show_on_front === '1' ) {
+				// Get sharing buttons from the config
+				$sharing_buttons = do_blocks( $config->post_content );
+				
+				// Add buttons based on position setting
+				if ( 'top' === $position || 'both' === $position ) {
+					$content = '<div class="wpzoom-social-sharing-buttons-top">' . $sharing_buttons . '</div>' . $content;
+				}
+				
+				if ( 'bottom' === $position || 'both' === $position ) {
+					$content .= '<div class="wpzoom-social-sharing-buttons-bottom">' . $sharing_buttons . '</div>';
+				}
+				
+				return $content;
+			}
+			return $content;
+		}
+		
+		// If no post types are selected or post_types is not an array, don't show buttons anywhere except front page
 		if ( empty( $post_types ) || ! is_array( $post_types ) ) {
 			return $content;
 		}

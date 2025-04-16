@@ -121,15 +121,37 @@ add_action( 'init', 'wpzoom_social_icons_block_enqueue_assets' );
  * @return string The block HTML.
  */
 function wpzoom_social_sharing_block_render_callback( $attributes ) {
+	// Get the sharing buttons configuration
+	$sharing_config = get_posts(
+		array(
+			'post_type'      => 'wpzoom-sharing',
+			'posts_per_page' => 1,
+			'post_status'    => 'publish',
+		)
+	);
+
+	if ( empty( $sharing_config ) ) {
+		return '';
+	}
+
+	$config_id = $sharing_config[0]->ID;
+	$show_on_front = get_post_meta( $config_id, '_wpzoom_sharing_show_on_front', true );
+
+	// Skip rendering on front page if not enabled in settings
+	if ( is_front_page() && $show_on_front !== '1' ) {
+		return '';
+	}
+
 	// Include social sharing icons functions if not already included
 	if ( ! function_exists( 'wpzoom_social_sharing_get_svg_icon' ) ) {
 		require_once WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . '/includes/social-sharing-icons.php';
 	}
 
-	// Get the current post URL and title
-	$current_url = esc_url( get_permalink() );
-	$current_title = esc_attr( get_the_title() );
-	$featured_image = esc_url( get_the_post_thumbnail_url( get_the_ID(), 'full' ) );
+	// Get current post URL and title
+	$current_url   = get_permalink();
+	$current_title = get_the_title();
+	$featured_image = get_the_post_thumbnail_url();
+	$xUsername = isset( $attributes['xUsername'] ) ? $attributes['xUsername'] : '';
 
 	// Get block attributes with defaults
 	$align = isset( $attributes['align'] ) ? $attributes['align'] : 'none';
@@ -148,7 +170,6 @@ function wpzoom_social_sharing_block_render_callback( $attributes ) {
 	$borderColor = isset( $attributes['borderColor'] ) ? $attributes['borderColor'] : '';
 	$platforms = isset( $attributes['platforms'] ) ? $attributes['platforms'] : array();
 	$oneToneColor = isset( $attributes['oneToneColor'] ) ? $attributes['oneToneColor'] : '#000000';
-	$xUsername = isset( $attributes['xUsername'] ) ? $attributes['xUsername'] : '';
 
 	// Class for block
 	$block_class = 'wp-block-wpzoom-blocks-social-sharing';
