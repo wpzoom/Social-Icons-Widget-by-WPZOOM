@@ -5,7 +5,7 @@ Tags: social icons, social media, social sharing, share buttons, social media bu
 Requires at least: 6.0
 Requires PHP: 7.4
 Tested up to: 6.8
-Stable tag: 4.5.0
+Stable tag: 4.5.1
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -154,6 +154,9 @@ Add the Social Icons Block to the editor and customize the icons as you want.
 10. Social Sharing Buttons - No Label Style
 
 == Changelog ==
+
+= 4.5.1 =
+* Added new field to add your X/Twitter username in the Sharing Buttons block
 
 = 4.5.0 =
 * NEW: Social Sharing Buttons Block
