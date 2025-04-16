@@ -126,6 +126,10 @@ registerBlockType( 'wpzoom-blocks/social-sharing', {
 			type: 'string',
 			default: '#000000',
 		},
+		xUsername: {
+			type: 'string',
+			default: '',
+		},
 		platforms: {
 			type: 'array',
 			default: [

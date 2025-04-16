@@ -31,7 +31,8 @@ import {
 	__experimentalUnitControl as UnitControl,
 	Icon,
 	Tooltip,
-	DraggableChip
+	DraggableChip,
+	TextControl
 } from '@wordpress/components';
 import { useState, useEffect } from '@wordpress/element';
 import { dragHandle } from '@wordpress/icons';
@@ -415,6 +416,19 @@ export default function Inspector({ attributes, setAttributes }) {
 						checked={showLabels}
 						onChange={() => setAttributes({ showLabels: !showLabels })}
 					/>
+					
+					{platforms.some(platform => platform.id === 'x' && platform.enabled) && (
+						<>
+							<Divider />
+							<TextControl
+								label={__('X/Twitter Username', 'social-icons-widget-by-wpzoom')}
+								help={__('When sharing to X, this will be added as "via @username"', 'social-icons-widget-by-wpzoom')}
+								value={attributes.xUsername || ''}
+								onChange={(value) => setAttributes({ xUsername: value })}
+								placeholder="username"
+							/>
+						</>
+					)}
 				</PanelBody>
 			</InspectorControls>
 
