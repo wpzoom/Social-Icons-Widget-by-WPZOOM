@@ -68,24 +68,35 @@ You can view the plugin live in all our themes at [WPZOOM](https://www.wpzoom.co
 * [Inspiro Theme](https://demo.wpzoom.com/?theme=inspiro-demo) - sidebar panel and footer
 
 = Features: =
-* SVG Icons Support
-* Gutenberg Block
-* Social Share Buttons in Posts and Pages - **NEW**
-* Social Sharing Buttons Block - **NEW**
-* Icon Sets + Shortcodes
-* 100+ Sites/Social Networks supported
-* 400+ Custom Icons
-* 5 Icons Sets
-* FontAwesome Integration
-* Academicons Integration: 38 academia icons for academics
-* Drag & Drop Icons
-* Color Picker
-* Search by keywords
-* Adjust icon size & padding
+
+**Social Icons Block:**
+* SVG Icons Support - Upload custom SVG icons
+* 400+ Custom Icons from 5 Icon Sets
+* Gutenberg Block with Live Preview
+* Drag & Drop Icons with Sortable Arrows
+* Color Picker for Each Icon
+* Search by Keywords
+* Adjust Icon Size & Padding
 * Multiple Styles: Icon Shape and Icon with Background
 * 3 Background Styles: Rounded Corners, Round, Square
-* Supports email addresses (mailto:email@example.com)
-* Supports Telephone numbers (tel:12345)
+* Icon Sets + Shortcodes
+* Elementor Widget Integration
+
+**Social Sharing Buttons Block:**
+* 12+ Sharing Platforms: Facebook, X, Threads, LinkedIn, Pinterest, Reddit, Pocket, Telegram, WhatsApp, Bluesky, Email, Copy Link, and Print
+* Multiple Button Styles: Circle, Square, Rounded, Outlined, Minimal, One-tone
+* Customizable Colors, Sizes, Padding & Margins
+* Show/Hide Labels
+* Print Button to Trigger Browser Print Dialog
+* Copy Link Button with Visual Feedback
+* X/Twitter Username Integration (via parameter)
+
+**General Features:**
+* 100+ Sites/Social Networks Supported
+* FontAwesome Integration
+* Academicons Integration: 38 Academia Icons for Academics
+* Supports Email Addresses (mailto:email@example.com)
+* Supports Telephone Numbers (tel:12345)
 * Supports Skype (skype:username?call)
 * Supports Viber (viber://add?number=123456)
 * Supports WhatsApp (https://api.whatsapp.com/send?phone=15551234567)
@@ -123,7 +134,44 @@ On our [website](http://www.wpzoom.com/plugins/social-widget/).
 
 = How can I add Social Icons to a Page? =
 
-Add the Social Icons Block to the editor and customize the icons as you want.
+Add the **Social Icons Block** to the Gutenberg editor and customize the icons as you want. You can search for icons, drag & drop to reorder them, and customize colors, sizes, and styles.
+
+= How can I add Social Sharing Buttons to my posts? =
+
+Add the **Social Sharing Buttons Block** to your post or page. You can enable/disable specific sharing platforms in the block settings sidebar. The block includes support for Facebook, X (Twitter), LinkedIn, WhatsApp, Email, Print, and many more platforms.
+
+= Can I customize the appearance of the Sharing Buttons? =
+
+Yes! The Social Sharing Buttons Block offers multiple style presets (Circle, Square, Rounded, Outlined, Minimal, One-tone) and extensive customization options including:
+* Icon and label colors
+* Button sizes and padding
+* Border radius and styling
+* Show/hide labels
+* Margin and spacing
+
+= What sharing platforms are supported? =
+
+The plugin supports 12+ sharing platforms: Facebook, X (Twitter), Threads, LinkedIn, Pinterest, Reddit, Pocket, Telegram, WhatsApp, Bluesky, Email, Copy Link, and Print.
+
+= How does the Print button work? =
+
+The Print button triggers the browser's native print dialog, allowing visitors to print the current page. It's disabled by default and can be enabled in the block settings.
+
+= How does the Copy Link button work? =
+
+The Copy Link button copies the current page URL to the visitor's clipboard and displays a success message. It works without requiring any additional configuration.
+
+= Can I upload custom SVG icons? =
+
+Yes! In the Social Icons Block, you can upload custom SVG icons by clicking on any icon and selecting "Insert Custom SVG Icon" from the popover menu.
+
+= Does this plugin slow down my website? =
+
+No. The plugin is optimized for performance and only loads the icon fonts and scripts that are actually being used on your pages. Fonts can be preloaded for even better performance.
+
+= Is this plugin GDPR compliant? =
+
+Yes! Social Icons & Sharing Buttons does not collect any information from your visitors, therefore it's 100% GDPR compliant.
 
 == Screenshots ==
 
