@@ -56,15 +56,45 @@ function wpzoom_social_icons_block_enqueue_assets() {
 		$asset_file['version']
 	);
 
+	// Get sharing config ID and URL for the Auto-Display Configuration panel
+	$sharing_config_id = null;
+	$sharing_config_url = null;
+	$is_editing_sharing_config = false;
+	$sharing_posts = get_posts( array(
+		'post_type'      => 'wpzoom-sharing',
+		'posts_per_page' => 1,
+		'post_status'    => 'publish',
+	) );
+	if ( ! empty( $sharing_posts ) ) {
+		$sharing_config_id = $sharing_posts[0]->ID;
+		$sharing_config_url = admin_url( 'post.php?post=' . $sharing_config_id . '&action=edit' );
+
+		// Check if we're currently editing the sharing config post
+		// get_current_screen() is only available after admin_init, so check if function exists
+		if ( function_exists( 'get_current_screen' ) ) {
+			$current_screen = get_current_screen();
+			if ( $current_screen && $current_screen->post_type === 'wpzoom-sharing' ) {
+				// Also check the post ID from the request
+				$post_id = isset( $_GET['post'] ) ? intval( $_GET['post'] ) : 0;
+				if ( $post_id === $sharing_config_id ) {
+					$is_editing_sharing_config = true;
+				}
+			}
+		}
+	}
+
 	// WP Localized globals.
 	wp_localize_script(
 		'wpzoom-social-icons-block-js',
 		'wpzSocialIconsBlock',
 		array(
-			'pluginDirPath'      => plugin_dir_path( __DIR__ ),
-			'pluginDirUrl'       => plugin_dir_url( __DIR__ ),
-			'icons'              => include WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'includes/icons-data.php',
-			'iconKitsCategories' => zoom_social_icons_kits_categories_list( 'block' ),
+			'pluginDirPath'            => plugin_dir_path( __DIR__ ),
+			'pluginDirUrl'             => plugin_dir_url( __DIR__ ),
+			'icons'                    => include WPZOOM_SOCIAL_ICONS_PLUGIN_PATH . 'includes/icons-data.php',
+			'iconKitsCategories'       => zoom_social_icons_kits_categories_list( 'block' ),
+			'sharingConfigId'          => $sharing_config_id,
+			'sharingConfigUrl'         => $sharing_config_url,
+			'isEditingSharingConfig'   => $is_editing_sharing_config,
 		)
 	);
 

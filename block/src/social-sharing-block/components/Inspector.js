@@ -60,6 +60,10 @@ export default function Inspector({ attributes, setAttributes }) {
 		platforms,
 		oneToneColor
 	} = attributes;
+
+	// Check if we're editing the sharing config page by looking for the post type in body class
+	const bodyClasses = document.body.className;
+	const isEditingSharingConfig = bodyClasses.includes('post-type-wpzoom-sharing');
 	
 	// State for dragging
 	const [isDragging, setIsDragging] = useState(false);
@@ -388,6 +392,77 @@ export default function Inspector({ attributes, setAttributes }) {
 					</div>
 				</PanelBody>
 
+				{/* Only show Auto-Display Configuration panel if NOT editing the sharing config page */}
+				{!isEditingSharingConfig && window.wpzSocialIconsBlock && (
+					<PanelBody title={__('Auto-Display Configuration', 'social-icons-widget-by-wpzoom')} initialOpen={false}>
+						<p className="components-base-control__help" style={{ marginBottom: '12px' }}>
+							{__('Want sharing buttons to appear automatically in all posts/pages?', 'social-icons-widget-by-wpzoom')}
+						</p>
+						<p className="components-base-control__help" style={{ marginBottom: '12px' }}>
+							{__('Configure automatic sharing button display settings for your entire site.', 'social-icons-widget-by-wpzoom')}
+						</p>
+						{window.wpzSocialIconsBlock.sharingConfigUrl ? (
+							<Button
+								variant="secondary"
+								href={window.wpzSocialIconsBlock.sharingConfigUrl}
+								target="_blank"
+								style={{ width: '100%' }}
+							>
+								{__('Open Sharing Buttons Settings →', 'social-icons-widget-by-wpzoom')}
+							</Button>
+						) : (
+							<p className="components-base-control__help">
+								{__('Sharing configuration not found. Please save this block first.', 'social-icons-widget-by-wpzoom')}
+							</p>
+						)}
+						<p className="components-base-control__help" style={{ marginTop: '12px', fontSize: '11px', fontStyle: 'italic' }}>
+							{__('Note: This will open the admin settings page where you can configure automatic display of sharing buttons across your site.', 'social-icons-widget-by-wpzoom')}
+						</p>
+					</PanelBody>
+				)}
+
+				{/* Show Display Settings helper when editing the sharing config page */}
+				{isEditingSharingConfig && (
+					<PanelBody title={__('Display Settings', 'social-icons-widget-by-wpzoom')} initialOpen={false}>
+						<p className="components-base-control__help" style={{ marginBottom: '12px' }}>
+							{__('You are editing the global Sharing Buttons configuration.', 'social-icons-widget-by-wpzoom')}
+						</p>
+						<p className="components-base-control__help" style={{ marginBottom: '12px' }}>
+							{__('To control where these buttons appear automatically on your site, click on the button below.', 'social-icons-widget-by-wpzoom')}
+						</p>
+						<Button
+							variant="secondary"
+							onClick={() => {
+								// First, try to switch to the document tab (Sharing Buttons tab)
+								const documentTab = document.querySelector('button[data-tab-id="edit-post/document"]');
+								if (documentTab && documentTab.getAttribute('aria-selected') !== 'true') {
+									documentTab.click();
+								}
+
+								// Wait a moment for the tab to switch, then scroll to the meta box
+								setTimeout(() => {
+									const displaySettings = document.getElementById('wpzoom_sharing_settings');
+									if (displaySettings) {
+										displaySettings.scrollIntoView({ behavior: 'smooth', block: 'center' });
+										// Add a highlight effect to the meta box wrapper
+										displaySettings.style.transition = 'background-color 0.5s ease';
+										displaySettings.style.backgroundColor = '#fff3cd';
+										setTimeout(() => {
+											displaySettings.style.backgroundColor = '';
+										}, 2000);
+									} else {
+										// Fallback: scroll to the bottom of the page where meta boxes typically are
+										window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+									}
+								}, 100);
+							}}
+							style={{ width: '100%' }}
+						>
+							{__('Jump to Display Settings', 'social-icons-widget-by-wpzoom')}
+						</Button>
+					</PanelBody>
+				)}
+
 				<PanelBody title={__('Display Options', 'social-icons-widget-by-wpzoom')}>
 					<ToggleGroupControl
 						label={__('Alignment', 'social-icons-widget-by-wpzoom')}
@@ -395,17 +470,17 @@ export default function Inspector({ attributes, setAttributes }) {
 						onChange={(value) => setAttributes({ align: value })}
 						isBlock
 					>
-						<ToggleGroupControlOption 
-							value="left" 
-							label={__('Left', 'social-icons-widget-by-wpzoom')} 
+						<ToggleGroupControlOption
+							value="left"
+							label={__('Left', 'social-icons-widget-by-wpzoom')}
 						/>
-						<ToggleGroupControlOption 
-							value="center" 
-							label={__('Center', 'social-icons-widget-by-wpzoom')} 
+						<ToggleGroupControlOption
+							value="center"
+							label={__('Center', 'social-icons-widget-by-wpzoom')}
 						/>
-						<ToggleGroupControlOption 
-							value="right" 
-							label={__('Right', 'social-icons-widget-by-wpzoom')} 
+						<ToggleGroupControlOption
+							value="right"
+							label={__('Right', 'social-icons-widget-by-wpzoom')}
 						/>
 					</ToggleGroupControl>
 
