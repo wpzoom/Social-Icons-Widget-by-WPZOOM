@@ -74,6 +74,24 @@ export default function Edit({ attributes, setAttributes, className, isSelected 
 		}
 	}, [isOneToneStyle, oneToneColor]);
 
+	// Migrate existing blocks to include the print platform if it's missing
+	useEffect(() => {
+		const hasPrintPlatform = platforms.some(platform => platform.id === 'print');
+
+		if (!hasPrintPlatform) {
+			const updatedPlatforms = [
+				...platforms,
+				{
+					id: 'print',
+					name: 'Print',
+					enabled: false,
+					color: '#333333'
+				}
+			];
+			setAttributes({ platforms: updatedPlatforms });
+		}
+	}, []); // Run only once on mount
+
 	const containerStyle = {
 		textAlign: align,
 	};

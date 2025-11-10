@@ -358,61 +358,69 @@ function wpzoom_social_sharing_block_render_callback( $attributes ) {
 		}
 	}
 
-	if ( $copy_link_enabled ) {
+	// Add JS for copy link functionality (only once per page)
+	static $copy_link_script_added = false;
+	if ( $copy_link_enabled && ! $copy_link_script_added ) {
 		// Get success icon SVG
-		$success_icon = wpzoom_social_sharing_get_success_icon($iconSize, $iconColor);
-		
+		$success_icon = wpzoom_social_sharing_get_success_icon(20, '#ffffff');
+
 		$output .= '<script>
 			document.addEventListener("DOMContentLoaded", function() {
 				var copyLinks = document.querySelectorAll("a[data-platform=\'copy-link\']");
 				copyLinks.forEach(function(link) {
+					if (link.hasAttribute("data-listener-added")) return;
+					link.setAttribute("data-listener-added", "true");
+
 					link.addEventListener("click", function(e) {
 						e.preventDefault();
 						var tempInput = document.createElement("input");
-						tempInput.value = "' . esc_js( $current_url ) . '";
+						tempInput.value = window.location.href;
 						document.body.appendChild(tempInput);
 						tempInput.select();
 						document.execCommand("copy");
 						document.body.removeChild(tempInput);
-						
+
 						var originalText = this.querySelector(".social-sharing-icon-label")?.textContent || "";
 						var originalTitle = this.getAttribute("title");
 						var originalIcon = this.querySelector("svg").outerHTML;
-						
+
 						// Show success feedback
 						this.setAttribute("title", "' . esc_js( __( 'Copied!', 'social-icons-widget-by-wpzoom' ) ) . '");
-						this.classList.add("copied"); // Add class for animation
-						
+						this.classList.add("copied");
+
 						if (this.querySelector(".social-sharing-icon-label")) {
-							// If labels are shown, update the label text
 							this.querySelector(".social-sharing-icon-label").textContent = "' . esc_js( __( 'Copied!', 'social-icons-widget-by-wpzoom' ) ) . '";
 						} else {
-							// If labels are not shown, change the icon to a check mark
 							this.querySelector("svg").outerHTML = \'' . $success_icon . '\';
 						}
-						
+
+						var self = this;
 						setTimeout(function() {
-							// Reset back to original state
-							link.setAttribute("title", originalTitle);
-							link.classList.remove("copied"); // Remove class after animation
-							if (link.querySelector(".social-sharing-icon-label")) {
-								link.querySelector(".social-sharing-icon-label").textContent = originalText;
+							self.setAttribute("title", originalTitle);
+							self.classList.remove("copied");
+							if (self.querySelector(".social-sharing-icon-label")) {
+								self.querySelector(".social-sharing-icon-label").textContent = originalText;
 							} else {
-								link.querySelector("svg").outerHTML = originalIcon;
+								self.querySelector("svg").outerHTML = originalIcon;
 							}
 						}, 2000);
 					});
 				});
 			});
 		</script>';
+		$copy_link_script_added = true;
 	}
 
-	// Add JS for print functionality
-	if ( $print_enabled ) {
+	// Add JS for print functionality (only once per page)
+	static $print_script_added = false;
+	if ( $print_enabled && ! $print_script_added ) {
 		$output .= '<script>
 			document.addEventListener("DOMContentLoaded", function() {
 				var printLinks = document.querySelectorAll("a[data-platform=\'print\']");
 				printLinks.forEach(function(link) {
+					if (link.hasAttribute("data-listener-added")) return;
+					link.setAttribute("data-listener-added", "true");
+
 					link.addEventListener("click", function(e) {
 						e.preventDefault();
 						window.print();
@@ -420,6 +428,7 @@ function wpzoom_social_sharing_block_render_callback( $attributes ) {
 				});
 			});
 		</script>';
+		$print_script_added = true;
 	}
 
 	$output .= '</div>';
