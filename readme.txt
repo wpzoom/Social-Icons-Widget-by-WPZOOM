@@ -5,15 +5,13 @@ Tags: social icons, social media, social sharing, share buttons, social media bu
 Requires at least: 6.0
 Requires PHP: 7.4
 Tested up to: 6.8
-Stable tag: 4.5.1
+Stable tag: 4.5.2
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Add social media icons and sharing buttons to your website! Social Icons & Sharing Buttons includes 400+ icons and customizable sharing buttons.
 
 == Description ==
-
-⭐️ **[Social Icons Widget PRO](https://www.wpzoom.com/plugins/social-widget/?utm_source=wporg&utm_medium=website&utm_campaign=free_description)** *NOW AVAILABLE!* ⭐️
 
 > Did you find this plugin helpful? Please consider [leaving a 5-star review](http://wordpress.org/support/view/plugin-reviews/social-icons-widget-by-wpzoom).
 
@@ -23,20 +21,7 @@ Add social media icons and sharing buttons to your website! Social Icons & Shari
 
 > With the help of WPZOOM's excellent Social Icons Widget plugin, you can link to all your social network profiles and add sharing buttons in no time, letting your visitors easily get in touch with you on all social media channels and share your content.
 > ⭐️⭐️⭐️⭐️⭐️
-> Read [WPKlik's](https://wpklik.com/wordpress-plugins/wordpress-social-icons-widget/) review of this plugin: [A Complete Guide to Social Icons Widget](https://wpklik.com/wordpress-plugins/wordpress-social-icons-widget/)
-
-
-[youtube https://www.youtube.com/watch?v=mFClpAjzCpc]
-
-= ⭐️ PRO FEATURES ⭐️ =
-* **Upload your SVG icons - 🆕**
-* **Load icons in SVG format - 🆕**
-* **Add Icons to Menus**
-* **Outstanding performance**
-* Premium Support
-* and many new features coming soon!
-
-⭐️ **[Get the PRO version!](https://www.wpzoom.com/plugins/social-widget/?utm_source=wporg&utm_medium=website&utm_campaign=free_description)** ⭐️
+> WPKlik
 
 = What's new in 4.5.0 =
 * **NEW: Social Sharing Buttons Block**
@@ -154,6 +139,9 @@ Add the Social Icons Block to the editor and customize the icons as you want.
 10. Social Sharing Buttons - No Label Style
 
 == Changelog ==
+
+= 4.5.2 =
+* Minor bug fix
 
 = 4.5.1 =
 * Added new field to add your X/Twitter username in the Sharing Buttons block
