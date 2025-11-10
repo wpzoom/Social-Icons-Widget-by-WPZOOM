@@ -562,7 +562,7 @@ class Edit extends Component {
 			map( filteredIcons, ( icon, iconKit ) => {
 				if ( ! isEmpty( icon ) ) {
 					filter( icon, function( o ) {
-						if ( o.icon === iconFromUrl && selectedIconsClone[ key ].icon !== o.icon ) {
+						if ( o.icon === iconFromUrl ) {
 							selectedIconsClone[ key ].iconKit = iconKit;
 							selectedIconsClone[ key ].icon = o.icon;
 							iconDetected = true;

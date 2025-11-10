@@ -88,13 +88,19 @@ const getPlatformData = (id, xUsername = '') => {
 				shareUrl: 'mailto:?subject={title}&body={url}',
 			};
 		case 'copy-link':
-			return { 
+			return {
 				color: '#333333',
 				hoverColor: '#333333',
 				shareUrl: '#copy-link',
 			};
+		case 'print':
+			return {
+				color: '#333333',
+				hoverColor: '#333333',
+				shareUrl: '#print',
+			};
 		default:
-			return { 
+			return {
 				color: '#333333',
 				hoverColor: '#333333',
 				shareUrl: '#',

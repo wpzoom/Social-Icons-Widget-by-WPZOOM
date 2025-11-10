@@ -204,6 +204,12 @@ registerBlockType( 'wpzoom-blocks/social-sharing', {
 					name: 'Copy Link',
 					enabled: true,
 					color: '#333333'
+				},
+				{
+					id: 'print',
+					name: 'Print',
+					enabled: false,
+					color: '#333333'
 				}
 			],
 		},

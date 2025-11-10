@@ -325,8 +325,8 @@ function wpzoom_social_sharing_block_render_callback( $attributes ) {
 		$output .= 'href="' . esc_url( $share_url ) . '" ';
 		$output .= 'title="' . esc_attr( $platform['name'] ) . '" ';
 		
-		// Don't use target="_blank" for copy-link only
-		if ( $platform['id'] !== 'copy-link' ) {
+		// Don't use target="_blank" for copy-link and print
+		if ( $platform['id'] !== 'copy-link' && $platform['id'] !== 'print' ) {
 			$output .= 'target="_blank" rel="noopener noreferrer" ';
 		}
 		
@@ -346,12 +346,15 @@ function wpzoom_social_sharing_block_render_callback( $attributes ) {
 	
 	$output .= '</ul>';
 
-	// Add JS for copy link functionality
+	// Check which special platforms are enabled
 	$copy_link_enabled = false;
+	$print_enabled = false;
 	foreach ( $enabled_platforms as $platform ) {
 		if ( $platform['id'] === 'copy-link' ) {
 			$copy_link_enabled = true;
-			break;
+		}
+		if ( $platform['id'] === 'print' ) {
+			$print_enabled = true;
 		}
 	}
 
@@ -403,9 +406,24 @@ function wpzoom_social_sharing_block_render_callback( $attributes ) {
 			});
 		</script>';
 	}
-	
+
+	// Add JS for print functionality
+	if ( $print_enabled ) {
+		$output .= '<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				var printLinks = document.querySelectorAll("a[data-platform=\'print\']");
+				printLinks.forEach(function(link) {
+					link.addEventListener("click", function(e) {
+						e.preventDefault();
+						window.print();
+					});
+				});
+			});
+		</script>';
+	}
+
 	$output .= '</div>';
-	
+
 	return $output;
 }
 
