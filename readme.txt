@@ -189,7 +189,7 @@ Yes! Social Icons & Sharing Buttons does not collect any information from your v
 == Changelog ==
 
 = 4.5.2 =
-* Minor bug fix
+* Adding a new Print button in the Social Sharing Buttons block
 
 = 4.5.1 =
 * Added new field to add your X/Twitter username in the Sharing Buttons block
