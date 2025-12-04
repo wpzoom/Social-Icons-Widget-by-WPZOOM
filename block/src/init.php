@@ -554,6 +554,70 @@ function wpzoom_social_icons_block_register_secondary_assets() {
 add_action( 'wp_enqueue_scripts', 'wpzoom_social_icons_block_register_secondary_assets' );
 
 /**
+ * Check if a block exists in widget areas (block-based widgets).
+ *
+ * WordPress stores block widgets in the 'widget_block' option.
+ * This function parses all widget blocks to check if a specific block is used.
+ *
+ * @since 4.2.9
+ * @param string $block_name The block name to search for.
+ * @return boolean True if the block is found in any widget area.
+ */
+function wpzoom_has_block_in_widget_area( $block_name ) {
+	// Get all block widgets from the option.
+	$widget_blocks = get_option( 'widget_block', array() );
+
+	if ( empty( $widget_blocks ) || ! is_array( $widget_blocks ) ) {
+		return false;
+	}
+
+	foreach ( $widget_blocks as $widget_block ) {
+		// Skip if not an array or doesn't have content.
+		if ( ! is_array( $widget_block ) || empty( $widget_block['content'] ) ) {
+			continue;
+		}
+
+		// Check if the block name exists in the widget content.
+		if ( false !== strpos( $widget_block['content'], '<!-- wp:' . $block_name ) ) {
+			return true;
+		}
+
+		// Also check for nested blocks by parsing the content.
+		$blocks = parse_blocks( $widget_block['content'] );
+		if ( wpzoom_search_blocks_recursive( $blocks, $block_name ) ) {
+			return true;
+		}
+	}
+
+	return false;
+}
+
+/**
+ * Recursively search for a block name in parsed blocks.
+ *
+ * @since 4.2.9
+ * @param array  $blocks Array of parsed blocks.
+ * @param string $block_name The block name to search for.
+ * @return boolean True if block is found.
+ */
+function wpzoom_search_blocks_recursive( $blocks, $block_name ) {
+	foreach ( $blocks as $block ) {
+		if ( ! empty( $block['blockName'] ) && $block['blockName'] === $block_name ) {
+			return true;
+		}
+
+		// Check inner blocks recursively.
+		if ( ! empty( $block['innerBlocks'] ) && is_array( $block['innerBlocks'] ) ) {
+			if ( wpzoom_search_blocks_recursive( $block['innerBlocks'], $block_name ) ) {
+				return true;
+			}
+		}
+	}
+
+	return false;
+}
+
+/**
  * Check has reusable block
  *
  * @param string $block_name The block name.
@@ -589,10 +653,12 @@ function wpzoom_has_reusable_block( $block_name, $id = 0 ) {
  * Enqueue css and js files.
  */
 function wpzoom_social_icons_block_enqueue_secondary_assets() {
-	if ( wpzoom_has_reusable_block( 'wpzoom-blocks/social-icons' ) || 
-		 wpzoom_has_reusable_block( 'wpzoom-blocks/social-sharing' ) || 
-		 has_block( 'wpzoom-blocks/social-icons' ) || 
-		 has_block( 'wpzoom-blocks/social-sharing' ) || 
+	if ( wpzoom_has_reusable_block( 'wpzoom-blocks/social-icons' ) ||
+		 wpzoom_has_reusable_block( 'wpzoom-blocks/social-sharing' ) ||
+		 has_block( 'wpzoom-blocks/social-icons' ) ||
+		 has_block( 'wpzoom-blocks/social-sharing' ) ||
+		 wpzoom_has_block_in_widget_area( 'wpzoom-blocks/social-icons' ) ||
+		 wpzoom_has_block_in_widget_area( 'wpzoom-blocks/social-sharing' ) ||
 		 is_admin() ) {
 		$disable_css_loading_socicons    = WPZOOM_Social_Icons_Settings::get_option_key( 'disable-css-loading-for-socicons' );
 		$disable_css_loading_genericons  = WPZOOM_Social_Icons_Settings::get_option_key( 'disable-css-loading-for-genericons' );
