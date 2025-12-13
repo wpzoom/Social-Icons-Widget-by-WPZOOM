@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Social Icons Widget & Block by WPZOOM\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-14 08:57+0000\n"
+"POT-Creation-Date: 2025-12-13 12:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -16,11 +16,11 @@ msgstr ""
 "X-Loco-Version: 2.5.4; wp-5.8.1\n"
 "X-Domain: social-icons-widget-by-wpzoom"
 
-#: includes/classes/class-wpzoom-social-sharing-buttons.php:239
+#: includes/classes/class-wpzoom-social-sharing-buttons.php:241
 msgid "Above and below content"
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-sharing-buttons.php:227
+#: includes/classes/class-wpzoom-social-sharing-buttons.php:229
 msgid "Above content"
 msgstr ""
 
@@ -77,7 +77,7 @@ msgstr ""
 msgid "Align Right"
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-sharing-buttons.php:233
+#: includes/classes/class-wpzoom-social-sharing-buttons.php:235
 msgid "Below content"
 msgstr ""
 
@@ -109,17 +109,17 @@ msgstr ""
 msgid "Configure sharing buttons that appear automatically"
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-sharing-buttons.php:259
+#: includes/classes/class-wpzoom-social-sharing-buttons.php:268
 msgid ""
 "Configure the social sharing buttons above, then use these settings to "
 "control where they appear on your site."
 msgstr ""
 
-#: block/src/init.php:357 block/src/init.php:362
+#: block/src/init.php:418 block/src/init.php:422
 msgid "Copied!"
 msgstr ""
 
-#: block/src/init.php:231
+#: block/src/init.php:283
 msgid "Copy Link"
 msgstr ""
 
@@ -171,7 +171,7 @@ msgstr ""
 msgid "Edit Social Icon Shortcode"
 msgstr ""
 
-#: block/src/init.php:225
+#: block/src/init.php:277
 msgid "Email"
 msgstr ""
 
@@ -192,7 +192,7 @@ msgstr ""
 msgid "Enable this font"
 msgstr ""
 
-#: block/src/init.php:189
+#: block/src/init.php:241
 msgid "Facebook"
 msgstr ""
 
@@ -232,6 +232,10 @@ msgstr ""
 msgid "Font Awesome Solid"
 msgstr ""
 
+#: includes/classes/class-wpzoom-social-sharing-buttons.php:252
+msgid "Front Page"
+msgstr ""
+
 #: social-icons-widget-by-wpzoom.php:172
 #: includes/classes/class-wpzoom-social-icons-settings.php:365
 msgid "Genericons"
@@ -239,10 +243,6 @@ msgstr ""
 
 #: social-icons-widget-by-wpzoom.php:324
 msgid "Get Social Icons Widget PRO &rarr;"
-msgstr ""
-
-#: social-icons-widget-by-wpzoom.php:252
-msgid "Go Pro"
 msgstr ""
 
 #. Author URI of the plugin
@@ -286,7 +286,7 @@ msgstr ""
 msgid "Label"
 msgstr ""
 
-#: block/src/init.php:207
+#: block/src/init.php:259
 msgid "LinkedIn"
 msgstr ""
 
@@ -328,7 +328,7 @@ msgstr ""
 msgid "Optimization"
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-sharing-buttons.php:222
+#: includes/classes/class-wpzoom-social-sharing-buttons.php:224
 msgid "Position"
 msgstr ""
 
@@ -366,7 +366,7 @@ msgstr ""
 msgid "Recommended if links or icons open in a new tab"
 msgstr ""
 
-#: block/src/init.php:213
+#: block/src/init.php:265
 msgid "Reddit"
 msgstr ""
 
@@ -438,7 +438,7 @@ msgstr ""
 msgid "Shortcode:"
 msgstr ""
 
-#: includes/classes/class-wpzoom-social-sharing-buttons.php:244
+#: includes/classes/class-wpzoom-social-sharing-buttons.php:246
 msgid "Show buttons on"
 msgstr ""
 
@@ -524,7 +524,7 @@ msgid ""
 "style is selected."
 msgstr ""
 
-#: block/src/init.php:201
+#: block/src/init.php:253
 msgid "Threads"
 msgstr ""
 
@@ -556,7 +556,7 @@ msgstr ""
 msgid "View Shortcodes"
 msgstr ""
 
-#: block/src/init.php:219
+#: block/src/init.php:271
 msgid "WhatsApp"
 msgstr ""
 
@@ -564,11 +564,11 @@ msgstr ""
 msgid "WPZOOM"
 msgstr ""
 
-#: block/src/init.php:404
+#: block/src/init.php:484
 msgid "WPZOOM - Blocks"
 msgstr ""
 
-#: block/src/init.php:195
+#: block/src/init.php:247
 msgid "X"
 msgstr ""
 
