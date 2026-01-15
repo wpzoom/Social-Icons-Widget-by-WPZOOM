@@ -1,7 +1,7 @@
-=== Social Icons & Sharing Buttons by WPZOOM ===
+=== Social Icons Widget & Block - Social Media Icons & Share Buttons ===
 Contributors: WPZOOM, ciorici
 Donate link: https://www.wpzoom.com/
-Tags: social icons, social media, social sharing, share buttons, social media buttons
+Tags: social icons, social media icons, share buttons, social sharing, social media widget
 Requires at least: 6.0
 Requires PHP: 7.4
 Tested up to: 6.9
@@ -9,9 +9,13 @@ Stable tag: 4.5.3
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add social media icons and sharing buttons to your website! Social Icons & Sharing Buttons includes 400+ icons and customizable sharing buttons.
+Social media icons plugin for WordPress - Add 400+ social icons and share buttons. Gutenberg block, widget & Elementor support. GDPR compliant.
 
 == Description ==
+
+= Social Media Icons & Share Buttons for WordPress =
+
+**The best social icons plugin for WordPress.** Add beautiful social media icons and share buttons anywhere on your site. 400+ icons, Gutenberg block, widget, Elementor support - all in one plugin.
 
 > Did you find this plugin helpful? Please consider [leaving a 5-star review](http://wordpress.org/support/view/plugin-reviews/social-icons-widget-by-wpzoom).
 
@@ -187,6 +191,9 @@ Yes! Social Icons & Sharing Buttons does not collect any information from your v
 10. Social Sharing Buttons - No Label Style
 
 == Changelog ==
+
+= 4.5.4 =
+* Minor fixes
 
 = 4.5.3 =
 * Minor bug fix

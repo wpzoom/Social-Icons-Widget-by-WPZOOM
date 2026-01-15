@@ -969,12 +969,12 @@
 }
 
 .socicon-patreon {
-    background-color: #E44727;
-    color: #E44727;
+    background-color: #000;
+    color: #000;
 }
 
 .social-icon.socicon-patreon:before {
-    content: "\e05f"
+    content: "\e01c"
 }
 
 .socicon-paypal {

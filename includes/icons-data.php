@@ -777,7 +777,7 @@ return array(
 				'payment',
 				'web-tools',
 			),
-			'color'    => '#E44727',
+			'color'    => '#000',
 		),
 		array(
 			'icon'     => 'paypal',
@@ -10179,10 +10179,7 @@ return array(
 				'payments-shopping',
 			),
 		),
-		array(
-			'icon'     => 'patreon',
-			'category' => array(),
-		),
+
 		array(
 			'icon'     => 'palfed',
 			'category' => array(),
