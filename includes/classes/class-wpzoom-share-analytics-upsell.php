@@ -41,6 +41,7 @@ class WPZOOM_Share_Analytics_Upsell {
 	public function __construct() {
 		add_action( 'admin_menu', array( $this, 'add_menu_item' ), 25 );
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_styles' ) );
+		add_action( 'admin_head', array( $this, 'admin_menu_badge_css' ) );
 	}
 
 	/**
@@ -49,12 +50,33 @@ class WPZOOM_Share_Analytics_Upsell {
 	public function add_menu_item() {
 		add_submenu_page(
 			'edit.php?post_type=wpzoom-shortcode',
-			__( 'Share Analytics', 'social-icons-widget-by-wpzoom' ),
-			__( 'Share Analytics', 'social-icons-widget-by-wpzoom' ) . ' <span class="wpzoom-pro-badge">Pro</span>',
+			__( 'Analytics', 'social-icons-widget-by-wpzoom' ),
+			__( 'Analytics', 'social-icons-widget-by-wpzoom' ) . ' <span class="wpzoom-pro-badge">Pro</span>',
 			'manage_options',
 			'wpzoom-share-analytics',
 			array( $this, 'render_page' )
 		);
+	}
+
+	/**
+	 * Output inline CSS for Pro badge in admin menu
+	 */
+	public function admin_menu_badge_css() {
+		?>
+		<style>
+			#adminmenu .wpzoom-pro-badge {
+				background: #2271b1;
+				color: #fff;
+				font-size: 9px;
+				padding: 2px 5px;
+				border-radius: 3px;
+				margin-left: 5px;
+				text-transform: uppercase;
+				font-weight: 600;
+				vertical-align: middle;
+			}
+		</style>
+		<?php
 	}
 
 	/**
