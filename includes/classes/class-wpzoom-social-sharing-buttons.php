@@ -154,7 +154,7 @@ class WPZOOM_Social_Sharing_Buttons {
 				
 				// Set default settings
 				update_post_meta( $new_config_id, '_wpzoom_sharing_position', 'bottom' );
-				update_post_meta( $new_config_id, '_wpzoom_sharing_post_types', array() );
+				update_post_meta( $new_config_id, '_wpzoom_sharing_post_types', array( 'post' ) );
 			}
 		}
 	}
