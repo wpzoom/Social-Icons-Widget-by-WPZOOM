@@ -505,6 +505,110 @@ export default function Inspector({ attributes, setAttributes }) {
 						</>
 					)}
 				</PanelBody>
+
+				{/* Pro Features Upsell Panel */}
+				<PanelBody
+					title={
+						<>
+							{__('Pro Features', 'social-icons-widget-by-wpzoom')}
+							<span className="wpzoom-pro-badge" style={{
+								background: '#2271b1',
+								color: '#fff',
+								fontSize: '9px',
+								padding: '2px 5px',
+								borderRadius: '3px',
+								marginLeft: '6px',
+								textTransform: 'uppercase',
+								fontWeight: '600',
+								verticalAlign: 'middle'
+							}}>Pro</span>
+						</>
+					}
+					initialOpen={false}
+				>
+					<div className="wpzoom-pro-features-upsell">
+						<ToggleControl
+							label={__('Show Like Button', 'social-icons-widget-by-wpzoom')}
+							checked={false}
+							onChange={() => {}}
+							disabled={true}
+						/>
+						<ToggleControl
+							label={__('Show Share Counts', 'social-icons-widget-by-wpzoom')}
+							checked={false}
+							onChange={() => {}}
+							disabled={true}
+						/>
+						<ToggleControl
+							label={__('Show Individual Counts', 'social-icons-widget-by-wpzoom')}
+							checked={false}
+							onChange={() => {}}
+							disabled={true}
+						/>
+
+						<Divider />
+
+						<div className="wpzoom-ai-platforms-preview" style={{ marginTop: '12px' }}>
+							<p style={{
+								margin: '0 0 8px 0',
+								fontWeight: '500',
+								fontSize: '11px',
+								textTransform: 'uppercase',
+								color: '#757575'
+							}}>
+								{__('AI Share Buttons', 'social-icons-widget-by-wpzoom')}
+							</p>
+							<div style={{
+								display: 'flex',
+								gap: '8px',
+								opacity: '0.5',
+								pointerEvents: 'none'
+							}}>
+								<span style={{
+									padding: '6px 10px',
+									background: '#f0f0f0',
+									borderRadius: '4px',
+									fontSize: '12px',
+									color: '#666'
+								}}>ChatGPT</span>
+								<span style={{
+									padding: '6px 10px',
+									background: '#f0f0f0',
+									borderRadius: '4px',
+									fontSize: '12px',
+									color: '#666'
+								}}>Claude</span>
+								<span style={{
+									padding: '6px 10px',
+									background: '#f0f0f0',
+									borderRadius: '4px',
+									fontSize: '12px',
+									color: '#666'
+								}}>Perplexity</span>
+							</div>
+						</div>
+
+						<Spacer margin={4} />
+
+						<Button
+							variant="primary"
+							href="https://www.wpzoom.com/plugins/social-widget/?utm_source=wpadmin&utm_medium=plugin&utm_campaign=social-icons-free&utm_content=block-inspector"
+							target="_blank"
+							style={{ width: '100%', justifyContent: 'center' }}
+						>
+							{__('Upgrade to Pro', 'social-icons-widget-by-wpzoom')}
+						</Button>
+
+						<p style={{
+							marginTop: '12px',
+							fontSize: '11px',
+							color: '#757575',
+							textAlign: 'center'
+						}}>
+							{__('Unlock analytics, like buttons, AI sharing & more', 'social-icons-widget-by-wpzoom')}
+						</p>
+					</div>
+				</PanelBody>
 			</InspectorControls>
 
 			{/* Style Panel */}

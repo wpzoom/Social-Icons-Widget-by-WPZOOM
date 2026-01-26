@@ -1,0 +1,571 @@
+/**
+ * WPZOOM Social Icons - Admin Upsell Styles
+ * Styles for Pro feature upsell pages and components
+ */
+
+/* =====================================================
+   Pro Badge
+   ===================================================== */
+.wpzoom-pro-badge {
+    background: #2271b1;
+    color: #fff;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-left: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+.wpzoom-pro-badge-large {
+    background: #2271b1;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* =====================================================
+   Share Analytics Upsell Page
+   ===================================================== */
+.wpzoom-analytics-upsell-wrap {
+    max-width: 1200px;
+}
+
+.wpzoom-analytics-upsell-wrap h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.wpzoom-analytics-description {
+    color: #646970;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.wpzoom-analytics-preview-container {
+    position: relative;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.wpzoom-analytics-preview-blurred {
+    padding: 30px;
+    filter: blur(3px);
+    opacity: 0.7;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Stats Cards */
+.wpzoom-stats-cards {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.wpzoom-stat-card {
+    flex: 1;
+    background: #f6f7f7;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.wpzoom-stat-card .wpzoom-stat-icon {
+    font-size: 32px;
+    color: #2271b1;
+}
+
+.wpzoom-stat-card .wpzoom-stat-number {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1d2327;
+    display: block;
+}
+
+.wpzoom-stat-card .wpzoom-stat-label {
+    font-size: 13px;
+    color: #646970;
+}
+
+/* Chart Placeholder */
+.wpzoom-chart-placeholder {
+    background: #f6f7f7;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.wpzoom-chart-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1d2327;
+    margin-bottom: 20px;
+}
+
+.wpzoom-chart-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    height: 150px;
+    padding: 0 20px;
+}
+
+.wpzoom-chart-bar {
+    flex: 1;
+    background: #2271b1;
+    border-radius: 4px 4px 0 0;
+    min-height: 20px;
+}
+
+.wpzoom-chart-labels {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 0;
+    font-size: 12px;
+    color: #646970;
+}
+
+/* Platform Breakdown */
+.wpzoom-platform-breakdown {
+    background: #f6f7f7;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.wpzoom-platform-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1d2327;
+    margin-bottom: 15px;
+}
+
+.wpzoom-platform-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid #dcdcde;
+}
+
+.wpzoom-platform-item:last-child {
+    border-bottom: none;
+}
+
+.wpzoom-platform-name {
+    width: 100px;
+    font-size: 13px;
+    color: #1d2327;
+}
+
+.wpzoom-platform-bar-wrapper {
+    flex: 1;
+    background: #e0e0e0;
+    border-radius: 4px;
+    height: 8px;
+    overflow: hidden;
+}
+
+.wpzoom-platform-bar {
+    height: 100%;
+    border-radius: 4px;
+}
+
+.wpzoom-platform-count {
+    width: 50px;
+    text-align: right;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+/* Top Posts Table */
+.wpzoom-top-posts {
+    background: #f6f7f7;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.wpzoom-top-posts-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1d2327;
+    margin-bottom: 15px;
+}
+
+.wpzoom-top-posts-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.wpzoom-top-posts-table th,
+.wpzoom-top-posts-table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #dcdcde;
+    font-size: 13px;
+}
+
+.wpzoom-top-posts-table th {
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.wpzoom-top-posts-table td {
+    color: #646970;
+}
+
+/* Pro Overlay */
+.wpzoom-pro-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.wpzoom-pro-overlay-content {
+    background: #fff;
+    padding: 40px 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 500px;
+}
+
+.wpzoom-pro-overlay-content h2 {
+    font-size: 24px;
+    margin: 0 0 10px;
+    color: #1d2327;
+}
+
+.wpzoom-pro-overlay-content > p {
+    color: #646970;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.wpzoom-pro-features-list {
+    list-style: none;
+    margin: 0 0 25px;
+    padding: 0;
+    text-align: left;
+}
+
+.wpzoom-pro-features-list li {
+    padding: 8px 0;
+    font-size: 14px;
+    color: #1d2327;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.wpzoom-pro-features-list .dashicons {
+    color: #00a32a;
+}
+
+.wpzoom-pro-overlay-content .button-hero {
+    font-size: 15px;
+    padding: 12px 30px;
+    height: auto;
+}
+
+/* =====================================================
+   Dashboard Widget Upsell
+   ===================================================== */
+.wpzoom-stats-widget {
+    position: relative;
+}
+
+.wpzoom-stats-widget .wpzoom-dismiss-widget {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #f0f0f1;
+    border: 1px solid #c3c4c7;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wpzoom-stats-widget .wpzoom-dismiss-widget:hover {
+    background: #dcdcde;
+}
+
+.wpzoom-stats-widget .wpzoom-dismiss-widget .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    color: #646970;
+}
+
+.wpzoom-stats-widget-content {
+    text-align: center;
+}
+
+.wpzoom-stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #f6f7f7;
+    border-radius: 4px;
+}
+
+.wpzoom-stats-widget .wpzoom-stat-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.wpzoom-stats-widget .wpzoom-stat-item .dashicons {
+    font-size: 24px;
+    color: #c3c4c7;
+}
+
+.wpzoom-stats-widget .wpzoom-stat-info {
+    text-align: left;
+}
+
+.wpzoom-stats-widget .wpzoom-stat-number {
+    font-size: 18px;
+    font-weight: 600;
+    color: #c3c4c7;
+    display: block;
+}
+
+.wpzoom-stats-widget .wpzoom-stat-label {
+    font-size: 12px;
+    color: #646970;
+}
+
+.wpzoom-widget-message {
+    margin-bottom: 15px;
+}
+
+.wpzoom-widget-message p {
+    margin: 0;
+    color: #1d2327;
+    font-size: 13px;
+}
+
+.wpzoom-widget-features {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.wpzoom-widget-features span {
+    font-size: 12px;
+    color: #646970;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.wpzoom-widget-features .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+    color: #00a32a;
+}
+
+/* =====================================================
+   Settings Page Upload Tab Upsell
+   ===================================================== */
+.wpzoom-upload-pro-preview {
+    position: relative;
+    min-height: 400px;
+}
+
+.wpzoom-upload-preview-blurred {
+    filter: blur(3px);
+    opacity: 0.6;
+    pointer-events: none;
+    user-select: none;
+}
+
+.wpzoom-upload-area-preview {
+    background: #f6f7f7;
+    border: 2px dashed #c3c4c7;
+    border-radius: 4px;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.wpzoom-upload-area-preview .dashicons {
+    font-size: 48px;
+    color: #c3c4c7;
+    margin-bottom: 10px;
+}
+
+.wpzoom-upload-area-preview p {
+    margin: 0;
+    color: #646970;
+    font-size: 14px;
+}
+
+.wpzoom-icons-grid-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 15px;
+}
+
+.wpzoom-icon-preview-item {
+    background: #f6f7f7;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    padding: 15px;
+    text-align: center;
+}
+
+.wpzoom-icon-preview-item .dashicons {
+    font-size: 32px;
+    color: #c3c4c7;
+}
+
+.wpzoom-icon-preview-item span {
+    display: block;
+    font-size: 11px;
+    color: #646970;
+    margin-top: 5px;
+}
+
+/* Settings Page Overlay */
+.wpzoom-upload-pro-preview .wpzoom-pro-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.wpzoom-upload-pro-preview .wpzoom-pro-overlay-content {
+    max-width: 400px;
+}
+
+/* =====================================================
+   Block Editor Pro Features Panel
+   ===================================================== */
+.wpzoom-pro-features-upsell {
+    padding: 8px 0;
+}
+
+.wpzoom-pro-features-upsell .components-toggle-control {
+    opacity: 0.6;
+}
+
+.wpzoom-ai-platforms-preview {
+    margin: 16px 0;
+    padding: 12px;
+    background: #f0f0f1;
+    border-radius: 4px;
+}
+
+.wpzoom-ai-platforms-preview p {
+    margin: 0 0 10px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #1e1e1e;
+}
+
+.wpzoom-ai-platforms-icons {
+    display: flex;
+    gap: 10px;
+    opacity: 0.5;
+}
+
+.wpzoom-ai-platform-icon {
+    width: 32px;
+    height: 32px;
+    background: #dcdcde;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wpzoom-ai-platform-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: #757575;
+}
+
+.wpzoom-pro-features-upsell .components-button.is-primary {
+    width: 100%;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+/* Editor Pro Badge */
+.editor-styles-wrapper .wpzoom-pro-badge,
+.components-panel__body-title .wpzoom-pro-badge {
+    background: #2271b1;
+    color: #fff;
+    font-size: 9px;
+    padding: 2px 5px;
+    border-radius: 2px;
+    margin-left: 6px;
+    text-transform: uppercase;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+/* =====================================================
+   Responsive
+   ===================================================== */
+@media screen and (max-width: 782px) {
+    .wpzoom-stats-cards {
+        flex-direction: column;
+    }
+
+    .wpzoom-pro-overlay-content {
+        margin: 20px;
+        padding: 25px;
+    }
+
+    .wpzoom-stats-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .wpzoom-widget-features {
+        flex-direction: column;
+        align-items: center;
+    }
+}
