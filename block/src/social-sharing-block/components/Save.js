@@ -57,12 +57,6 @@ const getPlatformData = (id, xUsername = '') => {
 				hoverColor: '#FF4500',
 				shareUrl: 'https://www.reddit.com/submit?url={url}&title={title}',
 			};
-		case 'pocket':
-			return { 
-				color: '#EF3F56',
-				hoverColor: '#EF3F56',
-				shareUrl: 'https://getpocket.com/save?url={url}&title={title}',
-			};
 		case 'telegram':
 			return { 
 				color: '#0088cc',

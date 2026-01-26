@@ -170,12 +170,6 @@ registerBlockType( 'wpzoom-blocks/social-sharing', {
 					color: '#FF4500'
 				},
 				{
-					id: 'pocket',
-					name: 'Pocket',
-					enabled: false,
-					color: '#EF3F56'
-				},
-				{
 					id: 'telegram',
 					name: 'Telegram',
 					enabled: false,
