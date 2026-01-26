@@ -251,7 +251,14 @@ if ( ! function_exists( 'wpzoom_social_icons_plugin_action_links' ) ) {
 
 			array_unshift( $links, $settings_link );
 
-			// $links['go_pro'] = sprintf( '<a href="%1$s" target="_blank" class="wpzoom-social-icons-gopro" style="font-weight: bold;">%2$s</a>', 'https://www.wpzoom.com/plugins/social-widget/?utm_source=plugins-admin-page&utm_medium=plugins-row-action-links&utm_campaign=go_pro', esc_html__( 'Go Pro', 'social-icons-widget-by-wpzoom' ) );
+			// Add Go Pro link if the Pro plugin is not active.
+			if ( ! function_exists( 'wpzoom_social_icons_pro' ) ) {
+				$links['go_pro'] = sprintf(
+					'<a href="%1$s" target="_blank" class="wpzoom-social-icons-gopro" style="color:#2271b1;font-weight:bold;">UPGRADE &rarr; <span class="wpzoom-premium-badge" style="background-color: #2271b1; color: #fff; margin-left: 5px; font-size: 11px; min-height: 16px; border-radius: 8px; display: inline-block; font-weight: 600; line-height: 1.6; padding: 0 8px;">%2$s</span></a>',
+					'https://www.wpzoom.com/plugins/social-widget/?utm_source=wpadmin&utm_medium=plugin&utm_campaign=social-icons-free&utm_content=plugins-page',
+					esc_html__( 'PRO', 'social-icons-widget-by-wpzoom' )
+				);
+			}
 		}
 
 		return $links;
