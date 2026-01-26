@@ -44,7 +44,6 @@ if ( empty( $wpzoom_social_icons_settings['disable-block'] ) ) {
 require_once plugin_dir_path( __FILE__ ) . 'includes/classes/class-zoom-social-icons-widget.php';
 require_once plugin_dir_path( __FILE__ ) . 'includes/classes/class-wpzoom-social-icons-shortcode.php';
 require_once plugin_dir_path( __FILE__ ) . 'includes/classes/class-wpzoom-share-analytics-upsell.php';
-require_once plugin_dir_path( __FILE__ ) . 'includes/classes/class-wpzoom-dashboard-widget-upsell.php';
 require_once plugin_dir_path( __FILE__ ) . 'includes/classes/class-wpzoom-sharing-buttons-notice.php';
 
 $current_theme = get_template();

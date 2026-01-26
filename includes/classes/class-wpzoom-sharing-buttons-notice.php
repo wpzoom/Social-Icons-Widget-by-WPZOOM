@@ -162,7 +162,7 @@ class WPZOOM_Sharing_Buttons_Notice {
 			.wpzoom-sharing-notice-content {
 				display: flex;
 				align-items: center;
-				padding: 15px 12px;
+				padding: 15px 30px 15px 12px;
 				gap: 15px;
 			}
 			.wpzoom-sharing-notice-icon {
