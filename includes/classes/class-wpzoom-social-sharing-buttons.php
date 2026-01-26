@@ -46,10 +46,14 @@ class WPZOOM_Social_Sharing_Buttons {
 	public function __construct() {
 		// Register custom post type
 		add_action( 'init', array( $this, 'register_post_type' ) );
-		
+
 		// Add menu item
 		add_action( 'admin_menu', array( $this, 'add_menu_item' ) );
-		
+
+		// Keep menu highlighted when editing sharing buttons
+		add_filter( 'parent_file', array( $this, 'keep_menu_highlighted' ) );
+		add_filter( 'submenu_file', array( $this, 'keep_submenu_highlighted' ), 10, 2 );
+
 		// Register meta boxes
 		add_action( 'add_meta_boxes', array( $this, 'add_meta_boxes' ) );
 		
@@ -153,6 +157,39 @@ class WPZOOM_Social_Sharing_Buttons {
 				update_post_meta( $new_config_id, '_wpzoom_sharing_post_types', array() );
 			}
 		}
+	}
+
+	/**
+	 * Keep menu highlighted when editing sharing buttons post
+	 *
+	 * @param string $parent_file The parent file.
+	 * @return string
+	 */
+	public function keep_menu_highlighted( $parent_file ) {
+		global $post_type, $pagenow;
+
+		if ( 'post.php' === $pagenow && self::$post_type === $post_type ) {
+			return 'edit.php?post_type=wpzoom-shortcode';
+		}
+
+		return $parent_file;
+	}
+
+	/**
+	 * Keep submenu item highlighted when editing sharing buttons post
+	 *
+	 * @param string $submenu_file The submenu file.
+	 * @param string $parent_file  The parent file.
+	 * @return string
+	 */
+	public function keep_submenu_highlighted( $submenu_file, $parent_file ) {
+		global $post, $pagenow;
+
+		if ( 'post.php' === $pagenow && $post && self::$post_type === $post->post_type ) {
+			return admin_url( 'post.php?post=' . $post->ID . '&action=edit' );
+		}
+
+		return $submenu_file;
 	}
 
 	/**
