@@ -569,3 +569,233 @@
         align-items: center;
     }
 }
+
+/* =====================================================
+   Upgrade to PRO Upsell Page
+   ===================================================== */
+.wpzoom-upsell-page {
+    background: #fff;
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 30px;
+    margin-bottom: 50px;
+    margin-right: 20px;
+}
+
+/* Header */
+.wpzoom-upsell-header {
+    border-bottom: 1px solid #e1e5e9;
+    padding-bottom: 30px;
+    margin-bottom: 10px;
+}
+
+.wpzoom-upsell-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    color: #242628;
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+
+.wpzoom-upsell-header p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #242628;
+    opacity: 0.65;
+    margin-top: 0;
+    margin-bottom: 20px;
+    max-width: 650px;
+}
+
+/* CTA Button */
+.wpzoom-upsell-btn {
+    background: #3496ff;
+    border-radius: 4px;
+    padding: 12px 20px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 13px;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.wpzoom-upsell-btn:hover,
+.wpzoom-upsell-btn:focus {
+    background: #1a7de6;
+    color: #fff;
+}
+
+/* Content */
+.wpzoom-upsell-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    line-height: 28px;
+    color: #242628;
+}
+
+/* Features Grid */
+.wpzoom-upsell-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.wpzoom-upsell-section {
+    padding: 30px;
+    border-radius: 4px;
+    border: 1px solid #e1e5e9;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.wpzoom-upsell-section-image {
+    margin: -30px -30px 20px;
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
+    background: #f6f7f7;
+}
+
+.wpzoom-upsell-section-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.wpzoom-upsell-badge {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 25px;
+    background: #242628;
+    max-width: fit-content;
+}
+
+.wpzoom-upsell-section h4 {
+    margin-top: 20px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #242628;
+}
+
+.wpzoom-upsell-section h4 .dashicons {
+    font-size: 22px;
+    width: 22px;
+    height: 22px;
+    color: #3496ff;
+}
+
+.wpzoom-upsell-section .about {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #242628;
+    margin-top: 0;
+}
+
+.wpzoom-upsell-section .section_footer {
+    margin-top: auto;
+    margin-bottom: 0;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #646970;
+}
+
+/* Comparison Table */
+.wpzoom-features-table {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.wpzoom-features-table li {
+    display: flex;
+    width: 75%;
+    margin-bottom: 0;
+}
+
+.wpzoom-features-table li div {
+    flex: 1;
+}
+
+.wpzoom-features-table li div svg {
+    overflow: visible;
+}
+
+.wpzoom-features-table .c {
+    text-align: center;
+}
+
+.wpzoom-features-table .t-head {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e1e5e9;
+    margin-bottom: 15px;
+}
+
+.wpzoom-features-table .t-head .c {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #242628;
+}
+
+.wpzoom-features-table .t-row {
+    padding: 12px 0;
+    align-items: center;
+}
+
+.wpzoom-features-table .h-wrap {
+    font-size: 15px;
+    font-weight: 500;
+    color: #242628;
+}
+
+.wpzoom-features-table .t-footer {
+    padding-top: 30px;
+    border-top: 1px solid #e1e5e9;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+/* Upsell Page Responsive */
+@media screen and (max-width: 1240px) {
+    .wpzoom-features-table li {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .wpzoom-upsell-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wpzoom-upsell-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .wpzoom-features-table li div {
+        flex: auto;
+    }
+
+    .wpzoom-features-table li:not(.t-footer) div:first-child {
+        width: 130px;
+    }
+}
