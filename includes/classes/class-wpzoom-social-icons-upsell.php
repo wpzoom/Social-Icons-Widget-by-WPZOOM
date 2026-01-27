@@ -143,11 +143,13 @@ class WPZOOM_Social_Icons_Upsell {
 						<!-- Like Button -->
 						<div class="wpzoom-upsell-section">
 							<div class="wpzoom-upsell-section-image wpzoom-upsell-like-preview">
-								<span class="wpzoom-upsell-like-btn-preview">
-									<svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-									<?php esc_html_e( 'Liked', 'social-icons-widget-by-wpzoom' ); ?>
-									<span class="wpzoom-upsell-like-count">1</span>
-								</span>
+								<button type="button" class="wpzoom-upsell-like-btn-preview" id="wpzoom-upsell-like-btn">
+									<svg class="wpzoom-like-icon-outlined" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" width="20" height="20"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+									<svg class="wpzoom-like-icon-filled" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+									<span class="wpzoom-upsell-like-label"><?php esc_html_e( 'Like', 'social-icons-widget-by-wpzoom' ); ?></span>
+									<span class="wpzoom-upsell-like-count" id="wpzoom-upsell-like-count">0</span>
+								</button>
+								<span class="wpzoom-upsell-like-hint"><?php esc_html_e( 'Click to try it!', 'social-icons-widget-by-wpzoom' ); ?></span>
 							</div>
 							<span class="wpzoom-upsell-badge"><?php esc_html_e( 'PRO', 'social-icons-widget-by-wpzoom' ); ?></span>
 							<h4>
@@ -325,6 +327,52 @@ class WPZOOM_Social_Icons_Upsell {
 
 			</div>
 		</div>
+		<script>
+		(function() {
+			var btn = document.getElementById( 'wpzoom-upsell-like-btn' );
+			var countEl = document.getElementById( 'wpzoom-upsell-like-count' );
+			if ( ! btn || ! countEl ) return;
+
+			var isLiked = false;
+			var count = 0;
+			var colors = ['#3496ff', '#ffcc00', '#ff3366', '#22bb66', '#ff6633', '#9b59b6'];
+
+			btn.addEventListener( 'click', function() {
+				isLiked = ! isLiked;
+				count = isLiked ? count + 1 : Math.max( 0, count - 1 );
+				countEl.textContent = count;
+
+				if ( isLiked ) {
+					btn.classList.add( 'is-liked', 'animate' );
+					btn.querySelector( '.wpzoom-upsell-like-label' ).textContent = '<?php echo esc_js( __( 'Liked', 'social-icons-widget-by-wpzoom' ) ); ?>';
+					// Confetti
+					for ( var i = 0; i < 12; i++ ) {
+						var p = document.createElement( 'span' );
+						p.className = 'wpzoom-upsell-confetti';
+						var angle = ( Math.PI * 2 * i ) / 12 + ( Math.random() * 0.5 - 0.25 );
+						var dist = 30 + Math.random() * 40;
+						p.style.setProperty( '--dx', Math.cos( angle ) * dist + 'px' );
+						p.style.setProperty( '--dy', Math.sin( angle ) * dist + 'px' );
+						p.style.background = colors[ i % colors.length ];
+						btn.appendChild( p );
+						( function( el ) {
+							setTimeout( function() {
+								if ( el.parentNode ) el.parentNode.removeChild( el );
+							}, 800 );
+						} )( p );
+					}
+				} else {
+					btn.classList.remove( 'is-liked' );
+					btn.classList.add( 'animate' );
+					btn.querySelector( '.wpzoom-upsell-like-label' ).textContent = '<?php echo esc_js( __( 'Like', 'social-icons-widget-by-wpzoom' ) ); ?>';
+				}
+
+				setTimeout( function() {
+					btn.classList.remove( 'animate' );
+				}, 400 );
+			} );
+		})();
+		</script>
 		<?php
 	}
 }
