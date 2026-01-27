@@ -662,12 +662,50 @@
     border-radius: 4px 4px 0 0;
     overflow: hidden;
     background: #f6f7f7;
+    aspect-ratio: 4 / 3;
 }
 
 .wpzoom-upsell-section-image img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Like Button Preview */
+.wpzoom-upsell-like-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wpzoom-upsell-like-btn-preview {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #b4bec4;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 50px;
+    line-height: 1;
+}
+
+.wpzoom-upsell-like-btn-preview svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+.wpzoom-upsell-like-count {
+    background: rgba(255, 255, 255, 0.25);
+    padding: 4px 10px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 4px;
 }
 
 .wpzoom-upsell-badge {
