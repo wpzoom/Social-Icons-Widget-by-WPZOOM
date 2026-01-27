@@ -87,13 +87,29 @@ You can view the plugin live in all our themes at [WPZOOM](https://www.wpzoom.co
 * Elementor Widget Integration
 
 **Social Sharing Buttons Block:**
-* 12+ Sharing Platforms: Facebook, X, Threads, LinkedIn, Pinterest, Reddit, Pocket, Telegram, WhatsApp, Bluesky, Email, Copy Link, and Print
+* 12+ Sharing Platforms: Facebook, X, Threads, LinkedIn, Pinterest, Reddit, Telegram, WhatsApp, Bluesky, Email, Copy Link, and Print
 * Multiple Button Styles: Circle, Square, Rounded, Outlined, Minimal, One-tone
 * Customizable Colors, Sizes, Padding & Margins
 * Show/Hide Labels
 * Print Button to Trigger Browser Print Dialog
 * Copy Link Button with Visual Feedback
 * X/Twitter Username Integration (via parameter)
+
+= PRO Features =
+
+Upgrade to [Social Icons Widget PRO](https://www.wpzoom.com/plugins/social-widget/) to unlock powerful features:
+
+* **Share Analytics Dashboard** - Track how visitors share your content with detailed analytics
+* **Like Button** - Add a like button to let visitors engage with your posts
+* **AI Share Buttons** - Share to ChatGPT, Claude, and Perplexity AI platforms
+* **Share Counts** - Display total and individual share counts on buttons
+* **External Share Counts** - Fetch real share counts from Facebook, Pinterest via SharedCount API
+* **Custom SVG Icon Uploads** - Upload your own custom SVG icons
+* **Nav Menu Integration** - Add social icons directly to WordPress navigation menus
+* **Dashboard Widget** - Quick stats overview right on your WordPress dashboard
+* **Priority Support** - Get help faster with priority email support
+
+[Learn more about PRO →](https://www.wpzoom.com/plugins/social-widget/)
 
 **General Features:**
 * 100+ Sites/Social Networks Supported
@@ -107,7 +123,7 @@ You can view the plugin live in all our themes at [WPZOOM](https://www.wpzoom.co
 
 = Icons =
 
-Twitter, X, Facebook, Instagram, Pinterest, Snapchat, Threads, Yelp, LinkedIn, Bloglovin', Lookbook, Feedly, Periscope, SoundCloud, Spotify, Last.fm, YouTube, Vimeo, Flickr, 500px, Tumblr, Blogger, Reddit, Dribbble, Envato, Behance, DeviantArt, GitHub, RSS, Disqus, Stackoverflow, Komoot, Tiktok, Mailchimp, Podcasts, Telegram, TripAdvisor, AirBnb, Baidu, ebay, Medium, Periscope, Snapchat, Bandcamp, Eyem, Viber, Quora, Etsy, Meetup, Linode, IMDB, Overwatch, Strava, Tidal, Deezer, Unsplash, Codered, Udemy, CrunchBase, Angie's List, App Store, Nextdoor, WhatsApp, ResearchGate, Slack, Songkick, ReverbNation, Bluesky, Pocket
+Twitter, X, Facebook, Instagram, Pinterest, Snapchat, Threads, Yelp, LinkedIn, Bloglovin', Lookbook, Feedly, Periscope, SoundCloud, Spotify, Last.fm, YouTube, Vimeo, Flickr, 500px, Tumblr, Blogger, Reddit, Dribbble, Envato, Behance, DeviantArt, GitHub, RSS, Disqus, Stackoverflow, Komoot, Tiktok, Mailchimp, Podcasts, Telegram, TripAdvisor, AirBnb, Baidu, ebay, Medium, Periscope, Snapchat, Bandcamp, Eyem, Viber, Quora, Etsy, Meetup, Linode, IMDB, Overwatch, Strava, Tidal, Deezer, Unsplash, Codered, Udemy, CrunchBase, Angie's List, App Store, Nextdoor, WhatsApp, ResearchGate, Slack, Songkick, ReverbNation, Bluesky
 
 = Credits =
 
@@ -155,7 +171,7 @@ Yes! The Social Sharing Buttons Block offers multiple style presets (Circle, Squ
 
 = What sharing platforms are supported? =
 
-The plugin supports 12+ sharing platforms: Facebook, X (Twitter), Threads, LinkedIn, Pinterest, Reddit, Pocket, Telegram, WhatsApp, Bluesky, Email, Copy Link, and Print.
+The plugin supports 12+ sharing platforms: Facebook, X (Twitter), Threads, LinkedIn, Pinterest, Reddit, Telegram, WhatsApp, Bluesky, Email, Copy Link, and Print.
 
 = How does the Print button work? =
 
@@ -176,6 +192,18 @@ No. The plugin is optimized for performance and only loads the icon fonts and sc
 = Is this plugin GDPR compliant? =
 
 Yes! Social Icons & Sharing Buttons does not collect any information from your visitors, therefore it's 100% GDPR compliant.
+
+= What features are available in the PRO version? =
+
+[Social Icons Widget PRO](https://www.wpzoom.com/plugins/social-widget/) includes these additional features:
+
+* **Share Analytics** - Track shares across all platforms with a beautiful analytics dashboard
+* **Like Button** - Let visitors like your posts with engagement tracking
+* **AI Share Buttons** - Share content to ChatGPT, Claude, and Perplexity
+* **Share Counts** - Display share counts on buttons (both internal tracking and external via SharedCount API)
+* **Custom SVG Uploads** - Upload your own custom icons
+* **Nav Menu Integration** - Add social icons to your navigation menus
+* **Priority Support** - Get faster help with priority email support
 
 == Screenshots ==
 

@@ -133,11 +133,24 @@ class WPZOOM_Sharing_Buttons_Notice {
 				<div class="wpzoom-sharing-notice-text">
 					<h3><?php esc_html_e( 'Add Social Sharing Buttons to Your Posts', 'social-icons-widget-by-wpzoom' ); ?></h3>
 					<p><?php esc_html_e( 'Let your visitors share your content on social media! Enable sharing buttons that appear automatically on all your posts and pages.', 'social-icons-widget-by-wpzoom' ); ?></p>
-				</div>
-				<div class="wpzoom-sharing-notice-actions">
-					<a href="<?php echo esc_url( $configure_url ); ?>" class="button button-primary">
-						<?php esc_html_e( 'Configure Sharing Buttons', 'social-icons-widget-by-wpzoom' ); ?>
-					</a>
+					<p class="wpzoom-sharing-notice-pro-hint">
+						<?php
+						printf(
+							/* translators: %s: upgrade link */
+							esc_html__( 'Want more? %s adds AI Share Buttons, Like Button, Share Counts & Analytics.', 'social-icons-widget-by-wpzoom' ),
+							'<a href="https://www.wpzoom.com/plugins/social-widget/?utm_source=wpadmin&utm_medium=plugin&utm_campaign=social-icons-free&utm_content=sharing-notice" target="_blank"><strong>' . esc_html__( 'PRO', 'social-icons-widget-by-wpzoom' ) . '</strong></a>'
+						);
+						?>
+					</p>
+					<div class="wpzoom-sharing-notice-actions">
+						<a href="<?php echo esc_url( $configure_url ); ?>" class="button button-primary">
+							<?php esc_html_e( 'Configure Sharing Buttons', 'social-icons-widget-by-wpzoom' ); ?>
+						</a>
+						<a href="https://www.wpzoom.com/plugins/social-widget/?utm_source=wpadmin&utm_medium=plugin&utm_campaign=social-icons-free&utm_content=sharing-notice-btn" class="button" target="_blank">
+							<span class="dashicons dashicons-star-filled" style="font-size: 16px; line-height: 28px; width: 16px; height: 16px; margin-right: 3px;"></span>
+							<?php esc_html_e( 'Upgrade to Pro', 'social-icons-widget-by-wpzoom' ); ?>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -179,8 +192,19 @@ class WPZOOM_Sharing_Buttons_Notice {
 				margin: 0;
 				color: #50575e;
 			}
+			.wpzoom-sharing-notice-pro-hint {
+				margin-top: 6px !important;
+				font-size: 12px;
+				color: #888 !important;
+			}
+			.wpzoom-sharing-notice-pro-hint a {
+				color: #2271b1;
+				text-decoration: none;
+			}
 			.wpzoom-sharing-notice-actions {
-				flex-shrink: 0;
+				display: flex;
+				gap: 8px;
+				margin-top: 10px;
 			}
 			@media (max-width: 782px) {
 				.wpzoom-sharing-notice-content {
