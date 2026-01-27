@@ -589,6 +589,14 @@
     margin-bottom: 10px;
 }
 
+.wpzoom-upsell-logo {
+    margin-bottom: 20px;
+}
+
+.wpzoom-upsell-logo img {
+    width: 150px;
+}
+
 .wpzoom-upsell-header h2 {
     font-size: 24px;
     font-weight: 600;

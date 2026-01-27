@@ -111,16 +111,19 @@ class WPZOOM_Social_Icons_Upsell {
 
 				<!-- Header -->
 				<div class="wpzoom-upsell-header">
+					<div class="wpzoom-upsell-logo">
+						<img src="https://www.wpzoom.com/wp-content/themes/wpzoom/images/icons/social-share-buttons.svg" alt="<?php esc_attr_e( 'Social Icons Widget PRO', 'social-icons-widget-by-wpzoom' ); ?>" />
+					</div>
 					<h2><?php esc_html_e( 'Upgrade to Social Icons PRO', 'social-icons-widget-by-wpzoom' ); ?></h2>
 					<p><?php esc_html_e( 'Take your social icons and sharing buttons to the next level with powerful Pro features. Track shares, display counts, add AI sharing, and much more.', 'social-icons-widget-by-wpzoom' ); ?></p>
 					<a href="<?php echo esc_url( $upgrade_url ); ?>" class="wpzoom-upsell-btn" target="_blank">
-						<?php esc_html_e( 'Upgrade to PRO', 'social-icons-widget-by-wpzoom' ); ?>
+						<?php esc_html_e( 'Upgrade to PRO &rarr;', 'social-icons-widget-by-wpzoom' ); ?>
 					</a>
 				</div>
 
 				<!-- Features Grid -->
 				<div class="wpzoom-upsell-content">
-					<h3><?php esc_html_e( 'Unlock powerful Pro features', 'social-icons-widget-by-wpzoom' ); ?></h3>
+					<h3><?php esc_html_e( 'Unlock powerful PRO features', 'social-icons-widget-by-wpzoom' ); ?></h3>
 					<div class="wpzoom-upsell-grid">
 
 						<!-- Share Analytics -->
