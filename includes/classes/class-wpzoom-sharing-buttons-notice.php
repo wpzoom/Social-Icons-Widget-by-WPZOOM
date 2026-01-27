@@ -126,7 +126,7 @@ class WPZOOM_Sharing_Buttons_Notice {
 		<div class="notice notice-info is-dismissible wpzoom-sharing-notice" data-nonce="<?php echo esc_attr( $nonce ); ?>">
 			<div class="wpzoom-sharing-notice-content">
 				<div class="wpzoom-sharing-notice-icon">
-					<svg width="40" height="40" viewBox="0 0 24 24" fill="#2271b1">
+					<svg width="40" height="40" viewBox="0 0 24 24" fill="#3496ff">
 						<path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/>
 					</svg>
 				</div>
@@ -143,10 +143,10 @@ class WPZOOM_Sharing_Buttons_Notice {
 						?>
 					</p>
 					<div class="wpzoom-sharing-notice-actions">
-						<a href="<?php echo esc_url( $configure_url ); ?>" class="button button-primary">
+						<a href="<?php echo esc_url( $configure_url ); ?>" class="button wpzoom-sharing-btn-primary">
 							<?php esc_html_e( 'Configure Sharing Buttons', 'social-icons-widget-by-wpzoom' ); ?>
 						</a>
-						<a href="https://www.wpzoom.com/plugins/social-widget/?utm_source=wpadmin&utm_medium=plugin&utm_campaign=social-icons-free&utm_content=sharing-notice-btn" class="button" target="_blank">
+						<a href="https://www.wpzoom.com/plugins/social-widget/?utm_source=wpadmin&utm_medium=plugin&utm_campaign=social-icons-free&utm_content=sharing-notice-btn" class="button wpzoom-sharing-btn-upgrade" target="_blank">
 							<span class="dashicons dashicons-star-filled" style="font-size: 16px; line-height: 28px; width: 16px; height: 16px; margin-right: 3px;"></span>
 							<?php esc_html_e( 'Upgrade to Pro', 'social-icons-widget-by-wpzoom' ); ?>
 						</a>
@@ -170,7 +170,7 @@ class WPZOOM_Sharing_Buttons_Notice {
 		wp_add_inline_style( 'common', '
 			.wpzoom-sharing-notice {
 				padding: 0 !important;
-				border-left-color: #2271b1 !important;
+				border-left-color: #3496ff !important;
 			}
 			.wpzoom-sharing-notice-content {
 				display: flex;
@@ -198,13 +198,33 @@ class WPZOOM_Sharing_Buttons_Notice {
 				color: #888 !important;
 			}
 			.wpzoom-sharing-notice-pro-hint a {
-				color: #2271b1;
+				color: #3496ff;
 				text-decoration: none;
 			}
 			.wpzoom-sharing-notice-actions {
 				display: flex;
 				gap: 8px;
 				margin-top: 10px;
+			}
+			.wpzoom-sharing-btn-primary.button {
+				background: #1a1a1a !important;
+				color: #fff !important;
+				border-color: #1a1a1a !important;
+				border-radius: 4px;
+			}
+			.wpzoom-sharing-btn-primary.button:hover {
+				background: #3496ff !important;
+				border-color: #3496ff !important;
+			}
+			.wpzoom-sharing-btn-upgrade.button {
+				border-color: #1a1a1a !important;
+				color: #1a1a1a !important;
+				border-radius: 4px;
+			}
+			.wpzoom-sharing-btn-upgrade.button:hover {
+				background: #3496ff !important;
+				border-color: #3496ff !important;
+				color: #fff !important;
 			}
 			@media (max-width: 782px) {
 				.wpzoom-sharing-notice-content {
